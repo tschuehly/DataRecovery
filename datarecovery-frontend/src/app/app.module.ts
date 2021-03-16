@@ -5,23 +5,30 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import {NavigationComponent} from "./containers/navigation/navigation.component";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { OrderFormComponent } from './containers/order-form/order-form.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { TrackingComponent } from './components/tracking/tracking.component';
+import { LoginComponent } from './components/login/login.component';
+import { OrderComponent } from './components/order/order.component';
+import { OrderDetailsComponent } from './containers/order-details/order-details.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavigationComponent,
     OrderFormComponent,
-    TrackingComponent
+    TrackingComponent,
+    LoginComponent,
+    OrderComponent,
+    OrderDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
   ],

@@ -5,16 +5,16 @@ export class Customer{
   tel: string;
   email: string;
   postalCode: number;
-  city : string;
+  city: string;
   street: string;
 }
 export class Order{
   id: number;
   trackingId: string;
   orderDate: Date;
-  trackingState: string
+  trackingState: string;
   product: Product;
-  customer: Customer[];
+  customer: Customer;
   replacement: string;
 }
 
@@ -23,4 +23,15 @@ export class Product{
   category: string;
   name: string;
   price: number;
+}
+
+export class Credentials {
+  username: string;
+  password: string;
+}
+export class User {
+  id: number;
+  username: string;
+  role: string;
+  email: string;
 }

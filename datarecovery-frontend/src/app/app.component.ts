@@ -1,10 +1,21 @@
 import { Component } from '@angular/core';
-
+import {AuthenticationService} from './services/authentication.service';
+import {User} from './model/model';
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `
+    <app-navigation [currentUser]="currentUser" (logout)="logout()"></app-navigation>
+  `,
+  styles: [``]
 })
 export class AppComponent {
+  currentUser: User;
   title = 'datarecovery-frontend';
+  constructor(private authenticationService: AuthenticationService) {
+    this.authenticationService.currentUser.subscribe(user => this.currentUser = user);
+  }
+
+  logout(): void{
+    this.authenticationService.logout();
+  }
 }

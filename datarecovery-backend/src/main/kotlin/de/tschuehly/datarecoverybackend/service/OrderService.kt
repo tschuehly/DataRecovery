@@ -18,7 +18,7 @@ class OrderService(
         order.trackingState = "Auftrag eingegangen"
         orderRepository.save(order)
         logger.info(order.toString())
-        mailService.sendEmail(order.toString())
+        mailService.sendEmail(order)
 
     }
 

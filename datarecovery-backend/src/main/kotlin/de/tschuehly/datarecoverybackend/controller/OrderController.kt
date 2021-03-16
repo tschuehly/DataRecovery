@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*
 import org.springframework.web.server.ResponseStatusException
 
 @RestController
-@RequestMapping("order")
+@RequestMapping("api/order")
 class OrderController(
     val orderService: OrderService,
     private val logger: Logger) :

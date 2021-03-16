@@ -9,7 +9,7 @@ import {Customer, Order, Product} from "../../model/model";
       <div class="w-full text-center text-4xl mb-5">
         <h1>Auftragsformular</h1>
       </div>
-      <form [formGroup]="this.orderForm"(ngSubmit)="onSubmit()" >
+      <form [formGroup]="this.orderForm" (ngSubmit)="onSubmit()" >
         <div class="flex flex-col gap-2 px-12 mb-10">
           <div class="flex flex-col gap-2" formGroupName="customer">
             <label>Vorname</label>
@@ -81,12 +81,12 @@ export class OrderFormComponent implements OnInit {
 
       }),
       product : [''],
-      replacement :[''],
+      replacement : [''],
     });
   }
-  onSubmit() {
+  onSubmit(): void{
     this.order = (this.orderForm.getRawValue() as Order)
     this.order.product = this.products.find(product => product.id == this.orderForm.get('product').value)
-    this.orderOutput.emit(this.order)
+    this.orderOutput.emit(this.order);
   }
 }

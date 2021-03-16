@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {AuthenticationService} from '../../services/authentication.service';
+import {User} from '../../model/model';
 
 @Component({
   selector: 'app-navigation',
@@ -9,10 +12,13 @@ import { Component, OnInit } from '@angular/core';
         AmmerseeDatenrettung.de
       </div>
       <div class="text-xl flex  items-center">
-        <a class="mr-2" routerLink="" routerLinkActive="active">Home</a>
-        <a class="mr-2 ml-2" routerLink="/tracking" routerLinkActive="active">Tracking</a>
-        <a class="mr-2 ml-2"  routerLink="/login" routerLinkActive="active">Arbeitsweise</a>
-        <a class="mr-2 ml-2"  routerLink="/login" routerLinkActive="active">Kontakt</a>
+        <a class="mr-2" routerLink="">Home</a>
+        <a class="mr-2 ml-2" routerLink="/tracking">Tracking</a>
+        <a class="mr-2 ml-2"  routerLink="/login" *ngIf="!currentUser">Login</a>
+        <ng-container *ngIf="currentUser">
+          <a class="mr-2 ml-2"  routerLink="/login"  (click)="logout.emit()">Logout</a>
+          <a class="mr-2 ml-2"  routerLink="/order">Bestellungsübersicht</a>
+        </ng-container>
       </div>
     </nav>
     <div class="pt-20 flex-grow">
@@ -45,10 +51,10 @@ import { Component, OnInit } from '@angular/core';
     </div>`
 })
 export class NavigationComponent implements OnInit {
-
-  constructor() { }
+  @Input() currentUser: User;
+  @Output() logout: EventEmitter<null> = new EventEmitter();
+  constructor(private authenticationService: AuthenticationService) { }
 
   ngOnInit(): void {
   }
-
 }
