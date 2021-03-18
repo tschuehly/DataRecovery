@@ -47,6 +47,8 @@ import {HttpClient} from '@angular/common/http';
         <app-object-edit [inputObject]="editProduct" (outObject)="saveProduct($event)"
                          (close)="editProduct = null"></app-object-edit>
       </div>
+
+      <button (click)="editProduct = Product()">Neues Produkt</button>
     </div>
   `,
   styles: [
@@ -69,5 +71,9 @@ export class ProductComponent implements OnInit {
       this.products = this.products.map( p => p.id === product.id ? product : p);
     });
     this.editProduct = null;
+  }
+
+  Product() {
+    return new Product();
   }
 }

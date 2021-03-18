@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Order} from '../../model/model';
+import {ObjectEditComponent} from "../../containers/object-edit/object-edit.component";
 
 @Component({
   selector: 'app-order',
@@ -45,18 +46,19 @@ import {Order} from '../../model/model';
       <div *ngIf="editOrder" class="m-auto border shadow-xl px-14 py-10">
         <!--<app-order-details [order]="editOrder" [edit]="true" (editOrder)="updateOrderState($event)"
                            (close)="editOrder = null"></app-order-details>-->
-        <app-object-edit [edit]="true" [inputObject]="editOrder" ></app-object-edit>
+        <app-object-edit (outObject)="updateOrderState($event)" [inputObject]="editOrder" ></app-object-edit>
       </div>
     </div>
   `,
   styles: []
 })
 export class OrderComponent implements OnInit {
+  @ViewChild(ObjectEditComponent) editComponent: ObjectEditComponent<Order>
   orders: Order[];
   editOrder: Order;
-
   constructor(private http: HttpClient) {
   }
+
 
   ngOnInit(): void {
     this.http.get('api/order').subscribe((orders: Order[]) => {

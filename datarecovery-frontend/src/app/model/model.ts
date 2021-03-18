@@ -28,11 +28,12 @@ export enum orderStateEnum {
   parcelReturned = 'Rückversand'
 }
 export class Product{
-  id: number;
-  category: string;
-  name: string;
-  price: number;
-  createDate: Date;
+  constructor(public id: number = 0,
+              public category: string = "",
+              public name: string = "",
+              public price: number  = 0,
+              public createDate: String = new Date().toISOString().substring(0,19)
+  ) {}
 }
 
 export class Credentials {

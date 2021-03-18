@@ -19,25 +19,29 @@ class JwtFilter(
 
     @Throws
     override fun doFilterInternal(request: HttpServletRequest, response: HttpServletResponse, filterChain: FilterChain) {
-        try{
+        try {
             getToken(request)
-                    ?.let { jwtUserDetailsService.loadUserByToken(it) }
+                ?.let { jwtUserDetailsService.loadUserByToken(it) }
 
-                    ?.let { jwtUserDetails -> JWTPreAuthenticationToken(
-                            jwtUserDetails, WebAuthenticationDetailsSource().buildDetails(request)) }
-                    ?.also { println("context: "+ SecurityContextHolder.getContext().authentication)    }
-                    ?.let { SecurityContextHolder.getContext().authentication = it}
-                    ?.also { println("context: "+SecurityContextHolder.getContext().authentication)    }
-        }catch (e: Error){
+                ?.let { jwtUserDetails ->
+                    JWTPreAuthenticationToken(
+                        jwtUserDetails, WebAuthenticationDetailsSource().buildDetails(request)
+                    )
+                }
+                ?.also { println("context: " + SecurityContextHolder.getContext().authentication) }
+                ?.let { SecurityContextHolder.getContext().authentication = it }
+                ?.also { println("context: " + SecurityContextHolder.getContext().authentication) }
+        } catch (e: Error) {
             println(e.localizedMessage)
         }
 
-        filterChain.doFilter(request, response) }
+        filterChain.doFilter(request, response)
+    }
 
     private fun getToken(request: HttpServletRequest): String? {
         return request.getHeader(AUTHORIZATION_HEADER)
             ?: request.getHeader(COOKIE_HEADER)
-            ?.split("Bearer ")
-            ?.last()
+                ?.split("Bearer ")
+                ?.last()
     }
 }

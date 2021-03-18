@@ -23,7 +23,7 @@ class DatarecoveryBackendApplication(
 ) : CommandLineRunner {
 	@Transactional
 	override fun run(vararg args: String?) {
-		productRepository.save(Product("HDD", "500GB", 500.0, Date()))
+		productRepository.save(Product("HDD", "500GB", 500.0,  Date()))
 		productRepository.save(Product("SSD", "500GB", 300.0, Date()))
 		productRepository.save(Product("replacement", "Sicherung auf WD Elements Portable externer Festplatte 500GB", 50.0, Date()))
 		productRepository.save(Product("replacement", "Sicherung auf WD Elements Portable externer Festplatte 1TB", 60.0, Date()))
