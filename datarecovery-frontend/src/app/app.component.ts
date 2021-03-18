@@ -4,7 +4,7 @@ import {User} from './model/model';
 @Component({
   selector: 'app-root',
   template: `
-    <app-navigation [currentUser]="currentUser" (logout)="logout()"></app-navigation>
+    <app-navigation [currentUser]="this.currentUser" (logout)="logout()"></app-navigation>
   `,
   styles: [``]
 })

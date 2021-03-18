@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Order} from '../../model/model';
+import {Order, orderStateEnum} from '../../model/model';
+import {FormBuilder, FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-order-details',
@@ -19,19 +20,12 @@ import {Order} from '../../model/model';
         <div *ngIf="!edit" class="col-span-2 text-center text-2xl font-bold mt-6">Status: {{order.trackingState}}</div>
         <ng-container *ngIf="edit">
           <div class="col-span-2 text-center mt-6">
-            <select [(ngModel)]="order.trackingState">
-              <option>Auftrag eingegangen</option>
-              <option>Paket eingegangen</option>
-              <option>Erste Analyse</option>
-              <option>Bestellung Ersatzteile</option>
-              <option>Reparatur</option>
-              <option>Auslesen Speicher</option>
-              <option>Abspeicherung Dateien</option>
-              <option>Rückversand</option>
+            <select [formControl]="orderTrackingState">
+              <option *ngFor="let state of orderState | keyvalue" [ngValue]="state.value">{{state.value}}</option>
             </select>
           </div>
           <div class="col-span-2 flex justify-between mt-6">
-            <button (click)="editOrder.emit(order)" class="border-2 rounded-md p-2 border-black">Speichern</button>
+            <button (click)="saveOrder()" class="border-2 rounded-md p-2 border-black">Speichern</button>
             <button (click)="close.emit()" class="border-2 rounded-md p-2 bg-red-500 border-black">Schließen</button>
           </div>
         </ng-container>
@@ -43,14 +37,22 @@ import {Order} from '../../model/model';
   ]
 })
 export class OrderDetailsComponent implements OnInit {
+  orderState = orderStateEnum;
   @Input() order: Order;
   @Input() edit: boolean;
+  orderTrackingState: FormControl;
   @Output() editOrder: EventEmitter<Order> = new EventEmitter<Order>();
   @Output() close: EventEmitter<void> = new EventEmitter();
   constructor() {
   }
 
   ngOnInit(): void {
+    this.orderTrackingState = new FormControl(this.order.trackingState);
+  }
+
+  saveOrder(): void{
+    this.order.trackingState = this.orderTrackingState.value;
+    this.editOrder.emit(this.order);
   }
 
 }

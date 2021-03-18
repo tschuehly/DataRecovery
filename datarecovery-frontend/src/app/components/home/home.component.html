@@ -12,14 +12,12 @@
     </div>
 </div>
 
-<div class="container mx-auto mb-10 mt-28 grid grid-cols-1 lg:grid-cols-2 gap-2">
+<div class="container mx-auto mb-10 mt-28 grid grid-cols-1 lg:grid-cols-2 gap-8">
   <div class="rounded-xl p-6 shadow-2xl border-2">
     <img class="rounded-full h-40 w-40 shadow-xl -mt-24 mx-auto" src="assets/tobias_jungbauer.jpg">
 
     <div class="flex items-start mb-5">
-      <div class="inline-block">
         <img alt="profil" src="/assets/customer.png" class="mx-auto object-cover rounded-full h-16 w-16 "/>
-      </div>
       <div class="ml-6">
         <span class="font-bold">Felix</span>
         <span class="text-gray-500 ml-2 text-sm">Vor 4 Monaten</span>
@@ -57,8 +55,7 @@
     </a>
   </div>
   <div class="text-center">
-    <h1 class="text-3xl">Auftrag:</h1>
-    <p>Schritte zur Datenrettung:</p>
+    <h1 class="text-3xl">Schritte zur Datenrettung:</h1>
     <p>1. Wählen Sie das für Sie passende Angebot aus.</p>
     <p>2. Füllen Sie das Auftragsformular aus. Es folgt eine Bestätigung per Email.</p>
     <p>3. Wählen Sie dafür eine verfolgbare Versandmethode. Packen Sie den Speicher gut ein!</p>
@@ -68,7 +65,17 @@
   </div>
 </div>
 
-<app-order-form [products]="products" (orderOutput)="submitOrder($event)"></app-order-form>
+<div class="border shadow-xl rounded-xl container mx-auto p-10 mb-10">
+  <app-order-form *ngIf="products" [products]="products" (orderOutput)="submitOrder($event)"></app-order-form>
+  <div *ngIf="orderSubmitted === true">
+    <h1>Ihre Bestellung wurde angenommen. Sie sollten bald eine Bestätigungsmail mit weiteren Anweisungen erhalten</h1>
+  </div>
+  <div *ngIf="orderSubmitted === false" class="text-center">
+    <h1 class="text-3xl">Ein Fehler ist aufgetreten.</h1>
+    <p>Bitte kontaktieren sie Tobias Jungbauer über eine Email an <a class="text-green-700 font-bold" href="mailto:ammersee.datenrettung@gmail.com">ammersee.datenrettung@gmail.com</a></p>
+  </div>
+</div>>
+
 <div class="h-80">
   <iframe id="myFrame" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10688.664885486834!2d11.1017109!3d47.9525097!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x37d4dd90c24065cb!2sTobias%20Jungbauer%20Datenrettungsdienst%20-%20AmmerseeDatenrettung.de!5e0!3m2!1sde!2sde!4v1604148030912!5m2!1sde!2sde" width="{{innerWidth}}" height="300" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 </div>

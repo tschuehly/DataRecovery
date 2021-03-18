@@ -2,6 +2,10 @@ module.exports = {
   purge: ['./src/**/*.{html,ts}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    container:{
+      center: true,
+      padding: '2rem'
+    },
     extend: {
       backgroundImage: theme => ({
         'img-hdd': "url('/assets/hdd.jpg')"

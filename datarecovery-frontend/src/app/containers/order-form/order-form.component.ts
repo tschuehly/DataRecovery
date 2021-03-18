@@ -1,45 +1,50 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {Customer, Order, Product} from "../../model/model";
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Customer, Order, Product} from '../../model/model';
 
 @Component({
   selector: 'app-order-form',
   template: `
-    <div class="border shadow-xl rounded-xl container mx-auto p-10 mb-10">
       <div class="w-full text-center text-4xl mb-5">
         <h1>Auftragsformular</h1>
       </div>
-      <form [formGroup]="this.orderForm" (ngSubmit)="onSubmit()" >
+      <form [formGroup]="this.orderForm" (ngSubmit)="onSubmit()">
         <div class="flex flex-col gap-2 px-12 mb-10">
           <div class="flex flex-col gap-2" formGroupName="customer">
-            <label>Vorname</label>
-            <input type="text" formControlName="firstName" required>
-            <label>Nachname</label>
-            <input type="text" formControlName="lastName" required>
-            <label>E-Mail-Adresse</label>
-            <input type="email" formControlName="email" required>
-            <label>Straße und Hausnummer</label>
-            <input type="text" id="street" formControlName="street" required>
-            <label>Postleitzahl</label>
-            <input type="text" formControlName="postalCode" required>
-            <label>Ort</label>
-            <input type="text" formControlName="city" required>
-            <label>Optional: Telefonnummer</label>
-            <input type="text"formControlName="tel">
-          </div>
-          <label>Auftrag zur Dattenrettung einer: </label>
-          <select  formControlName="product" #productSelect required>
-            <option *ngFor="let product of products" [value]="product.id">{{product.name}}  {{product.category}}  {{product.price}}€</option>
-          </select>
-          <ng-container *ngIf="productSelect.value" >
-            <label>Ersatzdatenträger zur Abspeicherung: </label>
-            <select formControlName="replacement" required>
-              <option selected> Sie senden einen eigenen Ersatzspeicher zur Sicherung mit: kostenfrei</option>
-              <option>Sicherung auf WD Elements Portable externe Festplatte 500GB: 50,00 EUR</option>
-              <option>Sicherung auf WD Elements Portable externe Festplatte 1TB: 60,00 EUR</option>
-              <option>Sicherung auf WD Elements Portable externe Festplatte 2TB: 70,00 EUR</option>
-              <option>Sicherung auf WD Elements Portable externe Festplatte 4TB: 100,00 EUR</option>
+            <label>Vorname
+              <input type="text" class="block mt-2 w-full" formControlName="firstName" required>
+            </label>
+            <label>Nachname
+              <input type="text" class="block mt-2 w-full" formControlName="lastName" required>
+            </label>
+            <label>E-Mail-Adresse
+              <input type="email" class="block mt-2 w-full" formControlName="email" required>
+            </label>
+            <label>Straße und Hausnummer
+              <input type="text" class="block mt-2 w-full" formControlName="street" required>
+            </label>
+            <label>Postleitzahl
+              <input type="text" class="block mt-2 w-full" formControlName="postalCode" required>
+            </label>
+            <label>Ort
+              <input type="text" class="block mt-2 w-full" formControlName="city" required></label>
+            <label>Optional: Telefonnummer
+              <input type="text" class="block mt-2 w-full" formControlName="tel"></label>
+            </div>
+            <label>Auftrag zur Dattenrettung einer:
+            <select class="block mt-2 w-full" formControlName="product" #productSelect required>
+              <option *ngFor="let product of products" [value]="product.id">
+                {{product.name}}  {{product.category}}  {{product.price}}€
+              </option>
             </select>
+            </label>
+          <ng-container *ngIf="productSelect.value">
+            <label>Ersatzdatenträger zur Abspeicherung:
+              <select class="block mt-2 w-full" formControlName="replacement" required>
+                <option selected>Sie senden einen eigenen Ersatzspeicher zur Sicherung mit: kostenfrei</option>
+                <option *ngFor="let replacement of replacementProducts">{{replacement.name}} : {{replacement.price}}€</option>
+              </select>
+            </label>
           </ng-container>
 
         </div>
@@ -50,13 +55,13 @@ import {Customer, Order, Product} from "../../model/model";
                   [disabled]="!orderForm.valid">{{orderForm.valid ? "Auftrag abschicken" : "Füllen sie alle benötigten Felder aus" }}</button>
         </div>
       </form>
-    </div>
   `,
   styles: [
-    `input.ng-invalid,select.ng-invalid{
+    `input.ng-invalid.ng-touched, select.ng-invalid.ng-touched {
       background-color: #ffdddd;
     }
-    option{
+
+    option {
       background: #fff;
     }`
   ]
@@ -64,29 +69,36 @@ import {Customer, Order, Product} from "../../model/model";
 export class OrderFormComponent implements OnInit {
   orderForm: FormGroup;
   @Input() products: Product[];
+  replacementProducts: Product[];
   order: Order;
-  constructor(private fb: FormBuilder) { }
-  @Output() orderOutput: EventEmitter<Order> = new EventEmitter() ;
-  ngOnInit(): void {
 
+  constructor(private fb: FormBuilder) {
+  }
+
+  @Output() orderOutput: EventEmitter<Order> = new EventEmitter();
+
+  ngOnInit(): void {
+    this.replacementProducts = this.products.filter(p => p.category === 'replacement');
+    this.products = this.products.filter(p => p.category !== 'replacement');
     this.orderForm = this.fb.group({
       customer: this.fb.group({
-        firstName : ['', Validators.required],
-        lastName : [''],
-        tel : [''],
-        email :  [''],
-        postalCode: ['', Validators.pattern("^[0-9]*$")],
-        city : [''],
-        street :  [''],
+        firstName: ['', Validators.required],
+        lastName: [''],
+        tel: [''],
+        email: [''],
+        postalCode: ['', Validators.pattern('^[0-9]*$')],
+        city: [''],
+        street: [''],
 
       }),
-      product : [''],
-      replacement : [''],
+      product: [''],
+      replacement: ['Sie senden einen eigenen Ersatzspeicher zur Sicherung mit: kostenfrei'],
     });
   }
-  onSubmit(): void{
-    this.order = (this.orderForm.getRawValue() as Order)
-    this.order.product = this.products.find(product => product.id == this.orderForm.get('product').value)
+
+  onSubmit(): void {
+    this.order = (this.orderForm.getRawValue() as Order);
+    this.order.product = this.products.find(product => product.id.toString() === this.orderForm.get('product').value );
     this.orderOutput.emit(this.order);
   }
 }

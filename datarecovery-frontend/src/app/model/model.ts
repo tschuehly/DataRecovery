@@ -12,12 +12,21 @@ export class Order{
   id: number;
   trackingId: string;
   orderDate: Date;
-  trackingState: string;
+  trackingState: orderStateEnum;
   product: Product;
   customer: Customer;
   replacement: string;
 }
-
+export enum orderStateEnum {
+  orderReceived = 'Auftrag eingegangen',
+  parcelReceived = 'Paket eingegangen',
+  firstAnalysis = 'Erste Analyse',
+  orderedReplacementParts = 'Bestellung Ersatzteile',
+  inRepair = 'Reparatur',
+  readingMemory = 'Auslesen Speicher',
+  savingData = 'Abspeicherung Dateien',
+  parcelReturned = 'Rückversand'
+}
 export class Product{
   id: number;
   category: string;

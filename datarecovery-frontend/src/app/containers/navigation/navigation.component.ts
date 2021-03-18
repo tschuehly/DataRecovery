@@ -16,8 +16,9 @@ import {User} from '../../model/model';
         <a class="mr-2 ml-2" routerLink="/tracking">Tracking</a>
         <a class="mr-2 ml-2"  routerLink="/login" *ngIf="!currentUser">Login</a>
         <ng-container *ngIf="currentUser">
+          <a class="mr-2 ml-2"  routerLink="/order">Bestellungen</a>
+          <a class="mr-2 ml-2"  routerLink="/product">Produkte</a>
           <a class="mr-2 ml-2"  routerLink="/login"  (click)="logout.emit()">Logout</a>
-          <a class="mr-2 ml-2"  routerLink="/order">Bestellungsübersicht</a>
         </ng-container>
       </div>
     </nav>

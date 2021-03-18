@@ -41,7 +41,8 @@ import {Order} from '../../model/model';
         </table>
       </div>
       <div *ngIf="editOrder" class="m-auto border shadow-xl px-14 py-10">
-        <app-order-details [order]="editOrder" [edit]="true" (editOrder)="changeOrder($event)" (close)="editOrder = null"></app-order-details>
+        <app-order-details [order]="editOrder" [edit]="true" (editOrder)="updateOrderState($event)"
+                           (close)="editOrder = null"></app-order-details>
       </div>
     </div>
   `,
@@ -61,9 +62,11 @@ export class OrderComponent implements OnInit {
 
   }
 
-  changeOrder(order: Order) {
-    this.http.post('api/order',order).subscribe((order: Order) => {
+  updateOrderState(editOrder: Order): void {
+    console.log(editOrder);
+    this.http.post('api/order/updateStatus', editOrder).subscribe((order: Order) => {
       this.orders.map( o => o.id === order.id);
+      console.log(this.orders);
     });
     this.editOrder = null;
   }

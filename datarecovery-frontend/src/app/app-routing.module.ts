@@ -4,6 +4,7 @@ import {HomeComponent} from './components/home/home.component';
 import {TrackingComponent} from './components/tracking/tracking.component';
 import {LoginComponent} from './components/login/login.component';
 import {OrderComponent} from './components/order/order.component';
+import {ProductComponent} from './components/product/product.component';
 
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path: 'tracking', component: TrackingComponent},
   {path: 'tracking/:trackingId/:postalCode', component: TrackingComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'order', component: OrderComponent}
+  {path: 'order', component: OrderComponent},
+  {path: 'product', component: ProductComponent}
 ];
 
 @NgModule({

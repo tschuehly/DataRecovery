@@ -17,11 +17,23 @@ class OrderController(
     private val logger: Logger) :
     CrudController<Order, OrderRepository,OrderService>(orderService, logger) {
     @PostMapping("/create")
-    fun createOrder(@RequestBody order: Order) {
-        try {
+    fun createOrder(@RequestBody order: Order): Boolean{
+        return try {
             orderService.createOrder(order)
+            true
         } catch (e: Error) {
             logger.error(e.toString())
+            false
+        }
+    }
+    @PostMapping("/updateStatus")
+    fun updateStatus(@RequestBody order: Order): Boolean{
+        return try {
+            orderService.updateState(order)
+            true
+        } catch (e: Error) {
+            logger.error(e.toString())
+            false
         }
     }
 
@@ -39,4 +51,5 @@ class OrderController(
             )
         }
     }
+
 }

@@ -8,7 +8,7 @@ import {Router} from '@angular/router';
 @Component({
   selector: 'app-login',
   template: `
-    <div class="grid border mx-auto mt-60 bg-gray-300 rounded-2xl w-80 h-80 shadow-xl p-5">
+    <div class="grid border mx-auto my-20 bg-gray-300 rounded-2xl w-80 h-80 shadow-xl p-5">
       <h1 class="text-3xl font-bold text-center">Log In</h1>
       <form class="grid grid-cols-1" [formGroup]="loginForm">
         <label class="text-lg py-2" for="username">Username</label>

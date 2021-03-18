@@ -18,12 +18,28 @@ class OrderService(
         order.trackingState = "Auftrag eingegangen"
         orderRepository.save(order)
         logger.info(order.toString())
-        mailService.sendEmail(order)
-
+        mailService.sendOrderConfirmation(order)
     }
 
+    fun updateState(order: Order){
+        val savedOrder = this.update(order)
+        when(savedOrder.trackingState){
+            parcelReceived -> mailService.sendParcelReceived(order)
+        }
+    }
     fun getByTrackingIdAndPostalCode(trackingId: String, postalCode: String) : Order {
         return orderRepository.findByTrackingIdAndCustomer_PostalCode(trackingId,postalCode) ?:
         throw NoSuchElementException("No Order with matching trackingId and postalcode present")
+    }
+
+    companion object orderState {
+        val orderReceived = "Auftrag eingegangen"
+        val parcelReceived = "Paket eingegangen"
+        val firstAnalysis = "Erste Analyse"
+        val orderedReplacementParts = "Bestellung Ersatzteile"
+        val inRepair = "Reparatur"
+        val readingMemory = "Auslesen Speicher"
+        val savingData = "Abspeicherung Dateien"
+        val parcelReturned = "Rückversand"
     }
 }

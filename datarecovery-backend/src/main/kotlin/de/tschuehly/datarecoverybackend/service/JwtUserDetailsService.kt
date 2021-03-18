@@ -54,7 +54,6 @@ class JwtUserDetailsService(
     }
 
     fun loadUserByToken(token: String): JwtUserDetails? {
-        println("Token in loadUserbyToken: $token")
         return getDecodedToken(token)
                 ?.let { it.subject }.also { println("decoded token: $it") }
                 ?.let { userRepository.findByUsername(it) }.also { println("user by username: $it") }

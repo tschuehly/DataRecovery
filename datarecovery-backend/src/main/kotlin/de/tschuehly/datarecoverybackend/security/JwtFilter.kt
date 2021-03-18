@@ -21,7 +21,6 @@ class JwtFilter(
     override fun doFilterInternal(request: HttpServletRequest, response: HttpServletResponse, filterChain: FilterChain) {
         try{
             getToken(request)
-                    .also { println("Token: $it") }
                     ?.let { jwtUserDetailsService.loadUserByToken(it) }
 
                     ?.let { jwtUserDetails -> JWTPreAuthenticationToken(

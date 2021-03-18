@@ -12,6 +12,8 @@ import { TrackingComponent } from './components/tracking/tracking.component';
 import { LoginComponent } from './components/login/login.component';
 import { OrderComponent } from './components/order/order.component';
 import { OrderDetailsComponent } from './containers/order-details/order-details.component';
+import { ProductComponent } from './components/product/product.component';
+import { ProductDetailComponent } from './containers/product-detail/product-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,9 @@ import { OrderDetailsComponent } from './containers/order-details/order-details.
     TrackingComponent,
     LoginComponent,
     OrderComponent,
-    OrderDetailsComponent
+    OrderDetailsComponent,
+    ProductComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
   public innerWidth: any;
+  orderSubmitted: boolean = null;
   products: Product[];
   ngOnInit(): void {
     this.innerWidth = document.documentElement.clientWidth;
@@ -25,8 +26,8 @@ export class HomeComponent implements OnInit {
   }
 
   submitOrder(order: Order): void {
-    this.http.post('api/order/create', order).subscribe(data => {
-      console.log(data);
-    });
+    this.http.post('api/order/create', order).subscribe((data: boolean) => {
+      this.orderSubmitted = data === true;
+    }, error => this.orderSubmitted = false);
   }
 }
