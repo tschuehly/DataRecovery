@@ -21,7 +21,7 @@ import javax.mail.internet.MimeMessage
 @Service
 class MailService(val javaMailSender: JavaMailSender) {
 
-    fun sendOrderConfirmation(order: Order){
+    fun sendOrderConfirmation(order: Order){ //TODO: Error Handling
 
         val msg = javaMailSender.createMimeMessage()
 

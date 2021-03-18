@@ -1,7 +1,6 @@
 package de.tschuehly.datarecoverybackend.model
 
 import javax.persistence.Entity
-import javax.persistence.OneToOne
 
 @Entity
 class Customer(
@@ -10,7 +9,7 @@ class Customer(
     var tel: String?,
     var email: String?,
     var postalCode: String?,
-    var city : String?,
+    var city: String?,
     var street: String?,
 ) : BaseEntity() {
     override fun toString(): String {

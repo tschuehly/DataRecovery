@@ -19,12 +19,15 @@ import {HttpClient} from '@angular/common/http';
           <tbody>
           <tr *ngFor="let product of products">
             <td class="border p-2">{{product.id}}</td>
-            <td class="border p-2"><span *ngIf="product.category == 'replacement' else cat">Ersatz</span><ng-template #cat>{{product.category}}</ng-template></td>
+            <td class="border p-2"><span *ngIf="product.category == 'replacement' else cat">Ersatz</span>
+              <ng-template #cat>{{product.category}}</ng-template>
+            </td>
             <td class="border p-2">{{product.name}}</td>
             <td class="border p-2">{{product.price}} €</td>
             <td class="border pl-2">
               <button (click)="editProduct = product">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="28" height="28" viewBox="0 0 24 24"
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="28" height="28"
+                     viewBox="0 0 24 24"
                      stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                   <path d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3"/>
@@ -39,7 +42,10 @@ import {HttpClient} from '@angular/common/http';
         </table>
       </div>
       <div *ngIf="editProduct" class="m-auto border shadow-xl px-14 py-10">
-        <app-product-detail [product]="editProduct" (editProduct)="changeProduct($event)" (close)="editProduct = null"></app-product-detail>
+        <!--<app-product-detail [product]="editProduct" (editProduct)="changeProduct($event)"
+                            (close)="editProduct = null"></app-product-detail>-->
+        <app-object-edit [inputObject]="editProduct" (outObject)="saveProduct($event)"
+                         (close)="editProduct = null"></app-object-edit>
       </div>
     </div>
   `,
@@ -58,8 +64,8 @@ export class ProductComponent implements OnInit {
     });
   }
 
-  changeProduct(editProduct: Product): void {
-    this.http.post('api/product', editProduct).subscribe((product: Product) => {
+  saveProduct(productToSave: Product) {
+    this.http.post('api/product', productToSave).subscribe((product: Product) => {
       this.products = this.products.map( p => p.id === product.id ? product : p);
     });
     this.editProduct = null;

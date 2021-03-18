@@ -8,7 +8,8 @@ data class JwtUserDetails(
     private val username: String,
     private val password: String,
     val authorities: List<SimpleGrantedAuthority>,
-    val token: String) : UserDetails{
+    val token: String
+) : UserDetails {
 
     override fun getAuthorities(): MutableCollection<out GrantedAuthority> {
         return authorities.toMutableList()

@@ -7,16 +7,16 @@ import javax.persistence.Id
 
 @Entity
 class User(
-        @Id
-        @GeneratedValue
-        val id: Long,
-        val username: String,
-        @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-        var password: String,
-        val role: String,
-        val email: String?
-){
-        override fun toString(): String {
-                return "User(id=$id, username='$username', password='$password', role='$role', email=$email)"
-        }
+    @Id
+    @GeneratedValue
+    val id: Long,
+    val username: String,
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    var password: String,
+    val role: String,
+    val email: String?
+) {
+    override fun toString(): String {
+        return "User(id=$id, username='$username', password='$password', role='$role', email=$email)"
+    }
 }

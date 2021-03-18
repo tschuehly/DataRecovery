@@ -16,6 +16,7 @@ import {FormBuilder, FormControl} from '@angular/forms';
         <div class="flex flex-col text-right">
           <span>Produkt: {{order.product.category}} {{order.product.name}} </span>
           <span>Preis: {{order.product.price}} €</span>
+          <span>TrackingId: {{order.trackingId}} €</span>
         </div>
         <div *ngIf="!edit" class="col-span-2 text-center text-2xl font-bold mt-6">Status: {{order.trackingState}}</div>
         <ng-container *ngIf="edit">

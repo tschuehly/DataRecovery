@@ -13,20 +13,22 @@ import { LoginComponent } from './components/login/login.component';
 import { OrderComponent } from './components/order/order.component';
 import { OrderDetailsComponent } from './containers/order-details/order-details.component';
 import { ProductComponent } from './components/product/product.component';
-import { ProductDetailComponent } from './containers/product-detail/product-detail.component';
+import { ProductDetailComponent } from './containers/product-detail/product-detail.component'
+import { ObjectEditComponent } from './containers/object-edit/object-edit.component';
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    NavigationComponent,
-    OrderFormComponent,
-    TrackingComponent,
-    LoginComponent,
-    OrderComponent,
-    OrderDetailsComponent,
-    ProductComponent,
-    ProductDetailComponent
-  ],
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        NavigationComponent,
+        OrderFormComponent,
+        TrackingComponent,
+        LoginComponent,
+        OrderComponent,
+        OrderDetailsComponent,
+        ProductComponent,
+        ProductDetailComponent,
+        ObjectEditComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -32,6 +32,7 @@ export class Product{
   category: string;
   name: string;
   price: number;
+  createDate: Date;
 }
 
 export class Credentials {

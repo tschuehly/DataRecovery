@@ -10,7 +10,7 @@ import {FormArray, FormBuilder, FormGroup, Validators} from '@angular/forms';
       <div class="grid grid-cols-1 text-lg gap-4">
         <form [formGroup]="editProductForm" class="mx-auto text-center">
           <label class="block">Ersatz:
-            <input class="mb-1" type="checkbox" [checked]="replacement"  (change)="replacement = !replacement">
+            <input class="mb-1" type="checkbox" [checked]="replacement" (change)="replacement = !replacement">
           </label>
           <label *ngIf="!replacement">Kategorie:
             <input type="text" formControlName="category" class="mt-1 mb-2 pl-3 block w-full">
@@ -22,7 +22,7 @@ import {FormArray, FormBuilder, FormGroup, Validators} from '@angular/forms';
             <label>Preis:
               <div class="mt-1 relative w-full">
                 <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                <span>€</span>
+                  <span>€</span>
                 </div>
                 <input type="text" formControlName="price" class="block pl-3">
               </div>
@@ -32,7 +32,8 @@ import {FormArray, FormBuilder, FormGroup, Validators} from '@angular/forms';
         </form>
         <div class="flex justify-between mt-6">
           <button (click)="saveProduct()" class="border-2 rounded-md p-2 border-black">Speichern</button>
-          <button (click)="close.emit()" class="border-2 rounded-md p-2 bg-red-500 border-black">Schließen</button>
+          <button (click)="close.emit()" class="border-2 rounded-md p-2 bg-red-500 border-black">Schließen
+          </button>
         </div>
       </div>
     </div>
