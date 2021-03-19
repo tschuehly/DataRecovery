@@ -1,15 +1,18 @@
-<div class="bg-cover bg-img-hdd py-10 bg-center" style="background-color: #008b41;
+<div class="bg-cover bg-img-hdd py-10 bg-center " style="background-color: #008b41;
   background-blend-mode: color-burn; ">
-    <div class="container text-gray-50 text-center mx-auto">
-      <h1 class="text-4xl pt-10 mb-20">
+    <div  class="container text-gray-50 text-center mx-auto z-10">
+      <h1 class="text-5xl pt-10 mb-20 ">
         Professionelle Datenrettung zu fairen Konditionen
       </h1>
-      <h3 class="text-xl">
+      <h3 class="text-3xl mb-2">
         Faire Rahmenbedingungen
       </h3>
-      <p>Sie zahlen f&uuml;r die Datenrettung nicht mehr als den angegeben Festpreis. Das zudem erst nach Datenerhalt, sprich nicht im Voraus und das nur nach erfolgreicher Wiederherstellung. Wenn keine Datenrettung m&ouml;glich ist, ist die Bearbeitung, inklusive des versicherten R&uuml;ckversand (DHL), kostenfrei.</p>
-      <p>Die durchschnittliche Bearbeitungszeit betr&auml;gt derzeit 7 bis 14 Tage. Alle Arbeiten werden hier vor Ort durchgef&uuml;hrt.</p>
-    </div>
+      <p class="text-xl">
+        Sie zahlen f&uuml;r die Datenrettung nicht mehr als den angegeben Festpreis. Das zudem erst nach Datenerhalt, sprich nicht im Voraus und das nur nach erfolgreicher Wiederherstellung.
+        Wenn keine Datenrettung m&ouml;glich ist, ist die Bearbeitung, inklusive des versicherten R&uuml;ckversand (DHL), kostenfrei.
+        Die durchschnittliche Bearbeitungszeit betr&auml;gt derzeit 7 bis 14 Tage. Alle Arbeiten werden hier vor Ort durchgef&uuml;hrt.
+      </p>
+       </div>
 </div>
 
 <div class="container mx-auto mb-10 mt-28 grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -50,9 +53,13 @@
         </div>
       </div>
     </div>
-    <a class="border-2 rounded-md p-2" href="https://www.google.de/search?&q=Tobias+Jungbauer+Datenrettungsdienst+-+AmmerseeDatenrettung.de&entrypoint=sh/x/kp/local#lrd=0x479c339724e79353:0x37d4dd90c24065cb,1,,," target="_blank">
-      Weitere Bewertungen
-    </a>
+    <div class="text-right">
+      <button class="button-primary ml-auto mr-0">
+        <a href="https://www.google.de/search?&q=Tobias+Jungbauer+Datenrettungsdienst+-+AmmerseeDatenrettung.de&entrypoint=sh/x/kp/local#lrd=0x479c339724e79353:0x37d4dd90c24065cb,1,,," target="_blank">
+          Weitere Bewertungen
+        </a>
+      </button>
+    </div>
   </div>
   <div class="text-center">
     <h1 class="text-3xl">Schritte zur Datenrettung:</h1>
@@ -64,9 +71,22 @@
 
   </div>
 </div>
+<div class="bg-img-flash bg-center bg-cover text-xl">
+  <div class="container flex gap-4 py-10 justify-center ">
+    <div class="shadow-2xl bg-white rounded-md p-8">
+      <ng-container *ngFor="let product of products" [ngSwitch]="product.category">
+        <div class="justify-between py-1 mx-auto flex" >
+          <span class="mr-4">{{product.category + " " + product.name}}</span><span>{{product.price}}€</span>
 
-<div class="border shadow-xl rounded-xl container mx-auto p-10 mb-10">
-  <app-order-form *ngIf="products" [products]="products" (orderOutput)="submitOrder($event)"></app-order-form>
+        </div>
+      </ng-container>
+    </div>
+
+  </div>
+
+</div>
+<div class="border shadow-xl rounded-xl container mx-auto p-10 my-10">
+  <app-order-form *ngIf="products" [products]="products" [replacementProducts]="replacementProducts" (orderOutput)="submitOrder($event)"></app-order-form>
   <div *ngIf="orderSubmitted === true">
     <h1>Ihre Bestellung wurde angenommen. Sie sollten bald eine Bestätigungsmail mit weiteren Anweisungen erhalten</h1>
   </div>
@@ -74,9 +94,9 @@
     <p>Bitte kontaktieren sie Tobias Jungbauer über eine Email an:
       <span class="text-green-700 font-bold">ammersee.datenrettung@gmail.com</span>
     </p>
-    <button
-      class="border-2 rounded-md p-2 mt-4">
-      <a  href="mailto:ammersee.datenrettung@gmail.com">Hier klicken um eine Email zu senden</a>
+    <button class="border-2 rounded-md p-2 mt-4">
+
+      <a  href="mailto:ammersee.datenrettung@gmail.com?subject=Anfrage%20wegen%20einer%20Datenrettung&amp;body=Sehr%20geehrter%20Herr%20Jungbauer%20%0AGerne%20Würde%20ich%20folgende%20">Hier klicken um eine Email zu senden</a>
     </button>
   </div>
 </div>>

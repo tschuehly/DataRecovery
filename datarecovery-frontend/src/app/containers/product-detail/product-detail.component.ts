@@ -8,15 +8,15 @@ import {FormArray, FormBuilder, FormGroup, Validators} from '@angular/forms';
     <div>
       <h1 class="text-center text-2xl mb-5">Produkt: {{product.category + " " + product.name}} </h1>
       <div class="grid grid-cols-1 text-lg gap-4">
-        <form [formGroup]="editProductForm" class="mx-auto text-center">
-          <label class="block">Ersatz:
+        <form [formGroup]="editProductForm" class="mx-auto text-center grid grid-cols-2 gap-2">
+          <label>Ersatz:
             <input class="mb-1" type="checkbox" [checked]="replacement" (change)="replacement = !replacement">
           </label>
           <label *ngIf="!replacement">Kategorie:
-            <input type="text" formControlName="category" class="mt-1 mb-2 pl-3 block w-full">
+            <input type="text" formControlName="category" class="mt-1 mb-2 pl-3 block">
           </label>
           <label>Name:
-            <input type="text" formControlName="name" class="mt-1 mb-2 block pl-3 w-full">
+            <input type="text" formControlName="name" class="mt-1 mb-2 block pl-3">
           </label>
           <div>
             <label>Preis:
@@ -50,7 +50,7 @@ export class ProductDetailComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    if(this.product.category === 'replacement'){
+    if (this.product.category === 'replacement'){
       this.replacement = true;
     }
     this.editProductForm = this.fb.group({

@@ -12,11 +12,14 @@ export class HomeComponent implements OnInit {
   public innerWidth: any;
   orderSubmitted: boolean = null;
   products: Product[];
+  replacementProducts: Product[];
   ngOnInit(): void {
     this.innerWidth = document.documentElement.clientWidth;
     this.http.get('api/product').subscribe( data => {
         this.products = data as Product[];
         console.log(this.products);
+        this.replacementProducts = this.products.filter(p => p.category === 'replacement');
+        this.products = this.products.filter(p => p.category !== 'replacement');
     }
     );
   }

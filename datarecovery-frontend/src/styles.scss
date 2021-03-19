@@ -5,3 +5,10 @@
 @import 'tailwindcss/utilities';
 
 /* You can add global styles to this file, and also import other style files */
+
+.button-primary{
+  @apply border-2 rounded-md p-2 bg-primary text-gray-50 font-semibold
+}
+.text-shadow{
+ text-shadow: 0 4px 8px rgba(0,0,0,1), 0 2px 4px rgba(0,0,0,1);
+}

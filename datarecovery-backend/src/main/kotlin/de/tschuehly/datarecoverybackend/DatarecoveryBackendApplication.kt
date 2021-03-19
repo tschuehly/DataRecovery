@@ -23,8 +23,15 @@ class DatarecoveryBackendApplication(
 ) : CommandLineRunner {
 	@Transactional
 	override fun run(vararg args: String?) {
-		productRepository.save(Product("HDD", "500GB", 500.0, Date()))
-		productRepository.save(Product("SSD", "500GB", 300.0, Date()))
+		productRepository.save(Product("HDD", "Festplatte mit bis zu 500GB", 297.50, Date()))
+		productRepository.save(Product("HDD", "Festplatte mit bis zu 1TB", 375.0, Date()))
+		productRepository.save(Product("HDD", "Festplatte mit bis zu 2TB", 416.0, Date()))
+		productRepository.save(Product("Sata SSD", "Festplatte mit bis zu 500GB", 178.50, Date()))
+		productRepository.save(Product("Sata SSD", "Festplatte mit bis zu 1TB", 238.0, Date()))
+		productRepository.save(Product("Sata SSD", "Festplatte mit bis zu 2TB", 357.0, Date()))
+		productRepository.save(Product("SD-Karte oder USB-Stick", "Festplatte mit bis zu 500GB", 130.50, Date()))
+		productRepository.save(Product("SD-Karte oder USB-Stick", "Festplatte mit bis zu 1TB", 150.0, Date()))
+		productRepository.save(Product("SD-Karte oder USB-Stick", "Festplatte mit bis zu 2TB", 185.0, Date()))
 		productRepository.save(Product("replacement", "Sicherung auf WD Elements Portable externer Festplatte 500GB", 50.0, Date()))
 		productRepository.save(Product("replacement", "Sicherung auf WD Elements Portable externer Festplatte 1TB", 60.0, Date()))
 		val customer = Customer("Thomas", "Schuehly", "97123871", "thomas.schuehly@outlook.com", "71638", "Ludwigsburg", "Kaiserstraße 25")

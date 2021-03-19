@@ -9,7 +9,7 @@ import {User} from '../../model/model';
     <div class="h-screen flex flex-col">
     <nav class="bg-white p-4 bg-gray-100 text-gray-800 w-screen flex justify-between fixed">
       <div class="text-3xl p-2">
-        AmmerseeDatenrettung.de
+        Tobias Jungbauer Datenrettung
       </div>
       <div class="text-xl flex  items-center">
         <a class="mr-2" routerLink="">Home</a>

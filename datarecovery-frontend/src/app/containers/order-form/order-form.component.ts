@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {Customer, Order, Product} from '../../model/model';
+import {Customer, Order, orderStateEnum, Product} from '../../model/model';
 
 @Component({
   selector: 'app-order-form',
@@ -9,7 +9,7 @@ import {Customer, Order, Product} from '../../model/model';
       <h1>Auftragsformular</h1>
     </div>
     <form [formGroup]="this.orderForm" (ngSubmit)="onSubmit()">
-      <div class="flex flex-col gap-2 px-12 mb-10">
+      <div class="flex flex-col gap-2 px-12">
         <div class="flex flex-col gap-2" formGroupName="customer">
           <label>Vorname
             <input type="text" class="block mt-2 w-full" formControlName="firstName" required>
@@ -48,12 +48,12 @@ import {Customer, Order, Product} from '../../model/model';
           </label>
         </ng-container>
 
-      </div>
-      <div class="flex justify-end">
-        <button type="submit"
-                class="border-2 rounded-md p-2 "
-                [ngClass]="{'bg-red-500': !orderForm.valid}"
-                [disabled]="!orderForm.valid">{{orderForm.valid ? "Auftrag abschicken" : "Füllen sie alle benötigten Felder aus" }}</button>
+        <div class="flex justify-end mt-4">
+          <button type="submit"
+                  class="button-primary"
+                  [ngClass]="{'bg-red-500': !orderForm.valid}"
+                  [disabled]="!orderForm.valid">{{orderForm.valid ? "Auftrag abschicken" : "Füllen sie alle benötigten Felder aus" }}</button>
+        </div>
       </div>
     </form>
   `,
@@ -70,7 +70,7 @@ import {Customer, Order, Product} from '../../model/model';
 export class OrderFormComponent implements OnInit {
   orderForm: FormGroup;
   @Input() products: Product[];
-  replacementProducts: Product[];
+  @Input() replacementProducts: Product[];
   order: Order;
 
   constructor(private fb: FormBuilder) {
@@ -79,8 +79,6 @@ export class OrderFormComponent implements OnInit {
   @Output() orderOutput: EventEmitter<Order> = new EventEmitter();
 
   ngOnInit(): void {
-    this.replacementProducts = this.products.filter(p => p.category === 'replacement');
-    this.products = this.products.filter(p => p.category !== 'replacement');
     this.orderForm = this.fb.group({
       customer: this.fb.group({
         firstName: ['', Validators.required],
