@@ -70,9 +70,14 @@
   <div *ngIf="orderSubmitted === true">
     <h1>Ihre Bestellung wurde angenommen. Sie sollten bald eine Bestätigungsmail mit weiteren Anweisungen erhalten</h1>
   </div>
-  <div *ngIf="orderSubmitted === false" class="text-center">
-    <h1 class="text-3xl">Ein Fehler ist aufgetreten.</h1>
-    <p>Bitte kontaktieren sie Tobias Jungbauer über eine Email an <a class="text-green-700 font-bold" href="mailto:ammersee.datenrettung@gmail.com">ammersee.datenrettung@gmail.com</a></p>
+  <div *ngIf="!products" class="text-center">
+    <p>Bitte kontaktieren sie Tobias Jungbauer über eine Email an:
+      <span class="text-green-700 font-bold">ammersee.datenrettung@gmail.com</span>
+    </p>
+    <button
+      class="border-2 rounded-md p-2 mt-4">
+      <a  href="mailto:ammersee.datenrettung@gmail.com">Hier klicken um eine Email zu senden</a>
+    </button>
   </div>
 </div>>
 

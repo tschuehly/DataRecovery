@@ -44,9 +44,9 @@ import {ObjectEditComponent} from "../../containers/object-edit/object-edit.comp
         </table>
       </div>
       <div *ngIf="editOrder" class="m-auto border shadow-xl px-14 py-10">
-        <!--<app-order-details [order]="editOrder" [edit]="true" (editOrder)="updateOrderState($event)"
-                           (close)="editOrder = null"></app-order-details>-->
-        <app-object-edit (outObject)="updateOrderState($event)" [inputObject]="editOrder" ></app-object-edit>
+        <app-order-details [order]="editOrder" [edit]="true" (editOrder)="updateOrderState($event)"
+                           (close)="editOrder = null"></app-order-details>
+       <!-- <app-object-edit (outObject)="updateOrderState($event)" [inputObject]="editOrder" ></app-object-edit>-->
       </div>
     </div>
   `,

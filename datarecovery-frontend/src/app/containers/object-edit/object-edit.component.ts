@@ -56,6 +56,7 @@ export class ObjectEditComponent<T> implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(Object.keys(this.inputObject))
     this.inputDef = Object.keys(this.inputObject).map(value => {
       let input: inputDefClass = new inputDefClass()
       input.key = value

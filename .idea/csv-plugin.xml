@@ -3,6 +3,13 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="\datarecovery-frontend\src\app\components\home\home.component.html">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\datarecovery-frontend\src\app\components\product\product.component.ts">
           <value>
             <Attribute>

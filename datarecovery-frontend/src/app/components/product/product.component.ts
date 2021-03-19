@@ -42,15 +42,15 @@ import {HttpClient} from '@angular/common/http';
         </table>
       </div>
       <div *ngIf="editProduct" class="m-auto border shadow-xl px-14 py-10">
-        <!--<app-product-detail [product]="editProduct" (editProduct)="changeProduct($event)"
-                            (close)="editProduct = null"></app-product-detail>-->
-        <app-object-edit [inputObject]="editProduct" (outObject)="saveProduct($event)"
-                         (close)="editProduct = null"></app-object-edit>
-      </div>
+        <app-product-detail [product]="editProduct" (editProduct)="changeProduct($event)"
+                            (close)="editProduct = null"></app-product-detail>
+        <!-- <app-object-edit [inputObject]="editProduct" (outObject)="saveProduct($event)"
+                          (close)="editProduct = null"></app-object-edit>-->
+       </div>
 
-      <button (click)="editProduct = Product()">Neues Produkt</button>
-    </div>
-  `,
+       <button (click)="editProduct = Product()">Neues Produkt</button>
+     </div>
+`,
   styles: [
   ]
 })

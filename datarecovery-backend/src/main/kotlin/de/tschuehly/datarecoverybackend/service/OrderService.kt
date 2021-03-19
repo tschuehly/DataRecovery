@@ -12,8 +12,8 @@ class OrderService(
     private val orderRepository: OrderRepository,
     private val mailService: MailService,
     private val logger: Logger
-) : CrudService<Order,OrderRepository>(orderRepository) {
-    fun createOrder(order: Order){
+) : CrudService<Order, OrderRepository>(orderRepository) {
+    fun createOrder(order: Order) {
         order.orderDate = Date()
         order.trackingState = "Auftrag eingegangen"
         orderRepository.save(order)
@@ -21,15 +21,15 @@ class OrderService(
         mailService.sendOrderConfirmation(order)
     }
 
-    fun updateState(order: Order){
+    fun updateState(order: Order) {
         val savedOrder = this.update(order)
-        when(savedOrder.trackingState){
+        when (savedOrder.trackingState) {
             parcelReceived -> mailService.sendParcelReceived(order)
         }
     }
-    fun getByTrackingIdAndPostalCode(trackingId: String, postalCode: String) : Order {
-        return orderRepository.findByTrackingIdAndCustomer_PostalCode(trackingId,postalCode) ?:
-        throw NoSuchElementException("No Order with matching trackingId and postalcode present")
+    fun getByTrackingIdAndPostalCode(trackingId: String, postalCode: String): Order {
+        return orderRepository.findByTrackingIdAndCustomer_PostalCode(trackingId, postalCode)
+            ?: throw NoSuchElementException("No Order with matching trackingId and postalcode present")
     }
 
     companion object orderState {
