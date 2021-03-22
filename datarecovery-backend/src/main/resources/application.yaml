@@ -11,11 +11,13 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: create
-
-
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB
     properties:
       hibernate:
-        format_sql=true:
+        format_sql: true
   mail:
     host: smtp.gmail.com
     port: 587

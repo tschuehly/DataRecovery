@@ -38,10 +38,11 @@ class OrderService(
             ?: throw NoSuchElementException("No Order with matching trackingId and postalcode present")
     }
 
-    fun addUpdateToOrder(id: Long,multipartFile: MultipartFile): Order {
+    fun addUpdateToOrder(id: Long, multipartFile: Array<MultipartFile>): Order {
         val update = Update("", Date(), ArrayList())
         val order: Order = orderRepository.findByIdOrNull(id) ?: throw NoSuchElementException()
-        update.pictures.add(Picture(multipartFile.name,multipartFile.contentType,multipartFile.bytes))
+        multipartFile.forEach { file -> update.pictures.add(Picture(file.name,file.contentType,file.bytes)) }
+
         order.addUpdateToOrder(update)
 
         orderRepository.save(order)

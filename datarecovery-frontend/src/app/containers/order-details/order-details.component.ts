@@ -79,7 +79,9 @@ export class OrderDetailsComponent implements OnInit {
   addUpdateToOrder(): void{
     console.log(this.files);
     const uploadImageData = new FormData();
-    uploadImageData.append('imageFile', this.files[0], this.files[0].name);
+    for (const file of this.files){
+      uploadImageData.append('imageFile', file, file.name);
+    }
     this.http.post('api/order/addUpdate/' + this.order.id, uploadImageData ).subscribe(data => console.log(data));
   }
   getPicturesForm(): FormArray{
@@ -91,7 +93,7 @@ export class OrderDetailsComponent implements OnInit {
     this.editOrder.emit(this.order);
   }
 
-  onFileChange($event: Event, i: number) {
+  onFileChange($event: Event, i: number):void {
     this.files.push(($event.target as HTMLInputElement).files[0]);
   }
 }
