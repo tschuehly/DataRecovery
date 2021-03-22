@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Order, orderStateEnum} from '../../model/model';
-import {FormBuilder, FormControl} from '@angular/forms';
+import {Order, orderStateEnum, Update} from '../../model/model';
+import {FormArray, FormBuilder, FormControl, FormGroup} from '@angular/forms';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-order-details',
@@ -14,7 +15,7 @@ import {FormBuilder, FormControl} from '@angular/forms';
           <span>{{c.postalCode}} {{c.city}}</span>
         </div>
         <div class="flex flex-col text-right">
-          <span>Produkt: {{order.product.category}} {{order.product.name}} </span>
+          <span>Produkt: {{order.product.category.name}} {{order.product.name}} </span>
           <span>Preis: {{order.product.price}} €</span>
           <span>TrackingId: {{order.trackingId}} €</span>
         </div>
@@ -29,8 +30,17 @@ import {FormBuilder, FormControl} from '@angular/forms';
             <button (click)="saveOrder()" class="border-2 rounded-md p-2 border-black">Speichern</button>
             <button (click)="close.emit()" class="border-2 rounded-md p-2 bg-red-500 border-black">Schließen</button>
           </div>
+          <form [formGroup]="updateForm" (ngSubmit)="addUpdateToOrder()" enctype="multipart/form-data">
+            <label>Beschreibung
+              <input type="text" class="block mt-2 w-full" formControlName="description"></label>
+            <button class="button-primary" (click)="addImage()">Add Image</button>
+            <div formArrayName="pictures" *ngFor="let picture of pictures.controls; let i = index">
+              <label>Lade Bild hoch
+                <input [formControlName]="i" type="file" (change)="onFileChange($event,i)" ></label>
+            </div>
+            <button class="button-primary" type="submit">Add Update</button>
+          </form>
         </ng-container>
-
       </div>
     </div>
   `,
@@ -42,13 +52,38 @@ export class OrderDetailsComponent implements OnInit {
   @Input() order: Order;
   @Input() edit: boolean;
   orderTrackingState: FormControl;
+  updateForm = new FormGroup({
+    description: new FormControl(),
+    pictures: new FormArray([])
+  });
+  files: File[] = [];
+  pictures = this.updateForm.get('pictures') as FormArray;
+  preview: string;
+  update: Update;
   @Output() editOrder: EventEmitter<Order> = new EventEmitter<Order>();
+  @Output() addUpdate: EventEmitter<Order> = new EventEmitter<Order>();
   @Output() close: EventEmitter<void> = new EventEmitter();
-  constructor() {
+  constructor(private fb: FormBuilder,private http: HttpClient) {
   }
 
   ngOnInit(): void {
     this.orderTrackingState = new FormControl(this.order.trackingState);
+
+
+  }
+  addImage(): void{
+    console.log('addPicture');
+    (this.updateForm.get('pictures') as FormArray).push(new FormControl(''));
+
+  }
+  addUpdateToOrder(): void{
+    console.log(this.files);
+    const uploadImageData = new FormData();
+    uploadImageData.append('imageFile', this.files[0], this.files[0].name);
+    this.http.post('api/order/addUpdate/' + this.order.id, uploadImageData ).subscribe(data => console.log(data));
+  }
+  getPicturesForm(): FormArray{
+    return this.updateForm.get('pictures') as FormArray;
   }
 
   saveOrder(): void{
@@ -56,4 +91,7 @@ export class OrderDetailsComponent implements OnInit {
     this.editOrder.emit(this.order);
   }
 
+  onFileChange($event: Event, i: number) {
+    this.files.push(($event.target as HTMLInputElement).files[0]);
+  }
 }

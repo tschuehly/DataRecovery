@@ -3,11 +3,14 @@ package de.tschuehly.datarecoverybackend.controller
 import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonNumberFormatVisitor
 import de.tschuehly.datarecoverybackend.helpers.CrudController
 import de.tschuehly.datarecoverybackend.model.Order
+import de.tschuehly.datarecoverybackend.model.Picture
+import de.tschuehly.datarecoverybackend.model.Update
 import de.tschuehly.datarecoverybackend.repository.OrderRepository
 import de.tschuehly.datarecoverybackend.service.OrderService
 import org.slf4j.Logger
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
+import org.springframework.web.multipart.MultipartFile
 import org.springframework.web.server.ResponseStatusException
 
 @RestController
@@ -45,6 +48,21 @@ class OrderController(
         return try {
             orderService.getByTrackingIdAndPostalCode(trackingId, postalCode)
         } catch (e: NoSuchElementException) {
+            throw ResponseStatusException(
+                HttpStatus.BAD_REQUEST,
+                e.localizedMessage
+            )
+        }
+    }
+
+    @PostMapping("/addUpdate/{id}", consumes = ["multipart/form-data"])
+    fun addUpdateToOrder(
+        @PathVariable id: Long,
+        @RequestParam("imageFile") multiPartFile : MultipartFile
+    ): Order{
+        return try{
+            orderService.addUpdateToOrder(id,multiPartFile)
+        }catch (e: NoSuchElementException){
             throw ResponseStatusException(
                 HttpStatus.BAD_REQUEST,
                 e.localizedMessage

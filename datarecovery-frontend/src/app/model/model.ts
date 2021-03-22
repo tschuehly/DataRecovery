@@ -16,6 +16,7 @@ export class Order{
   product: Product;
   customer: Customer;
   replacement: string;
+  updates: Update[];
 }
 export enum orderStateEnum {
   orderReceived = 'Auftrag eingegangen',
@@ -27,13 +28,25 @@ export enum orderStateEnum {
   savingData = 'Abspeicherung Dateien',
   parcelReturned = 'Rückversand'
 }
+export class Update{
+  description: string;
+  pictures: File[];
+}
 export class Product{
   constructor(public id: number = 0,
-              public category: string = "",
-              public name: string = "",
+              public category: Category ,
+              public name: string = '',
               public price: number  = 0,
-              public createDate: String = new Date().toISOString().substring(0,19)
+              public createDate: string = new Date().toISOString().substring(0, 19)
   ) {}
+}
+
+export class Category{
+  id: string;
+  name: string;
+  title: string;
+  description: string;
+  replacement: boolean;
 }
 
 export class Credentials {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Order, Product} from '../../model/model';
+import {Category, Order, Product} from '../../model/model';
 import {HttpClient} from '@angular/common/http';
 
 @Component({
@@ -14,16 +14,16 @@ import {HttpClient} from '@angular/common/http';
           <th class="border px-2 py-1">Kategorie</th>
           <th class="border px-2 py-1">Produkt</th>
           <th class="border px-2 py-1">Preise</th>
+          <th class="border px-2 py-1">Ersatz</th>
           <th class="border px-2 py-1">Edit</th>
           </thead>
           <tbody>
           <tr *ngFor="let product of products">
             <td class="border p-2">{{product.id}}</td>
-            <td class="border p-2"><span *ngIf="product.category == 'replacement' else cat">Ersatz</span>
-              <ng-template #cat>{{product.category}}</ng-template>
-            </td>
+            <td class="border p-2">{{product.category.name}}</td>
             <td class="border p-2">{{product.name}}</td>
             <td class="border p-2">{{product.price}} €</td>
+            <td class="border p-2">{{product.category.replacement}}</td>
             <td class="border pl-2">
               <button (click)="editProduct = product">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="28" height="28"
@@ -41,42 +41,49 @@ import {HttpClient} from '@angular/common/http';
           </tbody>
         </table>
         <div class="text-right mt-4">
-          <button class="button-primary" (click)="editProduct = Product()">Neues Produkt</button>
+          <button class="button-primary" (click)="editProduct = newProduct()">Neues Produkt</button>
         </div>
-              </div>
+      </div>
       <div *ngIf="editProduct" class="m-auto border shadow-xl px-14 py-10">
-        <app-product-detail [product]="editProduct" (editProduct)="saveProduct($event)"
+        <app-product-detail [product]="editProduct" [categories]="categories" (editProduct)="saveProduct($event)"
                             (close)="editProduct = null"></app-product-detail>
         <!-- <app-object-edit [inputObject]="editProduct" (outObject)="saveProduct($event)"
                           (close)="editProduct = null"></app-object-edit>-->
-       </div>
+      </div>
 
 
-     </div>
-`,
+    </div>
+  `,
   styles: [
   ]
 })
 export class ProductComponent implements OnInit {
   products: Product[];
+  categories: Category[];
   editProduct: Product;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.http.get('api/category').subscribe((categories: Category[]) => {
+      this.categories = categories;
+    });
     this.http.get('api/product').subscribe((products: Product[]) => {
       this.products = products;
     });
   }
 
-  saveProduct(productToSave: Product) {
+  saveProduct(productToSave: Product): void {
     this.http.post('api/product', productToSave).subscribe((product: Product) => {
       this.products = this.products.map( p => p.id === product.id ? product : p);
     });
     this.editProduct = null;
   }
 
-  Product() {
-    return new Product();
+  newProduct(): Product{
+    this.http.post('api/product', {}).subscribe((product: Product) => {
+      this.editProduct = product;
+    });
+    return this.editProduct;
   }
 }

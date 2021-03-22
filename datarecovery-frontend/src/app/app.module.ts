@@ -15,6 +15,7 @@ import { OrderDetailsComponent } from './containers/order-details/order-details.
 import { ProductComponent } from './components/product/product.component';
 import { ProductDetailComponent } from './containers/product-detail/product-detail.component'
 import { ObjectEditComponent } from './containers/object-edit/object-edit.component';
+import { UploadFileComponent } from './containers/upload-file/upload-file.component';
 @NgModule({
     declarations: [
         AppComponent,
@@ -27,7 +28,8 @@ import { ObjectEditComponent } from './containers/object-edit/object-edit.compon
         OrderDetailsComponent,
         ProductComponent,
         ProductDetailComponent,
-        ObjectEditComponent
+        ObjectEditComponent,
+        UploadFileComponent
     ],
   imports: [
     BrowserModule,

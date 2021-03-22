@@ -71,35 +71,46 @@
 
   </div>
 </div>
-<div class="bg-img-flash bg-center bg-cover text-xl">
-  <div class="container flex gap-4 py-10 justify-center ">
-    <div class="shadow-2xl bg-white rounded-md p-8">
-      <ng-container *ngFor="let product of products" [ngSwitch]="product.category">
-        <div class="justify-between py-1 mx-auto flex" >
-          <span class="mr-4">{{product.category + " " + product.name}}</span><span>{{product.price}}€</span>
+<div class="bg-img-flash bg-cover text-xl">
+  <div class="container py-10">
+    <div class="card bg-white">
 
+
+      <ng-container *ngFor="let category of categories">
+        <div class="mb-4">
+          <h1 class="text-2xl underline">{{category.title}}</h1>
+          <div class="whitespace-pre-wrap" >{{category.description}}</div>
+          <ng-container *ngFor="let product of products">
+            <div  *ngIf="product.category.id === category.id && product.name ">
+              {{category.name}} {{product.name}} {{product.price}} €
+            </div>
+          </ng-container>
         </div>
+
       </ng-container>
     </div>
 
   </div>
 
 </div>
-<div class="border shadow-xl rounded-xl container mx-auto p-10 my-10">
-  <app-order-form *ngIf="products" [products]="products" [replacementProducts]="replacementProducts" (orderOutput)="submitOrder($event)"></app-order-form>
-  <div *ngIf="orderSubmitted === true">
-    <h1>Ihre Bestellung wurde angenommen. Sie sollten bald eine Bestätigungsmail mit weiteren Anweisungen erhalten</h1>
-  </div>
-  <div *ngIf="!products" class="text-center">
-    <p>Bitte kontaktieren sie Tobias Jungbauer über eine Email an:
-      <span class="text-green-700 font-bold">ammersee.datenrettung@gmail.com</span>
-    </p>
-    <button class="border-2 rounded-md p-2 mt-4">
+<div class="container my-20">
+  <div class="card">
 
-      <a  href="mailto:ammersee.datenrettung@gmail.com?subject=Anfrage%20wegen%20einer%20Datenrettung&amp;body=Sehr%20geehrter%20Herr%20Jungbauer%20%0AGerne%20Würde%20ich%20folgende%20">Hier klicken um eine Email zu senden</a>
-    </button>
+    <app-order-form *ngIf="products" [products]="products" [replacementProducts]="replacementProducts" (orderOutput)="submitOrder($event)"></app-order-form>
+    <div *ngIf="orderSubmitted === true">
+      <h1>Ihr Auftrag wurde übermittelt. Sie sollten bald eine Bestätigungsmail mit weiteren Anweisungen erhalten.</h1>
+    </div>
+    <div *ngIf="!products" class="text-center">
+      <p>Bitte kontaktieren sie Tobias Jungbauer über eine Email an:
+        <span class="text-green-700 font-bold">ammersee.datenrettung@gmail.com</span>
+      </p>
+      <button class="border-2 rounded-md p-2 mt-4">
+
+        <a  href="mailto:ammersee.datenrettung@gmail.com?subject=Anfrage%20wegen%20einer%20Datenrettung&amp;body=Sehr%20geehrter%20Herr%20Jungbauer%20%0AGerne%20Würde%20ich%20folgende%20">Hier klicken um eine Email zu senden</a>
+      </button>
+    </div>
   </div>
-</div>>
+</div>
 
 <div class="h-80">
   <iframe id="myFrame" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10688.664885486834!2d11.1017109!3d47.9525097!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x37d4dd90c24065cb!2sTobias%20Jungbauer%20Datenrettungsdienst%20-%20AmmerseeDatenrettung.de!5e0!3m2!1sde!2sde!4v1604148030912!5m2!1sde!2sde" width="{{innerWidth}}" height="300" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>

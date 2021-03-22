@@ -9,11 +9,11 @@ import {User} from '../../model/model';
     <div class="h-screen flex flex-col">
     <nav class="bg-white p-4 bg-gray-100 text-gray-800 w-screen flex justify-between fixed">
       <div class="text-3xl p-2">
-        Tobias Jungbauer Datenrettung
+        Jungbauer Datenrettung
       </div>
       <div class="text-xl flex  items-center">
         <a class="mr-2" routerLink="">Home</a>
-        <a class="mr-2 ml-2" routerLink="/tracking">Tracking</a>
+        <a class="mr-2 ml-2" routerLink="/tracking">Auftragsstatus</a>
         <a class="mr-2 ml-2"  routerLink="/login" *ngIf="!currentUser">Login</a>
         <ng-container *ngIf="currentUser">
           <a class="mr-2 ml-2"  routerLink="/order">Bestellungen</a>

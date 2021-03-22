@@ -10,50 +10,72 @@ import {Customer, Order, orderStateEnum, Product} from '../../model/model';
     </div>
     <form [formGroup]="this.orderForm" (ngSubmit)="onSubmit()">
       <div class="flex flex-col gap-2 px-12">
+        <h2 class="text-2xl">Kontaktdaten:</h2>
         <div class="flex flex-col gap-2" formGroupName="customer">
-          <label>Vorname
-            <input type="text" class="block mt-2 w-full" formControlName="firstName" required>
-          </label>
-          <label>Nachname
-            <input type="text" class="block mt-2 w-full" formControlName="lastName" required>
-          </label>
-          <label>E-Mail-Adresse
-            <input type="email" class="block mt-2 w-full" formControlName="email" required>
-          </label>
-          <label>Straße und Hausnummer
-            <input type="text" class="block mt-2 w-full" formControlName="street" required>
-          </label>
-          <label>Postleitzahl
-            <input type="text" class="block mt-2 w-full" formControlName="postalCode" required>
-          </label>
-          <label>Ort
-            <input type="text" class="block mt-2 w-full" formControlName="city" required></label>
-          <label>Optional: Telefonnummer
-            <input type="text" class="block mt-2 w-full" formControlName="tel"></label>
+          <ng-container *ngIf="!contactFormFilled">
+            <label>Vorname
+              <input type="text" class="block mt-2 w-full" formControlName="firstName" required>
+            </label>
+            <label>Nachname
+              <input type="text" class="block mt-2 w-full" formControlName="lastName" required>
+            </label>
+            <label>E-Mail-Adresse
+              <input type="email" class="block mt-2 w-full" formControlName="email" required>
+            </label>
+            <label>Straße und Hausnummer
+              <input type="text" class="block mt-2 w-full" formControlName="street" required>
+            </label>
+            <label>Postleitzahl
+              <input type="text" class="block mt-2 w-full" formControlName="postalCode" required>
+            </label>
+            <label>Ort
+              <input type="text" class="block mt-2 w-full" formControlName="city" required></label>
+            <label>Optional: Telefonnummer
+              <input type="text" class="block mt-2 w-full" formControlName="tel"></label>
+
+            <div class="flex justify-end mt-4">
+              <button class="button-primary" (click)="contactFormFilled = true">Auftragsdaten eingeben</button>
+            </div>
+          </ng-container>
         </div>
-        <label>Auftrag zur Dattenrettung einer:
-          <select class="block mt-2 w-full" formControlName="product" #productSelect required>
-            <option *ngFor="let product of products" [value]="product.id">
-              {{product.name}}  {{product.category}}  {{product.price}}€
-            </option>
-          </select>
-        </label>
-        <ng-container *ngIf="productSelect.value">
-          <label>Ersatzdatenträger zur Abspeicherung:
-            <select class="block mt-2 w-full" formControlName="replacement" required>
-              <option selected>Sie senden einen eigenen Ersatzspeicher zur Sicherung mit: kostenfrei</option>
-              <option *ngFor="let replacement of replacementProducts">{{replacement.name}} : {{replacement.price}}€
+        <ng-container *ngIf="contactFormFilled">
+          <label>Auftrag zur Dattenrettung einer:
+            <select class="block mt-2 w-full" formControlName="product" #productSelect required>
+              <option *ngFor="let product of products" [value]="product.id">
+                {{product.name}}  {{product.category.name}}  {{product.price}}€
               </option>
             </select>
           </label>
+          <ng-container *ngIf="productSelect.value">
+            <label>Ersatzdatenträger zur Abspeicherung:
+              <select class="block mt-2 w-full" formControlName="replacement" required>
+                <option selected>Sie senden einen eigenen Ersatzspeicher zur Sicherung mit: kostenfrei</option>
+                <option *ngFor="let replacement of replacementProducts">
+                  {{replacement.category.name}} {{replacement.name}} : {{replacement.price}}€
+                </option>
+              </select>
+            </label>
+          </ng-container>
+          <ng-container>
+            <label>Gibt es zeitlich dringende Dateien
+              <select class="block mt-2 w-full" formControlName="replacement" required>
+                <option selected>Sie senden einen eigenen Ersatzspeicher zur Sicherung mit: kostenfrei</option>
+                <option *ngFor="let replacement of replacementProducts">
+                  {{replacement.category.name}} {{replacement.name}} : {{replacement.price}}€
+                </option>
+              </select>
+            </label>
+          </ng-container>
+
+          <div class="flex justify-end mt-4">
+            <button type="submit"
+                    class="button-primary"
+                    [ngClass]="{'bg-red-500': !orderForm.valid}"
+                    [disabled]="!orderForm.valid">{{orderForm.valid ? "Auftrag abschicken" : "Füllen sie alle benötigten Felder aus" }}</button>
+          </div>
         </ng-container>
 
-        <div class="flex justify-end mt-4">
-          <button type="submit"
-                  class="button-primary"
-                  [ngClass]="{'bg-red-500': !orderForm.valid}"
-                  [disabled]="!orderForm.valid">{{orderForm.valid ? "Auftrag abschicken" : "Füllen sie alle benötigten Felder aus" }}</button>
-        </div>
+
       </div>
     </form>
   `,
@@ -72,7 +94,7 @@ export class OrderFormComponent implements OnInit {
   @Input() products: Product[];
   @Input() replacementProducts: Product[];
   order: Order;
-
+  contactFormFilled: boolean = false;
   constructor(private fb: FormBuilder) {
   }
 

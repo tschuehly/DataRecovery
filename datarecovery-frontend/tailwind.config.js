@@ -3,8 +3,14 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     container:{
+      screens: {
+        sm: "100%",
+        md: "100%",
+        lg: "1024px",
+        xl: "1280px"
+      },
       center: true,
-      padding: '2rem'
+      padding: '2rem',
     },
     extend: {
       colors:{
@@ -12,7 +18,7 @@ module.exports = {
       },
       backgroundImage: theme => ({
         'img-hdd': "linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('/assets/hdd.jpg')",
-        'img-flash': "url('/assets/flash.JPG')"
+        'img-flash': "url('/assets/flash2.JPG')"
       })
     },
   },

@@ -2,10 +2,16 @@ package de.tschuehly.datarecoverybackend.service
 
 import de.tschuehly.datarecoverybackend.helpers.CrudService
 import de.tschuehly.datarecoverybackend.model.Order
+import de.tschuehly.datarecoverybackend.model.Picture
+import de.tschuehly.datarecoverybackend.model.Update
 import de.tschuehly.datarecoverybackend.repository.OrderRepository
 import org.slf4j.Logger
+import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Service
+import org.springframework.web.multipart.MultipartFile
 import java.util.*
+import kotlin.NoSuchElementException
+import kotlin.collections.ArrayList
 
 @Service
 class OrderService(
@@ -22,7 +28,7 @@ class OrderService(
     }
 
     fun updateState(order: Order) {
-        val savedOrder = this.update(order)
+        val savedOrder = this.update(order) // Bei jedem statusänderung
         when (savedOrder.trackingState) {
             parcelReceived -> mailService.sendParcelReceived(order)
         }
@@ -32,6 +38,15 @@ class OrderService(
             ?: throw NoSuchElementException("No Order with matching trackingId and postalcode present")
     }
 
+    fun addUpdateToOrder(id: Long,multipartFile: MultipartFile): Order {
+        val update = Update("", Date(), ArrayList())
+        val order: Order = orderRepository.findByIdOrNull(id) ?: throw NoSuchElementException()
+        update.pictures.add(Picture(multipartFile.name,multipartFile.contentType,multipartFile.bytes))
+        order.addUpdateToOrder(update)
+
+        orderRepository.save(order)
+        return order
+    }
     companion object orderState {
         val orderReceived = "Auftrag eingegangen"
         val parcelReceived = "Paket eingegangen"
