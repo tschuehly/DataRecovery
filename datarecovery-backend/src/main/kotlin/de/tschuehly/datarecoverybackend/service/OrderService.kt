@@ -1,5 +1,7 @@
 package de.tschuehly.datarecoverybackend.service
 
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+import com.fasterxml.jackson.module.kotlin.readValue
 import de.tschuehly.datarecoverybackend.helpers.CrudService
 import de.tschuehly.datarecoverybackend.model.Order
 import de.tschuehly.datarecoverybackend.model.Picture
@@ -11,7 +13,6 @@ import org.springframework.stereotype.Service
 import org.springframework.web.multipart.MultipartFile
 import java.util.*
 import kotlin.NoSuchElementException
-import kotlin.collections.ArrayList
 
 @Service
 class OrderService(
@@ -38,10 +39,13 @@ class OrderService(
             ?: throw NoSuchElementException("No Order with matching trackingId and postalcode present")
     }
 
-    fun addUpdateToOrder(id: Long, multipartFile: Array<MultipartFile>): Order {
-        val update = Update("", Date(), ArrayList())
+    fun addUpdateToOrder(id: Long, updateString: String, pictures: Array<MultipartFile>): Order {
+        val update: Update = jacksonObjectMapper().readValue(updateString)
+        println(update)
+        println(pictures)
         val order: Order = orderRepository.findByIdOrNull(id) ?: throw NoSuchElementException()
-        multipartFile.forEach { file -> update.pictures.add(Picture(file.name,file.contentType,file.bytes)) }
+        pictures.forEach { picture ->
+            update.pictures.add(Picture(picture.originalFilename,picture.contentType,picture.bytes)) }
 
         order.addUpdateToOrder(update)
 

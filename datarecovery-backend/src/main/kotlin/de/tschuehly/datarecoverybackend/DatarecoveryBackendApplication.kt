@@ -38,7 +38,7 @@ Womit Sie rechnen müssen:
 		productRepository.save(Product(flash, "Festplatte mit bis zu 500GB", 130.50, Date()))
 		productRepository.save(Product(flash, "Festplatte mit bis zu 1TB", 150.0, Date()))
 		productRepository.save(Product(flash, "Festplatte mit bis zu 2TB", 185.0, Date()))
-		productRepository.save(Product(raid, null, null, Date()))
+		productRepository.save(Product(raid, "Verbund", null, Date()))
 		productRepository.save(Product(replacement, "500GB", 50.0, Date()))
 		productRepository.save(Product(replacement, "1TB", 60.0, Date()))
 		val customer = Customer("Thomas", "Schuehly", "97123871", "thomas.schuehly@outlook.com", "71638", "Ludwigsburg", "Kaiserstraße 25")

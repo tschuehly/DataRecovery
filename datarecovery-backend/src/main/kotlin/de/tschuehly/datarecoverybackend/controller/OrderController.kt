@@ -1,9 +1,7 @@
 package de.tschuehly.datarecoverybackend.controller
 
-import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonNumberFormatVisitor
 import de.tschuehly.datarecoverybackend.helpers.CrudController
 import de.tschuehly.datarecoverybackend.model.Order
-import de.tschuehly.datarecoverybackend.model.Picture
 import de.tschuehly.datarecoverybackend.model.Update
 import de.tschuehly.datarecoverybackend.repository.OrderRepository
 import de.tschuehly.datarecoverybackend.service.OrderService
@@ -58,10 +56,11 @@ class OrderController(
     @PostMapping("/addUpdate/{id}", consumes = ["multipart/form-data"])
     fun addUpdateToOrder(
         @PathVariable id: Long,
-        @RequestParam("imageFile") multiPartFile : Array<MultipartFile>
+        @RequestParam("pictures") pictures : Array<MultipartFile>,
+        @RequestParam("update") update: String
     ): Order{
         return try{
-            orderService.addUpdateToOrder(id,multiPartFile)
+            orderService.addUpdateToOrder(id,update,pictures)
         }catch (e: NoSuchElementException){
             throw ResponseStatusException(
                 HttpStatus.BAD_REQUEST,

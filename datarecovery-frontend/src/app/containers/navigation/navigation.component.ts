@@ -22,7 +22,7 @@ import {User} from '../../model/model';
         </ng-container>
       </div>
     </nav>
-    <div class="pt-20 flex-grow">
+    <div class="pt-20 pb-10 flex-grow">
         <router-outlet></router-outlet>
     </div>
     <footer>

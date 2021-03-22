@@ -42,7 +42,7 @@ import {Customer, Order, orderStateEnum, Product} from '../../model/model';
           <label>Auftrag zur Dattenrettung einer:
             <select class="block mt-2 w-full" formControlName="product" #productSelect required>
               <option *ngFor="let product of products" [value]="product.id">
-                {{product.name}}  {{product.category.name}}  {{product.price}}€
+                {{product.category.name}}  {{product.name}}  <span *ngIf="product.price">{{product.price}}€</span>
               </option>
             </select>
           </label>

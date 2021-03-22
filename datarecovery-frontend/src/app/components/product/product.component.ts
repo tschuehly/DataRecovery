@@ -23,7 +23,7 @@ import {HttpClient} from '@angular/common/http';
             <td class="border p-2">{{product.category.name}}</td>
             <td class="border p-2">{{product.name}}</td>
             <td class="border p-2">{{product.price}} €</td>
-            <td class="border p-2">{{product.category.replacement}}</td>
+            <td class="border p-2">{{product.category.replacement ? 'Ja':'Nein'}}</td>
             <td class="border pl-2">
               <button (click)="editProduct = product">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="28" height="28"
@@ -45,8 +45,11 @@ import {HttpClient} from '@angular/common/http';
         </div>
       </div>
       <div *ngIf="editProduct" class="m-auto border shadow-xl px-14 py-10">
-        <app-product-detail [product]="editProduct" [categories]="categories" (editProduct)="saveProduct($event)"
+        <app-product-detail [product]="editProduct"
+                            [categories]="categories"
+                            (editProduct)="saveProduct($event)"
                             (close)="editProduct = null"></app-product-detail>
+
         <!-- <app-object-edit [inputObject]="editProduct" (outObject)="saveProduct($event)"
                           (close)="editProduct = null"></app-object-edit>-->
       </div>

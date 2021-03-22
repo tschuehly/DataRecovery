@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Order, orderStateEnum, Update} from '../../model/model';
+import {Order, orderStateEnum, Picture, Update} from '../../model/model';
 import {FormArray, FormBuilder, FormControl, FormGroup} from '@angular/forms';
 import {HttpClient} from '@angular/common/http';
 
@@ -28,72 +28,62 @@ import {HttpClient} from '@angular/common/http';
           </div>
           <div class="col-span-2 flex justify-between mt-6">
             <button (click)="saveOrder()" class="border-2 rounded-md p-2 border-black">Speichern</button>
+            <button (click)="addUpdate.emit(order)" class="border-2 rounded-md p-2 border-black">Update hinzufügen</button>
             <button (click)="close.emit()" class="border-2 rounded-md p-2 bg-red-500 border-black">Schließen</button>
           </div>
-          <form [formGroup]="updateForm" (ngSubmit)="addUpdateToOrder()" enctype="multipart/form-data">
-            <label>Beschreibung
-              <input type="text" class="block mt-2 w-full" formControlName="description"></label>
-            <button class="button-primary" (click)="addImage()">Add Image</button>
-            <div formArrayName="pictures" *ngFor="let picture of pictures.controls; let i = index">
-              <label>Lade Bild hoch
-                <input [formControlName]="i" type="file" (change)="onFileChange($event,i)" ></label>
-            </div>
-            <button class="button-primary" type="submit">Add Update</button>
-          </form>
         </ng-container>
+        <div *ngFor="let update of order.updates" class="col-span-2 border-2 rounded-md p-4">
+          <h2 class="text-2xl">Update: {{update.id}}</h2>
+          <span>Beschreibung:</span>
+          <p class="text-xl whitespace-pre-wrap border p-2 my-2">{{update.description}}</p>
+          <span>Klicken um die Bilder zu vergrößern</span>
+          <div class="flex flex-row flex-wrap mt-2">
+            <div *ngFor="let pic of update.pictures">
+              <label  class="cursor-pointer" (click)="togglePictureZoom(pic)">
+                <img class="mr-4"
+                     [ngClass]="pic['zoomed'] ? 'h-96' : 'h-32'"
+                     src="{{'data:'+pic.type+';base64,'+pic.data}}"
+                     [alt]="pic.name">{{pic.name}}
+              </label>
+
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   `,
-  styles: [
-  ]
+  styles: []
 })
 export class OrderDetailsComponent implements OnInit {
   orderState = orderStateEnum;
   @Input() order: Order;
   @Input() edit: boolean;
   orderTrackingState: FormControl;
-  updateForm = new FormGroup({
-    description: new FormControl(),
-    pictures: new FormArray([])
-  });
-  files: File[] = [];
-  pictures = this.updateForm.get('pictures') as FormArray;
-  preview: string;
   update: Update;
+  pictureZoomed = false;
   @Output() editOrder: EventEmitter<Order> = new EventEmitter<Order>();
   @Output() addUpdate: EventEmitter<Order> = new EventEmitter<Order>();
   @Output() close: EventEmitter<void> = new EventEmitter();
-  constructor(private fb: FormBuilder,private http: HttpClient) {
+
+  constructor(private fb: FormBuilder) {
+
   }
 
   ngOnInit(): void {
     this.orderTrackingState = new FormControl(this.order.trackingState);
-
-
-  }
-  addImage(): void{
-    console.log('addPicture');
-    (this.updateForm.get('pictures') as FormArray).push(new FormControl(''));
-
-  }
-  addUpdateToOrder(): void{
-    console.log(this.files);
-    const uploadImageData = new FormData();
-    for (const file of this.files){
-      uploadImageData.append('imageFile', file, file.name);
+    if(this.update?.pictures){
+      this.update.pictures.map(pic => {
+        return {...pic, zoomed: false};
+      });
     }
-    this.http.post('api/order/addUpdate/' + this.order.id, uploadImageData ).subscribe(data => console.log(data));
-  }
-  getPicturesForm(): FormArray{
-    return this.updateForm.get('pictures') as FormArray;
   }
 
-  saveOrder(): void{
+  saveOrder(): void {
     this.order.trackingState = this.orderTrackingState.value;
     this.editOrder.emit(this.order);
   }
 
-  onFileChange($event: Event, i: number):void {
-    this.files.push(($event.target as HTMLInputElement).files[0]);
+  togglePictureZoom(pic: Picture) {
+    pic['zoomed'] = !pic['zoomed'];
   }
 }

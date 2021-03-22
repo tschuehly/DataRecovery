@@ -13,7 +13,7 @@ import {FormArray, FormBuilder, FormGroup, Validators} from '@angular/forms';
             <label>Ersatz:
               <input class="mb-1" type="checkbox" [checked]="product.category.replacement" (change)="product.category.replacement = !product.category.replacement">
             </label>
-            <label *ngIf="!product.category.replacement">Kategorie:
+            <label>Kategorie:
               <select class="mt-1 mb-2 pl-3 block" formControlName="id" required>
                 <option *ngFor="let category of categories" [value]="category.id">
                   {{category.name}}

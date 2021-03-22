@@ -6,7 +6,7 @@ import {ObjectEditComponent} from "../../containers/object-edit/object-edit.comp
 @Component({
   selector: 'app-order',
   template: `
-    <div class="flex container mx-auto h-full">
+    <div class="flex container mx-auto h-full my-10">
       <div class="m-auto" *ngIf="!editOrder">
         <h1 class="text-2xl text-center mb-10">Bestellungsübersicht</h1>
         <table class="border table-auto mx-auto">
@@ -21,7 +21,7 @@ import {ObjectEditComponent} from "../../containers/object-edit/object-edit.comp
           <tbody>
           <tr *ngFor="let order of orders">
             <td class="border p-2">{{order.id}}</td>
-            <td class="border p-2">{{order.product.category}} {{order.product.name}}</td>
+            <td class="border p-2">{{order.product.category.name}} {{order.product.name}}</td>
             <td class="border p-2">{{order.customer.firstName}} {{order.customer.lastName}}</td>
             <td class="border p-2">{{order.orderDate | date:'d.M.y H:m'}}</td>
             <td class="border p-2">{{order.trackingState}}</td>
@@ -44,9 +44,16 @@ import {ObjectEditComponent} from "../../containers/object-edit/object-edit.comp
         </table>
       </div>
       <div *ngIf="editOrder" class="m-auto border shadow-xl px-14 py-10">
-        <app-order-details [order]="editOrder" [edit]="true" (editOrder)="updateOrderState($event)"
-                           (close)="editOrder = null"></app-order-details>
-       <!-- <app-object-edit (outObject)="updateOrderState($event)" [inputObject]="editOrder" ></app-object-edit>-->
+        <app-order-details *ngIf="!createUpdate"
+                           [order]="editOrder"
+                           [edit]="true"
+                           (editOrder)="updateOrderState($event)"
+                           (close)="editOrder = null"
+                           (addUpdate)="createUpdate = true"></app-order-details>
+        <ng-container *ngIf="createUpdate">
+          <app-update [order]="editOrder" (updatedOrder)="editOrder = $event; createUpdate = false"></app-update>
+        </ng-container>
+        <!-- <app-object-edit (outObject)="updateOrderState($event)" [inputObject]="editOrder" ></app-object-edit>-->
       </div>
     </div>
   `,
@@ -56,6 +63,7 @@ export class OrderComponent implements OnInit {
   @ViewChild(ObjectEditComponent) editComponent: ObjectEditComponent<Order>
   orders: Order[];
   editOrder: Order;
+  createUpdate: boolean = false;
   constructor(private http: HttpClient) {
   }
 
@@ -70,9 +78,12 @@ export class OrderComponent implements OnInit {
   updateOrderState(editOrder: Order): void {
     console.log(editOrder);
     this.http.post('api/order/updateStatus', editOrder).subscribe((order: Order) => {
-      this.orders.map( o => o.id === order.id);
-      console.log(this.orders);
+      this.updateOrders(order);
     });
     this.editOrder = null;
+  }
+
+  updateOrders(order: Order):void {
+    this.orders.map( o => o.id === order.id);
   }
 }

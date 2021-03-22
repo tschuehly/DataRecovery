@@ -29,8 +29,15 @@ export enum orderStateEnum {
   parcelReturned = 'Rückversand'
 }
 export class Update{
+  id: number;
   description: string;
-  pictures: File[];
+  date: Date;
+  pictures: Picture[];
+}
+export class Picture{
+  name: string;
+  type: string;
+  data: File;
 }
 export class Product{
   constructor(public id: number = 0,
