@@ -1,7 +1,7 @@
 import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Order} from '../../model/model';
-import {ObjectEditComponent} from "../../containers/object-edit/object-edit.component";
+import {ObjectEditComponent} from '../../containers/object-edit/object-edit.component';
 
 @Component({
   selector: 'app-order',
@@ -23,7 +23,7 @@ import {ObjectEditComponent} from "../../containers/object-edit/object-edit.comp
             <td class="border p-2">{{order.id}}</td>
             <td class="border p-2">{{order.product.category.name}} {{order.product.name}}</td>
             <td class="border p-2">{{order.customer.firstName}} {{order.customer.lastName}}</td>
-            <td class="border p-2">{{order.orderDate | date:'d.M.y H:m'}}</td>
+            <td class="border p-2">{{order.orderDate | date:'d.M.y H:m':'+0200'}}</td>
             <td class="border p-2">{{order.trackingState}}</td>
             <td class="border pl-2">
               <button (click)="editOrder = order">

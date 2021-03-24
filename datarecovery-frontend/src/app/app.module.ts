@@ -17,6 +17,10 @@ import { ProductDetailComponent } from './containers/product-detail/product-deta
 import { ObjectEditComponent } from './containers/object-edit/object-edit.component';
 import { UploadFileComponent } from './containers/upload-file/upload-file.component';
 import { UpdateComponent } from './components/update/update.component';
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StaticComponent } from './containers/static/static.component';
+import {ClickOutsideModule} from 'ng-click-outside';
 @NgModule({
     declarations: [
         AppComponent,
@@ -31,14 +35,18 @@ import { UpdateComponent } from './components/update/update.component';
         ProductDetailComponent,
         ObjectEditComponent,
         UploadFileComponent,
-        UpdateComponent
+        UpdateComponent,
+        StaticComponent
     ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxPageScrollCoreModule.forRoot({duration: 700, scrollOffset: 80}),
+    BrowserAnimationsModule,
+    ClickOutsideModule
   ],
   providers: [
   ],

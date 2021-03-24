@@ -18,7 +18,6 @@ export class HomeComponent implements OnInit {
     this.innerWidth = document.documentElement.clientWidth;
     this.http.get('api/product').subscribe( data => {
         this.products = data as Product[];
-        console.log(this.products);
         this.replacementProducts = this.products.filter(p => p.category.replacement === true);
         this.products = this.products.filter(p => p.category.replacement === false);
 

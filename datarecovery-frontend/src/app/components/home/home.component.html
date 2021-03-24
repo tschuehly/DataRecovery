@@ -7,16 +7,17 @@
       <h3 class="text-3xl mb-2">
         Faire Rahmenbedingungen
       </h3>
-      <p class="text-xl">
+      <div class="text-xl whitespace-pre-wrap">
         Sie zahlen f&uuml;r die Datenrettung nicht mehr als den angegeben Festpreis. Das zudem erst nach Datenerhalt, sprich nicht im Voraus und das nur nach erfolgreicher Wiederherstellung.
         Wenn keine Datenrettung m&ouml;glich ist, ist die Bearbeitung, inklusive des versicherten R&uuml;ckversand (DHL), kostenfrei.
-        Die durchschnittliche Bearbeitungszeit betr&auml;gt derzeit 7 bis 14 Tage. Alle Arbeiten werden hier vor Ort durchgef&uuml;hrt.
-      </p>
+        <br>Die durchschnittliche Bearbeitungszeit betr&auml;gt derzeit 7 bis 14 Tage.
+        <br>Alle Arbeiten werden hier vor Ort durchgef&uuml;hrt.
+      </div>
        </div>
 </div>
 
 <div class="container mx-auto mb-10 mt-28 grid grid-cols-1 lg:grid-cols-2 gap-8">
-  <div class="rounded-xl p-6 shadow-2xl border-2">
+  <div class="rounded-xl p-6 shadow-2xl border-2 md:w-4/5  lg:w-full mx-auto">
     <img class="rounded-full h-40 w-40 shadow-xl -mt-24 mx-auto" src="assets/tobias_jungbauer.jpg">
 
     <div class="flex items-start mb-5">
@@ -71,8 +72,8 @@
 
   </div>
 </div>
-<div class="bg-img-flash bg-cover text-xl">
-  <div class="container py-10">
+<div class="bg-img-flash bg-cover text-xl" id="priceList">
+  <div class="container py-10" >
     <div class="card bg-white">
 
 
@@ -81,7 +82,7 @@
           <h1 class="text-2xl underline">{{category.title}}</h1>
           <div class="whitespace-pre-wrap" >{{category.description}}</div>
           <ng-container *ngFor="let product of products">
-            <div  *ngIf="product.category.id === category.id && product.name ">
+            <div  *ngIf="product.category.id === category.id && product.price">
               {{category.name}} {{product.name}} {{product.price}} €
             </div>
           </ng-container>
@@ -96,8 +97,12 @@
 <div class="container my-20">
   <div class="card">
 
-    <app-order-form *ngIf="products" [products]="products" [replacementProducts]="replacementProducts" (orderOutput)="submitOrder($event)"></app-order-form>
-    <div *ngIf="orderSubmitted === true">
+    <app-order-form
+      *ngIf="products"
+      [products]="products"
+      [replacementProducts]="replacementProducts"
+      (orderOutput)="submitOrder($event)"></app-order-form>
+    <div *ngIf="orderSubmitted === true" class="px-12 text-green-600 text-xl font-bold mt-8">
       <h1>Ihr Auftrag wurde übermittelt. Sie sollten bald eine Bestätigungsmail mit weiteren Anweisungen erhalten.</h1>
     </div>
     <div *ngIf="!products" class="text-center">

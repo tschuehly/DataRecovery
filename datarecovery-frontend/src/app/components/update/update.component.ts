@@ -8,6 +8,27 @@ import {HttpClient} from '@angular/common/http';
   template: `
     <div class="flex flex-col">
       <h1 class="text-2xl">Neues Update erstellen</h1>
+      <form [formGroup]="questionForm" class="flex flex-col">
+        <label>Wurde die Festplatte bereits geöffnet?
+          <select formControlName="opened" class="block mt-2">
+            <option [ngValue]="true">Ja</option>
+            <option [ngValue]="false">Nein</option>
+          </select>
+        </label>
+        <label *ngIf="questionForm.get('opened').value === true">Inspizierung des Inneren. IST ALLES OK?
+          <select formControlName="internalsOk" class="flex flex-col">
+            <option [ngValue]="true">Ja</option>
+            <option [ngValue]="false">Nein</option>
+          </select>
+        </label>
+        <label *ngIf="questionForm.get('opened').value === false || questionForm.get('internalsOk').value === true">
+          Klackert die Festplatte wenn angeschlossen?
+          <select formControlName="clattering" class="flex flex-col">
+            <option [ngValue]="true">Ja</option>
+            <option [ngValue]="false">Nein</option>
+          </select>
+        </label>
+      </form>
       <form [formGroup]="updateForm" enctype="multipart/form-data">
         <label>Beschreibung
           <textarea class="block mt-2 w-full" formControlName="description"></textarea></label>
@@ -30,6 +51,12 @@ import {HttpClient} from '@angular/common/http';
 export class UpdateComponent implements OnInit {
   @Input() order: Order;
   @Output() updatedOrder: EventEmitter<Order> = new EventEmitter<Order>();
+  questionForm = new FormGroup({
+    opened: new FormControl(),
+    internalsOk: new FormControl(),
+    clattering: new FormControl(),
+    replacePart: new FormControl(),
+  });
   updateForm = new FormGroup({
     description: new FormControl()
   });

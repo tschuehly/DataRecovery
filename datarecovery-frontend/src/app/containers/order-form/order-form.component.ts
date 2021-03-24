@@ -34,12 +34,14 @@ import {Customer, Order, orderStateEnum, Product} from '../../model/model';
               <input type="text" class="block mt-2 w-full" formControlName="tel"></label>
 
             <div class="flex justify-end mt-4">
-              <button class="button-primary" (click)="contactFormFilled = true">Auftragsdaten eingeben</button>
+              <button (click)="submitCustomer()"
+                      class="button-primary"
+                      [ngClass]="{'bg-red-500': !orderForm.valid}">{{orderForm.valid ? "Auftragsdaten eingeben" : "Füllen sie alle benötigten Felder aus" }}</button>
             </div>
           </ng-container>
         </div>
         <ng-container *ngIf="contactFormFilled">
-          <label>Auftrag zur Dattenrettung einer:
+          <label>Auftrag zur Dattenrettung:
             <select class="block mt-2 w-full" formControlName="product" #productSelect required>
               <option *ngFor="let product of products" [value]="product.id">
                 {{product.category.name}}  {{product.name}}  <span *ngIf="product.price">{{product.price}}€</span>
@@ -56,17 +58,6 @@ import {Customer, Order, orderStateEnum, Product} from '../../model/model';
               </select>
             </label>
           </ng-container>
-          <ng-container>
-            <label>Gibt es zeitlich dringende Dateien
-              <select class="block mt-2 w-full" formControlName="replacement" required>
-                <option selected>Sie senden einen eigenen Ersatzspeicher zur Sicherung mit: kostenfrei</option>
-                <option *ngFor="let replacement of replacementProducts">
-                  {{replacement.category.name}} {{replacement.name}} : {{replacement.price}}€
-                </option>
-              </select>
-            </label>
-          </ng-container>
-
           <div class="flex justify-end mt-4">
             <button type="submit"
                     class="button-primary"
@@ -81,7 +72,7 @@ import {Customer, Order, orderStateEnum, Product} from '../../model/model';
   `,
   styles: [
     `input.ng-invalid.ng-touched, select.ng-invalid.ng-touched {
-      background-color: #ffdddd;
+      background-color: #fdd;
     }
 
     option {
@@ -94,7 +85,7 @@ export class OrderFormComponent implements OnInit {
   @Input() products: Product[];
   @Input() replacementProducts: Product[];
   order: Order;
-  contactFormFilled: boolean = false;
+  contactFormFilled = false;
   constructor(private fb: FormBuilder) {
   }
 
@@ -121,5 +112,13 @@ export class OrderFormComponent implements OnInit {
     this.order = (this.orderForm.getRawValue() as Order);
     this.order.product = this.products.find(product => product.id.toString() === this.orderForm.get('product').value );
     this.orderOutput.emit(this.order);
+  }
+
+  submitCustomer(): void{
+    if (this.orderForm.valid){
+      this.contactFormFilled = true;
+    }else{
+      this.orderForm.markAllAsTouched();
+    }
   }
 }

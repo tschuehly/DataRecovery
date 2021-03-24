@@ -5,6 +5,7 @@ import {TrackingComponent} from './components/tracking/tracking.component';
 import {LoginComponent} from './components/login/login.component';
 import {OrderComponent} from './components/order/order.component';
 import {ProductComponent} from './components/product/product.component';
+import {StaticComponent} from './containers/static/static.component';
 
 
 const routes: Routes = [
@@ -13,11 +14,12 @@ const routes: Routes = [
   {path: 'tracking/:trackingId/:postalCode', component: TrackingComponent},
   {path: 'login', component: LoginComponent},
   {path: 'order', component: OrderComponent},
-  {path: 'product', component: ProductComponent}
+  {path: 'product', component: ProductComponent},
+  {path: 'datenrettung/:variant', component: StaticComponent},
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

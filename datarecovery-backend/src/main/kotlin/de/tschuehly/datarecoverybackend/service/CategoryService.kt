@@ -9,8 +9,6 @@ import org.slf4j.Logger
 import org.springframework.stereotype.Service
 
 @Service
-class CategoryService(
-    private val categoryRepository: CategoryRepository,
-    private val logger: Logger
-) : CrudService<Category, CategoryRepository>(categoryRepository) {
+class CategoryService(categoryRepository: CategoryRepository) :
+    CrudService<Category, CategoryRepository>(categoryRepository) {
 }

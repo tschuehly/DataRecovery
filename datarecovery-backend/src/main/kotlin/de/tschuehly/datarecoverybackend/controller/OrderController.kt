@@ -16,57 +16,24 @@ import org.springframework.web.server.ResponseStatusException
 class OrderController(
     val orderService: OrderService,
     private val logger: Logger) :
-    CrudController<Order, OrderRepository,OrderService>(orderService, logger) {
+    CrudController<Order, OrderRepository,OrderService>(orderService) {
     @PostMapping("/create")
-    fun createOrder(@RequestBody order: Order): Boolean{
-        return try {
-            orderService.createOrder(order)
-            true
-        } catch (e: Error) {
-            logger.error(e.toString())
-            false
-        }
-    }
+    fun createOrder(@RequestBody order: Order) = orderService.createOrder(order)
+
     @PostMapping("/updateStatus")
-    fun updateStatus(@RequestBody order: Order): Boolean{
-        return try {
-            orderService.updateState(order)
-            true
-        } catch (e: Error) {
-            logger.error(e.toString())
-            false
-        }
-    }
+    fun updateStatus(@RequestBody order: Order) = orderService.updateState(order)
 
     @GetMapping("/tracking")
     fun getByTrackingId(
         @RequestParam trackingId: String,
         @RequestParam postalCode: String
-    ): Order {
-        return try {
-            orderService.getByTrackingIdAndPostalCode(trackingId, postalCode)
-        } catch (e: NoSuchElementException) {
-            throw ResponseStatusException(
-                HttpStatus.BAD_REQUEST,
-                e.localizedMessage
-            )
-        }
-    }
+    ): Order = orderService.getByTrackingIdAndPostalCode(trackingId, postalCode)
 
     @PostMapping("/addUpdate/{id}", consumes = ["multipart/form-data"])
     fun addUpdateToOrder(
         @PathVariable id: Long,
         @RequestParam("pictures") pictures : Array<MultipartFile>,
         @RequestParam("update") update: String
-    ): Order{
-        return try{
-            orderService.addUpdateToOrder(id,update,pictures)
-        }catch (e: NoSuchElementException){
-            throw ResponseStatusException(
-                HttpStatus.BAD_REQUEST,
-                e.localizedMessage
-            )
-        }
-    }
+    ): Order = orderService.addUpdateToOrder(id,update,pictures)
 
 }

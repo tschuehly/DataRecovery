@@ -10,9 +10,5 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("api/category")
-class CategoryController(
-    categoryService: CategoryService,
-    logger: Logger
-) :
-    CrudController<Category, CategoryRepository, CategoryService>(categoryService, logger){
-}
+class CategoryController(categoryService: CategoryService) :
+    CrudController<Category, CategoryRepository, CategoryService>(categoryService)

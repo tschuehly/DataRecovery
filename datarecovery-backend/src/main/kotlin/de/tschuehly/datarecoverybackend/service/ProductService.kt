@@ -9,8 +9,6 @@ import org.slf4j.Logger
 import org.springframework.stereotype.Service
 
 @Service
-class ProductService(
-    private val productRepository: ProductRepository,
-    private val logger: Logger
-) : CrudService<Product, ProductRepository>(productRepository) {
+class ProductService(productRepository: ProductRepository) :
+    CrudService<Product, ProductRepository>(productRepository) {
 }

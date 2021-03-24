@@ -9,18 +9,12 @@ open class CrudService<T : BaseEntity, R : JpaRepository<T, Long>>(
     @Autowired protected var repository: R
 ) {
 
-    fun getAll(): List<T> {
-        return repository.findAll()
-    }
+    fun getAll(): List<T> = repository.findAll()
 
-    fun getById(id: Long): T {
-        return repository.findByIdOrNull(id)
+    fun getById(id: Long): T = repository.findByIdOrNull(id)
             ?: throw NoSuchElementException("Could not find entity with matching id")
-    }
 
-    fun save(dataObject: T): T {
-        return repository.save(dataObject)
-    }
+    fun save(dataObject: T): T = repository.save(dataObject)
 
     fun update(dataObject: T): T {
         dataObject.id ?.let {

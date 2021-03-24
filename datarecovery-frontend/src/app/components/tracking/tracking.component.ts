@@ -35,7 +35,7 @@ import {ActivatedRoute} from '@angular/router';
 
   `,
   styles: [
-    `input.ng-invalid,select.ng-invalid{
+    `input.ng-invalid.ng-touched,select.ng-invalid.ng-touched{
       background-color: #ffdddd;
     }
     option{
@@ -46,7 +46,9 @@ import {ActivatedRoute} from '@angular/router';
 export class TrackingComponent implements OnInit {
   trackingForm: FormGroup;
   order: Order;
-  constructor(private fb: FormBuilder, private http: HttpClient, private route: ActivatedRoute) { }
+  constructor(private fb: FormBuilder,
+              private http: HttpClient,
+              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     const trackingId = this.route.snapshot.paramMap.get('trackingId');

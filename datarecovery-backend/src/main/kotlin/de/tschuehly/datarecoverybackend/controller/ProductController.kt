@@ -10,8 +10,5 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("api/product")
-class ProductController(
-    productService: ProductService,
-    logger: Logger) :
-    CrudController<Product, ProductRepository,ProductService>(productService, logger){
-}
+class ProductController(productService: ProductService) :
+    CrudController<Product, ProductRepository,ProductService>(productService)

@@ -14,8 +14,7 @@ class UserService(
     val passwordEncoder: PasswordEncoder
 ) {
     fun getCurrentUser(): User {
-        SecurityContextHolder.getContext().authentication
-            .let { it.name }
+        SecurityContextHolder.getContext().authentication.name
             .let { userRepository.findByUsername(it) }
             ?.let { return it } ?: throw Exception("User with matching username and password not found")
     }

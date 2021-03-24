@@ -7,8 +7,6 @@ import org.slf4j.Logger
 import org.springframework.stereotype.Service
 
 @Service
-class CustomerService(
-    private val customerRepository: CustomerRepository,
-    private val logger: Logger
-) : CrudService<Customer, CustomerRepository>(customerRepository) {
+class CustomerService(customerRepository: CustomerRepository) :
+    CrudService<Customer, CustomerRepository>(customerRepository) {
 }
