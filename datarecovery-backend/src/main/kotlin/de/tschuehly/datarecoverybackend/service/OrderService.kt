@@ -29,7 +29,7 @@ class OrderService(
     }
 
     fun updateState(order: Order) {
-        val savedOrder = this.update(order) // Bei jedem statusänderung
+        val savedOrder = this.update(order)
         when (savedOrder.trackingState) {
             parcelReceived -> mailService.sendParcelReceived(order)
         }
@@ -39,20 +39,16 @@ class OrderService(
             ?: throw NoSuchElementException("No Order with matching trackingId and postalcode present")
     }
 
-    fun addUpdateToOrder(id: Long, updateString: String, pictures: Array<MultipartFile>): Order {
+    fun addUpdateToOrder(id: Long, updateString: String, pictures: Array<MultipartFile>?): Order {
         val update: Update = jacksonObjectMapper().readValue(updateString)
-        println(update)
-        println(pictures)
-        val order: Order = orderRepository.findByIdOrNull(id) ?: throw NoSuchElementException()
-        pictures.forEach { picture ->
-            update.pictures.add(Picture(picture.originalFilename,picture.contentType,picture.bytes)) }
-
+        val order: Order = orderRepository.findByIdOrNull(id) ?: throw NoSuchElementException("")
+        pictures?.forEach { picture ->
+            update.pictures?.add(Picture(picture.originalFilename,picture.contentType,picture.bytes)) }
         order.addUpdateToOrder(update)
-
         orderRepository.save(order)
         return order
     }
-    companion object orderState {
+    companion object OrderState {
         val orderReceived = "Auftrag eingegangen"
         val parcelReceived = "Paket eingegangen"
         val firstAnalysis = "Erste Analyse"

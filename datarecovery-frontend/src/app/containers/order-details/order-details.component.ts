@@ -36,7 +36,7 @@ import {HttpClient} from '@angular/common/http';
           <h2 class="text-2xl">Update: {{update.id}}</h2>
           <span>Beschreibung:</span>
           <p class="text-xl whitespace-pre-wrap border p-2 my-2">{{update.description}}</p>
-          <span>Klicken um die Bilder zu vergrößern</span>
+          <span *ngIf="update.pictures.length != 0">Klicken um die Bilder zu vergrößern</span>
           <div class="flex flex-row flex-wrap mt-2">
             <div *ngFor="let pic of update.pictures">
               <label  class="cursor-pointer" (click)="togglePictureZoom(pic)">

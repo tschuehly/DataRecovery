@@ -8,30 +8,19 @@ import {HttpClient} from '@angular/common/http';
   template: `
     <div class="flex flex-col">
       <h1 class="text-2xl">Neues Update erstellen</h1>
-      <form [formGroup]="questionForm" class="flex flex-col">
-        <label>Wurde die Festplatte bereits geöffnet?
-          <select formControlName="opened" class="block mt-2">
-            <option [ngValue]="true">Ja</option>
-            <option [ngValue]="false">Nein</option>
-          </select>
+      <form [formGroup]="questionForm">
+        <label class="block mt-2 w-full">Wurde die Festplatte bereits geöffnet?
+          <input formControlName="opened" value="Wurde die Festplatte bereits geöffnet? : Ja" type="radio">Ja
+          <input formControlName="opened" value="Wurde die Festplatte bereits geöffnet? : Nein"  type="radio">Nein
         </label>
-        <label *ngIf="questionForm.get('opened').value === true">Inspizierung des Inneren. IST ALLES OK?
-          <select formControlName="internalsOk" class="flex flex-col">
-            <option [ngValue]="true">Ja</option>
-            <option [ngValue]="false">Nein</option>
-          </select>
-        </label>
-        <label *ngIf="questionForm.get('opened').value === false || questionForm.get('internalsOk').value === true">
-          Klackert die Festplatte wenn angeschlossen?
-          <select formControlName="clattering" class="flex flex-col">
-            <option [ngValue]="true">Ja</option>
-            <option [ngValue]="false">Nein</option>
-          </select>
+        <label class="block mt-2 w-full">Inspizierung des Inneren. IST ALLES OK?
+          <input formControlName="internalsOk" value="Inspizierung des Inneren. IST ALLES OK? : Ja" type="radio">Ja
+          <input formControlName="internalsOk" value="Inspizierung des Inneren. IST ALLES OK? : Nein"  type="radio">Nein
         </label>
       </form>
       <form [formGroup]="updateForm" enctype="multipart/form-data">
         <label>Beschreibung
-          <textarea class="block mt-2 w-full" formControlName="description"></textarea></label>
+          <textarea class="block mt-2 w-96 h-96" formControlName="description"></textarea></label>
         <div class="flex flex-col my-4" *ngFor="let picture of pictureDetails.controls; let i = index">
           <label>Bildtitel
             <input [formControl]="picture" type="text">
@@ -58,13 +47,19 @@ export class UpdateComponent implements OnInit {
     replacePart: new FormControl(),
   });
   updateForm = new FormGroup({
-    description: new FormControl()
+    description: new FormControl('')
   });
   pictureDetails = new FormArray([]);
   files: File[] = [];
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.questionForm.controls.opened.valueChanges.subscribe(opened => {
+      this.addQuestion(opened);
+    });
+    this.questionForm.controls.internalsOk.valueChanges.subscribe(internalsOk => {
+      this.addQuestion(internalsOk);
+    });
   }
   addUpdateToOrder(): void{
     console.log(this.files);
@@ -90,5 +85,16 @@ export class UpdateComponent implements OnInit {
 
   onFileChange($event: Event, i: number): void {
     this.files.push(($event.target as HTMLInputElement).files[0]);
+  }
+
+  addQuestion(question: string): void {
+    console.log('question ' + question);
+    const desc = this.updateForm.controls.description.value;
+    const newDesc = desc ? desc + '\n' + question : question;
+    console.log(desc);
+    console.log(newDesc);
+
+    this.updateForm.controls.description.setValue(newDesc);
+
   }
 }

@@ -32,8 +32,8 @@ class OrderController(
     @PostMapping("/addUpdate/{id}", consumes = ["multipart/form-data"])
     fun addUpdateToOrder(
         @PathVariable id: Long,
-        @RequestParam("pictures") pictures : Array<MultipartFile>,
-        @RequestParam("update") update: String
+        @RequestParam("pictures",required = false) pictures : Array<MultipartFile>?,
+        @RequestParam("update",required = false) update: String
     ): Order = orderService.addUpdateToOrder(id,update,pictures)
 
 }

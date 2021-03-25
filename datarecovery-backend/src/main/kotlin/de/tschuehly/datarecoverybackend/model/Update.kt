@@ -9,10 +9,10 @@ import kotlin.collections.ArrayList
 
 @Entity
 class Update(
-    var description: String,
-    var date: Date = Date(),
+    var description: String?,
+    var date: Date? = Date(),
     @OneToMany(cascade = [CascadeType.ALL])
-    var pictures: MutableList<Picture> = ArrayList()
+    var pictures: MutableList<Picture>? = ArrayList()
 
 ):BaseEntity() {
 
