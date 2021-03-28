@@ -8,6 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "build:app": "ng build --prod --build-optimizer",
     "build:prod": "cross-env NODE_ENV=production ng build --prod"
   },
   "private": true,

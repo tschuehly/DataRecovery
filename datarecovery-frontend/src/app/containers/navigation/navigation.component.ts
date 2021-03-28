@@ -1,11 +1,8 @@
-import {Component, ElementRef, EventEmitter, Inject, Input, OnInit, Output, ViewChild} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {AuthenticationService} from '../../services/authentication.service';
+import {Component, EventEmitter, Inject, Input, OnInit, Output} from '@angular/core';
 import {User} from '../../model/model';
 import {Router} from '@angular/router';
 import {PageScrollService} from 'ngx-page-scroll-core';
 import {DOCUMENT} from '@angular/common';
-import {createPopper} from '@popperjs/core';
 
 @Component({
   selector: 'app-navigation',
@@ -60,7 +57,7 @@ import {createPopper} from '@popperjs/core';
             </p>
           </div>
           <div class="col-span-2 mt-4">
-            Made with 💗 by <a class="font-bold" href="https://github.com/tschuehly">Thomas Schühly</a>
+            Made with 💗 by <a class="font-bold" href="https://www.linkedin.com/in/tschuehly/">Thomas Schühly</a>
           </div>
           <div>
 

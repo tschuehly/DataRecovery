@@ -88,12 +88,8 @@ export class UpdateComponent implements OnInit {
   }
 
   addQuestion(question: string): void {
-    console.log('question ' + question);
     const desc = this.updateForm.controls.description.value;
     const newDesc = desc ? desc + '\n' + question : question;
-    console.log(desc);
-    console.log(newDesc);
-
     this.updateForm.controls.description.setValue(newDesc);
 
   }

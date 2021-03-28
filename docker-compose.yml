@@ -1,0 +1,56 @@
+version: '3.9'
+services:
+  backend:
+    build: datarecovery-backend
+    container_name: datarecovery-backend
+    image: datarecovery-backend:0.0.1
+    expose:
+      - "8088"
+  frontend:
+    build: datarecovery-frontend
+    image: datarecovery-frontend:0.0.1
+    container_name: datarecovery-frontend
+    depends_on:
+      - backend
+    command: [nginx-debug, '-g', 'daemon off;']
+    env_file:
+      - .env
+  nginxproxy:
+    image: jwilder/nginx-proxy:alpine
+    container_name: nginxproxy
+    hostname: nginxproxy
+    restart:
+      unless-stopped
+    volumes:
+      - conf:/etc/nginx/conf.d
+      - vhost:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+      - dhparam:/etc/nginx/dhparam
+      - certs:/etc/nginx/certs:ro
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    ports:
+      - 80:80
+      - 443:443
+    labels:
+      - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy
+  nginxproxy_comp:
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    container_name: nginxproxy_comp
+    hostname: nginxproxy_comp
+    restart:
+      unless-stopped
+    depends_on:
+      - nginxproxy
+    volumes_from:
+      - nginxproxy
+    volumes:
+      - certs:/etc/nginx/certs:rw
+      - acme:/etc/acme.sh
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+volumes:
+  conf:
+  vhost:
+  html:
+  dhparam:
+  certs:
+  acme:
