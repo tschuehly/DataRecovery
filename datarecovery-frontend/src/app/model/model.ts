@@ -54,6 +54,7 @@ export class Category{
   title: string;
   description: string;
   replacement: boolean;
+  questions: string[];
 }
 
 export class Credentials {

@@ -18,8 +18,8 @@ class DatarecoveryBackendApplication(
 ) : CommandLineRunner {
 	@Transactional
 	override fun run(vararg args: String?) {
-		val hdd = categoryRepository.save(Category("HDD","Datenrettung bei defekter HDD:","",false))
-		val replacement = categoryRepository.save(Category("Sicherung auf WD Elements Portable externer Festplatte","","",true))
+		val hdd = categoryRepository.save(Category("HDD","Datenrettung bei defekter HDD:","",false, mutableListOf("Inspizierung des Inneren. IST ALLES OK?","Ist ein Teilespender auf Lager?")))
+		val replacement = categoryRepository.save(Category("Sicherung auf WD Elements Portable externer Festplatte","","",true, mutableListOf("Wurde die SSD bereits geöffnet?")))
 		val ssd = categoryRepository.save(Category("SSD","Datenrettung bei defekter SSD (SATA-basiert / kein NVMe):","",false))
 		val flash = categoryRepository.save(Category("SD-Karte oder USB-Stick","Datenrettung bei defekter (micro) SD-Karte oder USB-Stick:","",false))
 		val raid = categoryRepository.save(Category("RAID","Datenrettung bei RAID:",

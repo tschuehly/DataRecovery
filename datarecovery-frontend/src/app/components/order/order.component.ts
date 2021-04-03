@@ -1,7 +1,6 @@
-import {Component, Input, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Order} from '../../model/model';
-import {ObjectEditComponent} from '../../containers/object-edit/object-edit.component';
 
 @Component({
   selector: 'app-order',
@@ -60,10 +59,9 @@ import {ObjectEditComponent} from '../../containers/object-edit/object-edit.comp
   styles: []
 })
 export class OrderComponent implements OnInit {
-  @ViewChild(ObjectEditComponent) editComponent: ObjectEditComponent<Order>
   orders: Order[];
   editOrder: Order;
-  createUpdate: boolean = false;
+  createUpdate = false;
   constructor(private http: HttpClient) {
   }
 
