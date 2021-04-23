@@ -18,7 +18,7 @@ open class CrudService<T : BaseEntity, R : JpaRepository<T, Long>>(
 
     fun update(dataObject: T): T {
         dataObject.id ?.let {
-            repository.findByIdOrNull(dataObject.id!!)
+            repository.findByIdOrNull(dataObject.id)
                 ?.let { return repository.save(dataObject) }
                 ?: throw NoSuchElementException("No entity found with matching id")
         } ?: throw IllegalArgumentException("No Id given")

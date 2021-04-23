@@ -10,8 +10,8 @@ import {HttpClient} from '@angular/common/http';
       <h1 class="text-2xl">Neues Update erstellen</h1>
       <label *ngFor="let question of this.order.product.category.questions">
         {{question}}
-        <input type="radio" (click)="addQuestion(question,'Ja')" name="question" >Ja
-        <input type="radio" (click)="addQuestion(question,'Nein')" name="question">Nein
+        <input type="radio" (click)="addQuestion(question,'Ja')" name="question" > Ja
+        <input type="radio" (click)="addQuestion(question,'Nein')" name="question"> Nein
       </label>
       <form [formGroup]="updateForm" enctype="multipart/form-data">
         <label>Beschreibung

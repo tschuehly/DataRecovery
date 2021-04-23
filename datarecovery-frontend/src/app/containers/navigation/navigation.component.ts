@@ -24,10 +24,11 @@ import {DOCUMENT} from '@angular/common';
             <a routerLink="/datenrettung/raid">RAID</a>
           </div>
         </div>
-        <ng-container *ngIf="currentUser">
+        <div *ngIf="currentUser">
           <a class="mr-2 ml-2"  routerLink="/order">Bestellungen</a>
           <a class="mr-2 ml-2"  routerLink="/product">Produkte</a>
-        </ng-container>
+          <a class="mr-2 ml-2"  routerLink="/category">Kategorien</a>
+        </div>
       </div>
     </nav>
 

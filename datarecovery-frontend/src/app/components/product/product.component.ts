@@ -49,12 +49,7 @@ import {HttpClient} from '@angular/common/http';
                             [categories]="categories"
                             (editProduct)="saveProduct($event)"
                             (close)="editProduct = null"></app-product-detail>
-
-        <!-- <app-object-edit [inputObject]="editProduct" (outObject)="saveProduct($event)"
-                          (close)="editProduct = null"></app-object-edit>-->
-      </div>
-
-
+     </div>
     </div>
   `,
   styles: [

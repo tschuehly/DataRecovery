@@ -6,6 +6,7 @@ import {LoginComponent} from './components/login/login.component';
 import {OrderComponent} from './components/order/order.component';
 import {ProductComponent} from './components/product/product.component';
 import {StaticComponent} from './containers/static/static.component';
+import {CategoryComponent} from './components/category/category.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'order', component: OrderComponent},
   {path: 'product', component: ProductComponent},
+  {path: 'category', component: CategoryComponent},
   {path: 'datenrettung/:variant', component: StaticComponent},
 ];
 

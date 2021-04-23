@@ -20,6 +20,8 @@ import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StaticComponent } from './containers/static/static.component';
 import {ClickOutsideModule} from 'ng-click-outside';
+import { CategoryComponent } from './components/category/category.component';
+import { CategoryDetailComponent } from './containers/category-detail/category-detail.component';
 @NgModule({
     declarations: [
         AppComponent,
@@ -34,7 +36,9 @@ import {ClickOutsideModule} from 'ng-click-outside';
         ProductDetailComponent,
         UploadFileComponent,
         UpdateComponent,
-        StaticComponent
+        StaticComponent,
+        CategoryComponent,
+        CategoryDetailComponent
     ],
   imports: [
     BrowserModule,
