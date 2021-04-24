@@ -9,7 +9,7 @@ import {ActivatedRoute} from '@angular/router';
   template: `
     <div class="container mx-auto p-20">
 
-      <div class="border shadow-xl px-14 py-10" *ngIf="!order">
+      <div class="bg-white border shadow-xl px-14 py-10" *ngIf="!order">
         <h1 class="text-4xl text-center mb-5" >Aktuellen Status der Datenrettung erfragen</h1>
         <form class="grid gap-4" [formGroup]="trackingForm" (ngSubmit)="onSubmit()">
           <label>TrackingID:
@@ -20,8 +20,8 @@ import {ActivatedRoute} from '@angular/router';
           </label>
           <div class="mt-6 flex justify-end">
             <button type="submit"
-                    class="border-2 rounded-md p-2 "
-                    [ngClass]="{'bg-red-500': !trackingForm.valid}"
+                    class="border-2 rounded-md p-2  "
+                    [ngClass]="{'bg-gray-300 text-gray-800': !trackingForm.valid, 'bg-blue-800 text-white' : trackingForm.valid}"
                     [disabled]="!trackingForm.valid">{{trackingForm.valid ? "Status erfragen" : "Füllen sie alle benötigten Felder aus" }}</button>
           </div>
         </form>

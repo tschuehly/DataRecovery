@@ -8,9 +8,9 @@ import {DOCUMENT} from '@angular/common';
   selector: 'app-navigation',
   template: `
     <div class="flex flex-col h-screen">
-    <nav class="flex fixed justify-between p-4 w-screen text-gray-800 bg-white bg-gray-100">
-      <div class="px-2 text-2xl">Tobias Jungbauer<br>Datenrettungsdienst</div>
-      <div class="flex items-center text-xl">
+    <nav class="flex fixed justify-between p-4 w-screen text-blue-900 bg-blue-50 shadow z-50">
+      <div class="px-2 text-2xl font-bold">Cassandra Schilling<br>Datenrettungsdienst</div>
+      <div class="flex items-center text-xl font-semibold">
         <a class="mr-2" routerLink="">Startseite</a>
         <a class="mr-2 ml-2 cursor-pointer"  (click)="scrollToPrice()">Preise</a>
         <a class="mr-2 ml-2" routerLink="/tracking">Auftragsstatus</a>
@@ -32,28 +32,28 @@ import {DOCUMENT} from '@angular/common';
       </div>
     </nav>
 
-    <div class="flex-grow pt-24 pb-10">
+    <div class="flex-grow pt-24 bg-blue-100 text-gray-700">
 
         <router-outlet></router-outlet>
     </div>
-    <footer>
+    <footer class="text-gray-700 bg-blue-50 pt-10">
       <div class="container mb-4 text-center">
         <div class="grid grid-cols-2">
           <div>
             <h1 class="mb-2 text-4xl">Kontakt</h1>
             <p>
-              Tobias Jungbauer<br/>
+              Cassandra Schilling<br/>
               Datenrettungsdienst<br/>
-              Email: ammersee.datenrettung@gmail.com<br/>
-              Tel.: +49 15161408355
+              Email: cassandra@datenrettung-schilling.de<br/>
+              Tel.: +49 152 21408008
             </p>
           </div>
           <div>
             <h1 class="mb-2 text-4xl">Standort</h1>
             <p>
 
-              Egerstra&szlig;e 12<br/>
-              86911 Die&szlig;en am Ammersee<br/>
+              Friedrich-Ebert-Straße 70<br/>
+              71638 Ludwigsburg<br/>
               Deutschland<br/>
             </p>
           </div>

@@ -17,7 +17,7 @@ module.exports = {
         'primary' : 'rgb(0 106 17)'
       },
       backgroundImage: theme => ({
-        'img-hdd': "linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('/assets/hdd.jpg')",
+        'img-hdd': "linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('/assets/bg_pcb.jpg')",
         'img-flash': "url('/assets/flash2.JPG')"
       })
     },
