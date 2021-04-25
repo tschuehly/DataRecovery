@@ -8,7 +8,7 @@ import {DOCUMENT} from '@angular/common';
   selector: 'app-navigation',
   template: `
     <div class="flex flex-col h-screen">
-    <nav class="flex fixed justify-between p-4 w-screen text-blue-900 bg-blue-50 shadow z-50">
+    <nav class="flex fixed justify-between p-4 w-full text-blue-900 bg-blue-50 shadow z-50">
       <div class="px-2 text-2xl font-bold">Cassandra Schilling<br>Datenrettungsdienst</div>
       <div class="flex items-center text-xl font-semibold">
         <a class="mr-2" routerLink="">Startseite</a>

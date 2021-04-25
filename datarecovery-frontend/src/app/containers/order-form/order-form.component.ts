@@ -11,34 +11,35 @@ import {Customer, Order, orderStateEnum, Product} from '../../model/model';
     <form [formGroup]="this.orderForm" (ngSubmit)="onSubmit()">
       <div class="flex flex-col gap-2 px-12">
         <h2 class="text-2xl">Kontaktdaten:</h2>
-        <div class="flex flex-col gap-2" formGroupName="customer">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4" formGroupName="customer">
           <ng-container *ngIf="!contactFormFilled">
             <label>Vorname
-              <input type="text" class="block mt-2 w-full" formControlName="firstName" required>
+              <input type="text" class="mt-1 w-full" formControlName="firstName" required>
             </label>
             <label>Nachname
-              <input type="text" class="block mt-2 w-full" formControlName="lastName" required>
+              <input type="text" class="mt-1 w-full" formControlName="lastName" required>
             </label>
             <label>E-Mail-Adresse
-              <input type="email" class="block mt-2 w-full" formControlName="email" required>
+              <input type="email" class="mt-1 w-full" formControlName="email" required>
             </label>
             <label>Straße und Hausnummer
-              <input type="text" class="block mt-2 w-full" formControlName="street" required>
+              <input type="text" class="mt-1 w-full" formControlName="street" required>
             </label>
             <label>Postleitzahl
-              <input type="text" class="block mt-2 w-full" formControlName="postalCode" required>
+              <input type="text" class="mt-1 w-full" formControlName="postalCode" required>
             </label>
             <label>Ort
-              <input type="text" class="block mt-2 w-full" formControlName="city" required></label>
+              <input type="text" class="mt-1 w-full" formControlName="city" required></label>
             <label>Optional: Telefonnummer
-              <input type="text" class="block mt-2 w-full" formControlName="tel"></label>
+              <input type="text" class="mt-1 w-full" formControlName="tel"></label>
 
-            <div class="flex justify-end mt-4">
-              <button (click)="submitCustomer()"
-                      class="button-primary"
-                      [ngClass]="{'bg-red-500': !orderForm.valid}">{{orderForm.valid ? "Auftragsdaten eingeben" : "Füllen sie alle benötigten Felder aus" }}</button>
-            </div>
+
           </ng-container>
+        </div>
+        <div class="flex justify-center mt-4">
+          <button [disabled]="!orderForm.valid" (click)="submitCustomer()"
+                  class="border-2 border-gray-400 rounded-xl p-2 bg-blue-100 text-gray-700 font-semibold"
+                  [ngClass]="{'bg-red-500': !orderForm.valid}">{{orderForm.valid ? "Auftragsdaten eingeben" : "Füllen sie alle benötigten Felder aus" }}</button>
         </div>
         <ng-container *ngIf="contactFormFilled">
           <label>Auftrag zur Dattenrettung:
@@ -60,7 +61,7 @@ import {Customer, Order, orderStateEnum, Product} from '../../model/model';
           </ng-container>
           <div class="flex justify-end mt-4">
             <button type="submit"
-                    class="button-primary"
+                    class="border-2 border-gray-400 rounded-xl p-2 bg-blue-100 text-gray-700 font-semibold"
                     [ngClass]="{'bg-red-500': !orderForm.valid}"
                     [disabled]="!orderForm.valid">{{orderForm.valid ? "Auftrag abschicken" : "Füllen sie alle benötigten Felder aus" }}</button>
           </div>
