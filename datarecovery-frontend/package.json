@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:app": "ng build --prod --build-optimizer",
-    "build:prod": "cross-env NODE_ENV=production ng build --prod"
+    "build:prod": "cross-env NODE_ENV=production ng build --prod --aot --build-optimizer"
   },
   "private": true,
   "dependencies": {

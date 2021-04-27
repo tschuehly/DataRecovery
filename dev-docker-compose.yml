@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  backend:
+    build: datarecovery-backend
+    container_name: datarecovery-backend
+    image: datarecovery-backend:0.0.1
+    expose:
+      - "8088"
+    env_file:
+      - .env
+  frontend:
+    build: datarecovery-frontend
+    image: datarecovery-frontend:0.0.1
+    container_name: datarecovery-frontend
+    depends_on:
+      - backend
+    command: [nginx-debug, '-g', 'daemon off;']
+    env_file:
+      - .env
+    ports:
+    - "80:80"

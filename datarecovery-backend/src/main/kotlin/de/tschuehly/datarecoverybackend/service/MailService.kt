@@ -24,8 +24,7 @@ class MailService(val javaMailSender: JavaMailSender) {
     fun sendOrderConfirmation(order: Order){ //TODO: Error Handling
 
         val msg = javaMailSender.createMimeMessage()
-
-
+        msg.setFrom("info@jungbauerdatenrettung.de")
         val helper = MimeMessageHelper(msg, true)
 
         order.customer?.email?.let { helper.setTo(it) }
@@ -41,9 +40,7 @@ class MailService(val javaMailSender: JavaMailSender) {
 
     }
     fun sendParcelReceived (order: Order){
-
         val msg = javaMailSender.createMimeMessage()
-
 
         val helper = MimeMessageHelper(msg, true)
 
