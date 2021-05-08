@@ -7,7 +7,7 @@ services:
     expose:
       - "8088"
     env_file:
-      - .env
+      - jungbauer.env
   frontend:
     build: datarecovery-frontend
     image: datarecovery-frontend:0.0.1

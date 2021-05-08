@@ -5,6 +5,12 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/datarecovery-frontend/dist" />
       <excludeFolder url="file://$MODULE_DIR$/datarecovery-frontend/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/datarecovery-backend/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/datarecovery-backend/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/datarecovery-backend/build" />
+      <excludeFolder url="file://$MODULE_DIR$/datarecovery-backend/data" />
+      <excludeFolder url="file://$MODULE_DIR$/datarecovery-frontend/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/volumes" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {Customer, Order, orderStateEnum, Product} from '../../model/model';
+import {Order, Product} from '../../model/model';
 
 @Component({
   selector: 'app-order-form',
@@ -11,8 +11,8 @@ import {Customer, Order, orderStateEnum, Product} from '../../model/model';
     <form [formGroup]="this.orderForm" (ngSubmit)="onSubmit()">
       <div class="flex flex-col gap-2 px-12">
         <h2 class="text-2xl">Kontaktdaten:</h2>
+        <ng-container *ngIf="!contactFormFilled">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4" formGroupName="customer">
-          <ng-container *ngIf="!contactFormFilled">
             <label>Vorname
               <input type="text" class="mt-1 w-full" formControlName="firstName" required>
             </label>
@@ -33,14 +33,13 @@ import {Customer, Order, orderStateEnum, Product} from '../../model/model';
             <label>Optional: Telefonnummer
               <input type="text" class="mt-1 w-full" formControlName="tel"></label>
 
-
-          </ng-container>
         </div>
         <div class="flex justify-center mt-4">
           <button [disabled]="!orderForm.valid" (click)="submitCustomer()"
                   class="border-2 border-gray-400 rounded-xl p-2 bg-blue-100 text-gray-700 font-semibold"
                   [ngClass]="{'bg-red-500': !orderForm.valid}">{{orderForm.valid ? "Auftragsdaten eingeben" : "Füllen sie alle benötigten Felder aus" }}</button>
         </div>
+        </ng-container>
         <ng-container *ngIf="contactFormFilled">
           <label>Auftrag zur Dattenrettung:
             <select class="block mt-2 w-full" formControlName="product" #productSelect required>
