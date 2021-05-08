@@ -8,16 +8,18 @@ import {DOCUMENT} from '@angular/common';
   selector: 'app-navigation',
   template: `
     <div class="flex flex-col h-screen">
-    <nav class="flex fixed justify-between p-4 w-screen text-gray-800 bg-white bg-gray-100">
-      <div class="px-2 text-2xl">Tobias Jungbauer<br>Datenrettungsdienst</div>
-      <div class="flex items-center text-xl">
-        <a class="mr-2" routerLink="">Startseite</a>
+    <nav class="flex fixed justify-between w-full text-silver bg-gray-main bg-center bg-none bg-contain bg-no-repeat 2xl:bg-img-hdd">
+      <div class="bg-gray-main p-4 ">
+        <img src="/assets/LOGO_TJ_Datenrettung.svg" class="h-14">
+      </div>
+      <div class="hidden md:flex flex items-center text-xl ">
+        <a class="mr-2 cursor-pointer">Auftrag</a>
         <a class="mr-2 ml-2 cursor-pointer"  (click)="scrollToPrice()">Preise</a>
-        <a class="mr-2 ml-2" routerLink="/tracking">Auftragsstatus</a>
         <div (clickOutside)="dropdownShow = false" [exclude]="'div.dropdown'" [excludeBeforeClick]="true">
           <a class="mr-2 ml-2 cursor-pointer" (click)="dropdownShow = !dropdownShow">Arbeitsweise</a>
+          <a class="mr-2 ml-2 cursor-pointer"  (click)="scrollToPrice()">Kontakt</a>
 
-          <div class="flex absolute left-0 justify-evenly p-3 mt-7 w-full text-xl bg-gray-100 dropdown" *ngIf="dropdownShow" >
+          <div class="flex absolute left-0 justify-evenly p-3 mt-7 w-full bg-gray-main text-xl dropdown" *ngIf="dropdownShow" >
             <a routerLink="/datenrettung/hdd">HDD Festplatten</a>
             <a routerLink="/datenrettung/ssd">SSD Festplatten</a>
             <a routerLink="/datenrettung/flash">USB Stick/SD Karte</a>
@@ -32,13 +34,13 @@ import {DOCUMENT} from '@angular/common';
       </div>
     </nav>
 
-    <div class="flex-grow pt-24 pb-10">
+    <div class="flex-grow pt-20">
 
         <router-outlet></router-outlet>
     </div>
-    <footer>
-      <div class="container mb-4 text-center">
-        <div class="grid grid-cols-2">
+    <footer class="pt-16 bg-gray-main text-silver">
+      <div class="mb-4 text-center">
+        <div class=" flex flex-col md:flex-row justify-evenly">
           <div>
             <h1 class="mb-2 text-4xl">Kontakt</h1>
             <p>
@@ -48,8 +50,9 @@ import {DOCUMENT} from '@angular/common';
               Tel.: +49 15161408355
             </p>
           </div>
+
           <div>
-            <h1 class="mb-2 text-4xl">Standort</h1>
+            <h1 class="mt-4 md:mt-0 mb-2 text-4xl">Standort</h1>
             <p>
 
               Egerstra&szlig;e 12<br/>
@@ -57,14 +60,15 @@ import {DOCUMENT} from '@angular/common';
               Deutschland<br/>
             </p>
           </div>
-          <div class="col-span-2 mt-4">
-            Made with 💗 by <a class="font-bold" href="https://www.linkedin.com/in/tschuehly/">Thomas Schühly</a>
-          </div>
-          <div>
+        </div>
 
-            <a class="mr-2 ml-2"  routerLink="/login" *ngIf="!currentUser">Login</a>
-            <a class="mr-2 ml-2"  routerLink="/login" *ngIf="currentUser"  (click)="logout.emit()">Logout</a>
-          </div>
+        <div class="col-span-2 mt-8 pt-4 border-t">
+          Made with 💗 by <a class="font-bold" href="https://www.linkedin.com/in/tschuehly/">Thomas Schühly</a>
+        </div>
+        <div>
+
+          <a class="mr-2 ml-2"  routerLink="/login" *ngIf="!currentUser">Login</a>
+          <a class="mr-2 ml-2"  routerLink="/login" *ngIf="currentUser"  (click)="logout.emit()">Logout</a>
         </div>
       </div>
     </footer>

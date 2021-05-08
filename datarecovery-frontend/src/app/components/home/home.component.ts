@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   public innerWidth: any;
   orderSubmitted: boolean = null;
   products: Product[];
+  flashProduct: Product[];
   categories: Category[];
   replacementProducts: Product[];
   ngOnInit(): void {

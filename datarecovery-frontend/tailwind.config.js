@@ -19,10 +19,11 @@ module.exports = {
     },
     extend: {
       colors:{
-        'primary' : 'rgb(0 106 17)'
+        'gray-main' : 'rgb(29 29 29)',
+        'silver' : 'rgb(197 197 197)'
       },
       backgroundImage: theme => ({
-        'img-hdd': "linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('/assets/hdd.jpg')",
+        'img-hdd': " url('/assets/header.png')",
         'img-flash': "url('/assets/flash2.JPG')"
       })
     },
