@@ -9,14 +9,14 @@ import {Category, Order, Product} from '../../model/model';
 export class HomeComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
-  public innerWidth: any;
+
   orderSubmitted: boolean = null;
   products: Product[];
   flashProduct: Product[];
   categories: Category[];
   replacementProducts: Product[];
   ngOnInit(): void {
-    this.innerWidth = document.documentElement.clientWidth;
+
     this.http.get('api/product').subscribe( data => {
         this.products = data as Product[];
         this.replacementProducts = this.products.filter(p => p.category.replacement === true);
@@ -29,10 +29,7 @@ export class HomeComponent implements OnInit {
     });
 
   }
-  @HostListener('window:resize', ['$event'])
-  onResize(event): void {
-    this.innerWidth = document.documentElement.clientWidth;
-  }
+
 
   submitOrder(order: Order): void {
     this.http.post('api/order/create', order).subscribe((data: boolean) => {

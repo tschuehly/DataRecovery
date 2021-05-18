@@ -1,67 +1,72 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {Customer, Order, orderStateEnum, Product} from '../../model/model';
+import {Order, Product} from '../../model/model';
 
 @Component({
   selector: 'app-order-form',
   template: `
-    <div class="w-full text-center text-4xl mb-5">
+    <div class="w-full text-center text-4xl mb-5 p-8">
       <h1>Auftragsformular</h1>
     </div>
     <form [formGroup]="this.orderForm" (ngSubmit)="onSubmit()">
-      <div class="flex flex-col gap-2 px-12">
-        <h2 class="text-2xl">Kontaktdaten:</h2>
-        <div class="flex flex-col gap-2" formGroupName="customer">
-          <ng-container *ngIf="!contactFormFilled">
+      <div class="flex flex-col gap-2">
+        <h2 class="text-2xl px-12">Kontaktdaten:</h2>
+        <ng-container *ngIf="!contactFormFilled">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 py-4 px-12" formGroupName="customer">
             <label>Vorname
-              <input type="text" class="block mt-2 w-full" formControlName="firstName" required>
+              <input type="text" class="mt-1 w-full" formControlName="firstName" required>
             </label>
             <label>Nachname
-              <input type="text" class="block mt-2 w-full" formControlName="lastName" required>
+              <input type="text" class="mt-1 w-full" formControlName="lastName" required>
             </label>
             <label>E-Mail-Adresse
-              <input type="email" class="block mt-2 w-full" formControlName="email" required>
+              <input type="email" class="mt-1 w-full" formControlName="email" required>
             </label>
             <label>Straße und Hausnummer
-              <input type="text" class="block mt-2 w-full" formControlName="street" required>
+              <input type="text" class="mt-1 w-full" formControlName="street" required>
             </label>
             <label>Postleitzahl
-              <input type="text" class="block mt-2 w-full" formControlName="postalCode" required>
+              <input type="text" class="mt-1 w-full" formControlName="postalCode" required>
             </label>
             <label>Ort
-              <input type="text" class="block mt-2 w-full" formControlName="city" required></label>
+              <input type="text" class="mt-1 w-full" formControlName="city" required></label>
             <label>Optional: Telefonnummer
-              <input type="text" class="block mt-2 w-full" formControlName="tel"></label>
-
-            <div class="flex justify-end mt-4">
-              <button (click)="submitCustomer()"
-                      class="button-primary"
-                      [ngClass]="{'bg-red-500': !orderForm.valid}">{{orderForm.valid ? "Auftragsdaten eingeben" : "Füllen sie alle benötigten Felder aus" }}</button>
-            </div>
-          </ng-container>
+              <input type="text" class="mt-1 w-full" formControlName="tel"></label>
         </div>
+          <h2 class="px-12 font-semibold">Allgemeine Geschäftbedingungen und Datenschutzrichtlinien:</h2>
+          <div class="flex px-12">
+            <input class="self-center" type="checkbox" formControlName="agb" required><!-- TODO: Links-->
+            <span class="ml-4">Hiermit bestätige ich meine Einverständnis für die vorhandenen Datenschutzrichtlinien wie für die allgemeinen Geschäftsbedinungen</span>
+          </div>
+        <div class="flex justify-center mt-4 bg-silver p-4 rounded-b-2xl">
+          <button [disabled]="!orderForm.valid" (click)="submitCustomer()"
+                  class="bg-white py-2 px-4 shadow rounded text-black"
+                  [ngClass]="{'bg-gray-300 cursor-default': !orderForm.valid}">{{orderForm.valid ? "Auftragsdaten eingeben" : "Füllen sie alle benötigten Felder aus" }}</button>
+        </div>
+        </ng-container>
         <ng-container *ngIf="contactFormFilled">
-          <label>Auftrag zur Dattenrettung:
-            <select class="block mt-2 w-full" formControlName="product" #productSelect required>
+          <label class="py-4 px-12">Auftrag zur Dattenrettung:
+            <select class="block mt-2 w-full text-black" formControlName="product" #productSelect required>
               <option *ngFor="let product of products" [value]="product.id">
                 {{product.category.name}}  {{product.name}}  <span *ngIf="product.price">{{product.price}}€</span>
               </option>
             </select>
           </label>
           <ng-container *ngIf="productSelect.value">
-            <label>Ersatzdatenträger zur Abspeicherung:
-              <select class="block mt-2 w-full" formControlName="replacement" required>
+            <label class="py-4 px-12">Ersatzdatenträger zur Abspeicherung:
+              <select class="block mt-2 w-full text-black" formControlName="replacement" required>
                 <option selected>Sie senden einen eigenen Ersatzspeicher zur Sicherung mit: kostenfrei</option>
                 <option *ngFor="let replacement of replacementProducts">
                   {{replacement.category.name}} {{replacement.name}} : {{replacement.price}}€
                 </option>
               </select>
             </label>
+
           </ng-container>
-          <div class="flex justify-end mt-4">
+          <div class="flex justify-center mt-4 bg-silver p-4 rounded-b-2xl">
             <button type="submit"
-                    class="button-primary"
-                    [ngClass]="{'bg-red-500': !orderForm.valid}"
+                    class="bg-white py-2 px-4 shadow rounded text-black "
+                    [ngClass]="{'bg-gray-300 cursor-default': !orderForm.valid}"
                     [disabled]="!orderForm.valid">{{orderForm.valid ? "Auftrag abschicken" : "Füllen sie alle benötigten Felder aus" }}</button>
           </div>
         </ng-container>
@@ -105,6 +110,7 @@ export class OrderFormComponent implements OnInit {
       }),
       product: [''],
       replacement: ['Sie senden einen eigenen Ersatzspeicher zur Sicherung mit: kostenfrei'],
+      agb: ['']
     });
   }
 
