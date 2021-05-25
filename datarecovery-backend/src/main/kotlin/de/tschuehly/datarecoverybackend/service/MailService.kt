@@ -31,17 +31,14 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
         order.customer?.email?.let { helper.setTo(it) }
 
         helper.setSubject("Ihr Auftrag zur Datenrettung | Tobias Jungbauer Datenrettung")
-        try {
-            var html = resourceLoader.getResource("classpath:templates/emailtemplate.html").file
-                .readText(charset = Charsets.UTF_8)
-            val body = getOrderConfirmationBody(order)
-            html = html.replace("MESSAGEBODY", body)
-            var dateFoqhrmat = SimpleDateFormat("dd.MM.yyyy HH:mm");
-            html = html.replace("MESSAGETITLE", "Ihre Auftragsbest&#228;tigung vom ${dateFormat.format(order.orderDate)}")
-            helper.setText(html,true)
-        }catch (  e: IOException){
-            println("IOException "+e)
-        }
+        var html = resourceLoader.getResource("classpath:templates/emailtemplate.html").file
+            .readText(charset = Charsets.UTF_8)
+        val body = getOrderConfirmationBody(order)
+        html = html.replace("MESSAGEBODY", body)
+        var dateFormat = SimpleDateFormat("dd.MM.yyyy HH:mm");
+        html = html.replace("MESSAGETITLE", "Ihre Auftragsbest&#228;tigung vom ${dateFormat.format(order.orderDate)}")
+        helper.setText(html,true)
+
         javaMailSender.send(msg)
     }
 
@@ -52,20 +49,26 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
 
         order.customer?.email?.let { helper.setTo(it) }
 
-        helper.setSubject("Ihr Paket ist angekommen")
 
-        helper.setText("<h1>Ihr Paket ist angekommen:</h1>" +
-                "Sie können den aktuellen Status hier einsehen:" +
-                "<a href=\"http://localhost:4200/tracking/${order.trackingId}/${order.customer?.postalCode}\">Aktueller Status</a>", true)
-
+        helper.setSubject("Ihr Paket ist angekommen | Tobias Jungbauer Datenrettung")
+        var html = resourceLoader.getResource("classpath:templates/emailtemplate.html").file
+            .readText(charset = Charsets.UTF_8)
+        val body = getParcelReceived(order)
+        html = html.replace("MESSAGEBODY", body)
+        var dateFormat = SimpleDateFormat("dd.MM.yyyy HH:mm");
+        html = html.replace("MESSAGETITLE", "Ihre Auftrag vom ${dateFormat.format(order.orderDate)}")
+        helper.setText(html,true)
 
         javaMailSender.send(msg)
     }
 
     fun getParcelReceived(order: Order) = """
+        <h2 style="Margin-top: 0;Margin-bottom: 0;font-style: normal;font-weight: normal;color: #706f70;font-size: 18px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;">
+        Ihr Paket ist angekommen und wird nun bearbeitet</h2><p style="Margin-top: 16px;Margin-bottom: 0;"><br />
+        
         <span style="font-weight: bold">TrackingId:</span> 7fb274bc-f00e-4a97-9496-cd41d399e271</p>
         Sie können den aktuellen Status hier einsehen:
-        <a href=http://localhost:4200/tracking/order.trackingId/order.customer.postalCode>Aktueller Status</a>
+        <a href=https://www.jungbauerdatenrettung.de//tracking/${order.trackingId}/${order.customer?.postalCode}>Aktueller Status</a>
         """
     fun getOrderConfirmationBody(order: Order) = """
         <h2 style="Margin-top: 0;Margin-bottom: 0;font-style: normal;font-weight: normal;color: #706f70;font-size: 18px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;">
@@ -88,5 +91,4 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
         <span style="font-weight: bold">Preis:</span> ${order.product.price} €<br />
         <span style="font-weight: bold">Ersatzdatenträger: </span>${order.replacement}<br />
         """
-
 }

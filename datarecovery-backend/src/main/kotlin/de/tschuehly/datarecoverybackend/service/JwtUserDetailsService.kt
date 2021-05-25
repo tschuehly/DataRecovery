@@ -5,7 +5,7 @@ import com.auth0.jwt.JWTVerifier
 import com.auth0.jwt.algorithms.Algorithm
 import com.auth0.jwt.interfaces.DecodedJWT
 import de.tschuehly.datarecoverybackend.model.JwtUserDetails
-import de.tschuehly.datarecoverybackend.model.User
+import de.tschuehly.datarecoverybackend.model.WebsiteUser
 import de.tschuehly.datarecoverybackend.repository.UserRepository
 import de.tschuehly.datarecoverybackend.security.SecurityProperties
 import org.springframework.security.core.authority.AuthorityUtils
@@ -30,7 +30,7 @@ class JwtUserDetailsService(
             ?: throw Exception("Username or password didn't match")
     }
 
-    fun createToken(user: User): String {
+    fun createToken(websiteUser: WebsiteUser): String {
         val now = Instant.now()
         val expiry = Instant.now().plus(securityProperties.tokenExpiration)
         return JWT
@@ -38,17 +38,17 @@ class JwtUserDetailsService(
             .withIssuer(securityProperties.tokenIssuer)
             .withIssuedAt(Date.from(now))
             .withExpiresAt(Date.from(expiry))
-            .withSubject(user.username)
-                .withClaim("id", user.id)
+            .withSubject(websiteUser.username)
+                .withClaim("id", websiteUser.id)
             .sign(algorithm).also { println("gettoken : " + it) }
     }
 
-    private fun getUserDetails(user: User?, token: String): JwtUserDetails {
-        user ?: throw Error()
+    private fun getUserDetails(websiteUser: WebsiteUser?, token: String): JwtUserDetails {
+        websiteUser ?: throw Error()
         return JwtUserDetails(
-            user.username,
-            user.password,
-            AuthorityUtils.commaSeparatedStringToAuthorityList(user.role) as List<SimpleGrantedAuthority>,
+            websiteUser.username,
+            websiteUser.password,
+            AuthorityUtils.commaSeparatedStringToAuthorityList(websiteUser.role) as List<SimpleGrantedAuthority>,
             token
         )
     }

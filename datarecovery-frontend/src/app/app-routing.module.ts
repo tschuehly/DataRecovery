@@ -8,6 +8,8 @@ import {ProductComponent} from './components/product/product.component';
 import {StaticComponent} from './containers/static/static.component';
 import {CategoryComponent} from './components/category/category.component';
 import {ImprintComponent} from "./containers/imprint/imprint.component";
+import {PricesComponent} from "./containers/prices/prices.component";
+import {AgbComponent} from "./containers/agb/agb.component";
 
 
 const routes: Routes = [
@@ -20,6 +22,8 @@ const routes: Routes = [
   {path: 'category', component: CategoryComponent},
   {path: 'datenrettung/:variant', component: StaticComponent},
   {path: 'impressum', component: ImprintComponent},
+  {path: 'agb', component: AgbComponent},
+  {path: 'preise', component: PricesComponent},
 ];
 
 @NgModule({

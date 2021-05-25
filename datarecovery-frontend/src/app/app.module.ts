@@ -24,6 +24,7 @@ import { CategoryComponent } from './components/category/category.component';
 import { CategoryDetailComponent } from './containers/category-detail/category-detail.component';
 import { ImprintComponent } from './containers/imprint/imprint.component';
 import { PricesComponent } from './containers/prices/prices.component';
+import { AgbComponent } from './containers/agb/agb.component';
 @NgModule({
     declarations: [
         AppComponent,
@@ -42,7 +43,8 @@ import { PricesComponent } from './containers/prices/prices.component';
         CategoryComponent,
         CategoryDetailComponent,
         ImprintComponent,
-        PricesComponent
+        PricesComponent,
+        AgbComponent
     ],
   imports: [
     BrowserModule,

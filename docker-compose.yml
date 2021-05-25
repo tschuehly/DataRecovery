@@ -7,16 +7,30 @@ services:
     expose:
       - "8088"
     env_file:
-      - .env
+      - jungbauer.env
+    depends_on:
+      - db
   frontend:
     build: datarecovery-frontend
     image: datarecovery-frontend:0.0.1
     container_name: datarecovery-frontend
     command: [nginx-debug, '-g', 'daemon off;']
     environment:
-      VIRTUAL_HOST: www.jungbauerdatenrettung.de
-      LETSENCRYPT_HOST: www.jungbauerdatenrettung.de
+      VIRTUAL_HOST: www.jungbauerdatenrettung.de #Your Domain here
       VIRTUAL_PORT: 80
+      LETSENCRYPT_HOST: www.jungbauerdatenrettung.de #Your Domain here
+      LETSENCRYPT_EMAIL: info@jungbauerdatenrettung.de #Your Email
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    expose:
+      - "5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    env_file:
+      - jungbauer.env
+
   proxy:
     image: jwilder/nginx-proxy
     restart: always

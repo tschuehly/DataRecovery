@@ -43,7 +43,7 @@ Womit Sie rechnen müssen:
 		productRepository.save(Product(replacement, "1TB", 60.0, Date()))
 		val customer = Customer("Thomas", "Schuehly", "97123871", "thomas.schuehly@outlook.com", "71638", "Ludwigsburg", "Kaiserstraße 25")
 		orderRepository.save(Order("7fb274bc-f00e-4a97-9496-cd41d399e271", Date(), "Auftrag eingegangen", productRepository.findAll()[0], customer, "Sicherung auf WD Elements Portable externe Festplatte 500GB: 50,00 EUR"))
-		userRepository.save(User(1L, "admin", "\$2y\$10\$mt1Ev5vlAx2/RZrlFicF1uQNJk3SCGiCYLn.exBGEHL09hwWJfUNi", "admin", "admin@example.com"))
+		userRepository.save(WebsiteUser(1L, "admin", "\$2y\$10\$mt1Ev5vlAx2/RZrlFicF1uQNJk3SCGiCYLn.exBGEHL09hwWJfUNi", "admin", "admin@example.com"))
 	}
 }
 

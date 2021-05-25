@@ -4,57 +4,58 @@ import {Component, OnInit} from '@angular/core';
   selector: 'app-imprint',
   template: `
     <div class="container sm:px-10 my-10">
-      <div id="comp-ih1wx5dt" class="_2bafp" data-testid="richTextElement"><p class="font_8" style="font-size:15px">
+      <div>
+        <p>
         <span style="font-weight:bold"><span
           style="text-decoration:underline">Impressum gemäß § 5 Telemediengesetz</span></span></p>
 
         <br/>
-        <p class="font_8" style="font-size:15px">Adresse:&nbsp;</p>
+        <p>Adresse:&nbsp;</p>
 
-        <p class="font_8" style="font-size:15px">Tobias Jungbauer Datenrettungsdienst<br>
+        <p>Tobias Jungbauer Datenrettungsdienst<br>
           Am Stein 9<br>
           85049 Ingolstadt</p>
 
-        <p class="font_8" style="font-size:15px"><br>
+        <p><br>
           Mobil: +49(0)15161408355<br>
-          Email: <span style="text-decoration:underline"><a href="mailto:Ammersee.Datenrettung@gmail.com"
+          Email: <span style="text-decoration:underline"><a href="mailto:info@jungbauerdatenrettung.de"
                                                             target="_self">info@jungbauerdatenrettung.de</a></span></p>
 
-        <p class="font_8" style="font-size:15px">Steuernummer: 13123370362</p>
+        <p>Steuernummer: 13123370362</p>
 
-        <p class="font_8" style="font-size:15px">Umsatzteuer-Identifikationsnummer: DE318961162</p>
+        <p>Umsatzteuer-Identifikationsnummer: DE318961162</p>
 
         <br>
 
-        <p class="font_8" style="font-size:15px"><span style="text-decoration:underline"><span class="wixGuard">​</span></span>
+        <p><span style="text-decoration:underline"><span class="wixGuard">​</span></span>
         </p>
 
-        <p class="font_8" style="font-size:15px"><span style="text-decoration:underline"><span style="font-weight:bold">Streitschlichtung</span></span>
+        <p><span style="text-decoration:underline"><span style="font-weight:bold">Streitschlichtung</span></span>
         </p>
 
-        <p class="font_8" style="font-size:15px">Die Europäische Kommission stellt eine Plattform zur
+        <p>Die Europäische Kommission stellt eine Plattform zur
           Online-Streitbeilegung (OS) bereit:<br>
           https://ec.europa.eu/consumers/odr<br>
           Wir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
           teilzunehmen.</p>
 
-        <p class="font_8" style="font-size:15px">&nbsp;</p>
+        <p>&nbsp;</p>
 
-        <p class="font_8" style="font-size:15px"><span style="text-decoration:underline"><span style="font-weight:bold">Haftungsbeschränkung</span></span><br>
+        <p><span style="text-decoration:underline"><span style="font-weight:bold">Haftungsbeschränkung</span></span><br>
           Die Inhalte des Internetauftritts wurden mit größtmöglicher Sorgfalt und nach bestem Gewissen erstellt.
           Dennoch übernimmt der Anbieter dieser Webseite keine Gewähr für die Aktualität, Vollständigkeit und
           Richtigkeit der bereitgestellten Seiten und Inhalte.</p>
 
-        <p class="font_8" style="font-size:15px">Als Diensteanbieter ist der Anbieter dieser Webseite gemäß § 7 Abs. 1
+        <p>Als Diensteanbieter ist der Anbieter dieser Webseite gemäß § 7 Abs. 1
           TMG für eigene Inhalte und bereitgestellte Informationen auf diesen Seiten nach den allgemeinen Gesetzen
           verantwortlich; nach den §§ 8 bis 10 TMG jedoch nicht verpflichtet, die übermittelten oder gespeicherten
           fremden Informationen zu überwachen. Eine Entfernung oder Sperrung dieser Inhalte erfolgt umgehend ab dem
           Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung. Eine Haftung ist erst ab dem Zeitpunkt der
           Kenntniserlangung möglich.</p>
 
-        <p class="font_8" style="font-size:15px">&nbsp;</p>
+        <p>&nbsp;</p>
 
-        <p class="font_8" style="font-size:15px"><span style="text-decoration:underline"><span style="font-weight:bold">Externe Links</span></span><br>
+        <p><span style="text-decoration:underline"><span style="font-weight:bold">Externe Links</span></span><br>
           Die Webseite enthält sog. „externe Links“ (Verlinkungen) zu anderen Webseiten, auf deren Inhalt der Anbieter
           der Webseite keinen Einfluss hat. Aus diesem Grund kann der Anbieter für diese Inhalte auch keine Gewähr
           übernehmen.<br>
@@ -62,19 +63,19 @@ import {Component, OnInit} from '@angular/core';
           Webseite verantwortlich. Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar. Bei Bekanntwerden
           einer solchen Rechtsverletzung wird der Link umgehend entfernen.</p>
 
-        <p class="font_8" style="font-size:15px">3. Urheberrecht/Leistungsschutzrecht<br>
+        <p>3. Urheberrecht/Leistungsschutzrecht<br>
           Die auf dieser Webseite veröffentlichten Inhalte, Werke und bereitgestellten Informationen unterliegen dem
           deutschen Urheberrecht und Leistungsschutzrecht. Jede Art der Vervielfältigung, Bearbeitung, Verbreitung,
           Einspeicherung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedarf der vorherigen
           schriftlichen Zustimmung des jeweiligen Rechteinhabers. Das unerlaubte Kopieren/Speichern der bereitgestellten
           Informationen auf diesen Webseiten ist nicht gestattet und strafbar.</p>
 
-        <p class="font_8" style="font-size:15px">&nbsp;</p>
+        <p>&nbsp;</p>
 
-        <p class="font_8" style="font-size:15px"><span style="text-decoration:underline"><span style="font-weight:bold">Datenschutzerklärung</span></span>
+        <p><span style="text-decoration:underline"><span style="font-weight:bold">Datenschutzerklärung</span></span>
         </p>
 
-        <p class="font_8" style="font-size:15px">Wir freuen uns sehr über Ihr Interesse an unserem Unternehmen.
+        <p>Wir freuen uns sehr über Ihr Interesse an unserem Unternehmen.
           Datenschutz hat für uns einen besonders hohen Stellenwert. Eine Nutzung der Internetseite <span
             style="font-style:italic">jungbauerdatenrettung.de</span> ist grundsätzlich ohne jede Angabe
           personenbezogener Daten möglich. Sofern eine betroffene Person besondere Services unseres Unternehmens über
@@ -82,7 +83,7 @@ import {Component, OnInit} from '@angular/core';
           erforderlich werden. Ist die Verarbeitung personenbezogener Daten erforderlich und besteht für eine solche
           Verarbeitung keine gesetzliche Grundlage, holen wir generell eine Einwilligung der betroffenen Person ein.</p>
 
-        <p class="font_8" style="font-size:15px">Die Verarbeitung personenbezogener Daten, beispielsweise des Namens,
+        <p>Die Verarbeitung personenbezogener Daten, beispielsweise des Namens,
           der Anschrift, E-Mail-Adresse oder Telefonnummer einer betroffenen Person, erfolgt stets im Einklang mit der
           Datenschutz-Grundverordnung und in Übereinstimmung mit den für uns geltenden landesspezifischen
           Datenschutzbestimmungen. Mittels dieser Datenschutzerklärung möchten wir die Öffentlichkeit über Art, Umfang
@@ -90,7 +91,7 @@ import {Component, OnInit} from '@angular/core';
           werden betroffene Personen mittels dieser Datenschutzerklärung über die ihnen zustehenden Rechte
           aufgeklärt.</p>
 
-        <p class="font_8" style="font-size:15px">Wir haben als für die Verarbeitung Verantwortlicher zahlreiche
+        <p>Wir haben als für die Verarbeitung Verantwortlicher zahlreiche
           technische und organisatorische Maßnahmen umgesetzt, um einen möglichst lückenlosen Schutz der über diese
           Internetseite verarbeiteten personenbezogenen Daten sicherzustellen. Dennoch können Internetbasierte
           Datenübertragungen grundsätzlich Sicherheitslücken aufweisen, sodass ein absoluter Schutz nicht gewährleistet
@@ -99,22 +100,22 @@ import {Component, OnInit} from '@angular/core';
 
         <br>
 
-        <p class="font_8" style="font-size:15px"><span style="font-weight:bold">1. Begriffsbestimmungen</span></p>
+        <p><span style="font-weight:bold">1. Begriffsbestimmungen</span></p>
 
-        <p class="font_8" style="font-size:15px">Die Datenschutzerklärung unseres Unternehmens beruht auf den
+        <p>Die Datenschutzerklärung unseres Unternehmens beruht auf den
           Begrifflichkeiten, die durch den Europäischen Richtlinien- und Verordnungsgeber beim Erlass der
           Datenschutz-Grundverordnung (DS-GVO) verwendet wurden. Unsere Datenschutzerklärung soll sowohl für die
           Öffentlichkeit als auch für unsere Kunden und Geschäftspartner einfach lesbar und verständlich sein. Um dies
           zu gewährleisten, möchten wir vorab die verwendeten Begrifflichkeiten erläutern.</p>
 
-        <p class="font_8" style="font-size:15px">Wir verwenden in dieser Datenschutzerklärung unter anderem die
+        <p>Wir verwenden in dieser Datenschutzerklärung unter anderem die
           folgenden Begriffe:</p>
 
-        <ul class="font_8" style="font-size:15px">
+        <ul>
           <li>
-            <p class="font_8" style="font-size:15px">a) &nbsp;&nbsp; personenbezogene Daten</p>
+            <p>a) &nbsp;&nbsp; personenbezogene Daten</p>
 
-            <p class="font_8" style="font-size:15px">Personenbezogene Daten sind alle Informationen, die sich auf eine
+            <p>Personenbezogene Daten sind alle Informationen, die sich auf eine
               identifizierte oder identifizierbare natürliche Person (im Folgenden „betroffene Person“) beziehen. Als
               identifizierbar wird eine natürliche Person angesehen, die direkt oder indirekt, insbesondere mittels
               Zuordnung zu einer Kennung wie einem Namen, zu einer Kennnummer, zu Standortdaten, zu einer Online-Kennung
@@ -123,16 +124,16 @@ import {Component, OnInit} from '@angular/core';
               sind, identifiziert werden kann.</p>
           </li>
           <li>
-            <p class="font_8" style="font-size:15px">b) &nbsp;&nbsp; betroffene Person</p>
+            <p>b) &nbsp;&nbsp; betroffene Person</p>
 
-            <p class="font_8" style="font-size:15px">Betroffene Person ist jede identifizierte oder identifizierbare
+            <p>Betroffene Person ist jede identifizierte oder identifizierbare
               natürliche Person, deren personenbezogene Daten von dem für die Verarbeitung Verantwortlichen verarbeitet
               werden.</p>
           </li>
           <li>
-            <p class="font_8" style="font-size:15px">c) &nbsp;&nbsp; Verarbeitung</p>
+            <p>c) &nbsp;&nbsp; Verarbeitung</p>
 
-            <p class="font_8" style="font-size:15px">Verarbeitung ist jeder mit oder ohne Hilfe automatisierter
+            <p>Verarbeitung ist jeder mit oder ohne Hilfe automatisierter
               Verfahren ausgeführte Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit personenbezogenen Daten
               wie das Erheben, das Erfassen, die Organisation, das Ordnen, die Speicherung, die Anpassung oder
               Veränderung, das Auslesen, das Abfragen, die Verwendung, die Offenlegung durch Übermittlung, Verbreitung
@@ -140,15 +141,15 @@ import {Component, OnInit} from '@angular/core';
               Löschen oder die Vernichtung.</p>
           </li>
           <li>
-            <p class="font_8" style="font-size:15px">d) &nbsp;&nbsp; Einschränkung der Verarbeitung</p>
+            <p>d) &nbsp;&nbsp; Einschränkung der Verarbeitung</p>
 
-            <p class="font_8" style="font-size:15px">Einschränkung der Verarbeitung ist die Markierung gespeicherter
+            <p>Einschränkung der Verarbeitung ist die Markierung gespeicherter
               personenbezogener Daten mit dem Ziel, ihre künftige Verarbeitung einzuschränken.</p>
           </li>
           <li>
-            <p class="font_8" style="font-size:15px">e) &nbsp;&nbsp; Profiling</p>
+            <p>e) &nbsp;&nbsp; Profiling</p>
 
-            <p class="font_8" style="font-size:15px">Profiling ist jede Art der automatisierten Verarbeitung
+            <p>Profiling ist jede Art der automatisierten Verarbeitung
               personenbezogener Daten, die darin besteht, dass diese personenbezogenen Daten verwendet werden, um
               bestimmte persönliche Aspekte, die sich auf eine natürliche Person beziehen, zu bewerten, insbesondere, um
               Aspekte bezüglich Arbeitsleistung, wirtschaftlicher Lage, Gesundheit, persönlicher Vorlieben, Interessen,
@@ -156,9 +157,9 @@ import {Component, OnInit} from '@angular/core';
               vorherzusagen.</p>
           </li>
           <li>
-            <p class="font_8" style="font-size:15px">f) &nbsp; &nbsp; Pseudonymisierung</p>
+            <p>f) &nbsp; &nbsp; Pseudonymisierung</p>
 
-            <p class="font_8" style="font-size:15px">Pseudonymisierung ist die Verarbeitung personenbezogener Daten in
+            <p>Pseudonymisierung ist die Verarbeitung personenbezogener Daten in
               einer Weise, auf welche die personenbezogenen Daten ohne Hinzuziehung zusätzlicher Informationen nicht
               mehr einer spezifischen betroffenen Person zugeordnet werden können, sofern diese zusätzlichen
               Informationen gesondert aufbewahrt werden und technischen und organisatorischen Maßnahmen unterliegen, die
@@ -166,10 +167,10 @@ import {Component, OnInit} from '@angular/core';
               natürlichen Person zugewiesen werden.</p>
           </li>
           <li>
-            <p class="font_8" style="font-size:15px">g) &nbsp;&nbsp; Verantwortlicher oder für die Verarbeitung
+            <p>g) &nbsp;&nbsp; Verantwortlicher oder für die Verarbeitung
               Verantwortlicher</p>
 
-            <p class="font_8" style="font-size:15px">Verantwortlicher oder für die Verarbeitung Verantwortlicher ist die
+            <p>Verantwortlicher oder für die Verarbeitung Verantwortlicher ist die
               natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, die allein oder gemeinsam mit
               anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet. Sind die
               Zwecke und Mittel dieser Verarbeitung durch das Unionsrecht oder das Recht der Mitgliedstaaten vorgegeben,
@@ -177,33 +178,33 @@ import {Component, OnInit} from '@angular/core';
               Unionsrecht oder dem Recht der Mitgliedstaaten vorgesehen werden.</p>
           </li>
           <li>
-            <p class="font_8" style="font-size:15px">h) &nbsp;&nbsp; Auftragsverarbeiter</p>
+            <p>h) &nbsp;&nbsp; Auftragsverarbeiter</p>
 
-            <p class="font_8" style="font-size:15px">Auftragsverarbeiter ist eine natürliche oder juristische Person,
+            <p>Auftragsverarbeiter ist eine natürliche oder juristische Person,
               Behörde, Einrichtung oder andere Stelle, die personenbezogene Daten im Auftrag des Verantwortlichen
               verarbeitet.</p>
           </li>
           <li>
-            <p class="font_8" style="font-size:15px">i) &nbsp; &nbsp;&nbsp; Empfänger</p>
+            <p>i) &nbsp; &nbsp;&nbsp; Empfänger</p>
 
-            <p class="font_8" style="font-size:15px">Empfänger ist eine natürliche oder juristische Person, Behörde,
+            <p>Empfänger ist eine natürliche oder juristische Person, Behörde,
               Einrichtung oder andere Stelle, der personenbezogene Daten offengelegt werden, unabhängig davon, ob es
               sich bei ihr um einen Dritten handelt oder nicht. Behörden, die im Rahmen eines bestimmten
               Untersuchungsauftrags nach dem Unionsrecht oder dem Recht der Mitgliedstaaten möglicherweise
               personenbezogene Daten erhalten, gelten jedoch nicht als Empfänger.</p>
           </li>
           <li>
-            <p class="font_8" style="font-size:15px">j) &nbsp; &nbsp;&nbsp; Dritter</p>
+            <p>j) &nbsp; &nbsp;&nbsp; Dritter</p>
 
-            <p class="font_8" style="font-size:15px">Dritter ist eine natürliche oder juristische Person, Behörde,
+            <p>Dritter ist eine natürliche oder juristische Person, Behörde,
               Einrichtung oder andere Stelle außer der betroffenen Person, dem Verantwortlichen, dem Auftragsverarbeiter
               und den Personen, die unter der unmittelbaren Verantwortung des Verantwortlichen oder des
               Auftragsverarbeiters befugt sind, die personenbezogenen Daten zu verarbeiten.</p>
           </li>
           <li>
-            <p class="font_8" style="font-size:15px">k) &nbsp;&nbsp; Einwilligung</p>
+            <p>k) &nbsp;&nbsp; Einwilligung</p>
 
-            <p class="font_8" style="font-size:15px">Einwilligung ist jede von der betroffenen Person freiwillig für den
+            <p>Einwilligung ist jede von der betroffenen Person freiwillig für den
               bestimmten Fall in informierter Weise und unmissverständlich abgegebene Willensbekundung in Form einer
               Erklärung oder einer sonstigen eindeutigen bestätigenden Handlung, mit der die betroffene Person zu
               verstehen gibt, dass sie mit der Verarbeitung der sie betreffenden personenbezogenen Daten einverstanden
@@ -211,44 +212,44 @@ import {Component, OnInit} from '@angular/core';
           </li>
         </ul>
 
-        <p class="font_8" style="font-size:15px">&nbsp;</p>
+        <p>&nbsp;</p>
 
-        <p class="font_8" style="font-size:15px"><span style="font-weight:bold">2. Name und Anschrift des für die Verarbeitung Verantwortlichen</span>
+        <p><span style="font-weight:bold">2. Name und Anschrift des für die Verarbeitung Verantwortlichen</span>
         </p>
 
-        <p class="font_8" style="font-size:15px">Verantwortlicher im Sinne der Datenschutz-Grundverordnung, sonstiger in
+        <p>Verantwortlicher im Sinne der Datenschutz-Grundverordnung, sonstiger in
           den Mitgliedstaaten der Europäischen Union geltenden Datenschutzgesetze und anderer Bestimmungen mit
           datenschutzrechtlichem Charakter ist:</p>
 
         <br>
 
-        <p class="font_8" style="font-size:15px">Tobias Jungbauer</p>
+        <p>Tobias Jungbauer</p>
 
-        <p class="font_8" style="font-size:15px">Am Stein 9</p>
+        <p>Am Stein 9</p>
 
-        <p class="font_8" style="font-size:15px">85049 Ingolstadt</p>
+        <p>85049 Ingolstadt</p>
 
-        <p class="font_8" style="font-size:15px">Deutschland</p>
+        <p>Deutschland</p>
 
-        <p class="font_8" style="font-size:15px">Tel.: +4915161408355</p>
+        <p>Tel.: +4915161408355</p>
 
-        <p class="font_8" style="font-size:15px">E-Mail:
+        <p>E-Mail:
           <a data-auto-recognition="true" href="mailto:info@jungbauerdatenrettung.de">info@jungbauerdatenrettung.de</a>
         </p>
 
-        <p class="font_8" style="font-size:15px">Website:
+        <p>Website:
           <a data-auto-recognition="true" href="http://www.jungbauerdatenrettung.de" target="_blank">www.jungbauerdatenrettung.de</a>
         </p>
 
-        <p class="font_8" style="font-size:15px">&nbsp;</p>
+        <p>&nbsp;</p>
 
-        <p class="font_8" style="font-size:15px"><span style="font-weight:bold">3. Cookies</span></p>
+        <p><span style="font-weight:bold">3. Cookies</span></p>
 
-        <p class="font_8" style="font-size:15px">Diese Internetseite wie alle anderen Seiten unter <span
+        <p>Diese Internetseite wie alle anderen Seiten unter <span
           style="font-style:italic">jungbauerdatenrettung.de</span> verwenden Cookies. Cookies sind Textdateien, welche
           über einen Internetbrowser auf einem Computersystem abgelegt und gespeichert werden.</p>
 
-        <p class="font_8" style="font-size:15px">Zahlreiche Internetseiten und Server verwenden Cookies. Viele Cookies
+        <p>Zahlreiche Internetseiten und Server verwenden Cookies. Viele Cookies
           enthalten eine sogenannte Cookie-ID. Eine Cookie-ID ist eine eindeutige Kennung des Cookies. Sie besteht aus
           einer Zeichenfolge, durch welche Internetseiten und Server dem konkreten Internetbrowser zugeordnet werden
           können, in dem das Cookie gespeichert wurde. Dies ermöglicht es den besuchten Internetseiten und Servern, den
@@ -256,10 +257,10 @@ import {Component, OnInit} from '@angular/core';
           unterscheiden. Ein bestimmter Internetbrowser kann über die eindeutige Cookie-ID wiedererkannt und
           identifiziert werden.</p>
 
-        <p class="font_8" style="font-size:15px">Durch den Einsatz von Cookies können wir den Nutzern dieser
+        <p>Durch den Einsatz von Cookies können wir den Nutzern dieser
           Internetseite nutzerfreundlichere Services bereitstellen, die ohne die Cookie-Setzung nicht möglich wären.</p>
 
-        <p class="font_8" style="font-size:15px">Mittels eines Cookies können die Informationen und Angebote auf unserer
+        <p>Mittels eines Cookies können die Informationen und Angebote auf unserer
           Internetseite im Sinne des Benutzers optimiert werden. Cookies ermöglichen uns, wie bereits erwähnt, die
           Benutzer unserer Internetseite wiederzuerkennen. Zweck dieser Wiedererkennung ist es, den Nutzern die
           Verwendung unserer Internetseite zu erleichtern. Der Benutzer einer Internetseite, die Cookies verwendet, muss
@@ -268,7 +269,7 @@ import {Component, OnInit} from '@angular/core';
           Beispiel ist das Cookie eines Warenkorbes im Online-Shop. Der Online-Shop merkt sich die Artikel, die ein
           Kunde in den virtuellen Warenkorb gelegt hat, über ein Cookie.</p>
 
-        <p class="font_8" style="font-size:15px">Die betroffene Person kann die Setzung von Cookies durch unsere
+        <p>Die betroffene Person kann die Setzung von Cookies durch unsere
           Internetseite jederzeit mittels einer entsprechenden Einstellung des genutzten Internetbrowsers verhindern und
           damit der Setzung von Cookies dauerhaft widersprechen. Ferner können bereits gesetzte Cookies jederzeit über
           einen Internetbrowser oder andere Softwareprogramme gelöscht werden. Dies ist in allen gängigen
@@ -277,10 +278,10 @@ import {Component, OnInit} from '@angular/core';
 
         <br>
 
-        <p class="font_8" style="font-size:15px"><span style="font-weight:bold">4. Erfassung von allgemeinen Daten und Informationen</span>
+        <p><span style="font-weight:bold">4. Erfassung von allgemeinen Daten und Informationen</span>
         </p>
 
-        <p class="font_8" style="font-size:15px">Die Internetseite unseres Unternehmens erfasst mit jedem Aufruf der
+        <p>Die Internetseite unseres Unternehmens erfasst mit jedem Aufruf der
           Internetseite durch eine betroffene Person oder ein automatisiertes System eine Reihe von allgemeinen Daten
           und Informationen. Diese allgemeinen Daten und Informationen werden in den Logfiles des Servers gespeichert.
           Erfasst werden können die (1) verwendeten Browsertypen und Versionen, (2) das vom zugreifenden System
@@ -291,7 +292,7 @@ import {Component, OnInit} from '@angular/core';
           sonstige ähnliche Daten und Informationen, die der Gefahrenabwehr im Falle von Angriffen auf unsere
           informationstechnologischen Systeme dienen.</p>
 
-        <p class="font_8" style="font-size:15px">Bei der Nutzung dieser allgemeinen Daten und Informationen ziehen wir
+        <p>Bei der Nutzung dieser allgemeinen Daten und Informationen ziehen wir
           keine Rückschlüsse auf die betroffene Person. Diese Informationen werden vielmehr benötigt, um (1) die Inhalte
           unserer Internetseite korrekt auszuliefern, (2) die Inhalte unserer Internetseite sowie die Werbung für diese
           zu optimieren, (3) die dauerhafte Funktionsfähigkeit unserer informationstechnologischen Systeme und der
@@ -304,10 +305,10 @@ import {Component, OnInit} from '@angular/core';
 
         <br>
 
-        <p class="font_8" style="font-size:15px"><span style="font-weight:bold">5. Kontaktmöglichkeit über die Internetseite</span>
+        <p><span style="font-weight:bold">5. Kontaktmöglichkeit über die Internetseite</span>
         </p>
 
-        <p class="font_8" style="font-size:15px">Die Internetseite <span style="font-style:italic">jungbauerdatenrettung.de</span>
+        <p>Die Internetseite <span style="font-style:italic">jungbauerdatenrettung.de</span>
           enthält aufgrund von gesetzlichen Vorschriften Angaben, die eine schnelle elektronische Kontaktaufnahme zu uns
           sowie eine unmittelbare Kommunikation mit uns ermöglichen, was ebenfalls eine allgemeine Adresse der
           sogenannten elektronischen Post (E-Mail-Adresse) umfasst. Sofern eine betroffene Person per E-Mail oder über
@@ -319,148 +320,148 @@ import {Component, OnInit} from '@angular/core';
 
         <br>
 
-        <p class="font_8" style="font-size:15px"><span style="font-weight:bold">6. Routinemäßige Löschung und Sperrung von personenbezogenen Daten</span>
+        <p><span style="font-weight:bold">6. Routinemäßige Löschung und Sperrung von personenbezogenen Daten</span>
         </p>
 
-        <p class="font_8" style="font-size:15px">Der für die Verarbeitung Verantwortliche verarbeitet und speichert
+        <p>Der für die Verarbeitung Verantwortliche verarbeitet und speichert
           personenbezogene Daten der betroffenen Person nur für den Zeitraum, der zur Erreichung des Speicherungszwecks
           erforderlich ist oder sofern dies durch den Europäischen Richtlinien- und Verordnungsgeber oder einen anderen
           Gesetzgeber in Gesetzen oder Vorschriften, welchen der für die Verarbeitung Verantwortliche unterliegt,
           vorgesehen wurde.</p>
 
-        <p class="font_8" style="font-size:15px">Entfällt der Speicherungszweck oder läuft eine vom Europäischen
+        <p>Entfällt der Speicherungszweck oder läuft eine vom Europäischen
           Richtlinien- und Verordnungsgeber oder einem anderen zuständigen Gesetzgeber vorgeschriebene Speicherfrist ab,
           werden die personenbezogenen Daten routinemäßig und entsprechend den gesetzlichen Vorschriften gesperrt oder
           gelöscht.</p>
 
         <br>
 
-        <p class="font_8" style="font-size:15px"><span style="font-weight:bold">7. Rechte der betroffenen Person</span>
+        <p><span style="font-weight:bold">7. Rechte der betroffenen Person</span>
         </p>
 
-        <ul class="font_8" style="font-size:15px">
+        <ul>
           <li>
-            <p class="font_8" style="font-size:15px">a) &nbsp;&nbsp; Recht auf Bestätigung</p>
+            <p>a) &nbsp;&nbsp; Recht auf Bestätigung</p>
 
-            <p class="font_8" style="font-size:15px">Jede betroffene Person hat das vom Europäischen Richtlinien- und
+            <p>Jede betroffene Person hat das vom Europäischen Richtlinien- und
               Verordnungsgeber eingeräumte Recht, von dem für die Verarbeitung Verantwortlichen eine Bestätigung darüber
               zu verlangen, ob sie betreffende personenbezogene Daten verarbeitet werden. Möchte eine betroffene Person
               dieses Bestätigungsrecht in Anspruch nehmen, kann sie sich hierzu jederzeit an uns wenden.</p>
           </li>
           <li>
-            <p class="font_8" style="font-size:15px">b) &nbsp;&nbsp; Recht auf Auskunft</p>
+            <p>b) &nbsp;&nbsp; Recht auf Auskunft</p>
 
-            <p class="font_8" style="font-size:15px">Jede von der Verarbeitung personenbezogener Daten betroffene Person
+            <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person
               hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte Recht, jederzeit von dem für die
               Verarbeitung Verantwortlichen unentgeltliche Auskunft über die zu seiner Person gespeicherten
               personenbezogenen Daten und eine Kopie dieser Auskunft zu erhalten. Ferner hat der Europäische
               Richtlinien- und Verordnungsgeber der betroffenen Person Auskunft über folgende Informationen
               zugestanden:</p>
 
-            <ul class="font_8" style="font-size:15px">
+            <ul>
               <li>
-                <p class="font_8" style="font-size:15px">die Verarbeitungszwecke</p>
+                <p>die Verarbeitungszwecke</p>
               </li>
               <li>
-                <p class="font_8" style="font-size:15px">die Kategorien personenbezogener Daten, die verarbeitet
+                <p>die Kategorien personenbezogener Daten, die verarbeitet
                   werden</p>
               </li>
               <li>
-                <p class="font_8" style="font-size:15px">die Empfänger oder Kategorien von Empfängern, gegenüber denen
+                <p>die Empfänger oder Kategorien von Empfängern, gegenüber denen
                   die personenbezogenen Daten offengelegt worden sind oder noch offengelegt werden, insbesondere bei
                   Empfängern in Drittländern oder bei internationalen Organisationen</p>
               </li>
               <li>
-                <p class="font_8" style="font-size:15px">falls möglich die geplante Dauer, für die die personenbezogenen
+                <p>falls möglich die geplante Dauer, für die die personenbezogenen
                   Daten gespeichert werden, oder, falls dies nicht möglich ist, die Kriterien für die Festlegung dieser
                   Dauer</p>
               </li>
               <li>
-                <p class="font_8" style="font-size:15px">das Bestehen eines Rechts auf Berichtigung oder Löschung der
+                <p>das Bestehen eines Rechts auf Berichtigung oder Löschung der
                   sie betreffenden personenbezogenen Daten oder auf Einschränkung der Verarbeitung durch den
                   Verantwortlichen oder eines Widerspruchsrechts gegen diese Verarbeitung</p>
               </li>
               <li>
-                <p class="font_8" style="font-size:15px">das Bestehen eines Beschwerderechts bei einer
+                <p>das Bestehen eines Beschwerderechts bei einer
                   Aufsichtsbehörde</p>
               </li>
               <li>
-                <p class="font_8" style="font-size:15px">wenn die personenbezogenen Daten nicht bei der betroffenen
+                <p>wenn die personenbezogenen Daten nicht bei der betroffenen
                   Person erhoben werden: Alle verfügbaren Informationen über die Herkunft der Daten</p>
               </li>
               <li>
-                <p class="font_8" style="font-size:15px">das Bestehen einer automatisierten Entscheidungsfindung
+                <p>das Bestehen einer automatisierten Entscheidungsfindung
                   einschließlich Profiling gemäß Artikel 22 Abs.1 und 4 DS-GVO und — zumindest in diesen Fällen —
                   aussagekräftige Informationen über die involvierte Logik sowie die Tragweite und die angestrebten
                   Auswirkungen einer derartigen Verarbeitung für die betroffene Person</p>
               </li>
             </ul>
 
-            <p class="font_8" style="font-size:15px">Ferner steht der betroffenen Person ein Auskunftsrecht darüber zu,
+            <p>Ferner steht der betroffenen Person ein Auskunftsrecht darüber zu,
               ob personenbezogene Daten an ein Drittland oder an eine internationale Organisation übermittelt wurden.
               Sofern dies der Fall ist, so steht der betroffenen Person im Übrigen das Recht zu, Auskunft über die
               geeigneten Garantien im Zusammenhang mit der Übermittlung zu erhalten.</p>
 
-            <p class="font_8" style="font-size:15px">Möchte eine betroffene Person dieses Auskunftsrecht in Anspruch
+            <p>Möchte eine betroffene Person dieses Auskunftsrecht in Anspruch
               nehmen, kann sie sich hierzu jederzeit an uns wenden.</p>
           </li>
           <li>
-            <p class="font_8" style="font-size:15px">c) &nbsp;&nbsp; Recht auf Berichtigung</p>
+            <p>c) &nbsp;&nbsp; Recht auf Berichtigung</p>
 
-            <p class="font_8" style="font-size:15px">Jede von der Verarbeitung personenbezogener Daten betroffene Person
+            <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person
               hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte Recht, die unverzügliche Berichtigung
               sie betreffender unrichtiger personenbezogener Daten zu verlangen. Ferner steht der betroffenen Person das
               Recht zu, unter Berücksichtigung der Zwecke der Verarbeitung, die Vervollständigung unvollständiger
               personenbezogener Daten — auch mittels einer ergänzenden Erklärung — zu verlangen.</p>
 
-            <p class="font_8" style="font-size:15px">Möchte eine betroffene Person dieses Berichtigungsrecht in Anspruch
+            <p>Möchte eine betroffene Person dieses Berichtigungsrecht in Anspruch
               nehmen, kann sie sich hierzu jederzeit an uns wenden.</p>
           </li>
           <li>
-            <p class="font_8" style="font-size:15px">d) &nbsp;&nbsp; Recht auf Löschung (Recht auf Vergessen werden)</p>
+            <p>d) &nbsp;&nbsp; Recht auf Löschung (Recht auf Vergessen werden)</p>
 
-            <p class="font_8" style="font-size:15px">Jede von der Verarbeitung personenbezogener Daten betroffene Person
+            <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person
               hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte Recht, von dem Verantwortlichen zu
               verlangen, dass die sie betreffenden personenbezogenen Daten unverzüglich gelöscht werden, sofern einer
               der folgenden Gründe zutrifft und soweit die Verarbeitung nicht erforderlich ist:</p>
 
-            <ul class="font_8" style="font-size:15px">
+            <ul>
               <li>
-                <p class="font_8" style="font-size:15px">Die personenbezogenen Daten wurden für solche Zwecke erhoben
+                <p>Die personenbezogenen Daten wurden für solche Zwecke erhoben
                   oder auf sonstige Weise verarbeitet, für welche sie nicht mehr notwendig sind.</p>
               </li>
               <li>
-                <p class="font_8" style="font-size:15px">Die betroffene Person widerruft ihre Einwilligung, auf die sich
+                <p>Die betroffene Person widerruft ihre Einwilligung, auf die sich
                   die Verarbeitung gemäß Art. 6 Abs. 1 Buchstabe a DS-GVO oder Art. 9 Abs. 2 Buchstabe a DS-GVO stützte,
                   und es fehlt an einer anderweitigen Rechtsgrundlage für die Verarbeitung.</p>
               </li>
               <li>
-                <p class="font_8" style="font-size:15px">Die betroffene Person legt gemäß Art. 21 Abs. 1 DS-GVO
+                <p>Die betroffene Person legt gemäß Art. 21 Abs. 1 DS-GVO
                   Widerspruch gegen die Verarbeitung ein, und es liegen keine vorrangigen berechtigten Gründe für die
                   Verarbeitung vor, oder die betroffene Person legt gemäß Art. 21 Abs. 2 DS-GVO Widerspruch gegen die
                   Verarbeitung ein.</p>
               </li>
               <li>
-                <p class="font_8" style="font-size:15px">Die personenbezogenen Daten wurden unrechtmäßig
+                <p>Die personenbezogenen Daten wurden unrechtmäßig
                   verarbeitet.</p>
               </li>
               <li>
-                <p class="font_8" style="font-size:15px">Die Löschung der personenbezogenen Daten ist zur Erfüllung
+                <p>Die Löschung der personenbezogenen Daten ist zur Erfüllung
                   einer rechtlichen Verpflichtung nach dem Unionsrecht oder dem Recht der Mitgliedstaaten erforderlich,
                   dem der Verantwortliche unterliegt.</p>
               </li>
               <li>
-                <p class="font_8" style="font-size:15px">Die personenbezogenen Daten wurden in Bezug auf angebotene
+                <p>Die personenbezogenen Daten wurden in Bezug auf angebotene
                   Dienste der Informationsgesellschaft gemäß Art. 8 Abs. 1 DS-GVO erhoben.</p>
               </li>
             </ul>
 
-            <p class="font_8" style="font-size:15px">Sofern einer der oben genannten Gründe zutrifft und eine betroffene
+            <p>Sofern einer der oben genannten Gründe zutrifft und eine betroffene
               Person die Löschung von personenbezogenen Daten, die bei uns gespeichert sind, veranlassen möchte, kann
               sie sich hierzu jederzeit an uns wenden. Wir werden veranlassen, dass dem Löschverlangen unverzüglich
               nachgekommen wird.</p>
 
-            <p class="font_8" style="font-size:15px">Wurden die personenbezogenen Daten von unser Unternehmen aus
+            <p>Wurden die personenbezogenen Daten von unser Unternehmen aus
               öffentlich gemacht und ist unser Unternehmen als Verantwortlicher gemäß Art. 17 Abs. 1 DS-GVO zur Löschung
               der personenbezogenen Daten verpflichtet, so treffen wir unter Berücksichtigung der verfügbaren
               Technologie und der Implementierungskosten angemessene Maßnahmen, auch technischer Art, um andere für die
@@ -471,44 +472,44 @@ import {Component, OnInit} from '@angular/core';
               Wir werden im Einzelfall das Notwendige veranlassen.</p>
           </li>
           <li>
-            <p class="font_8" style="font-size:15px">e) &nbsp;&nbsp; Recht auf Einschränkung der Verarbeitung</p>
+            <p>e) &nbsp;&nbsp; Recht auf Einschränkung der Verarbeitung</p>
 
-            <p class="font_8" style="font-size:15px">Jede von der Verarbeitung personenbezogener Daten betroffene Person
+            <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person
               hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte Recht, von dem Verantwortlichen die
               Einschränkung der Verarbeitung zu verlangen, wenn eine der folgenden Voraussetzungen gegeben ist:</p>
 
-            <ul class="font_8" style="font-size:15px">
+            <ul>
               <li>
-                <p class="font_8" style="font-size:15px">Die Richtigkeit der personenbezogenen Daten wird von der
+                <p>Die Richtigkeit der personenbezogenen Daten wird von der
                   betroffenen Person bestritten, und zwar für eine Dauer, die es dem Verantwortlichen ermöglicht, die
                   Richtigkeit der personenbezogenen Daten zu überprüfen.</p>
               </li>
               <li>
-                <p class="font_8" style="font-size:15px">Die Verarbeitung ist unrechtmäßig, die betroffene Person lehnt
+                <p>Die Verarbeitung ist unrechtmäßig, die betroffene Person lehnt
                   die Löschung der personenbezogenen Daten ab und verlangt stattdessen die Einschränkung der Nutzung der
                   personenbezogenen Daten.</p>
               </li>
               <li>
-                <p class="font_8" style="font-size:15px">Der Verantwortliche benötigt die personenbezogenen Daten für
+                <p>Der Verantwortliche benötigt die personenbezogenen Daten für
                   die Zwecke der Verarbeitung nicht länger, die betroffene Person benötigt sie jedoch zur
                   Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.</p>
               </li>
               <li>
-                <p class="font_8" style="font-size:15px">Die betroffene Person hat Widerspruch gegen die Verarbeitung
+                <p>Die betroffene Person hat Widerspruch gegen die Verarbeitung
                   gem. Art. 21 Abs. 1 DS-GVO eingelegt und es steht noch nicht fest, ob die berechtigten Gründe des
                   Verantwortlichen gegenüber denen der betroffenen Person überwiegen.</p>
               </li>
             </ul>
 
-            <p class="font_8" style="font-size:15px">Sofern eine der oben genannten Voraussetzungen gegeben ist und eine
+            <p>Sofern eine der oben genannten Voraussetzungen gegeben ist und eine
               betroffene Person die Einschränkung von personenbezogenen Daten, die bei uns gespeichert sind, verlangen
               möchte, kann sie sich hierzu jederzeit an uns wenden. Wir werden die Einschränkung der Verarbeitung
               veranlassen.</p>
           </li>
           <li>
-            <p class="font_8" style="font-size:15px">f) &nbsp; &nbsp; Recht auf Datenübertragbarkeit</p>
+            <p>f) &nbsp; &nbsp; Recht auf Datenübertragbarkeit</p>
 
-            <p class="font_8" style="font-size:15px">Jede von der Verarbeitung personenbezogener Daten betroffene Person
+            <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person
               hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte Recht, die sie betreffenden
               personenbezogenen Daten, welche durch die betroffene Person einem Verantwortlichen bereitgestellt wurden,
               in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten. Sie hat außerdem das Recht,
@@ -520,52 +521,52 @@ import {Component, OnInit} from '@angular/core';
               im öffentlichen Interesse liegt oder in Ausübung öffentlicher Gewalt erfolgt, welche dem Verantwortlichen
               übertragen wurde.</p>
 
-            <p class="font_8" style="font-size:15px">Ferner hat die betroffene Person bei der Ausübung ihres Rechts auf
+            <p>Ferner hat die betroffene Person bei der Ausübung ihres Rechts auf
               Datenübertragbarkeit gemäß Art. 20 Abs. 1 DS-GVO das Recht, zu erwirken, dass die personenbezogenen Daten
               direkt von einem Verantwortlichen an einen anderen Verantwortlichen übermittelt werden, soweit dies
               technisch machbar ist und sofern hiervon nicht die Rechte und Freiheiten anderer Personen beeinträchtigt
               werden.</p>
 
-            <p class="font_8" style="font-size:15px">Zur Geltendmachung des Rechts auf Datenübertragbarkeit kann sich
+            <p>Zur Geltendmachung des Rechts auf Datenübertragbarkeit kann sich
               die betroffene Person jederzeit an uns wenden.</p>
           </li>
           <li>
-            <p class="font_8" style="font-size:15px">g) &nbsp;&nbsp; Recht auf Widerspruch</p>
+            <p>g) &nbsp;&nbsp; Recht auf Widerspruch</p>
 
-            <p class="font_8" style="font-size:15px">Jede von der Verarbeitung personenbezogener Daten betroffene Person
+            <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person
               hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte Recht, aus Gründen, die sich aus ihrer
               besonderen Situation ergeben, jederzeit gegen die Verarbeitung sie betreffender personenbezogener Daten,
               die aufgrund von Art. 6 Abs. 1 Buchstaben e oder f DS-GVO erfolgt, Widerspruch einzulegen. Dies gilt auch
               für ein auf diese Bestimmungen gestütztes Profiling.</p>
 
-            <p class="font_8" style="font-size:15px">Wir verarbeiten die personenbezogenen Daten im Falle des
+            <p>Wir verarbeiten die personenbezogenen Daten im Falle des
               Widerspruchs nicht mehr, es sei denn, wir können zwingende schutzwürdige Gründe für die Verarbeitung
               nachweisen, die den Interessen, Rechten und Freiheiten der betroffenen Person überwiegen, oder die
               Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.</p>
 
-            <p class="font_8" style="font-size:15px">Verarbeiten wir personenbezogene Daten, um Direktwerbung zu
+            <p>Verarbeiten wir personenbezogene Daten, um Direktwerbung zu
               betreiben, so hat die betroffene Person das Recht, jederzeit Widerspruch gegen die Verarbeitung der
               personenbezogenen Daten zum Zwecke derartiger Werbung einzulegen. Dies gilt auch für das Profiling, soweit
               es mit solcher Direktwerbung in Verbindung steht. Widerspricht die betroffene Person der Verarbeitung für
               Zwecke der Direktwerbung gegenüber unseres Gewerbes, so werden wir die personenbezogenen Daten nicht mehr
               für diese Zwecke verarbeiten.</p>
 
-            <p class="font_8" style="font-size:15px">Zudem hat die betroffene Person das Recht, aus Gründen, die sich
+            <p>Zudem hat die betroffene Person das Recht, aus Gründen, die sich
               aus ihrer besonderen Situation ergeben, gegen die sie betreffende Verarbeitung personenbezogener Daten,
               die bei uns zu wissenschaftlichen oder historischen Forschungszwecken oder zu statistischen Zwecken gemäß
               Art. 89 Abs. 1 DS-GVO erfolgen, Widerspruch einzulegen, es sei denn, eine solche Verarbeitung ist zur
               Erfüllung einer im öffentlichen Interesse liegenden Aufgabe erforderlich.</p>
 
-            <p class="font_8" style="font-size:15px">Zur Ausübung des Rechts auf Widerspruch kann sich die betroffene
+            <p>Zur Ausübung des Rechts auf Widerspruch kann sich die betroffene
               Person direkt an uns wenden. Der betroffenen Person steht es ferner frei, im Zusammenhang mit der Nutzung
               von Diensten der Informationsgesellschaft, ungeachtet der Richtlinie 2002/58/EG, ihr Widerspruchsrecht
               mittels automatisierter Verfahren auszuüben, bei denen technische Spezifikationen verwendet werden.</p>
           </li>
           <li>
-            <p class="font_8" style="font-size:15px">h) &nbsp;&nbsp; Automatisierte Entscheidungen im Einzelfall
+            <p>h) &nbsp;&nbsp; Automatisierte Entscheidungen im Einzelfall
               einschließlich Profiling</p>
 
-            <p class="font_8" style="font-size:15px">Jede von der Verarbeitung personenbezogener Daten betroffene Person
+            <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person
               hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte Recht, nicht einer ausschließlich auf
               einer automatisierten Verarbeitung — einschließlich Profiling — beruhenden Entscheidung unterworfen zu
               werden, die ihr gegenüber rechtliche Wirkung entfaltet oder sie in ähnlicher Weise erheblich
@@ -576,35 +577,35 @@ import {Component, OnInit} from '@angular/core';
               berechtigten Interessen der betroffenen Person enthalten oder (3) mit ausdrücklicher Einwilligung der
               betroffenen Person erfolgt.</p>
 
-            <p class="font_8" style="font-size:15px">Ist die Entscheidung (1) für den Abschluss oder die Erfüllung eines
+            <p>Ist die Entscheidung (1) für den Abschluss oder die Erfüllung eines
               Vertrags zwischen der betroffenen Person und dem Verantwortlichen erforderlich oder (2) erfolgt sie mit
               ausdrücklicher Einwilligung der betroffenen Person, treffe ich angemessene Maßnahmen, um die Rechte und
               Freiheiten sowie die berechtigten Interessen der betroffenen Person zu wahren, wozu mindestens das Recht
               auf Erwirkung des Eingreifens einer Person seitens des Verantwortlichen, auf Darlegung des eigenen
               Standpunkts und auf Anfechtung der Entscheidung gehört.</p>
 
-            <p class="font_8" style="font-size:15px">Möchte die betroffene Person Rechte mit Bezug auf automatisierte
+            <p>Möchte die betroffene Person Rechte mit Bezug auf automatisierte
               Entscheidungen geltend machen, kann sie sich hierzu jederzeit an uns wenden.</p>
           </li>
           <li>
-            <p class="font_8" style="font-size:15px">i) &nbsp; &nbsp;&nbsp; Recht auf Widerruf einer
+            <p>i) &nbsp; &nbsp;&nbsp; Recht auf Widerruf einer
               datenschutzrechtlichen Einwilligung</p>
 
-            <p class="font_8" style="font-size:15px">Jede von der Verarbeitung personenbezogener Daten betroffene Person
+            <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person
               hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte Recht, eine Einwilligung zur
               Verarbeitung personenbezogener Daten jederzeit zu widerrufen.</p>
 
-            <p class="font_8" style="font-size:15px">Möchte die betroffene Person ihr Recht auf Widerruf einer
+            <p>Möchte die betroffene Person ihr Recht auf Widerruf einer
               Einwilligung geltend machen, kann sie sich hierzu jederzeit an uns wenden.</p>
           </li>
         </ul>
 
-        <p class="font_8" style="font-size:15px">&nbsp;</p>
+        <p>&nbsp;</p>
 
-        <p class="font_8" style="font-size:15px"><span style="font-weight:bold">8. Datenschutz bei Bewerbungen und im Bewerbungsverfahren</span>
+        <p><span style="font-weight:bold">8. Datenschutz bei Bewerbungen und im Bewerbungsverfahren</span>
         </p>
 
-        <p class="font_8" style="font-size:15px">Wir erheben und verarbeiten die personenbezogenen Daten von Bewerbern
+        <p>Wir erheben und verarbeiten die personenbezogenen Daten von Bewerbern
           zum Zwecke der Abwicklung des Bewerbungsverfahrens. Die Verarbeitung kann auch auf elektronischem Wege
           erfolgen. Dies ist insbesondere dann der Fall, wenn ein Bewerber entsprechende Bewerbungsunterlagen auf dem
           elektronischen Wege, beispielsweise per E-Mail oder über ein auf der Internetseite befindliches Webformular,
@@ -617,13 +618,13 @@ import {Component, OnInit} from '@angular/core';
           Sonstiges berechtigtes Interesse in diesem Sinne ist beispielsweise eine Beweispflicht in einem Verfahren nach
           dem Allgemeinen Gleichbehandlungsgesetz (AGG).</p>
 
-        <p class="font_8" style="font-size:15px"><span style="font-weight:bold"><span class="wixGuard">​</span></span>
+        <p><span style="font-weight:bold"><span class="wixGuard">​</span></span>
         </p>
 
-        <p class="font_8" style="font-size:15px"><span style="font-weight:bold">9. Datenschutzbestimmungen zu Einsatz und Verwendung von Google Analytics (mit Anonymisierungsfunktion)</span>
+        <p><span style="font-weight:bold">9. Datenschutzbestimmungen zu Einsatz und Verwendung von Google Analytics (mit Anonymisierungsfunktion)</span>
         </p>
 
-        <p class="font_8" style="font-size:15px">Wir haben auf dieser Internetseite die Komponente Google Analytics (mit
+        <p>Wir haben auf dieser Internetseite die Komponente Google Analytics (mit
           Anonymisierungsfunktion) integriert. Google Analytics ist ein Web-Analyse-Dienst. Web-Analyse ist die
           Erhebung, Sammlung und Auswertung von Daten über das Verhalten von Besuchern von Internetseiten. Ein
           Web-Analyse-Dienst erfasst unter anderem Daten darüber, von welcher Internetseite eine betroffene Person auf
@@ -631,22 +632,22 @@ import {Component, OnInit} from '@angular/core';
           oder wie oft und für welche Verweildauer eine Unterseite betrachtet wurde. Eine Web-Analyse wird überwiegend
           zur Optimierung einer Internetseite und zur Kosten-Nutzen-Analyse von Internetwerbung eingesetzt.</p>
 
-        <p class="font_8" style="font-size:15px">Betreibergesellschaft der Google-Analytics-Komponente ist die Google
+        <p>Betreibergesellschaft der Google-Analytics-Komponente ist die Google
           Inc., 1600 Amphitheatre Pkwy, Mountain View, CA 94043-1351, USA.</p>
 
-        <p class="font_8" style="font-size:15px">Der für die Verarbeitung Verantwortliche verwendet für die Web-Analyse
+        <p>Der für die Verarbeitung Verantwortliche verwendet für die Web-Analyse
           über Google Analytics den Zusatz "_gat._anonymizeIp". Mittels dieses Zusatzes wird die IP-Adresse des
           Internetanschlusses der betroffenen Person von Google gekürzt und anonymisiert, wenn der Zugriff auf unsere
           Internetseiten aus einem Mitgliedstaat der Europäischen Union oder aus einem anderen Vertragsstaat des
           Abkommens über den Europäischen Wirtschaftsraum erfolgt.</p>
 
-        <p class="font_8" style="font-size:15px">Der Zweck der Google-Analytics-Komponente ist die Analyse der
+        <p>Der Zweck der Google-Analytics-Komponente ist die Analyse der
           Besucherströme auf unserer Internetseite. Google nutzt die gewonnenen Daten und Informationen unter anderem
           dazu, die Nutzung unserer Internetseite auszuwerten, um für uns Online-Reports, welche die Aktivitäten auf
           unseren Internetseiten aufzeigen, zusammenzustellen, und um weitere mit der Nutzung unserer Internetseite in
           Verbindung stehende Dienstleistungen zu erbringen.</p>
 
-        <p class="font_8" style="font-size:15px">Google Analytics setzt ein Cookie auf dem informationstechnologischen
+        <p>Google Analytics setzt ein Cookie auf dem informationstechnologischen
           System der betroffenen Person. Was Cookies sind, wurde oben bereits erläutert. Mit Setzung des Cookies wird
           Google eine Analyse der Benutzung unserer Internetseite ermöglicht. Durch jeden Aufruf einer der Einzelseiten
           dieser Internetseite, die durch den für die Verarbeitung Verantwortlichen betrieben wird und auf welcher eine
@@ -657,7 +658,7 @@ import {Component, OnInit} from '@angular/core';
           dienen, die Herkunft der Besucher und Klicks nachzuvollziehen und in der Folge Provisionsabrechnungen zu
           ermöglichen.</p>
 
-        <p class="font_8" style="font-size:15px">Mittels des Cookies werden personenbezogene Informationen,
+        <p>Mittels des Cookies werden personenbezogene Informationen,
           beispielsweise die Zugriffszeit, der Ort, von welchem ein Zugriff ausging und die Häufigkeit der Besuche
           unserer Internetseite durch die betroffene Person, gespeichert. Bei jedem Besuch unserer Internetseiten werden
           diese personenbezogenen Daten, einschließlich der IP-Adresse des von der betroffenen Person genutzten
@@ -665,14 +666,14 @@ import {Component, OnInit} from '@angular/core';
           Daten werden durch Google in den Vereinigten Staaten von Amerika gespeichert. Google gibt diese über das
           technische Verfahren erhobenen personenbezogenen Daten unter Umständen an Dritte weiter.</p>
 
-        <p class="font_8" style="font-size:15px">Die betroffene Person kann die Setzung von Cookies durch unsere
+        <p>Die betroffene Person kann die Setzung von Cookies durch unsere
           Internetseite, wie oben bereits dargestellt, jederzeit mittels einer entsprechenden Einstellung des genutzten
           Internetbrowsers verhindern und damit der Setzung von Cookies dauerhaft widersprechen. Eine solche Einstellung
           des genutzten Internetbrowsers würde auch verhindern, dass Google ein Cookie auf dem
           informationstechnologischen System der betroffenen Person setzt. Zudem kann ein von Google Analytics bereits
           gesetzter Cookie jederzeit über den Internetbrowser oder andere Softwareprogramme gelöscht werden.</p>
 
-        <p class="font_8" style="font-size:15px">Ferner besteht für die betroffene Person die Möglichkeit, einer
+        <p>Ferner besteht für die betroffene Person die Möglichkeit, einer
           Erfassung der durch Google Analytics erzeugten, auf eine Nutzung dieser Internetseite bezogenen Daten sowie
           der Verarbeitung dieser Daten durch Google zu widersprechen und eine solche zu verhindern. Hierzu muss die
           betroffene Person ein Browser-Add-On unter dem Link
@@ -688,7 +689,7 @@ import {Component, OnInit} from '@angular/core';
           oder der erneuten Aktivierung des Browser-Add-Ons.
         </p>
 
-        <p class="font_8" style="font-size:15px">Weitere Informationen und die geltenden Datenschutzbestimmungen von
+        <p>Weitere Informationen und die geltenden Datenschutzbestimmungen von
           Google können unter
           <a data-auto-recognition="true" href="https://www.google.de/intl/de/policies/privacy/"
                                 target="_blank">https://www.google.de/intl/de/policies/privacy/</a>
@@ -703,10 +704,10 @@ import {Component, OnInit} from '@angular/core';
 
         <br>
 
-        <p class="font_8" style="font-size:15px"><span
+        <p><span
           style="font-weight:bold">10. Rechtsgrundlage der Verarbeitung</span></p>
 
-        <p class="font_8" style="font-size:15px">Art. 6 I lit. a DS-GVO dient uns als Rechtsgrundlage für
+        <p>Art. 6 I lit. a DS-GVO dient uns als Rechtsgrundlage für
           Verarbeitungsvorgänge, bei denen wir eine Einwilligung für einen bestimmten Verarbeitungszweck einholen. Ist
           die Verarbeitung personenbezogener Daten zur Erfüllung eines Vertrags, dessen Vertragspartei die betroffene
           Person ist, erforderlich, wie dies beispielsweise bei Verarbeitungsvorgängen der Fall ist, die für eine
@@ -729,34 +730,34 @@ import {Component, OnInit} from '@angular/core';
           berechtigtes Interesse anzunehmen sein könnte, wenn die betroffene Person ein Kunde des Verantwortlichen ist
           (Erwägungsgrund 47 Satz 2 DS-GVO).</p>
 
-        <p class="font_8" style="font-size:15px"><span style="font-weight:bold"><span class="wixGuard">​</span></span>
+        <p><span style="font-weight:bold"><span class="wixGuard">​</span></span>
         </p>
 
-        <p class="font_8" style="font-size:15px"><span style="font-weight:bold">11. Berechtigte Interessen an der Verarbeitung, die von dem Verantwortlichen oder einem Dritten verfolgt werden</span>
+        <p><span style="font-weight:bold">11. Berechtigte Interessen an der Verarbeitung, die von dem Verantwortlichen oder einem Dritten verfolgt werden</span>
         </p>
 
-        <p class="font_8" style="font-size:15px">Basiert die Verarbeitung personenbezogener Daten auf Artikel 6 I lit. f
+        <p>Basiert die Verarbeitung personenbezogener Daten auf Artikel 6 I lit. f
           DS-GVO ist unser berechtigtes Interesse die Durchführung unserer Geschäftstätigkeit zugunsten des Wohlergehens
           all unserer Mitarbeiter und Anteilseigner.</p>
 
-        <p class="font_8" style="font-size:15px"><span style="font-weight:bold"><span class="wixGuard">​</span></span>
+        <p><span style="font-weight:bold"><span class="wixGuard">​</span></span>
         </p>
 
-        <p class="font_8" style="font-size:15px"><span style="font-weight:bold">12. Dauer, für die die personenbezogenen Daten gespeichert werden</span>
+        <p><span style="font-weight:bold">12. Dauer, für die die personenbezogenen Daten gespeichert werden</span>
         </p>
 
-        <p class="font_8" style="font-size:15px">Das Kriterium für die Dauer der Speicherung von personenbezogenen Daten
+        <p>Das Kriterium für die Dauer der Speicherung von personenbezogenen Daten
           ist die jeweilige gesetzliche Aufbewahrungsfrist. Nach Ablauf der Frist werden die entsprechenden Daten
           routinemäßig gelöscht, sofern sie nicht mehr zur Vertragserfüllung oder Vertragsanbahnung erforderlich
           sind.</p>
 
-        <p class="font_8" style="font-size:15px"><span style="font-weight:bold"><span class="wixGuard">​</span></span>
+        <p><span style="font-weight:bold"><span class="wixGuard">​</span></span>
         </p>
 
-        <p class="font_8" style="font-size:15px"><span style="font-weight:bold">13. Gesetzliche oder vertragliche Vorschriften zur Bereitstellung der personenbezogenen Daten; Erforderlichkeit für den Vertragsabschluss; Verpflichtung der betroffenen Person, die personenbezogenen Daten bereitzustellen; mögliche Folgen der Nichtbereitstellung</span>
+        <p><span style="font-weight:bold">13. Gesetzliche oder vertragliche Vorschriften zur Bereitstellung der personenbezogenen Daten; Erforderlichkeit für den Vertragsabschluss; Verpflichtung der betroffenen Person, die personenbezogenen Daten bereitzustellen; mögliche Folgen der Nichtbereitstellung</span>
         </p>
 
-        <p class="font_8" style="font-size:15px">Wir klären Sie darüber auf, dass die Bereitstellung personenbezogener
+        <p>Wir klären Sie darüber auf, dass die Bereitstellung personenbezogener
           Daten zum Teil gesetzlich vorgeschrieben ist (z.B. Steuervorschriften) oder sich auch aus vertraglichen
           Regelungen (z.B. Angaben zum Vertragspartner) ergeben kann. Mitunter kann es zu einem Vertragsschluss
           erforderlich sein, dass eine betroffene Person uns personenbezogene Daten zur Verfügung stellt, die in der
@@ -769,18 +770,18 @@ import {Component, OnInit} from '@angular/core';
           Verpflichtung besteht, die personenbezogenen Daten bereitzustellen, und welche Folgen die Nichtbereitstellung
           der personenbezogenen Daten hätte.</p>
 
-        <p class="font_8" style="font-size:15px"><span style="font-weight:bold"><span class="wixGuard">​</span></span>
+        <p><span style="font-weight:bold"><span class="wixGuard">​</span></span>
         </p>
 
-        <p class="font_8" style="font-size:15px"><span style="font-weight:bold">14. Bestehen einer automatisierten Entscheidungsfindung</span>
+        <p><span style="font-weight:bold">14. Bestehen einer automatisierten Entscheidungsfindung</span>
         </p>
 
-        <p class="font_8" style="font-size:15px">Als verantwortungsbewusstes Unternehmen verzichten wir auf eine
+        <p>Als verantwortungsbewusstes Unternehmen verzichten wir auf eine
           automatische Entscheidungsfindung oder ein Profiling.</p>
 
         <br>
 
-        <p class="font_8" style="font-size:15px">Diese Datenschutzerklärung wurde durch den
+        <p>Diese Datenschutzerklärung wurde durch den
           Datenschutzerklärungs-Generator der DGD Deutsche Gesellschaft für Datenschutz GmbH, die als <span
             style="text-decoration:underline"><a
             href="https://dg-datenschutz.de/datenschutz-dienstleistungen/externer-datenschutzbeauftragter/"
@@ -789,7 +790,7 @@ import {Component, OnInit} from '@angular/core';
                                                              rel="noopener">Datenschutz Anwalt Christian Solmecke</a></span>
           erstellt.</p>
 
-        <p class="font_8" style="font-size:15px"><span style="font-style:italic"><a
+        <p><span style="font-style:italic"><a
           data-auto-recognition="true"
           href="https://www.wbs-law.de/it-recht/datenschutzrecht/datenschutzerklaerung-generator/" target="_blank">https://www.wbs-law.de/it-recht/datenschutzrecht/datenschutzerklaerung-generator/</a>
         </span>

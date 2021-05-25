@@ -5,7 +5,7 @@ import {Order, Product} from '../../model/model';
 @Component({
   selector: 'app-order-form',
   template: `
-    <div class="w-full text-center text-4xl mb-5 p-8">
+    <div class="w-full text-center text-4xl p-8">
       <h1>Auftragsformular</h1>
     </div>
     <form [formGroup]="this.orderForm" (ngSubmit)="onSubmit()">
@@ -14,24 +14,24 @@ import {Order, Product} from '../../model/model';
         <ng-container *ngIf="!contactFormFilled">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 py-4 px-12" formGroupName="customer">
             <label>Vorname
-              <input type="text" class="mt-1 w-full" formControlName="firstName" required>
+              <input type="text" class="mt-1 w-full text-black" formControlName="firstName" required>
             </label>
             <label>Nachname
-              <input type="text" class="mt-1 w-full" formControlName="lastName" required>
+              <input type="text" class="mt-1 w-full text-black" formControlName="lastName" required>
             </label>
             <label>E-Mail-Adresse
-              <input type="email" class="mt-1 w-full" formControlName="email" required>
+              <input type="email" class="mt-1 w-full text-black" formControlName="email" required>
             </label>
             <label>Straße und Hausnummer
-              <input type="text" class="mt-1 w-full" formControlName="street" required>
+              <input type="text" class="mt-1 w-full text-black" formControlName="street" required>
             </label>
             <label>Postleitzahl
-              <input type="text" class="mt-1 w-full" formControlName="postalCode" required>
+              <input type="text" class="mt-1 w-full text-black" formControlName="postalCode" required>
             </label>
             <label>Ort
-              <input type="text" class="mt-1 w-full" formControlName="city" required></label>
+              <input type="text" class="mt-1 w-full text-black" formControlName="city" required></label>
             <label>Optional: Telefonnummer
-              <input type="text" class="mt-1 w-full" formControlName="tel"></label>
+              <input type="text" class="mt-1 w-full text-black" formControlName="tel"></label>
         </div>
           <h2 class="px-12 font-semibold">Allgemeine Geschäftbedingungen und Datenschutzrichtlinien:</h2>
           <div class="flex px-12">

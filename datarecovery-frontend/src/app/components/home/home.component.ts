@@ -32,8 +32,12 @@ export class HomeComponent implements OnInit {
 
 
   submitOrder(order: Order): void {
-    this.http.post('api/order/create', order).subscribe((data: boolean) => {
-      this.orderSubmitted = data === true;
-    }, error => this.orderSubmitted = false);
+    this.http.post('api/order/create', order).subscribe(
+      data => this.orderSubmitted = true,
+      error => {
+        this.orderSubmitted = false;
+        console.log("Error Occured")
+      }
+    );
   }
 }

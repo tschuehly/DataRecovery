@@ -1,27 +1,51 @@
+spring:
+  profiles.active: development
+  config:
+    use-legacy-processing: true
 server:
   port: 8088
+---
 spring:
+  profiles: development
   datasource:
     url: jdbc:h2:file:./data/datarecovery;AUTO_SERVER=TRUE
     driverClassName: org.h2.Driver
-    username: ${DATABASE_USERNAME}
-    password: ${DATABASE_PASSWORD}
+    username: sa
+    password: password
     initialization-mode: always
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: create
-
-  servlet:
-    multipart:
-      max-file-size: 200MB
-      max-request-size: 200MB
-    properties:
-      hibernate:
-        format_sql: true
   mail:
-    host:  ${MAIL_SENDER_HOST}
-    port:  ${MAIL_SENDER_PORT}
+    host: ${MAIL_SENDER_HOST}
+    port: ${MAIL_SENDER_PORT}
+    username: ${MAIL_SENDER_USERNAME}
+    password: ${MAIL_SENDER_PASSWORD}
+    properties.mail.smtp.auth: true
+    properties.mail.smtp.starttls.enable: true
+servlet:
+  properties:
+    hibernate:
+      format_sql: true
+logging:
+  level:
+    org.springframework.web: INFO
+---
+spring:
+  profiles: production
+  datasource:
+    url: jdbc:postgresql://db:5432/postgres
+    username: postgres
+    password: ${POSTGRES_PASSWORD}
+    initialization-mode: always
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+  mail:
+    host: ${MAIL_SENDER_HOST}
+    port: ${MAIL_SENDER_PORT}
     username: ${MAIL_SENDER_USERNAME}
     password: ${MAIL_SENDER_PASSWORD}
     properties.mail.smtp.auth: true
