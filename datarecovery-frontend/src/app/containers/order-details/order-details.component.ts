@@ -11,12 +11,14 @@ import {HttpClient} from '@angular/common/http';
       <div class="grid grid-cols-2 text-lg gap-4">
         <div *ngIf="order.customer as c" class="flex flex-col">
           <span>{{c.firstName}} {{c.lastName}}</span>
+          <a class="font-semibold" href="mailto:{{c.email}}">{{c.email}}</a>
           <span>{{c.street}}</span>
           <span>{{c.postalCode}} {{c.city}}</span>
+          <span>{{c.tel}}</span>
         </div>
         <div class="flex flex-col text-right">
           <span>Produkt: {{order.product.category.name}} {{order.product.name}} </span>
-          <span>Preis: {{order.product.price}} €</span>
+          <span>Preis: {{order.product.price | number : '.2':'de' }} €</span>
           <span>TrackingId: {{order.trackingId}} €</span>
         </div>
         <div *ngIf="!edit" class="col-span-2 text-center text-2xl font-bold mt-6">Status: {{order.trackingState}}</div>

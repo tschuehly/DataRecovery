@@ -42,7 +42,6 @@ class UserController(
     @PreAuthorize("permitAll()")
     @PostMapping("/login")
     fun login(@RequestBody credentials: Map<String, String>, response: HttpServletResponse): WebsiteUser {
-        println("provided credentials: " + credentials["username"] + credentials["password"])
         val authenticationToken = UsernamePasswordAuthenticationToken(credentials["username"], credentials["password"])
         SecurityContextHolder.getContext().authentication = authenticationProvider.authenticate(authenticationToken)
         val user = userService.getCurrentUser()

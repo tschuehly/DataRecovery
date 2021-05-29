@@ -28,9 +28,7 @@ class JwtFilter(
                         jwtUserDetails, WebAuthenticationDetailsSource().buildDetails(request)
                     )
                 }
-                ?.also { println("context: " + SecurityContextHolder.getContext().authentication) }
                 ?.let { SecurityContextHolder.getContext().authentication = it }
-                ?.also { println("context: " + SecurityContextHolder.getContext().authentication) }
         } catch (e: Error) {
             println(e.localizedMessage)
         }

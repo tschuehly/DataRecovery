@@ -32,7 +32,7 @@ import {HttpClient} from "@angular/common/http";
                 <div class="whitespace-pre-wrap" *ngIf="category.description">{{category.description}}</div>
                 <ng-container *ngFor="let product of products">
                   <div  *ngIf="product.category.id === category.id && product.price">
-                    {{category.name}} {{product.name}} {{product.price}} €
+                    {{category.name}} {{product.name}} {{product.price | number : '.2':'de' }} €
                   </div>
                 </ng-container>
               </div>

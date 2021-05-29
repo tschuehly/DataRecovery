@@ -13,6 +13,7 @@ spring:
     username: sa
     password: password
     initialization-mode: always
+    data: classpath:testdata.sql
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
@@ -53,3 +54,4 @@ spring:
 logging:
   level:
     org.springframework.web: INFO
+    org.hibernate: INFO

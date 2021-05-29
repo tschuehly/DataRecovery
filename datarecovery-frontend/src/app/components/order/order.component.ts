@@ -69,8 +69,13 @@ export class OrderComponent implements OnInit {
   ngOnInit(): void {
     this.http.get('api/order').subscribe((orders: Order[]) => {
       this.orders = orders;
-    });
-
+      this.orders.sort((a, b) => {
+        if(b.orderDate < a.orderDate){
+          return -1
+        }
+        return 0
+      });
+    })
   }
 
   updateOrderState(editOrder: Order): void {

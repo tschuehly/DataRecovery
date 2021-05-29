@@ -14,9 +14,8 @@
 
   </div>
 </div>
-<div class="container  md:my-20 grid grid-cols-1 md:grid-cols-3 mx-auto">
-  <img class="rounded-full h-40 w-40 shadow-xl mx-auto my-8" src="assets/tobias_jungbauer.jpg">
-  <div class="grid grid-cols-12 gap-2 col-span-2">
+<div class="container  md:my-20 grid grid-cols-1 mx-auto">
+  <div class="grid grid-cols-12 gap-2 col-span-1">
     <h1 class="col-span-12 text-3xl mb-4 text-center md:text-left">Professionelle Datenrettung</h1>
     <svg class="col-span-1 justify-self-center self-center" viewBox="0 0 24 24" width="24" height="24"
          stroke="#1d1d1d" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -32,17 +31,17 @@
          stroke="#1d1d1d" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <polyline points="20 6 9 17 4 12"></polyline>
     </svg>
-    <span class="col-span-11 text-xl">zu fairen Festpreisen</span>
+    <span class="col-span-11 text-xl">für Speicher die klackern, nicht erkannt werden oder formatiert werden möchten</span>
+    <svg class="col-span-1 justify-self-center self-center" viewBox="0 0 24 24" width="24" height="24"
+         stroke="#1d1d1d" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span class="col-span-11 text-xl">zu fairen Festpreisen & bei Misserfolg kostenfrei</span>
     <svg class="col-span-1 justify-self-center self-center" viewBox="0 0 24 24" width="24" height="24"
          stroke="#1d1d1d" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <polyline points="20 6 9 17 4 12"></polyline>
     </svg>
     <span class="col-span-11 text-xl">vollständige Transparenz zur geleisteten Arbeit</span>
-    <svg class="col-span-1 justify-self-center self-center" viewBox="0 0 24 24" width="24" height="24"
-         stroke="#1d1d1d" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="20 6 9 17 4 12"></polyline>
-    </svg>
-    <span class="col-span-11 text-xl">bei Misserfolg kostenfrei</span>
   </div>
 </div>
 <div class="py-14 bg-gray-main text-gray-300">
@@ -118,7 +117,7 @@
 </div>
 
 <div class="h-20 bg-white text-center">
-  <h1 class="text-4xl text-black py-5 tracking-wider">Preise</h1>
+  <h1 class="text-4xl text-black py-5 tracking-wider">Festpreise</h1>
 </div>
 
 
@@ -185,7 +184,7 @@
         <div class="flex-1 bg-cover bg-center" style="background-image: url('/assets/technology-1587673.jpg')"></div>
         <div class=" grid pb-4">
           <h2 class="text-2xl p-4 text">RAID & Apple Fusion Drive</h2>
-          <div class="text-left leading-relaxed px-4 pl-8">
+          <div class="text-lg text-left leading-relaxed px-4 pl-8">
             abhängig von:
             <div>-  Anzahl an Festplatten</div>
             <div>-  Kapazität pro Festplatte</div>
@@ -195,8 +194,9 @@
         </div>
         <div class="flex-1 bg-contain bg-no-repeat bg-center " style="background-image: url('/assets/RAID Symbol.png')"></div>
       </div>
-      <div class="bg-silver p-4 rounded-b-2xl text-right">
-        <button class="bg-white py-2 px-4 shadow rounded text-black" routerLink="preise">
+      <div class="flex flex-col md:flex-row bg-silver p-4 rounded-b-2xl justify-between text-black">
+        <div class="self-center text-base">Alle angegebenen Preise sind bereits inklusive 19% Mehrwertsteuer.</div>
+        <button class="bg-white py-2 px-4 shadow rounded" routerLink="preise">
           Weitere Preisinformationen
         </button>
       </div>
@@ -227,7 +227,7 @@
 
       </div>
 
-      <div *ngIf="orderSubmitted === true || !products">
+      <div *ngIf="orderSubmitted === true || !products" id="order_submit">
         <div class="bg-silver h-6 rounded-t-2xl"></div>
         <div class="grid grid-cols-2" *ngIf="orderSubmitted === true">
           <div class="bg-center bg-cover" style="background-image: url('/assets/order_confirmation.png')"></div>

@@ -33,7 +33,16 @@ export class HomeComponent implements OnInit {
 
   submitOrder(order: Order): void {
     this.http.post('api/order/create', order).subscribe(
-      data => this.orderSubmitted = true,
+      data => {
+        this.orderSubmitted = true;
+        setTimeout(function () {
+          let orderSubmit = this.document.getElementById('order_submit')
+          orderSubmit.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+          })
+        }, 200)
+      },
       error => {
         this.orderSubmitted = false;
         console.log("Error Occured")

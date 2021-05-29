@@ -69,6 +69,14 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
         <span style="font-weight: bold">TrackingId:</span> 7fb274bc-f00e-4a97-9496-cd41d399e271</p>
         Sie können den aktuellen Status hier einsehen:
         <a href=https://www.jungbauerdatenrettung.de//tracking/${order.trackingId}/${order.customer?.postalCode}>Aktueller Status</a>
+        <br/>
+        <h2 style="Margin-top: 20px;Margin-bottom: 0;font-style: normal;font-weight: normal;color: #706f70;font-size: 18px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;">Ihre Auftragsdaten</h2><p style="Margin-top: 16px;Margin-bottom: 20px;">
+        ${order.customer?.firstName} ${order.customer?.lastName}<br />
+        ${order.customer?.email}<br />
+        ${order.customer?.street} <br />
+        ${order.customer?.postalCode} ${order.customer?.city}<br />
+        ${order.customer?.tel} <br />
+        <br />
         """
     fun getOrderConfirmationBody(order: Order) = """
         <h2 style="Margin-top: 0;Margin-bottom: 0;font-style: normal;font-weight: normal;color: #706f70;font-size: 18px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;">
@@ -83,12 +91,14 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
         
         &nbsp;</p><h2 style="Margin-top: 20px;Margin-bottom: 0;font-style: normal;font-weight: normal;color: #706f70;font-size: 18px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;">Ihre Auftragsdaten</h2><p style="Margin-top: 16px;Margin-bottom: 20px;">
         ${order.customer?.firstName} ${order.customer?.lastName}<br />
+        ${order.customer?.email}<br />
         ${order.customer?.street} <br />
         ${order.customer?.postalCode} ${order.customer?.city}<br />
+        ${order.customer?.tel} <br />
         <br />
         <br />
         <span style="font-weight: bold">Produkt:</span> ${order.product.category?.title} ${order.product.name}<br />
-        <span style="font-weight: bold">Preis:</span> ${order.product.price} €<br />
+        <span style="font-weight: bold">Preis:</span> ${"%.2f".format(order.product.price)} €<br />
         <span style="font-weight: bold">Ersatzdatenträger: </span>${order.replacement}<br />
         """
 }
