@@ -7,7 +7,7 @@ services:
     expose:
       - "8088"
     env_file:
-      - jungbauer.env
+      - schilling.env
   frontend:
     build: datarecovery-frontend
     image: datarecovery-frontend:0.0.1
@@ -16,6 +16,6 @@ services:
       - backend
     command: [nginx-debug, '-g', 'daemon off;']
     env_file:
-      - jungbauer.env
+      - schilling.env
     ports:
     - "80:80"

@@ -8,26 +8,18 @@ import {DOCUMENT} from '@angular/common';
   selector: 'app-navigation',
   template: `
     <div class="flex flex-col h-screen">
-    <nav class="flex fixed justify-between p-4 w-full text-blue-900 bg-blue-50 shadow z-50">
-      <div class="px-2 text-2xl font-bold">Cassandra Schilling<br>Datenrettungsdienst</div>
-      <div class="flex items-center text-xl font-semibold">
-        <a class="mr-2" routerLink="">Startseite</a>
-        <a class="mr-2 ml-2 cursor-pointer" routerLink="preise">Preise</a>
-        <a class="mr-2 ml-2" routerLink="/tracking">Auftragsstatus</a>
-        <div (clickOutside)="dropdownShow = false" [exclude]="'div.dropdown'" [excludeBeforeClick]="true">
-          <a class="mr-2 ml-2 cursor-pointer" (click)="dropdownShow = !dropdownShow">Arbeitsweise</a>
-      <nav class="flex fixed justify-between w-full text-silver bg-gray-main">
-        <a class="pl-2" href="">
-          <div class="bg-gray-main p-4 ">
-            <img src="/assets/LOGO_TJ_Datenrettung.svg" class="h-14">
-          </div>
+      <nav class="flex fixed justify-between p-4 w-full text-blue-900 bg-blue-50 shadow z-50">
+        <a routerLink="">
+          <div class="px-2 text-2xl font-bold">Cassandra Schilling<br>Datenrettungsdienst</div>
         </a>
-        <div class="hidden md:flex flex items-center text-xl pr-4">
-          <a class="mr-2 cursor-pointer" (click)="scrollToOrder()">Auftrag</a>
-          <a class="mr-2 ml-2 cursor-pointer" routerLink="preise">Preise</a>
+
+        <div class="hidden md:flex flex items-center text-xl pr-4 space-x-4">
+          <a class="cursor-pointer" routerLink="">Startseite</a>
+          <a class="cursor-pointer" (click)="scrollToOrder()">Auftrag</a>
+          <a class="cursor-pointer" routerLink="preise">Preise</a>
           <div class="h-full text-center flex" (clickOutside)="dropdownShow = false" [exclude]="'div.dropdown'"
                [excludeBeforeClick]="true" [ngClass]="{'bg-black': dropdownShow}">
-            <a class="mr-2 ml-2 cursor-pointer self-center" (click)="dropdownShow = !dropdownShow">Arbeitsweise</a>
+            <a class="cursor-pointer self-center" (click)="dropdownShow = !dropdownShow">Arbeitsweise</a>
 
 
             <div class="grid gap-2 absolute  justify-evenly p-3 bg-gray-300 text-xl dropdown text-black"
@@ -51,6 +43,13 @@ import {DOCUMENT} from '@angular/common';
 
         <router-outlet></router-outlet>
     </div>
+    <div style="height: 300px">
+      <iframe id="myFrame"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3552.631212153642!2d9.203280792749238!3d48.89044172488516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799d104bab8284b%3A0xfc656773e3df2e3c!2sDatenrettung%20Schilling!5e0!3m2!1sde!2sde!4v1621269476911!5m2!1sde!2sde"
+              loading="lazy"
+              width="{{innerWidth}}" height="300" frameborder="0" allowfullscreen="" aria-hidden="false"
+              tabindex="0"></iframe>
+    </div>
     <footer class="text-gray-700 bg-blue-50 pt-10" id="contact">
       <div class="container mb-4 text-center">
         <div class="grid grid-cols-2">
@@ -66,13 +65,12 @@ import {DOCUMENT} from '@angular/common';
           <div>
             <h1 class="mb-2 text-4xl">Standort</h1>
             <p>
-
               Friedrich-Ebert-Straße 70<br/>
               71638 Ludwigsburg<br/>
               Deutschland<br/>
             </p>
           </div>
-          <div class=" border-b py-4">
+          <div class="col-span-2 border-b py-4">
             <a routerLink="impressum" class="pr-4">Impressum & Datenschutz</a>|<a class="px-4" routerLink="agb">AGB</a>
           </div>
           <div class="col-span-2 mt-4">
@@ -82,8 +80,11 @@ import {DOCUMENT} from '@angular/common';
             <a class="mr-2 ml-2" routerLink="/login" *ngIf="currentUser" (click)="logout.emit()">Logout</a>
           </div>
         </div>
-      </footer>
-    </div>`
+    </div>
+
+    </footer>
+        </div>
+  `
 })
 export class NavigationComponent implements OnInit {
   @Input() currentUser: User;
@@ -111,7 +112,7 @@ export class NavigationComponent implements OnInit {
   scrollToOrder(): void {
     this.router.navigate(['']).then(_ => {
       setTimeout(function () {
-        let orderForm = this.document.getElementById('order_form')
+        let orderForm = document.getElementById('order_form')
         orderForm.scrollIntoView({
           behavior: "smooth",
           block: "center"

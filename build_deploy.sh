@@ -1,5 +1,5 @@
 #!/bin/bash
-export $(cat jungbauer.env | xargs)
+export $(cat schilling.env | xargs)
 echo $REMOTE_DOCKER
 docker-compose build
 

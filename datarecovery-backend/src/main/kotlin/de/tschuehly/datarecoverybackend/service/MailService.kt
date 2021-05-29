@@ -30,7 +30,7 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
 
         order.customer?.email?.let { helper.setTo(it) }
 
-        helper.setSubject("Ihr Auftrag zur Datenrettung | Tobias Jungbauer Datenrettung")
+        helper.setSubject("Ihr Auftrag zur Datenrettung | Cassandra Schilling Datenrettung")
         var html = resourceLoader.getResource("classpath:templates/emailtemplate.html").file
             .readText(charset = Charsets.UTF_8)
         val body = getOrderConfirmationBody(order)
@@ -50,7 +50,7 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
         order.customer?.email?.let { helper.setTo(it) }
 
 
-        helper.setSubject("Ihr Paket ist angekommen | Tobias Jungbauer Datenrettung")
+        helper.setSubject("Ihr Paket ist angekommen | Cassandra Schilling Datenrettung")
         var html = resourceLoader.getResource("classpath:templates/emailtemplate.html").file
             .readText(charset = Charsets.UTF_8)
         val body = getParcelReceived(order)
@@ -68,7 +68,7 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
         
         <span style="font-weight: bold">TrackingId:</span> 7fb274bc-f00e-4a97-9496-cd41d399e271</p>
         Sie können den aktuellen Status hier einsehen:
-        <a href=https://www.jungbauerdatenrettung.de//tracking/${order.trackingId}/${order.customer?.postalCode}>Aktueller Status</a>
+        <a href=https://www.datenrettung-schilling.de//tracking/${order.trackingId}/${order.customer?.postalCode}>Aktueller Status</a>
         <br/>
         <h2 style="Margin-top: 20px;Margin-bottom: 0;font-style: normal;font-weight: normal;color: #706f70;font-size: 18px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;">Ihre Auftragsdaten</h2><p style="Margin-top: 16px;Margin-bottom: 20px;">
         ${order.customer?.firstName} ${order.customer?.lastName}<br />
@@ -82,7 +82,7 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
         <h2 style="Margin-top: 0;Margin-bottom: 0;font-style: normal;font-weight: normal;color: #706f70;font-size: 18px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;">
         Bitte versenden Sie Ihre Datenträger verfolgbar an folgende Adresse:</h2><p style="Margin-top: 16px;Margin-bottom: 0;"><br />
         
-        Tobias Jungbauer<br />
+        Cassandra Schilling<br />
         Datenrettungsdienst<br />
         Am Stein 9<br />
         85049 Ingolstadt<br />

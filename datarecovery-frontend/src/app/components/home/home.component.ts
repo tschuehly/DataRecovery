@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   flashProduct: Product[];
   categories: Category[];
   replacementProducts: Product[];
+  innerWidth;
   ngOnInit(): void {
 
     this.http.get('api/product').subscribe( data => {

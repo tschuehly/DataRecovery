@@ -2,15 +2,14 @@
 <!--  <h1 class="text-blue-900 text-3xl text-center font-extrabold">USB Stick kaputt? SD Karte nicht mehr lesbar?</h1>-->
 
 <!--</div>-->
-<div class="grid grid-cols-3 bg-blue-100 pt-8 pb-20">
+<style>
+</style>
+<div class="grid grid-cols-3 bg-blue-100 pt-8 pb-20 !p-2">
   <div class="col-span-1 bg-contain bg-no-repeat bg-blue-100 justify-self-center self-center pl-4">
     <img class="max-h-96 min-w-full" src="/assets/digital_files.png">
   </div>
   <div class="col-span-2 px-16 py-16 text-justify">
 
-    <h3 class="text-xl mb-2 text-gray-700 font-semibold  text-center">
-      Faire Rahmenbedingungen
-    </h3>
     <h1 class="text-4xl mb-16 text-center font-bold text-gray-900">
       Professionelle Datenrettung zu fairen Konditionen
     </h1>
@@ -19,7 +18,7 @@
            stroke="#1E3A8A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="20 6 9 17 4 12"></polyline>
       </svg>
-      <span class="col-span-11 text-xl">Festpreis</span>
+      <span class="col-span-11 text-xl">zum Festpreis</span>
       <svg class="col-span-1 justify-self-center self-center" viewBox="0 0 24 24" width="24" height="24"
            stroke="#1E3A8A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="20 6 9 17 4 12"></polyline>
@@ -194,84 +193,85 @@
   <div class="w-full mb-4">
     <div class="h-1 mx-auto bg-gradient-to-r from-blue-900 to-blue-100 w-64 opacity-90"></div>
   </div>
-  <div class="flex justify-around py-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 container">
 
-    <div class="w-72 mx-auto bg-white border-t-4 rounded border-blue-800 shadow text-center p-4">
-      <div class="text-2xl font-medium mb-8 text-gray-800 dark:text-white">
-        SD Karte
+    <ng-container *ngFor="let category of categories ">
+      <div class="flex justify-around py-8">
+        <div class="card">
+          <figure>
+            <img *ngIf="category.name == 'SD-Karte'" src="/assets/sd-1138085_1920.jpg">
+            <img *ngIf="category.name == 'USB-Stick'" src="/assets/usb3.jpg">
+            <img *ngIf="category.name == 'Micro SD-Karte'" src="/assets/microSD.jpg">
+          </figure>
+
+          <div class="card-body bg-white text-center">
+            <h2 class="card-title text-center">{{category.name}}</h2>
+            <table class="table px-4 text-center">
+              <thead>
+                <tr>
+                  <th>Kapazität</th>
+                  <th>Festpreis</th>
+                </tr>
+              </thead>
+              <tbody>
+                <ng-container *ngFor="let product of products; index as i">
+                  <tr  *ngIf="product.category.id === category.id && product.price">
+                    <td class="!p-2 text-left"><span *ngIf="(i+1)%3==0 else smaller">≥</span><ng-template #smaller>≤</ng-template> {{product.name.split(' ')[3]}}</td>
+                    <td class="!p-2">{{product.price | number : '.2':'de' }} €</td>
+                  </tr>
+                </ng-container>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
-      <div class="grid grid-cols-2 px-4">
-        <span class="col-span-1 border-grey-light border-b py-2">bis 8 GB</span>
-        <span class="col-span-1 border-grey-light border-b py-2">130€</span>
-        <span class="col-span-1 border-grey-light border-b py-2">bis 32 GB</span>
-        <span class="col-span-1 border-grey-light border-b py-2">180€</span>
-        <span class="col-span-1 py-2">bis 128 GB</span>
-        <span class="col-span-1 py-2">200€</span>
-      </div>
-    </div>
-    <div class="w-72 mx-auto bg-white border-t-4 rounded border-blue-800 shadow text-center p-4">
-      <div class="text-2xl font-medium mb-8 text-gray-800 dark:text-white">
-        USB Stick
-      </div>
-      <div class="grid grid-cols-2 px-4">
-        <span class="col-span-1 border-grey-light border-b py-2"> 0 - 16GB</span>
-        <span class="col-span-1 border-grey-light border-b py-2">140€</span>
-        <span class="col-span-1 border-grey-light border-b py-2">17 - 32GB</span>
-        <span class="col-span-1 border-grey-light border-b py-2">160€</span>
-        <span class="col-span-1 py-2">33 - 64GB</span>
-        <span class="col-span-1 py-2">180€</span>
-      </div>
-    </div>
+    </ng-container>
   </div>
 </div>
 <div class="py-20 px-20 bg-white">
-  <div class="py-20 container bg-white text-gray-800">
+  <div class="py-20 container bg-white text-gray-800" id="order_form">
 
-      <app-order-form
-        *ngIf="products && orderSubmitted === null"
-        [products]="products"
-        [replacementProducts]="replacementProducts"
-        (orderOutput)="submitOrder($event)"></app-order-form>
+    <app-order-form
+      *ngIf="products && orderSubmitted === null"
+      [products]="products"
+      [replacementProducts]="replacementProducts"
+      (orderOutput)="submitOrder($event)"></app-order-form>
 
-      <div *ngIf="orderSubmitted === false">
-        <div class="bg-silver h-6 rounded-t-2xl"></div>
-        <div class="grid grid-cols-2">
-          <div class="bg-center bg-cover" style="background-image: url('/assets/order_confirmation.png')"></div>
-          <div class="text-center p-8">
-            <p class="py-4 text-silver text-lg">Ihre Anfrage wurde nicht übermittelt<br>Bitte kontaktieren sie Tobias Jungbauer über eine Email an:
-              <span class="font-bold">info@jungbauerdatenrettung.de</span>
-            </p>
-          </div>
-        </div>
-        <div class="bg-silver h-6 rounded-b-2xl"></div>
-
-      </div>
-
-      <div *ngIf="orderSubmitted === true || !products" id="order_submit">
-        <div class="px-12 text-green-600 text-xl font-bold mt-8">
-          <h1>Ihr Auftrag wurde übermittelt. Sie sollten bald eine Bestätigungsmail mit weiteren Anweisungen erhalten.</h1>
-        </div>
-        </div>
-
-        <div *ngIf="!products" class="text-center py-8">
-          <p>Bitte kontaktieren sie Cassandra Schilling über eine Email an:
-            <span class="text-green-700 font-bold">cassandra@datenrettung-schilling.de</span>
+    <div *ngIf="orderSubmitted === false">
+      <div class="bg-silver h-6 rounded-t-2xl"></div>
+      <div class="grid grid-cols-2">
+        <div class="bg-center bg-cover" style="background-image: url('/assets/order_confirmation.png')"></div>
+        <div class="text-center p-8">
+          <p class="py-4 text-silver text-lg">Ihre Anfrage wurde nicht übermittelt<br>Bitte kontaktieren sie Cassandra
+            Schilling über eine Email an:
+            <span class="font-bold">info@datenrettung-schilling.de</span>
           </p>
-          <button class="border-2 rounded-md p-2 mt-4">
-
-            <a
-              href="mailto:cassandra@datenrettung-schilling.de?subject=Anfrage%20wegen%20einer%20Datenrettung&amp">Hier
-              klicken um eine Email zu senden</a>
-          </button>
+        </div>
       </div>
+      <div class="bg-silver h-6 rounded-b-2xl"></div>
 
     </div>
-  </div>
 
-<div style="height: 300px">
-  <iframe id="myFrame"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3552.631212153642!2d9.203280792749238!3d48.89044172488516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799d104bab8284b%3A0xfc656773e3df2e3c!2sDatenrettung%20Schilling!5e0!3m2!1sde!2sde!4v1621269476911!5m2!1sde!2sde"
-          loading="lazy"
-          width="{{innerWidth}}" height="300" frameborder="0" allowfullscreen="" aria-hidden="false"
-          tabindex="0"></iframe>
+    <div *ngIf="orderSubmitted === true || !products" id="order_submit">
+      <div class="px-12 text-green-600 text-xl font-bold mt-8">
+        <h1>Ihr Auftrag wurde übermittelt. Sie sollten bald eine Bestätigungsmail mit weiteren Anweisungen
+          erhalten.</h1>
+      </div>
+    </div>
+
+    <div *ngIf="!products" class="text-center py-8">
+      <p>Bitte kontaktieren sie Cassandra Schilling über eine Email an:
+        <span class="text-green-700 font-bold">cassandra@datenrettung-schilling.de</span>
+      </p>
+      <button class="border-2 rounded-md p-2 mt-4">
+
+        <a
+          href="mailto:cassandra@datenrettung-schilling.de?subject=Anfrage%20wegen%20einer%20Datenrettung&amp">Hier
+          klicken um eine Email zu senden</a>
+      </button>
+    </div>
+
+  </div>
 </div>
+
+

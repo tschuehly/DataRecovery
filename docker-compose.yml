@@ -7,8 +7,8 @@ services:
     expose:
       - "8088"
     env_file:
-      - jungbauer.env
-      - jungbauer.env
+      - schilling.env
+      - schilling.env
     depends_on:
       - db
   frontend:
@@ -17,10 +17,10 @@ services:
     container_name: datarecovery-frontend
     command: [nginx-debug, '-g', 'daemon off;']
     environment:
-      VIRTUAL_HOST: www.jungbauerdatenrettung.de #Your Domain here
+      VIRTUAL_HOST: www.datenrettung-schilling.de #Your Domain here
       VIRTUAL_PORT: 80
-      LETSENCRYPT_HOST: www.jungbauerdatenrettung.de #Your Domain here
-      LETSENCRYPT_EMAIL: info@jungbauerdatenrettung.de #Your Email
+      LETSENCRYPT_HOST: www.datenrettung-schilling.de #Your Domain here
+      LETSENCRYPT_EMAIL: info@datenrettung-schilling.de #Your Email
   db:
     image: postgres
     environment:
@@ -30,7 +30,7 @@ services:
     volumes:
       - ./postgres-data:/var/lib/postgresql/data
     env_file:
-      - jungbauer.env
+      - schilling.env
 
   proxy:
     image: jwilder/nginx-proxy

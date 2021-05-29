@@ -6,14 +6,31 @@
 
 /* You can add global styles to this file, and also import other style files */
 
-.button-primary{
-  @apply border-2 rounded-xl p-2 text-gray-50
-}
-.card{
-  @apply border shadow-2xl rounded-xl p-8
-}
 .text-shadow{
  text-shadow: 0 4px 8px rgba(0,0,0,1), 0 2px 4px rgba(0,0,0,1);
+}
+
+:root {
+  --p: 224 64% 32%;
+  --pf: 223 85% 15%;
+  --pc: 0 0% 100%;
+  --s: 261 100% 86%;
+  --sf: 314 100% 37%;
+  --sc: 0 0% 100%;
+  --a: 174 60% 51%;
+  --af: 174 60% 41%;
+  --ac: 0 0% 0%;
+  --n: 0 0% 100%;
+  --nf: 214 100% 96%;
+  --nc: 224 64% 32%;
+  --b1: 0 0% 100%;
+  --b2: 214 94% 92%;
+  --b3: 216 12% 84%;
+  --bc: 224 64% 32%;
+  --in: 207 90% 54%;
+  --su: 174 100% 29%;
+  --wa: 36 100% 50%;
+  --er: 14 100% 57%;
 }
 
 html, body { height: 100%; }

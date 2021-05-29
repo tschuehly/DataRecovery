@@ -1,5 +1,4 @@
 module.exports = {
-  mode: "jit",
   purge: {
     enabled: process.env.NODE_ENV === 'production',
     content: [
@@ -35,6 +34,7 @@ module.exports = {
     extend: {},
   },
   plugins: [
+    require('daisyui'),
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     require('tailwindcss-blend-mode'),

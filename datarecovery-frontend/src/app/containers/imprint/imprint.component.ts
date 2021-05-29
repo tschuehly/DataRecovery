@@ -12,14 +12,14 @@ import {Component, OnInit} from '@angular/core';
         <br/>
         <p>Adresse:&nbsp;</p>
 
-        <p>Tobias Jungbauer Datenrettungsdienst<br>
+        <p>Cassandra Schilling Datenrettungsdienst<br>
           Am Stein 9<br>
           85049 Ingolstadt</p>
 
         <p><br>
           Mobil: +49(0)15161408355<br>
-          Email: <span style="text-decoration:underline"><a href="mailto:info@jungbauerdatenrettung.de"
-                                                            target="_self">info@jungbauerdatenrettung.de</a></span></p>
+          Email: <span style="text-decoration:underline"><a href="mailto:info@datenrettung-schilling.de"
+                                                            target="_self">info@datenrettung-schilling.de</a></span></p>
 
         <p>Steuernummer: 13123370362</p>
 
@@ -77,7 +77,7 @@ import {Component, OnInit} from '@angular/core';
 
         <p>Wir freuen uns sehr über Ihr Interesse an unserem Unternehmen.
           Datenschutz hat für uns einen besonders hohen Stellenwert. Eine Nutzung der Internetseite <span
-            style="font-style:italic">jungbauerdatenrettung.de</span> ist grundsätzlich ohne jede Angabe
+            style="font-style:italic">datenrettung-schilling.de</span> ist grundsätzlich ohne jede Angabe
           personenbezogener Daten möglich. Sofern eine betroffene Person besondere Services unseres Unternehmens über
           die Internetseite in Anspruch nehmen möchte, könnte jedoch eine Verarbeitung personenbezogener Daten
           erforderlich werden. Ist die Verarbeitung personenbezogener Daten erforderlich und besteht für eine solche
@@ -223,7 +223,7 @@ import {Component, OnInit} from '@angular/core';
 
         <br>
 
-        <p>Tobias Jungbauer</p>
+        <p>Cassandra Schilling</p>
 
         <p>Am Stein 9</p>
 
@@ -234,11 +234,11 @@ import {Component, OnInit} from '@angular/core';
         <p>Tel.: +4915161408355</p>
 
         <p>E-Mail:
-          <a data-auto-recognition="true" href="mailto:info@jungbauerdatenrettung.de">info@jungbauerdatenrettung.de</a>
+          <a data-auto-recognition="true" href="mailto:info@datenrettung-schilling.de">info@datenrettung-schilling.de</a>
         </p>
 
         <p>Website:
-          <a data-auto-recognition="true" href="http://www.jungbauerdatenrettung.de" target="_blank">www.jungbauerdatenrettung.de</a>
+          <a data-auto-recognition="true" href="http://www.datenrettung-schilling.de" target="_blank">www.datenrettung-schilling.de</a>
         </p>
 
         <p>&nbsp;</p>
@@ -246,7 +246,7 @@ import {Component, OnInit} from '@angular/core';
         <p><span style="font-weight:bold">3. Cookies</span></p>
 
         <p>Diese Internetseite wie alle anderen Seiten unter <span
-          style="font-style:italic">jungbauerdatenrettung.de</span> verwenden Cookies. Cookies sind Textdateien, welche
+          style="font-style:italic">datenrettung-schilling.de</span> verwenden Cookies. Cookies sind Textdateien, welche
           über einen Internetbrowser auf einem Computersystem abgelegt und gespeichert werden.</p>
 
         <p>Zahlreiche Internetseiten und Server verwenden Cookies. Viele Cookies
@@ -308,7 +308,7 @@ import {Component, OnInit} from '@angular/core';
         <p><span style="font-weight:bold">5. Kontaktmöglichkeit über die Internetseite</span>
         </p>
 
-        <p>Die Internetseite <span style="font-style:italic">jungbauerdatenrettung.de</span>
+        <p>Die Internetseite <span style="font-style:italic">datenrettung-schilling.de</span>
           enthält aufgrund von gesetzlichen Vorschriften Angaben, die eine schnelle elektronische Kontaktaufnahme zu uns
           sowie eine unmittelbare Kommunikation mit uns ermöglichen, was ebenfalls eine allgemeine Adresse der
           sogenannten elektronischen Post (E-Mail-Adresse) umfasst. Sofern eine betroffene Person per E-Mail oder über
