@@ -1,43 +1,55 @@
-<div class="container">
-  <ng-container *ngIf="variant == 'hdd'">
-    <h1 class="text-2xl font-bold my-6">Vorgehensweise HDD-Festplattendatenrettung:</h1>
-    <pre class="whitespace-pre-wrap"><span class="text-red-500 font-semibold">Achtung:</span> am wichtigsten ist der Zustand der Oberfläche! Alle anderen Bauteile sind austauschbar.
-
+<ng-container *ngIf="variant == 'hdd'">
+  <div class="py-10 bg-right bg-gray-main bg-cover bg-no-repeat "
+       style="background-image: url('/assets/hdd_arbeitsweise.png')">
+    <div class="flex md:ml-32 py-10 justify-center md:justify-start">
+      <h1 class="text-4xl leading-relaxed text-center text-silver text-shadow">
+        Tobias<br>Jungbauer<br>Datenrettung
+      </h1>
+    </div>
+  </div>
+  <div class="h-20 bg-white text-center">
+    <h1 class="text-4xl text-black py-5 tracking-wider">Arbeitsweise</h1>
+  </div>
+  <div class="bg-gray-main text-silver border-b-2 border-silver pb-8">
+    <div class="container">
+      <h1 class="text-2xl font-bold py-6">Vorgehensweise HDD-Festplattendatenrettung:</h1>
+      <pre class="whitespace-pre-wrap"><span class="text-white font-semibold">Achtung:</span> am wichtigsten ist der Zustand der Oberfläche! Alle anderen Bauteile sind austauschbar.
 Bitte betreiben Sie daher die Festplatte bei klackernden Geräuschen nicht weiter.
 
 Typische Schäden sind:
 - defekte Leseköpfe nach einem Headcrash (z.B. durch Erschütterung)
 - defektes PCB mit ggf. beschädigten Preamp (z.B. durch verwenden eines falschen Netzteils)
-- fehlerhafte Firmware oder eine fehlerhafte Boot-ROM, sodass die HDD nicht mehr erkannt wird
+- fehlerhafte Firmware oder eine fehlerhafte Boot-ROM
 
-Die Herangehensweise bei der HDD-Datenrettung ist, zunächst eine Analyse über den Zustand der Festplatte anzustellen um herauszufinden, wo der Fehler liegt. Hier werden bereits fehlerhafte Module aus der Servicearea repariert und die einzelnen Sensoren des Lesekopf auf Funktion getestet.
+Die Herangehensweise bei der HDD-Datenrettung ist, zunächst eine Analyse über den Zustand der Festplatte anzustellen um herauszufinden, wo der Fehler liegt. Hier werden bereits fehlerhafte Module aus der Servicearea repariert und die Leseköpfe auf Funktion getestet.
 
 Nun wird die HDD von defekten Bauteilen soweit befreit, bis der Zugriff auf Ihre Dateien wieder möglich ist.
 Ein Austausch der Leseköpfe oder einen sogenannten Plattern-Swap für einen neuen Motor sind für mich in diesem Schritt alltägliche Aufgaben. Auch eine Reinigung der Oberflächen, wenn es z.B. bei einem Headcrash zu Abrieb kam, biete ich an. Hier werden die einzelnen Festplattenscheiben mithilfe einer Vakuumpumpe und spezieller Adapter aus dem Gehäuse herausgenommen und in einem Plattern Stand befestigt.
 Hierbei können die Oberflächen einzeln begutachtet werden.
 
 Alle Arbeiten werden ausschließlich unter Reinraumbedingungen und ESD-geschützt durchgeführt.
-Unter dem Abschnitt "PC-3000 UDMA" gibt es Information über die verwendete Soft- und Hardware.
 
 Nach der Reparatur wird ein Image der Festplatte erstellt woraus Ihre Dateien letztendlich abgespeichert werden können.
         </pre>
-    <div class="flex grid-cols-3 gap-4 h-60">
-      <img src="assets/hdd1.webp">
-      <img src="assets/hdd2.jpg">
-      <img src="assets/hdd3.webp">
-    </div>
-    <h1 class="text-2xl font-bold my-6">Verwendete Hard- Und Software</h1>
-    <pre class="whitespace-pre-wrap">Der PC-3000 UDMA ist eine Hardware-Software-Lösung zur Diagnose und Reparatur von Festplatten auf Basis von SATA- (Serial ATA) und ATA- (IDE) Schnittstellen für zahlreiche Hersteller (Seagate, Western Digital, Fujitsu, Samsung, Maxtor, Quantum, IBM (HGST) ), HITACHI, TOSHIBA), für verschiedene Kapazitäten (von 500 MB bis 8 TB) und verschiedene Formfaktoren: 3,5 "- Desktop-Laufwerke, 2,5" - und 1,8 "- Laptop-Laufwerke.
+      <div class="flex grid-cols-3 gap-4 h-60">
+        <img src="assets/hdd1.webp">
+        <img src="assets/hdd4.jpeg">
+        <img src="assets/hdd2.jpg">
+        <img src="assets/hdd_arbeitsweise_4.jpg">
+      </div>
+      <h1 class="text-2xl font-bold my-6">Verwendete Hard- Und Software</h1>
+      <pre class="whitespace-pre-wrap">Der PC-3000 UDMA ist eine Hardware-Software-Lösung zur Diagnose und Reparatur von Festplatten auf Basis von SATA- (Serial ATA) und ATA- (IDE) Schnittstellen für zahlreiche Hersteller (Seagate, Western Digital, Fujitsu, Samsung, Maxtor, Quantum, IBM (HGST) ), HITACHI, TOSHIBA), für verschiedene Kapazitäten (von 500 MB bis 8 TB) und verschiedene Formfaktoren: 3,5 "- Desktop-Laufwerke, 2,5" - und 1,8 "- Laptop-Laufwerke.
 
 Der PC-3000 UDMA bildet zusammen mit dem Data Extractor UDMA das PC-3000 UDMA Professional-System, mit dem Daten von der SATA-, ATA- (IDE-) Festplatte wiederhergestellt werden können. Wenn Sie Ihre Festplatte reparieren lassen möchten, benötigen Sie eine Lösung wie durch den PC-3000 UDMA.
     </pre>
-<pre class="whitespace-pre-wrap">Das neue PC-3000 UDMA ist eine Testerkarte mit drei Ports, die in einen PCI-Express-Erweiterungssteckplatz eingesetzt wird und 2 SATA-Ports (Datenübertragungsgeschwindigkeit bis 133 MB / s) und 1 PATA (Geschwindigkeit bis 100 MB / s) hat. Der primäre Port ist SATA0, während SATA1 ein sekundärer Port ist, der mit dem PATA-Port umschaltbar ist. Der PC-3000 UDMA bietet zwei gleichzeitige Verbindungen für zwei Laufwerke - der erste Port wird für SATA verwendet und der zweite kann entweder für SATA oder für PATA verwendet werden. Somit können wir mit 2 SATA-Laufwerken oder 1 SATA- und 1 PATA-Laufwerk gleichzeitig arbeiten.
+      <pre class="whitespace-pre-wrap">Das neue PC-3000 UDMA ist eine Testerkarte mit drei Ports, die in einen PCI-Express-Erweiterungssteckplatz eingesetzt wird und 2 SATA-Ports (Datenübertragungsgeschwindigkeit bis 133 MB / s) und 1 PATA (Geschwindigkeit bis 100 MB / s) hat. Der primäre Port ist SATA0, während SATA1 ein sekundärer Port ist, der mit dem PATA-Port umschaltbar ist. Der PC-3000 UDMA bietet zwei gleichzeitige Verbindungen für zwei Laufwerke - der erste Port wird für SATA verwendet und der zweite kann entweder für SATA oder für PATA verwendet werden. Somit können wir mit 2 SATA-Laufwerken oder 1 SATA- und 1 PATA-Laufwerk gleichzeitig arbeiten.
 
 Netzteiladapter:
 Ein zweikanaliger Spannungsversorgungsadapter befindet sich auf der Platinensteuerung und bietet eine unabhängige Spannungsversorgung von +5 V, +12 V sowie Schutz vor Überspannungs- und Stromüberlastung. Im Notfall wird die Stromversorgung der Festplatte automatisch abgeschaltet.
 Zusätzlich verfügt jeder Kanal über eine Rückkopplungsschaltung mit spezieller Verwaltungssoftware, die die Versorgungsspannungswerte steuert und den Benutzer über Probleme mit der Speiseschaltung informiert.
 
-</pre><div class="flex grid sm:grid-cols-2 grid-cols-1">
+</pre>
+      <div class="flex grid sm:grid-cols-2 grid-cols-1">
 <pre class="whitespace-pre-wrap">Das PC-3000 UDMA-Kit besteht aus:
 PC-3000 UDMA-E-Controller
 PC-USB-PWR-Adapter
@@ -63,15 +75,32 @@ SATA HDD (100 cm) Stromkabel
 PATA HDD (85 cm) Stromkabel
 PATA-SATA-Netzteil (15 cm)
 PC-3000 UDMA-Software, Ressourcendatenbank</pre>
-  <label>
-    <img src="assets/pc3000udma.webp" alt="pc3000udma">
-    Bildquelle: https://www.acelaboratory.com/pc3000.udma.php
-  </label>
-</div>
-  </ng-container>
-  <ng-container *ngIf="variant == 'flash'">
-    <h1 class="text-2xl font-bold my-6">NAND-Flashspeicher-Datenrettung:</h1>
-    <pre class="whitespace-pre-wrap">Die Funktionsweise der Nandflashspeicher-Datenrettung ist, dass der interne Speicherchip des Datenträgers direkt, sprich ohne Controller ausgelesen wird.
+        <label>
+          <img src="assets/pc3000udma.webp" alt="pc3000udma">
+          Bildquelle: https://www.acelaboratory.com/pc3000.udma.php
+        </label>
+      </div>
+
+    </div>
+
+  </div>
+</ng-container>
+<ng-container *ngIf="variant == 'flash'">
+  <div class="py-10 bg-center bg-gray-main bg-cover bg-no-repeat "
+       style="background-image: url('/assets/flash_arbeitsweise.png')">
+    <div class="flex md:ml-32 py-10 justify-center md:justify-start">
+      <h1 class="text-4xl leading-relaxed text-center text-silver text-shadow">
+        Tobias<br>Jungbauer<br>Datenrettung
+      </h1>
+    </div>
+  </div>
+  <div class="h-20 bg-white text-center">
+    <h1 class="text-4xl text-black py-5 tracking-wider">Arbeitsweise</h1>
+  </div>
+  <div class="bg-gray-main text-silver border-b-2 border-silver pb-8">
+    <div class="container">
+      <h1 class="text-2xl font-bold py-6">NAND-Flashspeicher-Datenrettung:</h1>
+      <pre class="whitespace-pre-wrap">Die Funktionsweise der Nandflashspeicher-Datenrettung ist, dass der interne Speicherchip des Datenträgers direkt, sprich ohne Controller ausgelesen wird.
 
 Danach werden aus den gelesenen Daten des Chips mit der Speicherungslogik des alten Controllers ursprüngliche Strukturen wiederhergestellt. Nach einigen Anpassungen wird am Ende ein Image erzeugt, sodass Ihre Dateien bestenfalls vollständig in ursprünglicher Ordnerstruktur rekonstruiert worden sind. Dadurch können beispielsweise Controllerschäden umgangen werden!
 
@@ -79,13 +108,14 @@ Folgende Chips werden zum Auslesen unterstützt: TSOP-48, BGA-152 und LGA/TLGA-5
 
 Unter dem Abschnitt "PC-3000 Flash" gibt es Information über die verwendete Soft- und Hardware.
         </pre>
-    <div class="flex grid-cols-3 gap-4 h-60">
-      <img src="assets/usb1.jpg">
-      <img src="assets/sd1.jpg">
-      <img src="assets/sd2.jpg">
-    </div>
-    <h1 class="text-2xl font-bold my-6">Verwendete Hard- Und Software</h1>
-    <pre class="whitespace-pre-wrap">Der PC-3000 Flash ist ein Hardware-Software-System zur Wiederherstellung von Daten von NAND-basierten Geräten in solchen Fällen, in denen kein Zugriff über die zugewiesene Laufwerksschnittstelle mehr möglich ist:
+      <div class="flex grid-cols-3 gap-4 h-60">
+        <img src="assets/usb1.jpg">
+        <img src="assets/usb2.jpg">
+        <img src="assets/sd1.jpg">
+        <img src="assets/sd2.jpg">
+      </div>
+      <h1 class="text-2xl font-bold my-6">Verwendete Hard- Und Software</h1>
+      <pre class="whitespace-pre-wrap">Der PC-3000 Flash ist ein Hardware-Software-System zur Wiederherstellung von Daten von NAND-basierten Geräten in solchen Fällen, in denen kein Zugriff über die zugewiesene Laufwerksschnittstelle mehr möglich ist:
 UFD (USB-Flash-Laufwerk)
 
 SD (Secure Digital Card)
@@ -106,38 +136,65 @@ Es sind keine aufwendigen Lötarbeiten erforderlich.
 <img src="/assets/pc3000flashspider.webp">
 Bildquelle: https://www.acelaboratory.com/pc3000flash.php#Spider
         </pre>
-  </ng-container>
-  <ng-container *ngIf="variant == 'ssd'">
-    <h1 class="text-2xl font-bold my-6">SSD-Festplatte/Halbleiterlaufwerk (SATA-basiert):</h1>
-    <pre class="whitespace-pre-wrap">Anders als bei der Nandflashspeicher-Datenrettung von USB-Sticks und co. können zwar auch bei SSDs die einzelnen Speicherbausteine ausgelesen werden, das Rekonstruieren und Entschlüsseln der Speicherungslogik des ehemaligen Controllers erweist sich hier aber als besonders schwierig.
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="variant == 'ssd'">
+  <div class="py-10 bg-center bg-gray-main bg-cover bg-no-repeat "
+       style="background-image: url('/assets/ssd_arbeitsweise.png')">
+    <div class="flex md:ml-32 py-10 justify-center md:justify-start">
+      <h1 class="text-4xl leading-relaxed text-center text-silver text-shadow">
+        Tobias<br>Jungbauer<br>Datenrettung
+      </h1>
+    </div>
+  </div>
+  <div class="h-20 bg-white text-center">
+    <h1 class="text-4xl text-black py-5 tracking-wider">Arbeitsweise</h1>
+  </div>
+  <div class="bg-gray-main border-b-2 border-silver pb-8">
+    <div class="text-silver container">
+
+      <h1 class="text-2xl font-bold py-6">SSD-Festplatte/Halbleiterlaufwerk (SATA-basiert):</h1>
+      <pre class="whitespace-pre-wrap">Anders als bei der Nandflashspeicher-Datenrettung von USB-Sticks und co. können zwar auch bei SSDs die einzelnen Speicherbausteine ausgelesen werden das Rekonstruieren und Entschlüsseln der Speicherungslogik des ehemaligen Controllers erweist sich hier aber als besonders schwierig.
 
 Stattdessen geht man hier in der Regel einen ähnlichen Weg wie bei HDD-Festplatten, dass man SSD-Festplatten soweit repariert, bis der Datenzugriff wieder (zumindest vorübergehend) besteht.
 Auch hier können Fehler in der Firmware umgangen und repariert werden.
 
 Leider werden aktuell bei mir nur SATA basierte SSD-Festplatten unterstützt. M.2 SSDs daher nur, wenn diese nicht auf PCIe (NVMe), sondern ebenfalls auf SATA basieren.
 
-Eine Liste von unterstützen Speichern finden Sie hier: https://blog.acelaboratory.com/pc-3000-ssd-list-of-supported-ssd-drives-regularly-updated.html
+Eine Liste von unterstützen Speichern finden Sie hier: <a class="font-bold" href="https://blog.acelaboratory.com/pc-3000-ssd-list-of-supported-ssd-drives-regularly-updated.html">https://blog.acelaboratory.com/pc-3000-ssd-list-of-supported-ssd-drives-regularly-updated.html</a>
 Weitere Speicher können ebenfalls unterstützt werden, jedoch nur mit eingeschränkten Funktionsumfang.
         </pre>
-    <div class="flex grid-cols-3 gap-4 h-60">
-      <img src="assets/usb1.jpg">
-      <img src="assets/sd1.jpg">
-      <img src="assets/sd2.jpg">
     </div>
-  </ng-container>
-  <ng-container *ngIf="variant == 'raid'">
-    <h1 class="text-2xl font-bold my-6">RAID-Datenrettung:</h1>
-    <pre class="whitespace-pre-wrap">Meine angebotene RAID-Datenrettung brauchen Sie, wenn ein "Rebuild" nicht möglich ist.
+  </div>
+</ng-container>
+<ng-container *ngIf="variant == 'raid'">
+  <div class="py-10 bg-center bg-gray-main bg-cover bg-no-repeat "
+       style="background-image: url('/assets/raid_arbeitsweise.png')">
+    <div class="flex md:ml-32 py-10 justify-center md:justify-start">
+      <h1 class="text-4xl leading-relaxed text-center text-silver text-shadow">
+        Tobias<br>Jungbauer<br>Datenrettung
+      </h1>
+    </div>
+  </div>
+  <div class="h-20 bg-white text-center">
+    <h1 class="text-4xl text-black py-5 tracking-wider">Arbeitsweise</h1>
+  </div>
+  <div class="bg-gray-main border-b-2 border-silver">
+    <div class="text-silver container">
+      <h1 class="text-2xl font-bold py-6">RAID oder Apple Fusion Drive Datenrettung:</h1>
+      <pre class="whitespace-pre-wrap">Meine angebotene RAID-Datenrettung brauchen Sie, wenn ein "Rebuild" nicht möglich ist.
 Z.B. wenn mehrere Festplatten beschädigt sind oder der RAID-Controller selbst defekt ist.
 
 Ich benötige dafür die einzelnen Festplatten bei mir vor Ort, aber nicht den RAID Controller.
 Hiermit werden Ihre Dateien, ohne Veränderung an den einzelnen Festplatten, virtuell zusammengesetzt.
 
 Besonderheit: Auch wenn Sie Ihre Konfiguration wie RAID-Typ, Block Size, Parity Order oder Delay nicht wissen, kann ich Ihre Dateien aus den einzelnen Festplatten inkl. Ordnerstruktur rekonstruieren!</pre>
-    <div class="flex grid-cols-2 gap-4 h-80 mb-4">
-      <img src="assets/raid1.jpg">
-    </div>
-    <pre class="whitespace-pre-wrap">Unterstützt werden sowohl Software-RAID als auch Hardware-RAID, wie z.B. in NAS.
+      <div class="flex grid-cols-2 gap-4 h-80 mb-4">
+        <img src="assets/raid1.jpg">
+      </div>
+      <pre class="whitespace-pre-wrap">Unterstützt werden sowohl Software-RAID als auch Hardware-RAID, wie z.B. in NAS.
+Auch Apple Fusion Drive wird unterstützt. Hier kann ich Ihre Dateien auch bei defekt der SSD, des Imac oder HDD wiederherstellen.
 
 Die unterstützten RAID Level sind:
 - Einfache Level: 0 (Stripe), 1 (Mirror), JBOD, 1E Offset, 1E Adjacent, 4, 5, 5E, 5EE, 6, 6 Adaptec
@@ -146,5 +203,6 @@ Die unterstützten RAID Level sind:
 Selbst wenn bei vielen RAID Level nicht alle Festplatten für eine Datenrettung benötigt werden, möchte ich Sie dennoch bitten möglichst vollständig einzusenden.
 Berechnet wird selbstverständlich immer nur anhand der Mindestanzahl an benötigten Festplatten.
         </pre>
-  </ng-container>
-</div>
+    </div>
+  </div>
+</ng-container>

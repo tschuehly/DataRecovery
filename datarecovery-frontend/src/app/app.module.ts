@@ -22,6 +22,13 @@ import { StaticComponent } from './containers/static/static.component';
 import {ClickOutsideModule} from 'ng-click-outside';
 import { CategoryComponent } from './components/category/category.component';
 import { CategoryDetailComponent } from './containers/category-detail/category-detail.component';
+import { ImprintComponent } from './containers/imprint/imprint.component';
+import { PricesComponent } from './containers/prices/prices.component';
+import { AgbComponent } from './containers/agb/agb.component';
+import { registerLocaleData } from '@angular/common';
+import localeDe from '@angular/common/locales/de';
+registerLocaleData(localeDe);
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -38,7 +45,10 @@ import { CategoryDetailComponent } from './containers/category-detail/category-d
         UpdateComponent,
         StaticComponent,
         CategoryComponent,
-        CategoryDetailComponent
+        CategoryDetailComponent,
+        ImprintComponent,
+        PricesComponent,
+        AgbComponent
     ],
   imports: [
     BrowserModule,

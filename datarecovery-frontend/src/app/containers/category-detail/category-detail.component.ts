@@ -15,14 +15,17 @@ import {FormArray, FormBuilder, FormGroup, Validators} from '@angular/forms';
           <label>Titel:
             <textarea type="text" formControlName="title" class="mt-1 mb-2 block pl-3"></textarea>
           </label>
-          <label>Beschreibung:
-            <input type="text" formControlName="description" class="mt-1 mb-2 block pl-3">
+          <label>Sequenznummer:
+            <input type="number" formControlName="sequenceId" class="mt-1 mb-2 block pl-3">
           </label>
           <label>Ersatz:
             <div class="block p-2">
               <input type="radio" value="true" formControlName="replacement" class="mx-2">Ja
               <input type="radio" value="false" formControlName="replacement" class="mx-2">Nein
             </div>
+          </label>
+          <label class="col-span-2 w-full">Beschreibung:
+            <textarea type="text" formControlName="description" class="mt-1 mb-2 block pl-3 w-full" ></textarea>
           </label>
           <label>Vorhandene Fragen:
             <table class="table-auto border">
@@ -67,12 +70,14 @@ export class CategoryDetailComponent implements OnInit {
       title: [this.category.title],
       description: [this.category.description],
       replacement: [this.category.replacement],
-      questions: this.fb.array(this.category.questions)
+      questions: this.fb.array(this.category.questions),
+      sequenceId: [this.category.sequenceId]
     });
   }
 
   saveCategory(): void {
     this.category = this.editCategoryForm.getRawValue() as Category;
+    console.log(this.category)
     this.editCategory.emit(this.category);
   }
 

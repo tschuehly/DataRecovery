@@ -227,27 +227,46 @@
 <div class="py-20 px-20 bg-white">
   <div class="py-20 container bg-white text-gray-800">
 
-    <app-order-form
-      *ngIf="products"
-      [products]="products"
-      [replacementProducts]="replacementProducts"
-      (orderOutput)="submitOrder($event)"></app-order-form>
-    <div *ngIf="orderSubmitted === true" class="px-12 text-green-600 text-xl font-bold mt-8">
-      <h1>Ihr Auftrag wurde übermittelt. Sie sollten bald eine Bestätigungsmail mit weiteren Anweisungen erhalten.</h1>
-    </div>
-    <div *ngIf="!products" class="text-center">
-      <p>Bitte kontaktieren sie Cassandra Schilling über eine Email an:
-        <span class="text-green-700 font-bold">cassandra@datenrettung-schilling.de</span>
-      </p>
-      <button class="border-2 rounded-md p-2 mt-4">
+      <app-order-form
+        *ngIf="products && orderSubmitted === null"
+        [products]="products"
+        [replacementProducts]="replacementProducts"
+        (orderOutput)="submitOrder($event)"></app-order-form>
 
-        <a
-          href="mailto:cassandra@datenrettung-schilling.de?subject=Anfrage%20wegen%20einer%20Datenrettung&amp">Hier
-          klicken um eine Email zu senden</a>
-      </button>
+      <div *ngIf="orderSubmitted === false">
+        <div class="bg-silver h-6 rounded-t-2xl"></div>
+        <div class="grid grid-cols-2">
+          <div class="bg-center bg-cover" style="background-image: url('/assets/order_confirmation.png')"></div>
+          <div class="text-center p-8">
+            <p class="py-4 text-silver text-lg">Ihre Anfrage wurde nicht übermittelt<br>Bitte kontaktieren sie Tobias Jungbauer über eine Email an:
+              <span class="font-bold">info@jungbauerdatenrettung.de</span>
+            </p>
+          </div>
+        </div>
+        <div class="bg-silver h-6 rounded-b-2xl"></div>
+
+      </div>
+
+      <div *ngIf="orderSubmitted === true || !products" id="order_submit">
+        <div class="px-12 text-green-600 text-xl font-bold mt-8">
+          <h1>Ihr Auftrag wurde übermittelt. Sie sollten bald eine Bestätigungsmail mit weiteren Anweisungen erhalten.</h1>
+        </div>
+        </div>
+
+        <div *ngIf="!products" class="text-center py-8">
+          <p>Bitte kontaktieren sie Cassandra Schilling über eine Email an:
+            <span class="text-green-700 font-bold">cassandra@datenrettung-schilling.de</span>
+          </p>
+          <button class="border-2 rounded-md p-2 mt-4">
+
+            <a
+              href="mailto:cassandra@datenrettung-schilling.de?subject=Anfrage%20wegen%20einer%20Datenrettung&amp">Hier
+              klicken um eine Email zu senden</a>
+          </button>
+      </div>
+
     </div>
   </div>
-</div>
 
 <div style="height: 300px">
   <iframe id="myFrame"

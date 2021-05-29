@@ -5,7 +5,7 @@ import {Order} from '../../model/model';
 @Component({
   selector: 'app-order',
   template: `
-    <div class="flex container mx-auto h-full my-10">
+    <div class="container mx-auto h-full my-10">
       <div class="m-auto" *ngIf="!editOrder">
         <h1 class="text-2xl text-center mb-10">Bestellungsübersicht</h1>
         <table class="border table-auto mx-auto">
@@ -22,7 +22,7 @@ import {Order} from '../../model/model';
             <td class="border p-2">{{order.id}}</td>
             <td class="border p-2">{{order.product.category.name}} {{order.product.name}}</td>
             <td class="border p-2">{{order.customer.firstName}} {{order.customer.lastName}}</td>
-            <td class="border p-2">{{order.orderDate | date:'d.M.y H:m':'+0200'}}</td>
+            <td class="border p-2">{{order.orderDate | date:'d.M.y H:mm':'+0400'}}</td>
             <td class="border p-2">{{order.trackingState}}</td>
             <td class="border pl-2">
               <button (click)="editOrder = order">
@@ -69,8 +69,13 @@ export class OrderComponent implements OnInit {
   ngOnInit(): void {
     this.http.get('api/order').subscribe((orders: Order[]) => {
       this.orders = orders;
-    });
-
+      this.orders.sort((a, b) => {
+        if(b.orderDate < a.orderDate){
+          return -1
+        }
+        return 0
+      });
+    })
   }
 
   updateOrderState(editOrder: Order): void {

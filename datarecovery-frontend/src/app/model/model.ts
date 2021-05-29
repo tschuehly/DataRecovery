@@ -55,6 +55,7 @@ export class Category{
   description: string;
   replacement: boolean;
   questions: string[];
+  sequenceId: number;
 }
 
 export class Credentials {

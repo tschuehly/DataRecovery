@@ -6,17 +6,14 @@ import {FormArray, FormBuilder, FormGroup, Validators} from '@angular/forms';
   selector: 'app-product-detail',
   template: `
     <div>
-      <h1 class="text-center text-2xl mb-5">Produkt: {{product.category.name + " " + product.name}} </h1>
+      <h1 class="text-center text-2xl mb-5">Produkt: {{product?.category?.name + " " + product.name}} </h1>
       <div class="grid grid-cols-1 text-lg gap-4">
         <form [formGroup]="editProductForm" class="mx-auto text-center grid grid-cols-2 gap-2">
           <ng-container formGroupName="category">
-            <label>Ersatz:
-              <input class="mb-1" type="checkbox" [checked]="product.category.replacement" (change)="product.category.replacement = !product.category.replacement">
-            </label>
             <label>Kategorie:
               <select class="mt-1 mb-2 pl-3 block" formControlName="id" required>
                 <option *ngFor="let category of categories" [value]="category.id">
-                  {{category.name}}
+                  {{category?.name}}
                 </option>
               </select>
             </label>
@@ -56,11 +53,12 @@ export class ProductDetailComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    console.log(this.product)
+    console.log(this.categories)
     this.editProductForm = this.fb.group({
       id: [this.product.id],
       category : this.fb.group({
-        id: [''],
-        replacement: ['']
+        id: [this.product?.category?.id]
       }),
       name: [this.product.name],
       price: [this.product.price, Validators.pattern('^[0-9]*$')]

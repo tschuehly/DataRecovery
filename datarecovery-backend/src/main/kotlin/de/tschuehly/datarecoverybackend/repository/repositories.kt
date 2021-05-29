@@ -9,7 +9,7 @@ interface OrderRepository : JpaRepository<Order, Long>{
 interface CustomerRepository : JpaRepository<Customer, Long>
 interface CategoryRepository : JpaRepository<Category, Long>
 interface ProductRepository : JpaRepository<Product, Long>
-interface UserRepository : JpaRepository<User?, Long?> {
-    override fun findAll(): List<User?>
-    fun findByUsername(name: String): User?
+interface UserRepository : JpaRepository<WebsiteUser?, Long?> {
+    override fun findAll(): List<WebsiteUser?>
+    fun findByUsername(name: String): WebsiteUser?
 }

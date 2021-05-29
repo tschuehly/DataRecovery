@@ -2,9 +2,9 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
 	id("org.springframework.boot") version "2.4.3"
 	id("io.spring.dependency-management") version "1.0.11.RELEASE"
-	kotlin("jvm") version "1.4.30"
-	kotlin("plugin.spring") version "1.4.30"
-	kotlin("plugin.jpa") version "1.4.30"
+	kotlin("jvm") version "1.5.0"
+	kotlin("plugin.spring") version "1.5.0"
+	kotlin("plugin.jpa") version "1.5.0"
 }
 
 group = "de.tschuehly"
@@ -21,6 +21,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("org.springframework.boot:spring-boot-starter-mail")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+	implementation("org.postgresql:postgresql")
 	implementation("com.auth0:java-jwt:3.13.0")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")

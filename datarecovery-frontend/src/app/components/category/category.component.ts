@@ -5,12 +5,13 @@ import {HttpClient} from '@angular/common/http';
 @Component({
   selector: 'app-category',
   template: `
-    <div class="flex container mx-auto h-full mb-20">
+    <div class="container mx-auto h-full my-20">
       <div class="m-auto" *ngIf="!editCategory">
-        <h1 class="text-2xl text-center mb-10">Produktübersicht</h1>
+        <h1 class="text-2xl text-center mb-10">Kategorieübersicht</h1>
         <table class="border table-auto mx-auto">
           <thead>
           <th class="border px-2 py-1">ID</th>
+          <th class="border px-2 py-1">Seq</th>
           <th class="border px-2 py-1">Kategorie</th>
           <th class="border px-2 py-1">Titel</th>
           <th class="border px-2 py-1">Ersatz</th>
@@ -19,8 +20,9 @@ import {HttpClient} from '@angular/common/http';
           <tbody>
           <tr *ngFor="let category of categories">
             <td class="border p-2">{{category.id}}</td>
+            <td class="border p-2">{{category.sequenceId}}</td>
             <td class="border p-2">{{category.name}}</td>
-            <td class="border p-2">{{category.title}} </td>
+            <td class="border p-2">{{category.title}}</td>
             <td class="border p-2">{{category.replacement ? 'Ja':'Nein'}}</td>
             <td class="border pl-2">
               <button (click)="editCategory = category">
@@ -34,12 +36,30 @@ import {HttpClient} from '@angular/common/http';
                 </svg>
               </button>
             </td>
-
+            <td class="border px-6">
+              <button (click)="showDelConfirm = true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <line x1="4" y1="7" x2="20" y2="7" />
+                  <line x1="10" y1="11" x2="10" y2="17" />
+                  <line x1="14" y1="11" x2="14" y2="17" />
+                  <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                  <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                </svg>
+              </button>
+            </td>
+            <ng-container *ngIf="showDelConfirm">
+              <td class="border pl-2">
+                <button class="border p-2 bg-red-400 m-4" (click)="deleteCategory(category)">
+                  Willst du wirklich das Produkt löschen
+                </button>
+              </td>
+            </ng-container>
           </tr>
           </tbody>
         </table>
         <div class="text-right mt-4">
-          <button class="button-primary" (click)="editCategory = newCategory()">Neue Kategorie</button>
+          <button class="border-2 rounded-xl p-2 text-black" (click)="editCategory = newCategory()">Neue Kategorie</button>
         </div>
       </div>
       <div *ngIf="editCategory" class="m-auto border shadow-xl px-14 py-10">
@@ -57,7 +77,7 @@ import {HttpClient} from '@angular/common/http';
 export class CategoryComponent implements OnInit {
   categories: Category[];
   editCategory: Category;
-
+  showDelConfirm = false;
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
