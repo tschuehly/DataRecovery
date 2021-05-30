@@ -1,21 +1,22 @@
 package de.tschuehly.datarecoverybackend.security
 
 import de.tschuehly.datarecoverybackend.service.JwtUserDetailsService
+import org.springframework.security.access.AccessDeniedException
 import org.springframework.security.core.context.SecurityContextHolder
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher
 import org.springframework.stereotype.Component
 import org.springframework.web.filter.OncePerRequestFilter
-import java.lang.Error
 import javax.servlet.FilterChain
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
+
 
 @Component
 class JwtFilter(
     val jwtUserDetailsService: JwtUserDetailsService
 ) : OncePerRequestFilter() {
-    private val AUTHORIZATION_HEADER = "Authorization"
-    private val COOKIE_HEADER = "cookie"
+    private val COOKIEHEADER = "Cookie"
 
     @Throws
     override fun doFilterInternal(request: HttpServletRequest, response: HttpServletResponse, filterChain: FilterChain) {
@@ -29,17 +30,21 @@ class JwtFilter(
                     )
                 }
                 ?.let { SecurityContextHolder.getContext().authentication = it }
-        } catch (e: Error) {
+        } catch (e: SecurityException) {
             println(e.localizedMessage)
+            response.sendError(401, "Invalid Token")
         }
-
         filterChain.doFilter(request, response)
     }
 
     private fun getToken(request: HttpServletRequest): String? {
-        return request.getHeader(AUTHORIZATION_HEADER)
-            ?: request.getHeader(COOKIE_HEADER)
-                ?.split("Bearer ")
-                ?.last()
+        val header = request.getHeader(COOKIEHEADER)
+        return if (header?.contains("Bearer") == true){
+            header.split("Bearer ")
+                .last()
+        }else{
+            null
+        }
+
     }
 }

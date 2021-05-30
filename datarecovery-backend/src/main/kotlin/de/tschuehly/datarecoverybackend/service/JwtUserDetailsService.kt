@@ -54,10 +54,9 @@ class JwtUserDetailsService(
     }
 
     fun loadUserByToken(token: String): JwtUserDetails? {
-        return getDecodedToken(token)
-                ?.let { it.subject }
+        return getDecodedToken(token)?.subject
                 ?.let { userRepository.findByUsername(it) }
-                ?.let { getUserDetails(it, token) } ?: throw Error("Error in validating token")
+                ?.let { getUserDetails(it, token) } ?: throw SecurityException("Error in validating token")
 
     }
 

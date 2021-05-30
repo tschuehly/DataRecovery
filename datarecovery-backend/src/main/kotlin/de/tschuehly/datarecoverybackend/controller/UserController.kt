@@ -23,7 +23,6 @@ class UserController(
     val logger: Logger
 ) {
 
-    @PreAuthorize("permitAll()")
     @GetMapping("/authorities")
     fun getAuthorities(): String? {
         try {
@@ -39,22 +38,21 @@ class UserController(
 
     }
 
-    @PreAuthorize("permitAll()")
     @PostMapping("/login")
     fun login(@RequestBody credentials: Map<String, String>, response: HttpServletResponse): WebsiteUser {
         val authenticationToken = UsernamePasswordAuthenticationToken(credentials["username"], credentials["password"])
         SecurityContextHolder.getContext().authentication = authenticationProvider.authenticate(authenticationToken)
         val user = userService.getCurrentUser()
-        response.setHeader("Set-Cookie","Bearer ${jwtUserDetailsService.createToken(user)}; Secure; HttpOnly; SameSite=Strict;Max-Age=600;Path=/ ")
+        response.setHeader("Set-Cookie","JWT=Bearer ${jwtUserDetailsService.createToken(user)}; Secure; HttpOnly; SameSite=Strict;Max-Age=6000;Path=/ ")
         return user
 
 
     }
-    @PreAuthorize("isAuthenticated()")
+
     @GetMapping("/logout")
     fun logout(response: HttpServletResponse, request: HttpServletRequest): String {
-        val jwtToken = request.getHeader("cookie").substringAfter("Bearer ")
-        response.setHeader("Set-Cookie","Bearer ${jwtToken}; Secure; HttpOnly; SameSite=Strict;Max-Age=-1;Path=/")
+        val jwtToken = request.getHeader("Cookie").substringAfter("Bearer ")
+        response.setHeader("Set-Cookie","JWT=Bearer ${jwtToken}; Secure; HttpOnly; SameSite=Strict;Max-Age=-1;Path=/")
         return "{\"logout\": \"true\"}"
 
     }
