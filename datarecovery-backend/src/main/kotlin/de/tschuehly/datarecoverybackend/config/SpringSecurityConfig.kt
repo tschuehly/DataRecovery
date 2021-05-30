@@ -3,15 +3,19 @@ package de.tschuehly.datarecoverybackend.config
 import de.tschuehly.datarecoverybackend.security.JwtFilter
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
+import org.springframework.http.HttpMethod
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity
 import org.springframework.security.config.annotation.web.builders.HttpSecurity
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter
 import org.springframework.security.config.http.SessionCreationPolicy
-import org.springframework.security.web.authentication.preauth.RequestHeaderAuthenticationFilter
+import org.springframework.security.core.AuthenticationException
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter
 import org.springframework.web.cors.CorsConfiguration
 import org.springframework.web.cors.CorsConfigurationSource
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource
+import javax.servlet.http.HttpServletRequest
+import javax.servlet.http.HttpServletResponse
 
 
 @Configuration
@@ -20,15 +24,31 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource
 class SpringSecurityConfig(
     val jwtFilter: JwtFilter
 ) : WebSecurityConfigurerAdapter() {
-    @Throws(Exception::class)
     override fun configure(http: HttpSecurity) {
         http.csrf().disable()
             .cors().configurationSource(corsConfigurationSource()).and()
-            .authorizeRequests()
-            .anyRequest().permitAll()
+
+            .sessionManagement()
+            .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
             .and()
-            .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-            .addFilterBefore(jwtFilter, RequestHeaderAuthenticationFilter::class.java)
+
+            .exceptionHandling()
+            .authenticationEntryPoint { request: HttpServletRequest?, response: HttpServletResponse, ex: AuthenticationException ->
+                response.sendError(
+                    HttpServletResponse.SC_UNAUTHORIZED,
+                    ex.message
+                )
+            }
+            .and()
+            .authorizeRequests()
+            // Our public endpoints
+            .antMatchers(HttpMethod.GET, "/api/product","/api/order/tracking","/api/user/logout").permitAll()
+            .antMatchers(HttpMethod.POST, "/api/order/create","/api/user/login").permitAll()
+            .antMatchers(HttpMethod.POST,"/api/user/**").permitAll()
+            // Our private endpoints
+            .anyRequest().authenticated()
+            .and()
+            .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter::class.java)
     }
     @Bean
     fun corsConfigurationSource(): CorsConfigurationSource? {
