@@ -84,8 +84,8 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
         
         Cassandra Schilling<br />
         Datenrettungsdienst<br />
-        Am Stein 9<br />
-        85049 Ingolstadt<br />
+        Friedrich-Ebert-Straße 70<br />
+        71638 Ludwigsburg<br />
         
         
         

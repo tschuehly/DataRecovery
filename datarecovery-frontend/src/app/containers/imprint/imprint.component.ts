@@ -13,8 +13,8 @@ import {Component, OnInit} from '@angular/core';
         <p>Adresse:&nbsp;</p>
 
         <p>Cassandra Schilling Datenrettungsdienst<br>
-          Am Stein 9<br>
-          85049 Ingolstadt</p>
+          Friedrich-Ebert-Straße 70<br>
+          71638 Ludwigsburg</p>
 
         <p><br>
           Mobil: +49(0)15161408355<br>
@@ -225,9 +225,9 @@ import {Component, OnInit} from '@angular/core';
 
         <p>Cassandra Schilling</p>
 
-        <p>Am Stein 9</p>
+        <p>Friedrich-Ebert-Straße 70</p>
 
-        <p>85049 Ingolstadt</p>
+        <p>71638 Ludwigsburg</p>
 
         <p>Deutschland</p>
 

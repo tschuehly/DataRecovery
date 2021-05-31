@@ -11,8 +11,8 @@ import { Component, OnInit } from '@angular/core';
         <p><span style="font-style:italic">Stand: 2020/21</span></p>
         <br>
         <p>Cassandra Schilling Datenrettungsdienst
-          Am Stein 9
-          85049 Ingolstadte<br>
+          Friedrich-Ebert-Straße 70
+          71638 Ludwigsburge<br>
           Telefon: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; +4915161408355<br>
           E-Mail: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="text-decoration:underline"><a href="mailto:info@datenrettung-schilling.de" target="_self">info@datenrettung-schilling.de</a></span><br>
           Steuernummer: &nbsp; &nbsp;&nbsp; 13123370362</p>

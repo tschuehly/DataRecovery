@@ -12,13 +12,18 @@ import {DOCUMENT} from '@angular/common';
         <a routerLink="">
           <div class="px-2 text-2xl font-bold">Cassandra Schilling<br>Datenrettungsdienst</div>
         </a>
-
-        <div class="hidden md:flex flex items-center text-xl pr-4 space-x-4">
-          <a class="cursor-pointer" routerLink="">Startseite</a>
-          <a class="cursor-pointer" (click)="scrollToOrder()">Auftrag</a>
-          <a class="cursor-pointer" routerLink="preise">Preise</a>
-          <a class="cursor-pointer self-center" routerLink="/datenrettung/flash">Arbeitsweise</a>
-          <a class="mr-2 ml-2 cursor-pointer" (click)="scrollToContact()">Kontakt</a>
+        <div class="flex md:hidden items-center mx-4 ">
+          <button class="p-2 border border-silver rounded" (click)="mobileNavShow = !mobileNavShow">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 top-" style="stroke: #8f8f8f">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="items-center text-xl px-2" (clickOutside)="mobileNavShow = false" exclude="nav" [ngClass]="mobileNavShow ? 'flex flex-col absolute right-0 top-20 mt-2 bg-blue-100 text-blue-900 w-full space-y-4 py-4 text-2xl font-semibold bg-gray-main text-white': 'hidden md:flex md:flex-row'">
+          <a class="cursor-pointer p-2" (click)="scrollToOrder(); mobileNavShow = false">Auftrag</a>
+          <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="preise">Preise</a>
+          <a class="cursor-pointer p-2" (click)="mobileNavShow = false"  routerLink="/datenrettung/flash">Arbeitsweise</a>
+          <a class="cursor-pointer  p-2"  (click)="scrollToContact(); mobileNavShow = false">Kontakt</a>
           <div *ngIf="currentUser">
             <a class="mr-2 ml-2" routerLink="/order">Bestellungen</a>
             <a class="mr-2 ml-2" routerLink="/product">Produkte</a>
@@ -38,6 +43,24 @@ import {DOCUMENT} from '@angular/common';
               width="{{innerWidth}}" height="300" frameborder="0" allowfullscreen="" aria-hidden="false"
               tabindex="0"></iframe>
     </div>
+      <div class="fixed right-2 bottom-2 shadow-2xl rounded-xl" [ngClass]="wawidgetHidden ? 'hidden':''">
+        <div class="flex align-middle text-white p-4 rounded-t-xl " style="background-color: rgb(9, 94, 84)">
+          <span class="px-2">Jetzt Cassandra Schilling kontaktieren</span>
+          <button (click)="wawidgetHidden = true">
+            <img src="/assets/x-square.svg"></button>
+        </div>
+        <div class="h-20" style="background-image: url('/assets/wa_bg.png') ;background-color: #E5DDD5"></div>
+        <div class="bg-white flex justify-center p-2 rounded-b-xl">
+          <a href="https://wa.me/+4915221408008">
+            <button class="flex align-middle p-2 pr-4 rounded text-white" style="background-color: #14C656">
+              <img class="h-6 inline px-2" src="/assets/WhatsApp.svg">Start Chat</button>
+          </a>
+        </div>
+      </div>
+      <div class="fixed right-2 bottom-2 " (click)="wawidgetHidden = false" *ngIf="wawidgetHidden">
+        <button class="flex align-middle p-2 rounded text-white" style="background-color: #14C656">
+          <img class="h-6 inline" src="/assets/WhatsApp.svg">
+        </button></div>
     <footer class="text-gray-700 bg-blue-50 pt-10" id="contact">
       <div class="container mb-4 text-center">
         <div class="grid grid-cols-2">
@@ -79,6 +102,8 @@ export class NavigationComponent implements OnInit {
   @Output() logout: EventEmitter<null> = new EventEmitter();
   public innerWidth: any;
   dropdownShow = false;
+  mobileNavShow: boolean = false;
+  wawidgetHidden: boolean = true;
 
   constructor(private router: Router,
               private pageScrollService: PageScrollService,
