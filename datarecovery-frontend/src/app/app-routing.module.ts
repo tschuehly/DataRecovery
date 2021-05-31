@@ -10,6 +10,7 @@ import {CategoryComponent} from './components/category/category.component';
 import {ImprintComponent} from "./containers/imprint/imprint.component";
 import {PricesComponent} from "./containers/prices/prices.component";
 import {AgbComponent} from "./containers/agb/agb.component";
+import {AboutComponent} from "./containers/about/about.component";
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'datenrettung/:variant', component: StaticComponent},
   {path: 'impressum', component: ImprintComponent},
   {path: 'agb', component: AgbComponent},
+  {path: 'about', component: AboutComponent},
   {path: 'preise', component: PricesComponent},
 ];
 

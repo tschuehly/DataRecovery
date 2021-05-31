@@ -27,6 +27,7 @@ import { PricesComponent } from './containers/prices/prices.component';
 import { AgbComponent } from './containers/agb/agb.component';
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
+import { AboutComponent } from './containers/about/about.component';
 registerLocaleData(localeDe);
 
 @NgModule({
@@ -48,7 +49,8 @@ registerLocaleData(localeDe);
         CategoryDetailComponent,
         ImprintComponent,
         PricesComponent,
-        AgbComponent
+        AgbComponent,
+        AboutComponent
     ],
   imports: [
     BrowserModule,

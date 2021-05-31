@@ -30,6 +30,7 @@ import {DOCUMENT} from '@angular/common';
               <a routerLink="/datenrettung/raid">RAID<br>Fusion Drive</a>
             </div>
           </div>
+          <a class="mr-2 ml-2 cursor-pointer" routerLink="about">Philosophie</a>
           <a class="mr-2 ml-2 cursor-pointer" (click)="scrollToContact()">Kontakt</a>
           <div *ngIf="currentUser">
             <a class="mr-2 ml-2" routerLink="/order">Bestellungen</a>
