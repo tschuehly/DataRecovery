@@ -17,19 +17,7 @@ import {DOCUMENT} from '@angular/common';
           <a class="cursor-pointer" routerLink="">Startseite</a>
           <a class="cursor-pointer" (click)="scrollToOrder()">Auftrag</a>
           <a class="cursor-pointer" routerLink="preise">Preise</a>
-          <div class="h-full text-center flex" (clickOutside)="dropdownShow = false" [exclude]="'div.dropdown'"
-               [excludeBeforeClick]="true" [ngClass]="{'bg-black': dropdownShow}">
-            <a class="cursor-pointer self-center" (click)="dropdownShow = !dropdownShow">Arbeitsweise</a>
-
-
-            <div class="grid gap-2 absolute  justify-evenly p-3 bg-gray-300 text-xl dropdown text-black"
-                 style="margin-right: 2.8rem; margin-top: 5.5rem;" *ngIf="dropdownShow">
-              <a routerLink="/datenrettung/hdd">HDD Festplatten</a>
-              <a routerLink="/datenrettung/ssd">SSD Festplatten</a>
-              <a routerLink="/datenrettung/flash">USB Stick<br>SD Karte</a>
-              <a routerLink="/datenrettung/raid">RAID<br>Fusion Drive</a>
-            </div>
-          </div>
+          <a class="cursor-pointer self-center" routerLink="/datenrettung/flash">Arbeitsweise</a>
           <a class="mr-2 ml-2 cursor-pointer" (click)="scrollToContact()">Kontakt</a>
           <div *ngIf="currentUser">
             <a class="mr-2 ml-2" routerLink="/order">Bestellungen</a>
@@ -58,7 +46,7 @@ import {DOCUMENT} from '@angular/common';
             <p>
               Cassandra Schilling<br/>
               Datenrettungsdienst<br/>
-              Email: cassandra@datenrettung-schilling.de<br/>
+              cassandra@datenrettung-schilling.de<br/>
               Tel.: +49 152 21408008
             </p>
           </div>

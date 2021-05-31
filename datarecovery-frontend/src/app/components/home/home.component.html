@@ -8,7 +8,7 @@
   <div class="col-span-1 bg-contain bg-no-repeat bg-blue-100 justify-self-center self-center pl-4">
     <img class="max-h-96 min-w-full" src="/assets/digital_files.png">
   </div>
-  <div class="col-span-2 px-16 py-16 text-justify">
+  <div class="col-span-2 px-16 py-16">
 
     <h1 class="text-4xl mb-16 text-center font-bold text-gray-900">
       Professionelle Datenrettung zu fairen Konditionen
@@ -18,22 +18,22 @@
            stroke="#1E3A8A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="20 6 9 17 4 12"></polyline>
       </svg>
-      <span class="col-span-11 text-xl">zum Festpreis</span>
+      <span class="col-span-11 text-xl">bei defekten USB-Sticks und SD-Karten</span>
       <svg class="col-span-1 justify-self-center self-center" viewBox="0 0 24 24" width="24" height="24"
            stroke="#1E3A8A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="20 6 9 17 4 12"></polyline>
       </svg>
-      <span class="col-span-11 text-xl">Bezahlung erst nach erfolgreicher Datenrettung</span>
+      <span class="col-span-11 text-xl">für Speicher, die nicht erkannt werden oder formatiert werden müssen</span>
       <svg class="col-span-1 justify-self-center self-center" viewBox="0 0 24 24" width="24" height="24"
            stroke="#1E3A8A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="20 6 9 17 4 12"></polyline>
       </svg>
-      <span class="col-span-11 text-xl">Kostenlose Beratung</span>
+      <span class="col-span-11 text-xl">zu fairen Festpreisen</span>
       <svg class="col-span-1 justify-self-center self-center" viewBox="0 0 24 24" width="24" height="24"
            stroke="#1E3A8A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="20 6 9 17 4 12"></polyline>
       </svg>
-      <span class="col-span-11 text-xl">Bei erfolgloser Datenrettung Geld zurück</span>
+      <span class="col-span-11 text-xl">Bezahlung <span class="font-bold">nur nach erfolgreicher Datenrettung</span> </span>
     </div>
   </div>
 </div>
@@ -60,8 +60,8 @@
 </div>
 <div class="bg-white  py-20">
 
-  <div class="container mx-auto grid grid-cols-1 lg:grid-cols-5 gap-8 bg-white">
-    <div class="col-span-1 lg:col-span-3 self-center">
+  <div class="flex flex-col lg:flex-row container justify-center gap-8 bg-white">
+    <div class="inline-block">
       <h1 class="text-2xl mb-8 text-gray-900 text-center">Ablauf der Datenrettung:</h1>
       <div class="flex relative pb-8">
         <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
@@ -158,31 +158,19 @@
       </div>
 
     </div>
-    <div class="col-span-2 w-64 border shadow-2xl rounded-xl justify-self-center h-96">
-      <div class="relative pb-56 mb-4 rounded shadow lg:pb-64">
-        <img class="absolute object-cover w-full h-full rounded" src="assets/cassandra_schilling.png" alt="Person"/>
-      </div>
-      <div class="flex flex-col sm:text-center">
-        <p class="text-lg font-bold">Cassandra Schilling</p>
-        <p class="mb-5 text-xs text-gray-800">Datenretter</p>
-        <div class="flex items-center space-x-3 sm:justify-center">
-          <a href="/" class="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-            <svg viewBox="0 0 24 24" width="24" height="24" stroke="#1E3A8A" stroke-width="2" fill="none"
-                 stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-              <rect x="2" y="9" width="4" height="12"></rect>
-              <circle cx="4" cy="4" r="2"></circle>
-            </svg>
-          </a>
-          <a href="/" class="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-            <svg viewBox="0 0 24 24" width="24" height="24" stroke="#1E3A8A" stroke-width="2" fill="none"
-                 stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
-              <path
-                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-            </svg>
-          </a>
+    <div class="flex justify-center">
+      <div class="w-64 border shadow-2xl rounded-xl justify-self-center inline-table">
+        <div class="relative pb-56 mb-4 rounded shadow lg:pb-64">
+          <img class="absolute object-cover w-full h-full rounded" src="assets/cassandra_schilling.png" alt="Person"/>
+        </div>
+        <div class="flex flex-col sm:text-center">
+          <p class="text-lg font-bold">Cassandra Schilling</p>
+          <div class="p-4">
+            <button class="btn btn-outline">Mehr über mich</button>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
 
@@ -193,10 +181,10 @@
   <div class="w-full mb-4">
     <div class="h-1 mx-auto bg-gradient-to-r from-blue-900 to-blue-100 w-64 opacity-90"></div>
   </div>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 container">
+  <div class="flex flex-wrap justify-center gap-6 container">
 
     <ng-container *ngFor="let category of categories ">
-      <div class="flex justify-around py-8">
+      <div class="flex w-96 justify-around py-8">
         <div class="card">
           <figure>
             <img *ngIf="category.name == 'SD-Karte'" src="/assets/sd-1138085_1920.jpg">
@@ -216,7 +204,10 @@
               <tbody>
                 <ng-container *ngFor="let product of products; index as i">
                   <tr  *ngIf="product.category.id === category.id && product.price">
-                    <td class="!p-2 text-left"><span *ngIf="(i+1)%3==0 else smaller">≥</span><ng-template #smaller>≤</ng-template> {{product.name.split(' ')[3]}}</td>
+                    <td class="!p-2 text-left">
+                      <span *ngIf="(i+1)%3==0 else smaller">≥ {{product.name.split(' ')[1]}}</span>
+                      <ng-template #smaller>≤ {{product.name.split(' ')[3]}}</ng-template>
+                      </td>
                     <td class="!p-2">{{product.price | number : '.2':'de' }} €</td>
                   </tr>
                 </ng-container>
@@ -237,36 +228,29 @@
       [replacementProducts]="replacementProducts"
       (orderOutput)="submitOrder($event)"></app-order-form>
 
-    <div *ngIf="orderSubmitted === false">
-      <div class="bg-silver h-6 rounded-t-2xl"></div>
-      <div class="grid grid-cols-2">
-        <div class="bg-center bg-cover" style="background-image: url('/assets/order_confirmation.png')"></div>
-        <div class="text-center p-8">
-          <p class="py-4 text-silver text-lg">Ihre Anfrage wurde nicht übermittelt<br>Bitte kontaktieren sie Cassandra
-            Schilling über eine Email an:
-            <span class="font-bold">info@datenrettung-schilling.de</span>
-          </p>
-        </div>
-      </div>
-      <div class="bg-silver h-6 rounded-b-2xl"></div>
-
-    </div>
-
-    <div *ngIf="orderSubmitted === true || !products" id="order_submit">
-      <div class="px-12 text-green-600 text-xl font-bold mt-8">
-        <h1>Ihr Auftrag wurde übermittelt. Sie sollten bald eine Bestätigungsmail mit weiteren Anweisungen
-          erhalten.</h1>
-      </div>
+    <div class="p-12 text-blue-900 text-xl font-bold mt-8 bg-blue-100 rounded-xl"  id="order_submit" *ngIf="orderSubmitted !== null">
+      <ng-container *ngIf="orderSubmitted === true">
+        <p>Ihr Auftrag wurde erfolgreich übermittelt. Sie sollten bald eine Bestätigungsmail mit weiteren Informationen
+          erhalten, schauen Sie auch im Spam Ordner nach!</p>
+      </ng-container>
+      <ng-container *ngIf="orderSubmitted === false">
+      <p>Ihre Anfrage konnte nicht übermittelt werden.<br>
+        Bitte kontaktieren sie Cassandra Schilling über eine Email an:<br>
+        <button class="btn btn-primary mt-4">
+          <a href="mailto:info@datenrettung-schilling.de?subject=Anfrage%20wegen%20einer%20Datenrettung&amp">info@datenrettung-schilling.de</a>
+        </button>
+      </p>
+      </ng-container>
     </div>
 
     <div *ngIf="!products" class="text-center py-8">
       <p>Bitte kontaktieren sie Cassandra Schilling über eine Email an:
-        <span class="text-green-700 font-bold">cassandra@datenrettung-schilling.de</span>
+        <span class="text-green-700 font-bold">info@datenrettung-schilling.de</span>
       </p>
       <button class="border-2 rounded-md p-2 mt-4">
 
         <a
-          href="mailto:cassandra@datenrettung-schilling.de?subject=Anfrage%20wegen%20einer%20Datenrettung&amp">Hier
+          href="mailto:info@datenrettung-schilling.de?subject=Anfrage%20wegen%20einer%20Datenrettung&amp">Hier
           klicken um eine Email zu senden</a>
       </button>
     </div>

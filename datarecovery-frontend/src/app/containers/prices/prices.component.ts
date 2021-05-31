@@ -18,9 +18,9 @@ import {HttpClient} from "@angular/common/http";
         </div>
       </div>
     </div>
-    <div class="grid grid-cols-1 xl:grid-cols-2  border-b-2 border-t-2">
-      <div class="text-black">
-          <div class="bg-gray-main p-12">
+    <div class="grid grid-cols-1 lg:grid-cols-2  border-b-2 border-t-2">
+      <div class="text-black flex justify-center">
+          <div class="p-12 inline-block">
             <ng-container *ngFor="let category of categories " >
               <div class="mb-2">
                 <h1 class="text-2xl font-semibold mt-4 pb-2">{{category.title}}</h1>
@@ -34,8 +34,9 @@ import {HttpClient} from "@angular/common/http";
             </ng-container>
         </div>
       </div>
-
-      <div class="bg-gray-main bg-cover bg-center" style="background-image:url('/assets/prices_main.jpg')"></div>
+      <div class="flex justify-center">
+        <div class="bg-cover bg-top w-full" style="background-image:url('/assets/photo_2021-05-30_15-02-34.jpg')"></div>
+      </div>
     </div>
 
   `,
