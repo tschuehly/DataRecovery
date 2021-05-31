@@ -15,7 +15,7 @@ import {HttpClient} from "@angular/common/http";
     <div class="h-20 bg-white text-center">
       <h1 class="text-4xl text-black py-5 tracking-wider">Preise</h1>
     </div>
-    <div class="bg-gray-main flex">
+    <div class="bg-gray-main flex container">
       <div class="text-silver py-8 mx-auto justify-center">
         <span class="font-bold text-white">Wichtig:</span> Es handelt sich um
         <span class="font-bold text-white">Festpreise</span>, die nur <span class="font-bold text-white">nach Erfolg gelten.</span><br>

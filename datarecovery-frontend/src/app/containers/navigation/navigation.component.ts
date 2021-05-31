@@ -22,23 +22,23 @@ import {DOCUMENT} from '@angular/common';
           </button>
         </div>
         <div class="items-center text-xl px-4  bg-gray-main" [ngClass]="mobileNavShow ? 'flex flex-col absolute right-0 top-20 w-full space-y-4 py-4 text-2xl font-semibold bg-gray-main text-white': 'hidden md:flex md:flex-row'">
-          <a class="cursor-pointer p-2" (click)="scrollToOrder()">Auftrag</a>
-          <a class="cursor-pointer p-2" routerLink="preise">Preise</a>
-          <div class="h-full text-center flex" (clickOutside)="dropdownShow = false" [exclude]="'div.dropdown'"
+          <a class="cursor-pointer p-2" (click)="scrollToOrder(); mobileNavShow = false">Auftrag</a>
+          <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="preise">Preise</a>
+          <div class="h-full text-center flex"  (clickOutside)="dropdownShow = false" [exclude]="'div.dropdown'"
                [excludeBeforeClick]="true" [ngClass]="{'bg-gray-300 md:bg-black ': dropdownShow}">
             <a class="cursor-pointer self-center p-2" (click)="dropdownShow = !dropdownShow">Arbeitsweise</a>
 
 
-            <div class="grid gap-2 absolute  justify-evenly p-3 bg-gray-300 text-xl dropdown text-black"
-                 style="margin-right: 2.8rem; margin-top: 5.5rem;" *ngIf="dropdownShow" [ngStyle]="mobileNavShow ? {'margin-top':'0rem','margin-left':'10.2rem'}:{}">
-              <a routerLink="/datenrettung/hdd">HDD Festplatten</a>
-              <a routerLink="/datenrettung/ssd">SSD Festplatten</a>
-              <a routerLink="/datenrettung/flash">USB Stick<br>SD Karte</a>
-              <a routerLink="/datenrettung/raid">RAID<br>Fusion Drive</a>
+            <div class="grid gap-2 absolute justify-evenly p-3 bg-gray-300 text-xl dropdown text-black"
+                 style="margin-right: 2.8rem; top: 5.5rem;" *ngIf="dropdownShow" [ngStyle]="mobileNavShow ? {'top':'0','width':'100%','left':'0','padding':'48px 0px','gap':'1.5rem'}:{}">
+              <a  (click)="mobileNavShow = false" routerLink="/datenrettung/hdd">HDD Festplatten</a>
+              <a  (click)="mobileNavShow = false" routerLink="/datenrettung/ssd">SSD Festplatten</a>
+              <a  (click)="mobileNavShow = false" routerLink="/datenrettung/flash">USB Stick<br>SD Karte</a>
+              <a  (click)="mobileNavShow = false" routerLink="/datenrettung/raid">RAID<br>Fusion Drive</a>
             </div>
           </div>
-          <a class="cursor-pointer p-2" routerLink="about">Philosophie</a>
-          <a class="cursor-pointer p-2" (click)="scrollToContact()">Kontakt</a>
+          <a (click)="mobileNavShow = false" class="cursor-pointer p-2" routerLink="about">Philosophie</a>
+          <a (click)="mobileNavShow = false" class="cursor-pointer p-2" (click)="scrollToContact()">Kontakt</a>
           <div *ngIf="currentUser">
             <a class=" p-2" routerLink="/order">Bestellungen</a>
             <a class=" p-2" routerLink="/product">Produkte</a>
@@ -51,9 +51,27 @@ import {DOCUMENT} from '@angular/common';
 
         <router-outlet></router-outlet>
       </div>
-      <footer class="pt-8 bg-gray-main text-silver" id="contact">
+      <div class="fixed right-2 bottom-2 shadow-2xl rounded-xl" [ngClass]="wawidgetHidden ? 'hidden':''">
+        <div class="flex align-middle text-white p-4 rounded-t-xl " style="background-color: rgb(9, 94, 84)">
+          <span class="px-2">Jetzt Tobias Jungbauer kontaktieren</span>
+          <button (click)="wawidgetHidden = true">
+            <img src="/assets/x-square.svg"></button>
+        </div>
+        <div class="h-20" style="background-image: url('/assets/wa_bg.png') ;background-color: #E5DDD5"></div>
+        <div class="bg-white flex justify-center p-2 rounded-b-xl">
+          <a href="https://wa.me/+4915161408355">
+            <button class="flex align-middle p-2 pr-4 rounded text-white" style="background-color: #14C656">
+              <img class="h-6 inline px-2" src="/assets/WhatsApp.svg">Start Chat</button>
+          </a>
+        </div>
+      </div>
+      <div class="fixed right-2 bottom-2 " (click)="wawidgetHidden = false" *ngIf="wawidgetHidden">
+        <button class="flex align-middle p-2 rounded text-white" style="background-color: #14C656">
+            <img class="h-6 inline" src="/assets/WhatsApp.svg">
+        </button></div>
+      <footer class="pt-8 bg-gray-main text-silver">
         <div class="mb-4 text-center">
-          <div class=" flex flex-col md:flex-row justify-evenly pb-8">
+          <div class=" flex flex-col md:flex-row justify-evenly pb-8"  id="contact">
             <div>
               <h1 class="mb-2 text-4xl">Kontakt</h1>
               <p>
@@ -99,6 +117,7 @@ export class NavigationComponent implements OnInit {
   public innerWidth: any;
   dropdownShow = false;
   mobileNavShow: boolean = false;
+  wawidgetHidden: boolean = true;
 
   constructor(private router: Router,
               private pageScrollService: PageScrollService,
