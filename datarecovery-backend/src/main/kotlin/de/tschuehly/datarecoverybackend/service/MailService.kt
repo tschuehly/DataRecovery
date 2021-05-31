@@ -27,7 +27,6 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
     fun sendOrderConfirmation(order: Order){ //TODO: Error Handling
         val msg = createMessage()
         val helper = MimeMessageHelper(msg, true)
-
         order.customer?.email?.let { helper.setTo(it) }
 
         helper.setSubject("Ihr Auftrag zur Datenrettung | Tobias Jungbauer Datenrettung")
@@ -39,6 +38,8 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
         html = html.replace("MESSAGETITLE", "Ihre Auftragsbest&#228;tigung vom ${dateFormat.format(order.orderDate)}")
         helper.setText(html,true)
 
+        javaMailSender.send(msg)
+        helper.setTo("ammersee.datenrettung@gmail.com")
         javaMailSender.send(msg)
     }
 

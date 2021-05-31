@@ -14,28 +14,35 @@ import {DOCUMENT} from '@angular/common';
             <img src="/assets/LOGO_TJ_Datenrettung.svg" class="h-14">
           </div>
         </a>
-        <div class="hidden md:flex flex items-center text-xl pr-4">
-          <a class="mr-2 cursor-pointer" (click)="scrollToOrder()">Auftrag</a>
-          <a class="mr-2 ml-2 cursor-pointer" routerLink="preise">Preise</a>
+        <div class="flex md:hidden items-center mx-4 ">
+          <button class="p-2 border border-silver rounded" (click)="mobileNavShow = !mobileNavShow">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 top-" style="stroke: #8f8f8f">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="items-center text-xl px-4  bg-gray-main" [ngClass]="mobileNavShow ? 'flex flex-col absolute right-0 top-20 w-full space-y-4 py-4 text-2xl font-semibold bg-gray-main text-white': 'hidden md:flex md:flex-row'">
+          <a class="cursor-pointer p-2" (click)="scrollToOrder()">Auftrag</a>
+          <a class="cursor-pointer p-2" routerLink="preise">Preise</a>
           <div class="h-full text-center flex" (clickOutside)="dropdownShow = false" [exclude]="'div.dropdown'"
-               [excludeBeforeClick]="true" [ngClass]="{'bg-black': dropdownShow}">
-            <a class="mr-2 ml-2 cursor-pointer self-center" (click)="dropdownShow = !dropdownShow">Arbeitsweise</a>
+               [excludeBeforeClick]="true" [ngClass]="{'bg-gray-300 md:bg-black ': dropdownShow}">
+            <a class="cursor-pointer self-center p-2" (click)="dropdownShow = !dropdownShow">Arbeitsweise</a>
 
 
             <div class="grid gap-2 absolute  justify-evenly p-3 bg-gray-300 text-xl dropdown text-black"
-                 style="margin-right: 2.8rem; margin-top: 5.5rem;" *ngIf="dropdownShow">
+                 style="margin-right: 2.8rem; margin-top: 5.5rem;" *ngIf="dropdownShow" [ngStyle]="mobileNavShow ? {'margin-top':'0rem','margin-left':'10.2rem'}:{}">
               <a routerLink="/datenrettung/hdd">HDD Festplatten</a>
               <a routerLink="/datenrettung/ssd">SSD Festplatten</a>
               <a routerLink="/datenrettung/flash">USB Stick<br>SD Karte</a>
               <a routerLink="/datenrettung/raid">RAID<br>Fusion Drive</a>
             </div>
           </div>
-          <a class="mr-2 ml-2 cursor-pointer" routerLink="about">Philosophie</a>
-          <a class="mr-2 ml-2 cursor-pointer" (click)="scrollToContact()">Kontakt</a>
+          <a class="cursor-pointer p-2" routerLink="about">Philosophie</a>
+          <a class="cursor-pointer p-2" (click)="scrollToContact()">Kontakt</a>
           <div *ngIf="currentUser">
-            <a class="mr-2 ml-2" routerLink="/order">Bestellungen</a>
-            <a class="mr-2 ml-2" routerLink="/product">Produkte</a>
-            <a class="mr-2 ml-2" routerLink="/category">Kategorien</a>
+            <a class=" p-2" routerLink="/order">Bestellungen</a>
+            <a class=" p-2" routerLink="/product">Produkte</a>
+            <a class=" p-2" routerLink="/category">Kategorien</a>
           </div>
         </div>
       </nav>
@@ -80,7 +87,7 @@ import {DOCUMENT} from '@angular/common';
             <span class="pl-4">Designed by Alina Göttig</span>
           </div>
           <div>
-            <a class="mr-2 ml-2" routerLink="/login" *ngIf="currentUser" (click)="logout.emit()">Logout</a>
+            <a class="" routerLink="/login" *ngIf="currentUser" (click)="logout.emit()">Logout</a>
           </div>
         </div>
       </footer>
@@ -91,6 +98,7 @@ export class NavigationComponent implements OnInit {
   @Output() logout: EventEmitter<null> = new EventEmitter();
   public innerWidth: any;
   dropdownShow = false;
+  mobileNavShow: boolean = false;
 
   constructor(private router: Router,
               private pageScrollService: PageScrollService,
