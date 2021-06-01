@@ -3,6 +3,8 @@ import {User} from '../../model/model';
 import {Router} from '@angular/router';
 import {PageScrollService} from 'ngx-page-scroll-core';
 import {DOCUMENT} from '@angular/common';
+import { NgcCookieConsentService, NgcStatusChangeEvent } from 'ngx-cookieconsent';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-navigation',
@@ -51,7 +53,7 @@ import {DOCUMENT} from '@angular/common';
 
         <router-outlet></router-outlet>
       </div>
-      <div class="fixed right-2 bottom-2 shadow-2xl rounded-xl" [ngClass]="wawidgetHidden ? 'hidden':''">
+      <div class="fixed right-2 bottom-2 shadow-2xl rounded-xl m" [ngClass]="wawidgetHidden ? 'hidden':''">
         <div class="flex align-middle text-white p-4 rounded-t-xl " style="background-color: rgb(9, 94, 84)">
           <span class="px-2">Jetzt Tobias Jungbauer kontaktieren</span>
           <button (click)="wawidgetHidden = true">
@@ -65,13 +67,13 @@ import {DOCUMENT} from '@angular/common';
           </a>
         </div>
       </div>
-      <div class="fixed right-2 bottom-2 " (click)="wawidgetHidden = false" *ngIf="wawidgetHidden">
+      <div class="fixed right-2 bottom-2 md:hidden" (click)="wawidgetHidden = false" *ngIf="wawidgetHidden">
         <button class="flex align-middle p-2 rounded text-white" style="background-color: #14C656">
             <img class="h-6 inline" src="/assets/WhatsApp.svg">
         </button></div>
       <footer class="pt-8 bg-gray-main text-silver">
         <div class="mb-4 text-center">
-          <div class=" flex flex-col md:flex-row justify-evenly pb-8"  id="contact">
+          <div class=" flex flex-col md:flex-row justify-evenly pb-4"  id="contact">
             <div>
               <h1 class="mb-2 text-4xl">Kontakt</h1>
               <p>
@@ -91,12 +93,15 @@ import {DOCUMENT} from '@angular/common';
               </p>
             </div>
           </div>
-          <div class="h-72 mb-4 bg-gray-main">
-            <iframe id="myFrame"
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10688.664885486834!2d11.1017109!3d47.9525097!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x37d4dd90c24065cb!2sTobias%20Jungbauer%20Datenrettungsdienst%20-%20AmmerseeDatenrettung.de!5e0!3m2!1sde!2sde!4v1604148030912!5m2!1sde!2sde"
-                    width="{{innerWidth}}" height="300" frameborder="0" allowfullscreen="" aria-hidden="false"
-                    tabindex="0"></iframe>
-          </div>
+            <ng-container *ngIf="mapsIframeShow">
+              <div class="h-72 mb-4 bg-gray-main">
+                <iframe id="myFrame"
+                      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10688.664885486834!2d11.1017109!3d47.9525097!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x37d4dd90c24065cb!2sTobias%20Jungbauer%20Datenrettungsdienst%20-%20AmmerseeDatenrettung.de!5e0!3m2!1sde!2sde!4v1604148030912!5m2!1sde!2sde"
+                      width="{{innerWidth}}" height="300" frameborder="0" allowfullscreen="" aria-hidden="false"
+                      tabindex="0"></iframe>
+
+              </div>
+            </ng-container>
           <div class=" border-b py-4">
             <a routerLink="impressum" class="pr-4">Impressum & Datenschutz</a>|<a class="px-4" routerLink="agb">AGB</a>
           </div>
@@ -118,10 +123,13 @@ export class NavigationComponent implements OnInit {
   dropdownShow = false;
   mobileNavShow: boolean = false;
   wawidgetHidden: boolean = true;
-
+  mapsIframeShow: boolean = false;
+  private popupOpenSubscription: Subscription;
+  private statusChangeSubscription: Subscription;
   constructor(private router: Router,
               private pageScrollService: PageScrollService,
-              @Inject(DOCUMENT) private document: any) {
+              @Inject(DOCUMENT) private document: any,
+              private ccService: NgcCookieConsentService) {
     router.events.subscribe(value => {
       this.dropdownShow = false;
     });
@@ -129,6 +137,19 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit(): void {
     this.innerWidth = document.documentElement.clientWidth;
+    this.popupOpenSubscription = this.ccService.popupOpen$.subscribe(
+      () => {
+        // you can use this.ccService.getConfig() to do stuff...
+      });
+    this.statusChangeSubscription = this.ccService.statusChange$.subscribe(
+      (event: NgcStatusChangeEvent) => {
+        if(event.status === "allow"){
+          this.mapsIframeShow = true;
+        }
+        if(event.status === "deny"){
+          this.mapsIframeShow = false;
+        }
+      });
   }
 
   @HostListener('window:resize', ['$event'])

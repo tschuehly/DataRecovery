@@ -28,8 +28,49 @@ import { AgbComponent } from './containers/agb/agb.component';
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
 import { AboutComponent } from './containers/about/about.component';
+import {NgcCookieConsentConfig, NgcCookieConsentModule} from "ngx-cookieconsent";
 registerLocaleData(localeDe);
 
+const cookieConfig:NgcCookieConsentConfig = {
+  "cookie": {
+    "domain": "localhost"
+  },
+  "position": "bottom",
+  "theme": "edgeless",
+  "palette": {
+    "popup": {
+      "background": "#1d1d1d",
+      "text": "#c5c5c5",
+      "link": "#ffffff"
+    },
+    "button": {
+      "background": "#c5c5c5",
+      "text": "#000000",
+      "border": "transparent"
+    }
+  },
+  layout:'',
+  layouts: {
+    "custom":'{{messagelink}}'
+  },
+  elements:{
+    messagelink: `
+    <span class="p-4">{{message}} <a href="{{href}}" class="underline">{{link}}</a></span>
+
+    `,
+  },
+  "type": "opt-in",
+  "content": {
+    "message": "Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies.",
+    "dismiss": "Got it!",
+    "deny": "Cookies verbieten",
+    "link": "Datenschutzbestimmungen",
+    "href": "/impressum",
+    "policy": "Cookie Policy",
+    "header": "Cookies used on the website!",
+    "allow": "Cookies erlauben"
+  }
+}
 @NgModule({
     declarations: [
         AppComponent,
@@ -60,7 +101,8 @@ registerLocaleData(localeDe);
     FormsModule,
     NgxPageScrollCoreModule.forRoot({duration: 700, scrollOffset: 80}),
     BrowserAnimationsModule,
-    ClickOutsideModule
+    ClickOutsideModule,
+    NgcCookieConsentModule.forRoot(cookieConfig)
   ],
   providers: [
   ],
