@@ -33,7 +33,7 @@ registerLocaleData(localeDe);
 
 const cookieConfig:NgcCookieConsentConfig = {
   "cookie": {
-    "domain": "localhost"
+    "domain": "www.jungbauerdatenrettung.de"
   },
   "position": "bottom",
   "theme": "edgeless",

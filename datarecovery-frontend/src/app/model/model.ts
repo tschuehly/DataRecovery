@@ -26,7 +26,8 @@ export enum orderStateEnum {
   inRepair = 'Reparatur',
   readingMemory = 'Auslesen Speicher',
   savingData = 'Abspeicherung Dateien',
-  parcelReturned = 'Rückversand'
+  parcelReturned = 'Rückversand',
+  orderCompleted = 'Auftrag abgeschlossen'
 }
 export class Update{
   id: number;

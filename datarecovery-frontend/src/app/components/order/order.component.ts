@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
-import {Order} from '../../model/model';
+import {Order, orderStateEnum} from '../../model/model';
 import {Router} from "@angular/router";
 
 @Component({
@@ -8,7 +8,16 @@ import {Router} from "@angular/router";
   template: `
     <div class="container mx-auto h-full my-10">
       <div class="m-auto" *ngIf="!editOrder">
-        <h1 class="text-2xl text-center mb-10">Bestellungsübersicht</h1>
+        <div class="flex mb-10">
+          <ng-container *ngIf="!showArchiveBoolean">
+            <h1 class="text-2xl text-center flex-1">Bestellungsübersicht</h1>
+            <button class="border-2 p-2" (click)="showArchive()">Archiv</button>
+          </ng-container>
+          <ng-container *ngIf="showArchiveBoolean">
+            <h1 class="text-2xl text-center flex-1">Archivierte Bestellungen</h1>
+            <button class="border-2 p-2" (click)="showOrders()">Bestellungen</button>
+          </ng-container>
+        </div>
         <table class="border table-auto mx-auto">
           <thead>
           <th class="border px-2 py-1">ID</th>
@@ -19,7 +28,7 @@ import {Router} from "@angular/router";
           <th class="border px-2 py-1">Edit</th>
           </thead>
           <tbody>
-          <tr *ngFor="let order of orders">
+          <tr *ngFor="let order of filteredOrders">
             <td class="border p-2">{{order.id}}</td>
             <td class="border p-2">{{order.product.category.name}} {{order.product.name}}</td>
             <td class="border p-2">{{order.customer.firstName}} {{order.customer.lastName}}</td>
@@ -62,8 +71,10 @@ import {Router} from "@angular/router";
 })
 export class OrderComponent implements OnInit {
   orders: Order[];
+  filteredOrders: Order[];
   editOrder: Order;
   createUpdate = false;
+  showArchiveBoolean = false;
   constructor(private http: HttpClient,private router: Router) {
   }
 
@@ -77,12 +88,14 @@ export class OrderComponent implements OnInit {
         }
         return 0
       });
+      this.filteredOrders = this.orders.filter(o => o.trackingState !== orderStateEnum.orderCompleted)
     },(error:HttpErrorResponse) => {
       if(error.status === 401){
         this.router.navigate(['/login'])
 
       }
     })
+
   }
 
   updateOrderState(editOrder: Order): void {
@@ -95,7 +108,7 @@ export class OrderComponent implements OnInit {
   }
 
   updateOrders(order: Order):void {
-    this.orders.map( o => o.id === order.id);
+    this.filteredOrders.map( o => o.id === order.id);
   }
 
   deleteOrder(order: Order):void {
@@ -104,5 +117,15 @@ export class OrderComponent implements OnInit {
     });
     this.editOrder = null;
 
+  }
+
+  showArchive() {
+    this.filteredOrders = this.orders.filter(o => o.trackingState === orderStateEnum.orderCompleted);
+    this.showArchiveBoolean = true;
+  }
+
+  showOrders() {
+    this.filteredOrders = this.orders.filter(o => o.trackingState !== orderStateEnum.orderCompleted);
+    this.showArchiveBoolean = false;
   }
 }

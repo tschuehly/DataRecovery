@@ -102,12 +102,12 @@ import { Subscription } from 'rxjs';
 
               </div>
             </ng-container>
-          <div class=" border-b py-4">
-            <a routerLink="impressum" class="pr-4">Impressum & Datenschutz</a>|<a class="px-4" routerLink="agb">AGB</a>
+          <div class=" border-b py-4 divide-x-2 divide-silver">
+            <a routerLink="impressum" class="pr-4">Impressum & Datenschutz</a><a class="px-4" routerLink="agb">AGB</a>
           </div>
-          <div class="col-span-2 pt-4">
-            <span class="pr-4">Developed by <a class="font-bold" href="https://www.linkedin.com/in/tschuehly/">Thomas Schühly</a></span>|
-            <span class="pl-4">Designed by Alina Göttig</span>
+          <div class="col-span-2 pt-4 divide-x-2 divide-silver">
+            <span class="pr-4">Developed by <a class="font-bold" href="https://www.linkedin.com/in/tschuehly/">Thomas Schühly</a></span>
+            <span class="pl-4">Designed by <span class="whitespace-nowrap">Alina Göttig</span></span>
           </div>
           <div>
             <a class="" routerLink="/login" *ngIf="currentUser" (click)="logout.emit()">Logout</a>

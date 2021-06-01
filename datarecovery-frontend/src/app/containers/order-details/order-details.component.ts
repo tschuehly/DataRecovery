@@ -36,11 +36,11 @@ import {HttpClient} from '@angular/common/http';
             </select>
           </div>
           <div class="col-span-2 flex justify-between mt-6">
-            <button (click)="saveOrder()" class="border-2 rounded-md p-2 border-black">Speichern</button>
             <button class="border-2 rounded-md p-2 bg-red-500 border-black" (click)="deleteConfirm = true">
               <img src="/assets/trash-2.svg">
             </button>
             <button (click)="addUpdate.emit(order)" class="border-2 rounded-md p-2 border-black">Update hinzufügen</button>
+            <button (click)="saveOrder()" class="border-2 rounded-md p-2 border-black">Speichern</button>
           </div>
         </ng-container>
         <div *ngIf="deleteConfirm" class="mt-10 flex justify-end col-span-2">
