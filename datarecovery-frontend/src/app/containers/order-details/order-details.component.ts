@@ -7,7 +7,12 @@ import {HttpClient} from '@angular/common/http';
   selector: 'app-order-details',
   template: `
     <div>
-      <h1 class="text-center text-2xl mb-5">Bestellung vom {{order.orderDate | date:'d.M.y H:mm' }}</h1>
+      <div class="flex  mb-5 ">
+        <h1 class="text-center text-2xl flex-1">Bestellung vom {{order.orderDate | date:'d.M.y H:mm' }}</h1>
+        <button (click)="close.emit()" >
+          <img src="/assets/x.svg">
+        </button>
+      </div>
       <div class="grid grid-cols-2 text-lg gap-4">
         <div *ngIf="order.customer as c" class="flex flex-col">
           <span>{{c.firstName}} {{c.lastName}}</span>
@@ -32,10 +37,17 @@ import {HttpClient} from '@angular/common/http';
           </div>
           <div class="col-span-2 flex justify-between mt-6">
             <button (click)="saveOrder()" class="border-2 rounded-md p-2 border-black">Speichern</button>
+            <button class="border-2 rounded-md p-2 bg-red-500 border-black" (click)="deleteConfirm = true">
+              <img src="/assets/trash-2.svg">
+            </button>
             <button (click)="addUpdate.emit(order)" class="border-2 rounded-md p-2 border-black">Update hinzufügen</button>
-            <button (click)="close.emit()" class="border-2 rounded-md p-2 bg-red-500 border-black">Schließen</button>
           </div>
         </ng-container>
+        <div *ngIf="deleteConfirm" class="mt-10 flex justify-end col-span-2">
+          <button (click)="deleteOrder.emit(order)" class="border-2 rounded-md p-2 bg-red-500 border-black">
+            Willst du sicher diese Bestellung löschen?
+          </button>
+        </div>
         <div *ngFor="let update of order.updates" class="col-span-2 border-2 rounded-md p-4">
           <h2 class="text-2xl">Update: {{update.id}}</h2>
           <span>Beschreibung:</span>
@@ -66,8 +78,10 @@ export class OrderDetailsComponent implements OnInit {
   update: Update;
   pictureZoomed = false;
   @Output() editOrder: EventEmitter<Order> = new EventEmitter<Order>();
+  @Output() deleteOrder: EventEmitter<Order> = new EventEmitter<Order>();
   @Output() addUpdate: EventEmitter<Order> = new EventEmitter<Order>();
   @Output() close: EventEmitter<void> = new EventEmitter();
+  deleteConfirm: boolean;
 
   constructor(private fb: FormBuilder) {
 

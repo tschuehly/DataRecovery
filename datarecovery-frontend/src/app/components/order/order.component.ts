@@ -48,6 +48,7 @@ import {Router} from "@angular/router";
                            [order]="editOrder"
                            [edit]="true"
                            (editOrder)="updateOrderState($event)"
+                           (deleteOrder)="deleteOrder($event)"
                            (close)="editOrder = null"
                            (addUpdate)="createUpdate = true"></app-order-details>
         <ng-container *ngIf="createUpdate">
@@ -95,5 +96,13 @@ export class OrderComponent implements OnInit {
 
   updateOrders(order: Order):void {
     this.orders.map( o => o.id === order.id);
+  }
+
+  deleteOrder(order: Order):void {
+    this.http.delete('api/order/'+ order.id).subscribe(_=>{
+      this.orders = this.orders.filter(o => o.id !== order.id);
+    });
+    this.editOrder = null;
+
   }
 }
