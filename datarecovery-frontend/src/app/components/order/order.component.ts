@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {Order} from '../../model/model';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-order',
@@ -62,7 +63,7 @@ export class OrderComponent implements OnInit {
   orders: Order[];
   editOrder: Order;
   createUpdate = false;
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,private router: Router) {
   }
 
 
@@ -75,6 +76,11 @@ export class OrderComponent implements OnInit {
         }
         return 0
       });
+    },(error:HttpErrorResponse) => {
+      if(error.status === 401){
+        this.router.navigate(['/login'])
+
+      }
     })
   }
 
@@ -82,7 +88,8 @@ export class OrderComponent implements OnInit {
     console.log(editOrder);
     this.http.post('api/order/updateStatus', editOrder).subscribe((order: Order) => {
       this.updateOrders(order);
-    });
+    })
+    ;
     this.editOrder = null;
   }
 

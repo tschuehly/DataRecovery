@@ -20,6 +20,8 @@ import {HttpClient} from '@angular/common/http';
           <span>Produkt: {{order.product.category.name}} {{order.product.name}} </span>
           <span>Preis: {{order.product.price | number : '.2':'de' }} €</span>
           <span>TrackingId: {{order.trackingId}} €</span>
+          <span>Ersatz: {{order.replacement}}</span>
+
         </div>
         <div *ngIf="!edit" class="col-span-2 text-center text-2xl font-bold mt-6">Status: {{order.trackingState}}</div>
         <ng-container *ngIf="edit">

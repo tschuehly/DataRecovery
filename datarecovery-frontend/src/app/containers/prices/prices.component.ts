@@ -15,12 +15,14 @@ import {HttpClient} from "@angular/common/http";
     <div class="h-20 bg-white text-center">
       <h1 class="text-4xl text-black py-5 tracking-wider">Preise</h1>
     </div>
-    <div class="bg-gray-main flex container">
-      <div class="text-silver py-8 mx-auto justify-center">
-        <span class="font-bold text-white">Wichtig:</span> Es handelt sich um
-        <span class="font-bold text-white">Festpreise</span>, die nur <span class="font-bold text-white">nach Erfolg gelten.</span><br>
-        Sollte keine Datenrettung möglich sein ist die Bearbeitung vollständig kostenfrei.<br>
-        Alle angegebenen Preise sind bereits inklusive 19% Mehrwertsteuer.<br>
+    <div class="bg-gray-main  ">
+      <div class="container flex">
+        <div class="text-silver py-8 mx-auto justify-center">
+          <span class="font-bold text-white">Wichtig:</span> Es handelt sich um
+          <span class="font-bold text-white">Festpreise</span>, die nur <span class="font-bold text-white">nach Erfolg gelten.</span><br>
+          Sollte keine Datenrettung möglich sein ist die Bearbeitung vollständig kostenfrei.<br>
+          Alle angegebenen Preise sind bereits inklusive 19% Mehrwertsteuer.<br>
+        </div>
       </div>
     </div>
     <div class="grid grid-cols-1 xl:grid-cols-2  border-b-2 border-t-2">
@@ -28,11 +30,11 @@ import {HttpClient} from "@angular/common/http";
           <div class="bg-gray-main p-12" style="box-shadow: 0 2px 25px 0 black">
             <ng-container *ngFor="let category of categories " >
               <div class="mb-2">
-                <h1 class="text-2xl font-semibold mt-4 pb-2">{{category.title}}</h1>
+                <h1 class="text-lg font-semibold mt-4 pb-2">{{category.title}}</h1>
                 <div class="whitespace-pre-wrap" *ngIf="category.description">{{category.description}}</div>
                 <ng-container *ngFor="let product of products">
                   <div  *ngIf="product.category.id === category.id && product.price">
-                    {{category.name}} {{product.name}} {{product.price | number : '.2':'de' }} €
+                    {{category.name}} {{product.name}} <span class="whitespace-nowrap">{{product.price | number : '.2':'de' }} €</span>
                   </div>
                 </ng-container>
               </div>

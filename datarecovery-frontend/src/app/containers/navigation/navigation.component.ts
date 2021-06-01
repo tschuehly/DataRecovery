@@ -33,18 +33,18 @@ import { Subscription } from 'rxjs';
 
             <div class="grid gap-2 absolute justify-evenly p-3 bg-gray-300 text-xl dropdown text-black"
                  style="margin-right: 2.8rem; top: 5.5rem;" *ngIf="dropdownShow" [ngStyle]="mobileNavShow ? {'top':'0','width':'100%','left':'0','padding':'48px 0px','gap':'1.5rem'}:{}">
-              <a  (click)="mobileNavShow = false" routerLink="/datenrettung/hdd">HDD Festplatten</a>
-              <a  (click)="mobileNavShow = false" routerLink="/datenrettung/ssd">SSD Festplatten</a>
-              <a  (click)="mobileNavShow = false" routerLink="/datenrettung/flash">USB Stick<br>SD Karte</a>
-              <a  (click)="mobileNavShow = false" routerLink="/datenrettung/raid">RAID<br>Fusion Drive</a>
+              <a (click)="mobileNavShow = false" routerLink="/datenrettung/hdd">HDD Festplatten</a>
+              <a (click)="mobileNavShow = false" routerLink="/datenrettung/ssd">SSD Festplatten</a>
+              <a (click)="mobileNavShow = false" routerLink="/datenrettung/flash">USB Stick<br>SD Karte</a>
+              <a (click)="mobileNavShow = false" routerLink="/datenrettung/raid">RAID<br>Fusion Drive</a>
             </div>
           </div>
           <a (click)="mobileNavShow = false" class="cursor-pointer p-2" routerLink="about">Philosophie</a>
           <a (click)="mobileNavShow = false" class="cursor-pointer p-2" (click)="scrollToContact()">Kontakt</a>
           <div *ngIf="currentUser">
-            <a class=" p-2" routerLink="/order">Bestellungen</a>
-            <a class=" p-2" routerLink="/product">Produkte</a>
-            <a class=" p-2" routerLink="/category">Kategorien</a>
+            <a (click)="mobileNavShow = false" class=" p-2" routerLink="/order">Bestellungen</a>
+            <a (click)="mobileNavShow = false" class=" p-2" routerLink="/product">Produkte</a>
+            <a (click)="mobileNavShow = false" class=" p-2" routerLink="/category">Kategorien</a>
           </div>
         </div>
       </nav>
