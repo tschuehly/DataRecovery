@@ -7,7 +7,9 @@ services:
     expose:
       - "8088"
     env_file:
-      - .env
+      - jungbauer.env
+    depends_on:
+      - db
   frontend:
     build: datarecovery-frontend
     image: datarecovery-frontend:0.0.1
@@ -16,6 +18,16 @@ services:
       - backend
     command: [nginx-debug, '-g', 'daemon off;']
     env_file:
-      - .env
+      - jungbauer.env
     ports:
     - "80:80"
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=&fC6Pt4THH4^!x6@r8wR&Yz
+    expose:
+      - "5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    env_file:
+      - jungbauer.env
