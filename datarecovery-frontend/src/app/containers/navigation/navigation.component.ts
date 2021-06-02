@@ -11,13 +11,13 @@ import { Subscription } from 'rxjs';
   template: `
     <div class="flex flex-col h-screen">
       <nav class="flex fixed justify-between w-full text-silver bg-gray-main">
-        <a class="pl-2" href="">
-          <div class="bg-gray-main p-4 ">
-            <img src="/assets/LOGO_TJ_Datenrettung.svg" class="h-14">
+        <a  href="/">
+          <div class="bg-gray-main pl-4 py-4">
+            <img src="/assets/LOGO_TJ_Datenrettung.svg" class="h-14 w-96" alt="Datenrettung Jungbauer Logo">
           </div>
         </a>
-        <div class="flex md:hidden items-center mx-4 ">
-          <button class="p-2 border border-silver rounded" (click)="mobileNavShow = !mobileNavShow">
+        <div class="flex md:hidden items-center mx-4 flex-shrink">
+          <button class="p-2 border border-silver rounded" aria-label="Mobile Menu Button" (click)="mobileNavShow = !mobileNavShow">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 top-" style="stroke: #8f8f8f">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
@@ -40,7 +40,7 @@ import { Subscription } from 'rxjs';
             </div>
           </div>
           <a (click)="mobileNavShow = false" class="cursor-pointer p-2" routerLink="about">Philosophie</a>
-          <a (click)="mobileNavShow = false" class="cursor-pointer p-2" (click)="scrollToContact()">Kontakt</a>
+          <a (click)="mobileNavShow = false;scrollToContact()" class="cursor-pointer p-2">Kontakt</a>
           <div *ngIf="currentUser">
             <a (click)="mobileNavShow = false" class=" p-2" routerLink="/order">Bestellungen</a>
             <a (click)="mobileNavShow = false" class=" p-2" routerLink="/product">Produkte</a>
@@ -57,19 +57,19 @@ import { Subscription } from 'rxjs';
         <div class="flex align-middle text-white p-4 rounded-t-xl " style="background-color: rgb(9, 94, 84)">
           <span class="px-2">Jetzt Tobias Jungbauer kontaktieren</span>
           <button (click)="wawidgetHidden = true">
-            <img src="/assets/x-square.svg"></button>
+            <img src="/assets/x-square.svg" alt="Close Whatsapp Widget Button"></button>
         </div>
         <div class="h-20" style="background-image: url('/assets/wa_bg.png') ;background-color: #E5DDD5"></div>
         <div class="bg-white flex justify-center p-2 rounded-b-xl">
           <a href="https://wa.me/+4915161408355">
             <button class="flex align-middle p-2 pr-4 rounded text-white" style="background-color: #14C656">
-              <img class="h-6 inline px-2" src="/assets/WhatsApp.svg">Start Chat</button>
+              <img class="h-6 w-6  inline mx-2" src="/assets/WhatsApp.svg" alt="Whatsapp Logo">Start Chat</button>
           </a>
         </div>
       </div>
       <div class="fixed right-2 bottom-2 md:hidden" (click)="wawidgetHidden = false" *ngIf="wawidgetHidden">
         <button class="flex align-middle p-2 rounded text-white" style="background-color: #14C656">
-            <img class="h-6 inline" src="/assets/WhatsApp.svg">
+            <img class="h-6 w-6 inline" src="/assets/WhatsApp.svg" alt="Whatsapp Logo">
         </button></div>
       <footer class="pt-8 bg-gray-main text-silver">
         <div class="mb-4 text-center">
@@ -97,7 +97,7 @@ import { Subscription } from 'rxjs';
               <div class="h-72 mb-4 bg-gray-main">
                 <iframe id="myFrame"
                       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10688.664885486834!2d11.1017109!3d47.9525097!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x37d4dd90c24065cb!2sTobias%20Jungbauer%20Datenrettungsdienst%20-%20AmmerseeDatenrettung.de!5e0!3m2!1sde!2sde!4v1604148030912!5m2!1sde!2sde"
-                      width="{{innerWidth}}" height="300" frameborder="0" allowfullscreen="" aria-hidden="false"
+                      width="{{innerWidth}}" height="300" allowfullscreen="" aria-hidden="false"
                       tabindex="0"></iframe>
 
               </div>
@@ -130,7 +130,7 @@ export class NavigationComponent implements OnInit {
               private pageScrollService: PageScrollService,
               @Inject(DOCUMENT) private document: any,
               private ccService: NgcCookieConsentService) {
-    router.events.subscribe(value => {
+    router.events.subscribe(_ => {
       this.dropdownShow = false;
     });
   }
@@ -153,14 +153,14 @@ export class NavigationComponent implements OnInit {
   }
 
   @HostListener('window:resize', ['$event'])
-  onResize(event): void {
+  onResize(_): void {
     this.innerWidth = document.documentElement.clientWidth;
   }
 
   scrollToOrder(): void {
     this.router.navigate(['']).then(_ => {
       setTimeout(function () {
-        let orderForm = this.document.getElementById('order_form')
+        let orderForm = document.getElementById('order_form')
         orderForm.scrollIntoView({
           behavior: "smooth",
           block: "center"
@@ -171,7 +171,7 @@ export class NavigationComponent implements OnInit {
 
   scrollToContact(): void {
     setTimeout(function () {
-      let contact = this.document.getElementById('contact')
+      let contact = document.getElementById('contact')
       contact.scrollIntoView({
         behavior: "smooth",
         block: "center"

@@ -23,7 +23,6 @@ module.exports = {
         'silver' : 'rgb(197 197 197)'
       },
       backgroundImage: theme => ({
-        'img-hdd': " url('/assets/header.png')",
         'img-flash': "url('/assets/flash2.JPG')"
       })
     },

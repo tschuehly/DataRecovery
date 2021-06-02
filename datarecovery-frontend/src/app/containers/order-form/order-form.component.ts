@@ -31,9 +31,13 @@ import {Order, Product} from '../../model/model';
 
           <h2 class="px-12 font-semibold">Allgemeine Geschäftsbedingungen und Datenschutzrichtlinien:</h2>
           <div class="flex px-12">
-            <input class="self-center" type="checkbox" formControlName="agb" required><!-- TODO: Links-->
-            <span class="ml-4">Hiermit bestätige ich meine Einverständnis für die vorhandenen <a class="font-semibold" routerLink="impressum">Datenschutzrichtlinien</a> wie für die <a class="font-semibold" routerLink="agb">allgemeinen Geschäftsbedingungen</a></span>
-          </div>
+            <input class="self-center" type="checkbox" formControlName="agb" required id="agbCheckbox" >
+            <label for="agbCheckbox" class="ml-4">
+              Hiermit bestätige ich meine Einverständnis für die vorhandenen
+              <a class="font-semibold underline" routerLink="impressum">Datenschutzrichtlinien</a> wie für die
+              <a class="font-semibold underline" routerLink="agb">allgemeinen Geschäftsbedingungen</a></label>
+
+                      </div>
           <div class="flex justify-center mt-4 bg-silver p-4 rounded-b-2xl">
             <button (click)="submitProduct()"
                     class="bg-white py-2 px-4 shadow rounded text-black"
