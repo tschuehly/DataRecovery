@@ -22,7 +22,7 @@ import {ActivatedRoute} from '@angular/router';
             <button type="submit"
                     class="border-2 rounded-md p-2 "
                     [ngClass]="{'bg-red-500': !trackingForm.valid}"
-                    [disabled]="!trackingForm.valid">{{trackingForm.valid ? "Status erfragen" : "Füllen sie alle benötigten Felder aus" }}</button>
+                    [disabled]="!trackingForm.valid">{{trackingForm.valid ? "Status erfragen" : "Füllen Sie alle benötigten Felder aus" }}</button>
           </div>
         </form>
       </div>

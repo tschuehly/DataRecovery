@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {NgModule, ViewChild} from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,8 +29,10 @@ import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
 import { AboutComponent } from './containers/about/about.component';
 import {NgcCookieConsentConfig, NgcCookieConsentModule} from "ngx-cookieconsent";
+import { ReviewComponentComponent } from './components/review-component/review-component.component';
+import {First40WordsPipe} from "./pipes/first-twenty-words.pipe";
+import {SwiperModule} from "swiper/angular";
 registerLocaleData(localeDe);
-
 const cookieConfig:NgcCookieConsentConfig = {
   "cookie": {
     "domain": "www.jungbauerdatenrettung.de"
@@ -49,6 +51,7 @@ const cookieConfig:NgcCookieConsentConfig = {
       "border": "transparent"
     }
   },
+  container: document.getElementById('cookie'),
   layout:'',
   layouts: {
     "custom":'{{messagelink}}'
@@ -91,7 +94,9 @@ const cookieConfig:NgcCookieConsentConfig = {
         ImprintComponent,
         PricesComponent,
         AgbComponent,
-        AboutComponent
+        AboutComponent,
+        ReviewComponentComponent,
+        First40WordsPipe,
     ],
   imports: [
     BrowserModule,
@@ -102,10 +107,13 @@ const cookieConfig:NgcCookieConsentConfig = {
     NgxPageScrollCoreModule.forRoot({duration: 700, scrollOffset: 80}),
     BrowserAnimationsModule,
     ClickOutsideModule,
-    NgcCookieConsentModule.forRoot(cookieConfig)
+    NgcCookieConsentModule.forRoot(cookieConfig),
+    SwiperModule
   ],
   providers: [
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  @ViewChild(NavigationComponent) nav;
+}

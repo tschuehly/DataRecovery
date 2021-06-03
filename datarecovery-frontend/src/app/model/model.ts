@@ -69,3 +69,12 @@ export class User {
   role: string;
   email: string;
 }
+export class Review{
+  author_name: string;
+  author_url: string;
+  profile_photo_url: string;
+  rating: number;
+  relative_time_description: String
+  text: string;
+  time: number;
+}

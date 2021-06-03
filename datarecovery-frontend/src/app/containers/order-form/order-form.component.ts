@@ -43,7 +43,7 @@ import {Order, Product} from '../../model/model';
                     class="bg-white py-2 px-4 shadow rounded text-black"
                     [disabled]="!(this.orderForm.get('product').valid && this.orderForm.get('agb').value == true)"
                     [ngClass]="{'bg-gray-300 cursor-default': !(this.orderForm.get('product').valid && this.orderForm.get('agb').value == true)}">
-              {{this.orderForm.get('product').valid && this.orderForm.get('agb').value == true ? "Auftragsdaten eingeben" : "Füllen sie alle benötigten Felder aus" }}
+              {{this.orderForm.get('product').valid && this.orderForm.get('agb').value == true ? "Auftragsdaten eingeben" : "Füllen Sie alle benötigten Felder aus" }}
             </button>
           </div>
 
@@ -76,7 +76,7 @@ import {Order, Product} from '../../model/model';
             <button type="submit"
                     class="bg-white py-2 px-4 shadow rounded text-black "
                     [ngClass]="{'bg-gray-300 cursor-default': !orderForm.valid}"
-                    [disabled]="!orderForm.valid">{{orderForm.valid ? "Auftrag abschicken" : "Füllen sie alle benötigten Felder aus" }}</button>
+                    [disabled]="!orderForm.valid">{{orderForm.valid ? "Auftrag abschicken" : "Füllen Sie alle benötigten Felder aus" }}</button>
           </div>
         </ng-container>
 

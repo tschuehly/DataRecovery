@@ -24,6 +24,7 @@
     "@angular/router": "~11.2.4",
     "@ngneat/tailwind": "^7.0.3",
     "@popperjs/core": "^2.9.1",
+    "@types/google.maps": "^3.44.6",
     "cookieconsent": "^3.1.1",
     "ng-click-outside": "^7.0.1",
     "ngx-cookieconsent": "^2.2.3",
@@ -31,6 +32,7 @@
     "ngx-page-scroll-core": "^7.0.4",
     "postcss": "^8.2.7",
     "rxjs": "~6.5.5",
+    "swiper": "^6.7.0",
     "tailwind": "^4.0.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"

@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
   selector: 'app-navigation',
   template: `
     <div class="flex flex-col h-screen">
-      <nav class="flex fixed justify-between w-full text-silver bg-gray-main">
+      <nav class="flex fixed justify-between w-full text-silver bg-gray-main z-50" id="navigation">
         <a  href="/">
           <div class="bg-gray-main pl-4 py-4">
             <img src="/assets/LOGO_TJ_Datenrettung.svg" class="h-14 w-96" alt="Datenrettung Jungbauer Logo">
@@ -53,7 +53,7 @@ import { Subscription } from 'rxjs';
 
         <router-outlet></router-outlet>
       </div>
-      <div class="fixed right-2 bottom-2 shadow-2xl rounded-xl m" [ngClass]="wawidgetHidden ? 'hidden':''">
+      <div class="fixed right-2 bottom-2 shadow-2xl rounded-xl z-20" [ngClass]="wawidgetHidden ? 'hidden':''">
         <div class="flex align-middle text-white p-4 rounded-t-xl " style="background-color: rgb(9, 94, 84)">
           <span class="px-2">Jetzt Tobias Jungbauer kontaktieren</span>
           <button (click)="wawidgetHidden = true">
@@ -67,7 +67,7 @@ import { Subscription } from 'rxjs';
           </a>
         </div>
       </div>
-      <div class="fixed right-2 bottom-2 md:hidden" (click)="wawidgetHidden = false" *ngIf="wawidgetHidden">
+      <div class="fixed right-2 bottom-2 md:hidden z-20" (click)="wawidgetHidden = false" *ngIf="wawidgetHidden">
         <button class="flex align-middle p-2 rounded text-white" style="background-color: #14C656">
             <img class="h-6 w-6 inline" src="/assets/WhatsApp.svg" alt="Whatsapp Logo">
         </button></div>
