@@ -24,10 +24,9 @@ const routes: Routes = [
   {path: 'datenrettung/:variant', component: StaticComponent},
   {path: 'impressum', component: ImprintComponent},
   {path: 'agb', component: AgbComponent},
-  {path: 'about', component: AboutComponent},
+  {path: 'philosophie', component: AboutComponent},
   {path: 'preise', component: PricesComponent},
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]

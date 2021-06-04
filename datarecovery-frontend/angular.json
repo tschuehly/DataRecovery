@@ -49,6 +49,8 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
+              "src/robots.txt",
+              "src/sitemap.xml",
               "src/assets"
             ],
             "styles": [
