@@ -32,6 +32,8 @@ import {NgcCookieConsentConfig, NgcCookieConsentModule} from "ngx-cookieconsent"
 import { ReviewComponentComponent } from './components/review-component/review-component.component';
 import {First40WordsPipe} from "./pipes/first-twenty-words.pipe";
 import {SwiperModule} from "swiper/angular";
+import {GoogleAnalyticsService} from "./services/google-analytics.service";
+import { PrivacyComponent } from './containers/privacy/privacy.component';
 registerLocaleData(localeDe);
 const cookieConfig:NgcCookieConsentConfig = {
   "cookie": {
@@ -68,7 +70,7 @@ const cookieConfig:NgcCookieConsentConfig = {
     "dismiss": "Got it!",
     "deny": "Cookies verbieten",
     "link": "Datenschutzbestimmungen",
-    "href": "/impressum",
+    "href": "/datenschutz",
     "policy": "Cookie Policy",
     "header": "Cookies used on the website!",
     "allow": "Cookies erlauben"
@@ -97,6 +99,7 @@ const cookieConfig:NgcCookieConsentConfig = {
         AboutComponent,
         ReviewComponentComponent,
         First40WordsPipe,
+        PrivacyComponent,
     ],
   imports: [
     BrowserModule,
@@ -111,6 +114,7 @@ const cookieConfig:NgcCookieConsentConfig = {
     SwiperModule
   ],
   providers: [
+    GoogleAnalyticsService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,11 +1,12 @@
 import {Component, EventEmitter, HostListener, Inject, Input, OnInit, Output} from '@angular/core';
 import {User} from '../../model/model';
-import {Router} from '@angular/router';
+import {NavigationEnd, Router} from '@angular/router';
 import {PageScrollService} from 'ngx-page-scroll-core';
 import {DOCUMENT} from '@angular/common';
 import { NgcCookieConsentService, NgcStatusChangeEvent } from 'ngx-cookieconsent';
 import { Subscription } from 'rxjs';
 
+declare let gtag: Function;
 @Component({
   selector: 'app-navigation',
   template: `
@@ -39,7 +40,7 @@ import { Subscription } from 'rxjs';
               <a (click)="mobileNavShow = false" routerLink="/datenrettung/raid">RAID<br>Fusion Drive</a>
             </div>
           </div>
-          <a (click)="mobileNavShow = false" class="cursor-pointer p-2" routerLink="about">Philosophie</a>
+          <a (click)="mobileNavShow = false" class="cursor-pointer p-2" routerLink="philosophie">Philosophie</a>
           <a (click)="mobileNavShow = false;scrollToContact()" class="cursor-pointer p-2">Kontakt</a>
           <div *ngIf="currentUser">
             <a (click)="mobileNavShow = false" class=" p-2" routerLink="/order">Bestellungen</a>
@@ -78,7 +79,7 @@ import { Subscription } from 'rxjs';
               <h1 class="mb-2 text-4xl">Kontakt</h1>
               <p>
                 Tobias Jungbauer<br/>
-                Datenrettungsdienst<br/>
+                Datenrettung<br/>
                 <a href="mailto:info@jungbauerdatenrettung.de">info@jungbauerdatenrettung.de</a><br/>
                 Tel.: +49 15161408355
               </p>
@@ -96,14 +97,14 @@ import { Subscription } from 'rxjs';
             <ng-container *ngIf="mapsIframeShow">
               <div class="h-72 mb-4 bg-gray-main">
                 <iframe id="myFrame"
-                      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10688.664885486834!2d11.1017109!3d47.9525097!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x37d4dd90c24065cb!2sTobias%20Jungbauer%20Datenrettungsdienst%20-%20AmmerseeDatenrettung.de!5e0!3m2!1sde!2sde!4v1604148030912!5m2!1sde!2sde"
+                      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10688.664885486834!2d11.1017109!3d47.9525097!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x37d4dd90c24065cb!2sTobias%20Jungbauer%20Datenrettung%20-%20AmmerseeDatenrettung.de!5e0!3m2!1sde!2sde!4v1604148030912!5m2!1sde!2sde"
                       width="{{innerWidth}}" height="300" allowfullscreen="" aria-hidden="false"
                       tabindex="0"></iframe>
 
               </div>
             </ng-container>
           <div class=" border-b py-4 divide-x-2 divide-silver">
-            <a routerLink="impressum" class="pr-4">Impressum & Datenschutz</a><a class="px-4" routerLink="agb">AGB</a>
+            <a routerLink="impressum" class="pr-4">Impressum</a><a routerLink="datenschutz" class="px-4">Datenschutz</a><a class="pl-4" routerLink="agb">AGB</a>
           </div>
           <div class="col-span-2 pt-4 divide-x-2 divide-silver">
             <span class="pr-4">Developed by <a class="font-bold" href="https://www.linkedin.com/in/tschuehly/">Thomas Schühly</a></span>
@@ -124,6 +125,7 @@ export class NavigationComponent implements OnInit {
   mobileNavShow: boolean = false;
   wawidgetHidden: boolean = true;
   mapsIframeShow: boolean = false;
+
   private popupOpenSubscription: Subscription;
   private statusChangeSubscription: Subscription;
   constructor(private router: Router,
@@ -137,14 +139,20 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit(): void {
     this.innerWidth = document.documentElement.clientWidth;
-    this.popupOpenSubscription = this.ccService.popupOpen$.subscribe(
-      () => {
-        // you can use this.ccService.getConfig() to do stuff...
-      });
     this.statusChangeSubscription = this.ccService.statusChange$.subscribe(
       (event: NgcStatusChangeEvent) => {
         if(event.status === "allow"){
+          gtag('js', new Date());
           this.mapsIframeShow = true;
+          this.router.events.subscribe(event => {
+            if(event instanceof NavigationEnd){
+              gtag('config', 'G-VPEC2J7SDM',
+                {
+                  'page_path': event.urlAfterRedirects
+                }
+              );
+            }
+          });
         }
         if(event.status === "deny"){
           this.mapsIframeShow = false;
