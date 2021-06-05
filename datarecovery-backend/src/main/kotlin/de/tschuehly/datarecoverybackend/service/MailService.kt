@@ -84,7 +84,7 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
         Bitte versenden Sie Ihre Datenträger verfolgbar an folgende Adresse:</h2><p style="Margin-top: 16px;Margin-bottom: 0;"><br />
         
         Tobias Jungbauer<br />
-        Datenrettungsdienst<br />
+        Datenrettung<br />
         Am Stein 9<br />
         85049 Ingolstadt<br />
         

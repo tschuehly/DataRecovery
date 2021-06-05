@@ -142,13 +142,21 @@ export class NavigationComponent implements OnInit {
     this.statusChangeSubscription = this.ccService.statusChange$.subscribe(
       (event: NgcStatusChangeEvent) => {
         if(event.status === "allow"){
+          let node = document.createElement('script'); // creates the script tag
+          node.src = 'https://www.googletagmanager.com/gtag/js?id=G-VPEC2J7SDM'; // sets the source (insert url in between quotes)
+          node.type = 'text/javascript'; // set the script type
+          node.async = true; // makes script run asynchronously
+          node.charset = 'utf-8';
+          // append to head of document
+          document.getElementsByTagName('head')[0].appendChild(node);
           gtag('js', new Date());
           this.mapsIframeShow = true;
           this.router.events.subscribe(event => {
             if(event instanceof NavigationEnd){
               gtag('config', 'G-VPEC2J7SDM',
                 {
-                  'page_path': event.urlAfterRedirects
+                  'page_path': event.urlAfterRedirects,
+                  'anonymize_ip': true
                 }
               );
             }

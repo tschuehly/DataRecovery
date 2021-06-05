@@ -48,10 +48,10 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
                       {{showReview ? currentReview.text : (currentReview.text | First40Words) }}
                     </p>
                   </div>
-                  <div class="flex justify-between">
+                  <div class="flex justify-between space-x-2">
                     <button class="border border-gray-300 p-2 rounded">
                       <a
-                        href="https://www.google.de/search?&q=Tobias+Jungbauer+Datenrettungsdienst&entrypoint=sh/x/kp/local#lrd=0x479c339724e79353:0x37d4dd90c24065cb,1"
+                        href="https://www.google.de/search?&q=Tobias+Jungbauer+Datenrettung&entrypoint=sh/x/kp/local#lrd=0x479c339724e79353:0x37d4dd90c24065cb,1"
                         rel="noopener">
                         Weitere Bewertungen
                       </a>

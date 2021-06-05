@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
     <div class="container sm:px-10 my-10">
       <div id="comp-ih25sfqx1" class="_2bafp" data-testid="richTextElement"><p><span style="font-weight:bold">ALLGEMEINE GESCHÄFTSBEDINGUNGEN</span></p>
 
-        <p >für Dienstleistungen der Firma Tobias Jungbauer Datenrettungsdienst</p>
+        <p >für Dienstleistungen der Firma Tobias Jungbauer Datenrettung</p>
 
         <p><span style="font-style:italic">Stand: 2020/21</span></p>
         <br>
-        <p>Tobias Jungbauer Datenrettungsdienst
+        <p>Tobias Jungbauer Datenrettung
           Am Stein 9
           85049 Ingolstadte<br>
           Telefon: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; +4915161408355<br>
@@ -25,7 +25,7 @@ import { Component, OnInit } from '@angular/core';
 
         <p><span style="text-decoration:underline">1. Geltungsbereich</span></p>
 
-        <p>Diese Geschäftsbedingungen gelten für alle Kaufverträge und Werkverträge bei Tobias Jungbauer Datenrettungsdienst, die von Privatkunden oder von Geschäftskunden getätigt werden. Zusätzlich zu den AGB gelten §§ 631 ff. BGB.</p>
+        <p>Diese Geschäftsbedingungen gelten für alle Kaufverträge und Werkverträge bei Tobias Jungbauer Datenrettung, die von Privatkunden oder von Geschäftskunden getätigt werden. Zusätzlich zu den AGB gelten §§ 631 ff. BGB.</p>
 
         <p>Privatkunden in diesem Sinne sind Personen mit Wohnsitz und Lieferadresse in der Bundesrepublik Deutschland, soweit die von ihnen bestellten Waren weder ihrer gewerblichen noch ihrer selbstständigen beruflichen Tätigkeit zugerechnet werden können.</p>
 
@@ -47,7 +47,7 @@ import { Component, OnInit } from '@angular/core';
 
         <p><span style="text-decoration:underline">4. Zahlungsverzug</span></p>
 
-        <p>Kommen Sie in Zahlungsverzug, so ist Tobias Jungbauer Datenrettungsdienst berechtigt, Verzugszinsen in Höhe von 5 Prozentpunkten über dem von der Deutschen Bundesbank für den Zeitpunkt der Bestellung bekannt gegebenen Basiszinssatz p.a. zu fordern. Falls Tobias Jungbauer Datenrettungsdienst ein höherer Verzugsschaden nachweisbar entstanden ist, ist Tobias Jungbauer Datenrettungsdienst berechtigt, diesen geltend zu machen.</p>
+        <p>Kommen Sie in Zahlungsverzug, so ist Tobias Jungbauer Datenrettung berechtigt, Verzugszinsen in Höhe von 5 Prozentpunkten über dem von der Deutschen Bundesbank für den Zeitpunkt der Bestellung bekannt gegebenen Basiszinssatz p.a. zu fordern. Falls Tobias Jungbauer Datenrettung ein höherer Verzugsschaden nachweisbar entstanden ist, ist Tobias Jungbauer Datenrettung berechtigt, diesen geltend zu machen.</p>
 
         <p>&nbsp;</p>
 
@@ -63,16 +63,12 @@ import { Component, OnInit } from '@angular/core';
 
         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Deutschland</p>
 
-        <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Schweiz</p>
-
-        <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Österreich</p>
-
         <p><br>
-          (2) Macht höhere Gewalt (Naturkatastrophen, Krieg, Bürgerkrieg, Terroranschlag) die Lieferung oder eine sonstige Leistung dauerhaft unmöglich, ist eine Leistungspflicht von Tobias Jungbauer Datenrettungsdienst ausgeschlossen. Bereits gezahlte Beträge werden von Tobias Jungbauer Datenrettungsdienst unverzüglich erstattet.</p>
+          (2) Macht höhere Gewalt (Naturkatastrophen, Krieg, Bürgerkrieg, Terroranschlag) die Lieferung oder eine sonstige Leistung dauerhaft unmöglich, ist eine Leistungspflicht von Tobias Jungbauer Datenrettung ausgeschlossen. Bereits gezahlte Beträge werden von Tobias Jungbauer Datenrettung unverzüglich erstattet.</p>
 
         <p>&nbsp;</p>
 
-        <p>(3) Tobias Jungbauer Datenrettungsdienst kann außerdem die Leistung verweigern, soweit diese einen Aufwand erfordert, der unter Beachtung des Inhalts und der Gebote von Treu und Glauben in einem groben Missverhältnis zu dem Interesse des Kunden an der Erfüllung des Vertrages steht. Bereits gezahlte Beträge werden von Tobias Jungbauer Datenrettungsdienst unverzüglich erstattet.</p>
+        <p>(3) Tobias Jungbauer Datenrettung kann außerdem die Leistung verweigern, soweit diese einen Aufwand erfordert, der unter Beachtung des Inhalts und der Gebote von Treu und Glauben in einem groben Missverhältnis zu dem Interesse des Kunden an der Erfüllung des Vertrages steht. Bereits gezahlte Beträge werden von Tobias Jungbauer Datenrettung unverzüglich erstattet.</p>
 
         <p>&nbsp;</p>
 
@@ -88,7 +84,7 @@ import { Component, OnInit } from '@angular/core';
 
         <p><span style="text-decoration:underline">8. Mängelrechte</span></p>
 
-        <p>(1) Ein bereits bei der Lieferung mangelhaftes Produkt (Gewährleistungsfall) wird Tobias Jungbauer Datenrettungsdienst nach Wahl des Kunden auf Kosten von Tobias Jungbauer Datenrettungsdienst durch ein mangelfreies ersetzen oder fachgerecht reparieren lassen (Nacherfüllung). Der Kunde wird darauf hingewiesen, dass kein Gewährleistungsfall vorliegt, wenn das Produkt bei Gefahrübergang die vereinbarte Beschaffenheit hatte. Ein Gewährleistungsfall liegt insbesondere in folgenden Fällen nicht vor:</p>
+        <p>(1) Ein bereits bei der Lieferung mangelhaftes Produkt (Gewährleistungsfall) wird Tobias Jungbauer Datenrettung nach Wahl des Kunden auf Kosten von Tobias Jungbauer Datenrettung durch ein mangelfreies ersetzen oder fachgerecht reparieren lassen (Nacherfüllung). Der Kunde wird darauf hingewiesen, dass kein Gewährleistungsfall vorliegt, wenn das Produkt bei Gefahrübergang die vereinbarte Beschaffenheit hatte. Ein Gewährleistungsfall liegt insbesondere in folgenden Fällen nicht vor:</p>
 
         <p>a)&nbsp; bei Schäden, die beim Kunden durch Missbrauch oder unsachgemäßen Gebrauch entstanden sind,</p>
 
@@ -96,15 +92,15 @@ import { Component, OnInit } from '@angular/core';
 
         <p>&nbsp;</p>
 
-        <p>(2) Tobias Jungbauer Datenrettungsdienst leistet ferner keine Gewähr für einen Fehler, der durch unsachgemäße Reparatur durch einen nicht vom Hersteller autorisierten Servicepartner entstanden ist.</p>
+        <p>(2) Tobias Jungbauer Datenrettung leistet ferner keine Gewähr für einen Fehler, der durch unsachgemäße Reparatur durch einen nicht vom Hersteller autorisierten Servicepartner entstanden ist.</p>
 
         <p>&nbsp;</p>
 
-        <p>(3) Erfordert die vom Kunden gewünschte Art der Nacherfüllung (Ersatzlieferung oder Reparatur) einen Aufwand, der in Anbetracht des Produktpreises unter Beachtung des Vertragsinhaltes und der Gebote von Treu und Glauben in einem groben Missverhältnis zu dem Leistungsinteresse des Kunden steht – wobei insbesondere der Wert des zu verrichtenden Werkes im mangelfreien Zustand, die Bedeutung des Mangels und die Frage zu berücksichtigen sind, ob auf die andere Art der Nacherfüllung ohne erhebliche Nachteile für den Kunden zurückgegriffen werden kann – beschränkt sich der Anspruch des Kunden auf die jeweils andere Art der Nacherfüllung. Das Recht von Tobias Jungbauer Datenrettungsdienst, auch diese andere Art der Nacherfüllung unter der vorgenannten Voraussetzung zu verweigern, bleibt unberührt.&nbsp;</p>
+        <p>(3) Erfordert die vom Kunden gewünschte Art der Nacherfüllung (Ersatzlieferung oder Reparatur) einen Aufwand, der in Anbetracht des Produktpreises unter Beachtung des Vertragsinhaltes und der Gebote von Treu und Glauben in einem groben Missverhältnis zu dem Leistungsinteresse des Kunden steht – wobei insbesondere der Wert des zu verrichtenden Werkes im mangelfreien Zustand, die Bedeutung des Mangels und die Frage zu berücksichtigen sind, ob auf die andere Art der Nacherfüllung ohne erhebliche Nachteile für den Kunden zurückgegriffen werden kann – beschränkt sich der Anspruch des Kunden auf die jeweils andere Art der Nacherfüllung. Das Recht von Tobias Jungbauer Datenrettung, auch diese andere Art der Nacherfüllung unter der vorgenannten Voraussetzung zu verweigern, bleibt unberührt.&nbsp;</p>
 
         <p>&nbsp;</p>
 
-        <p>(4) Sowohl für den Fall der Reparatur als auch für den Fall der Ersatzlieferung ist der Kunde verpflichtet, das Produkt auf Kosten von Tobias Jungbauer Datenrettungsdienst unter Angabe der Auftragsnummer an die von ihr angegebene Rücksendeadresse einzusenden.&nbsp;</p>
+        <p>(4) Sowohl für den Fall der Reparatur als auch für den Fall der Ersatzlieferung ist der Kunde verpflichtet, das Produkt auf Kosten von Tobias Jungbauer Datenrettung unter Angabe der Auftragsnummer an die von ihr angegebene Rücksendeadresse einzusenden.&nbsp;</p>
 
         <p>&nbsp;</p>
 
@@ -112,7 +108,7 @@ import { Component, OnInit } from '@angular/core';
 
         <p>a)&nbsp; wenn sich der zum Rücktritt berechtigende Mangel erst während der Verarbeitung oder Umgestaltung gezeigt hat,</p>
 
-        <p>b)&nbsp; wenn Tobias Jungbauer Datenrettungsdienst die Verschlechterung oder den Untergang zu vertreten hat oder der Schaden auch bei Tobias Jungbauer Datenrettungsdienst eingetreten wäre,</p>
+        <p>b)&nbsp; wenn Tobias Jungbauer Datenrettung die Verschlechterung oder den Untergang zu vertreten hat oder der Schaden auch bei Tobias Jungbauer Datenrettung eingetreten wäre,</p>
 
         <p>c)&nbsp; wenn die Verschlechterung oder der Untergang beim Kunden eingetreten ist, obwohl dieser diejenige Sorgfalt beachtet hat, die er in eigenen Angelegenheiten anzuwenden pflegt.</p>
 
@@ -130,31 +126,31 @@ import { Component, OnInit } from '@angular/core';
 
         <p>&nbsp;</p>
 
-        <p>9) Die gesetzliche Gewährleistung von Tobias Jungbauer Datenrettungsdienst endet zwei Jahre ab Lieferung der Ware. Die Frist beginnt mit dem Erhalt der Ware.</p>
+        <p>9) Die gesetzliche Gewährleistung von Tobias Jungbauer Datenrettung endet zwei Jahre ab Lieferung der Ware. Die Frist beginnt mit dem Erhalt der Ware.</p>
 
         <p>&nbsp;</p>
 
         <p><span style="text-decoration:underline">9. Haftung</span></p>
 
-        <p>(1) Bei leichter Fahrlässigkeit haftet Tobias Jungbauer Datenrettungsdienst nur bei der Verletzung vertragswesentlicher Pflichten, deren Erfüllung zur Erreichung des Vertragszwecks notwendig sind, und beschränkt auf den vorhersehbaren Schaden. Diese Beschränkung gilt nicht bei der Verletzung von Leben, Körper und Gesundheit. Für sonstige leicht fahrlässig durch einen Mangel des zu verrichtenden Werkes verursachte Schäden haftet Tobias Jungbauer Datenrettungsdienst nicht.</p>
+        <p>(1) Bei leichter Fahrlässigkeit haftet Tobias Jungbauer Datenrettung nur bei der Verletzung vertragswesentlicher Pflichten, deren Erfüllung zur Erreichung des Vertragszwecks notwendig sind, und beschränkt auf den vorhersehbaren Schaden. Diese Beschränkung gilt nicht bei der Verletzung von Leben, Körper und Gesundheit. Für sonstige leicht fahrlässig durch einen Mangel des zu verrichtenden Werkes verursachte Schäden haftet Tobias Jungbauer Datenrettung nicht.</p>
 
         <p>&nbsp;</p>
 
-        <p>(2) Unabhängig von einem Verschulden von Tobias Jungbauer Datenrettungsdienst bleibt eine Haftung von Tobias Jungbauer Datenrettungsdienst bei arglistigem Verschweigen des Mangels oder aus der Übernahme einer Garantie unberührt. Die Herstellergarantie ist eine Garantie des Herstellers und stellt keine Übernahme einer Garantie durch Tobias Jungbauer Datenrettungsdienst dar.</p>
+        <p>(2) Unabhängig von einem Verschulden von Tobias Jungbauer Datenrettung bleibt eine Haftung von Tobias Jungbauer Datenrettung bei arglistigem Verschweigen des Mangels oder aus der Übernahme einer Garantie unberührt. Die Herstellergarantie ist eine Garantie des Herstellers und stellt keine Übernahme einer Garantie durch Tobias Jungbauer Datenrettung dar.</p>
 
         <p>&nbsp;</p>
 
-        <p>(3) Tobias Jungbauer Datenrettungsdienst ist auch für die während ihres Verzugs durch Zufall eintretende Unmöglichkeit der Lieferung verantwortlich, es sei denn, dass der Schaden auch bei rechtzeitiger Lieferung eingetreten wäre.</p>
+        <p>(3) Tobias Jungbauer Datenrettung ist auch für die während ihres Verzugs durch Zufall eintretende Unmöglichkeit der Lieferung verantwortlich, es sei denn, dass der Schaden auch bei rechtzeitiger Lieferung eingetreten wäre.</p>
 
         <p>&nbsp;</p>
 
-        <p>(4) Ausgeschlossen ist die persönliche Haftung der gesetzlichen Vertreter, Erfüllungsgehilfen und Betriebsangehörigen von Tobias Jungbauer Datenrettungsdienst für von ihnen durch leichte Fahrlässigkeit verursachte Schäden.</p>
+        <p>(4) Ausgeschlossen ist die persönliche Haftung der gesetzlichen Vertreter, Erfüllungsgehilfen und Betriebsangehörigen von Tobias Jungbauer Datenrettung für von ihnen durch leichte Fahrlässigkeit verursachte Schäden.</p>
 
         <p>&nbsp;</p>
 
         <p><span style="text-decoration:underline">10. Anwendbares Recht</span></p>
 
-        <p>Der zwischen Ihnen und Tobias Jungbauer Datenrettungsdienst abgeschlossene Vertrag unterliegt ausschließlich dem Recht der Bundesrepublik Deutschland unter ausdrücklichem Ausschluss des UN-Kaufrechts. Unberührt davon bleiben die zwingenden Bestimmungen des Staates, in dem Sie Ihren gewöhnlichen Aufenthalt haben.</p>
+        <p>Der zwischen Ihnen und Tobias Jungbauer Datenrettung abgeschlossene Vertrag unterliegt ausschließlich dem Recht der Bundesrepublik Deutschland unter ausdrücklichem Ausschluss des UN-Kaufrechts. Unberührt davon bleiben die zwingenden Bestimmungen des Staates, in dem Sie Ihren gewöhnlichen Aufenthalt haben.</p>
 
         <p>&nbsp;</p>
 
