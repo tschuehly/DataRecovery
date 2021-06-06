@@ -51,7 +51,7 @@ class UserController(
 
     @GetMapping("/logout")
     fun logout(response: HttpServletResponse, request: HttpServletRequest): String {
-        val jwtToken = request.getHeader("Cookie").substringAfter("Bearer ")
+        val jwtToken = request.getHeader("Cookie")?.substringAfter("Bearer ")
         response.setHeader("Set-Cookie","JWT=Bearer ${jwtToken}; Secure; HttpOnly; SameSite=Strict;Max-Age=-1;Path=/")
         return "{\"logout\": \"true\"}"
 

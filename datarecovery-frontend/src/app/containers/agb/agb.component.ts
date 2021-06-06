@@ -63,10 +63,6 @@ import { Component, OnInit } from '@angular/core';
 
         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Deutschland</p>
 
-        <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Schweiz</p>
-
-        <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Österreich</p>
-
         <p><br>
           (2) Macht höhere Gewalt (Naturkatastrophen, Krieg, Bürgerkrieg, Terroranschlag) die Lieferung oder eine sonstige Leistung dauerhaft unmöglich, ist eine Leistungspflicht von Cassandra Schilling Datenrettungsdienst ausgeschlossen. Bereits gezahlte Beträge werden von Cassandra Schilling Datenrettungsdienst unverzüglich erstattet.</p>
 

@@ -40,6 +40,8 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
         helper.setText(html,true)
 
         javaMailSender.send(msg)
+        helper.setTo("info@datenrettung-schilling.de")
+        javaMailSender.send(msg)
     }
 
     fun sendParcelReceived (order: Order){
@@ -68,7 +70,7 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
         
         <span style="font-weight: bold">TrackingId:</span> 7fb274bc-f00e-4a97-9496-cd41d399e271</p>
         Sie können den aktuellen Status hier einsehen:
-        <a href=https://www.datenrettung-schilling.de//tracking/${order.trackingId}/${order.customer?.postalCode}>Aktueller Status</a>
+        <a href=https://www.datenrettung-schilling.de/tracking/${order.trackingId}/${order.customer?.postalCode}>Aktueller Status</a>
         <br/>
         <h2 style="Margin-top: 20px;Margin-bottom: 0;font-style: normal;font-weight: normal;color: #706f70;font-size: 18px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;">Ihre Auftragsdaten</h2><p style="Margin-top: 16px;Margin-bottom: 20px;">
         ${order.customer?.firstName} ${order.customer?.lastName}<br />

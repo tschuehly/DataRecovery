@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {NgModule, ViewChild} from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,8 +27,55 @@ import { PricesComponent } from './containers/prices/prices.component';
 import { AgbComponent } from './containers/agb/agb.component';
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
+import { AboutComponent } from './containers/about/about.component';
+import {NgcCookieConsentConfig, NgcCookieConsentModule} from "ngx-cookieconsent";
+import { ReviewComponentComponent } from './components/review-component/review-component.component';
+import {First40WordsPipe} from "./pipes/first-twenty-words.pipe";
+import {SwiperModule} from "swiper/angular";
+import {GoogleAnalyticsService} from "./services/google-analytics.service";
+import { PrivacyComponent } from './containers/privacy/privacy.component';
 registerLocaleData(localeDe);
+const cookieConfig:NgcCookieConsentConfig = {
+  "cookie": {
+    "domain": "www.jungbauerdatenrettung.de"
+  },
+  "position": "bottom",
+  "theme": "edgeless",
+  "palette": {
+    "popup": {
+      "background": "#1d1d1d",
+      "text": "#c5c5c5",
+      "link": "#ffffff"
+    },
+    "button": {
+      "background": "#c5c5c5",
+      "text": "#000000",
+      "border": "transparent"
+    }
+  },
+  container: document.getElementById('cookie'),
+  layout:'',
+  layouts: {
+    "custom":'{{messagelink}}'
+  },
+  elements:{
+    messagelink: `
+    <span class="p-4">{{message}} <a href="{{href}}" class="underline">{{link}}</a></span>
 
+    `,
+  },
+  "type": "opt-in",
+  "content": {
+    "message": "Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies.",
+    "dismiss": "Got it!",
+    "deny": "Cookies verbieten",
+    "link": "Datenschutzbestimmungen",
+    "href": "/datenschutz",
+    "policy": "Cookie Policy",
+    "header": "Cookies used on the website!",
+    "allow": "Cookies erlauben"
+  }
+}
 @NgModule({
     declarations: [
         AppComponent,
@@ -48,7 +95,11 @@ registerLocaleData(localeDe);
         CategoryDetailComponent,
         ImprintComponent,
         PricesComponent,
-        AgbComponent
+        AgbComponent,
+        AboutComponent,
+        ReviewComponentComponent,
+        First40WordsPipe,
+        PrivacyComponent,
     ],
   imports: [
     BrowserModule,
@@ -58,10 +109,15 @@ registerLocaleData(localeDe);
     FormsModule,
     NgxPageScrollCoreModule.forRoot({duration: 700, scrollOffset: 80}),
     BrowserAnimationsModule,
-    ClickOutsideModule
+    ClickOutsideModule,
+    NgcCookieConsentModule.forRoot(cookieConfig),
+    SwiperModule
   ],
   providers: [
+    GoogleAnalyticsService
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  @ViewChild(NavigationComponent) nav;
+}

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Category, Product} from '../../model/model';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpErrorResponse} from '@angular/common/http';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-category',
@@ -78,11 +79,16 @@ export class CategoryComponent implements OnInit {
   categories: Category[];
   editCategory: Category;
   showDelConfirm = false;
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
     this.http.get('api/category').subscribe((categories: Category[]) => {
       this.categories = categories;
+    },(error:HttpErrorResponse) => {
+      if(error.status === 401){
+        this.router.navigate(['/login'])
+
+      }
     });
   }
 

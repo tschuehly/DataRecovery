@@ -23,11 +23,11 @@ import {HttpClient} from "@angular/common/http";
           <div class="p-12 inline-block">
             <ng-container *ngFor="let category of categories " >
               <div class="mb-2">
-                <h1 class="text-2xl font-semibold mt-4 pb-2">{{category.title}}</h1>
+                <h1 class="text-lg font-semibold mt-4 pb-2">{{category.title}}</h1>
                 <div class="whitespace-pre-wrap" *ngIf="category.description">{{category.description}}</div>
                 <ng-container *ngFor="let product of products">
                   <div  *ngIf="product.category.id === category.id && product.price">
-                    {{category.name}} {{product.name}} {{product.price | number : '.2':'de' }} €
+                    {{category.name}} {{product.name}} <span class="whitespace-nowrap">{{product.price | number : '.2':'de' }} €</span>
                   </div>
                 </ng-container>
               </div>

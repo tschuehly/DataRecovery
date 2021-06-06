@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Category, Order, Product} from '../../model/model';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpErrorResponse} from '@angular/common/http';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-product',
@@ -80,11 +81,16 @@ export class ProductComponent implements OnInit {
   categories: Category[];
   editProduct: Product;
   showDelConfirm: boolean = false;
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,private router: Router) { }
 
   ngOnInit(): void {
     this.http.get('api/category').subscribe((categories: Category[]) => {
       this.categories = categories;
+    },(error:HttpErrorResponse) => {
+      if(error.status === 401){
+        this.router.navigate(['/login'])
+
+      }
     });
     this.http.get('api/product').subscribe((products: Product[]) => {
       this.products = products;

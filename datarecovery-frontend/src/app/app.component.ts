@@ -5,6 +5,7 @@ import {User} from './model/model';
   selector: 'app-root',
   template: `
     <app-navigation [currentUser]="this.currentUser" (logout)="logout()"></app-navigation>
+
   `,
   styles: [``]
 })
