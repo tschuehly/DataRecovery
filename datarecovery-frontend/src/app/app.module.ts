@@ -27,9 +27,7 @@ import { PricesComponent } from './containers/prices/prices.component';
 import { AgbComponent } from './containers/agb/agb.component';
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
-import { AboutComponent } from './containers/about/about.component';
 import {NgcCookieConsentConfig, NgcCookieConsentModule} from "ngx-cookieconsent";
-import { ReviewComponentComponent } from './components/review-component/review-component.component';
 import {First40WordsPipe} from "./pipes/first-twenty-words.pipe";
 import {SwiperModule} from "swiper/angular";
 import {GoogleAnalyticsService} from "./services/google-analytics.service";
@@ -37,19 +35,19 @@ import { PrivacyComponent } from './containers/privacy/privacy.component';
 registerLocaleData(localeDe);
 const cookieConfig:NgcCookieConsentConfig = {
   "cookie": {
-    "domain": "www.jungbauerdatenrettung.de"
+    "domain": "localhost"
   },
-  "position": "bottom",
+  "position": "bottom-left",
   "theme": "edgeless",
   "palette": {
     "popup": {
-      "background": "#1d1d1d",
-      "text": "#c5c5c5",
+      "background": "#061847",
+      "text": "#ffffff",
       "link": "#ffffff"
     },
     "button": {
-      "background": "#c5c5c5",
-      "text": "#000000",
+      "background": "#EFF6FF",
+      "text": "#061847",
       "border": "transparent"
     }
   },
@@ -60,7 +58,13 @@ const cookieConfig:NgcCookieConsentConfig = {
   },
   elements:{
     messagelink: `
-    <span class="p-4">{{message}} <a href="{{href}}" class="underline">{{link}}</a></span>
+    <div class="fixed w-screen h-screen top-0 bg-gray-800 bg-opacity-70 left-0"  style="z-index: -1">
+    </div>
+    <div class="p-8 text-xl z-50">
+        <p>{{message}}<br><br><a href="{{href}}" class="underline">{{link}}</a></p>
+
+
+     </div>
 
     `,
   },
@@ -71,7 +75,7 @@ const cookieConfig:NgcCookieConsentConfig = {
     "deny": "Cookies verbieten",
     "link": "Datenschutzbestimmungen",
     "href": "/datenschutz",
-    "policy": "Cookie Policy",
+    "policy": "Cookies",
     "header": "Cookies used on the website!",
     "allow": "Cookies erlauben"
   }
@@ -96,8 +100,6 @@ const cookieConfig:NgcCookieConsentConfig = {
         ImprintComponent,
         PricesComponent,
         AgbComponent,
-        AboutComponent,
-        ReviewComponentComponent,
         First40WordsPipe,
         PrivacyComponent,
     ],

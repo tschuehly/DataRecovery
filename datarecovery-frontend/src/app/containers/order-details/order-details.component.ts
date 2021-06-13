@@ -6,7 +6,7 @@ import {HttpClient} from '@angular/common/http';
 @Component({
   selector: 'app-order-details',
   template: `
-    <div>
+    <div class="">
       <div class="flex  mb-5 ">
         <h1 class="text-center text-2xl flex-1">Bestellung vom {{order.orderDate | date:'d.M.y H:mm' }}</h1>
         <button (click)="close.emit()" >

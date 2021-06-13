@@ -5,13 +5,13 @@ import {Order, Product} from '../../model/model';
 @Component({
   selector: 'app-order-form',
   template: `
-    <div class="w-full text-center text-4xl p-8">
+    <div class="w-full text-center text-4xl py-8">
       <h1>Auftragsformular</h1>
     </div>
     <form [formGroup]="this.orderForm" (ngSubmit)="onSubmit()">
-      <div class="flex flex-col gap-2">
+      <div class="flex flex-col gap-2 px-4 md:px-12">
         <ng-container *ngIf="!productFormFilled">
-          <label class="py-4 px-12">Auftrag zur Datenrettung:
+          <label class="py-4 ">Auftrag zur Datenrettung:
             <select class="block mt-2 w-full text-black" formControlName="product" #productSelect required>
               <option *ngFor="let product of products" [value]="product.id">
                 {{product.category.name}}  {{product.name}}  <span *ngIf="product.price">{{product.price | number : '.2':'de' }}€</span>
@@ -19,22 +19,22 @@ import {Order, Product} from '../../model/model';
             </select>
           </label>
           <ng-container *ngIf="productSelect.value">
-            <label class="py-4 px-12">Ersatzdatenträger zur Abspeicherung:
+            <label class="py-4">Ersatzdatenträger zur Abspeicherung:
               <select class="block mt-2 w-full text-black" formControlName="replacement" required>
                 <option selected>Sie senden einen eigenen Ersatzspeicher zur Sicherung mit: kostenfrei</option>
-                <option *ngFor="let replacement of replacementProducts">
+                <option class="hover:bg-blue-100" *ngFor="let replacement of replacementProducts">
                   {{replacement.category.name}} {{replacement.name}} : {{replacement.price}}€
                 </option>
               </select>
             </label>
           </ng-container>
 
-          <h2 class="px-12 font-semibold">Allgemeine Geschäftsbedingungen und Datenschutzrichtlinien:</h2>
-          <div class="flex px-12">
+          <h2 class="font-semibold inline text-center">Allgemeine Geschäftsbedingungen und Datenschutzrichtlinien:</h2>
+          <div class="flex">
             <input class="self-center" type="checkbox" formControlName="agb" required id="agbCheckbox" >
             <label for="agbCheckbox" class="ml-4">
               Hiermit bestätige ich meine Einverständnis für die vorhandenen
-              <a class="font-semibold underline" routerLink="impressum">Datenschutzrichtlinien</a> wie für die
+              <a class="font-semibold underline" routerLink="datenschutz">Datenschutzrichtlinien</a> wie für die
               <a class="font-semibold underline" routerLink="agb">allgemeinen Geschäftsbedingungen</a></label>
 
                       </div>

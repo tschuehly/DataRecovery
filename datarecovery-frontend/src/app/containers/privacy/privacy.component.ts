@@ -84,12 +84,12 @@ import {Component, OnInit} from '@angular/core';
         möglich.</p>
       <h3 class="font-semibold mb-2 mt-4 underline">Hinweis zur verantwortlichen Stelle</h3>
       <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
-      <p>Tobias Jungbauer Datenrettung<br/>
-        Am Stein 9<br/>
-        85049 Ingolstadt</p>
+      <p>Cassandra Schilling Datenrettungsdienst<br/>
+        Friedrich-Ebert-Straße 70<br/>
+        71638 Ludwigsburg</p>
 
-      <p>Telefon: +49(0)15161408355<br/>
-        E-Mail: info@jungbauerdatenrettung.de</p>
+      <p>Telefon: +49 0152 21408008<br/>
+        E-Mail: info@datenrettung-schilling.de</p>
       <p>Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über
         die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.)
         entscheidet.</p>

@@ -9,8 +9,8 @@ import {HttpClient} from "@angular/common/http";
       <div class="text-center py-4">
         <h1 class="text-4xl text-blue-900 tracking-wider">Preise</h1>
       </div>
-      <div class="flex py-4">
-        <div class="text-silver mx-auto justify-center">
+      <div class="container flex py-4">
+        <div class=" mx-auto justify-center">
           <span class="font-bold text-black">Wichtig:</span> Es handelt sich um
           <span class="font-bold text-black">Festpreise</span>, die nur <span class="font-bold text-black">nach Erfolg gelten.</span><br>
           Sollte keine Datenrettung möglich sein ist die Bearbeitung vollständig kostenfrei.<br>

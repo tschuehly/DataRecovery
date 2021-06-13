@@ -4,16 +4,16 @@
 <!--</div>-->
 <style>
 </style>
-<div class="grid grid-cols-3 bg-blue-100 pt-8 pb-20 !p-2">
-  <div class="col-span-1 bg-contain bg-no-repeat bg-blue-100 justify-self-center self-center pl-4">
-    <img class="max-h-96 min-w-full" src="/assets/digital_files.png">
+<div class="grid grid-cols-1 lg:grid-cols-3 bg-blue-100 pt-8 pb-20 !p-2">
+  <div class="order-last lg:order-first col-span-1 bg-contain bg-no-repeat bg-blue-100 justify-self-center self-center flex justify-center">
+    <img class="max-h-80 sm:max-h-96 min-w-full" src="/assets/digital_files.png">
   </div>
-  <div class="col-span-2 px-16 py-16">
+  <div class="col-span-2 px-2 md:px-16 md:py-16">
 
     <h1 class="text-4xl mb-16 text-center font-bold text-gray-900">
       Professionelle Datenrettung zu fairen Konditionen
     </h1>
-    <div class="grid grid-cols-12 gap-2 pl-10">
+    <div class="grid grid-cols-12 gap-2 pl-4 md:pl-10 pb-4">
       <svg class="col-span-1 justify-self-center self-center" viewBox="0 0 24 24" width="24" height="24"
            stroke="#1E3A8A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="20 6 9 17 4 12"></polyline>
@@ -158,20 +158,20 @@
       </div>
 
     </div>
-    <div class="flex justify-center">
-      <div class="w-64 border shadow-2xl rounded-xl justify-self-center inline-table">
-        <div class="relative pb-56 mb-4 rounded shadow lg:pb-64">
-          <img class="absolute object-cover w-full h-full rounded" src="assets/cassandra_schilling.png" alt="Person"/>
-        </div>
-        <div class="flex flex-col sm:text-center">
-          <p class="text-lg font-bold">Cassandra Schilling</p>
-          <div class="p-4">
-            <button class="btn btn-outline">Mehr über mich</button>
-          </div>
-        </div>
-      </div>
+<!--    <div class="flex justify-center">-->
+<!--      <div class="w-64 border shadow-2xl rounded-xl justify-self-center inline-table">-->
+<!--        <div class="relative pb-56 mb-4 rounded shadow lg:pb-64">-->
+<!--          <img class="absolute object-cover w-full h-full rounded" src="assets/cassandra_schilling.png" alt="Person"/>-->
+<!--        </div>-->
+<!--        <div class="flex flex-col sm:text-center">-->
+<!--          <p class="text-lg font-bold">Cassandra Schilling</p>-->
+<!--          <div class="p-4">-->
+<!--            <button class="btn btn-outline">Mehr über mich</button>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
 
-    </div>
+<!--    </div>-->
   </div>
 
 
@@ -197,8 +197,8 @@
             <table class="table px-4 text-center">
               <thead>
                 <tr>
-                  <th>Kapazität</th>
-                  <th>Festpreis</th>
+                  <th style="font-size: 1rem">Kapazität</th>
+                  <th style="font-size: 1rem">Festpreis</th>
                 </tr>
               </thead>
               <tbody>
@@ -219,7 +219,7 @@
     </ng-container>
   </div>
 </div>
-<div class="py-20 px-20 bg-white">
+<div class="bg-white">
   <div class="py-20 container bg-white text-gray-800" id="order_form">
 
     <app-order-form
@@ -234,7 +234,7 @@
           erhalten, schauen Sie auch im Spam Ordner nach!</p>
       </ng-container>
       <ng-container *ngIf="orderSubmitted === false">
-      <p>Ihre Anfrage konnte nicht übermittelt werden.<br>
+      <p class="inline-block">Ihre Anfrage konnte nicht übermittelt werden.<br>
         Bitte kontaktieren sie Cassandra Schilling über eine Email an:<br>
         <button class="btn btn-primary mt-4">
           <a href="mailto:info@datenrettung-schilling.de?subject=Anfrage%20wegen%20einer%20Datenrettung&amp">info@datenrettung-schilling.de</a>

@@ -6,13 +6,13 @@ import { Component, OnInit } from '@angular/core';
     <div class="container sm:px-10 my-10">
       <div id="comp-ih25sfqx1" class="_2bafp" data-testid="richTextElement"><p><span style="font-weight:bold">ALLGEMEINE GESCHÄFTSBEDINGUNGEN</span></p>
 
-        <p >für Dienstleistungen der Firma Cassandra Schilling Datenrettungsdienst</p>
+        <p>für Dienstleistungen der Firma Cassandra Schilling Datenrettungsdienst</p>
 
-        <p><span style="font-style:italic">Stand: 2020/21</span></p>
+        <p><span style="font-style:italic">Stand: 2021</span></p>
         <br>
-        <p>Cassandra Schilling Datenrettungsdienst
-          Friedrich-Ebert-Straße 70
-          71638 Ludwigsburge<br>
+        <p>Cassandra Schilling Datenrettungsdienst<br>
+          Friedrich-Ebert-Straße 70<br>
+          71638 Ludwigsburg<br>
           Telefon: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; +4915161408355<br>
           E-Mail: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="text-decoration:underline"><a href="mailto:info@datenrettung-schilling.de" target="_self">info@datenrettung-schilling.de</a></span><br>
           Steuernummer: &nbsp; &nbsp;&nbsp; 13123370362</p>

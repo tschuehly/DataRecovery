@@ -26,7 +26,7 @@ import {ActivatedRoute} from '@angular/router';
           </div>
         </form>
       </div>
-      <div *ngIf="order" class="border shadow-xl px-14 py-10">
+      <div *ngIf="order" class="border shadow-xl px-14 py-10 bg-white">
         <app-order-details [order]="order"></app-order-details>
       </div>
 

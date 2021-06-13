@@ -44,3 +44,18 @@ body,pre { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     display: flex;
   }
 }
+
+.cc-window{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: calc(50vh - 9em) !important;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%; /* Need a specific value to work */
+}
+@media (min-width: 768px) {
+  .cc-window{
+    width: 400%;
+  }
+}

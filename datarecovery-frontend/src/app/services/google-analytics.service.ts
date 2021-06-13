@@ -17,7 +17,7 @@ export class GoogleAnalyticsService {
     eventValue: number = null
   ){
     console.log("Event emit")
-    gtag('config', 'G-VPEC2J7SDM', { 'anonymize_ip': true });
+    gtag('config', 'G-G6DZYVHRM8', { 'anonymize_ip': true });
     gtag('event', eventName, {
       eventCategory: eventCategory,
       eventLabel: eventLabel,

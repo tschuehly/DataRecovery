@@ -30,7 +30,7 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
 
         order.customer?.email?.let { helper.setTo(it) }
 
-        helper.setSubject("Ihr Auftrag zur Datenrettung | Cassandra Schilling Datenrettung")
+        helper.setSubject("Ihr Auftrag zur Datenrettung | Cassandra Schilling Datenrettungsdienst")
         var html = resourceLoader.getResource("classpath:templates/emailtemplate.html").file
             .readText(charset = Charsets.UTF_8)
         val body = getOrderConfirmationBody(order)

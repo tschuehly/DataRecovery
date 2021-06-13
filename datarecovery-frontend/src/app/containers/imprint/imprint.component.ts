@@ -7,14 +7,14 @@ import {Component, OnInit} from '@angular/core';
       <h1 class="text-3xl font-bold">Impressum</h1>
 
       <h2 class="text-lg font-semibold mb-2 mt-4 underline">Angaben gemäß § 5 TMG</h2>
-      <p>Tobias Jungbauer<br />
+      <p>Cassandra Schilling<br />
         Datenrettung<br />
-        Am Stein, 9<br />
-        85049 Ingolstadt</p>
+        Friedrich-Ebert-Straße 70<br />
+        71638 Ludwigsburg</p>
 
       <h2 class="text-lg font-semibold mb-2 mt-4 underline">Kontakt</h2>
-      <p>Telefon: +49(0)15161408355<br />
-        E-Mail: info@jungbauerdatenrettung.de</p>
+      <p>Telefon: +49 0152 21408008<br />
+        E-Mail: info@datenrettung-schilling.de</p>
 
       <h2 class="text-lg font-semibold mb-2 mt-4 underline">Umsatzsteuer-ID</h2>
       <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
@@ -28,11 +28,11 @@ import {Component, OnInit} from '@angular/core';
       <p><strong>Geltungsraum der Versicherung:</strong><br />Deutschland</p>
 
       <h2 class="text-lg font-semibold mb-2 mt-4 underline">Redaktionell verantwortlich</h2>
-      <p>Tobias Jungbauer<br />
-        Am Stein 9<br />
-        85049 Ingolstadt<br />
-        +49(0)15161408355<br />
-        tobias@jungbauerdatenrettung.de</p>
+      <p>Cassandra Schilling<br />
+        Friedrich-Ebert-Straße 70<br />
+        71638 Ludwigsburg<br />
+        +49 0152 21408008<br />
+        info@datenrettung-schilling.de</p>
 
       <h2 class="text-lg font-semibold mb-2 mt-4 underline">EU-Streitschlichtung</h2>
       <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a>.<br /> Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
