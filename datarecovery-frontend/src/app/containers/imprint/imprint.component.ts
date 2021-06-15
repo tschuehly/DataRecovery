@@ -21,6 +21,9 @@ import {ActivatedRoute, Router} from "@angular/router";
       <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
         DE318961162</p>
 
+      <h2 class="text-lg font-semibold mb-2 mt-4 underline">Steuernummer</h2>
+      <p>13123370362</p>
+
       <h2 class="text-lg font-semibold mb-2 mt-4 underline">Angaben zur Berufshaftpflichtversicherung</h2>
       <p><strong>Name und Sitz des Versicherers:</strong><br />
         Hiscox<br />

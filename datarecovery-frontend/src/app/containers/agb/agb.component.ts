@@ -10,14 +10,15 @@ import { Component, OnInit } from '@angular/core';
 
         <p><span style="font-style:italic">Stand: 2020/21</span></p>
         <br>
-        <p>Tobias Jungbauer Datenrettung
-          Am Stein 9
-          85049 Ingolstadte<br>
+        Adresse:<br>
+        <p>Tobias Jungbauer Datenrettung<br>
+          Am Stein 9<br>
+          85049 Ingolstadt<br><br>
           Telefon: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; +4915161408355<br>
           E-Mail: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="text-decoration:underline"><a href="mailto:info@jungbauerdatenrettung.de" target="_self">info@jungbauerdatenrettung.de</a></span><br>
           Steuernummer: &nbsp; &nbsp;&nbsp; 13123370362</p>
 
-        <p>Umsatzteuer-Identifikationsnummer: DE318961162</p>
+        <p>Umsatzsteuer-Identifikationsnummer: DE318961162</p>
 
         <p>&nbsp;</p>
 
