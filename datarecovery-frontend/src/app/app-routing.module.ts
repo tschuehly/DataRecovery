@@ -12,6 +12,7 @@ import {PricesComponent} from "./containers/prices/prices.component";
 import {AgbComponent} from "./containers/agb/agb.component";
 import {AboutComponent} from "./containers/about/about.component";
 import {PrivacyComponent} from "./containers/privacy/privacy.component";
+import {SiteNotFoundComponent} from "./containers/site-not-found/site-not-found.component";
 
 
 const routes: Routes = [
@@ -28,6 +29,8 @@ const routes: Routes = [
   {path: 'agb', component: AgbComponent},
   {path: 'philosophie', component: AboutComponent},
   {path: 'preise', component: PricesComponent},
+  {path: '404', component: SiteNotFoundComponent},
+  {path: '**', redirectTo: '/404'}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],

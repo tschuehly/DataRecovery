@@ -35,6 +35,7 @@ import {SwiperModule} from "swiper/angular";
 import {GoogleAnalyticsService} from "./services/google-analytics.service";
 import { PrivacyComponent } from './containers/privacy/privacy.component';
 import { HeaderComponent } from './components/header/header.component';
+import { SiteNotFoundComponent } from './containers/site-not-found/site-not-found.component';
 registerLocaleData(localeDe);
 const cookieConfig:NgcCookieConsentConfig = {
   "cookie": {
@@ -102,6 +103,7 @@ const cookieConfig:NgcCookieConsentConfig = {
         First40WordsPipe,
         PrivacyComponent,
         HeaderComponent,
+        SiteNotFoundComponent,
     ],
   imports: [
     BrowserModule,
