@@ -25,7 +25,8 @@ class SpringSecurityConfig(
     val jwtFilter: JwtFilter
 ) : WebSecurityConfigurerAdapter() {
     override fun configure(http: HttpSecurity) {
-        http.csrf().disable()
+        http.headers().frameOptions().sameOrigin().and()
+            .csrf().disable()
             .cors().configurationSource(corsConfigurationSource()).and()
 
             .sessionManagement()

@@ -55,22 +55,22 @@ INSERT INTO public.customer (id, city, email, first_name, last_name, postal_code
 -- Data for Name: product; 
 --
 
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (5, NULL, 'mit bis zu 500GB Festplattenkapazität:', 300, 2);
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (6, NULL, 'mit bis zu 1TB Festplattenkapazität:', 350, 2);
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (10, NULL, 'mit bis zu 2TB Festplattenkapazität:', 475, 2);
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (11, NULL, 'mit bis zu 500GB Festplattenkapazität:', 250, 3);
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (12, NULL, 'mit bis zu 1TB Festplattenkapazität:', 300, 3);
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (13, NULL, 'mit bis zu 2TB Festplattenkapazität:', 425, 3);
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (14, NULL, 'mit bis zu 16GB Speicherkapazität:', 125, 4);
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (16, NULL, 'mit bis zu 128GB Speicherkapazität:', 300, 4);
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (15, NULL, 'mit bis zu 64GB Speicherkapazität:', 200, 4);
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (18, NULL, NULL, NULL, 9);
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (20, NULL, '1TB', 60, 19);
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (21, NULL, '2TB ', 70, 19);
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (24, NULL, '16 GB', 10, 23);
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (26, NULL, '64GB', 15, 23);
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (27, NULL, '128GB', 25, 23);
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (28, NULL, '500GB', 50, 19);
+INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (5, CURRENT_TIMESTAMP() , 'mit bis zu 500GB Festplattenkapazität:', 300, 2);
+INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (6, CURRENT_TIMESTAMP() ,'mit bis zu 1TB Festplattenkapazität:', 350, 2);
+INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (10,CURRENT_TIMESTAMP() , 'mit bis zu 2TB Festplattenkapazität:', 475, 2);
+INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (11,CURRENT_TIMESTAMP() , 'mit bis zu 500GB Festplattenkapazität:', 250, 3);
+INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (12,CURRENT_TIMESTAMP() , 'mit bis zu 1TB Festplattenkapazität:', 300, 3);
+INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (13,CURRENT_TIMESTAMP() , 'mit bis zu 2TB Festplattenkapazität:', 425, 3);
+INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (14,CURRENT_TIMESTAMP() , 'mit bis zu 16GB Speicherkapazität:', 125, 4);
+INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (16,CURRENT_TIMESTAMP() , 'mit bis zu 128GB Speicherkapazität:', 300, 4);
+INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (15,CURRENT_TIMESTAMP() , 'mit bis zu 64GB Speicherkapazität:', 200, 4);
+INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (18,CURRENT_TIMESTAMP() , NULL, NULL, 9);
+INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (20,CURRENT_TIMESTAMP() , '1TB', 60, 19);
+INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (21,CURRENT_TIMESTAMP() , '2TB ', 70, 19);
+INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (24,CURRENT_TIMESTAMP() , '16 GB', 10, 23);
+INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (26,CURRENT_TIMESTAMP() , '64GB', 15, 23);
+INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (27,CURRENT_TIMESTAMP() , '128GB', 25, 23);
+INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (28,CURRENT_TIMESTAMP() , '500GB', 50, 19);
 
 
 --
