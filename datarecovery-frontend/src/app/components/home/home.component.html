@@ -11,14 +11,14 @@
   <div class="col-span-2 px-2 md:px-16 md:py-16">
 
     <h1 class="text-4xl mb-16 text-center font-bold text-gray-900">
-      Professionelle Datenrettung zu fairen Konditionen
+      Datenrettung zu fairen Konditionen in Ludwigsburg
     </h1>
     <div class="grid grid-cols-12 gap-2 pl-4 md:pl-10 pb-4">
       <svg class="col-span-1 justify-self-center self-center" viewBox="0 0 24 24" width="24" height="24"
            stroke="#1E3A8A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="20 6 9 17 4 12"></polyline>
       </svg>
-      <span class="col-span-11 text-xl">bei defekten USB-Sticks und SD-Karten</span>
+      <span class="col-span-11 text-xl">bei defekten USB-Sticks, microSD- und SD-Karten</span>
       <svg class="col-span-1 justify-self-center self-center" viewBox="0 0 24 24" width="24" height="24"
            stroke="#1E3A8A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="20 6 9 17 4 12"></polyline>
@@ -29,6 +29,11 @@
         <polyline points="20 6 9 17 4 12"></polyline>
       </svg>
       <span class="col-span-11 text-xl">zu fairen Festpreisen</span>
+      <svg class="col-span-1 justify-self-center self-center" viewBox="0 0 24 24" width="24" height="24"
+           stroke="#1E3A8A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+      <span class="col-span-11 text-xl">alle Fälle werden lokal in Ludwigsburg bearbeitet</span>
       <svg class="col-span-1 justify-self-center self-center" viewBox="0 0 24 24" width="24" height="24"
            stroke="#1E3A8A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="20 6 9 17 4 12"></polyline>
@@ -220,7 +225,7 @@
   </div>
 </div>
 <div class="bg-white">
-  <div class="py-20 container bg-white text-gray-800" id="order_form">
+  <div class="py-8 md:py-20 container bg-white text-gray-800" id="order_form">
 
     <app-order-form
       *ngIf="products && orderSubmitted === null"
@@ -230,8 +235,13 @@
 
     <div class="p-12 text-blue-900 text-xl font-bold mt-8 bg-blue-100 rounded-xl"  id="order_submit" *ngIf="orderSubmitted !== null">
       <ng-container *ngIf="orderSubmitted === true">
-        <p>Ihr Auftrag wurde erfolgreich übermittelt. Sie sollten bald eine Bestätigungsmail mit weiteren Informationen
-          erhalten, schauen Sie auch im Spam Ordner nach!</p>
+        <pre class="whitespace-pre-wrap">
+Ihr Auftrag wurde erfolgreich übermittelt.
+
+Sie sollten bald eine Bestätigungsmail mit weiteren Informationen erhalten.
+
+Schauen Sie auch in Ihrem Spam Ordner nach!
+        </pre>
       </ng-container>
       <ng-container *ngIf="orderSubmitted === false">
       <p class="inline-block">Ihre Anfrage konnte nicht übermittelt werden.<br>

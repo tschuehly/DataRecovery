@@ -11,7 +11,7 @@ import {Order, Product} from '../../model/model';
     <form [formGroup]="this.orderForm" (ngSubmit)="onSubmit()">
       <div class="flex flex-col gap-2 px-4 md:px-12">
         <ng-container *ngIf="!productFormFilled">
-          <label class="py-4 ">Auftrag zur Datenrettung:
+          <label class="py-4 font-semibold">Auftrag zur Datenrettung:
             <select class="block mt-2 w-full text-black" formControlName="product" #productSelect required>
               <option *ngFor="let product of products" [value]="product.id">
                 {{product.category.name}}  {{product.name}}  <span *ngIf="product.price">{{product.price | number : '.2':'de' }}€</span>
@@ -19,7 +19,7 @@ import {Order, Product} from '../../model/model';
             </select>
           </label>
           <ng-container *ngIf="productSelect.value">
-            <label class="py-4">Ersatzdatenträger zur Abspeicherung:
+            <label class="py-4 font-semibold">Ersatzdatenträger zur Abspeicherung:
               <select class="block mt-2 w-full text-black" formControlName="replacement" required>
                 <option selected>Sie senden einen eigenen Ersatzspeicher zur Sicherung mit: kostenfrei</option>
                 <option class="hover:bg-blue-100" *ngFor="let replacement of replacementProducts">
@@ -51,7 +51,7 @@ import {Order, Product} from '../../model/model';
         <ng-container *ngIf="productFormFilled">
 
           <h2 class="text-2xl px-12">Kontaktdaten:</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 py-4 px-12" formGroupName="customer">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 py-4 md:px-12" formGroupName="customer">
             <label>Vorname
               <input type="text" class="mt-1 w-full text-black" formControlName="firstName" required>
             </label>

@@ -8,7 +8,7 @@ import {Component, OnInit} from '@angular/core';
 
       <h2 class="text-lg font-semibold mb-2 mt-4 underline">Angaben gemäß § 5 TMG</h2>
       <p>Cassandra Schilling<br />
-        Datenrettung<br />
+        Datenrettungsdienst<br />
         Friedrich-Ebert-Straße 70<br />
         71638 Ludwigsburg</p>
 
@@ -16,23 +16,10 @@ import {Component, OnInit} from '@angular/core';
       <p>Telefon: +49 0152 21408008<br />
         E-Mail: info@datenrettung-schilling.de</p>
 
-      <h2 class="text-lg font-semibold mb-2 mt-4 underline">Umsatzsteuer-ID</h2>
-      <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
-        DE318961162</p>
-
-      <h2 class="text-lg font-semibold mb-2 mt-4 underline">Angaben zur Berufshaftpflichtversicherung</h2>
-      <p><strong>Name und Sitz des Versicherers:</strong><br />
-        Hiscox<br />
-        Arnulfstraße 31<br />
-        80636 München</p>
-      <p><strong>Geltungsraum der Versicherung:</strong><br />Deutschland</p>
-
       <h2 class="text-lg font-semibold mb-2 mt-4 underline">Redaktionell verantwortlich</h2>
-      <p>Cassandra Schilling<br />
-        Friedrich-Ebert-Straße 70<br />
-        71638 Ludwigsburg<br />
-        +49 0152 21408008<br />
-        info@datenrettung-schilling.de</p>
+      <p>Cassandra Schilling</p>
+      <h2 class="text-lg font-semibold mb-2 mt-4 underline">Wirtschaftsidentifikationsnummer</h2>
+      <p>7122357209</p>
 
       <h2 class="text-lg font-semibold mb-2 mt-4 underline">EU-Streitschlichtung</h2>
       <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a>.<br /> Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>

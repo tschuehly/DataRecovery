@@ -35,7 +35,7 @@ import { PrivacyComponent } from './containers/privacy/privacy.component';
 registerLocaleData(localeDe);
 const cookieConfig:NgcCookieConsentConfig = {
   "cookie": {
-    "domain": "localhost"
+    "domain": "www.datenrettung-schilling.de"
   },
   "position": "bottom-left",
   "theme": "edgeless",
