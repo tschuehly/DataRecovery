@@ -30,7 +30,7 @@ import {Router} from "@angular/router";
           <tbody>
           <tr *ngFor="let order of filteredOrders">
             <td class="border p-2">{{order.id}}</td>
-            <td class="border p-2">{{order.product.category.name}} {{order.product.name}}</td>
+            <td class="border p-2">{{order.orderProduct.category.name}} {{order.orderProduct.name}}</td>
             <td class="border p-2">{{order.customer.firstName}} {{order.customer.lastName}}</td>
             <td class="border p-2">{{order.orderDate | date:'d.M.y H:mm':'+0400'}}</td>
             <td class="border p-2">{{order.trackingState}}</td>

@@ -16,6 +16,6 @@ class Product(
     var sequenceId: Int?
 ) : BaseEntity() {
     override fun toString(): String {
-        return "Product(category='$category', name=$name, price=$price)"
+        return "Product(name=$name, price=$price)"
     }
 }

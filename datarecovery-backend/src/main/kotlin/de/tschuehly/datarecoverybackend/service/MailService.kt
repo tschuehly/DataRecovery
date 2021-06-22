@@ -6,11 +6,8 @@ import org.springframework.core.io.ResourceLoader
 import org.springframework.mail.javamail.JavaMailSender
 import org.springframework.mail.javamail.MimeMessageHelper
 import org.springframework.stereotype.Service
-import java.io.IOException
 import javax.mail.internet.MimeMessage
-import java.text.DateFormat;
 import java.text.SimpleDateFormat
-import java.util.*
 
 @Service
 class MailService(val javaMailSender: JavaMailSender, val resourceLoader: ResourceLoader) {
@@ -98,8 +95,8 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
         ${order.customer?.tel} <br />
         <br />
         <br />
-        <span style="font-weight: bold">Produkt:</span> ${order.product.category?.title} ${order.product.name}<br />
-        <span style="font-weight: bold">Preis:</span> ${"%.2f".format(order.product.price)} €<br />
+        <span style="font-weight: bold">Produkt:</span> ${order.orderProduct.category?.title} ${order.orderProduct.name}<br />
+        <span style="font-weight: bold">Preis:</span> ${"%.2f".format(order.orderProduct.price)} €<br />
         <span style="font-weight: bold">Ersatzdatenträger: </span>${order.replacement}<br />
         """
 }

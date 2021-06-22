@@ -127,7 +127,7 @@ export class OrderFormComponent implements OnInit {
 
   onSubmit(): void {
     this.order = (this.orderForm.getRawValue() as Order);
-    this.order.product = this.products.find(product => product.id.toString() === this.orderForm.get('product').value);
+    this.order.orderProduct = this.products.find(product => product.id.toString() === this.orderForm.get('product').value);
     this.orderOutput.emit(this.order);
   }
   submitProduct(){

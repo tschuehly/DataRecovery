@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
 
     this.http.post('api/order/create', order).subscribe(
       data => {
-        this.googleAnalyticsService.eventEmitter("purchase","ecommerce","click",order.product.category.name + " " +order.product.name,1)
+        this.googleAnalyticsService.eventEmitter("purchase","ecommerce","click",order.orderProduct.category.name + " " +order.orderProduct.name,1)
         this.orderSubmitted = true;
         setTimeout(function () {
           let orderSubmit = this.document.getElementById('order_submit')

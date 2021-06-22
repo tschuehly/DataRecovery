@@ -26,6 +26,7 @@ class SpringSecurityConfig(
 ) : WebSecurityConfigurerAdapter() {
     override fun configure(http: HttpSecurity) {
         http.csrf().disable()
+            .headers().frameOptions().sameOrigin().and()
             .cors().configurationSource(corsConfigurationSource()).and()
 
             .sessionManagement()
@@ -42,7 +43,7 @@ class SpringSecurityConfig(
             .and()
             .authorizeRequests()
             // Our public endpoints
-            .antMatchers("/index.html","/favicon**.png","/*.js","/*.js.map","/*.json","/*.css","/assets/**").permitAll()
+            .antMatchers("/index.html","/favicon**.png","/*.js","/*.js.map","/*.json","/*.css","/assets/**","/h2-console/*").permitAll()
             .antMatchers(HttpMethod.GET, "/","/api/review","/api/review/refresh","/api/product","/api/order/tracking","/api/user/logout").permitAll()
             .antMatchers(HttpMethod.POST, "/api/order/create","/api/user/login").permitAll()
             .antMatchers(HttpMethod.POST,"/api/user/**").permitAll()

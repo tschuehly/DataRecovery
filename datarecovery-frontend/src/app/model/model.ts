@@ -13,7 +13,7 @@ export class Order{
   trackingId: string;
   orderDate: Date;
   trackingState: orderStateEnum;
-  product: Product;
+  orderProduct: Product;
   customer: Customer;
   replacement: string;
   updates: Update[];

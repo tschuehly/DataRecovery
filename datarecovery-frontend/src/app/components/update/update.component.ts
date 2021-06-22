@@ -6,28 +6,28 @@ import {HttpClient} from '@angular/common/http';
 @Component({
   selector: 'app-update',
   template: `
-    <div class="flex flex-col">
-      <h1 class="text-2xl">Neues Update erstellen</h1>
-      <label *ngFor="let question of this.order.product.category.questions">
-        {{question}}
-        <input type="radio" (click)="addQuestion(question,'Ja')" name="question" > Ja
-        <input type="radio" (click)="addQuestion(question,'Nein')" name="question"> Nein
-      </label>
-      <form [formGroup]="updateForm" enctype="multipart/form-data">
-        <label>Beschreibung
-          <textarea class="block mt-2 w-96 h-96" formControlName="description"></textarea></label>
-        <div class="flex flex-col my-4" *ngFor="let picture of pictureDetails.controls; let i = index">
-          <label>Bildtitel
-            <input [formControl]="picture" type="text">
+      <div class="flex flex-col">
+          <h1 class="text-2xl">Neues Update erstellen</h1>
+          <label *ngFor="let question of this.order.orderProduct.category.questions">
+              {{question}}
+              <input type="radio" (click)="addQuestion(question,'Ja')" name="question"> Ja
+              <input type="radio" (click)="addQuestion(question,'Nein')" name="question"> Nein
           </label>
-          <label>
-            <input class="block mt-2 w-full" type="file" (change)="onFileChange($event,i)">
-          </label>
-        </div>
-        <button class="button-primary" (click)="addImage()">Bild hinzufügen</button>
-        <button class="button-primary" (click)="addUpdateToOrder()">Update speichern</button>
-      </form>
-    </div>
+          <form [formGroup]="updateForm" enctype="multipart/form-data">
+              <label>Beschreibung
+                  <textarea class="block mt-2 w-96 h-96" formControlName="description"></textarea></label>
+              <div class="flex flex-col my-4" *ngFor="let picture of pictureDetails.controls; let i = index">
+                  <label>Bildtitel
+                      <input [formControl]="picture" type="text">
+                  </label>
+                  <label>
+                      <input class="block mt-2 w-full" type="file" (change)="onFileChange($event,i)">
+                  </label>
+              </div>
+              <button class="button-primary" (click)="addImage()">Bild hinzufügen</button>
+              <button class="button-primary" (click)="addUpdateToOrder()">Update speichern</button>
+          </form>
+      </div>
   `,
   styles: [
   ]

@@ -8,5 +8,5 @@ import javax.persistence.MappedSuperclass
 abstract class BaseEntity {
     @Id
     @GeneratedValue
-    val id: Long? = null
+    var id: Long? = null
 }
