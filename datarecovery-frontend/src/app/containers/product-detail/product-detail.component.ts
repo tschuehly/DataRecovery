@@ -19,7 +19,7 @@ import {FormArray, FormBuilder, FormGroup, Validators} from '@angular/forms';
             </label>
           </ng-container>
           <label>Name:
-            <input type="text" formControlName="name" class="mt-1 mb-2 block pl-3">
+            <input type="text" formControlName="name" class="w-full mt-1 mb-2 block pl-3">
           </label>
           <div>
             <label>Preis:
