@@ -45,7 +45,8 @@ export class Product{
               public category: Category ,
               public name: string = '',
               public price: number  = 0,
-              public createDate: string = new Date().toISOString().substring(0, 19)
+              public createDate: string = new Date().toISOString().substring(0, 19),
+              public sequenceId: number
   ) {}
 }
 

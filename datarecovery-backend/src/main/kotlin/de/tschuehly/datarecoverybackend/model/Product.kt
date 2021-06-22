@@ -13,6 +13,7 @@ class Product(
     var price: Double?,
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
     var createDate: Date?,
+    var sequenceId: Int?
 ) : BaseEntity() {
     override fun toString(): String {
         return "Product(category='$category', name=$name, price=$price)"

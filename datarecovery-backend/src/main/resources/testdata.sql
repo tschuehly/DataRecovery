@@ -55,13 +55,13 @@ INSERT INTO public.customer (id, city, email, first_name, last_name, postal_code
 -- Data for Name: product; 
 --
 
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (5, NULL, 'mit bis zu 500GB Festplattenkapazität:', 300, 2);
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (6, NULL, 'mit bis zu 1TB Festplattenkapazität:', 350, 2);
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (10, NULL, 'mit bis zu 2TB Festplattenkapazität:', 475, 2);
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (11, NULL, 'mit bis zu 500GB Festplattenkapazität:', 250, 3);
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (12, NULL, 'mit bis zu 1TB Festplattenkapazität:', 300, 3);
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (13, NULL, 'mit bis zu 2TB Festplattenkapazität:', 425, 3);
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (14, NULL, 'mit bis zu 16GB Speicherkapazität:', 125, 4);
+INSERT INTO public.product (id, create_date, name, price, category_id, sequence_id) VALUES (6, NULL, 'mit bis zu 1TB Festplattenkapazität:', 350, 2,2);
+INSERT INTO public.product (id, create_date, name, price, category_id, sequence_id) VALUES (5, NULL, 'mit bis zu 500GB Festplattenkapazität:', 300, 2,1);
+INSERT INTO public.product (id, create_date, name, price, category_id, sequence_id) VALUES (10, NULL, 'mit bis zu 2TB Festplattenkapazität:', 475, 2,3);
+INSERT INTO public.product (id, create_date, name, price, category_id, sequence_id) VALUES (12, NULL, 'mit bis zu 1TB Festplattenkapazität:', 300, 3,2);
+INSERT INTO public.product (id, create_date, name, price, category_id, sequence_id) VALUES (11, NULL, 'mit bis zu 500GB Festplattenkapazität:', 250, 3,1);
+INSERT INTO public.product (id, create_date, name, price, category_id, sequence_id) VALUES (13, NULL, 'mit bis zu 2TB Festplattenkapazität:', 425, 3,3);
+INSERT INTO public.product (id, create_date, name, price, category_id, sequence_id) VALUES (14, NULL, 'mit bis zu 16GB Speicherkapazität:', 125, 4,1);
 INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (16, NULL, 'mit bis zu 128GB Speicherkapazität:', 300, 4);
 INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (15, NULL, 'mit bis zu 64GB Speicherkapazität:', 200, 4);
 INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (18, NULL, NULL, NULL, 9);

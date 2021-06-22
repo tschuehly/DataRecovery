@@ -15,6 +15,8 @@ import {Router} from "@angular/router";
             <th class="border px-2 py-1">Kategorie</th>
             <th class="border px-2 py-1">Produkt</th>
             <th class="border px-2 py-1">Preise</th>
+            <th class="border px-2 py-1">Seq</th>
+
             <th class="border px-2 py-1">Ersatz</th>
             <th class="border px-2 py-1">Edit</th>
             <th class="border px-2 py-1">Löschen</th>
@@ -25,6 +27,7 @@ import {Router} from "@angular/router";
             <td class="border p-2">{{product?.category?.name}}</td>
             <td class="border p-2">{{product?.name}}</td>
             <td class="border p-2">{{product?.price}} €</td>
+            <td class="border p-2">{{product?.sequenceId}}</td>
             <td class="border p-2">{{product?.category?.replacement ? 'Ja':'Nein'}}</td>
             <td class="border pl-2">
               <button (click)="editProduct = product">

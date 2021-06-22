@@ -21,6 +21,9 @@ import {FormArray, FormBuilder, FormGroup, Validators} from '@angular/forms';
           <label>Name:
             <input type="text" formControlName="name" class="w-full mt-1 mb-2 block pl-3">
           </label>
+          <label>Sequenznummer:
+            <input type="number" formControlName="sequenceId" class="mt-1 mb-2 block pl-3">
+          </label>
           <div>
             <label>Preis:
               <div class="mt-1 relative w-full">
@@ -61,7 +64,8 @@ export class ProductDetailComponent implements OnInit {
         id: [this.product?.category?.id]
       }),
       name: [this.product.name],
-      price: [this.product.price, Validators.pattern('^[0-9]*$')]
+      price: [this.product.price, Validators.pattern('^[0-9]*$')],
+      sequenceId: [this.product.sequenceId]
     });
   }
 
