@@ -96,7 +96,8 @@ export class ProductComponent implements OnInit {
       }
     });
     this.http.get('api/product').subscribe((products: Product[]) => {
-      this.products = products;
+      this.products = products.sort((p1,p2) => p1.category.name.localeCompare(p2.category.name))
+        .sort((p1) => p1.category.replacement ? 1 : -1);
     });
   }
 

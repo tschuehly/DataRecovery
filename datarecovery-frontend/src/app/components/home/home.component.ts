@@ -20,10 +20,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
 
     this.http.get('api/product').subscribe( data => {
-        this.products = data as Product[];
+        this.products = (data as Product[]).sort((p1,p2) => p1.sequenceId - p2.sequenceId);
         this.replacementProducts = this.products.filter(p => p.category.replacement === true);
-        this.products = this.products.filter(p => p.category.replacement === false);
-
+        this.products = this.products.filter(p => p.category.replacement === false)
         this.categories = this.products.map(p => p.category);
         const categoryIds = this.categories.map(c => c.id);
         this.categories = this.categories.filter(({id}, index) => !categoryIds.includes(id, index + 1));
