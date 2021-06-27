@@ -26,6 +26,8 @@ import {HttpClient} from '@angular/common/http';
                   <span>Preis: {{order.orderProduct.price | number : '.2':'de' }} €</span>
                   <span>TrackingId: {{order.trackingId}} €</span>
                   <span>Ersatz: {{order.replacement}}</span>
+                  <span *ngIf="order.monthlyPayment == 1">Keine Ratenzahlung</span>
+                  <span *ngIf="order.monthlyPayment == 2">2 monatige Ratenzahlung</span>
 
               </div>
               <div *ngIf="!edit" class="col-span-2 text-center text-2xl font-bold mt-6">

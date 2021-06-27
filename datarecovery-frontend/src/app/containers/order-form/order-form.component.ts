@@ -28,7 +28,15 @@ import {Order, Product} from '../../model/model';
               </select>
             </label>
           </ng-container>
+          <ng-container *ngIf="productSelect.value">
 
+            <label class="py-4 px-12 font-semibold">Ist eine Ratenzahlung gewünscht?:
+              <select class="block mt-2 w-full text-black" formControlName="monthlyPayment" required>
+                <option selected value=1>Keine Ratenzahlung</option>
+                <option value=2>2 monatige Ratenzahlung (1% Gebühr)</option>
+              </select>
+            </label>
+          </ng-container>
           <h2 class="px-12 font-semibold">Allgemeine Geschäftsbedingungen und Datenschutzrichtlinien:</h2>
           <div class="flex px-12">
             <input class="self-center" type="checkbox" formControlName="agb" required id="agbCheckbox" >
@@ -37,7 +45,8 @@ import {Order, Product} from '../../model/model';
               <a class="font-semibold underline" routerLink="impressum">Datenschutzrichtlinien</a> wie für die
               <a class="font-semibold underline" routerLink="agb">allgemeinen Geschäftsbedingungen</a></label>
 
-                      </div>
+          </div>
+
           <div class="flex justify-center mt-4 bg-silver p-4 rounded-b-2xl">
             <button (click)="submitProduct()"
                     class="bg-white py-2 px-4 shadow rounded text-black"
@@ -120,7 +129,8 @@ export class OrderFormComponent implements OnInit {
       }),
       product: [''],
       replacement: ['Sie senden einen eigenen Ersatzspeicher zur Sicherung mit: kostenfrei'],
-      agb: ['']
+      agb: [''],
+      monthlyPayment: [1]
     });
     this.orderForm.get('product').valid
   }

@@ -17,6 +17,7 @@ export class Order{
   customer: Customer;
   replacement: string;
   updates: Update[];
+  monthlyPayment: number;
 }
 export enum orderStateEnum {
   orderReceived = 'Auftrag eingegangen',

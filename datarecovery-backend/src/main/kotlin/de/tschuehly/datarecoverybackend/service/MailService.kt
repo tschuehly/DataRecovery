@@ -98,5 +98,9 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
         <span style="font-weight: bold">Produkt:</span> ${order.orderProduct.category?.title} ${order.orderProduct.name}<br />
         <span style="font-weight: bold">Preis:</span> ${"%.2f".format(order.orderProduct.price)} €<br />
         <span style="font-weight: bold">Ersatzdatenträger: </span>${order.replacement}<br />
-        """
+        """ + if(order.monthlyPayment == 2){
+          """<span style="font-weight: bold">Ratenzahlung: </span> 2 Monatsraten (1% Gebühr)<br />"""
+        }else{
+            ""
+        }
 }

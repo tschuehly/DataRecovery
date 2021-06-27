@@ -14,6 +14,7 @@ class Order(
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
     var orderDate: Date?,
     var trackingState: String?,
+    var monthlyPayment: Int = 1,
     @OneToOne
     var orderProduct: OrderProduct,
     @OneToOne(cascade = [CascadeType.ALL])
