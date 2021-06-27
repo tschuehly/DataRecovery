@@ -54,6 +54,20 @@ declare let gtag: Function;
 
         <router-outlet></router-outlet>
       </div>
+      <div class="fixed w-64 bg-white rounded-xl bottom-4 left-4 z-50 p-4" *ngIf="showPhone">
+        <div class="flex justify-around items-center pb-4">
+          <h2 class="text-xl font-bold underline text-center inline">Haben Sie noch Fragen?</h2>
+          <button (click)="showPhone = false"><img class="inline" src="assets/x.svg"></button>
+        </div>
+        <h3 class="font-semibold pb-2">Ein Anruf klärt am schnellsten Ihr Anliegen: </h3>
+        <p class="font-semibold pb-2"><img class="inline pr-4" src="/assets/phone.svg">0841 12840705</p>
+        <p>Auch an Wochenenden und Feiertagen erreichbar.</p>
+      </div>
+      <div class="fixed bg-white rounded-md bottom-4 left-4 z-50 p-3 shadow" *ngIf="!showPhone">
+        <a (click)="showPhone = true" class="cursor-pointer">
+            <img src="/assets/help-circle.svg">
+        </a>
+      </div>
       <div class="fixed right-2 bottom-2 shadow-2xl rounded-xl z-20" [ngClass]="wawidgetHidden ? 'hidden':''">
         <div class="flex align-middle text-white p-4 rounded-t-xl " style="background-color: rgb(9, 94, 84)">
           <span class="px-2">Jetzt Tobias Jungbauer kontaktieren</span>
@@ -78,19 +92,20 @@ declare let gtag: Function;
             <div>
               <h1 class="mb-2 text-4xl">Kontakt</h1>
               <p>
-                Tobias Jungbauer<br/>
-                Datenrettung<br/>
+                Email: <br>
                 <a href="mailto:info@jungbauerdatenrettung.de">info@jungbauerdatenrettung.de</a><br/>
-                Tel.: +49 15161408355
+                Telefon: 0841 12840705<br>
+                Mobil: 0151 61408355
               </p>
             </div>
 
             <div>
               <h1 class="mt-4 md:mt-0 mb-2 text-4xl">Standort</h1>
               <p>
+                Tobias Jungbauer<br/>
+                Datenrettung<br/>
                 Am Stein 9<br/>
                 85049 Ingolstadt<br/>
-                Deutschland<br/>
               </p>
             </div>
           </div>
@@ -107,7 +122,7 @@ declare let gtag: Function;
             <a routerLink="impressum" class="pr-4">Impressum</a><a routerLink="datenschutz" class="px-4">Datenschutz</a><a class="pl-4" routerLink="agb">AGB</a>
           </div>
           <div class="col-span-2 pt-4 divide-x-2 divide-silver">
-            <span class="pr-4">Developed by <a class="font-bold" href="https://www.linkedin.com/in/tschuehly/">Thomas Schühly</a></span>
+            <span class="pr-4">Website developed by <a class="font-bold" href="https://www.linkedin.com/in/tschuehly/">Thomas Schühly</a></span>
             <span class="pl-4">Designed by <span class="whitespace-nowrap">Alina Göttig</span></span>
           </div>
           <div>
@@ -125,6 +140,8 @@ export class NavigationComponent implements OnInit {
   mobileNavShow: boolean = false;
   wawidgetHidden: boolean = true;
   mapsIframeShow: boolean = false;
+  showPhone = false;
+  showPhoneCounter = 0;
 
   private popupOpenSubscription: Subscription;
   private statusChangeSubscription: Subscription;
@@ -136,7 +153,17 @@ export class NavigationComponent implements OnInit {
       this.dropdownShow = false;
     });
   }
-
+  @HostListener("window:scroll", ["$event"])
+  onWindowScroll() {
+    let pos = (document.documentElement.scrollTop || document.body.scrollTop)
+    let max = document.getElementById('priceList').scrollHeight + document.getElementById('priceList').offsetHeight - 200
+    if(pos > max )   {
+      if(this.showPhoneCounter < 1){
+        this.showPhone = true;
+      }
+      this.showPhoneCounter += 1;
+    }
+  }
   ngOnInit(): void {
     this.innerWidth = document.documentElement.clientWidth;
     this.statusChangeSubscription = this.ccService.statusChange$.subscribe(
