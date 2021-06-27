@@ -155,13 +155,16 @@ export class NavigationComponent implements OnInit {
   }
   @HostListener("window:scroll", ["$event"])
   onWindowScroll() {
-    let pos = (document.documentElement.scrollTop || document.body.scrollTop)
-    let max = document.getElementById('priceList').scrollHeight + document.getElementById('priceList').offsetHeight - 200
-    if(pos > max )   {
-      if(this.showPhoneCounter < 1){
-        this.showPhone = true;
+    if(document.getElementById('priceList') != null){
+      let pos = (document.documentElement.scrollTop || document.body.scrollTop)
+      let max = document.getElementById('priceList').scrollHeight + document.getElementById('priceList').offsetHeight - 200
+      if(pos > max )   {
+        if(this.showPhoneCounter < 1){
+          this.showPhone = true;
+        }
+        this.showPhoneCounter += 1;
       }
-      this.showPhoneCounter += 1;
+
     }
   }
   ngOnInit(): void {

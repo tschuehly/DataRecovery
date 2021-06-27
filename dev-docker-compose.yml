@@ -24,7 +24,7 @@ services:
   db:
     image: postgres
     environment:
-      - POSTGRES_PASSWORD=&fC6Pt4THH4^!x6@r8wR&Yz
+      - POSTGRES_PASSWORD=5w5Ye$BJv#F6XLJ4WomFMA%
     expose:
       - "5432"
     volumes:

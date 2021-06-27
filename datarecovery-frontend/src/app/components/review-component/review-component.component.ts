@@ -50,7 +50,11 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
                   </div>
                   <div class="flex justify-between space-x-2">
                     <button class="border border-gray-300 p-2 rounded">
-                      <a
+                      <a class="md:hidden"
+                      href="https://g.co/kgs/3tdxPy">
+                        Weitere Bewertungen
+                      </a>
+                      <a class="hidden md:block"
                         href="https://www.google.de/search?&q=Tobias+Jungbauer+Datenrettung&entrypoint=sh/x/kp/local#lrd=0x479c339724e79353:0x37d4dd90c24065cb,1"
                         rel="noopener">
                         Weitere Bewertungen
@@ -88,7 +92,7 @@ export class ReviewComponentComponent implements OnInit {
 
   ngOnInit(): void {
     this.http.get("/api/review").subscribe((reviews: Review[]) => {
-      this.reviews = reviews
+      this.reviews = reviews.sort((r1,r2) => r2.time-r1.time)
     })
   }
 
