@@ -13,11 +13,9 @@ import { Component, OnInit } from '@angular/core';
         <p>Cassandra Schilling Datenrettungsdienst<br>
           Friedrich-Ebert-Straße 70<br>
           71638 Ludwigsburg<br>
-          Telefon: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; +4915161408355<br>
+          Telefon: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 0152 21408008<br>
           E-Mail: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="text-decoration:underline"><a href="mailto:info@datenrettung-schilling.de" target="_self">info@datenrettung-schilling.de</a></span><br>
-          Steuernummer: &nbsp; &nbsp;&nbsp; 13123370362</p>
-
-        <p>Umsatzteuer-Identifikationsnummer: DE318961162</p>
+          Steuernummer: &nbsp; &nbsp;&nbsp; 7122357209</p>
 
         <p>&nbsp;</p>
 
@@ -33,7 +31,7 @@ import { Component, OnInit } from '@angular/core';
 
         <p><span style="text-decoration:underline">2. Preise und Versandkosten</span></p>
 
-        <p>Die ausgezeichneten Preise sind Endpreise inkl. 19% Umsatzsteuer. Es gilt der Betrag, der jeweils zum Zeitpunkt des verbindlichen Auftrags ausgewiesen ist. Die Kosten der Rücksendung, die im Falle einer Rückgabe ohne Datenrettungserfolg entstehen, tragen wir.</p>
+        <p>Als Kleinunternehmer im Sinne von § 19 Abs. 1 UStG wird keine Umsatzsteuer berechnet. Es gilt der Betrag, der jeweils zum Zeitpunkt des verbindlichen Auftrags ausgewiesen ist. Die Kosten der Rücksendung, die im Falle einer Rückgabe ohne Datenrettungserfolg entstehen, tragen wir.</p>
 
         <p>&nbsp;</p>
 

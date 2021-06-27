@@ -77,7 +77,7 @@ declare let gtag: Function;
               Cassandra Schilling<br/>
               Datenrettungsdienst<br/>
               info@datenrettung-schilling.de<br/>
-              Tel.: +49 152 21408008
+              Tel.: 0152 21408008
             </p>
           </div>
           <div class="col-span-2 md:col-span-1">

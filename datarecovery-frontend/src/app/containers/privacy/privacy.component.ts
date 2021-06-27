@@ -21,7 +21,7 @@ import {Component, OnInit} from '@angular/core';
       Friedrich-Ebert-Straße 70<br />
       71638 Ludwigsburg</p>
 
-      <p>Telefon: +49(0)15221408008<br />
+      <p>Telefon: 015221408008<br />
         E-Mail: info@datenrettung-schilling.de</p>
       <p>Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.</p>
 

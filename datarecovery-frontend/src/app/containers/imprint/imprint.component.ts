@@ -13,12 +13,12 @@ import {Component, OnInit} from '@angular/core';
         71638 Ludwigsburg</p>
 
       <h2 class="text-lg font-semibold mb-2 mt-4 underline">Kontakt</h2>
-      <p>Telefon: +49 0152 21408008<br />
+      <p>Telefon: 0152 21408008<br />
         E-Mail: info@datenrettung-schilling.de</p>
 
       <h2 class="text-lg font-semibold mb-2 mt-4 underline">Redaktionell verantwortlich</h2>
       <p>Cassandra Schilling</p>
-      <h2 class="text-lg font-semibold mb-2 mt-4 underline">Wirtschaftsidentifikationsnummer</h2>
+      <h2 class="text-lg font-semibold mb-2 mt-4 underline">Steuernummer</h2>
       <p>7122357209</p>
 
       <h2 class="text-lg font-semibold mb-2 mt-4 underline">EU-Streitschlichtung</h2>

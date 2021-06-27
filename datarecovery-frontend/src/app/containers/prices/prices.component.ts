@@ -14,7 +14,7 @@ import {HttpClient} from "@angular/common/http";
           <span class="font-bold text-black">Wichtig:</span> Es handelt sich um
           <span class="font-bold text-black">Festpreise</span>, die nur <span class="font-bold text-black">nach Erfolg gelten.</span><br>
           Sollte keine Datenrettung möglich sein ist die Bearbeitung vollständig kostenfrei.<br>
-          Alle angegebenen Preise sind bereits inklusive 19% Mehrwertsteuer.<br>
+          Als Kleinunternehmer im Sinne von § 19 Abs. 1 UStG wird keine Umsatzsteuer berechnet.<br>
         </div>
       </div>
     </div>
