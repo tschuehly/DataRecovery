@@ -46,29 +46,7 @@ declare let gtag: Function;
               width="{{innerWidth}}" height="300" frameborder="0" allowfullscreen="" aria-hidden="false"
               tabindex="0"></iframe>
     </div>
-    <div>
-      <div class="fixed right-2 bottom-2 shadow-2xl rounded-xl" [ngClass]="wawidgetHidden ? 'hidden':''">
-        <div class="flex align-middle text-white p-4 rounded-t-xl " style="background-color: rgb(9, 94, 84)">
-          <span class="px-2">Jetzt Cassandra Schilling kontaktieren</span>
-          <button (click)="wawidgetHidden = true">
-            <img src="/assets/x-square.svg"></button>
-        </div>
-        <div class="h-20" style="background-image: url('/assets/wa_bg.png') ;background-color: #E5DDD5"></div>
-        <div class="bg-white flex justify-center p-2 rounded-b-xl">
-          <a href="https://wa.me/+4915221408008">
-            <button class="flex align-middle p-2 pr-4 rounded text-white" style="background-color: #14C656">
-              <img class="h-6 inline px-2" src="/assets/WhatsApp.svg">Start Chat</button>
-          </a>
-        </div>
-      </div>
-      <div class="fixed right-2 bottom-2 " (click)="wawidgetHidden = false" *ngIf="wawidgetHidden">
-        <button class="flex align-middle p-2 rounded text-white" style="background-color: #14C656">
-          <img class="h-6 inline" src="/assets/WhatsApp.svg">
-        </button>
-      </div>
-    </div>
     <footer class="text-gray-700 bg-blue-50 pt-10" id="contact">
-
       <div class="container mb-4 text-center">
         <div class="grid grid-cols-2 space-y-4">
           <div class="col-span-2 md:col-span-1">
