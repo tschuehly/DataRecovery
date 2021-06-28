@@ -87,7 +87,7 @@ import {Component, OnInit} from '@angular/core';
       <p>Tobias Jungbauer Datenrettung<br />
         Am Stein 9<br />
         85049 Ingolstadt<br></p>
-      <p>Telefon: +49(0)15161408355<br />
+      <p>Telefon: 0841 12840705<br />
         E-Mail: info@jungbauerdatenrettung.de<br></p>
 
       <p>Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über

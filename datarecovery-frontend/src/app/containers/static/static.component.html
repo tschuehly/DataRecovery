@@ -44,39 +44,12 @@ Nach der Reparatur wird ein Image der Festplatte erstellt woraus Ihre Dateien ab
 
 Der PC-3000 UDMA bildet zusammen mit dem Data Extractor UDMA das PC-3000 UDMA Professional-System, mit dem Daten von der SATA-, ATA- (IDE-) Festplatte wiederhergestellt werden können. Wenn Sie Ihre Festplatte reparieren lassen möchten, benötigen Sie eine Lösung wie durch den PC-3000 UDMA.
     </pre>
-      <pre class="whitespace-pre-wrap">Das neue PC-3000 UDMA ist eine Testerkarte mit drei Ports, die in einen PCI-Express-Erweiterungssteckplatz eingesetzt wird und 2 SATA-Ports (Datenübertragungsgeschwindigkeit bis 133 MB / s) und 1 PATA (Geschwindigkeit bis 100 MB / s) hat. Der primäre Port ist SATA0, während SATA1 ein sekundärer Port ist, der mit dem PATA-Port umschaltbar ist. Der PC-3000 UDMA bietet zwei gleichzeitige Verbindungen für zwei Laufwerke - der erste Port wird für SATA verwendet und der zweite kann entweder für SATA oder für PATA verwendet werden. Somit können wir mit 2 SATA-Laufwerken oder 1 SATA- und 1 PATA-Laufwerk gleichzeitig arbeiten.
-
-Netzteiladapter:
+      <pre class="whitespace-pre-wrap">
 Ein zweikanaliger Spannungsversorgungsadapter befindet sich auf der Platinensteuerung und bietet eine unabhängige Spannungsversorgung von +5 V, +12 V sowie Schutz vor Überspannungs- und Stromüberlastung. Im Notfall wird die Stromversorgung der Festplatte automatisch abgeschaltet.
 Zusätzlich verfügt jeder Kanal über eine Rückkopplungsschaltung mit spezieller Verwaltungssoftware, die die Versorgungsspannungswerte steuert und den Benutzer über Probleme mit der Speiseschaltung informiert.
 
 </pre>
       <div class="flex grid sm:grid-cols-2 grid-cols-1">
-<pre class="whitespace-pre-wrap">Das PC-3000 UDMA-Kit besteht aus:
-PC-3000 UDMA-E-Controller
-PC-USB-PWR-Adapter
-PC-USB-TERMINAL Adapter
-PC-2 "Adapter
-SATA-Micro-SATA-Adapter
-MX-SAFE Adapter
-PC-FUJ.SATA-Adapter
-PC-QUANTUM Adapter
-PC-SAMSUNG Adapter
-PC-SEAG.SATA Adapter
-PC-SEAGATE Adapter
-PC-TOSH.SATA-Adapter
-PC-WD3.5 "Adapter
-PC-WD2.5 "Adapter
-ATCS, ATDA-Sonde entsperren
-USB 2.0 Defender Kabel
-SATA RAID Edition (100 cm) -Kabel
-UDMA80 (80 cm) Flachkabel
-IDC10 (30 cm) Kabel
-MX-SAFE-Stromkabel
-SATA HDD (100 cm) Stromkabel
-PATA HDD (85 cm) Stromkabel
-PATA-SATA-Netzteil (15 cm)
-PC-3000 UDMA-Software, Ressourcendatenbank</pre>
         <div class="overflow-hidden">
           <label class="">
             <img src="assets/pc3000udma.webp" alt="pc3000udma">
@@ -91,7 +64,7 @@ PC-3000 UDMA-Software, Ressourcendatenbank</pre>
 </ng-container>
 <ng-container *ngIf="variant == 'flash'">
   <div class="py-10 bg-center bg-gray-main bg-cover bg-no-repeat "
-       style="background-image: url('/assets/flash_arbeitsweise.png')">
+       style="background-image: url('/assets/ssd_arbeitsweise.png')">
     <div class="flex md:ml-32 py-10 justify-center md:justify-start">
       <h1 class="text-4xl leading-relaxed text-center text-silver text-shadow">
         Tobias<br>Jungbauer<br>Datenrettung
@@ -104,39 +77,35 @@ PC-3000 UDMA-Software, Ressourcendatenbank</pre>
   <div class="bg-gray-main text-silver border-b-2 border-silver pb-8">
     <div class="container">
       <h1 class="text-2xl font-bold py-6">NAND-Flashspeicher-Datenrettung:</h1>
-      <pre class="whitespace-pre-wrap">Die Funktionsweise der Nandflashspeicher-Datenrettung ist, dass der interne Speicherchip des Datenträgers direkt, sprich ohne Controller ausgelesen wird.
+      <pre class="whitespace-pre-wrap">Bei der NAND-Flashspeicherdatenrettung wie USB-Sticks, micro SD-Karten und SD-Karten gibt es grundlegend zwei verschiedene Bauformen.
 
-Danach werden aus den gelesenen Daten des Chips mit der Speicherungslogik des alten Controllers ursprüngliche Strukturen wiederhergestellt. Nach einigen Anpassungen wird am Ende ein Image erzeugt, sodass Ihre Dateien bestenfalls vollständig in ursprünglicher Ordnerstruktur rekonstruiert worden sind. Dadurch können beispielsweise Controllerschäden umgangen werden!
+Einmal die Speicher, die noch über ein PCB mit aufgelötetem Speicherchip und Controller verfügen und einmal die sogenannten Monolithspeicher (micro SD-Karten als Beispiel), die wie das Wort „Mono“ andeutet aus nur einen einzigen Chip bestehen und alle Bauteile hierin beinhalten.
+
+Die „Geheimwaffe“ der Nand-Flashspeicher-Datenrettung ist, dass der interne Speicherchip des Datenträgers direkt, sprich ohne Controller, ausgelesen wird. Bei Speichern mit PCB kann man hier den NAND-Chip einfach herunterlöten. Bei Monolithspeicher setzt man stattdessen auf der Oberfläche an einem sogenannten technischen Pinout an und liest über die eigenen Leiterbahnen des Speichers den internen NAND-Chip aus.
+        </pre>
+      <div class="flex grid-cols-2 flex-wrap gap-4">
+        <img class="h-96 object-cover" src="assets/flash_arbeitsweise2.png.jpg">
+      </div>
+      <pre class="whitespace-pre-wrap">
+
+Sobald man die Chipdaten gelesen hat, werden daraus mit Hilfe der Speicherungslogik des ehemaligen Controllers die Dateien virtuell wieder zusammengesetzt.
+
+Nach einigen Anpassungen wird am Ende ein Image erzeugt, sodass Ihre Dateien bestenfalls vollständig und in ursprünglicher Ordnerstruktur rekonstruiert worden sind.
+
+Dadurch können beispielsweise Controllerschäden umgangen werden!
 
 Folgende Chips werden zum Auslesen unterstützt: TSOP-48, BGA-152 und LGA/TLGA-52/60, welche die üblichen Formate für beispielsweise USB-Sticks oder SD-Karten darstellen, wie weitere 112 verschiedene Monolitharten.
-
-Unter dem Abschnitt "PC-3000 Flash" gibt es Information über die verwendete Soft- und Hardware.
-        </pre>
-      <div class="flex grid-cols-3 flex-wrap gap-4">
-        <img class="h-60" src="assets/usb1.jpg">
-        <img class="h-60" src="assets/usb2.jpg">
-        <img class="h-60" src="assets/sd1.jpg">
-        <img class="h-60" src="assets/sd2.jpg">
-      </div>
+</pre>
       <h1 class="text-2xl font-bold my-6">Verwendete Hard- Und Software</h1>
-      <pre class="whitespace-pre-wrap overflow-hidden">Der PC-3000 Flash ist ein Hardware-Software-System zur Wiederherstellung von Daten von NAND-basierten Geräten in solchen Fällen, in denen kein Zugriff über die zugewiesene Laufwerksschnittstelle mehr möglich ist:
-UFD (USB-Flash-Laufwerk)
+      <pre class="whitespace-pre-wrap overflow-hidden">Der PC-3000 Flash ist ein Hardware-Software-Lösung zur Wiederherstellung von Daten von NAND-basierten Geräten in solchen Fällen, in denen kein Zugriff über die zugewiesene Laufwerksschnittstelle mehr möglich ist.
 
-SD (Secure Digital Card)
-CF (Compact Flash)
-Micro SD (Micro Secure Digital Card)
-MS (Memory Stick)
-Monolithische Flash-Geräte
-
-Das PC-3000-Flash-System ermöglicht die Diagnose eines Flash-Laufwerks und die Ermittlung der Ursache des Problems. Alle Funktionsstörungen von Flash-Laufwerken können in zwei Gruppen unterteilt werden: logisch (alle Einheiten des Geräts und des Mikrochips funktionieren einwandfrei und fehlerfrei, es tritt jedoch ein Problem mit dem beschädigten Dateisystem, den versehentlich gelöschten Dateien und den Daten auf Verlust nach dem Formatieren usw.) und physische (Beschädigung elektronischer Komponenten oder der Firmware, was zu einem Laufwerksausfall führt). Leistungsstabilisatoren, der Controller-Mikrochip oder die Firmware des Laufwerks im Controller (oder im Servicebereich der Speicherchips) sind die häufigsten Fehlerursachen.
-Um jedes dieser Probleme zu lösen, verwendet der PC-3000 Flash eine Reihe eigener Tools und Methoden, mit denen die Fehlfunktion erkannt und auf Benutzerdaten zugegriffen werden kann.
-<img src="/assets/pc3000flash.webp">
+Funktionsstörungen können vom PC-3000 Flash mit einer Reihe eigener Tools und Methoden umgangen werden.
+        <img src="/assets/pc3000flash.webp">
 Bildquelle: https://www.acelaboratory.com/pc3000flash.php
 
 <h2 class="font-bold">Spiderboardadapter:</h2>
 Der Spider Board Adapter wurde entwickelt, um mit Pins sich mit monolithischen Flash-Geräten zu verbinden.
-Dies ist die neue revolutionäre Technik zur Wiederherstellung von Daten aus beschädigten Monolithen.
-Es sind keine aufwendigen Lötarbeiten erforderlich.
+
 <img src="/assets/pc3000flashspider.webp">
 Bildquelle: https://www.acelaboratory.com/pc3000flash.php#Spider
         </pre>
@@ -145,7 +114,7 @@ Bildquelle: https://www.acelaboratory.com/pc3000flash.php#Spider
 </ng-container>
 <ng-container *ngIf="variant == 'ssd'">
   <div class="py-10 bg-center bg-gray-main bg-cover bg-no-repeat "
-       style="background-image: url('/assets/ssd_arbeitsweise.png')">
+       style="background-image: url('/assets/flash_arbeitsweise.png')">
     <div class="flex md:ml-32 py-10 justify-center md:justify-start">
       <h1 class="text-4xl leading-relaxed text-center text-silver text-shadow">
         Tobias<br>Jungbauer<br>Datenrettung
@@ -159,16 +128,27 @@ Bildquelle: https://www.acelaboratory.com/pc3000flash.php#Spider
     <div class="text-silver container">
 
       <h1 class="text-2xl font-bold py-6">SSD-Festplatte/Halbleiterlaufwerk (SATA-basiert):</h1>
-      <pre class="whitespace-pre-wrap">Anders als bei der Nandflashspeicher-Datenrettung von USB-Sticks und co. können zwar auch bei SSDs die einzelnen Speicherbausteine ausgelesen werden das Rekonstruieren und Entschlüsseln der Speicherungslogik des ehemaligen Controllers erweist sich hier aber als besonders schwierig.
+      <pre class="whitespace-pre-wrap">Man geht hier einen ähnlichen Weg wie bei HDD-Festplatten.
+Es werden so lange physische als auch logische Fehler beseitigt, bis der Datenzugriff möglich ist.
 
-Stattdessen geht man hier in der Regel einen ähnlichen Weg wie bei HDD-Festplatten, dass man SSD-Festplatten soweit repariert, bis der Datenzugriff wieder (zumindest vorübergehend) besteht.
-Auch hier können Fehler in der Firmware umgangen und repariert werden.
+Tatsächlich ist bei über 90% der defekten SSD-Festplatten die nicht mehr erkannt werden einer der Speicherchips die Fehlerursache. Warum ist das so? Die SSD eigene Firmware wird auch auf den Speicherbausteinen abgespeichert!
 
-Leider werden aktuell bei mir nur SATA basierte SSD-Festplatten unterstützt. M.2 SSDs daher nur, wenn diese nicht auf PCIe (NVMe), sondern ebenfalls auf SATA basieren.
+Wenn vom Chip nun zu viele Teile der Firmware nicht mehr für den Controller lesbar werden, schafft die SSD es nicht mehr zu booten.
 
-Eine Liste von unterstützen Speichern finden Sie hier: <a class="font-bold" href="https://blog.acelaboratory.com/pc-3000-ssd-list-of-supported-ssd-drives-regularly-updated.html">https://blog.acelaboratory.com/pc-3000-ssd-list-of-supported-ssd-drives-regularly-updated.html</a>
-Weitere Speicher können ebenfalls unterstützt werden, jedoch nur mit eingeschränkten Funktionsumfang.
+Aber dafür gibt es eine Lösung: Man bootet die SSD über das externe Hochladen der Firmware (in den RAM der SSD) und ermöglicht dadurch den Zugriff auf die Servicearea bzw. später auf die Nutzerarea, wo sich auch die gewünschten Dateien befinden.
         </pre>
+      <div class="flex grid-cols-2 flex-wrap gap-4">
+        <img class="h-96 object-cover object-right" src="assets/ssd_arbeitsweise.jpg">
+      </div>
+    <pre class="whitespace-pre-wrap">
+
+In meiner Datenbank sind tausende an verschiedene „Loader“ für verschiedene Controller, die dieses Prozedere ermöglichen.
+
+Abgesehen davon biete ich auch das Beseitigen von Hardwareschäden seitens der austauschbaren Elektrotechnik an.
+
+Leider werden im Moment bei mir nur SATA basierte SSD-Festplatten unterstützt. Defekte M.2 SSDs daher nur, wenn diese nicht auf PCIe (NVMe), sondern ebenfalls auf das SATA Protokoll basieren.
+
+    </pre>
     </div>
   </div>
 </ng-container>

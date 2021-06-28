@@ -14,7 +14,7 @@ import {ActivatedRoute, Router} from "@angular/router";
         85049 Ingolstadt</p>
 
       <h2 class="text-lg font-semibold mb-2 mt-4 underline">Kontakt</h2>
-      <p>Telefon: +49(0)15161408355<br />
+      <p>Telefon: 0841 12840705<br />
         E-Mail: info@jungbauerdatenrettung.de</p>
 
       <h2 class="text-lg font-semibold mb-2 mt-4 underline">Umsatzsteuer-ID</h2>
@@ -35,7 +35,7 @@ import {ActivatedRoute, Router} from "@angular/router";
       <p>Tobias Jungbauer<br />
         Am Stein 9<br />
         85049 Ingolstadt<br />
-        +49(0)15161408355<br />
+        0841 12840705<br />
         tobias@jungbauerdatenrettung.de</p>
 
       <h2 class="text-lg font-semibold mb-2 mt-4 underline">EU-Streitschlichtung</h2>

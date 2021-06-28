@@ -31,7 +31,7 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
             .readText(charset = Charsets.UTF_8)
         val body = getOrderConfirmationBody(order)
         html = html.replace("MESSAGEBODY", body)
-        var dateFormat = SimpleDateFormat("dd.MM.yyyy HH:mm");
+        var dateFormat = SimpleDateFormat("dd.MM.yyyy");
         html = html.replace("MESSAGETITLE", "Ihre Auftragsbest&#228;tigung vom ${dateFormat.format(order.orderDate)}")
         helper.setText(html,true)
 
@@ -53,8 +53,8 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
             .readText(charset = Charsets.UTF_8)
         val body = getParcelReceived(order)
         html = html.replace("MESSAGEBODY", body)
-        var dateFormat = SimpleDateFormat("dd.MM.yyyy HH:mm");
-        html = html.replace("MESSAGETITLE", "Ihre Auftrag vom ${dateFormat.format(order.orderDate)}")
+        var dateFormat = SimpleDateFormat("dd.MM.yyyy");
+        html = html.replace("MESSAGETITLE", "Ihr Auftrag vom ${dateFormat.format(order.orderDate)}")
         helper.setText(html,true)
 
         javaMailSender.send(msg)

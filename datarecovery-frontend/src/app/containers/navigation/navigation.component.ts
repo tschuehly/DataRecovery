@@ -25,6 +25,8 @@ declare let gtag: Function;
           </button>
         </div>
         <div class="items-center text-xl px-4  bg-gray-main" [ngClass]="mobileNavShow ? 'flex flex-col absolute right-0 top-20 w-full space-y-4 py-4 text-2xl font-semibold bg-gray-main text-white': 'hidden md:flex md:flex-row'">
+
+          <a (click)="mobileNavShow = false;scrollToContact()" class="cursor-pointer p-2">Kontakt</a>
           <a class="cursor-pointer p-2" (click)="scrollToOrder(); mobileNavShow = false">Auftrag</a>
           <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="preise">Preise</a>
           <div class="h-full text-center flex"  (clickOutside)="dropdownShow = false" [exclude]="'div.dropdown'"
@@ -41,7 +43,6 @@ declare let gtag: Function;
             </div>
           </div>
           <a (click)="mobileNavShow = false" class="cursor-pointer p-2" routerLink="philosophie">Philosophie</a>
-          <a (click)="mobileNavShow = false;scrollToContact()" class="cursor-pointer p-2">Kontakt</a>
           <div *ngIf="currentUser">
             <a (click)="mobileNavShow = false" class=" p-2" routerLink="/order">Bestellungen</a>
             <a (click)="mobileNavShow = false" class=" p-2" routerLink="/product">Produkte</a>
@@ -54,21 +55,29 @@ declare let gtag: Function;
 
         <router-outlet></router-outlet>
       </div>
-      <div class="fixed w-64 bg-white rounded-xl bottom-4 left-4 z-50 p-4" *ngIf="showPhone">
+
+      <div class="fixed w-64 bg-white rounded-xl bottom-12 left-1/2 -ml-32 z-50 p-4 shadow" *ngIf="showPhone">
         <div class="flex justify-around items-center pb-4">
-          <h2 class="text-xl font-bold underline text-center inline">Haben Sie noch Fragen?</h2>
+          <p class="font-semibold"><img class="inline pr-4" src="/assets/phone.svg">0841 12840705</p>
+
           <button (click)="showPhone = false"><img class="inline" src="assets/x.svg"></button>
         </div>
-        <h3 class="font-semibold pb-2">Ein Anruf klärt am schnellsten Ihr Anliegen: </h3>
-        <p class="font-semibold pb-2"><img class="inline pr-4" src="/assets/phone.svg">0841 12840705</p>
         <p>Auch an Wochenenden und Feiertagen erreichbar.</p>
       </div>
-      <div class="fixed bg-white rounded-md bottom-4 left-4 z-50 p-3 shadow" *ngIf="!showPhone">
-        <a (click)="showPhone = true" class="cursor-pointer">
-            <img src="/assets/help-circle.svg">
-        </a>
+      <div class="fixed right-4 bottom-4 z-50 flex flex-row ">
+        <div class=" bg-white rounded-md  p-3 shadow mr-4" *ngIf="!showPhone ">
+          <a (click)="showPhone = true ; wawidgetHidden = true" class="cursor-pointer">
+            <img src="/assets/phone.svg">
+          </a>
+        </div>
+
+        <div class="md:hidden " (click)="wawidgetHidden = false; showPhone = false" *ngIf="wawidgetHidden">
+          <button class="flex align-middle p-3 rounded text-white" style="background-color: #14C656">
+            <img class="h-6 w-6 inline" src="/assets/WhatsApp.svg" alt="Whatsapp Logo">
+          </button>
+        </div>
       </div>
-      <div class="fixed right-2 bottom-2 shadow-2xl rounded-xl z-20" [ngClass]="wawidgetHidden ? 'hidden':''">
+      <div class="fixed right-10 bottom-10 shadow-2xl rounded-xl z-20" [ngClass]="wawidgetHidden ? 'hidden':''">
         <div class="flex align-middle text-white p-4 rounded-t-xl " style="background-color: rgb(9, 94, 84)">
           <span class="px-2">Jetzt Tobias Jungbauer kontaktieren</span>
           <button (click)="wawidgetHidden = true">
@@ -82,10 +91,6 @@ declare let gtag: Function;
           </a>
         </div>
       </div>
-      <div class="fixed right-2 bottom-2 md:hidden z-20" (click)="wawidgetHidden = false" *ngIf="wawidgetHidden">
-        <button class="flex align-middle p-2 rounded text-white" style="background-color: #14C656">
-            <img class="h-6 w-6 inline" src="/assets/WhatsApp.svg" alt="Whatsapp Logo">
-        </button></div>
       <footer class="pt-8 bg-gray-main text-silver">
         <div class="mb-4 text-center">
           <div class=" flex flex-col md:flex-row justify-evenly pb-4"  id="contact">
@@ -94,8 +99,7 @@ declare let gtag: Function;
               <p>
                 Email: <br>
                 <a href="mailto:info@jungbauerdatenrettung.de">info@jungbauerdatenrettung.de</a><br/>
-                Telefon: 0841 12840705<br>
-                Mobil: 0151 61408355
+                Telefon: 0841 12840705
               </p>
             </div>
 

@@ -18,6 +18,17 @@ import {Component, OnInit} from '@angular/core';
       </div>
       <div class="bg-gray-main text-silver border-b-2 border-silver pb-8">
         <div class="container">
+          <h2 class="text-2xl font-bold py-6">Die Vorteile meines Angebots sind:</h2>
+          <pre class="whitespace-pre-wrap">
+<span class="font-semibold ">1. Bei mir müssen Sie niemals in Vorkasse gehen:</span>
+So bearbeite ich alle meine Fälle zu einem im Verhältnis zum Markt preiswerten Festpreis und das zudem nur nach Erfolg. Bei Misserfolg verlange ich keine Gebühren.
+<span class="font-semibold">2. Meine Transparenz:</span>
+Ich möchte Ihnen die höchstmögliche Transparenz zur geleisteten Arbeit und den dazugehörigen technischen Hintergrund geben.
+Fragen Sie gerne, wie die Datenrettung durchgeführt worden ist!
+Ich habe nichts zu verbergen und rede gerne über mein Fachgebiet.
+<span class="font-semibold">3. Vielschichtiges Angebot:</span>
+Ich bin mit meinem Know-how und meinem Equipment breit aufgestellt, so bearbeite ich nicht nur HDD und NAND Fälle, sondern auch die SSD Datenrettung (noch nur SATA basiert) und biete zudem die RAID-Datenrettung an. Auch scheue ich nicht davor weitere Investitionen in neues Equipment zu tätigen, um auch Ihren Fall lösen zu können! Ich freue mich auf Ihre Anfrage.
+          </pre>
           <h2 class="text-2xl font-bold py-6">Der erste Auftrag:</h2>
           <pre class="whitespace-pre-wrap">
 Bereits zu meiner Schulzeit, als auch begleitend während meines Elektrotechnikstudiums, arbeitete ich bei einem mittelständischen Elektronikdienstleister, bei dem ich das ESD-geschützte Arbeiten an elektronischen Baugruppen, z.B. Löten an SMD und THT Bauteilen lernen konnte, als auch für optische Systeme unter Reinraumbedingungen arbeiten durfte.
@@ -53,17 +64,7 @@ Denn das große Problem der Branche ist, dass zu viele Anbieter von Ihrem Market
 
 Ich hoffe, dass Sie mein Angebot als fair empfinden werden und ich Sie mit meiner Leistung überzeugen kann.
           </pre>
-          <h2 class="text-2xl font-bold py-6">Die Vorteile meines Angebots sind:</h2>
-          <pre class="whitespace-pre-wrap">
-1. Bei mir müssen Sie niemals in Vorkasse gehen:
-So bearbeite ich alle meine Fälle zu einem im Verhältnis zum Markt preiswerten Festpreis und das zudem nur nach Erfolg. Bei Misserfolg verlange ich keine Gebühren.
-2. Meine Transparenz:
-Ich möchte Ihnen die höchstmögliche Transparenz zur geleisteten Arbeit und den dazugehörigen technischen Hintergrund geben.
-Fragen Sie gerne, wie die Datenrettung durchgeführt worden ist!
-Ich habe nichts zu verbergen und rede gerne über mein Fachgebiet.
-3. Vielschichtiges Angebot:
-Ich bin mit meinem Know-how und meinem Equipment breit aufgestellt, so bearbeite ich nicht nur HDD und NAND Fälle, sondern auch die SSD Datenrettung (noch nur SATA basiert) und biete zudem die RAID-Datenrettung an. Auch scheue ich nicht davor weitere Investitionen in neues Equipment zu tätigen, um auch Ihren Fall lösen zu können! Ich freue mich auf Ihre Anfrage.
-          </pre>
+
 
         </div>
 
