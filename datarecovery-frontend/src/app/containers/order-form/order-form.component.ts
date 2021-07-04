@@ -41,8 +41,8 @@ import {Order, Product} from '../../model/model';
           <div class="flex px-12">
             <input class="self-center" type="checkbox" formControlName="agb" required id="agbCheckbox" >
             <label for="agbCheckbox" class="ml-4">
-              Hiermit bestätige ich meine Einverständnis für die vorhandenen
-              <a class="font-semibold underline" routerLink="impressum">Datenschutzrichtlinien</a> wie für die
+              Hiermit bestätige ich die
+              <a class="font-semibold underline" routerLink="impressum">Datenschutzrichtlinien</a> und die
               <a class="font-semibold underline" routerLink="agb">allgemeinen Geschäftsbedingungen</a></label>
 
           </div>
