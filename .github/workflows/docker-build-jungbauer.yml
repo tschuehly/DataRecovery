@@ -2,6 +2,7 @@ name: Docker Build and Push
 on:
   push:
     branches: [ jungbauer_deploy ]
+
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
