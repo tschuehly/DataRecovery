@@ -3,6 +3,7 @@ WORKDIR /datarecovery-backend
 COPY build.gradle.kts build.gradle.kts
 COPY settings.gradle.kts settings.gradle.kts
 
+RUN gradle clean build --no-daemon > /dev/null 2>&1 || true
 COPY src src
 RUN gradle build --stacktrace
 RUN java -Djarmode=layertools -jar build/libs/datarecovery-*.jar extract
