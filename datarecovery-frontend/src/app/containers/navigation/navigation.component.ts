@@ -71,7 +71,7 @@ declare let gtag: Function;
           </a>
         </div>
 
-        <div class="md:hidden " (click)="wawidgetHidden = false; showPhone = false" *ngIf="wawidgetHidden">
+        <div class="" (click)="wawidgetHidden = false; showPhone = false" *ngIf="wawidgetHidden">
           <button class="flex align-middle p-3 rounded text-white" style="background-color: #14C656">
             <img class="h-6 w-6 inline" src="/assets/WhatsApp.svg" alt="Whatsapp Logo">
           </button>
