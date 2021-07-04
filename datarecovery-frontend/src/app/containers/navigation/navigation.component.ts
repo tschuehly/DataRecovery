@@ -158,20 +158,7 @@ export class NavigationComponent implements OnInit {
       this.dropdownShow = false;
     });
   }
-  @HostListener("window:scroll", ["$event"])
-  onWindowScroll() {
-    if(document.getElementById('priceList') != null){
-      let pos = (document.documentElement.scrollTop || document.body.scrollTop)
-      let max = document.getElementById('priceList').scrollHeight + document.getElementById('priceList').offsetHeight - 200
-      if(pos > max )   {
-        if(this.showPhoneCounter < 1){
-          this.showPhone = true;
-        }
-        this.showPhoneCounter += 1;
-      }
-
-    }
-  }
+ 
   ngOnInit(): void {
     this.innerWidth = document.documentElement.clientWidth;
     this.statusChangeSubscription = this.ccService.statusChange$.subscribe(
