@@ -12,8 +12,11 @@ FROM adoptopenjdk/openjdk15:jre-15.0.2_7-alpine AS prod
 EXPOSE 8088
 WORKDIR /datarecovery-backend
 COPY --from=build datarecovery-backend/dependencies/ ./
+RUN true
 COPY --from=build datarecovery-backend/snapshot-dependencies/ ./
+RUN true
 COPY --from=build datarecovery-backend/spring-boot-loader/ ./
 RUN true
 COPY --from=build datarecovery-backend/application/ ./
+RUN true
 ENTRYPOINT ["java","-Dspring.profiles.active=production", "org.springframework.boot.loader.JarLauncher"]
