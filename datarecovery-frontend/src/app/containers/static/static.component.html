@@ -14,31 +14,46 @@
     <div class="container">
       <h1 class="text-2xl font-bold py-6">Vorgehensweise HDD-Festplattendatenrettung:</h1>
       <pre class="whitespace-pre-wrap">
+        
 Typische Schäden sind:
-- defekte Leseköpfe nach einem Headcrash (z.B. durch Erschütterung)
+<span class="font-semibold">- defekte Schreib-/Leseköpfe nach einem Headcrash (z.B. durch Erschütterung)
 - defektes PCB (z.B. durch das Verwenden eines falschen Netzteils)
-- fehlerhafte Firmware oder eine fehlerhafte Boot-ROM
+- fehlerhafte ServiceArea oder eine fehlerhafte Boot-ROM
+</span>  
+Die Herangehensweise bei der HDD-Datenrettung ist, zunächst eine Analyse über den Zustand der Festplatte anzustellen, um herauszufinden, wo der Schuh drückt.
+Danach wird die HDD von defekten Bauteilen befreit bzw. Fehler in der Firmware und BOOT-ROM behoben, bis der Zugriff auf die Dateien wieder möglich ist.
 
-Die Herangehensweise bei der HDD-Datenrettung ist, zunächst eine Analyse über den Zustand der Festplatte anzustellen, um herauszufinden, wo der Fehler liegt.
+Typische arbeiten dabei sind:
+<span class="font-semibold"> - Analyse und Austausch der Leseköpfe </span> 
+<div class="flex grid-cols-3 flex-wrap gap-4">
+  <img class="h-80 object-cover object-right" src="assets/hdd_arbeitsweise_headreplacement.jpg">
+  <img class="h-80 object-cover object-center" src="assets/HDDarbeitsweise_head.JPG">
+</div>
+<span class="font-semibold"> - Austausch und Anlernen des PCB </span> 
+<div class="flex grid-cols-3 flex-wrap gap-4">
+  <img class="h-80 object-cover object-center" src="assets/HDD_arbeitsweise_PCB2.jpg">
+  <img class="h-80 object-cover object-center" src="assets/HDD_arbeitsweise_PCB1.jpg">
+</div>
+<span class="font-semibold"> - Arbeiten an der ServiceArea und BOOT-ROM </span> 
+<div class="flex grid-cols-3 flex-wrap gap-4">
+  <img class="h-80 object-cover object-left" src="assets/arbeitsweise_hdd_SA.PNG">
+  <img class="h-auto object-cover object-right" src="assets/arbeitsweise_hdd_bootROM.PNG">
+</div>
 
-Nun wird die HDD von defekten Bauteilen so weit befreit bzw. Fehler in der Firmware und BOOT-ROM behoben, bis der Zugriff auf die Dateien wieder möglich ist.
+<span class="font-semibold"> - Plattern Swap, z.B. um den Motor zu tauschen oder die Oberflächen nach Beschädigungen zu inspizieren </span> 
+<div class="flex grid-cols-3 flex-wrap gap-4">
+  <img class="h-80 object-cover object-right" src="assets/hdd4.jpg">
+  <img class="h-80 object-cover object-center" src="assets/arbeitsweise_hdd_platternswap.jpg">
+  
+</div>
 
-Typische Arbeiten dabei sind:
-- Analyse und Austausch der Leseköpfe
-- Austausch des PCB und Anlernen für die Festplatte
-- Arbeiten an der ServiceArea und BOOT-ROM
-- Plattern Swap, z.B. um den Motor zu tauschen oder die Oberflächen nach Beschädigungen zu inspizieren
 
-Alle Arbeiten werden ausschließlich unter Reinraumbedingungen nach DIN 14644-1 ISO 5 und ESD-geschützt und das hier vor Ort durchgeführt.
+<span class ="font-semibold">Arbeiten werden ausschließlich unter Reinraumbedingungen nach DIN 14644-1 ISO 5 und ESD-geschützt und das hier vor Ort durchgeführt.</span> 
+<img class="h-80 object-cover object-right" src="assets/hdd_arbeitsweise_4.jpg">
 
 Nach der Reparatur wird ein Image der Festplatte erstellt woraus Ihre Dateien abgespeichert werden können.
         </pre>
-      <div class="flex grid-cols-3 flex-wrap gap-4">
-        <img class="h-60" src="assets/hdd1.webp">
-        <img class="h-60" src="assets/hdd4.jpeg">
-        <img class="h-60" src="assets/hdd2.jpg">
-        <img class="h-60" src="assets/hdd_arbeitsweise_4.jpg">
-      </div>
+      
       <h1 class="text-2xl font-bold my-6">Verwendete Hard- Und Software</h1>
       <pre class="whitespace-pre-wrap">Der PC-3000 UDMA ist eine Hardware-Software-Lösung zur Diagnose und Reparatur von Festplatten auf Basis von SATA- (Serial ATA) und ATA- (IDE) Schnittstellen für zahlreiche Hersteller (Seagate, Western Digital, Fujitsu, Samsung, Maxtor, Quantum, IBM (HGST) ), HITACHI, TOSHIBA), für verschiedene Kapazitäten (von 500 MB bis 8 TB) und verschiedene Formfaktoren: 3,5 "- Desktop-Laufwerke, 2,5" - und 1,8 "- Laptop-Laufwerke.
 
@@ -166,8 +181,8 @@ Leider werden im Moment bei mir nur SATA basierte SSD-Festplatten unterstützt. 
   </div>
   <div class="bg-gray-main border-b-2 border-silver">
     <div class="text-silver container">
-      <h1 class="text-2xl font-bold py-6">RAID oder Apple Fusion Drive Datenrettung:</h1>
-      <pre class="whitespace-pre-wrap">Meine angebotene RAID-Datenrettung brauchen Sie, wenn ein "Rebuild" nicht möglich ist.
+      <h1 class="text-2xl font-bold py-6">RAID oder Apple Fusion Drive (iMac) Datenrettung:</h1>
+      <pre class="whitespace-pre-wrap">Meine angebotene RAID-Datenrettung brauchen Sie, wenn ein "Rebuild" bei Ihnen nicht möglich ist.
 Z.B. wenn mehrere Festplatten beschädigt sind oder der RAID-Controller selbst defekt ist.
 
 Ich benötige dafür die einzelnen Festplatten bei mir vor Ort, aber nicht den RAID Controller.
@@ -178,7 +193,7 @@ Besonderheit: Auch wenn Sie Ihre Konfiguration wie RAID-Typ, Block Size, Parity 
         <img src="assets/raid1.jpg">
       </div>
       <pre class="whitespace-pre-wrap">Unterstützt werden sowohl Software-RAID als auch Hardware-RAID, wie z.B. in NAS.
-Auch Apple Fusion Drive wird unterstützt. Hier kann ich Ihre Dateien auch bei defekt der SSD, des Imac oder HDD wiederherstellen.
+Auch Apple Fusion Drive wird unterstützt. Hier kann ich Ihre Dateien auch bei des iMac oder der HDD-Festplatte wiederherstellen.
 
 Die unterstützten RAID Level sind:
 - Einfache Level: 0 (Stripe), 1 (Mirror), JBOD, 1E Offset, 1E Adjacent, 4, 5, 5E, 5EE, 6, 6 Adaptec
