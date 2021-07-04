@@ -14,5 +14,6 @@ WORKDIR /datarecovery-backend
 COPY --from=build datarecovery-backend/dependencies/ ./
 COPY --from=build datarecovery-backend/snapshot-dependencies/ ./
 COPY --from=build datarecovery-backend/spring-boot-loader/ ./
+RUN true
 COPY --from=build datarecovery-backend/application/ ./
 ENTRYPOINT ["java","-Dspring.profiles.active=production", "org.springframework.boot.loader.JarLauncher"]
