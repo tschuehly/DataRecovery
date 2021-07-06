@@ -28,7 +28,7 @@ declare let gtag: Function;
         
         <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="">Startseite</a> 
          <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="preise">Preise</a>
-          <a class="cursor-pointer p-2" (click)="scrollToOrder(); mobileNavShow = false">Auftrag</a>
+          <a class="cursor-pointer p-2" (click)="scrollToOrder(); mobileNavShow = false">Auftragsformular</a>
           <a (click)="mobileNavShow = false;scrollToContact()" class="cursor-pointer p-2">Kontakt</a>
           <div class="h-full text-center flex"  (clickOutside)="dropdownShow = false" [exclude]="'div.dropdown'"
                [excludeBeforeClick]="true" [ngClass]="{'bg-gray-300 md:bg-black ': dropdownShow}">
