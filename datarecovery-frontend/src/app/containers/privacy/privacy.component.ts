@@ -43,8 +43,7 @@ import {Component, OnInit} from '@angular/core';
         „Strato“). Wenn Sie unsere Website besuchen, erfasst Strato verschiedene Logfiles inklusive Ihrer
         IP-Adressen.</p>
       <p>Weitere Informationen entnehmen Sie der Datenschutzerklärung von Strato: <a
-        href="https://www.strato.de/datenschutz/" target="_blank" rel="noopener noreferrer">https://www.strato.de/datenschutz/</a>.
-      </p>
+        href="https://www.strato.de/datenschutz/" target="_blank" rel="noopener noreferrer">https://www.strato.de/datenschutz/</a>.</p>
       <p>Die Verwendung von Strato erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes
         Interesse an einer möglichst zuverlässigen Darstellung unserer Website. Sofern eine entsprechende Einwilligung
         abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO; die
@@ -67,9 +66,6 @@ import {Component, OnInit} from '@angular/core';
       <p>Weitere Informationen zu Google Cloud CDN finden Sie hier: <a
         href="https://cloud.google.com/cdn/docs/overview?hl=de" target="_blank" rel="noopener noreferrer">https://cloud.google.com/cdn/docs/overview?hl=de</a>.
       </p>
-      <h4 class="font-semibold mt-2">Abschluss eines Vertrages über Auftragsverarbeitung</h4>
-      <p>Um die datenschutzkonforme Verarbeitung zu gewährleisten, haben wir einen Vertrag über Auftragsverarbeitung mit
-        Google über den Einsatz von Google Cloud CDN geschlossen.</p>
       <h2 class="text-2xl font-semibold mb-2 mt-4">3. Allgemeine Hinweise und Pflicht­informationen</h2>
       <h3 class="font-semibold mb-2 mt-4 underline">Datenschutz</h3>
       <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre
@@ -242,49 +238,7 @@ import {Component, OnInit} from '@angular/core';
         DSGVO).</p>
       <p>Die bei der Registrierung erfassten Daten werden von uns gespeichert, solange Sie auf dieser Website
         registriert sind und werden anschließend gelöscht. Gesetzliche Aufbewahrungsfristen bleiben unberührt.</p>
-      <h2 class="text-2xl font-semibold mb-2 mt-4">5. Soziale Medien</h2>
-      <h3 class="font-semibold mb-2 mt-4 underline">Twitter Plugin</h3>
-      <p>Auf dieser Website sind Funktionen des Dienstes Twitter eingebunden. Diese Funktionen werden angeboten durch
-        die Twitter International Company, One Cumberland Place, Fenian Street, Dublin 2, D02 AX07, Irland. Durch das
-        Benutzen von Twitter und der Funktion „Re-Tweet“ werden die von Ihnen besuchten Websites mit Ihrem
-        Twitter-Account verknüpft und anderen Nutzern bekannt gegeben. Dabei werden auch Daten an Twitter übertragen.
-        Wir weisen darauf hin, dass wir als Anbieter der Seiten keine Kenntnis vom Inhalt der übermittelten Daten sowie
-        deren Nutzung durch Twitter erhalten. Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von
-        Twitter unter: <a href="https://twitter.com/de/privacy" target="_blank" rel="noopener noreferrer">https://twitter.com/de/privacy</a>.
-      </p>
-      <p>Die Verwendung des Twitter-Plugins erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber
-        hat ein berechtigtes Interesse an einer möglichst umfangreichen Sichtbarkeit in den Sozialen Medien. Sofern eine
-        entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6
-        Abs. 1 lit. a DSGVO; die Einwilligung ist jederzeit widerrufbar.</p>
-      <p>Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt. Details
-        finden Sie hier: <a href="https://gdpr.twitter.com/en/controller-to-controller-transfers.html" target="_blank"
-                            rel="noopener noreferrer">https://gdpr.twitter.com/en/controller-to-controller-transfers.html</a>.
-      </p>
-      <p>Ihre Datenschutzeinstellungen bei Twitter können Sie in den Konto-Einstellungen unter <a
-        href="https://twitter.com/account/settings" target="_blank" rel="noopener noreferrer">https://twitter.com/account/settings</a>
-        ändern.</p>
-      <h3 class="font-semibold mb-2 mt-4 underline">LinkedIn Plugin</h3>
-      <p>Diese Website nutzt Funktionen des Netzwerks LinkedIn. Anbieter ist die LinkedIn Ireland Unlimited Company,
-        Wilton Plaza, Wilton Place, Dublin 2, Irland.</p>
-      <p>Bei jedem Abruf einer Seite dieser Website, die Funktionen von LinkedIn enthält, wird eine Verbindung zu
-        Servern von LinkedIn aufgebaut. LinkedIn wird darüber informiert, dass Sie diese Website mit Ihrer IP-Adresse
-        besucht haben. Wenn Sie den „Recommend-Button“ von LinkedIn anklicken und in Ihrem Account bei LinkedIn
-        eingeloggt sind, ist es LinkedIn möglich, Ihren Besuch auf dieser Website Ihnen und Ihrem Benutzerkonto
-        zuzuordnen. Wir weisen darauf hin, dass wir als Anbieter der Seiten keine Kenntnis vom Inhalt der übermittelten
-        Daten sowie deren Nutzung durch LinkedIn haben.</p>
-      <p>Die Verwendung des LinkedIn-Plugins erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber
-        hat ein berechtigtes Interesse an einer möglichst umfangreichen Sichtbarkeit in den Sozialen Medien. Sofern eine
-        entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6
-        Abs. 1 lit. a DSGVO; die Einwilligung ist jederzeit widerrufbar.</p>
-      <p>Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt. Details
-        finden Sie hier: <a
-          href="https://www.linkedin.com/help/linkedin/answer/62538/datenubertragung-aus-der-eu-dem-ewr-und-der-schweiz?lang=de"
-          target="_blank" rel="noopener noreferrer">https://www.linkedin.com/help/linkedin/answer/62538/datenubertragung-aus-der-eu-dem-ewr-und-der-schweiz?lang=de</a>
-      </p>
-      <p>Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von LinkedIn unter: <a
-        href="https://www.linkedin.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/legal/privacy-policy</a>.
-      </p>
-      <h2 class="text-2xl font-semibold mb-2 mt-4">6. Analyse-Tools und Werbung</h2>
+      <h2 class="text-2xl font-semibold mb-2 mt-4">5. Analyse-Tools und Werbung</h2>
       <h3 class="font-semibold mb-2 mt-4 underline">Google Tag Manager</h3>
       <p>Wir setzen den Google Tag Manager ein. Anbieter ist die Google Ireland Limited, Gordon House, Barrow Street,
         Dublin 4, Irland.</p>
@@ -331,8 +285,7 @@ import {Component, OnInit} from '@angular/core';
       <h4 class="font-semibold mt-2">Browser Plugin</h4>
       <p>Sie können die Erfassung und Verarbeitung Ihrer Daten durch Google verhindern, indem Sie das unter dem
         folgenden Link verfügbare Browser-Plugin herunterladen und installieren: <a
-          href="https://tools.google.com/dlpage/gaoptout?hl=de" target="_blank" rel="noopener noreferrer">https://tools.google.com/dlpage/gaoptout?hl=de</a>.
-      </p>
+          href="https://tools.google.com/dlpage/gaoptout?hl=de" target="_blank" rel="noopener noreferrer">https://tools.google.com/dlpage/gaoptout?hl=de</a>.</p>
       <p>Mehr Informationen zum Umgang mit Nutzerdaten bei Google Analytics finden Sie in der Datenschutzerklärung von
         Google: <a href="https://support.google.com/analytics/answer/6004245?hl=de" target="_blank"
                    rel="noopener noreferrer">https://support.google.com/analytics/answer/6004245?hl=de</a>.</p><h4
@@ -374,8 +327,7 @@ import {Component, OnInit} from '@angular/core';
       <p>Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt. Details
         finden Sie hier: <a href="https://policies.google.com/privacy/frameworks" target="_blank"
                             rel="noopener noreferrer">https://policies.google.com/privacy/frameworks</a> und <a
-          href="https://privacy.google.com/businesses/controllerterms/mccs/" target="_blank" rel="noopener noreferrer">https://privacy.google.com/businesses/controllerterms/mccs/</a>.
-      </p>
+          href="https://privacy.google.com/businesses/controllerterms/mccs/" target="_blank" rel="noopener noreferrer">https://privacy.google.com/businesses/controllerterms/mccs/</a>.</p>
       <h3 class="font-semibold mb-2 mt-4 underline">Google Conversion-Tracking</h3>
       <p>Diese Website nutzt Google Conversion Tracking. Anbieter ist die Google Ireland Limited („Google“), Gordon
         House, Barrow Street, Dublin 4, Irland.</p>
@@ -392,9 +344,8 @@ import {Component, OnInit} from '@angular/core';
         Einwilligung zur Speicherung von Cookies), erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs.
         1 lit. a DSGVO; die Einwilligung ist jederzeit widerrufbar.</p>
       <p>Mehr Informationen zu Google Conversion-Tracking finden Sie in den Datenschutzbestimmungen von Google: <a
-        href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy?hl=de</a>.
-      </p>
-      <h2 class="text-2xl font-semibold mb-2 mt-4">7. Plugins und Tools</h2>
+        href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy?hl=de</a>.</p>
+      <h2 class="text-2xl font-semibold mb-2 mt-4">6. Plugins und Tools</h2>
       <h3 class="font-semibold mb-2 mt-4 underline">Google Maps</h3>
       <p>Diese Seite nutzt den Kartendienst Google Maps. Anbieter ist die Google Ireland Limited („Google“), Gordon
         House, Barrow Street, Dublin 4, Irland.</p>
@@ -414,9 +365,8 @@ import {Component, OnInit} from '@angular/core';
         <a href="https://privacy.google.com/businesses/gdprcontrollerterms/sccs/" target="_blank"
            rel="noopener noreferrer">https://privacy.google.com/businesses/gdprcontrollerterms/sccs/</a>.</p>
       <p>Mehr Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung von Google: <a
-        href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy?hl=de</a>.
-      </p>
-      <h2 class="text-2xl font-semibold mb-2 mt-4">8. eCommerce und Zahlungs­anbieter</h2>
+        href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy?hl=de</a>.</p>
+      <h2 class="text-2xl font-semibold mb-2 mt-4">7. eCommerce und Zahlungs­anbieter</h2>
       <h3 class="font-semibold mb-2 mt-4 underline">Verarbeiten von Daten (Kunden- und Vertragsdaten)</h3>
       <p>Wir erheben, verarbeiten und nutzen personenbezogene Daten nur, soweit sie für die Begründung, inhaltliche
         Ausgestaltung oder Änderung des Rechtsverhältnisses erforderlich sind (Bestandsdaten). Dies erfolgt auf
@@ -435,22 +385,6 @@ import {Component, OnInit} from '@angular/core';
         Werbung, erfolgt nicht.</p>
       <p>Grundlage für die Datenverarbeitung ist Art. 6 Abs. 1 lit. b DSGVO, der die Verarbeitung von Daten zur
         Erfüllung eines Vertrags oder vorvertraglicher Maßnahmen gestattet.</p>
-      <h2 class="text-2xl font-semibold mb-2 mt-4">9. Eigene Dienste</h2>
-      <h3 class="font-semibold mb-2 mt-4 underline">OneDrive</h3>
-      <p>Wir haben OneDrive auf dieser Website eingebunden. Anbieter ist die Microsoft Corporation, One Microsoft Way,
-        Redmond, WA 98052-6399, USA (im folgenden „OneDrive“).</p>
-      <p>OneDrive ermöglicht es uns, einen Uploadbereich auf unserer Website einzubinden, in dem Sie Inhalte hochladen
-        können. Wenn Sie Inhalte hochladen, werden diese auf den Servern von OneDrive gespeichert. Wenn Sie unsere
-        Website betreten, wird außerdem eine Verbindung zu OneDrive aufgebaut, sodass OneDrive feststellen kann, dass
-        Sie unsere Website besucht haben.</p>
-      <p>Die Verwendung von OneDrive erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein
-        berechtigtes Interesse an einem zuverlässigen Uploadbereich auf seiner Website. Sofern eine entsprechende
-        Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a
-        DSGVO; die Einwilligung ist jederzeit widerrufbar.</p>
-      <h4 class="font-semibold mt-2">Abschluss eines Vertrags über Auftragsverarbeitung</h4>
-      <p>Wir haben einen Vertrag über Auftragsverarbeitung mit OneDrive geschlossen. Hierbei handelt es sich um einen
-        datenschutzrechtlich vorgeschriebenen Vertrag, der gewährleistet, dass OneDrive die personenbezogenen Daten
-        unserer Websitebesucher nur nach unseren Weisungen und unter Einhaltung der DSGVO verarbeitet.</p>
     </div>
   `,
   styles: []
