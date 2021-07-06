@@ -172,6 +172,7 @@ export class NavigationComponent implements OnInit {
           node.charset = 'utf-8';
           // append to head of document
           document.getElementsByTagName('head')[0].appendChild(node);
+          window['clarity']('consent')
           gtag('js', new Date());
           this.mapsIframeShow = true;
           this.router.events.subscribe(event => {
