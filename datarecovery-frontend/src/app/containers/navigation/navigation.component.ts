@@ -63,7 +63,8 @@ declare let gtag: Function;
 
           <button (click)="showPhone = false"><img class="inline" src="assets/x.svg"></button>
         </div>
-        <p>Auch an Wochenenden und Feiertagen erreichbar.</p>
+        <p>Zwischen 08:00 bis 21:00 Uhr</p>
+        <p>Mo.-So. und an Feiertagen erreichbar.</p>
       </div>
       <div class="fixed right-4 bottom-4 z-50 flex flex-row ">
         <div class=" bg-white rounded-md  p-3 shadow mr-4" *ngIf="!showPhone ">
