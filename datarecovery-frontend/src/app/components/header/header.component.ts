@@ -15,7 +15,32 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube, A
 
       <ng-template swiperSlide>
         <div class="swiper_img flex content-center bg-cover md:bg-auto md:bg-contain bg-center bg-no-repeat"
-             style="background-image: url('/assets/header_main/header_(8).jpg')">
+             style="background-image: url('/assets/header_main/header_(1).jpg')">
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="swiper_img flex content-center bg-cover md:bg-contain bg-center bg-no-repeat"
+             style="background-image: url('/assets/header_main/header_(2).jpg')">
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="swiper_img flex content-center bg-cover md:bg-contain bg-center bg-no-repeat"
+             style="background-image: url('/assets/header_main/header_(3).jpg')">
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="swiper_img flex content-center bg-cover md:bg-contain bg-top bg-no-repeat"
+             style="background-image: url('/assets/header_main/header_(4).jpg')">
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="swiper_img flex content-center bg-cover md:bg-contain bg-center bg-no-repeat"
+             style="background-image: url('/assets/header_main/header_(5).jpg')">
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="swiper_img flex content-center bg-cover md:bg-contain bg-center bg-no-repeat"
+             style="background-image: url('/assets/header_main/header_(6).jpg')">
         </div>
       </ng-template>
       <ng-template swiperSlide>
@@ -25,32 +50,7 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube, A
       </ng-template>
       <ng-template swiperSlide>
         <div class="swiper_img flex content-center bg-cover md:bg-contain bg-center bg-no-repeat"
-             style="background-image: url('/assets/header_main/header_(6).jpg')">
-        </div>
-      </ng-template>
-      <ng-template swiperSlide>
-        <div class="swiper_img flex content-center bg-cover md:bg-contain bg-top bg-no-repeat"
-             style="background-image: url('/assets/ssd_arbeitsweise.jpg')">
-        </div>
-      </ng-template>
-      <ng-template swiperSlide>
-        <div class="swiper_img flex content-center bg-cover md:bg-contain bg-center bg-no-repeat"
-             style="background-image: url('/assets/header_main/header_(9).jpg')">
-        </div>
-      </ng-template>
-      <ng-template swiperSlide>
-        <div class="swiper_img flex content-center bg-cover md:bg-contain bg-center bg-no-repeat"
-             style="background-image: url('/assets/header_main/header_(12).jpg')">
-        </div>
-      </ng-template>
-      <ng-template swiperSlide>
-        <div class="swiper_img flex content-center bg-cover md:bg-contain bg-center bg-no-repeat"
-             style="background-image: url('/assets/header_main/header_(15).jpg')">
-        </div>
-      </ng-template>
-      <ng-template swiperSlide>
-        <div class="swiper_img flex content-center bg-cover md:bg-contain bg-center bg-no-repeat"
-             style="background-image: url('/assets/header_main/header_(14).jpg')">
+             style="background-image: url('/assets/header_main/header_(8).jpg')">
         </div>
       </ng-template>
     </swiper>`,
