@@ -273,7 +273,13 @@ import {Component, OnInit} from '@angular/core';
       <p>Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt. Details
         finden Sie hier: <a href="https://privacy.google.com/businesses/controllerterms/mccs/" target="_blank"
                             rel="noopener noreferrer">https://privacy.google.com/businesses/controllerterms/mccs/</a>.
-      </p> <h4 class="font-semibold mt-2">IP Anonymisierung</h4>
+      <p>Nähere Informationen zu Nutzungsbedingungen und Datenschutz finden Sie unter: <a href="http://www.google.com/analytics/terms/de.html " target="_blank"
+                            rel="noopener noreferrer">http://www.google.com/analytics/terms/de.html</a>. 
+        bzw. unter: <a href="https://www.google.de/intl/de/policies/" target="_blank"
+                            rel="noopener noreferrer">https://www.google.de/intl/de/policies/</a>.
+        Wir weisen Sie darauf hin, dass auf dieser Website Google Analytics um den Code „anonymizeIp“ erweitert wurde, 
+        um eine anonymisierte Erfassung von IP-Adressen (sog. IP-Masking) zu gewährleisten.</p>
+      <h4 class="font-semibold mt-2">IP Anonymisierung</h4>
       <p>Wir haben auf dieser Website die Funktion IP-Anonymisierung aktiviert. Dadurch wird Ihre IP-Adresse von Google
         innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den
         Europäischen Wirtschaftsraum vor der Übermittlung in die USA gekürzt. Nur in Ausnahmefällen wird die volle
@@ -288,10 +294,7 @@ import {Component, OnInit} from '@angular/core';
           href="https://tools.google.com/dlpage/gaoptout?hl=de" target="_blank" rel="noopener noreferrer">https://tools.google.com/dlpage/gaoptout?hl=de</a>.</p>
       <p>Mehr Informationen zum Umgang mit Nutzerdaten bei Google Analytics finden Sie in der Datenschutzerklärung von
         Google: <a href="https://support.google.com/analytics/answer/6004245?hl=de" target="_blank"
-                   rel="noopener noreferrer">https://support.google.com/analytics/answer/6004245?hl=de</a>.</p><h4
-      class="font-semibold mt-2">Auftragsverarbeitung</h4>
-      <p>Wir haben mit Google einen Vertrag zur Auftragsverarbeitung abgeschlossen und setzen die strengen Vorgaben der
-        deutschen Datenschutzbehörden bei der Nutzung von Google Analytics vollständig um.</p>
+                   rel="noopener noreferrer">https://support.google.com/analytics/answer/6004245?hl=de</a>.</p>
       <h4 class="font-semibold mt-2">Demografische Merkmale bei Google Analytics</h4>
       <p>Diese Website nutzt die Funktion „demografische Merkmale“ von Google Analytics, um den Websitebesuchern
         passende Werbeanzeigen innerhalb des Google-Werbenetzwerks anzeigen zu können. Dadurch können Berichte erstellt
@@ -345,6 +348,13 @@ import {Component, OnInit} from '@angular/core';
         1 lit. a DSGVO; die Einwilligung ist jederzeit widerrufbar.</p>
       <p>Mehr Informationen zu Google Conversion-Tracking finden Sie in den Datenschutzbestimmungen von Google: <a
         href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy?hl=de</a>.</p>
+
+        <h3 class="font-semibold mb-2 mt-4 underline">Nutzung von Microsoft Clarity</h3>
+      <p>Im Fall einer Zustimmung zu statistischer Auswertung nutzt diese Webseite den Dienst "Clarity" der Microsoft Corporation. Clarity verwendet unter anderem Cookies, 
+        die eine Analyse der Benutzung unserer Webseite ermöglichen, sowie einen sog. Tracking Code. Die erhobenen Informationen werden an Clarity übermittelt und dort gespeichert. 
+        Diese können lt. Microsoft auch zu Werbezwecken genutzt werden. Siehe dazu Microsoft Privacy Statements. Für weitere Informationen zu Clarity siehe:
+      <a href="https://clarity.microsoft.com/terms" target="_blank" rel="noopener noreferrer">https://clarity.microsoft.com/terms</a>.</p>
+
       <h2 class="text-2xl font-semibold mb-2 mt-4">6. Plugins und Tools</h2>
       <h3 class="font-semibold mb-2 mt-4 underline">Google Maps</h3>
       <p>Diese Seite nutzt den Kartendienst Google Maps. Anbieter ist die Google Ireland Limited („Google“), Gordon
