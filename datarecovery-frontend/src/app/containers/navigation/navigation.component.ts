@@ -39,6 +39,44 @@ declare let gtag: Function;
     <div class="flex-grow pt-24 bg-blue-100 text-gray-700">
         <router-outlet></router-outlet>
     </div>
+      <div class="fixed w-64 bg-white rounded-xl bottom-12 left-1/2 -ml-32 z-50 p-4 shadow" *ngIf="showPhone">
+        <div class="flex justify-around items-center pb-4">
+          <a  href="tel:+4915221408008">
+            <p class="font-semibold"><img class="inline pr-4" src="/assets/phone.svg">0152 21408008</p>
+          </a>
+
+          <button (click)="showPhone = false"><img class="inline" src="assets/x.svg"></button>
+        </div>
+        <p>Auch an Wochenenden und Feiertagen erreichbar.</p>
+      </div>
+      <div class="fixed right-4 bottom-4 z-50 flex flex-row ">
+        <div class=" bg-white rounded-md  p-3 shadow mr-4" *ngIf="!showPhone ">
+          <a (click)="showPhone = true ; wawidgetHidden = true" class="cursor-pointer">
+            <img src="/assets/phone.svg">
+          </a>
+        </div>
+
+        <div class="" (click)="wawidgetHidden = false; showPhone = false" *ngIf="wawidgetHidden">
+          <button class="flex align-middle p-3 rounded text-white" style="background-color: #14C656">
+            <img class="h-6 w-6 inline" src="/assets/WhatsApp.svg" alt="Whatsapp Logo">
+          </button>
+        </div>
+      </div>
+      <div class="fixed right-10 bottom-10 shadow-2xl rounded-xl z-20" [ngClass]="wawidgetHidden ? 'hidden':''">
+        <div class="flex align-middle text-white p-4 rounded-t-xl " style="background-color: rgb(9, 94, 84)">
+          <span class="px-2">Jetzt Cassandra Schilling kontaktieren</span>
+          <button (click)="wawidgetHidden = true">
+            <img src="/assets/x-square.svg" alt="Close Whatsapp Widget Button"></button>
+        </div>
+        <div class="h-20" style="background-image: url('/assets/wa_bg.png') ;background-color: #E5DDD5"></div>
+        <div class="bg-white flex justify-center p-2 rounded-b-xl">
+          <a href="https://wa.me/+4915221408008">
+            <button class="flex align-middle p-2 pr-4 rounded text-white" style="background-color: #14C656">
+              <img class="h-6 w-6  inline mx-2" src="/assets/WhatsApp.svg" alt="Whatsapp Logo">Start Chat</button>
+          </a>
+        </div>
+      </div>
+
     <div style="height: 300px">
       <iframe id="myFrame"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3552.631212153642!2d9.203280792749238!3d48.89044172488516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799d104bab8284b%3A0xfc656773e3df2e3c!2sDatenrettung%20Schilling!5e0!3m2!1sde!2sde!4v1621269476911!5m2!1sde!2sde"
@@ -93,6 +131,7 @@ export class NavigationComponent implements OnInit {
 
   private popupOpenSubscription: Subscription;
   private statusChangeSubscription: Subscription;
+  showPhone = false;
   constructor(private router: Router,
               private pageScrollService: PageScrollService,
               @Inject(DOCUMENT) private document: any,
