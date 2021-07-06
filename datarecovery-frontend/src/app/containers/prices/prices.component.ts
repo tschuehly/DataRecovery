@@ -13,14 +13,14 @@ import {HttpClient} from "@angular/common/http";
       </div>
     </div>
     <div class="h-20 bg-white text-center">
-      <h1 class="text-4xl text-black py-5 tracking-wider">Preise</h1>
+      <h1 class="text-4xl text-black py-5 tracking-wider">Festpreise</h1>
     </div>
     <div class="bg-gray-main  ">
       <div class="container flex">
         <div class="text-silver py-8 mx-auto justify-center">
           <span class="font-bold text-white">Wichtig:</span> Es handelt sich um
-          <span class="font-bold text-white">Festpreise</span>, die nur <span class="font-bold text-white">nach Erfolg gelten.</span><br>
-          Sollte keine Datenrettung möglich sein ist die Bearbeitung vollständig kostenfrei.<br>
+          <span class="font-bold text-white">Festpreise</span>, die nur <span class="font-bold text-white">nach Erfolg</span> gelten.<br>
+          Bei <span class="font-bold text-white">Misserfolg</span> erhalten Sie Ihren Speicher <span class="font-bold text-white">kostenfrei</span> innerhalb weniger Tagen zurück.<br>
           Alle angegebenen Preise sind bereits inklusive 19% Mehrwertsteuer.<br>
         </div>
       </div>
