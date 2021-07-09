@@ -33,7 +33,7 @@ import {Order, Product} from '../../model/model';
             <label class="py-4 px-12 font-semibold">Ist eine Ratenzahlung gewünscht?:
               <select class="block mt-2 w-full text-black" formControlName="monthlyPayment" required>
                 <option selected value=1>Keine Ratenzahlung</option>
-                <option value=2>2 monatige Ratenzahlung (1% Gebühr)</option>
+                <option value=2>Zweimonatige Ratenzahlung (1% Gebühr)</option>
               </select>
             </label>
           </ng-container>
