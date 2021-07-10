@@ -52,11 +52,11 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
                   <div class="flex justify-between space-x-2">
                     <button class="border border-gray-300 p-2 rounded">
                       <a class="md:hidden"
-                      href="https://g.co/kgs/3tdxPy">
+                      href="https://search.google.com/local/reviews?placeid=ChIJU5PnJJcznEcRy2VAwpDd1Dc&q=Tobias+Jungbauer+Datenrettung+-+AmmerseeDatenrettung.de&hl=de&gl=DE">
                         Weitere Bewertungen
                       </a>
                       <a class="hidden md:block"
-                        href="https://www.google.de/search?&q=Tobias+Jungbauer+Datenrettung&entrypoint=sh/x/kp/local#lrd=0x479c339724e79353:0x37d4dd90c24065cb,1"
+                        href="https://search.google.com/local/reviews?placeid=ChIJU5PnJJcznEcRy2VAwpDd1Dc&q=Tobias+Jungbauer+Datenrettung+-+AmmerseeDatenrettung.de&hl=de&gl=DE"
                         rel="noopener">
                         Weitere Bewertungen
                       </a>
