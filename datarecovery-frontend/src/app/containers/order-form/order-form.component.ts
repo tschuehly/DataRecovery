@@ -5,7 +5,7 @@ import {Order, Product} from '../../model/model';
 @Component({
   selector: 'app-order-form',
   template: `
-    <div class="w-full text-center text-4xl my-8">
+    <div class="w-full text-center text-4xl py-8">
       <h1>Auftragsformular</h1>
     </div>
     <form [formGroup]="this.orderForm" (ngSubmit)="onSubmit()">

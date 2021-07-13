@@ -13,7 +13,7 @@ declare let gtag: Function;
     <div class="flex flex-col h-screen">
       <nav class="flex fixed justify-between p-4 w-full text-blue-900 bg-blue-50 shadow z-50">
         <a routerLink="">
-          <div class="px-2 text-2xl font-bold text-center">Datenrettung Schilling<br>Ludwigsburg</div>
+          <div class="px-2 text-2xl font-bold">Datenrettung Schilling<br>Ludwigsburg</div>
         </a>
         <div class="flex md:hidden items-center mx-4 ">
           <button class="p-2 border border-silver rounded" (click)="mobileNavShow = !mobileNavShow">
@@ -81,7 +81,7 @@ declare let gtag: Function;
 
     <div style="height: 300px">
       <div  *ngIf="!mapsIframeShow" class="bg-gray-200 text-center py-8">
-        <button (click)="mapsIframeShow = true">Hier klicken um Google Maps anzuzeigen, dabei werden Daten und Cookies von Google geladen</button>
+        <button (click)="mapsIframeShow = true">Hier klicken um Google Maps anzuzeigen. Dabei werden Daten und Cookies von Google geladen</button>
       </div>
       <iframe class="text-center my-8" *ngIf="mapsIframeShow" id="myFrame"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3552.631212153642!2d9.203280792749238!3d48.89044172488516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799d104bab8284b%3A0xfc656773e3df2e3c!2sDatenrettung%20Schilling!5e0!3m2!1sde!2sde!4v1621269476911!5m2!1sde!2sde"
