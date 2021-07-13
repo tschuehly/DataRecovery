@@ -18,13 +18,13 @@ INSERT INTO public.customer (id, city, email, first_name, last_name, postal_code
 --
 INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (14, NULL, 'mit bis zu 16GB Speicherkapazität:', 107, 1);
 INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (15, NULL, 'mit bis zu 64GB Speicherkapazität:', 179, 1);
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (16, NULL, 'mit 128GB Speicherkapazität:', 250, 1);
+INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (16, NULL, 'mit bis zu 128GB Speicherkapazität:', 250, 1);
 INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (17, NULL, 'mit bis zu 16GB Speicherkapazität:', 117, 2);
 INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (18, NULL, 'mit bis zu 64GB Speicherkapazität:', 189, 2);
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (19, NULL, 'mit 128GB Speicherkapazität:', 269, 2);
+INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (19, NULL, 'mit bis zu 128GB Speicherkapazität:', 269, 2);
 INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (20, NULL, 'mit bis zu 16GB Speicherkapazität:', 142, 3);
 INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (21, NULL, 'mit bis zu 64GB Speicherkapazität:', 214, 3);
-INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (22, NULL, 'mit 128GB Speicherkapazität:', 286, 3);
+INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (22, NULL, 'mit bis zu 128GB Speicherkapazität:', 286, 3);
 INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (24, NULL, '16 GB', 10, 4);
 INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (26, NULL, '64GB', 15, 4);
 INSERT INTO public.product (id, create_date, name, price, category_id) VALUES (27, NULL, '128GB', 25, 4);

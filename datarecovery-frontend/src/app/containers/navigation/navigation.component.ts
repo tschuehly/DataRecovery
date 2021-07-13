@@ -13,7 +13,7 @@ declare let gtag: Function;
     <div class="flex flex-col h-screen">
       <nav class="flex fixed justify-between p-4 w-full text-blue-900 bg-blue-50 shadow z-50">
         <a routerLink="">
-          <div class="px-2 text-2xl font-bold">Cassandra Schilling<br>Datenrettungsdienst</div>
+          <div class="px-2 text-2xl font-bold text-center">Datenrettung Schilling<br>Ludwigsburg</div>
         </a>
         <div class="flex md:hidden items-center mx-4 ">
           <button class="p-2 border border-silver rounded" (click)="mobileNavShow = !mobileNavShow">
@@ -80,7 +80,10 @@ declare let gtag: Function;
       </div>
 
     <div style="height: 300px">
-      <iframe id="myFrame"
+      <div  *ngIf="!mapsIframeShow" class="bg-gray-200 text-center py-8">
+        <button (click)="mapsIframeShow = true">Hier klicken um Google Maps anzuzeigen, dabei werden Daten und Cookies von Google geladen</button>
+      </div>
+      <iframe class="text-center my-8" *ngIf="mapsIframeShow" id="myFrame"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3552.631212153642!2d9.203280792749238!3d48.89044172488516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799d104bab8284b%3A0xfc656773e3df2e3c!2sDatenrettung%20Schilling!5e0!3m2!1sde!2sde!4v1621269476911!5m2!1sde!2sde"
               loading="lazy"
               width="{{innerWidth}}" height="300" frameborder="0" allowfullscreen="" aria-hidden="false"
@@ -131,13 +134,10 @@ export class NavigationComponent implements OnInit {
   wawidgetHidden: boolean = true;
   mapsIframeShow: boolean = false;
 
-  private popupOpenSubscription: Subscription;
-  private statusChangeSubscription: Subscription;
   showPhone = false;
   constructor(private router: Router,
               private pageScrollService: PageScrollService,
-              @Inject(DOCUMENT) private document: any,
-              private ccService: NgcCookieConsentService) {
+              @Inject(DOCUMENT) private document: any) {
     router.events.subscribe(_ => {
       this.dropdownShow = false;
     });
@@ -145,35 +145,6 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit(): void {
     this.innerWidth = document.documentElement.clientWidth;
-    this.statusChangeSubscription = this.ccService.statusChange$.subscribe(
-      (event: NgcStatusChangeEvent) => {
-        if(event.status === "allow"){
-          console.log("allow")
-          let node = document.createElement('script'); // creates the script tag
-          node.src = 'https://www.googletagmanager.com/gtag/js?id=G-G6DZYVHRM8'; // sets the source (insert url in between quotes)
-          node.type = 'text/javascript'; // set the script type
-          node.async = true; // makes script run asynchronously
-          node.charset = 'utf-8';
-          // append to head of document
-          document.getElementsByTagName('head')[0].appendChild(node);
-          window['clarity']('consent')
-          gtag('js', new Date());
-          this.mapsIframeShow = true;
-          this.router.events.subscribe(event => {
-            if(event instanceof NavigationEnd){
-              gtag('config', 'G-G6DZYVHRM8',
-                {
-                  'page_path': event.urlAfterRedirects,
-                  'anonymize_ip': true
-                }
-              );
-            }
-          });
-        }
-        if(event.status === "deny"){
-          this.mapsIframeShow = false;
-        }
-      });
   }
 
   @HostListener('window:resize', ['$event'])

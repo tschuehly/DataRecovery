@@ -5,7 +5,7 @@ import {Order, Product} from '../../model/model';
 @Component({
   selector: 'app-order-form',
   template: `
-    <div class="w-full text-center text-4xl py-8">
+    <div class="w-full text-center text-4xl my-8">
       <h1>Auftragsformular</h1>
     </div>
     <form [formGroup]="this.orderForm" (ngSubmit)="onSubmit()">
@@ -31,19 +31,21 @@ import {Order, Product} from '../../model/model';
 
           <h2 class="font-semibold inline text-center">Allgemeine Geschäftsbedingungen und Datenschutzrichtlinien:</h2>
           <div class="flex">
-            <input class="self-center" type="checkbox" formControlName="agb" required id="agbCheckbox" >
+            <input class="self-center w-6 h-6 bg-red-200" type="checkbox" formControlName="agb" id="agbCheckbox" >
             <label for="agbCheckbox" class="ml-4">
               Hiermit bestätige ich meine Einverständnis für die vorhandenen
               <a class="font-semibold underline" routerLink="datenschutz">Datenschutzrichtlinien</a> wie für die
               <a class="font-semibold underline" routerLink="agb">allgemeinen Geschäftsbedingungen</a></label>
 
                       </div>
-          <div class="flex justify-center mt-4 bg-silver p-4 rounded-b-2xl">
+          <div class="flex justify-center mt-4 p-4 rounded-b-2xl">
             <button (click)="submitProduct()"
-                    class="bg-white py-2 px-4 shadow rounded text-black"
+                    class="bg-white py-2 px-4  text-lg shadow rounded text-black border-2 border-black"
                     [disabled]="!(this.orderForm.get('product').valid && this.orderForm.get('agb').value == true)"
-                    [ngClass]="{'bg-gray-300 cursor-default': !(this.orderForm.get('product').valid && this.orderForm.get('agb').value == true)}">
-              {{this.orderForm.get('product').valid && this.orderForm.get('agb').value == true ? "Auftragsdaten eingeben" : "Füllen Sie alle benötigten Felder aus" }}
+                    [ngClass]="{'bg-gray-200 cursor-default': !(this.orderForm.get('product').valid && this.orderForm.get('agb').value == true)}">
+              <ng-container *ngIf="this.orderForm.get('agb').value == false && this.orderForm.get('product').valid ">Bitte bestätigen sie die AGB und Datenschutzrichtlinien </ng-container>
+              <ng-container *ngIf="this.orderForm.get('product').valid && this.orderForm.get('agb').value == true">Adressdaten eingeben</ng-container>
+              <ng-container *ngIf="!this.orderForm.get('product').valid">Wählen sie aus welchen Datenträger sie besitzen</ng-container>
             </button>
           </div>
 
@@ -72,10 +74,10 @@ import {Order, Product} from '../../model/model';
             <label>Optional: Telefonnummer
               <input type="text" class="mt-1 w-full text-black" formControlName="tel"></label>
           </div>
-          <div class="flex justify-center mt-4 bg-silver p-4 rounded-b-2xl">
+          <div class="flex justify-center mt-4 p-4 rounded-b-2xl">
             <button type="submit"
-                    class="bg-white py-2 px-4 shadow rounded text-black "
-                    [ngClass]="{'bg-gray-300 cursor-default': !orderForm.valid}"
+                    class="bg-white py-2 px-4 shadow rounded text-black  border-2 border-black"
+                    [ngClass]="{'bg-gray-200 cursor-default': !orderForm.valid}"
                     [disabled]="!orderForm.valid">{{orderForm.valid ? "Auftrag abschicken" : "Füllen Sie alle benötigten Felder aus" }}</button>
           </div>
         </ng-container>
