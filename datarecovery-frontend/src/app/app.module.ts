@@ -27,59 +27,10 @@ import { PricesComponent } from './containers/prices/prices.component';
 import { AgbComponent } from './containers/agb/agb.component';
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
-import {NgcCookieConsentConfig, NgcCookieConsentModule} from "ngx-cookieconsent";
 import {First40WordsPipe} from "./pipes/first-twenty-words.pipe";
 import {SwiperModule} from "swiper/angular";
-import {GoogleAnalyticsService} from "./services/google-analytics.service";
 import { PrivacyComponent } from './containers/privacy/privacy.component';
 registerLocaleData(localeDe);
-const cookieConfig:NgcCookieConsentConfig = {
-  "cookie": {
-    "domain": "www.datenrettung-schilling.de"
-  },
-  "position": "bottom-left",
-  "theme": "edgeless",
-  "palette": {
-    "popup": {
-      "background": "#061847",
-      "text": "#ffffff",
-      "link": "#ffffff"
-    },
-    "button": {
-      "background": "#EFF6FF",
-      "text": "#061847",
-      "border": "transparent"
-    }
-  },
-  container: document.getElementById('cookie'),
-  layout:'',
-  layouts: {
-    "custom":'{{messagelink}}'
-  },
-  elements:{
-    messagelink: `
-    <div class="fixed w-screen h-screen top-0 bg-gray-800 bg-opacity-70 left-0"  style="z-index: -1">
-    </div>
-    <div class="p-8 text-xl z-50">
-        <p>{{message}}<br><br><a href="{{href}}" class="underline">{{link}}</a></p>
-
-
-     </div>
-
-    `,
-  },
-  "type": "opt-in",
-  "content": {
-    "message": "Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies.",
-    "dismiss": "Got it!",
-    "deny": "Cookies verbieten",
-    "link": "Datenschutzbestimmungen",
-    "href": "/datenschutz",
-    "policy": "Cookies",
-    "header": "Cookies used on the website!",
-    "allow": "Cookies erlauben"
-  }
-}
 @NgModule({
     declarations: [
         AppComponent,
@@ -112,11 +63,9 @@ const cookieConfig:NgcCookieConsentConfig = {
     NgxPageScrollCoreModule.forRoot({duration: 700, scrollOffset: 80}),
     BrowserAnimationsModule,
     ClickOutsideModule,
-    NgcCookieConsentModule.forRoot(cookieConfig),
     SwiperModule
   ],
   providers: [
-    GoogleAnalyticsService
   ],
   bootstrap: [AppComponent]
 })

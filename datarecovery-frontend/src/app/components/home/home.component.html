@@ -6,7 +6,7 @@
 </style>
 <div class="grid grid-cols-1 lg:grid-cols-3 bg-blue-100 pt-8 pb-10 !p-2">
   <div class=" lg:flex order-last lg:order-first col-span-1 bg-contain bg-no-repeat bg-blue-100 justify-self-center self-center flex justify-center">
-    <img class="max-h-80 sm:max-h-96 min-w-full" src="/assets/unXV5P37.png">
+    <img class="max-h-80 sm:max-h-96 min-w-full" src="/assets/pc3000_spider.JPG">
   </div>
   <div class="col-span-2 px-2 md:px-16 md:py-16">
 
@@ -141,7 +141,7 @@
         </div>
         <div class="flex-grow pl-4">
           <h2 class="font-bold text-md text-blue-900 mb-1 ">Datenrettung</h2>
-          <p class="">Die Datenrettung startet direkt nach Ankunft.</p>
+          <p class="">Die Datenrettung startet direkt nach Ankunft. Erfahren sie <button class="font-bold" routerLink="/datenrettung/flash">hier</button> wie ihre Daten gerettet werden</p>
         </div>
       </div>
       <div class="flex relative pb-8">
@@ -163,7 +163,7 @@
       </div>
 
     </div>
-    <div class="flex justify-center">
+    <!--<div class="flex justify-center">
       <div class="h-80 w-64 border shadow-2xl rounded-2xl justify-self-center inline-table">
         <div class="relative pb-56 mb-4 rounded-2xl shadow lg:pb-64">
           <img class="absolute object-cover w-full h-full rounded-t-2xl object-center"
@@ -182,7 +182,7 @@
         </div>
       </div>
 
-    </div>
+    </div>-->
   </div>
 
 
@@ -230,8 +230,22 @@
   </div>
   <div class="text-center pb-4">Gemäß § 19 UStG enthält der Rechnungsbetrag keine Umsatzsteuer</div>
 </div>
-<div class="bg-white">
-  <div class="py-8 md:py-20 container bg-white text-gray-800" id="order_form">
+
+<div class="bg-white text-center py-6 my-16">
+  <div class="flex justify-around items-center pb-4">
+    <h2 class="text-xl font-bold underline text-center inline">Haben Sie noch Fragen?</h2>
+  </div>
+  <h3 class="font-semibold pb-2">Ein Anruf klärt am schnellsten Ihr Anliegen: </h3>
+  <a class="" href="tel:+4915221408008">
+    <p class="font-semibold my-2">
+      <img class="inline pr-4" src="/assets/phone.svg">0152 21408008</p>
+  </a>
+  <p>Auch an Wochenenden und Feiertagen erreichbar.</p>
+  <p>Oder per Email: <a class="font-bold" href="mailto:info@datenrettung-schilling.de">info@datenrettung-schilling.de</a></p>
+
+</div>
+<div class="">
+  <div class="my-8 md:my-15 md:py-5 container bg-white text-gray-800" id="order_form">
 
     <app-order-form
       *ngIf="products && orderSubmitted === null"

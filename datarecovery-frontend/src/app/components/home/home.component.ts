@@ -1,7 +1,6 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Category, Order, Product} from '../../model/model';
-import {GoogleAnalyticsService} from "../../services/google-analytics.service";
 
 @Component({
   selector: 'app-home',
@@ -9,8 +8,7 @@ import {GoogleAnalyticsService} from "../../services/google-analytics.service";
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private http: HttpClient,
-              private googleAnalyticsService: GoogleAnalyticsService) { }
+  constructor(private http: HttpClient) { }
 
   orderSubmitted: boolean = null;
   products: Product[];
@@ -38,7 +36,6 @@ export class HomeComponent implements OnInit {
 
     this.http.post('api/order/create', order).subscribe(
       data => {
-        this.googleAnalyticsService.eventEmitter("purchase","ecommerce","click",order.product.category.name + " " +order.product.name,1)
         this.orderSubmitted = true;
         setTimeout(function () {
           let orderSubmit = this.document.getElementById('order_submit')
