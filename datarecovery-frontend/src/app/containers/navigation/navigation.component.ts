@@ -39,22 +39,24 @@ declare let gtag: Function;
     <div class="flex-grow pt-24 bg-blue-100 text-gray-700">
         <router-outlet></router-outlet>
     </div>
-      <div class="fixed w-64 bg-white rounded-xl bottom-12 left-1/2 -ml-32 z-50 p-4 shadow" *ngIf="showPhone">
+      <div class="fixed w-64 bg-white rounded-xl bottom-4 right-20 z-50 p-4 shadow" *ngIf="showPhone">
         <div class="flex justify-around items-center pb-4">
-          <a  href="tel:+4915221408008">
-            <p class="font-semibold"><img class="inline pr-4" src="/assets/phone.svg">0152 21408008</p>
-          </a>
-
+          <h2 class="text-xl font-bold underline text-center inline">Haben Sie noch Fragen?</h2>
           <button (click)="showPhone = false"><img class="inline" src="assets/x.svg"></button>
         </div>
+        <h3 class="font-semibold pb-2">Ein Anruf klärt am schnellsten Ihr Anliegen: </h3>
+        <a class="" href="tel:+4915221408008">
+          <p class="font-semibold my-2">
+            <img class="inline pr-4" src="/assets/phone.svg">0152 21408008</p>
+        </a>
         <p>Auch an Wochenenden und Feiertagen erreichbar.</p>
       </div>
       <div class="fixed right-4 bottom-4 z-50 flex flex-row ">
+        <a (click)="showPhone = true ; wawidgetHidden = true" class="cursor-pointer">
         <div class=" bg-white rounded-md  p-3 shadow mr-4" *ngIf="!showPhone ">
-          <a (click)="showPhone = true ; wawidgetHidden = true" class="cursor-pointer">
-            <img src="/assets/phone.svg">
-          </a>
+            <img src="/assets/help-circle.svg">
         </div>
+        </a>
 
         <div class="" (click)="wawidgetHidden = false; showPhone = false" *ngIf="wawidgetHidden">
           <button class="flex align-middle p-3 rounded text-white" style="background-color: #14C656">
