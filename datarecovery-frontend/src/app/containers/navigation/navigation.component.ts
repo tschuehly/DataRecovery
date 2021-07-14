@@ -25,9 +25,10 @@ declare let gtag: Function;
           </button>
         </div>
         <div class="items-center text-xl px-4  bg-gray-main" [ngClass]="mobileNavShow ? 'flex flex-col absolute right-0 top-20 w-full space-y-4 py-4 text-2xl font-semibold bg-gray-main text-white': 'hidden md:flex md:flex-row'">
-
-         <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="preise">Preise</a>
-          <a class="cursor-pointer p-2" (click)="scrollToOrder(); mobileNavShow = false">Auftrag</a>
+        
+        <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="">Startseite</a> 
+         <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="preise">Festpreise</a>
+          <a class="cursor-pointer p-2" (click)="scrollToOrder(); mobileNavShow = false">Auftragsformular</a>
           <a (click)="mobileNavShow = false;scrollToContact()" class="cursor-pointer p-2">Kontakt</a>
           <div class="h-full text-center flex"  (clickOutside)="dropdownShow = false" [exclude]="'div.dropdown'"
                [excludeBeforeClick]="true" [ngClass]="{'bg-gray-300 md:bg-black ': dropdownShow}">
@@ -62,7 +63,8 @@ declare let gtag: Function;
 
           <button (click)="showPhone = false"><img class="inline" src="assets/x.svg"></button>
         </div>
-        <p>Auch an Wochenenden und Feiertagen erreichbar.</p>
+        <p>Zwischen 08:00 bis 21:00 Uhr</p>
+        <p>Mo.-So. und an Feiertagen erreichbar.</p>
       </div>
       <div class="fixed right-4 bottom-4 z-50 flex flex-row ">
         <div class=" bg-white rounded-md  p-3 shadow mr-4" *ngIf="!showPhone ">
@@ -71,7 +73,7 @@ declare let gtag: Function;
           </a>
         </div>
 
-        <div class="md:hidden " (click)="wawidgetHidden = false; showPhone = false" *ngIf="wawidgetHidden">
+        <div class="" (click)="wawidgetHidden = false; showPhone = false" *ngIf="wawidgetHidden">
           <button class="flex align-middle p-3 rounded text-white" style="background-color: #14C656">
             <img class="h-6 w-6 inline" src="/assets/WhatsApp.svg" alt="Whatsapp Logo">
           </button>
@@ -158,20 +160,7 @@ export class NavigationComponent implements OnInit {
       this.dropdownShow = false;
     });
   }
-  @HostListener("window:scroll", ["$event"])
-  onWindowScroll() {
-    if(document.getElementById('priceList') != null){
-      let pos = (document.documentElement.scrollTop || document.body.scrollTop)
-      let max = document.getElementById('priceList').scrollHeight + document.getElementById('priceList').offsetHeight - 200
-      if(pos > max )   {
-        if(this.showPhoneCounter < 1){
-          this.showPhone = true;
-        }
-        this.showPhoneCounter += 1;
-      }
-
-    }
-  }
+ 
   ngOnInit(): void {
     this.innerWidth = document.documentElement.clientWidth;
     this.statusChangeSubscription = this.ccService.statusChange$.subscribe(
@@ -184,6 +173,7 @@ export class NavigationComponent implements OnInit {
           node.charset = 'utf-8';
           // append to head of document
           document.getElementsByTagName('head')[0].appendChild(node);
+          window['clarity']('consent')
           gtag('js', new Date());
           this.mapsIframeShow = true;
           this.router.events.subscribe(event => {

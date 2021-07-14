@@ -9,7 +9,7 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
   selector: 'app-review-component',
   template: `
     <div class="bg-gray-main text-white">
-      <h1 class="text-3xl text-center pt-8">Kundenbewertungen</h1>
+      <h1 class="text-3xl text-center pt-8">Kundenbewertungen Ø5.0 (47)  </h1>
       <div class="px-0 md:container  py-4">
         <swiper class="my-4" [effect]="'slide'" [slidesPerView]="1"
                 [spaceBetween]="50" [virtual]="true" [navigation]="true" [pagination]="true">
@@ -52,16 +52,16 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
                   <div class="flex justify-between space-x-2">
                     <button class="border border-gray-300 p-2 rounded">
                       <a class="md:hidden"
-                      href="https://g.co/kgs/3tdxPy">
-                        Weitere Bewertungen
+                      href="https://search.google.com/local/reviews?placeid=ChIJU5PnJJcznEcRy2VAwpDd1Dc&q=Tobias+Jungbauer+Datenrettung+-+AmmerseeDatenrettung.de&hl=de&gl=DE">
+                        Alle Bewertungen
                       </a>
                       <a class="hidden md:block"
-                        href="https://www.google.de/search?&q=Tobias+Jungbauer+Datenrettung&entrypoint=sh/x/kp/local#lrd=0x479c339724e79353:0x37d4dd90c24065cb,1"
+                        href="https://search.google.com/local/reviews?placeid=ChIJU5PnJJcznEcRy2VAwpDd1Dc&q=Tobias+Jungbauer+Datenrettung+-+AmmerseeDatenrettung.de&hl=de&gl=DE"
                         rel="noopener">
-                        Weitere Bewertungen
+                        Alle Bewertungen
                       </a>
                     </button>
-                    <button *ngIf="currentReview.text.split(' ').length > 40" (click)="showReview = !showReview">Ganze
+                    <button *ngIf="currentReview.text.split(' ').length > 40" (click)="showReview = !showReview">vollständige
                       Rezension lesen
                     </button>
                   </div>
