@@ -19,7 +19,7 @@ module.exports = {
     },
     extend: {
       colors:{
-        'gray-main' : 'rgb(29 29 29)',
+        'gray-main' : 'rgb(35 35 35)',
         'silver' : 'rgb(197 197 197)'
       },
       backgroundImage: theme => ({
