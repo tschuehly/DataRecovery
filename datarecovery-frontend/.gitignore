@@ -7,7 +7,7 @@
 /out
 # Only exists if Bazel was run
 /bazel-out
-
+.idea
 # dependencies
 /node_modules
 
