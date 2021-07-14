@@ -25,8 +25,8 @@ declare let gtag: Function;
           </button>
         </div>
         <div class="items-center text-xl px-4  bg-gray-main" [ngClass]="mobileNavShow ? 'flex flex-col absolute right-0 top-20 w-full space-y-4 py-4 text-2xl font-semibold bg-gray-main text-white': 'hidden md:flex md:flex-row'">
-        
-        <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="">Startseite</a> 
+
+        <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="">Startseite</a>
          <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="preise">Festpreise</a>
           <a class="cursor-pointer p-2" (click)="scrollToOrder(); mobileNavShow = false">Auftragsformular</a>
           <a (click)="mobileNavShow = false;scrollToContact()" class="cursor-pointer p-2">Kontakt</a>
@@ -57,21 +57,19 @@ declare let gtag: Function;
         <router-outlet></router-outlet>
       </div>
 
-      <div class="fixed w-64 bg-white rounded-xl bottom-12 left-1/2 -ml-32 z-50 p-4 shadow" *ngIf="showPhone">
+      <div class="fixed w-64 bg-white rounded-xl bottom-4 left-4 z-50 p-4 shadow-2xl" *ngIf="showPhone">
         <div class="flex justify-around items-center pb-4">
-          <p class="font-semibold"><img class="inline pr-4" src="/assets/phone.svg">0841 12840705</p>
-
+          <h2 class="text-xl font-bold underline text-center inline">Haben Sie noch Fragen?</h2>
           <button (click)="showPhone = false"><img class="inline" src="assets/x.svg"></button>
         </div>
-        <p>Zwischen 08:00 bis 21:00 Uhr</p>
-        <p>Mo.-So. und an Feiertagen erreichbar.</p>
+        <h3 class="font-semibold pb-2">Ein Anruf klärt am schnellsten Ihr Anliegen: </h3>
+        <p class="font-semibold pb-2"><img class="inline pr-4" src="/assets/phone.svg">0841 12840705</p>
+        <p>Auch an Wochenenden und Feiertagen erreichbar.</p>
       </div>
       <div class="fixed right-4 bottom-4 z-50 flex flex-row ">
-        <div class=" bg-white rounded-md  p-3 shadow mr-4" *ngIf="!showPhone ">
-          <a (click)="showPhone = true ; wawidgetHidden = true" class="cursor-pointer">
-            <img src="/assets/phone.svg">
-          </a>
-        </div>
+        <button (click)="showPhone = true ; wawidgetHidden = true" class=" bg-white rounded-md  p-3 shadow mr-4" *ngIf="!showPhone ">
+          <img src="/assets/phone.svg" alt="Telefon Symbol">
+        </button>
 
         <div class="" (click)="wawidgetHidden = false; showPhone = false" *ngIf="wawidgetHidden">
           <button class="flex align-middle p-3 rounded text-white" style="background-color: #14C656">
@@ -108,7 +106,7 @@ declare let gtag: Function;
             <div>
               <h1 class="pt-4 md:mt-0 mb-2 text-4xl text-center text-gray-50">Kontakt</h1>
               <p class="font-semibold text-center text-white">
-                Email: 
+                Email:
                 <a href="mailto:info@jungbauerdatenrettung.de"><span class="text-white">info@jungbauerdatenrettung.de</span></a><br/>
                 Telefon: <span class="text-white">0841 12840705</span>
               </p>
@@ -124,7 +122,7 @@ declare let gtag: Function;
               </p>
             </div>
           </div>
-            
+
           <div class=" border-b py-4 divide-x-2 divide-silver text-gray-50">
             <a routerLink="impressum" class="pr-4">Impressum</a><a routerLink="datenschutz" class="px-4">Datenschutz</a><a class="pl-4" routerLink="agb">AGB</a>
           </div>
@@ -160,7 +158,7 @@ export class NavigationComponent implements OnInit {
       this.dropdownShow = false;
     });
   }
- 
+
   ngOnInit(): void {
     this.innerWidth = document.documentElement.clientWidth;
     this.statusChangeSubscription = this.ccService.statusChange$.subscribe(
@@ -197,7 +195,20 @@ export class NavigationComponent implements OnInit {
   onResize(_): void {
     this.innerWidth = document.documentElement.clientWidth;
   }
+  @HostListener("window:scroll", ["$event"])
+  onWindowScroll() {
+    if(document.getElementById('priceList') != null){
+      let pos = (document.documentElement.scrollTop || document.body.scrollTop)
+      let max = document.getElementById('priceList').scrollHeight + document.getElementById('priceList').offsetHeight - 200
+      if(pos > max )   {
+        if(this.showPhoneCounter < 1 && document.body.clientWidth > 512){
+          this.showPhone = true;
+        }
+        this.showPhoneCounter += 1;
+      }
 
+    }
+  }
   scrollToOrder(): void {
     this.router.navigate(['']).then(_ => {
       setTimeout(function () {
