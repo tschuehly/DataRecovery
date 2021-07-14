@@ -20,7 +20,8 @@ class Order(
     var customer: Customer?,
     var replacement: String,
     @OneToMany(cascade = [CascadeType.ALL])
-    var updates: MutableList<Update> = ArrayList()
+    var updates: MutableList<Update> = ArrayList(),
+    var note: String?
 ) : BaseEntity() {
     override fun toString(): String {
         return "Order(trackingId=$trackingId, orderDate=$orderDate, trackingState=$trackingState, product=$product, customer=$customer, replacement='$replacement')"

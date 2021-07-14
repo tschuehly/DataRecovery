@@ -1,21 +1,32 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {Order, Product} from '../../model/model';
+import {Category, Order, Product} from '../../model/model';
 
 @Component({
   selector: 'app-order-form',
   template: `
     <div class="w-full text-center text-4xl py-8">
-      <h1>Auftragsformular</h1>
+      <h2>Unverbindliche Anfrage</h2>
     </div>
     <form [formGroup]="this.orderForm" (ngSubmit)="onSubmit()">
       <div class="flex flex-col gap-2 px-4 md:px-12">
         <ng-container *ngIf="!productFormFilled">
-          <label class="py-4 font-semibold">Auftrag zur Datenrettung:
-            <select class="block mt-2 w-full text-black" formControlName="product" #productSelect required>
-              <option *ngFor="let product of products" [value]="product.id">
-                {{product.category.name}}  {{product.name}}  <span *ngIf="product.price">{{product.price | number : '.2':'de' }}€</span>
+
+          <label class="py-4 font-semibold">Was für einen Datenträger haben Sie?
+            <select class="block mt-2 w-full text-black" formControlName="selectedCategory" required>
+              <option *ngFor="let category of categories"  [value]="category.id" >
+                {{category.name}}
               </option>
+            </select>
+          </label>
+          <label class="py-4 font-semibold" [hidden]="this.orderForm.get('selectedCategory').invalid" >Welche Größe hat Ihr Datenträger?
+            <select class="block mt-2 w-full text-black" formControlName="product" #productSelect required>
+              <ng-container *ngFor="let product of products">
+                <option *ngIf="product.category.id == this.orderForm.get('selectedCategory').value" [value]="product.id">
+                  {{product.category.name}}  {{product.name}}  <span *ngIf="product.price">{{product.price | number : '.2':'de' }}€</span>
+                </option>
+
+              </ng-container>
             </select>
           </label>
           <ng-container *ngIf="productSelect.value">
@@ -28,10 +39,12 @@ import {Order, Product} from '../../model/model';
               </select>
             </label>
           </ng-container>
-
+          <label class="font-semibold">Zusätzliche Bemerkungen (Wasserschaden? etc.)
+            <textarea class="mt-1 w-full text-black" formControlName="note"></textarea>
+          </label>
           <h2 class="font-semibold inline text-center">Allgemeine Geschäftsbedingungen und Datenschutzrichtlinien:</h2>
           <div class="flex">
-            <input class="self-center w-6 h-6 bg-red-200" type="checkbox" formControlName="agb" id="agbCheckbox" >
+            <input class="self-center w-6 h-6 bg-red-300 border-2 border-black" type="checkbox" formControlName="agb" id="agbCheckbox" >
             <label for="agbCheckbox" class="ml-4">
               Hiermit bestätige ich meine Einverständnis für die vorhandenen
               <a class="font-semibold underline" routerLink="datenschutz">Datenschutzrichtlinien</a> wie für die
@@ -43,9 +56,9 @@ import {Order, Product} from '../../model/model';
                     class="bg-white py-2 px-4  text-lg shadow rounded text-black border-2 border-black"
                     [disabled]="!(this.orderForm.get('product').valid && this.orderForm.get('agb').value == true)"
                     [ngClass]="{'bg-gray-200 cursor-default': !(this.orderForm.get('product').valid && this.orderForm.get('agb').value == true)}">
-              <ng-container *ngIf="this.orderForm.get('agb').value == false && this.orderForm.get('product').valid ">Bitte bestätigen sie die AGB und Datenschutzrichtlinien </ng-container>
-              <ng-container *ngIf="this.orderForm.get('product').valid && this.orderForm.get('agb').value == true">Adressdaten eingeben</ng-container>
-              <ng-container *ngIf="!this.orderForm.get('product').valid">Wählen sie aus welchen Datenträger sie besitzen</ng-container>
+              <ng-container *ngIf="this.orderForm.get('agb').value == false && this.orderForm.get('product').valid ">Bitte bestätigen Sie die AGB und Datenschutzrichtlinien </ng-container>
+              <ng-container *ngIf="this.orderForm.get('product').valid && this.orderForm.get('agb').value == true">Kontaktdaten eingeben</ng-container>
+              <ng-container *ngIf="!this.orderForm.get('product').valid">Wählen Sie Ihren Datenträger aus</ng-container>
             </button>
           </div>
 
@@ -82,7 +95,6 @@ import {Order, Product} from '../../model/model';
           </div>
         </ng-container>
 
-
       </div>
     </form>
   `,
@@ -100,6 +112,7 @@ export class OrderFormComponent implements OnInit {
   orderForm: FormGroup;
   @Input() products: Product[];
   @Input() replacementProducts: Product[];
+  categories: Category[];
   order: Order;
   productFormFilled = false;
 
@@ -120,11 +133,17 @@ export class OrderFormComponent implements OnInit {
         street: [''],
 
       }),
+      note: [],
       product: [''],
+      selectedCategory: [''],
       replacement: ['Sie senden einen eigenen Ersatzspeicher zur Sicherung mit: kostenfrei'],
       agb: ['']
     });
     this.orderForm.get('product').valid
+
+    this.categories = this.products.map(p => p.category).filter((obj, pos, arr) => {
+      return arr.map(mapObj => mapObj.id).indexOf(obj.id) === pos;
+    })
   }
 
   onSubmit(): void {

@@ -24,7 +24,7 @@ declare let gtag: Function;
         </div>
         <div class="items-center text-xl px-2 font-semibold" (clickOutside)="mobileNavShow = false" exclude="nav" [ngClass]="mobileNavShow ? 'flex flex-col absolute right-0 top-20 mt-2 bg-blue-100 text-blue-900 w-full space-y-4 py-4 text-2xl font-semibold bg-gray-main text-white  border-b-2 border-t-2 border-blue-900': 'hidden md:flex md:flex-row'">
           <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="">Startseite</a>
-          <a class="cursor-pointer p-2" (click)="scrollToOrder(); mobileNavShow = false">Auftrag</a>
+          <a class="cursor-pointer p-2" (click)="scrollToOrder(); mobileNavShow = false">Anfrage</a>
           <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="preise">Preise</a>
           <a class="cursor-pointer p-2" (click)="mobileNavShow = false"  routerLink="/datenrettung/flash">Arbeitsweise</a>
           <a class="cursor-pointer  p-2"  (click)="scrollToContact(); mobileNavShow = false">Kontakt</a>
@@ -79,16 +79,16 @@ declare let gtag: Function;
         </div>
       </div>
 
-    <div style="height: 300px">
+    <button  (click)="mapsIframeShow = true" style="height: 300px">
       <div  *ngIf="!mapsIframeShow" class="bg-gray-200 text-center py-8">
-        <button (click)="mapsIframeShow = true">Hier klicken um Google Maps anzuzeigen. Dabei werden Daten und Cookies von Google geladen</button>
+        <span>Hier klicken um Google Maps anzuzeigen. Dabei werden Daten und Cookies von Google geladen</span>
       </div>
-      <iframe class="text-center my-8" *ngIf="mapsIframeShow" id="myFrame"
+      <iframe class="text-center" *ngIf="mapsIframeShow" id="myFrame"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3552.631212153642!2d9.203280792749238!3d48.89044172488516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799d104bab8284b%3A0xfc656773e3df2e3c!2sDatenrettung%20Schilling!5e0!3m2!1sde!2sde!4v1621269476911!5m2!1sde!2sde"
               loading="lazy"
               width="{{innerWidth}}" height="300" frameborder="0" allowfullscreen="" aria-hidden="false"
               tabindex="0"></iframe>
-    </div>
+    </button>
     <footer class="text-gray-700 bg-blue-50 pt-10" id="contact">
       <div class="container mb-4 text-center">
         <div class="grid grid-cols-2 space-y-4">
@@ -97,7 +97,7 @@ declare let gtag: Function;
             <p>
               Cassandra Schilling<br/>
               Datenrettungsdienst<br/>
-              info@datenrettung-schilling.de<br/>
+              <a class="font-bold" href="mailto:info@datenrettung-schilling.de">info@datenrettung-schilling.de</a><br/>
               Tel.: 0152 21408008
             </p>
           </div>

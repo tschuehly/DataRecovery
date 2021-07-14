@@ -15,6 +15,7 @@ export class Order{
   trackingState: orderStateEnum;
   product: Product;
   customer: Customer;
+  note: string;
   replacement: string;
   updates: Update[];
 }

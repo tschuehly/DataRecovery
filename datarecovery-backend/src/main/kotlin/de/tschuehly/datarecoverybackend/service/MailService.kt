@@ -30,13 +30,13 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
 
         order.customer?.email?.let { helper.setTo(it) }
 
-        helper.setSubject("Ihr Auftrag zur Datenrettung | Cassandra Schilling Datenrettungsdienst")
+        helper.setSubject("Ihre Anfrage zur Datenrettung | Cassandra Schilling Datenrettungsdienst")
         var html = resourceLoader.getResource("classpath:templates/emailtemplate.html").file
             .readText(charset = Charsets.UTF_8)
         val body = getOrderConfirmationBody(order)
         html = html.replace("MESSAGEBODY", body)
         var dateFormat = SimpleDateFormat("dd.MM.yyyy HH:mm");
-        html = html.replace("MESSAGETITLE", "Ihre Auftragsbest&#228;tigung vom ${dateFormat.format(order.orderDate)}")
+        html = html.replace("MESSAGETITLE", "Ihre Anfragebest&#228;tigung vom ${dateFormat.format(order.orderDate)}")
         helper.setText(html,true)
 
         javaMailSender.send(msg)
@@ -91,7 +91,7 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
         
         
         
-        &nbsp;</p><h2 style="Margin-top: 20px;Margin-bottom: 0;font-style: normal;font-weight: normal;color: #706f70;font-size: 18px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;">Ihre Auftragsdaten</h2><p style="Margin-top: 16px;Margin-bottom: 20px;">
+        &nbsp;</p><h2 style="Margin-top: 20px;Margin-bottom: 0;font-style: normal;font-weight: normal;color: #706f70;font-size: 18px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;">Ihre Daten</h2><p style="Margin-top: 16px;Margin-bottom: 20px;">
         ${order.customer?.firstName} ${order.customer?.lastName}<br />
         ${order.customer?.email}<br />
         ${order.customer?.street} <br />
@@ -102,5 +102,6 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
         <span style="font-weight: bold">Produkt:</span> ${order.product.category?.title} ${order.product.name}<br />
         <span style="font-weight: bold">Preis:</span> ${"%.2f".format(order.product.price)} €<br />
         <span style="font-weight: bold">Ersatzdatenträger: </span>${order.replacement}<br />
+        <span style="font-weight: bold">Bemerkungen: </span>${order.note}<br />
         """
 }
