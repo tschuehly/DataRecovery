@@ -59,12 +59,12 @@ declare let gtag: Function;
 
       <div class="fixed w-64 bg-white rounded-xl bottom-4 left-4 z-50 p-4 shadow-2xl" *ngIf="showPhone">
         <div class="flex justify-around items-center pb-4">
-          <h2 class="text-xl font-bold underline text-center inline">Haben Sie noch Fragen?</h2>
+          <h2 class="font-semibold pb-2">Ein Anruf klärt am schnellsten Ihr Anliegen:</h2>
           <button (click)="showPhone = false"><img class="inline" src="assets/x.svg"></button>
         </div>
-        <h3 class="font-semibold pb-2">Ein Anruf klärt am schnellsten Ihr Anliegen: </h3>
+        
         <p class="font-semibold pb-2"><img class="inline pr-4" src="/assets/phone.svg">0841 12840705</p>
-        <p>Auch an Wochenenden und Feiertagen erreichbar.</p>
+        <p>Mo.-So. 08.00-20.00 Uhr erreichbar.</p>
       </div>
       <div class="fixed right-4 bottom-4 z-50 flex flex-row ">
         <button (click)="showPhone = true ; wawidgetHidden = true" class=" bg-white rounded-md  p-3 shadow mr-4" *ngIf="!showPhone ">
