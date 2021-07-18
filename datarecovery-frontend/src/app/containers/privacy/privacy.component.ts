@@ -5,7 +5,43 @@ import {Component, OnInit} from '@angular/core';
 
   template: `
     <div class="container my-10">
-      <h1 class="text-3xl font-bold">Datenschutz­erklärung</h1>
+    <h1 class="text-3xl font-bold">Vertraulichkeitserklärung gegenüber der Daten Ihres Speichers</h1>
+    <h2 class="text-2xl font-semibold mb-2 mt-4">1. Geheimhaltungspflichten</h2>
+    <h3 class="font-semibold">Tobias Jungbauer Datenrettung verpflichtet sich:</h3>
+    <p>1.1 die Daten Ihres Speichers streng vertraulich zu behandeln und nur im Zusammenhang mit dem Zweck der Datenrettung zu verwenden.</p>
+<br>
+    <p>1.2 diese ebenfalls durch angemessene Geheimhaltungsmaßnahmen gegen den unbefugten Zugriff durch Dritte zu sichern 
+      und bei der Verarbeitung der vertraulichen Informationen die gesetzlichen und vertraglichen Vorschriften zum Datenschutz einzuhalten. 
+      Dies beinhaltet auch dem aktuellen Stand der Technik angepasste technische Sicherheitsmaßnahmen (Art. 32 DSGVO) 
+      und die Verpflichtung der Mitarbeiter auf die Vertraulichkeit und die Beachtung des Datenschutzes (Art. 28 Abs. 3 lit. b) DSGVO);</p>
+<br>
+    <p>1.3 sofern Tobias Jungbauer Datenrettung aufgrund geltender Rechtsvorschriften gerichtlicher oder behördlicher Anordnungen oder aufgrund einschlägiger rechtlicher Regelungen verpflichtet ist, 
+      teilweise oder sämtliche dieser Daten Ihres Speichers offenzulegen,
+      Ihnen (soweit rechtlich möglich und praktisch umsetzbar) hierüber unverzüglich schriftlich zu informieren und alle zumutbaren Anstrengungen zu unternehmen, 
+      um den Umfang der Offenlegung auf ein Minimum zu beschränken und dem Ihnen erforderlichenfalls jede zumutbare Unterstützung zukommen zu lassen,
+       die eine Schutzanordnung gegen die Offenlegung sämtlicher vertraulicher Informationen oder von Teilen hiervon anstrebt.</p> 
+
+     <h2 class="text-2xl font-semibold mb-2 mt-4">2. Löschung der Daten Ihres Speichers</h2>
+     <p>2.1 Auf Aufforderung des Inhabers sowie ohne Aufforderung spätestens nach Erreichung des Zwecks der Datenrettung ist Tobias Jungbauer Datenrettung verpflichtet, 
+         sämtliche Daten Ihres Speichers einschließlich der Kopien hiervon innerhalb von vierzehn (14) Arbeitstagen nach Zugang der Aufforderung bzw. nach Beendigung des Auftrags zurückzugeben 
+         oder zu vernichten (einschließlich elektronisch gespeicherter vertraulicher Informationen), sofern nicht mit dem Inhaber vereinbarte oder gesetzliche Aufbewahrungspflichten dem entgegenstehen.</p>
+         <br>
+      <p>2.2 Die Vernichtung gespeicherter Daten Ihres Speichers erfolgt durch die vollständige und unwiderrufliche Löschung der Dateien oder unwiederbringliche Zerstörung des Datenträgers. 
+           Vollständige und unwiderrufliche Löschung bedeutet, dass die Daten Ihres Speichers derart gelöscht werden, 
+           dass jeglicher Zugriff auf diese Informationen unmöglich wird, wobei spezielle Löschverfahren (z.B. mittels „Wiping“) zu verwenden sind, 
+           welche den anerkannten Standards genügen (bspw. Standards des Bundesamts für Informationssicherheit).</p>
+          <br>
+       <p>2.3 Auf Ihr Verlangen hat Tobias Jungbauer Datenrettung schriftlich zu versichern, dass er sämtliche Daten Ihres Speichers vollständig und unwiderruflich gelöscht hat.</p>
+
+      <h2 class="text-2xl font-semibold mb-2 mt-4">3. Eigentumsrechte an den vertraulichen Informationen</h2>
+      <p>3.1 Der Auftraggeber behält hinsichtlich der Daten Ihres Speichers alle Eigentums-, Nutzungs- und Verwertungsrechte. Tobias Jungbauer Datenrettung erwirbt kein Eigentum oder – mit Ausnahme der Nutzung für den Zweck der Datenrettung –
+         sonstige Nutzungsrechte an den vertraulichen Daten aufgrund dieser Vereinbarung oder sonst wegen konkludenten Verhaltens.</p>
+         <br>
+         <p>3.2 Tobias Jungbauer Datenrettung hat es zu unterlassen, die Daten Ihres Speichers außerhalb des Zwecks in irgendeiner Weise selbst zu verwerten oder durch Dritte verwerten zu lassen.</p>
+      <br>
+      <br>
+         <p></p>
+         <h1 class="text-3xl font-bold">Datenschutz­erklärung zur Nutzung der Website</h1>
       <h2 class="text-2xl font-semibold mb-2 mt-4">1. Datenschutz auf einen Blick</h2>
       <h3 class="font-semibold mb-2 mt-4 underline">Allgemeine Hinweise</h3>
       <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert,
