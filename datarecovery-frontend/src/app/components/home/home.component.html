@@ -4,17 +4,13 @@
 <!--</div>-->
 <style>
 </style>
-<div class="grid grid-cols-1 lg:grid-cols-3 bg-blue-100 pt-8 pb-10 !p-2">
-  <div class="mx-4 lg:flex order-last lg:order-first col-span-1 bg-contain bg-no-repeat bg-blue-100 justify-self-center self-center flex justify-center">
-    <img class="max-h-80 sm:max-h-96 min-w-full" src="/assets/pc3000_spider.JPG">
-  </div>
-  <div class="col-span-2 px-2 md:px-16 md:py-16">
+<div class="flex justify-center bg-blue-100 pt-8 pb-10 !p-2">
+  <div class="flex flex-col justify-center px-2 md:px-16 md:py-16">
 
-
-    <div class="grid grid-cols-12 gap-2 pl-4 md:pl-10 pb-4  m-auto">
-      <h1 class="text-4xl mb-12 col-span-12 font-bold text-gray-900">
-        Datenrettung zu fairen Konditionen in Ludwigsburg
-      </h1>
+    <h1 class="text-center text-4xl mb-12 col-span-12 font-bold text-gray-900">
+      Datenrettung zu fairen Konditionen in Ludwigsburg
+    </h1>
+    <div class="inline-grid grid-cols-12 gap-2 m-auto">
       <svg class="col-span-1 justify-self-center self-center" viewBox="0 0 24 24" width="24" height="24"
            stroke="#1E3A8A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="20 6 9 17 4 12"></polyline>
@@ -24,7 +20,7 @@
            stroke="#1E3A8A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="20 6 9 17 4 12"></polyline>
       </svg>
-      <span class="col-span-11 text-xl">kostenlose Analyse</span>
+      <span class="col-span-11 text-xl">auf Hardwareebene und mit modernster Datenrettungstechnik</span>
       <svg class="col-span-1 justify-self-center self-center" viewBox="0 0 24 24" width="24" height="24"
            stroke="#1E3A8A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="20 6 9 17 4 12"></polyline>
@@ -39,7 +35,9 @@
            stroke="#1E3A8A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="20 6 9 17 4 12"></polyline>
       </svg>
-      <span class="col-span-11 text-xl">Bezahlung <span class="font-bold">nur nach erfolgreicher Datenrettung</span> </span>
+      <span class="col-span-11 text-xl">Sie gehen hier ausdrücklich <span class="font-bold">nicht</span> in Vorkasse, zudem gibt es keine versteckte Kosten.
+Eine Bezahlung erfolgt nur <span class="font-bold">nach erfolgreicher Datenrettung.</span></span>
+
     </div>
   </div>
 </div>
@@ -64,29 +62,87 @@
     </g>
   </svg>
 </div>
+
+<div class="py-16 bg-white">
+  <div class="flex justify-center overflow-hidden">
+
+    <img class="h-72" src="/assets/pc3000_TSOPMODULE.jpg" alt="PC3000 TSOPMODULE">
+    <img class="h-72" src="/assets/sd_microskop1.jpg" alt="SD Karte">
+    <img class="h-72" src="/assets/flash.JPG" alt="SD Karte Pins">
+  </div>
+</div>
+
+<div class="text-xl my-16" id="priceList">
+  <h1 class="w-full my-2 text-5xl  font-bold leading-tight text-center text-gray-800">Preise</h1>
+  <div class="w-full mb-4">
+    <div class="h-1 mx-auto bg-gradient-to-r from-blue-900 to-blue-100 w-64 opacity-90"></div>
+  </div>
+  <div class="flex flex-wrap py-8 justify-center gap-6 container">
+
+    <ng-container *ngFor="let category of categories ">
+      <div class="flex w-96 justify-around">
+        <div class="card">
+          <figure>
+            <img *ngIf="category.name == 'SD-Karte'" src="/assets/IMG_1676.JPG">
+            <img *ngIf="category.name == 'USB-Stick'" src="/assets/IMG_1672.JPG">
+            <img *ngIf="category.name == 'Micro SD-Karte'" src="/assets/IMG_1671.JPG">
+          </figure>
+
+          <div class="card-body bg-white text-center">
+            <h2 class="card-title text-center">{{category.name}}</h2>
+            <table class="table px-4 text-center">
+              <thead>
+                <tr>
+                  <th style="font-size: 1rem">Kapazität</th>
+                  <th style="font-size: 1rem">Festpreis</th>
+                </tr>
+              </thead>
+              <tbody>
+                <ng-container *ngFor="let product of products; index as i">
+                  <tr  *ngIf="product.category.id === category.id && product.price">
+                    <td class="!p-2 text-left">
+                      <span>≤ {{product.name.split(' ')[3]}}</span>
+                      </td>
+                    <td class="!p-2">{{product.price | number : '.2':'de' }} €</td>
+                  </tr>
+                </ng-container>
+              </tbody>
+            </table>
+            <button
+              class="bg-blue-900 text-white p-2 rounded-md mx-2 mt-2"
+              (click)="selectedCategoryId = category.id; scrollToOrder()"
+            >{{category.name}} Datenrettung</button>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div class="text-center pb-4">Gemäß § 19 UStG enthält der Rechnungsbetrag keine Umsatzsteuer</div>
+</div>
+
 <div class="bg-white  py-20">
 
   <div class="flex flex-col lg:flex-row container justify-center gap-8 bg-white">
     <div class="inline-block">
       <h1 class="text-2xl mb-8 text-gray-900 text-center">Ablauf der Datenrettung:</h1>
-<!--      <div class="flex relative pb-8">-->
-<!--        <div class="h-full w-10 absolute inset-0 flex items-center justify-center">-->
-<!--          <div class="h-full w-1 bg-gray-300 pointer-events-none"></div>-->
-<!--        </div>-->
-<!--        <div-->
-<!--          class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-50 inline-flex items-center justify-center text-white relative z-10">-->
-<!--          <svg class="feather feather-check-square" xmlns="http://www.w3.org/2000/svg" width="28" height="28"-->
-<!--               viewBox="0 0 24 24" fill="none" stroke="#1E3A8A" stroke-width="1.5" stroke-linecap="round"-->
-<!--               stroke-linejoin="round">-->
-<!--            <polyline points="9 11 12 14 22 4"></polyline>-->
-<!--            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>-->
-<!--          </svg>-->
-<!--        </div>-->
-<!--        <div class="flex-grow pl-4">-->
-<!--          <h2 class="font-bold text-md text-blue-900 mb-1 ">Angebot wählen</h2>-->
-<!--          <p class="">Wählen Sie das für Sie passende Angebot aus</p>-->
-<!--        </div>-->
-<!--      </div>-->
+      <!--      <div class="flex relative pb-8">-->
+      <!--        <div class="h-full w-10 absolute inset-0 flex items-center justify-center">-->
+      <!--          <div class="h-full w-1 bg-gray-300 pointer-events-none"></div>-->
+      <!--        </div>-->
+      <!--        <div-->
+      <!--          class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-50 inline-flex items-center justify-center text-white relative z-10">-->
+      <!--          <svg class="feather feather-check-square" xmlns="http://www.w3.org/2000/svg" width="28" height="28"-->
+      <!--               viewBox="0 0 24 24" fill="none" stroke="#1E3A8A" stroke-width="1.5" stroke-linecap="round"-->
+      <!--               stroke-linejoin="round">-->
+      <!--            <polyline points="9 11 12 14 22 4"></polyline>-->
+      <!--            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>-->
+      <!--          </svg>-->
+      <!--        </div>-->
+      <!--        <div class="flex-grow pl-4">-->
+      <!--          <h2 class="font-bold text-md text-blue-900 mb-1 ">Angebot wählen</h2>-->
+      <!--          <p class="">Wählen Sie das für Sie passende Angebot aus</p>-->
+      <!--        </div>-->
+      <!--      </div>-->
       <div class="flex relative pb-8">
         <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
           <div class="h-full w-1 bg-gray-300 pointer-events-none"></div>
@@ -188,51 +244,7 @@
 
 
 </div>
-<div class="text-xl mt-16" id="priceList">
-  <h1 class="w-full my-2 text-5xl  font-bold leading-tight text-center text-gray-800">Preise</h1>
-  <div class="w-full mb-4">
-    <div class="h-1 mx-auto bg-gradient-to-r from-blue-900 to-blue-100 w-64 opacity-90"></div>
-  </div>
-  <div class="flex flex-wrap py-8 justify-center gap-6 container">
-
-    <ng-container *ngFor="let category of categories ">
-      <div class="flex w-96 justify-around">
-        <div class="card">
-          <figure>
-            <img *ngIf="category.name == 'SD-Karte'" src="/assets/IMG_1676.JPG">
-            <img *ngIf="category.name == 'USB-Stick'" src="/assets/IMG_1672.JPG">
-            <img *ngIf="category.name == 'Micro SD-Karte'" src="/assets/IMG_1671.JPG">
-          </figure>
-
-          <div class="card-body bg-white text-center">
-            <h2 class="card-title text-center">{{category.name}}</h2>
-            <table class="table px-4 text-center">
-              <thead>
-                <tr>
-                  <th style="font-size: 1rem">Kapazität</th>
-                  <th style="font-size: 1rem">Festpreis</th>
-                </tr>
-              </thead>
-              <tbody>
-                <ng-container *ngFor="let product of products; index as i">
-                  <tr  *ngIf="product.category.id === category.id && product.price">
-                    <td class="!p-2 text-left">
-                      <span>≤ {{product.name.split(' ')[3]}}</span>
-                      </td>
-                    <td class="!p-2">{{product.price | number : '.2':'de' }} €</td>
-                  </tr>
-                </ng-container>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </ng-container>
-  </div>
-  <div class="text-center pb-4">Gemäß § 19 UStG enthält der Rechnungsbetrag keine Umsatzsteuer</div>
-</div>
-
-<div class="bg-white text-center py-6 my-16">
+<div class="text-center py-6 my-10">
   <div class="flex justify-around items-center pb-4">
     <h2 class="text-xl font-bold underline text-center inline">Haben Sie noch Fragen?</h2>
   </div>
@@ -245,11 +257,13 @@
   <p>Oder per Email: <a class="font-bold" href="mailto:info@datenrettung-schilling.de">info@datenrettung-schilling.de</a></p>
 
 </div>
-<div class="">
-  <div class="my-16 py-5  bg-white text-gray-800" id="order_form">
+
+<div>
+  <div class="py-6 bg-white text-gray-800 px-2" id="order_form">
 
     <app-order-form
       *ngIf="products && orderSubmitted === null"
+      [categoryId]="selectedCategoryId"
       [products]="products"
       [replacementProducts]="replacementProducts"
       (orderOutput)="submitOrder($event)"></app-order-form>

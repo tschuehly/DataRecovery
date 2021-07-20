@@ -7,6 +7,7 @@ import {Category, Order, Product} from '../../model/model';
   templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
+  selectedCategoryId: string;
 
   constructor(private http: HttpClient) { }
 
@@ -30,7 +31,15 @@ export class HomeComponent implements OnInit {
     });
 
   }
-
+  scrollToOrder(): void{
+    setTimeout(() => {
+      const orderForm = document.getElementById('order_form')
+      orderForm.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }, 200);
+  }
 
   submitOrder(order: Order): void {
 

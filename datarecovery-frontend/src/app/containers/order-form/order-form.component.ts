@@ -115,11 +115,15 @@ export class OrderFormComponent implements OnInit {
   categories: Category[];
   order: Order;
   productFormFilled = false;
-
   constructor(private fb: FormBuilder) {
   }
 
   @Output() orderOutput: EventEmitter<Order> = new EventEmitter();
+  @Input()
+  set categoryId(categoryId: string){
+    this.orderForm?.get('selectedCategory').patchValue(categoryId);
+    this.orderForm?.get('product').markAsTouched();
+  }
 
   ngOnInit(): void {
     this.orderForm = this.fb.group({
@@ -139,11 +143,10 @@ export class OrderFormComponent implements OnInit {
       replacement: ['Sie senden einen eigenen Ersatzspeicher zur Sicherung mit: kostenfrei'],
       agb: ['']
     });
-    this.orderForm.get('product').valid
 
     this.categories = this.products.map(p => p.category).filter((obj, pos, arr) => {
       return arr.map(mapObj => mapObj.id).indexOf(obj.id) === pos;
-    })
+    });
   }
 
   onSubmit(): void {
@@ -151,8 +154,8 @@ export class OrderFormComponent implements OnInit {
     this.order.product = this.products.find(product => product.id.toString() === this.orderForm.get('product').value);
     this.orderOutput.emit(this.order);
   }
-  submitProduct(){
-    console.log(this.orderForm.controls)
-    this.productFormFilled = true
+  submitProduct(): void{
+    console.log(this.orderForm.controls);
+    this.productFormFilled = true;
   }
 }
