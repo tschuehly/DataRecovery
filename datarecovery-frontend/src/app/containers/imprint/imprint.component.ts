@@ -22,7 +22,7 @@ import {ActivatedRoute, Router} from "@angular/router";
         DE318961162</p>
 
       <h2 class="text-lg font-semibold mb-2 mt-4 underline">Steuernummer</h2>
-      <p>13123370362</p>
+      <p>124/233/70627</p>
 
       <h2 class="text-lg font-semibold mb-2 mt-4 underline">Angaben zur Berufshaftpflichtversicherung</h2>
       <p><strong>Name und Sitz des Versicherers:</strong><br />
