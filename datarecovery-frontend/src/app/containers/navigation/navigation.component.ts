@@ -64,7 +64,7 @@ declare let gtag: Function;
         </div>
         
         <p class="font-semibold pb-2"><img class="inline pr-4" src="/assets/phone.svg">0841 12840705</p>
-        <p>Mo.-So. 08.00-20.00 Uhr erreichbar.</p>
+        <p>Mo.-Sa. 09.00-20.00 Uhr erreichbar.</p>
       </div>
       <div class="fixed right-4 bottom-4 z-50 flex flex-row ">
         <button (click)="showPhone = true ; wawidgetHidden = true" class=" bg-white rounded-md  p-3 shadow mr-4" *ngIf="!showPhone ">

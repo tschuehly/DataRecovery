@@ -7,7 +7,7 @@ import {Component, OnInit} from '@angular/core';
     <div class="container my-10">
     <h1 class="text-3xl font-bold">Vertraulichkeitserklärung gegenüber der Daten Ihres Speichers</h1>
     <h2 class="text-2xl font-semibold mb-2 mt-4">1. Geheimhaltungspflichten</h2>
-    <h3 class="font-semibold">Tobias Jungbauer Datenrettung verpflichtet sich:</h3>
+    <h3 class="">Tobias Jungbauer Datenrettung verpflichtet sich:</h3>
     <p>1.1 die Daten Ihres Speichers streng vertraulich zu behandeln und nur im Zusammenhang mit dem Zweck der Datenrettung zu verwenden.</p>
 <br>
     <p>1.2 diese ebenfalls durch angemessene Geheimhaltungsmaßnahmen gegen den unbefugten Zugriff durch Dritte zu sichern 
