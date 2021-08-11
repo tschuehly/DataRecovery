@@ -80,3 +80,8 @@ export class Review{
   text: string;
   time: number;
 }
+
+export class MetaData{
+  reviewCount: number;
+  reviewAverage: number;
+}

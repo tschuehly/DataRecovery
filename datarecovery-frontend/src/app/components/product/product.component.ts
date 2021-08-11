@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Category, Order, Product} from '../../model/model';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -83,26 +83,26 @@ export class ProductComponent implements OnInit {
   products: Product[];
   categories: Category[];
   editProduct: Product;
-  showDelConfirm: boolean = false;
-  constructor(private http: HttpClient,private router: Router) { }
+  showDelConfirm = false;
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
     this.http.get('api/category').subscribe((categories: Category[]) => {
       this.categories = categories;
-    },(error:HttpErrorResponse) => {
-      if(error.status === 401){
-        this.router.navigate(['/login'])
+    }, (error: HttpErrorResponse) => {
+      if (error.status === 401){
+        this.router.navigate(['/login']);
 
       }
     });
     this.http.get('api/product').subscribe((products: Product[]) => {
-      this.products = products.sort((p1,p2) => p1.category.name.localeCompare(p2.category.name))
-        .sort((p1) => p1.category.replacement ? 1 : -1);
+      this.products = products.sort((p1, p2) => p1?.category?.name?.localeCompare(p2?.category?.name))
+        .sort((p1) => p1.category?.replacement ? 1 : -1);
     });
   }
 
   saveProduct(productToSave: Product): void {
-    if(productToSave.id === null){
+    if (productToSave.id === null){
       this.http.post('api/product', productToSave).subscribe((product: Product) => {
         if (this.products.find(c => c.id === product.id)){
           this.products = this.products.map( c => c.id === product.id ? product : c);
@@ -125,9 +125,9 @@ export class ProductComponent implements OnInit {
     return this.editProduct;
   }
 
-  deleteProduct(product: Product) {
-    this.http.delete('api/product/'+product.id).subscribe( _=>{
-      this.products = this.products.filter(p => p.id !== product.id)
-    })
+  deleteProduct(product: Product): void {
+    this.http.delete('api/product/' + product.id).subscribe( _ => {
+      this.products = this.products.filter(p => p.id !== product.id);
+    });
   }
 }

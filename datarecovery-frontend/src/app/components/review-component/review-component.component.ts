@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Review} from "../../model/model";
-import SwiperCore, {A11y, EffectCube, EffectFlip, Navigation, Pagination, Virtual} from "swiper/core";
+import {HttpClient} from '@angular/common/http';
+import {MetaData, Review} from '../../model/model';
+import SwiperCore, {A11y, EffectCube, EffectFlip, Navigation, Pagination, Virtual} from 'swiper/core';
 
 SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
 
@@ -9,7 +9,7 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
   selector: 'app-review-component',
   template: `
     <div class="bg-gray-main text-white">
-      <h1 class="text-3xl text-center pt-8">Kundenbewertungen Ø5.0 (48)  </h1>
+      <h1 class="text-3xl text-center pt-8">Kundenbewertungen Ø{{metaData?.reviewAverage}} ({{metaData?.reviewCount}})  </h1>
       <div class="px-0 md:container  py-4">
         <swiper class="my-4" [effect]="'slide'" [slidesPerView]="1"
                 [spaceBetween]="50" [virtual]="true" [navigation]="true" [pagination]="true">
@@ -87,14 +87,18 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
 export class ReviewComponentComponent implements OnInit {
   showReview = false;
   reviews: Review[];
-
+  metaData: MetaData;
   constructor(private http: HttpClient) {
   }
 
   ngOnInit(): void {
-    this.http.get("/api/review").subscribe((reviews: Review[]) => {
-      this.reviews = reviews.sort((r1,r2) => r2.time-r1.time)
-    })
+    this.http.get('/api/review').subscribe((reviews: Review[]) => {
+      this.reviews = reviews.sort((r1, r2) => r2.time - r1.time);
+    });
+
+    this.http.get('/api/metadata').subscribe((metaDataList: Array<MetaData>) => {
+      this.metaData = metaDataList.shift();
+    });
   }
 
 }
