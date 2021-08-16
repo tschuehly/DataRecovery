@@ -6,7 +6,7 @@ import {Category, Order, Product} from '../../model/model';
   selector: 'app-order-form',
   template: `
     <div class="w-full text-center text-4xl py-8">
-      <h2>Unverbindliche Anfrage</h2>
+      <h2>Auftrag zur Datenrettung</h2>
     </div>
     <form [formGroup]="this.orderForm" (ngSubmit)="onSubmit()">
       <div class="flex flex-col gap-2 px-4 md:px-12">
