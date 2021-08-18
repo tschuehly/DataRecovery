@@ -42,22 +42,13 @@ import {Category, Order, Product} from '../../model/model';
           <label class="font-semibold">Zusätzliche Bemerkungen (Wasserschaden? etc.)
             <textarea class="mt-1 w-full text-black" formControlName="note"></textarea>
           </label>
-          <h2 class="font-semibold inline text-center">Allgemeine Geschäftsbedingungen und Datenschutzrichtlinien:</h2>
-          <div class="flex">
-            <input class="self-center w-6 h-6 bg-red-300 border-2 border-black" type="checkbox" formControlName="agb" id="agbCheckbox" >
-            <label for="agbCheckbox" class="ml-4">
-              Hiermit bestätige ich meine Einverständnis für die vorhandenen
-              <a class="font-semibold underline" routerLink="datenschutz">Datenschutzrichtlinien</a> wie für die
-              <a class="font-semibold underline" routerLink="agb">allgemeinen Geschäftsbedingungen</a></label>
-
-                      </div>
+          <h2 class="font-semibold inline text-center"><a class="font-semibold underline" routerLink="agb">Allgemeine Geschäftsbedingungen</a> und <a class="font-semibold underline" routerLink="datenschutz">Datenschutzrichtlinien</a></h2>
           <div class="flex justify-center mt-4 p-4 rounded-b-2xl">
             <button (click)="submitProduct()"
                     class="bg-white py-2 px-4  text-lg shadow rounded text-black border-2 border-black"
-                    [disabled]="!(this.orderForm.get('product').valid && this.orderForm.get('agb').value == true)"
-                    [ngClass]="{'bg-gray-200 cursor-default': !(this.orderForm.get('product').valid && this.orderForm.get('agb').value == true)}">
-              <ng-container *ngIf="this.orderForm.get('agb').value == false && this.orderForm.get('product').valid ">Bitte bestätigen Sie die AGB und Datenschutzrichtlinien </ng-container>
-              <ng-container *ngIf="this.orderForm.get('product').valid && this.orderForm.get('agb').value == true">Kontaktdaten eingeben</ng-container>
+                    [disabled]="!(this.orderForm.get('product').valid)"
+                    [ngClass]="{'bg-gray-200 cursor-default': !(this.orderForm.get('product').valid)}">
+              <ng-container *ngIf="this.orderForm.get('product').valid">Auftragsdaten eingeben</ng-container>
               <ng-container *ngIf="!this.orderForm.get('product').valid">Wählen Sie Ihren Datenträger aus</ng-container>
             </button>
           </div>

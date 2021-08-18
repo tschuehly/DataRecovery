@@ -24,7 +24,7 @@ declare let gtag: Function;
         </div>
         <div class="items-center text-xl px-2 font-semibold" (clickOutside)="mobileNavShow = false" exclude="nav" [ngClass]="mobileNavShow ? 'flex flex-col absolute right-0 top-20 mt-2 bg-blue-100 text-blue-900 w-full space-y-4 py-4 text-2xl font-semibold bg-gray-main text-white  border-b-2 border-t-2 border-blue-900': 'hidden md:flex md:flex-row'">
           <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="">Startseite</a>
-          <a class="cursor-pointer p-2" (click)="scrollToOrder(); mobileNavShow = false">Anfrage</a>
+          <a class="cursor-pointer p-2" (click)="scrollToOrder(); mobileNavShow = false">Auftrag</a>
           <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="preise">Preise</a>
           <a class="cursor-pointer p-2" (click)="mobileNavShow = false"  routerLink="/datenrettung/flash">Arbeitsweise</a>
           <a class="cursor-pointer  p-2"  (click)="scrollToContact(); mobileNavShow = false">Kontakt</a>

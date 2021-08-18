@@ -157,8 +157,8 @@ Eine Bezahlung erfolgt nur <span class="font-bold">nach erfolgreicher Datenrettu
           </svg>
         </div>
         <div class="flex-grow pl-4">
-          <h2 class="font-bold text-md text-blue-900 mb-1 ">Anfrageformular</h2>
-          <p class="">Füllen Sie das Anfrageformular aus. Es folgt eine Bestätigung per Email.</p>
+          <h2 class="font-bold text-md text-blue-900 mb-1 ">Auftragsformular</h2>
+          <p class="">Füllen Sie das Auftragsformular aus. Es folgt eine Bestätigung per Email.</p>
         </div>
       </div>
       <div class="flex relative pb-8">
@@ -271,7 +271,7 @@ Eine Bezahlung erfolgt nur <span class="font-bold">nach erfolgreicher Datenrettu
     <div class="p-12 text-blue-900 text-xl font-bold mt-8 bg-blue-100 rounded-xl"  id="order_submit" *ngIf="orderSubmitted !== null">
       <ng-container *ngIf="orderSubmitted === true">
         <pre class="whitespace-pre-wrap">
-Ihre Anfrage wurde erfolgreich übermittelt.
+Ihr Auftrag wurde erfolgreich übermittelt.
 
 Sie sollten bald eine Bestätigungsmail mit weiteren Informationen erhalten.
 
@@ -279,7 +279,7 @@ Schauen Sie auch in Ihrem Spam Ordner nach!
         </pre>
       </ng-container>
       <ng-container *ngIf="orderSubmitted === false">
-      <p class="inline-block">Ihre Anfrage konnte nicht übermittelt werden.<br>
+      <p class="inline-block">Ihre Auftrag konnte nicht übermittelt werden.<br>
         Bitte kontaktieren sie Cassandra Schilling über eine Email an:<br>
         <button class="btn btn-primary mt-4">
           <a href="mailto:info@datenrettung-schilling.de?subject=Anfrage%20wegen%20einer%20Datenrettung&amp">info@datenrettung-schilling.de</a>
