@@ -30,13 +30,13 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
 
         order.customer?.email?.let { helper.setTo(it) }
 
-        helper.setSubject("Ihre Anfrage zur Datenrettung | Cassandra Schilling Datenrettungsdienst")
+        helper.setSubject("Ihr Auftrag zur Datenrettung | Cassandra Schilling Datenrettungsdienst")
         var html = resourceLoader.getResource("classpath:templates/emailtemplate.html").file
             .readText(charset = Charsets.UTF_8)
         val body = getOrderConfirmationBody(order)
         html = html.replace("MESSAGEBODY", body)
-        var dateFormat = SimpleDateFormat("dd.MM.yyyy HH:mm");
-        html = html.replace("MESSAGETITLE", "Ihre Anfragebest&#228;tigung vom ${dateFormat.format(order.orderDate)}")
+        var dateFormat = SimpleDateFormat("dd.MM.yyyy");
+        html = html.replace("MESSAGETITLE", "Ihre Auftragsbest&#228;tigung vom ${dateFormat.format(order.orderDate)}")
         helper.setText(html,true)
 
         javaMailSender.send(msg)

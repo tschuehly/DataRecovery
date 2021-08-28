@@ -6,7 +6,7 @@ import {Category, Order, Product} from '../../model/model';
   selector: 'app-order-form',
   template: `
     <div class="w-full text-center text-4xl py-8">
-      <h2>Auftrag zur Datenrettung</h2>
+      <h2 class="underline">Auftrag zur Datenrettung</h2>
     </div>
     <form [formGroup]="this.orderForm" (ngSubmit)="onSubmit()">
       <div class="flex flex-col gap-2 px-4 md:px-12">
@@ -39,15 +39,15 @@ import {Category, Order, Product} from '../../model/model';
               </select>
             </label>
           </ng-container>
-          <label class="font-semibold">Zusätzliche Bemerkungen (Wasserschaden? etc.)
+          <label class="font-semibold">Zusätzliche Bemerkungen
             <textarea class="mt-1 w-full text-black" formControlName="note"></textarea>
           </label>
           <h2 class="font-semibold inline text-center"><a class="font-semibold underline" routerLink="agb">Allgemeine Geschäftsbedingungen</a> und <a class="font-semibold underline" routerLink="datenschutz">Datenschutzrichtlinien</a></h2>
           <div class="flex justify-center mt-4 p-4 rounded-b-2xl">
             <button (click)="submitProduct()"
-                    class="bg-white py-2 px-4  text-lg shadow rounded text-black border-2 border-black"
+                    class=" py-2 px-4  text-lg shadow rounded  border-2 border-black"
                     [disabled]="!(this.orderForm.get('product').valid)"
-                    [ngClass]="{'bg-gray-200 cursor-default': !(this.orderForm.get('product').valid)}">
+                    [ngClass]="!(this.orderForm.get('product').valid) ? 'bg-gray-200 cursor-default text-black': 'bg-blue-900 text-white tracking-wider font-semibold'">
               <ng-container *ngIf="this.orderForm.get('product').valid">Auftragsdaten eingeben</ng-container>
               <ng-container *ngIf="!this.orderForm.get('product').valid">Wählen Sie Ihren Datenträger aus</ng-container>
             </button>
