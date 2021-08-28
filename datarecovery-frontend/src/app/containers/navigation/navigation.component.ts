@@ -104,8 +104,8 @@ declare let gtag: Function;
           <div class="col-span-2 md:col-span-1">
             <h1 class="mb-2 text-4xl">Standort</h1>
             <p>
-              Friedrich-Ebert-Straße 70<br/>
-              71638 Ludwigsburg<br/>
+              Hirsauer Str. 28<br/>
+              71634 Ludwigsburg<br/>
               Deutschland<br/>
             </p>
           </div>

@@ -11,8 +11,9 @@ import { Component, OnInit } from '@angular/core';
         <p><span style="font-style:italic">Stand: 2021</span></p>
         <br>
         <p>Cassandra Schilling Datenrettungsdienst<br>
-          Friedrich-Ebert-Straße 70<br>
-          71638 Ludwigsburg<br>
+          Hirsauer Str. 28<br/>
+          71634 Ludwigsburg<br/>
+          Deutschland<br/>
           Telefon: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 0152 21408008<br>
           E-Mail: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="text-decoration:underline"><a href="mailto:info@datenrettung-schilling.de" target="_self">info@datenrettung-schilling.de</a></span><br>
           Steuernummer: &nbsp; &nbsp;&nbsp; 7122357209</p>

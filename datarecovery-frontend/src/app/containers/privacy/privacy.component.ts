@@ -18,8 +18,9 @@ import {Component, OnInit} from '@angular/core';
       <h2 class="text-2xl font-semibold mb-2 mt-4">3. Allgemeine Hinweise und Pflicht­informationen</h2>
       <h3 class="font-semibold mb-2 mt-4 underline">Datenschutz</h3> <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p> <p>Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind Daten, mit denen Sie persönlich identifiziert werden können. Die vorliegende Datenschutzerklärung erläutert, welche Daten wir erheben und wofür wir sie nutzen. Sie erläutert auch, wie und zu welchem Zweck das geschieht.</p> <p>Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
       <h3 class="font-semibold mb-2 mt-4 underline">Hinweis zur verantwortlichen Stelle</h3> <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p> <p>Cassandra Schilling<br />
-      Friedrich-Ebert-Straße 70<br />
-      71638 Ludwigsburg</p>
+      Hirsauer Str. 28<br/>
+      71634 Ludwigsburg<br/>
+      Deutschland<br/>
 
       <p>Telefon: 015221408008<br />
         E-Mail: info@datenrettung-schilling.de</p>

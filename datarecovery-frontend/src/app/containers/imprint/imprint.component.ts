@@ -9,8 +9,9 @@ import {Component, OnInit} from '@angular/core';
       <h2 class="text-lg font-semibold mb-2 mt-4 underline">Angaben gemäß § 5 TMG</h2>
       <p>Cassandra Schilling<br />
         Datenrettungsdienst<br />
-        Friedrich-Ebert-Straße 70<br />
-        71638 Ludwigsburg</p>
+        Hirsauer Str. 28<br/>
+        71634 Ludwigsburg<br/>
+        Deutschland<br/>
 
       <h2 class="text-lg font-semibold mb-2 mt-4 underline">Kontakt</h2>
       <p>Telefon: 0152 21408008<br />

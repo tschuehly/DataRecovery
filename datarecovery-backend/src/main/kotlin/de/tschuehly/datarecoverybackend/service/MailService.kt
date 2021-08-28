@@ -86,8 +86,9 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
         
         Cassandra Schilling<br />
         Datenrettungsdienst<br />
-        Friedrich-Ebert-Straße 70<br />
-        71638 Ludwigsburg<br />
+        Hirsauer Str. 28<br/>
+        71634 Ludwigsburg<br/>
+        Deutschland<br/>
         
         
         
