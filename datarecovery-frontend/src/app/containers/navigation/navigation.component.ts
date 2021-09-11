@@ -62,8 +62,8 @@ declare let gtag: Function;
           <h2 class="font-semibold pb-2">Ein Anruf klärt am schnellsten Ihr Anliegen:</h2>
           <button (click)="showPhone = false"><img class="inline" src="assets/x.svg"></button>
         </div>
-        
-        <p class="font-semibold pb-2"><img class="inline pr-4" src="/assets/phone.svg">0841 12840705</p>
+
+        <p class="font-semibold pb-2"><img class="inline pr-4" src="/assets/phone.svg">0151 61408355</p>
         <p>Mo.-Sa. 09.00-20.00 Uhr erreichbar.</p>
       </div>
       <div class="fixed right-4 bottom-4 z-50 flex flex-row ">
@@ -108,7 +108,7 @@ declare let gtag: Function;
               <p class="font-semibold text-center text-white">
                 Email:
                 <a href="mailto:info@jungbauerdatenrettung.de"><span class="text-white">info@jungbauerdatenrettung.de</span></a><br/>
-                Telefon: <span class="text-white">0841 12840705</span>
+                Telefon: <span class="text-white">0151 61408355</span>
               </p>
             </div>
 
