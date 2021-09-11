@@ -63,7 +63,7 @@ declare let gtag: Function;
           <button (click)="showPhone = false"><img class="inline" src="assets/x.svg"></button>
         </div>
 
-        <p class="font-semibold pb-2"><img class="inline pr-4" src="/assets/phone.svg">0841 12840705</p>
+        <p class="font-semibold pb-2"><img class="inline pr-4" src="/assets/phone.svg">0151 61408355</p>
         <p>Mo.-Sa. 09.00-20.00 Uhr erreichbar.</p>
       </div>
       <div class="fixed right-4 bottom-4 z-50 flex flex-row ">
