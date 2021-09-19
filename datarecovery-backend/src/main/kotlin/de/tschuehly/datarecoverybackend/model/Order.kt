@@ -2,6 +2,7 @@ package de.tschuehly.datarecoverybackend.model
 
 import com.fasterxml.jackson.annotation.JsonFormat
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
+import org.hibernate.annotations.Type
 import java.util.*
 import javax.persistence.*
 import kotlin.collections.ArrayList
@@ -23,6 +24,7 @@ class Order(
     var updates: MutableList<Update> = ArrayList(),
     @Lob
     @Column
+    @Type(type = "org.hibernate.type.TextType")
     var note: String?
 ) : BaseEntity() {
     override fun toString(): String {
