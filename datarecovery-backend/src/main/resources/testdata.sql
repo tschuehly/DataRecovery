@@ -47,7 +47,7 @@ INSERT INTO public.category_questions (category_id, questions) VALUES (36, 'Wurd
 INSERT INTO public.customer (id, city, email, first_name, last_name, postal_code, street, tel) VALUES (8, 'Ludwigsburg', 'thomas.schuehly@outlook.com', 'Thomas', 'Schühly', '71638', 'Friedrich-Ebert-Straße 70', '+4915156523909');
 INSERT INTO public.customer (id, city, email, first_name, last_name, postal_code, street, tel) VALUES (30, 'Ludwigsburg', 'thomas.schuehly@outlook.com', 'Cassandra', 'Schilling', '71638', 'Friedrich-Ebert-Straße', '');
 INSERT INTO public.customer (id, city, email, first_name, last_name, postal_code, street, tel) VALUES (32, 'Dießen', 'tobias.jungbauer@googlemail.com', 'Tobias ', 'Jungbauer ', '86911', 'Egerstraße 12', '015161408355');
-INSERT INTO public.customer (id, city, email, first_name, last_name, postal_code, street, tel) VALUES (34, 'Osnabrück', 'laura.lingert@web.de', 'Laura', 'Lingert', '49074', 'Johannisstraße 105a', '01781438504');
+INSERT INTO public.customer (id, city, email, first_name, last_name, postal_code, street, tel) VALUES (34, 'Osnabrück', 'tobias.jungbauer@googlemail.com', 'Tobias', 'Jungbauer', '41234', 'Spitalhof 105a', '97123871');
 INSERT INTO public.customer (id, city, email, first_name, last_name, postal_code, street, tel) VALUES (53, 'Ludwigsburg', 'thomas.schuehly@outlook.com', 'Thomas', 'Schuehly', '71638', 'Kaiserstraße 25', '97123871');
 
 
