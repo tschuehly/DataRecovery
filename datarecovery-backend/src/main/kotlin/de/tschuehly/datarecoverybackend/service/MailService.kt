@@ -101,8 +101,19 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
         <br />
         <br />
         <span style="font-weight: bold">Produkt:</span> ${order.product.category?.title} ${order.product.name}<br />
-        <span style="font-weight: bold">Preis:</span> ${"%.2f".format(order.product.price)} €<br />
+        ${if (order.product.price != null){
+            """<span style="font-weight: bold">Preis:</span> ${"%.2f".format(order.product.price)} €<br />"""
+            }else{
+            ""
+            }
+        }
+ 
         <span style="font-weight: bold">Ersatzdatenträger: </span>${order.replacement}<br />
-        <span style="font-weight: bold">Bemerkungen: </span>${order.note}<br />
+        ${if (order.note != null){
+            """<span style="font-weight: bold">Bemerkungen: </span>${order.note}<br />"""
+        }else{
+            ""
+        }
+        }
         """
 }

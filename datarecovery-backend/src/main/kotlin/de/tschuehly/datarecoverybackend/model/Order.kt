@@ -21,6 +21,8 @@ class Order(
     var replacement: String,
     @OneToMany(cascade = [CascadeType.ALL])
     var updates: MutableList<Update> = ArrayList(),
+    @Lob
+    @Column
     var note: String?
 ) : BaseEntity() {
     override fun toString(): String {

@@ -80,9 +80,10 @@ import {Category, Order, Product} from '../../model/model';
           </div>
           <div class="flex justify-center mt-4 p-4 rounded-b-2xl">
             <button type="submit"
-                    class="bg-white py-2 px-4 shadow rounded text-black  border-2 border-black"
-                    [ngClass]="{'bg-gray-200 cursor-default': !orderForm.valid}"
-                    [disabled]="!orderForm.valid">{{orderForm.valid ? "Auftrag abschicken" : "Füllen Sie alle benötigten Felder aus" }}</button>
+                    class="font-semibold  py-2 px-4 rounded  border-2 border-black"
+                    [ngClass]="!(!orderForm.valid) ?  'bg-blue-900 text-white tracking-wider font-semibold': 'bg-gray-200 cursor-default text-black'"
+                    [disabled]="!orderForm.valid">{{orderForm.valid ? "Auftrag abschicken" : "Füllen Sie alle benötigten Felder aus" }}
+            </button>
           </div>
         </ng-container>
 
