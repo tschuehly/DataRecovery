@@ -10,6 +10,7 @@ interface OrderRepository : JpaRepository<Order, Long>{
     fun findByTrackingStateNotIn(trackingStateList: List<String>): List<Order>
 }
 interface CustomerRepository : JpaRepository<Customer, Long>
+interface PictureRepository : JpaRepository<Picture, Long>
 interface CategoryRepository : JpaRepository<Category, Long>
 interface ProductRepository : JpaRepository<Product, Long>
 interface OrderProductRepository : JpaRepository<OrderProduct, Long>

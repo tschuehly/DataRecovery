@@ -22,6 +22,7 @@ class OrderService(
     private val orderRepository: OrderRepository,
     private val orderProductRepository: OrderProductRepository,
     private val mailService: MailService,
+    private val pictureService: PictureService,
     private val logger: Logger
 ) : CrudService<Order, OrderRepository>(orderRepository) {
     fun createOrder(order: Order) {
@@ -49,7 +50,10 @@ class OrderService(
         val order: Order = orderRepository.findByIdOrNull(id) ?: throw NoSuchElementException("")
         update.order = order
         pictures?.forEach { picture ->
-            update.pictures?.add(Picture(picture.originalFilename,picture.contentType,picture.bytes)) }
+            update.pictures?.add(
+                pictureService.save(Picture(picture.originalFilename,picture.contentType,update,picture.bytes))
+            )
+        }
         order.addUpdateToOrder(update)
         orderRepository.save(order)
         return order

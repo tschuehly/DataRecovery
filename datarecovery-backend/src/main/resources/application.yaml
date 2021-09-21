@@ -55,4 +55,4 @@ spring:
 logging:
   level:
     org.springframework.web: INFO
-    org.hibernate: INFO
+    org.hibernate: DEBUG

@@ -14,15 +14,13 @@ class Order(
     var orderDate: Date?,
     var trackingState: String?,
     var monthlyPayment: Int = 1,
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne
     var orderProduct: OrderProduct,
-    @OneToOne(cascade = [CascadeType.ALL], fetch = FetchType.LAZY)
+    @OneToOne(cascade = [CascadeType.ALL])
     var customer: Customer?,
     var replacement: String,
-    @OneToMany(cascade = [CascadeType.ALL], fetch = FetchType.LAZY, mappedBy = "order")
+    @OneToMany(cascade = [CascadeType.ALL], mappedBy = "order")
     @JsonManagedReference
-    @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator::class, property = "id")
-    @JsonIdentityReference(alwaysAsId=true)
     var updates: MutableList<Update> = ArrayList()
 ) : BaseEntity() {
     override fun toString(): String {

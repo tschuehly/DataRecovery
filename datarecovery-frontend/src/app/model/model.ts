@@ -16,6 +16,7 @@ export class Order{
   orderProduct: Product;
   customer: Customer;
   replacement: string;
+  updateIdList: number[];
   updates: Update[];
   monthlyPayment: number;
 }
@@ -39,6 +40,7 @@ export class Update{
 export class Picture{
   name: string;
   type: string;
+  id: number;
   data: File;
 }
 export class Product{

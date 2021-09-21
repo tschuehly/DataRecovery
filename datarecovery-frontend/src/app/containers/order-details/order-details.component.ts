@@ -64,7 +64,7 @@ import {HttpClient} from '@angular/common/http';
                           <label class="cursor-pointer" (click)="togglePictureZoom(pic)">
                               <img class="mr-4"
                                    [ngClass]="pic['zoomed'] ? 'h-96' : 'h-32'"
-                                   src="{{'data:'+pic.type+';base64,'+pic.data}}"
+                                   src="{{'/api/picture/'+ pic.id}}"
                                    [alt]="pic.name">{{pic.name}}
                           </label>
 
@@ -95,7 +95,7 @@ export class OrderDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.orderTrackingState = new FormControl(this.order.trackingState);
-    if(this.update?.pictures){
+    if (this.update?.pictures){
       this.update.pictures.map(pic => {
         return {...pic, zoomed: false};
       });
