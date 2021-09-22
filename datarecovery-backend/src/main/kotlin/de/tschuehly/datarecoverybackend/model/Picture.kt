@@ -2,7 +2,7 @@ package de.tschuehly.datarecoverybackend.model
 
 import com.fasterxml.jackson.annotation.JsonBackReference
 import com.fasterxml.jackson.annotation.JsonIgnore
-import com.fasterxml.jackson.databind.ser.Serializers
+import org.hibernate.annotations.Type
 import javax.persistence.*
 
 @Entity
@@ -15,9 +15,6 @@ class Picture(
     @JsonBackReference
     val update: Update?,
     @JsonIgnore
-    @Lob
+    @Type(type = "org.hibernate.type.MaterializedBlobType")
     val data: ByteArray
-    ) :BaseEntity(){
-
-
-}
+) : BaseEntity()
