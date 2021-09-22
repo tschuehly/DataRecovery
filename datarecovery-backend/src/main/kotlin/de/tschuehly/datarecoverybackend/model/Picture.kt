@@ -13,7 +13,7 @@ class Picture(
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "update_id")
     @JsonBackReference
-    val update: Update,
+    val update: Update?,
     @JsonIgnore
     @Lob
     val data: ByteArray

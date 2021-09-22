@@ -50,9 +50,7 @@ class OrderService(
         val order: Order = orderRepository.findByIdOrNull(id) ?: throw NoSuchElementException("")
         update.order = order
         pictures?.forEach { picture ->
-            update.pictures?.add(
-                pictureService.save(Picture(picture.originalFilename,picture.contentType,update,picture.bytes))
-            )
+            update.pictures?.add(Picture(picture.originalFilename,picture.contentType,update,picture.bytes))
         }
         order.addUpdateToOrder(update)
         orderRepository.save(order)

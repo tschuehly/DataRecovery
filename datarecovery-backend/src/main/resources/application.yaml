@@ -1,9 +1,37 @@
 spring:
-  profiles.active: development
+  profiles.active: integrationDev
   config:
     use-legacy-processing: true
 server:
   port: 8088
+---
+
+spring:
+  profiles: integrationDev
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: mysecretpassword
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  mail:
+    host: ${MAIL_SENDER_HOST}
+    port: ${MAIL_SENDER_PORT}
+    username: ${MAIL_SENDER_USERNAME}
+    password: ${MAIL_SENDER_PASSWORD}
+    properties.mail.smtp.auth: true
+    properties.mail.smtp.starttls.enable: true
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    contexts: dev
+    default-schema: public
+logging:
+  level:
+    org:
+      liquibase: DEBUG
+
+    org.springframework.web: INFO
+    org.hibernate: INFO
 ---
 spring:
   profiles: development
@@ -11,13 +39,14 @@ spring:
     url: jdbc:h2:file:./data/datarecovery;AUTO_SERVER=TRUE
     driverClassName: org.h2.Driver
     username: sa
+
     password: password
     initialization-mode: always
-    data: classpath:testdata.sql
+    data: classpath:devdata.sql
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
-      ddl-auto: create
+      ddl-auto: create-drop
   mail:
     host: ${MAIL_SENDER_HOST}
     port: ${MAIL_SENDER_PORT}
@@ -44,7 +73,10 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    contexts: dev
   mail:
     host: ${MAIL_SENDER_HOST}
     port: ${MAIL_SENDER_PORT}

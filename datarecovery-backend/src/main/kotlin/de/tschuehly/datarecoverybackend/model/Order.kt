@@ -6,7 +6,7 @@ import javax.persistence.*
 import kotlin.collections.ArrayList
 
 @Entity
-@Table(name="ORDER_TABLE")
+@Table(name = "ORDER_TABLE")
 @JsonIgnoreProperties(ignoreUnknown = true)
 class Order(
     var trackingId: String? = UUID.randomUUID().toString(),
@@ -28,5 +28,4 @@ class Order(
     }
 
     fun addUpdateToOrder(update: Update) = updates.add(update)
-
 }

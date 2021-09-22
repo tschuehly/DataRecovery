@@ -5,6 +5,7 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 data
+.idea
 
 src/main/resources/static/
 src/main/resources/productionData.sql
