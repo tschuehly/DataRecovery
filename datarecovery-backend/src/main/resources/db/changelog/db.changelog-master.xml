@@ -189,4 +189,5 @@
                  stripComments="true"/>
     </changeSet>
 
+    <include file="db/changelog/2021/09/22-01-changelog.xml"/>
 </databaseChangeLog>

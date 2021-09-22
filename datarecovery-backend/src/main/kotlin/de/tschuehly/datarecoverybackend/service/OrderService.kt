@@ -3,6 +3,7 @@ package de.tschuehly.datarecoverybackend.service
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import de.tschuehly.datarecoverybackend.helpers.CrudService
+import de.tschuehly.datarecoverybackend.helpers.PictureContentStore
 import de.tschuehly.datarecoverybackend.model.Order
 import de.tschuehly.datarecoverybackend.model.Picture
 import de.tschuehly.datarecoverybackend.model.Update
@@ -16,13 +17,14 @@ import org.springframework.stereotype.Service
 import org.springframework.web.multipart.MultipartFile
 import java.util.*
 
-
+@Suppress("SpringJavaInjectionPointsAutowiringInspection")
 @Service
 class OrderService(
     private val orderRepository: OrderRepository,
     private val orderProductRepository: OrderProductRepository,
     private val mailService: MailService,
     private val pictureService: PictureService,
+    private val pictureContentStore: PictureContentStore,
     private val logger: Logger
 ) : CrudService<Order, OrderRepository>(orderRepository) {
     fun createOrder(order: Order) {
@@ -45,12 +47,14 @@ class OrderService(
             ?: throw NoSuchElementException("No Order with matching trackingId and postalcode present")
     }
 
-    fun addUpdateToOrder(id: Long, updateString: String, pictures: Array<MultipartFile>?): Order {
+    fun addUpdateToOrder(id: Long, updateString: String, pictureFiles: Array<MultipartFile>?): Order {
         val update: Update = jacksonObjectMapper().readValue(updateString)
         val order: Order = orderRepository.findByIdOrNull(id) ?: throw NoSuchElementException("")
         update.order = order
-        pictures?.forEach { picture ->
-            update.pictures?.add(Picture(picture.originalFilename,picture.contentType,update,picture.bytes))
+        pictureFiles?.forEach { pictureFile ->
+            val picture = Picture(pictureFile.originalFilename, pictureFile.contentType, update)
+            update.pictures?.add(picture)
+            pictureContentStore.setContent(picture, pictureFile.inputStream)
         }
         order.addUpdateToOrder(update)
         orderRepository.save(order)
@@ -59,8 +63,7 @@ class OrderService(
 
     fun getArchived(page: Number): List<Order> {
         val paging: Pageable = PageRequest.of(page.toInt(), 15)
-        return orderRepository.findByTrackingStateOrderByOrderDateDesc(orderCompleted,paging)
-
+        return orderRepository.findByTrackingStateOrderByOrderDateDesc(orderCompleted, paging)
     }
 
     fun getActive(): List<Order> {
@@ -69,9 +72,8 @@ class OrderService(
 
     fun getAwaited(page: Number): List<Order> {
         val paging: Pageable = PageRequest.of(page.toInt(), 15)
-        return orderRepository.findByTrackingStateOrderByOrderDateDesc(orderReceived,paging)
+        return orderRepository.findByTrackingStateOrderByOrderDateDesc(orderReceived, paging)
     }
-
 
     companion object OrderState {
         val orderReceived = "Auftrag eingegangen"

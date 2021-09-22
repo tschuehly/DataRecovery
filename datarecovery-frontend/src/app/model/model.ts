@@ -41,7 +41,7 @@ export class Picture{
   name: string;
   type: string;
   id: number;
-  data: File;
+  imageId: string;
 }
 export class Product{
   constructor(public id: number = 0,
