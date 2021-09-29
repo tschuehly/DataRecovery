@@ -17,5 +17,4 @@ class UserService(
             .let { userRepository.findByUsername(it) }
             ?.let { return it } ?: throw Exception("User with matching username and password not found")
     }
-
 }

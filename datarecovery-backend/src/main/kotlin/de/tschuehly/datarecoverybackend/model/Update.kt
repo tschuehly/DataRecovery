@@ -1,8 +1,6 @@
 package de.tschuehly.datarecoverybackend.model
 
-
 import com.fasterxml.jackson.annotation.JsonBackReference
-import com.fasterxml.jackson.annotation.JsonManagedReference
 import java.util.*
 import javax.persistence.*
 import kotlin.collections.ArrayList
@@ -18,8 +16,4 @@ class Update(
     @JsonBackReference
     var order: Order?
 
-
-):BaseEntity() {
-
-}
-
+) : BaseEntity()

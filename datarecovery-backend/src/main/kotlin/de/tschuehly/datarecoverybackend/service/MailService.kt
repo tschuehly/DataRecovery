@@ -6,11 +6,14 @@ import org.springframework.core.io.ResourceLoader
 import org.springframework.mail.javamail.JavaMailSender
 import org.springframework.mail.javamail.MimeMessageHelper
 import org.springframework.stereotype.Service
-import javax.mail.internet.MimeMessage
 import java.text.SimpleDateFormat
+import javax.mail.internet.MimeMessage
 
 @Service
-class MailService(val javaMailSender: JavaMailSender, val resourceLoader: ResourceLoader) {
+class MailService(
+    val javaMailSender: JavaMailSender,
+    val resourceLoader: ResourceLoader
+) {
 
     @Value("\${MAIL_SENDER_USERNAME}")
     lateinit var emailAdr: String
@@ -21,7 +24,7 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
         return msg
     }
 
-    fun sendOrderConfirmation(order: Order){ //TODO: Error Handling
+    fun sendOrderConfirmation(order: Order) { // TODO: Error Handling
         val msg = createMessage()
         val helper = MimeMessageHelper(msg, true)
         order.customer?.email?.let { helper.setTo(it) }
@@ -31,31 +34,30 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
             .readText(charset = Charsets.UTF_8)
         val body = getOrderConfirmationBody(order)
         html = html.replace("MESSAGEBODY", body)
-        var dateFormat = SimpleDateFormat("dd.MM.yyyy");
+        val dateFormat = SimpleDateFormat("dd.MM.yyyy")
         html = html.replace("MESSAGETITLE", "Ihre Auftragsbest&#228;tigung vom ${dateFormat.format(order.orderDate)}")
-        helper.setText(html,true)
+        helper.setText(html, true)
 
         javaMailSender.send(msg)
         helper.setTo("ammersee.datenrettung@gmail.com")
         javaMailSender.send(msg)
     }
 
-    fun sendParcelReceived (order: Order){
+    fun sendParcelReceived(order: Order) {
         val msg = createMessage()
 
         val helper = MimeMessageHelper(msg, true)
 
         order.customer?.email?.let { helper.setTo(it) }
 
-
         helper.setSubject("Ihr Paket ist angekommen | Tobias Jungbauer Datenrettung")
         var html = resourceLoader.getResource("classpath:templates/emailtemplate.html").file
             .readText(charset = Charsets.UTF_8)
         val body = getParcelReceived(order)
         html = html.replace("MESSAGEBODY", body)
-        var dateFormat = SimpleDateFormat("dd.MM.yyyy");
+        val dateFormat = SimpleDateFormat("dd.MM.yyyy")
         html = html.replace("MESSAGETITLE", "Ihr Auftrag vom ${dateFormat.format(order.orderDate)}")
-        helper.setText(html,true)
+        helper.setText(html, true)
 
         javaMailSender.send(msg)
     }
@@ -98,9 +100,9 @@ class MailService(val javaMailSender: JavaMailSender, val resourceLoader: Resour
         <span style="font-weight: bold">Produkt:</span> ${order.orderProduct.category?.title} ${order.orderProduct.name}<br />
         <span style="font-weight: bold">Preis:</span> ${"%.2f".format(order.orderProduct.price)} €<br />
         <span style="font-weight: bold">Ersatzdatenträger: </span>${order.replacement}<br />
-        """ + if(order.monthlyPayment == 2){
-          """<span style="font-weight: bold">Ratenzahlung: </span> 2 Monatsraten (1% Gebühr)<br />"""
-        }else{
-            ""
-        }
+        """ + if (order.monthlyPayment == 2) {
+        """<span style="font-weight: bold">Ratenzahlung: </span> 2 Monatsraten (1% Gebühr)<br />"""
+    } else {
+        ""
+    }
 }

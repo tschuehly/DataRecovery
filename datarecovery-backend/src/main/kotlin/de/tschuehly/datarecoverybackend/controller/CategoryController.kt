@@ -4,7 +4,6 @@ import de.tschuehly.datarecoverybackend.helpers.CrudController
 import de.tschuehly.datarecoverybackend.model.Category
 import de.tschuehly.datarecoverybackend.repository.CategoryRepository
 import de.tschuehly.datarecoverybackend.service.CategoryService
-import org.slf4j.Logger
 import org.springframework.security.access.prepost.PreAuthorize
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController

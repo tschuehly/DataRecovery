@@ -1,16 +1,13 @@
 package de.tschuehly.datarecoverybackend.security
 
 import de.tschuehly.datarecoverybackend.service.JwtUserDetailsService
-import org.springframework.security.access.AccessDeniedException
 import org.springframework.security.core.context.SecurityContextHolder
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource
-import org.springframework.security.web.util.matcher.AntPathRequestMatcher
 import org.springframework.stereotype.Component
 import org.springframework.web.filter.OncePerRequestFilter
 import javax.servlet.FilterChain
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
-
 
 @Component
 class JwtFilter(
@@ -39,12 +36,11 @@ class JwtFilter(
 
     private fun getToken(request: HttpServletRequest): String? {
         val header = request.getHeader(COOKIEHEADER)
-        return if (header?.contains("Bearer") == true){
+        return if (header?.contains("Bearer") == true) {
             header.split("Bearer ")
                 .last()
-        }else{
+        } else {
             null
         }
-
     }
 }

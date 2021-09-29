@@ -17,5 +17,4 @@ class Review(
     @Lob
     var text: String,
     var time: Int
-) {
-}
+)
