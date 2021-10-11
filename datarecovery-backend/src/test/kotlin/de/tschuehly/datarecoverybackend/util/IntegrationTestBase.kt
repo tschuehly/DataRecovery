@@ -1,9 +1,14 @@
 package de.tschuehly.datarecoverybackend.util
 
+import org.junit.jupiter.api.BeforeAll
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.core.io.ClassPathResource
+import org.springframework.jdbc.datasource.init.ScriptUtils
 import org.springframework.test.context.DynamicPropertyRegistry
 import org.springframework.test.context.DynamicPropertySource
 import org.testcontainers.containers.PostgreSQLContainer
 import org.testcontainers.junit.jupiter.Container
+
 
 open class IntegrationTestBase() {
 

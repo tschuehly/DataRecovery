@@ -23,13 +23,12 @@ class OrderService(
     private val orderRepository: OrderRepository,
     private val orderProductRepository: OrderProductRepository,
     private val mailService: MailService,
-    private val pictureService: PictureService,
     private val pictureContentStore: PictureContentStore,
     private val logger: Logger
 ) : CrudService<Order, OrderRepository>(orderRepository) {
     fun createOrder(order: Order) {
         order.orderDate = Date()
-        order.trackingState = "Auftrag eingegangen"
+        order.trackingState = orderReceived
         order.orderProduct.id = null
         order.orderProduct = orderProductRepository.save(order.orderProduct)
         orderRepository.save(order)
@@ -39,7 +38,14 @@ class OrderService(
     fun updateState(order: Order) {
         val savedOrder = this.update(order)
         when (savedOrder.trackingState) {
-            parcelReceived -> mailService.sendParcelReceived(order)
+            InProcess.parcelReceived -> mailService.sendParcelReceived(order)
+            InProcess.firstAnalysis -> mailService.sendFirstAnalysis(order)
+            InProcess.orderedFirstPartDispender -> mailService.sendFirstPartDispender(order)
+            InProcess.orderedSecondPartDispender -> mailService.sendSecondPartDispender(order)
+            InProcess.orderedThirdPartDispender -> mailService.sendThirdPartDispender(order)
+            InProcess.readingMemory -> mailService.sendReadingMemory(order)
+            InProcess.reRead -> mailService.sendReRead(order)
+            InProcess.savingData -> mailService.sendSavingData(order)
         }
     }
     fun getByTrackingIdAndPostalCode(trackingId: String, postalCode: String): Order {
@@ -63,27 +69,38 @@ class OrderService(
 
     fun getArchived(page: Number): List<Order> {
         val paging: Pageable = PageRequest.of(page.toInt(), 15)
-        return orderRepository.findByTrackingStateOrderByOrderDateDesc(orderCompleted, paging)
+        return orderRepository.findByTrackingStateInOrderByOrderDateDesc(listOf(Completed.success, Completed.failure), paging)
     }
 
     fun getActive(): List<Order> {
-        return orderRepository.findByTrackingStateNotIn(listOf(orderReceived, orderCompleted))
+        return orderRepository.findByTrackingStateNotIn(listOf(orderReceived, Completed.failure, Completed.success))
     }
 
     fun getAwaited(page: Number): List<Order> {
         val paging: Pageable = PageRequest.of(page.toInt(), 15)
-        return orderRepository.findByTrackingStateOrderByOrderDateDesc(orderReceived, paging)
+        return orderRepository.findByTrackingStateInOrderByOrderDateDesc(listOf(orderReceived), paging)
     }
 
     companion object OrderState {
-        val orderReceived = "Auftrag eingegangen"
-        val parcelReceived = "Paket eingegangen"
-        val firstAnalysis = "Erste Analyse"
-        val orderedReplacementParts = "Bestellung Ersatzteile"
-        val inRepair = "Reparatur"
-        val readingMemory = "Auslesen Speicher"
-        val savingData = "Abspeicherung Dateien"
-        val parcelReturned = "Rückversand"
-        val orderCompleted = "Auftrag abgeschlossen"
+        const val orderReceived = "Auftrag eingegangen"
+
+        object InProcess {
+            const val parcelReceived = "Paket eingegangen"
+            const val firstAnalysis = "Erste Analyse"
+            const val orderedFirstPartDispender = "Bestellung erster Teilespender"
+            const val orderedSecondPartDispender = "Bestellung zweiter Teilespender"
+            const val orderedThirdPartDispender = "Bestellung dritter Teilespender"
+            const val waitingForPinout = "Warte auf Pinout"
+            const val inRepair = "Reparatur"
+            const val readingMemory = "Speicher wird ausgelesen"
+            const val reRead = "Speicher wird erneut ausgelesen (Reread)"
+            const val savingData = "Abspeicherung Dateien"
+        }
+        const val storage = "Einlagerung"
+        const val parcelReturned = "Rückversand"
+        object Completed {
+            const val success = "Datenrettung erfolgreich abgeschlossen"
+            const val failure = "Datenrettung nicht erfolgreich abgeschlossen"
+        }
     }
 }

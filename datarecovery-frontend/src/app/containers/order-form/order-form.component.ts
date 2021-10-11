@@ -28,6 +28,9 @@ import {Order, Product} from '../../model/model';
               </select>
             </label>
           </ng-container>
+          <label class="py-4 px-12">Zusätzliche Bemerkungen:
+            <textarea class="mt-1 w-full text-black" formControlName="note"></textarea>
+          </label>
           <ng-container *ngIf="productSelect.value">
 
             <label class="py-4 px-12 font-semibold">Ist eine Ratenzahlung gewünscht?:
@@ -37,25 +40,16 @@ import {Order, Product} from '../../model/model';
               </select>
             </label>
           </ng-container>
-          <h2 class="px-12 font-semibold">Allgemeine Geschäftsbedingungen und Datenschutzrichtlinien:</h2>
-          <div class="flex px-12">
-            <input class="self-center" type="checkbox" formControlName="agb" required id="agbCheckbox" >
-            <label for="agbCheckbox" class="ml-4">
-              Hiermit bestätige ich die
-              <a class="font-semibold underline" routerLink="impressum">Datenschutzrichtlinien</a> und die
-              <a class="font-semibold underline" routerLink="agb">allgemeinen Geschäftsbedingungen</a></label>
-
-          </div>
+          <h2 class="font-semibold inline text-center"><a class="font-semibold underline" routerLink="agb">Allgemeine Geschäftsbedingungen</a> und <a class="font-semibold underline" routerLink="datenschutz">Datenschutzrichtlinien</a></h2>
 
           <div class="flex justify-center mt-4 bg-silver p-4 rounded-b-2xl">
             <button (click)="submitProduct()"
                     class="bg-white py-2 px-4 shadow rounded text-black"
-                    [disabled]="!(this.orderForm.get('product').valid && this.orderForm.get('agb').value == true)"
-                    [ngClass]="{'bg-gray-300 cursor-default': !(this.orderForm.get('product').valid && this.orderForm.get('agb').value == true)}">
-              {{this.orderForm.get('product').valid && this.orderForm.get('agb').value == true ? "Auftragsdaten eingeben" : "Füllen Sie alle benötigten Felder aus" }}
+                    [disabled]="!(this.orderForm.get('product').valid )"
+                    [ngClass]="{'bg-gray-300 cursor-default': !(this.orderForm.get('product').valid)}">
+              {{this.orderForm.get('product').valid ? "Auftragsdaten eingeben" : "Füllen Sie alle benötigten Felder aus" }}
             </button>
           </div>
-
         </ng-container>
         <ng-container *ngIf="productFormFilled">
 
@@ -128,11 +122,10 @@ export class OrderFormComponent implements OnInit {
 
       }),
       product: [''],
+      note: [''],
       replacement: ['Sie senden einen eigenen Ersatzspeicher zur Sicherung mit: kostenfrei'],
-      agb: [''],
       monthlyPayment: [1]
     });
-    this.orderForm.get('product').valid
   }
 
   onSubmit(): void {
@@ -140,8 +133,9 @@ export class OrderFormComponent implements OnInit {
     this.order.orderProduct = this.products.find(product => product.id.toString() === this.orderForm.get('product').value);
     this.orderOutput.emit(this.order);
   }
-  submitProduct(){
-    console.log(this.orderForm.controls)
-    this.productFormFilled = true
+
+  submitProduct(): void{
+    console.log(this.orderForm.controls);
+    this.productFormFilled = true;
   }
 }

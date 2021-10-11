@@ -24,11 +24,15 @@ import {HttpClient} from '@angular/common/http';
               <div class="flex flex-col text-right">
                   <span>Produkt: {{order.orderProduct.category.name}} {{order.orderProduct.name}} </span>
                   <span>Preis: {{order.orderProduct.price | number : '.2':'de' }} €</span>
-                  <span>TrackingId: {{order.trackingId}} €</span>
+                  <span>TrackingId: {{order.trackingId}}</span>
                   <span>Ersatz: {{order.replacement}}</span>
                   <span *ngIf="order.monthlyPayment == 1">Keine Ratenzahlung</span>
                   <span *ngIf="order.monthlyPayment == 2">2 monatige Ratenzahlung</span>
 
+              </div>
+              <div class="col-span-2">
+                <h2 class="font-semibold">Zusätzliche Bemerkung:</h2>
+                <span>{{order.note.trim()}}</span>
               </div>
               <div *ngIf="!edit" class="col-span-2 text-center text-2xl font-bold mt-6">
                   Status: {{order.trackingState}}</div>

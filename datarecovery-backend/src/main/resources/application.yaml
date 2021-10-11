@@ -19,6 +19,22 @@ logging:
   level:
     org.springframework.web: INFO
     org.springframework.security: DEBUG
+
+---
+spring:
+  config:
+    activate:
+      on-profile: liquibaseUpdate
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create
+  liquibase:
+    contexts: prod
 ---
 
 spring:

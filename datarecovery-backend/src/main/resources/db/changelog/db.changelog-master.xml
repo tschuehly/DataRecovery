@@ -183,11 +183,28 @@
     </changeSet>
 
 
-    <changeSet author="tschuehly" id="dev-initial-data" context="dev">
+    <changeSet author="tschuehly" id="test-initial-data" context="dev,test">
         <sqlFile path="devdata.sql"
                  splitStatements="true"
                  stripComments="true"/>
     </changeSet>
+    <changeSet id="1632342423464-1" author="tschuehly">
+        <addColumn tableName="picture">
+            <column name="content_length" type="BIGINT"/>
+            <column name="image_id" type="VARCHAR(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="1632342423464-3" author="tschuehly">
+        <dropColumn columnName="data" tableName="picture"/>
+    </changeSet>
 
-    <include file="db/changelog/2021/09/22-01-changelog.xml"/>
+    <changeSet id="1633522191118-1" author="tschuehly">
+        <addColumn tableName="order_table">
+            <column name="note" type="CLOB"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="1633522191118-2" author="tschuehly">
+        <dropColumn columnName="content_length" tableName="picture"/>
+    </changeSet>
+
 </databaseChangeLog>

@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository
 
 interface OrderRepository : JpaRepository<Order, Long> {
     fun findByTrackingIdAndCustomer_PostalCode(trackingId: String, postalCode: String): Order?
-    fun findByTrackingStateOrderByOrderDateDesc(trackingState: String, pageable: Pageable): List<Order>
+    fun findByTrackingStateInOrderByOrderDateDesc(trackingStateList: List<String>, pageable: Pageable): List<Order>
     fun findByTrackingStateNotIn(trackingStateList: List<String>): List<Order>
 }
 interface CustomerRepository : JpaRepository<Customer, Long>

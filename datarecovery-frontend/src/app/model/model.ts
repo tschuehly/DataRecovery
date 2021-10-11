@@ -12,6 +12,7 @@ export class Order{
   id: number;
   trackingId: string;
   orderDate: Date;
+  note: string;
   trackingState: orderStateEnum;
   orderProduct: Product;
   customer: Customer;
@@ -24,12 +25,18 @@ export enum orderStateEnum {
   orderReceived = 'Auftrag eingegangen',
   parcelReceived = 'Paket eingegangen',
   firstAnalysis = 'Erste Analyse',
-  orderedReplacementParts = 'Bestellung Ersatzteile',
+  orderedFirstPartDispender = 'Bestellung erster Teilespender',
+  orderedSecondPartDispender = 'Bestellung zweiter Teilespender',
+  orderedThirdPartDispender = 'Bestellung dritter Teilespender',
+  waitingForPinout = 'Warte auf Pinout',
   inRepair = 'Reparatur',
-  readingMemory = 'Auslesen Speicher',
+  readingMemory = 'Speicher wird ausgelesen',
+  reRead = 'Speicher wird erneut ausgelesen (Reread)',
   savingData = 'Abspeicherung Dateien',
+  storage = 'Einlagerung',
   parcelReturned = 'Rückversand',
-  orderCompleted = 'Auftrag abgeschlossen'
+  success = 'Datenrettung erfolgreich abgeschlossen',
+  failure = 'Datenrettung nicht erfolgreich abgeschlossen'
 }
 export class Update{
   id: number;

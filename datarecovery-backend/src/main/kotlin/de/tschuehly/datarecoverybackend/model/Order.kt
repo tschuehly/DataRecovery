@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.*
 import java.util.*
 import javax.persistence.*
 import kotlin.collections.ArrayList
+import org.hibernate.annotations.Type
 
 @Entity
 @Table(name = "ORDER_TABLE")
@@ -21,7 +22,11 @@ class Order(
     var replacement: String,
     @OneToMany(cascade = [CascadeType.ALL], mappedBy = "order")
     @JsonManagedReference
-    var updates: MutableList<Update> = ArrayList()
+    var updates: MutableList<Update> = ArrayList(),
+    @Lob
+    @Column
+    @Type(type = "org.hibernate.type.TextType")
+    var note: String?
 ) : BaseEntity() {
     override fun toString(): String {
         return "Order(trackingId=$trackingId, orderDate=$orderDate, trackingState=$trackingState, product=$orderProduct, customer=$customer, replacement='$replacement')"
