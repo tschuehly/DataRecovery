@@ -108,7 +108,7 @@ declare let gtag: Function;
               <p class="font-semibold text-center text-white">
                 Email:
                 <a href="mailto:info@jungbauerdatenrettung.de"><span class="text-white">info@jungbauerdatenrettung.de</span></a><br/>
-                <aTelefon: <span class="text-white">0841 12840705</span></a><br/>
+                Telefon: <span class="text-white">0841 12840705</span><br/>
                 Mobil: <span class="text-white">0151 61408355</span>
               </p>
             </div>
