@@ -1,7 +1,6 @@
 package de.tschuehly.datarecoverybackend.model
 
-import com.fasterxml.jackson.annotation.JsonFormat
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties
+import com.fasterxml.jackson.annotation.*
 import java.util.*
 import javax.persistence.*
 import kotlin.collections.ArrayList
@@ -15,12 +14,15 @@ class Order(
     var orderDate: Date?,
     var trackingState: String?,
     var monthlyPayment: Int = 1,
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     var orderProduct: OrderProduct,
-    @OneToOne(cascade = [CascadeType.ALL])
+    @OneToOne(cascade = [CascadeType.ALL], fetch = FetchType.LAZY)
     var customer: Customer?,
     var replacement: String,
-    @OneToMany(cascade = [CascadeType.ALL])
+    @OneToMany(cascade = [CascadeType.ALL], fetch = FetchType.LAZY, mappedBy = "order")
+    @JsonManagedReference
+    @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator::class, property = "id")
+    @JsonIdentityReference(alwaysAsId=true)
     var updates: MutableList<Update> = ArrayList()
 ) : BaseEntity() {
     override fun toString(): String {
