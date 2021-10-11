@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {Order, orderStateEnum} from '../../model/model';
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-order',
@@ -9,15 +9,21 @@ import {Router} from "@angular/router";
     <div class="container mx-auto h-full my-10">
       <div class="m-auto" *ngIf="!editOrder">
         <div class="flex mb-10">
-          <ng-container *ngIf="!showArchiveBoolean">
-            <h1 class="text-2xl text-center flex-1">Bestellungsübersicht</h1>
-            <button class="border-2 p-2" (click)="showArchive()">Archiv</button>
-          </ng-container>
-          <ng-container *ngIf="showArchiveBoolean">
-            <h1 class="text-2xl text-center flex-1">Archivierte Bestellungen</h1>
-            <button class="border-2 p-2" (click)="showOrders()">Bestellungen</button>
-          </ng-container>
-        </div>
+          <h1 class="text-2xl text-center flex-1" *ngIf="currentOrderView == 'awaited'">Erwartete Bestellungen</h1>
+          <h1 class="text-2xl text-center flex-1" *ngIf="currentOrderView == 'active'">Aktive Bestellungen</h1>
+          <h1 class="text-2xl text-center flex-1" *ngIf="currentOrderView == 'archive'">Archivierte Bestellungen </h1>
+          <div>
+            <button class="border-2 p-2" [disabled]="page == 0" (click)="page = page - 1; getOrders(currentOrderView, this.page)"><</button>
+                <span>{{page}}</span>
+            <button class="border-2 p-2" (click)="page = page + 1; getOrders(currentOrderView, this.page)">></button>
+          </div>
+          <div class="space-x-4">
+            <button class="border-2 p-2" (click)="switchView('awaited')">Erwartet</button>
+            <button class="border-2 p-2" (click)="switchView('active')">In Bearbeitung</button>
+            <button class="border-2 p-2" (click)="switchView('archive')">Archiv</button>
+
+          </div>
+           </div>
         <table class="border table-auto mx-auto">
           <thead>
           <th class="border px-2 py-1">ID</th>
@@ -28,7 +34,7 @@ import {Router} from "@angular/router";
           <th class="border px-2 py-1">Edit</th>
           </thead>
           <tbody>
-          <tr *ngFor="let order of filteredOrders">
+          <tr *ngFor="let order of orders">
             <td class="border p-2">{{order.id}}</td>
             <td class="border p-2">{{order.orderProduct.category.name}} {{order.orderProduct.name}}</td>
             <td class="border p-2">{{order.customer.firstName}} {{order.customer.lastName}}</td>
@@ -71,61 +77,59 @@ import {Router} from "@angular/router";
 })
 export class OrderComponent implements OnInit {
   orders: Order[];
-  filteredOrders: Order[];
   editOrder: Order;
   createUpdate = false;
-  showArchiveBoolean = false;
-  constructor(private http: HttpClient,private router: Router) {
+  currentOrderView = 'active';
+  page = 0;
+  constructor(private http: HttpClient, private router: Router) {
   }
 
 
   ngOnInit(): void {
-    this.http.get('api/order').subscribe((orders: Order[]) => {
-      this.orders = orders;
-      this.orders.sort((a, b) => {
-        if(b.orderDate < a.orderDate){
-          return -1
-        }
-        return 0
-      });
-      this.filteredOrders = this.orders.filter(o => o.trackingState !== orderStateEnum.orderCompleted)
-    },(error:HttpErrorResponse) => {
-      if(error.status === 401){
-        this.router.navigate(['/login'])
-
-      }
-    })
-
+    this.getOrders(this.currentOrderView, this.page);
   }
 
-  updateOrderState(editOrder: Order): void {
-    console.log(editOrder);
+  getOrders(status: string, page: number): void{
+      this.http.get('api/order/' + status + '?page=' + page).subscribe((orders: Order[]) => {
+        this.orders = orders;
+        this.orders.sort((a, b) => {
+          if (b.orderDate < a.orderDate){
+            return -1;
+          }
+          return 0;
+        });
+      }, (error: HttpErrorResponse) => {
+        if (error.status === 401){
+          this.router.navigate(['/login']);
+
+        }
+      });
+
+    }
+
+
+updateOrderState(editOrder: Order): void {
     this.http.post('api/order/updateStatus', editOrder).subscribe((order: Order) => {
       this.updateOrders(order);
-    })
-    ;
+    });
     this.editOrder = null;
   }
 
-  updateOrders(order: Order):void {
-    this.filteredOrders.map( o => o.id === order.id);
+updateOrders(order: Order): void {
+    this.orders.map( o => o.id === order.id);
   }
 
-  deleteOrder(order: Order):void {
-    this.http.delete('api/order/'+ order.id).subscribe(_=>{
+deleteOrder(order: Order): void {
+    this.http.delete('api/order/' + order.id).subscribe(_ => {
       this.orders = this.orders.filter(o => o.id !== order.id);
     });
     this.editOrder = null;
 
   }
 
-  showArchive() {
-    this.filteredOrders = this.orders.filter(o => o.trackingState === orderStateEnum.orderCompleted);
-    this.showArchiveBoolean = true;
-  }
-
-  showOrders() {
-    this.filteredOrders = this.orders.filter(o => o.trackingState !== orderStateEnum.orderCompleted);
-    this.showArchiveBoolean = false;
+  switchView(status: string): void {
+    this.page = 0;
+    this.getOrders(status, this.page);
+    this.currentOrderView = status;
   }
 }

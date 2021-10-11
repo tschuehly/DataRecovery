@@ -2,14 +2,11 @@ package de.tschuehly.datarecoverybackend.controller
 
 import de.tschuehly.datarecoverybackend.helpers.CrudController
 import de.tschuehly.datarecoverybackend.model.Order
-import de.tschuehly.datarecoverybackend.model.Update
 import de.tschuehly.datarecoverybackend.repository.OrderRepository
 import de.tschuehly.datarecoverybackend.service.OrderService
 import org.slf4j.Logger
-import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.multipart.MultipartFile
-import org.springframework.web.server.ResponseStatusException
 
 @RestController
 @RequestMapping("api/order")
@@ -22,6 +19,19 @@ class OrderController(
 
     @PostMapping("/updateStatus")
     fun updateStatus(@RequestBody order: Order) = orderService.updateState(order)
+
+    @GetMapping("/archive")
+    fun getArchived(
+        @RequestParam(defaultValue = "0") page: Number
+    ): List<Order> = orderService.getArchived(page)
+
+    @GetMapping("/active")
+    fun getActive(): List<Order> = orderService.getActive()
+
+    @GetMapping("/awaited")
+    fun getAwaited(
+        @RequestParam(defaultValue = "0") page: Number
+    ): List<Order> = orderService.getAwaited(page)
 
     @GetMapping("/tracking")
     fun getByTrackingId(

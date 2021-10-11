@@ -126,7 +126,7 @@ export class ProductComponent implements OnInit {
   }
 
   deleteProduct(product: Product) {
-    this.http.delete('api/product/'+product.id).subscribe( _=>{
+    this.http.delete('api/product/' +product.id).subscribe( _=>{
       this.products = this.products.filter(p => p.id !== product.id)
     })
   }
