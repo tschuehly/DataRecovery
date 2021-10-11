@@ -36,7 +36,8 @@ import {ActivatedRoute, Router} from "@angular/router";
       <p>Tobias Jungbauer<br />
         Am Stein 9<br />
         85049 Ingolstadt<br />
-        0151 61408355<br />
+        <p>Telefon: 0841 12840705<br />
+      <p>Mobil: 0151 61408355<br />
         tobias@jungbauerdatenrettung.de</p>
 
       <h2 class="text-lg font-semibold mb-2 mt-4 underline">EU-Streitschlichtung</h2>
