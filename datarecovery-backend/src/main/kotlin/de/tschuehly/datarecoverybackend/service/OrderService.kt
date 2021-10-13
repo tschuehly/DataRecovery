@@ -26,13 +26,13 @@ class OrderService(
     private val pictureContentStore: PictureContentStore,
     private val logger: Logger
 ) : CrudService<Order, OrderRepository>(orderRepository) {
-    fun createOrder(order: Order) {
+    fun createOrder(order: Order): Order {
         order.orderDate = Date()
         order.trackingState = orderReceived
         order.orderProduct.id = null
         order.orderProduct = orderProductRepository.save(order.orderProduct)
-        orderRepository.save(order)
         mailService.sendOrderConfirmation(order)
+        return orderRepository.save(order)
     }
 
     fun updateState(order: Order) {

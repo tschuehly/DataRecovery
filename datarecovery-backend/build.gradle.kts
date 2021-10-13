@@ -34,6 +34,7 @@ dependencies {
     testImplementation("org.testcontainers:testcontainers:1.16.0")
     testImplementation("org.testcontainers:junit-jupiter:1.16.0")
     testImplementation("org.testcontainers:postgresql:1.16.0")
+    testImplementation("com.icegreen:greenmail-junit5:1.6.5")
 }
 
 tasks.withType<KotlinCompile> {
