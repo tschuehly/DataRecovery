@@ -28,7 +28,9 @@ class Order(
     @Type(type = "org.hibernate.type.TextType")
     var note: String?,
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
-    var deadline: Date?
+    var deadline: Date?,
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
+    var completionDate: Date?
 ) : BaseEntity() {
     override fun toString(): String {
         return "Order(trackingId=$trackingId, orderDate=$orderDate, trackingState=$trackingState, product=$orderProduct, customer=$customer, replacement='$replacement')"

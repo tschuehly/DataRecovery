@@ -1,3 +1,4 @@
+/* tslint:disable:variable-name */
 export class Customer{
   id: number;
   firstName: string;
@@ -21,6 +22,7 @@ export class Order{
   updates: Update[];
   monthlyPayment: number;
   deadline: Date;
+  completionDate: Date;
 }
 export enum orderStateEnum {
   orderReceived = 'Auftrag eingegangen',

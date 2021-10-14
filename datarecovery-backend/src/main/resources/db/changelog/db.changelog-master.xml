@@ -212,4 +212,19 @@
             <column name="deadline" type="DATETIME"/>
         </addColumn>
     </changeSet>
+    <changeSet id="1634223121463-4" author="tschuehly">
+        <addColumn tableName="order_table">
+            <column name="completion_date" type="DATETIME"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="1634223121463-1" author="tschuehly">
+        <dropNotNullConstraint columnDataType="int" columnName="monthly_payment" tableName="order_table"/>
+    </changeSet>
+    <changeSet id="1634223121463-2" author="tschuehly">
+        <dropNotNullConstraint columnDataType="int" columnName="rating" tableName="review"/>
+    </changeSet>
+    <changeSet id="1634223121463-3" author="tschuehly">
+        <dropNotNullConstraint columnDataType="int" columnName="time" tableName="review"/>
+    </changeSet>
+
 </databaseChangeLog>

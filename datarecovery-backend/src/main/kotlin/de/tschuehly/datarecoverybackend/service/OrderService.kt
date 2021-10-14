@@ -35,7 +35,7 @@ class OrderService(
         return orderRepository.save(order)
     }
 
-    fun updateState(order: Order) {
+    fun updateStatus(order: Order): Order { // TODO: Send Mail if Completiondate is further than deadline
         val savedOrder = this.update(order)
         when (savedOrder.trackingState) {
             InProcess.parcelReceived -> mailService.sendParcelReceived(order)
@@ -47,6 +47,7 @@ class OrderService(
             InProcess.reRead -> mailService.sendReRead(order)
             InProcess.savingData -> mailService.sendSavingData(order)
         }
+        return savedOrder
     }
     fun getByTrackingIdAndPostalCode(trackingId: String, postalCode: String): Order {
         return orderRepository.findByTrackingIdAndCustomer_PostalCode(trackingId, postalCode)
@@ -103,4 +104,5 @@ class OrderService(
             const val failure = "Datenrettung nicht erfolgreich abgeschlossen"
         }
     }
+
 }

@@ -19,7 +19,7 @@ class OrderController(
     fun createOrder(@RequestBody order: Order) = orderService.createOrder(order)
 
     @PostMapping("/updateStatus")
-    fun updateStatus(@RequestBody order: Order) = orderService.updateState(order)
+    fun updateStatus(@RequestBody order: Order) = orderService.updateStatus(order)
 
     @GetMapping("/archive")
     fun getArchived(
