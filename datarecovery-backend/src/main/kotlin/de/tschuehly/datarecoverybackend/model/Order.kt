@@ -1,10 +1,10 @@
 package de.tschuehly.datarecoverybackend.model
 
 import com.fasterxml.jackson.annotation.*
+import org.hibernate.annotations.Type
 import java.util.*
 import javax.persistence.*
 import kotlin.collections.ArrayList
-import org.hibernate.annotations.Type
 
 @Entity
 @Table(name = "ORDER_TABLE")
@@ -26,7 +26,9 @@ class Order(
     @Lob
     @Column
     @Type(type = "org.hibernate.type.TextType")
-    var note: String?
+    var note: String?,
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
+    var deadline: Date?
 ) : BaseEntity() {
     override fun toString(): String {
         return "Order(trackingId=$trackingId, orderDate=$orderDate, trackingState=$trackingState, product=$orderProduct, customer=$customer, replacement='$replacement')"

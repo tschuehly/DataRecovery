@@ -184,7 +184,7 @@
 
 
     <changeSet author="tschuehly" id="test-initial-data" context="dev,test">
-        <sqlFile path="devdata.sql"
+        <sqlFile path="testdata.sql"
                  splitStatements="true"
                  stripComments="true"/>
     </changeSet>
@@ -207,4 +207,9 @@
         <dropColumn columnName="content_length" tableName="picture"/>
     </changeSet>
 
+    <changeSet id="1633522191118-3" author="tschuehly">
+        <addColumn tableName="order_table">
+            <column name="deadline" type="DATETIME"/>
+        </addColumn>
+    </changeSet>
 </databaseChangeLog>

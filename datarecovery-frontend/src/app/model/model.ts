@@ -20,6 +20,7 @@ export class Order{
   updateIdList: number[];
   updates: Update[];
   monthlyPayment: number;
+  deadline: Date;
 }
 export enum orderStateEnum {
   orderReceived = 'Auftrag eingegangen',

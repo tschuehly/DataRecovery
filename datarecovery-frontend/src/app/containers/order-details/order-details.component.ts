@@ -30,9 +30,9 @@ import {HttpClient} from '@angular/common/http';
                   <span *ngIf="order.monthlyPayment == 2">2 monatige Ratenzahlung</span>
 
               </div>
-              <div class="col-span-2">
+              <div class="col-span-2" *ngIf="order.note">
                 <h2 class="font-semibold">Zusätzliche Bemerkung:</h2>
-                <span>{{order.note.trim()}}</span>
+                <span>{{order.note?.trim()}}</span>
               </div>
               <div *ngIf="!edit" class="col-span-2 text-center text-2xl font-bold mt-6">
                   Status: {{order.trackingState}}</div>

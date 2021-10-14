@@ -1,7 +1,10 @@
 package de.tschuehly.datarecoverybackend.controller
 
 import de.tschuehly.datarecoverybackend.util.IntegrationTestBase
-import kotlin.reflect.typeOf
+import org.hamcrest.CoreMatchers.instanceOf
+import org.hamcrest.CoreMatchers.`is`
+import org.hamcrest.CoreMatchers.notNullValue
+import org.hamcrest.Matchers.allOf
 import org.hamcrest.Matchers.hasSize
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -32,6 +35,8 @@ internal class OrderControllerIntegrationTest @Autowired constructor(val mockMvc
         }.andExpect {
             status { isOk() }
             content { contentType(MediaType.APPLICATION_JSON) }
+            jsonPath("$.id", allOf(notNullValue(), instanceOf(Number::class.java)))
+            jsonPath("$.customer.firstName", `is`("Thomas"))
         }
     }
     @Test

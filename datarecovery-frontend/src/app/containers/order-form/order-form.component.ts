@@ -14,7 +14,8 @@ import {Order, Product} from '../../model/model';
           <label class="py-4 px-12">Auftrag zur Datenrettung:
             <select class="block mt-2 w-full text-black" formControlName="product" #productSelect required>
               <option *ngFor="let product of products" [value]="product.id">
-                {{product.category.name}}  {{product.name}}  <span *ngIf="product.price">{{product.price | number : '.2':'de' }}€</span>
+                {{product.category.name}}  {{product.name}}  <span
+                *ngIf="product.price">{{product.price | number : '.2':'de' }}€</span>
               </option>
             </select>
           </label>
@@ -28,11 +29,17 @@ import {Order, Product} from '../../model/model';
               </select>
             </label>
           </ng-container>
-          <label class="py-4 px-12">Zusätzliche Bemerkungen:
-            <textarea class="mt-1 w-full text-black" formControlName="note"></textarea>
-          </label>
           <ng-container *ngIf="productSelect.value">
+            <div class="py-4 px-12 font-semibold">
+              <label class="flex">Werden die Daten dringend benötigt?:
+                <input class="self-center ml-4" type="checkbox" #deadline/>
+              </label>
 
+              <label *ngIf="deadline.checked" class="block mt-2 font-semibold">
+                <span>Bis zu welchem Datum werden die Daten benötigt?</span>
+                <input type="date" class="text-black" formControlName="deadline" />
+              </label>
+            </div>
             <label class="py-4 px-12 font-semibold">Ist eine Ratenzahlung gewünscht?:
               <select class="block mt-2 w-full text-black" formControlName="monthlyPayment" required>
                 <option selected value=1>Keine Ratenzahlung</option>
@@ -40,7 +47,14 @@ import {Order, Product} from '../../model/model';
               </select>
             </label>
           </ng-container>
-          <h2 class="font-semibold inline text-center"><a class="font-semibold underline" routerLink="agb">Allgemeine Geschäftsbedingungen</a> und <a class="font-semibold underline" routerLink="datenschutz">Datenschutzrichtlinien</a></h2>
+
+
+          <label class="py-4 px-12">Zusätzliche Bemerkungen:
+            <textarea class="mt-1 w-full text-black" formControlName="note"></textarea>
+          </label>
+          <h2 class="font-semibold inline text-center"><a class="font-semibold underline" routerLink="agb">Allgemeine
+            Geschäftsbedingungen</a> und <a class="font-semibold underline" routerLink="datenschutz">Datenschutzrichtlinien</a>
+          </h2>
 
           <div class="flex justify-center mt-4 bg-silver p-4 rounded-b-2xl">
             <button (click)="submitProduct()"
@@ -124,17 +138,20 @@ export class OrderFormComponent implements OnInit {
       product: [''],
       note: [''],
       replacement: ['Sie senden einen eigenen Ersatzspeicher zur Sicherung mit: kostenfrei'],
-      monthlyPayment: [1]
+      monthlyPayment: [1],
+      deadline: ['']
     });
   }
 
   onSubmit(): void {
     this.order = (this.orderForm.getRawValue() as Order);
+    console.log(this.order);
+    this.order.deadline = new Date(this.orderForm.get('deadline').value);
     this.order.orderProduct = this.products.find(product => product.id.toString() === this.orderForm.get('product').value);
     this.orderOutput.emit(this.order);
   }
 
-  submitProduct(): void{
+  submitProduct(): void {
     console.log(this.orderForm.controls);
     this.productFormFilled = true;
   }

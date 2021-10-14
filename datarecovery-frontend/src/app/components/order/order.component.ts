@@ -29,7 +29,8 @@ import {Router} from '@angular/router';
           <th class="border px-2 py-1">ID</th>
           <th class="border px-2 py-1">Produkt</th>
           <th class="border px-2 py-1">Kunde</th>
-          <th class="border px-2 py-1">Datum</th>
+          <th class="border px-2 py-1">Orderdatum</th>
+          <th class="border px-2 py-1">Deadline</th>
           <th class="border px-2 py-1">Status</th>
           <th class="border px-2 py-1">Edit</th>
           </thead>
@@ -39,6 +40,7 @@ import {Router} from '@angular/router';
             <td class="border p-2">{{order.orderProduct.category.name}} {{order.orderProduct.name}}</td>
             <td class="border p-2">{{order.customer.firstName}} {{order.customer.lastName}}</td>
             <td class="border p-2">{{order.orderDate | date:'d.M.y H:mm':'+0400'}}</td>
+            <td class="border p-2">{{getDeadline(order.deadline)}}</td>
             <td class="border p-2">{{order.trackingState}}</td>
             <td class="border pl-2">
               <button (click)="editOrder = order">
@@ -81,7 +83,9 @@ export class OrderComponent implements OnInit {
   createUpdate = false;
   currentOrderView = 'active';
   page = 0;
+  dateNow: Date;
   constructor(private http: HttpClient, private router: Router) {
+    this.dateNow = new Date();
   }
 
 
@@ -93,11 +97,13 @@ export class OrderComponent implements OnInit {
       this.http.get('api/order/' + status + '?page=' + page).subscribe((orders: Order[]) => {
         this.orders = orders;
         this.orders.sort((a, b) => {
-          if (b.orderDate < a.orderDate){
+          if (b.deadline > a.deadline){
             return -1;
           }
           return 0;
         });
+
+        console.log(JSON.stringify(this.orders));
       }, (error: HttpErrorResponse) => {
         if (error.status === 401){
           this.router.navigate(['/login']);
@@ -131,5 +137,14 @@ deleteOrder(order: Order): void {
     this.page = 0;
     this.getOrders(status, this.page);
     this.currentOrderView = status;
+  }
+
+  getDeadline(deadline: Date): string{
+    if (deadline == null){
+      return '';
+    }
+    const milSeconds = Date.parse(deadline.toString()) - this.dateNow.getTime();
+    const timeToDeadline = milSeconds / (1000 * 3600 * 24);
+    return Math.floor(timeToDeadline).toString();
   }
 }
