@@ -23,7 +23,7 @@ class Order(
     @OneToMany(cascade = [CascadeType.ALL])
     var updates: MutableList<Update> = ArrayList(),
     @Lob
-    @Type(type="org.hibernate.type.StringClobType")
+    @Type(type="org.hibernate.type.StringType")
     var note: String?
 ) : BaseEntity() {
     override fun toString(): String {
