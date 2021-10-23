@@ -128,7 +128,6 @@ declare let gtag: Function;
           </div>
           <div class="col-span-2 pt-4 divide-x-2 divide-silver">
             <span class="pr-4">Website developed by <a class="font-bold" href="https://www.linkedin.com/in/tschuehly/">Thomas Schühly</a></span>
-            <span class="pl-4">Designed by <span class="whitespace-nowrap">Alina Göttig</span></span>
           </div>
           <div>
             <a class="" routerLink="/login" *ngIf="currentUser" (click)="logout.emit()">Logout</a>

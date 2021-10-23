@@ -164,7 +164,7 @@ export class OrderComponent implements OnInit {
     if (completionDate == null){
       return null;
     }
-    const days = new Date(completionDate).getDate() - new Date().getDate();
-    return days;
+    const days = new Date(completionDate).getTime() - new Date().getTime();
+    return Math.floor(days / (1000 * 3600 * 24));
   }
 }

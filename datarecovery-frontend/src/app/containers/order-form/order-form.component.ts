@@ -30,26 +30,23 @@ import {Order, Product} from '../../model/model';
             </label>
           </ng-container>
           <ng-container *ngIf="productSelect.value">
-            <div class="py-4 px-12 font-semibold">
-              <label class="flex">Werden die Daten dringend benötigt?:
-                <input class="self-center ml-4" type="checkbox" #deadline/>
-              </label>
-
-              <label *ngIf="deadline.checked" class="block mt-2 font-semibold">
-                <span>Bis zu welchem Datum werden die Daten benötigt?</span>
-                <input type="date" class="text-black" formControlName="deadline" />
+            <div class="py-4 px-12">
+              <label class="block mt-2">
+                <span class="font-bold">Optional:</span> Bis zu welchem Datum werden die Daten benötigt?
+                <input type="date" class="mt-2 ml-4 text-black" formControlName="deadline" />
               </label>
             </div>
-            <label class="py-4 px-12 font-semibold">Ist eine Ratenzahlung gewünscht?:
+            <label class="py-4 px-12">Ist eine Ratenzahlung gewünscht?:
               <select class="block mt-2 w-full text-black" formControlName="monthlyPayment" required>
                 <option selected value=1>Keine Ratenzahlung</option>
-                <option value=2>Zweimonatige Ratenzahlung (1% Gebühr)</option>
+                <option value=2>2-monatige Ratenzahlung (2% Gebühr)</option>
+                <option value=6>6-monatige Ratenzahlung (6% Gebühr)</option>
               </select>
             </label>
           </ng-container>
 
 
-          <label class="py-4 px-12">Zusätzliche Bemerkungen:
+          <label class="py-4 px-12"><span class="font-bold">Optional:</span>   Zusätzliche Anmerkungen:
             <textarea class="mt-1 w-full text-black" formControlName="note"></textarea>
           </label>
           <h2 class="font-semibold inline text-center"><a class="font-semibold underline" routerLink="agb">Allgemeine

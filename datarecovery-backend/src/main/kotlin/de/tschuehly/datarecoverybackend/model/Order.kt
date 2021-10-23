@@ -24,8 +24,7 @@ class Order(
     @JsonManagedReference
     var updates: MutableList<Update> = ArrayList(),
     @Lob
-    @Column
-    @Type(type = "org.hibernate.type.TextType")
+    @Type(type="org.hibernate.type.StringType")
     var note: String?,
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
     var deadline: Date?,

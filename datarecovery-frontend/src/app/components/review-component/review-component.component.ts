@@ -8,13 +8,13 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
 @Component({
   selector: 'app-review-component',
   template: `
-    <div class="bg-gray-main text-white">
+    <div class="bg-gray-main bg-circuit-board text-white">
       <h1 class="text-3xl text-center pt-8">Kundenbewertungen Ø5.0 (53)  </h1>
       <div class="px-0 md:container  py-4">
         <swiper class="my-4" [effect]="'slide'" [slidesPerView]="1"
                 [spaceBetween]="50" [virtual]="true" [navigation]="true" [pagination]="true">
           <ng-template swiperSlide *ngFor="let currentReview of reviews">
-            <div class="rounded-xl p-6 md:w-4/5 mx-6 md:mx-auto mb-12" style="box-shadow: 0 2px 25px 0 black">
+            <div class="rounded-xl bg-gray-main p-6 md:w-4/5 mx-6 md:mx-auto mb-12" style="box-shadow: 0 2px 25px 0 black">
               <div class="flex items-start justify-center">
                 <div class="hidden md:flex bg-contain bg-center bg-no-repeat w-36 h-44 mr-4"
                      [ngStyle]="{'background-image': 'url('+this.currentReview.profile_photo_url+')'}">
