@@ -10,7 +10,7 @@ spring:
 
   liquibase:
     change-log: classpath:db/changelog/db.changelog-master.xml
-    contexts: dev
+    contexts: none
     default-schema: public
 server:
   port: 8088
@@ -21,6 +21,8 @@ logging:
     org.springframework.security: DEBUG
 
 ---
+# Run a docker container with docker run -d --name some-postgres -e POSTGRES_PASSWORD=password -p 5432:5432 postgres:13.4
+# Then you can use JPABuddy to update the schema
 spring:
   config:
     activate:
@@ -31,10 +33,11 @@ spring:
     password: password
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-    hibernate:
-      ddl-auto: create-drop
+#    hibernate:
+#      ddl-auto: update
   liquibase:
-    enabled: false
+#    enabled: false
+    contexts: dev
 
 ---
 
@@ -64,6 +67,25 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
     properties:
       hibernate.format_sql: true
+  liquibase:
+    contexts: dev
+---
+spring:
+  config:
+    activate:
+      on-profile: local-staging
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: ${POSTGRES_PASSWORD}
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: validate
+  liquibase:
+    contexts: prod
+
+
 ---
 spring:
   config:
@@ -78,6 +100,4 @@ spring:
     hibernate:
       ddl-auto: validate
   liquibase:
-    change-log: classpath:db/changelog/db.changelog-master.xml
     contexts: prod
-    default-schema: public

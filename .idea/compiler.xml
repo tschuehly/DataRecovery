@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/2.4.3/d4bb8ef775bcf06ac9a4fdc400a8b2404259c457/spring-boot-configuration-processor-2.4.3.jar" />
+        </processorPath>
+        <module name="datarecovery-backend.main" />
+      </profile>
+    </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="usermanagement" target="15" />
     </bytecodeTargetLevel>
