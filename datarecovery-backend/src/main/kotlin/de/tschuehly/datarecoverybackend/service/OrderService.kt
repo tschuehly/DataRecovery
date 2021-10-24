@@ -70,11 +70,11 @@ class OrderService(
 
     fun getArchived(page: Number): List<Order> {
         val paging: Pageable = PageRequest.of(page.toInt(), 15)
-        return orderRepository.findByTrackingStateInOrderByOrderDateDesc(listOf(Completed.success, Completed.failure), paging)
+        return orderRepository.findByTrackingStateInOrderByOrderDateDesc(listOf(Completed.success, Completed.failure, Completed.legacyComplete), paging)
     }
 
     fun getActive(): List<Order> {
-        return orderRepository.findByTrackingStateNotIn(listOf(orderReceived, Completed.failure, Completed.success))
+        return orderRepository.findByTrackingStateNotIn(listOf(orderReceived, Completed.failure, Completed.success, Completed.legacyComplete))
     }
 
     fun getAwaited(page: Number): List<Order> {
@@ -102,6 +102,7 @@ class OrderService(
         object Completed {
             const val success = "Datenrettung erfolgreich abgeschlossen"
             const val failure = "Datenrettung nicht erfolgreich abgeschlossen"
+            const val legacyComplete = "Auftrag abgeschlossen"
         }
     }
 

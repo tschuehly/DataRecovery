@@ -104,11 +104,15 @@ export class OrderComponent implements OnInit {
       this.orders = orders;
       this.orders.forEach(o => o.orderDate = new Date(o.orderDate.toString()));
       this.orders.sort((a, b) => {
-        if (b.deadline > a.deadline) {
-          return -1;
+        if (b.deadline == null && a.deadline == null){
+          if (b.orderDate > a.orderDate) { return 1; }
+          if (b.orderDate < a.orderDate) { return -1; }
         }
-        return 0;
+        if (b.deadline == null) { return -1; }
+        if (b.deadline < a.deadline) { return 1; }
+        if (b.deadline > a.deadline) { return -1; }
       });
+      console.log(this.orders.map(o => o.orderDate));
     }, (error: HttpErrorResponse) => {
       if (error.status === 401) {
         this.router.navigate(['/login']);
@@ -147,8 +151,8 @@ export class OrderComponent implements OnInit {
 
   switchView(status: string): void {
     this.page = 0;
-    this.getOrders(status, this.page);
     this.currentOrderView = status;
+    this.getOrders(status, this.page);
   }
 
   getDaysTillDeadline(deadline: Date): string {

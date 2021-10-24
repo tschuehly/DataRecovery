@@ -39,7 +39,8 @@ export enum orderStateEnum {
   storage = 'Einlagerung',
   parcelReturned = 'Rückversand',
   success = 'Datenrettung erfolgreich abgeschlossen',
-  failure = 'Datenrettung nicht erfolgreich abgeschlossen'
+  failure = 'Datenrettung nicht erfolgreich abgeschlossen',
+  legacyComplete = 'Auftrag abgeschlossen'
 }
 export class Update{
   id: number;
@@ -88,7 +89,7 @@ export class Review{
   author_url: string;
   profile_photo_url: string;
   rating: number;
-  relative_time_description: String
+  relative_time_description: string;
   text: string;
   time: number;
 }
