@@ -36,16 +36,22 @@ class OrderService(
     }
 
     fun updateStatus(order: Order): Order { // TODO: Send Mail if Completiondate is further than deadline
+        val previousTrackingState = order.id?.let {
+            orderRepository.findByIdOrNull(it)?.trackingState
+        }
+
         val savedOrder = this.update(order)
-        when (savedOrder.trackingState) {
-            InProcess.parcelReceived -> mailService.sendParcelReceived(order)
-            InProcess.firstAnalysis -> mailService.sendFirstAnalysis(order)
-            InProcess.orderedFirstPartDispender -> mailService.sendFirstPartDispender(order)
-            InProcess.orderedSecondPartDispender -> mailService.sendSecondPartDispender(order)
-            InProcess.orderedThirdPartDispender -> mailService.sendThirdPartDispender(order)
-            InProcess.readingMemory -> mailService.sendReadingMemory(order)
-            InProcess.reRead -> mailService.sendReRead(order)
-            InProcess.savingData -> mailService.sendSavingData(order)
+        if(previousTrackingState != savedOrder.trackingState){
+            when (savedOrder.trackingState) {
+                InProcess.parcelReceived -> mailService.sendParcelReceived(order)
+                InProcess.firstAnalysis -> mailService.sendFirstAnalysis(order)
+                InProcess.orderedFirstPartDispender -> mailService.sendFirstPartDispender(order)
+                InProcess.orderedSecondPartDispender -> mailService.sendSecondPartDispender(order)
+                InProcess.orderedThirdPartDispender -> mailService.sendThirdPartDispender(order)
+                InProcess.readingMemory -> mailService.sendReadingMemory(order)
+                InProcess.reRead -> mailService.sendReRead(order)
+                InProcess.savingData -> mailService.sendSavingData(order)
+            }
         }
         return savedOrder
     }
