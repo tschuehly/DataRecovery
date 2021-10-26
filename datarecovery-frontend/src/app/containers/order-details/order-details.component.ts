@@ -191,11 +191,14 @@ export class OrderDetailsComponent implements OnInit {
     const date = new Date();
     date.setDate(date.getDate() + this.daysToCompletion);
     this.order.completionDate = date;
-    this.order.deadline = new Date(this.order.deadline);
+    if (this.order.deadline != null){
+      this.order.deadline = new Date(this.order.deadline);
+
+    }
     this.editOrder.emit(this.order);
   }
 
   togglePictureZoom(pic: Picture): void {
-    pic['zoomed'] = !pic['zoomed'];
+    pic[`zoomed`] = !pic[`zoomed`];
   }
 }
