@@ -28,56 +28,57 @@ import { AgbComponent } from './containers/agb/agb.component';
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
 import { AboutComponent } from './containers/about/about.component';
-import {NgcCookieConsentConfig, NgcCookieConsentModule} from "ngx-cookieconsent";
+import {NgcCookieConsentConfig, NgcCookieConsentModule} from 'ngx-cookieconsent';
 import { ReviewComponentComponent } from './components/review-component/review-component.component';
-import {First40WordsPipe} from "./pipes/first-twenty-words.pipe";
-import {SwiperModule} from "swiper/angular";
-import {GoogleAnalyticsService} from "./services/google-analytics.service";
+import {First40WordsPipe} from './pipes/first-twenty-words.pipe';
+import {SwiperModule} from 'swiper/angular';
+import {GoogleAnalyticsService} from './services/google-analytics.service';
 import { PrivacyComponent } from './containers/privacy/privacy.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SiteNotFoundComponent } from './containers/site-not-found/site-not-found.component';
+import {BlogComponent} from './containers/blog/blog.component';
 registerLocaleData(localeDe);
-const cookieConfig:NgcCookieConsentConfig = {
-  "cookie": {
-    "domain": "www.jungbauerdatenrettung.de"
+const cookieConfig: NgcCookieConsentConfig = {
+  cookie: {
+    domain: 'www.jungbauerdatenrettung.de'
   },
-  "position": "bottom",
-  "theme": "edgeless",
-  "palette": {
-    "popup": {
-      "background": "#1d1d1d",
-      "text": "#c5c5c5",
-      "link": "#ffffff"
+  position: 'bottom',
+  theme: 'edgeless',
+  palette: {
+    popup: {
+      background: '#1d1d1d',
+      text: '#c5c5c5',
+      link: '#ffffff'
     },
-    "button": {
-      "background": "#c5c5c5",
-      "text": "#000000",
-      "border": "transparent"
+    button: {
+      background: '#c5c5c5',
+      text: '#000000',
+      border: 'transparent'
     }
   },
   container: document.getElementById('cookie'),
-  layout:'',
+  layout: '',
   layouts: {
-    "custom":'{{messagelink}}'
+    custom: '{{messagelink}}'
   },
-  elements:{
+  elements: {
     messagelink: `
     <span class="p-4">{{message}} <a href="{{href}}" class="underline">{{link}}</a></span>
 
     `,
   },
-  "type": "opt-in",
-  "content": {
-    "message": "Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies.",
-    "dismiss": "Got it!",
-    "deny": "Cookies verbieten",
-    "link": "Datenschutzbestimmungen",
-    "href": "/datenschutz",
-    "policy": "Cookie Policy",
-    "header": "Cookies used on the website!",
-    "allow": "Cookies erlauben"
+  type: 'opt-in',
+  content: {
+    message: 'Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies.',
+    dismiss: 'Got it!',
+    deny: 'Cookies verbieten',
+    link: 'Datenschutzbestimmungen',
+    href: '/datenschutz',
+    policy: 'Cookie Policy',
+    header: 'Cookies used on the website!',
+    allow: 'Cookies erlauben'
   }
-}
+};
 @NgModule({
     declarations: [
         AppComponent,
@@ -104,6 +105,7 @@ const cookieConfig:NgcCookieConsentConfig = {
         PrivacyComponent,
         HeaderComponent,
         SiteNotFoundComponent,
+        BlogComponent
     ],
   imports: [
     BrowserModule,

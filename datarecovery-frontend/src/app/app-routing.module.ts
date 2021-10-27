@@ -7,12 +7,13 @@ import {OrderComponent} from './components/order/order.component';
 import {ProductComponent} from './components/product/product.component';
 import {StaticComponent} from './containers/static/static.component';
 import {CategoryComponent} from './components/category/category.component';
-import {ImprintComponent} from "./containers/imprint/imprint.component";
-import {PricesComponent} from "./containers/prices/prices.component";
-import {AgbComponent} from "./containers/agb/agb.component";
-import {AboutComponent} from "./containers/about/about.component";
-import {PrivacyComponent} from "./containers/privacy/privacy.component";
-import {SiteNotFoundComponent} from "./containers/site-not-found/site-not-found.component";
+import {ImprintComponent} from './containers/imprint/imprint.component';
+import {PricesComponent} from './containers/prices/prices.component';
+import {AgbComponent} from './containers/agb/agb.component';
+import {AboutComponent} from './containers/about/about.component';
+import {PrivacyComponent} from './containers/privacy/privacy.component';
+import {SiteNotFoundComponent} from './containers/site-not-found/site-not-found.component';
+import {BlogComponent} from './containers/blog/blog.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,8 @@ const routes: Routes = [
   {path: 'agb', component: AgbComponent},
   {path: 'philosophie', component: AboutComponent},
   {path: 'preise', component: PricesComponent},
+  {path: 'blog', component: BlogComponent},
+  {path: 'blog/:articleUrl', component: BlogComponent},
   {path: '404', component: SiteNotFoundComponent},
   {path: '**', redirectTo: '/404'}
 ];

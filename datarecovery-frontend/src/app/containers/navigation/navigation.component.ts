@@ -28,6 +28,7 @@ declare let gtag: Function;
 
         <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="">Startseite</a>
          <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="preise">Festpreise</a>
+         <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="blog">Blog</a>
           <a class="cursor-pointer p-2" (click)="scrollToOrder(); mobileNavShow = false">Auftragsformular</a>
           <a (click)="mobileNavShow = false;scrollToContact()" class="cursor-pointer p-2">Kontakt</a>
           <div class="h-full text-center flex"  (clickOutside)="dropdownShow = false" [exclude]="'div.dropdown'"
@@ -167,7 +168,7 @@ export class NavigationComponent implements OnInit {
     this.innerWidth = document.documentElement.clientWidth;
     this.statusChangeSubscription = this.ccService.statusChange$.subscribe(
       (event: NgcStatusChangeEvent) => {
-        if(event.status === "allow"){
+        if(event.status === 'allow'){
           let node = document.createElement('script'); // creates the script tag
           node.src = 'https://www.googletagmanager.com/gtag/js?id=G-VPEC2J7SDM'; // sets the source (insert url in between quotes)
           node.type = 'text/javascript'; // set the script type
@@ -189,7 +190,7 @@ export class NavigationComponent implements OnInit {
             }
           });
         }
-        if(event.status === "deny"){
+        if(event.status === 'deny'){
           this.mapsIframeShow = false;
         }
       });
