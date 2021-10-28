@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {Order} from '../../model/model';
 import {Router} from '@angular/router';
+import {OrderInfoDTO} from '../../dto/dto';
 
 @Component({
   selector: 'app-order',
@@ -10,9 +11,9 @@ import {Router} from '@angular/router';
       <div class="m-auto" *ngIf="!editOrder">
         <div class="flex mb-10">
           <h1 class="text-2xl text-center flex-1" *ngIf="currentOrderView == 'awaited'">Erwartete Bestellungen</h1>
-          <h1 class="text-2xl text-center flex-1" *ngIf="currentOrderView == 'active'">Aktive Bestellungen</h1>
+          <h1 class="text-2xl text-center flex-1" *ngIf="currentOrderView == 'active'">Aktive Bestellungen </h1>
           <h1 class="text-2xl text-center flex-1" *ngIf="currentOrderView == 'archive'">Archivierte Bestellungen </h1>
-          <div>
+          <div class="mx-8 space-x-2">
             <button class="border-2 p-2" [disabled]="page == 0"
                     (click)="page = page - 1; getOrders(currentOrderView, this.page)"><
             </button>
@@ -20,9 +21,9 @@ import {Router} from '@angular/router';
             <button class="border-2 p-2" (click)="page = page + 1; getOrders(currentOrderView, this.page)">></button>
           </div>
           <div class="space-x-4">
-            <button class="border-2 p-2" (click)="switchView('awaited')">Erwartet</button>
-            <button class="border-2 p-2" (click)="switchView('active')">In Bearbeitung</button>
-            <button class="border-2 p-2" (click)="switchView('archive')">Archiv</button>
+            <button class="border-2 p-2" (click)="switchView('awaited')">Erwartet [{{orderInfoDTO?.awaitedCount}}]</button>
+            <button class="border-2 p-2" (click)="switchView('active')">In Bearbeitung [{{orderInfoDTO?.activeCount}}]</button>
+            <button class="border-2 p-2" (click)="switchView('archive')">Archiv [{{orderInfoDTO?.archivedCount}}]</button>
 
           </div>
         </div>
@@ -89,6 +90,7 @@ export class OrderComponent implements OnInit {
   currentOrderView = 'active';
   page = 0;
   dateNow: Date;
+  orderInfoDTO: OrderInfoDTO;
 
   constructor(private http: HttpClient, private router: Router) {
     this.dateNow = new Date();
@@ -118,6 +120,11 @@ export class OrderComponent implements OnInit {
         this.router.navigate(['/login']);
 
       }
+    });
+
+    this.http.get('api/order/info').subscribe((orderInfoDTO: OrderInfoDTO) => {
+      this.orderInfoDTO = orderInfoDTO;
+      console.log(JSON.stringify(orderInfoDTO))
     });
 
   }
