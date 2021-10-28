@@ -2,6 +2,7 @@ package de.tschuehly.datarecoverybackend.service
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import de.tschuehly.datarecoverybackend.dto.OrderInfoDTO
 import de.tschuehly.datarecoverybackend.helpers.CrudService
 import de.tschuehly.datarecoverybackend.helpers.PictureContentStore
 import de.tschuehly.datarecoverybackend.model.Order
@@ -41,7 +42,7 @@ class OrderService(
         }
 
         val savedOrder = this.update(order)
-        if(previousTrackingState != savedOrder.trackingState){
+        if (previousTrackingState != savedOrder.trackingState) {
             when (savedOrder.trackingState) {
                 InProcess.parcelReceived -> mailService.sendParcelReceived(order)
                 InProcess.firstAnalysis -> mailService.sendFirstAnalysis(order)
@@ -76,17 +77,30 @@ class OrderService(
 
     fun getArchived(page: Number): List<Order> {
         val paging: Pageable = PageRequest.of(page.toInt(), 15)
-        return orderRepository.findByTrackingStateInOrderByOrderDateDesc(listOf(Completed.success, Completed.failure, Completed.legacyComplete), paging)
+        return orderRepository.findByTrackingStateInOrderByOrderDateDesc(archiveList, paging)
     }
 
-    fun getActive(): List<Order> {
-        return orderRepository.findByTrackingStateNotIn(listOf(orderReceived, Completed.failure, Completed.success, Completed.legacyComplete))
-    }
+    fun getActive(): List<Order> = orderRepository.findByTrackingStateNotIn(nonActiveList)
 
     fun getAwaited(page: Number): List<Order> {
         val paging: Pageable = PageRequest.of(page.toInt(), 15)
         return orderRepository.findByTrackingStateInOrderByOrderDateDesc(listOf(orderReceived), paging)
     }
+
+    fun getOrderInfo(): OrderInfoDTO {
+        return OrderInfoDTO(
+            activeCount = orderRepository.countOrdersByTrackingStateNotIn(nonActiveList),
+            awaitedCount = orderRepository.countOrdersByTrackingStateIn(listOf(orderReceived)),
+            archivedCount = orderRepository.countOrdersByTrackingStateIn(archiveList)
+        )
+    }
+
+    private val archiveList = listOf(
+        storage,
+        parcelReturned,
+        Completed.success, Completed.failure, Completed.legacyComplete
+    )
+    private val nonActiveList = listOf(orderReceived) + archiveList
 
     companion object OrderState {
         const val orderReceived = "Auftrag eingegangen"
@@ -111,5 +125,4 @@ class OrderService(
             const val legacyComplete = "Auftrag abgeschlossen"
         }
     }
-
 }

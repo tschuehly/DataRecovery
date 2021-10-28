@@ -21,16 +21,18 @@ class OrderController(
     @PostMapping("/updateStatus")
     fun updateStatus(@RequestBody order: Order) = orderService.updateStatus(order)
 
+    @GetMapping("/info")
+    fun getOrderInfo() = orderService.getOrderInfo()
     @GetMapping("/archive")
-    fun getArchived(
+    fun getArchivedOrders(
         @RequestParam(defaultValue = "0") page: Number
     ): List<Order> = orderService.getArchived(page)
 
     @GetMapping("/active")
-    fun getActive(): List<Order> = orderService.getActive()
+    fun getActiveOrders(): List<Order> = orderService.getActive()
 
     @GetMapping("/awaited")
-    fun getAwaited(
+    fun getAwaitedOrders(
         @RequestParam(defaultValue = "0") page: Number
     ): List<Order> = orderService.getAwaited(page)
 

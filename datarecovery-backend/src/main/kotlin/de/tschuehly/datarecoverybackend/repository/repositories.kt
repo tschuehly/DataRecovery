@@ -8,6 +8,8 @@ interface OrderRepository : JpaRepository<Order, Long> {
     fun findByTrackingIdAndCustomer_PostalCode(trackingId: String, postalCode: String): Order?
     fun findByTrackingStateInOrderByOrderDateDesc(trackingStateList: List<String>, pageable: Pageable): List<Order>
     fun findByTrackingStateNotIn(trackingStateList: List<String>): List<Order>
+    fun countOrdersByTrackingStateIn(trackingStateList: List<String>): Number
+    fun countOrdersByTrackingStateNotIn(trackingStateList: List<String>): Number
 }
 interface CustomerRepository : JpaRepository<Customer, Long>
 interface PictureRepository : JpaRepository<Picture, Long>
