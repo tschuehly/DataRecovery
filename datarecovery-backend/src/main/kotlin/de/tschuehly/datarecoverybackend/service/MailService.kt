@@ -231,4 +231,19 @@ class MailService(
         ${if (order.monthlyPayment == 6) "<span style=\"font-weight: bold\">Ratenzahlung: </span> 6 Monatsraten (6% Gebühr)<br />" else ""}
         
         """
+
+    fun sendReminder(order: Order) { //TODO: Better Email text
+        val (msg, helper) = getMimeMessageAndHelper(order)
+
+        helper.setSubject("Ihre Datenträger wurde noch nicht erhalten")
+        // language=HTML
+        val statusString = """
+            <h2 style="Margin-top: 0;Margin-bottom: 0;font-style: normal;font-weight: bold;color: #2e2e2e;font-size: 18px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;">
+                Wir haben ihre Datenträger noch nicht erhalten. Bitte kontaktieren Sie uns, falls sie das Paket schon verschickt haben.
+            </h2>"""
+        val body = statusString + getTrackingFooter(order)
+        val email = getHtmlEmail(body, order.orderDate)
+        helper.setText(email, true)
+        javaMailSender.send(msg)
+    }
 }

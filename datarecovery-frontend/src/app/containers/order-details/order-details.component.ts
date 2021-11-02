@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Order, orderStateEnum, Picture, Update} from '../../model/model';
-import {FormBuilder, FormControl} from '@angular/forms';
+import {FormControl} from '@angular/forms';
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-order-details',
@@ -79,44 +80,57 @@ import {FormBuilder, FormControl} from '@angular/forms';
         <div *ngIf="!edit" class="col-span-2 text-center mt-6">
           <h3 class="text-2xl font-bold">Status: {{order.trackingState}}</h3>
           <div class="mt-4" [ngSwitch]="order.trackingState">
-            <p *ngSwitchCase="orderStateList.firstAnalysis">
+            <p *ngSwitchCase="orderStateEnum.firstAnalysis">
               In der ersten Analyse wird Ihr Speicher nun nach dem Ursprung des Fehlers untersucht.<br>
-              So können beispielsweise Schleifspuren auf einem Schreib-/Lesekopf einen Headcrash nachweisen und uns Hinweise über den
+              So können beispielsweise Schleifspuren auf einem Schreib-/Lesekopf einen Headcrash nachweisen und uns
+              Hinweise über den
               Zustand der Oberfläche geben.<br/>
             </p>
-            <p *ngSwitchCase="orderStateList.orderedFirstPartDispender">
-              Die Reparatur Ihres Speichers benötigt einen kompatiblen Teilespender, um Datenzugriff zu ermöglichen. <br/>
+            <p *ngSwitchCase="orderStateEnum.orderedFirstPartDispender">
+              Die Reparatur Ihres Speichers benötigt einen kompatiblen Teilespender, um Datenzugriff zu ermöglichen.
+              <br/>
               Diesen finde Ich oftmals von Privatpersonen wie z.B. auf Ebay.<br/>
             </p>
-            <p *ngSwitchCase="orderStateList.orderedSecondPartDispender">
+            <p *ngSwitchCase="orderStateEnum.orderedSecondPartDispender">
               Der vorherige Teilespender war entweder nicht kompatibel oder nahm zu schnell neuen Schaden.<br/>
               Es wird nun mit einem zweiten Teilespender ein neuer Versuch gestartet.<br/>
             </p>
-            <p *ngSwitchCase="orderStateList.orderedThirdPartDispender">
+            <p *ngSwitchCase="orderStateEnum.orderedThirdPartDispender">
               Der vorherige Teilespender war entweder nicht kompatibel oder nahm zu schnell neuen Schaden.<br/>
               Es wird nun mit einem dritten Teilespender der letzte Versuch gestartet.<br/>
             </p>
-            <p *ngSwitchCase="orderStateList.readingMemory">
+            <p *ngSwitchCase="orderStateEnum.readingMemory">
               Es besteht Datenzugriff auf Ihren Speicher. Dieser wird nun Sektor für Sektor ausgelesen.<br/>
               Bitte melden Sie sich falls es Dateien gibt die priorisiert werden sollen.<br/>
             </p>
-            <p *ngSwitchCase="orderStateList.savingData">
+            <p *ngSwitchCase="orderStateEnum.savingData">
               Die geretteten Dateien werden nun auf den Ersatzdatenträger abgespeichert.<br/>
             </p>
-            <p *ngSwitchCase="orderStateList.reRead">
+            <p *ngSwitchCase="orderStateEnum.reRead">
               Der erste Lesedurchgang beinhaltet Fehler.<br/>
-              Es wird nun versucht durch erneute Lesezugriffe diese Fehler zu reduzieren oder bestenfalls vollständig zu beseitigen.
+              Es wird nun versucht durch erneute Lesezugriffe diese Fehler zu reduzieren oder bestenfalls vollständig zu
+              beseitigen.
             </p>
           </div>
 
         </div>
         <ng-container *ngIf="edit">
+
           <div class="col-span-2 mt-6">
             <span class="mr-4">{{order.trackingState}}</span>
             <select [formControl]="orderTrackingState">
               <option *ngFor="let state of orderStateList"
                       [ngValue]="state[1]">{{state[1]}}</option>
             </select>
+          </div>
+          <div class="col-span-2 mt-6 flex justify-between" *ngIf="order.trackingState == orderStateEnum.orderReceived">
+            <button class="border-2 rounded-md p-2 border-black" (click)="sendReminder(order)">Email Reminder senden</button>
+            <div class="bg-green-500 p-4 rounded-md" *ngIf="emailSuccess == true">
+              Email erfolgreich versendet
+            </div>
+            <div class="bg-red-500 p-4 rounded-md" *ngIf="emailSuccess == false">
+              Email nicht erfolgreich versendet
+            </div>
           </div>
           <div class="col-span-2 flex justify-between mt-6">
             <button class="border-2 rounded-md p-2 bg-red-500 border-black" (click)="deleteConfirm = true">
@@ -157,6 +171,7 @@ import {FormBuilder, FormControl} from '@angular/forms';
 })
 export class OrderDetailsComponent implements OnInit {
   orderStateList = Object.entries(orderStateEnum);
+  orderStateEnum = orderStateEnum;
   @Input() order: Order;
   @Input() edit: boolean;
   orderTrackingState: FormControl;
@@ -168,8 +183,9 @@ export class OrderDetailsComponent implements OnInit {
   @Output() close: EventEmitter<void> = new EventEmitter();
   deleteConfirm: boolean;
   daysToCompletion: number;
+  emailSuccess: boolean;
 
-  constructor() {
+  constructor(private http: HttpClient) {
 
   }
 
@@ -200,5 +216,11 @@ export class OrderDetailsComponent implements OnInit {
 
   togglePictureZoom(pic: Picture): void {
     pic[`zoomed`] = !pic[`zoomed`];
+  }
+
+  sendReminder(order: Order): void {
+    this.http.post('/api/order/' + order.id + '/sendReminder', null, {responseType: 'text', observe: 'response'}).subscribe(res => {
+      this.emailSuccess = res.status === 200;
+    }, err => {this.emailSuccess = false});
   }
 }

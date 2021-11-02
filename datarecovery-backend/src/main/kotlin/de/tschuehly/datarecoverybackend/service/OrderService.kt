@@ -14,6 +14,8 @@ import org.slf4j.Logger
 import org.springframework.data.domain.PageRequest
 import org.springframework.data.domain.Pageable
 import org.springframework.data.repository.findByIdOrNull
+import org.springframework.http.HttpStatus
+import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Service
 import org.springframework.web.multipart.MultipartFile
 import java.util.*
@@ -93,6 +95,11 @@ class OrderService(
             awaitedCount = orderRepository.countOrdersByTrackingStateIn(listOf(orderReceived)),
             archivedCount = orderRepository.countOrdersByTrackingStateIn(archiveList)
         )
+    }
+
+    fun sendReminder(orderId: Long): ResponseEntity<String> {
+        mailService.sendReminder(getById(orderId))
+        return ResponseEntity(HttpStatus.OK)
     }
 
     private val archiveList = listOf(

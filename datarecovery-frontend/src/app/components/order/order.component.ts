@@ -124,7 +124,6 @@ export class OrderComponent implements OnInit {
 
     this.http.get('api/order/info').subscribe((orderInfoDTO: OrderInfoDTO) => {
       this.orderInfoDTO = orderInfoDTO;
-      console.log(JSON.stringify(orderInfoDTO))
     });
 
   }
@@ -178,4 +177,5 @@ export class OrderComponent implements OnInit {
     const days = new Date(completionDate).getTime() - new Date().getTime();
     return Math.floor(days / (1000 * 3600 * 24));
   }
+
 }
