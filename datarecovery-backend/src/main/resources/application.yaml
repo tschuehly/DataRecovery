@@ -12,6 +12,21 @@ spring:
     change-log: classpath:db/changelog/db.changelog-master.xml
     contexts: none
     default-schema: public
+  boot:
+    admin:
+      client:
+        url: http://127.0.0.1:8088/admin
+      context-path: /admin
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        exclude: threaddump,heapdump
+      base-path: /api/actuator
+  endpoint:
+    health:
+      show-details: always
 server:
   port: 8088
 

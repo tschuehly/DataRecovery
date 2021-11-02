@@ -1,5 +1,6 @@
 package de.tschuehly.datarecoverybackend
 
+import de.codecentric.boot.admin.server.config.EnableAdminServer
 import de.tschuehly.datarecoverybackend.model.*
 import de.tschuehly.datarecoverybackend.repository.*
 import de.tschuehly.datarecoverybackend.security.JwtFilter
@@ -10,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional
 import java.util.*
 
 @SpringBootApplication
+@EnableAdminServer
 class DatarecoveryBackendApplication(
     val jwtFilter: JwtFilter
 ) : CommandLineRunner {
