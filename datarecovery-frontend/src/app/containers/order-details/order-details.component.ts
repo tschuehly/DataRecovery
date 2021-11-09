@@ -10,7 +10,7 @@ import {HttpClient} from "@angular/common/http";
       <div class="flex  mb-5 ">
         <h1 class="text-center text-2xl flex-1">Bestellung vom {{order.orderDate | date:'d.M.y H:mm' }}</h1>
         <button (click)="close.emit()">
-          <img src="/assets/x.svg">
+          <img alt="close" src="/assets/x.svg">
         </button>
       </div>
       <div class="grid grid-cols-2 text-lg gap-4">
@@ -134,7 +134,7 @@ import {HttpClient} from "@angular/common/http";
           </div>
           <div class="col-span-2 flex justify-between mt-6">
             <button class="border-2 rounded-md p-2 bg-red-500 border-black" (click)="deleteConfirm = true">
-              <img src="/assets/trash-2.svg">
+              <img alt="delete" src="/assets/trash-2.svg">
             </button>
             <button (click)="addUpdate.emit(order)" class="border-2 rounded-md p-2 border-black">Update
               hinzufügen

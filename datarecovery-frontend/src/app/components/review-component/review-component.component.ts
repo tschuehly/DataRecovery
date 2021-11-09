@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {ReviewDTO} from "../../dto/dto";
 import SwiperCore, {A11y, EffectCube, EffectFlip, Navigation, Pagination, Virtual} from "swiper";
-import { ReviewDetailDTO } from 'src/app/model/model';
+import {ReviewDetailDTO} from '../../model/model';
 
 SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
 

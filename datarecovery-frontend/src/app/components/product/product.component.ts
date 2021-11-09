@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Category, Order, Product} from '../../model/model';
+import {Category, Product} from '../../model/model';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {Router} from "@angular/router";
 

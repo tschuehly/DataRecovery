@@ -60,11 +60,12 @@ declare let gtag: Function;
       <div class="fixed w-64 bg-white rounded-xl bottom-4 left-4 z-50 p-4 shadow-2xl" *ngIf="showPhone">
         <div class="flex justify-around items-center pb-4">
           <h2 class="font-semibold pb-2">Ein Anruf klärt am schnellsten Ihr Anliegen:</h2>
-          <button (click)="showPhone = false"><img class="inline" src="assets/x.svg"></button>
+          <button (click)="showPhone = false"><img alt="close" class="inline" src="assets/x.svg"></button>
         </div>
 
 
-        <p class="font-semibold pb-2"><img class="inline pr-4" src="/assets/phone.svg">0151 61408355</p>
+        <p class="font-semibold pb-2">
+          <img alt="phone" class="inline pr-4" src="/assets/phone.svg">0151 61408355</p>
 
         <p>Mo.-Sa. 09.00-19.00 Uhr erreichbar.</p>
       </div>
@@ -139,6 +140,7 @@ declare let gtag: Function;
           </div>
         </div>
       </footer>
+    </div>
     `
 })
 export class NavigationComponent implements OnInit {

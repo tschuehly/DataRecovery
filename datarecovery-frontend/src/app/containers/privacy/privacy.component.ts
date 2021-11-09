@@ -5,43 +5,57 @@ import {Component, OnInit} from '@angular/core';
 
   template: `
     <div class="container my-10">
-    <h1 class="text-3xl font-bold">Vertraulichkeitserklärung gegenüber der Daten Ihres Speichers</h1>
-    <h2 class="text-2xl font-semibold mb-2 mt-4">1. Geheimhaltungspflichten</h2>
-    <h3 class="">Tobias Jungbauer Datenrettung verpflichtet sich:</h3>
-    <p>1.1 die Daten Ihres Speichers streng vertraulich zu behandeln und nur im Zusammenhang mit dem Zweck der Datenrettung zu verwenden.</p>
-<br>
-    <p>1.2 diese ebenfalls durch angemessene Geheimhaltungsmaßnahmen gegen den unbefugten Zugriff durch Dritte zu sichern
-      und bei der Verarbeitung der vertraulichen Informationen die gesetzlichen und vertraglichen Vorschriften zum Datenschutz einzuhalten.
-      Dies beinhaltet auch dem aktuellen Stand der Technik angepasste technische Sicherheitsmaßnahmen (Art. 32 DSGVO)
-      und die Verpflichtung der Mitarbeiter auf die Vertraulichkeit und die Beachtung des Datenschutzes (Art. 28 Abs. 3 lit. b) DSGVO);</p>
-<br>
-    <p>1.3 sofern Tobias Jungbauer Datenrettung aufgrund geltender Rechtsvorschriften gerichtlicher oder behördlicher Anordnungen oder aufgrund einschlägiger rechtlicher Regelungen verpflichtet ist,
-      teilweise oder sämtliche dieser Daten Ihres Speichers offenzulegen,
-      Ihnen (soweit rechtlich möglich und praktisch umsetzbar) hierüber unverzüglich schriftlich zu informieren und alle zumutbaren Anstrengungen zu unternehmen,
-      um den Umfang der Offenlegung auf ein Minimum zu beschränken und dem Ihnen erforderlichenfalls jede zumutbare Unterstützung zukommen zu lassen,
-       die eine Schutzanordnung gegen die Offenlegung sämtlicher vertraulicher Informationen oder von Teilen hiervon anstrebt.</p>
+      <h1 class="text-3xl font-bold">Vertraulichkeitserklärung gegenüber der Daten Ihres Speichers</h1>
+      <h2 class="text-2xl font-semibold mb-2 mt-4">1. Geheimhaltungspflichten</h2>
+      <h3 class="">Tobias Jungbauer Datenrettung verpflichtet sich:</h3>
+      <p>1.1 die Daten Ihres Speichers streng vertraulich zu behandeln und nur im Zusammenhang mit dem Zweck der Datenrettung zu
+        verwenden.</p>
+      <br>
+      <p>1.2 diese ebenfalls durch angemessene Geheimhaltungsmaßnahmen gegen den unbefugten Zugriff durch Dritte zu sichern
+        und bei der Verarbeitung der vertraulichen Informationen die gesetzlichen und vertraglichen Vorschriften zum Datenschutz
+        einzuhalten.
+        Dies beinhaltet auch dem aktuellen Stand der Technik angepasste technische Sicherheitsmaßnahmen (Art. 32 DSGVO)
+        und die Verpflichtung der Mitarbeiter auf die Vertraulichkeit und die Beachtung des Datenschutzes (Art. 28 Abs. 3 lit. b)
+        DSGVO);</p>
+      <br>
+      <p>1.3 sofern Tobias Jungbauer Datenrettung aufgrund geltender Rechtsvorschriften gerichtlicher oder behördlicher Anordnungen oder
+        aufgrund einschlägiger rechtlicher Regelungen verpflichtet ist,
+        teilweise oder sämtliche dieser Daten Ihres Speichers offenzulegen,
+        Ihnen (soweit rechtlich möglich und praktisch umsetzbar) hierüber unverzüglich schriftlich zu informieren und alle zumutbaren
+        Anstrengungen zu unternehmen,
+        um den Umfang der Offenlegung auf ein Minimum zu beschränken und dem Ihnen erforderlichenfalls jede zumutbare Unterstützung zukommen
+        zu lassen,
+        die eine Schutzanordnung gegen die Offenlegung sämtlicher vertraulicher Informationen oder von Teilen hiervon anstrebt.</p>
 
-     <h2 class="text-2xl font-semibold mb-2 mt-4">2. Löschung der Daten Ihres Speichers</h2>
-     <p>2.1 Auf Aufforderung des Inhabers sowie ohne Aufforderung spätestens nach Erreichung des Zwecks der Datenrettung ist Tobias Jungbauer Datenrettung verpflichtet,
-         sämtliche Daten Ihres Speichers einschließlich der Kopien hiervon innerhalb von vierzehn (14) Arbeitstagen nach Zugang der Aufforderung bzw. nach Beendigung des Auftrags zurückzugeben
-         oder zu vernichten (einschließlich elektronisch gespeicherter vertraulicher Informationen), sofern nicht mit dem Inhaber vereinbarte oder gesetzliche Aufbewahrungspflichten dem entgegenstehen.</p>
-         <br>
-      <p>2.2 Die Vernichtung gespeicherter Daten Ihres Speichers erfolgt durch die vollständige und unwiderrufliche Löschung der Dateien oder unwiederbringliche Zerstörung des Datenträgers.
-           Vollständige und unwiderrufliche Löschung bedeutet, dass die Daten Ihres Speichers derart gelöscht werden,
-           dass jeglicher Zugriff auf diese Informationen unmöglich wird, wobei spezielle Löschverfahren (z.B. mittels „Wiping“) zu verwenden sind,
-           welche den anerkannten Standards genügen (bspw. Standards des Bundesamts für Informationssicherheit).</p>
-          <br>
-       <p>2.3 Auf Ihr Verlangen hat Tobias Jungbauer Datenrettung schriftlich zu versichern, dass er sämtliche Daten Ihres Speichers vollständig und unwiderruflich gelöscht hat.</p>
+      <h2 class="text-2xl font-semibold mb-2 mt-4">2. Löschung der Daten Ihres Speichers</h2>
+      <p>2.1 Auf Aufforderung des Inhabers sowie ohne Aufforderung spätestens nach Erreichung des Zwecks der Datenrettung ist Tobias
+        Jungbauer Datenrettung verpflichtet,
+        sämtliche Daten Ihres Speichers einschließlich der Kopien hiervon innerhalb von vierzehn (14) Arbeitstagen nach Zugang der
+        Aufforderung bzw. nach Beendigung des Auftrags zurückzugeben
+        oder zu vernichten (einschließlich elektronisch gespeicherter vertraulicher Informationen), sofern nicht mit dem Inhaber vereinbarte
+        oder gesetzliche Aufbewahrungspflichten dem entgegenstehen.</p>
+      <br>
+      <p>2.2 Die Vernichtung gespeicherter Daten Ihres Speichers erfolgt durch die vollständige und unwiderrufliche Löschung der Dateien
+        oder unwiederbringliche Zerstörung des Datenträgers.
+        Vollständige und unwiderrufliche Löschung bedeutet, dass die Daten Ihres Speichers derart gelöscht werden,
+        dass jeglicher Zugriff auf diese Informationen unmöglich wird, wobei spezielle Löschverfahren (z.B. mittels „Wiping“) zu verwenden
+        sind,
+        welche den anerkannten Standards genügen (bspw. Standards des Bundesamts für Informationssicherheit).</p>
+      <br>
+      <p>2.3 Auf Ihr Verlangen hat Tobias Jungbauer Datenrettung schriftlich zu versichern, dass er sämtliche Daten Ihres Speichers
+        vollständig und unwiderruflich gelöscht hat.</p>
 
       <h2 class="text-2xl font-semibold mb-2 mt-4">3. Eigentumsrechte an den vertraulichen Informationen</h2>
-      <p>3.1 Der Auftraggeber behält hinsichtlich der Daten Ihres Speichers alle Eigentums-, Nutzungs- und Verwertungsrechte. Tobias Jungbauer Datenrettung erwirbt kein Eigentum oder – mit Ausnahme der Nutzung für den Zweck der Datenrettung –
-         sonstige Nutzungsrechte an den vertraulichen Daten aufgrund dieser Vereinbarung oder sonst wegen konkludenten Verhaltens.</p>
-         <br>
-         <p>3.2 Tobias Jungbauer Datenrettung hat es zu unterlassen, die Daten Ihres Speichers außerhalb des Zwecks in irgendeiner Weise selbst zu verwerten oder durch Dritte verwerten zu lassen.</p>
+      <p>3.1 Der Auftraggeber behält hinsichtlich der Daten Ihres Speichers alle Eigentums-, Nutzungs- und Verwertungsrechte. Tobias
+        Jungbauer Datenrettung erwirbt kein Eigentum oder – mit Ausnahme der Nutzung für den Zweck der Datenrettung –
+        sonstige Nutzungsrechte an den vertraulichen Daten aufgrund dieser Vereinbarung oder sonst wegen konkludenten Verhaltens.</p>
+      <br>
+      <p>3.2 Tobias Jungbauer Datenrettung hat es zu unterlassen, die Daten Ihres Speichers außerhalb des Zwecks in irgendeiner Weise selbst
+        zu verwerten oder durch Dritte verwerten zu lassen.</p>
       <br>
       <br>
-         <p></p>
-         <h1 class="text-3xl font-bold">Datenschutz­erklärung zur Nutzung der Website</h1>
+      <p></p>
+      <h1 class="text-3xl font-bold">Datenschutz­erklärung zur Nutzung der Website</h1>
       <h2 class="text-2xl font-semibold mb-2 mt-4">1. Datenschutz auf einen Blick</h2>
       <h3 class="font-semibold mb-2 mt-4 underline">Allgemeine Hinweise</h3>
       <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert,
@@ -116,10 +130,10 @@ import {Component, OnInit} from '@angular/core';
         möglich.</p>
       <h3 class="font-semibold mb-2 mt-4 underline">Hinweis zur verantwortlichen Stelle</h3>
       <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
-      <p>Tobias Jungbauer Datenrettung<br />
-        Am Stein 9<br />
+      <p>Tobias Jungbauer Datenrettung<br/>
+        Am Stein 9<br/>
         85049 Ingolstadt<br></p>
-      <p>Telefon: 0841 12840705<br />
+      <p>Telefon: 0841 12840705<br/>
         E-Mail: info@jungbauerdatenrettung.de<br></p>
 
       <p>Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über
@@ -309,10 +323,11 @@ import {Component, OnInit} from '@angular/core';
       <p>Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt. Details
         finden Sie hier: <a href="https://privacy.google.com/businesses/controllerterms/mccs/" target="_blank"
                             rel="noopener noreferrer">https://privacy.google.com/businesses/controllerterms/mccs/</a>.
-      <p>Nähere Informationen zu Nutzungsbedingungen und Datenschutz finden Sie unter: <a href="http://www.google.com/analytics/terms/de.html " target="_blank"
-                            rel="noopener noreferrer">http://www.google.com/analytics/terms/de.html</a>.
+      <p>Nähere Informationen zu Nutzungsbedingungen und Datenschutz finden Sie unter: <a
+        href="https:///www.google.com/analytics/terms/de.html " target="_blank"
+        rel="noopener noreferrer">https://www.google.com/analytics/terms/de.html</a>.
         bzw. unter: <a href="https://www.google.de/intl/de/policies/" target="_blank"
-                            rel="noopener noreferrer">https://www.google.de/intl/de/policies/</a>.
+                       rel="noopener noreferrer">https://www.google.de/intl/de/policies/</a>.
         Wir weisen Sie darauf hin, dass auf dieser Website Google Analytics um den Code „anonymizeIp“ erweitert wurde,
         um eine anonymisierte Erfassung von IP-Adressen (sog. IP-Masking) zu gewährleisten.</p>
       <h4 class="font-semibold mt-2">IP Anonymisierung</h4>
@@ -327,7 +342,8 @@ import {Component, OnInit} from '@angular/core';
       <h4 class="font-semibold mt-2">Browser Plugin</h4>
       <p>Sie können die Erfassung und Verarbeitung Ihrer Daten durch Google verhindern, indem Sie das unter dem
         folgenden Link verfügbare Browser-Plugin herunterladen und installieren: <a
-          href="https://tools.google.com/dlpage/gaoptout?hl=de" target="_blank" rel="noopener noreferrer">https://tools.google.com/dlpage/gaoptout?hl=de</a>.</p>
+          href="https://tools.google.com/dlpage/gaoptout?hl=de" target="_blank" rel="noopener noreferrer">https://tools.google.com/dlpage/gaoptout?hl=de</a>.
+      </p>
       <p>Mehr Informationen zum Umgang mit Nutzerdaten bei Google Analytics finden Sie in der Datenschutzerklärung von
         Google: <a href="https://support.google.com/analytics/answer/6004245?hl=de" target="_blank"
                    rel="noopener noreferrer">https://support.google.com/analytics/answer/6004245?hl=de</a>.</p>
@@ -366,7 +382,8 @@ import {Component, OnInit} from '@angular/core';
       <p>Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt. Details
         finden Sie hier: <a href="https://policies.google.com/privacy/frameworks" target="_blank"
                             rel="noopener noreferrer">https://policies.google.com/privacy/frameworks</a> und <a
-          href="https://privacy.google.com/businesses/controllerterms/mccs/" target="_blank" rel="noopener noreferrer">https://privacy.google.com/businesses/controllerterms/mccs/</a>.</p>
+          href="https://privacy.google.com/businesses/controllerterms/mccs/" target="_blank" rel="noopener noreferrer">https://privacy.google.com/businesses/controllerterms/mccs/</a>.
+      </p>
       <h3 class="font-semibold mb-2 mt-4 underline">Google Conversion-Tracking</h3>
       <p>Diese Website nutzt Google Conversion Tracking. Anbieter ist die Google Ireland Limited („Google“), Gordon
         House, Barrow Street, Dublin 4, Irland.</p>
@@ -383,13 +400,17 @@ import {Component, OnInit} from '@angular/core';
         Einwilligung zur Speicherung von Cookies), erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs.
         1 lit. a DSGVO; die Einwilligung ist jederzeit widerrufbar.</p>
       <p>Mehr Informationen zu Google Conversion-Tracking finden Sie in den Datenschutzbestimmungen von Google: <a
-        href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy?hl=de</a>.</p>
+        href="https://policies.google.com/privacy?hl=de" target="_blank"
+        rel="noopener noreferrer">https://policies.google.com/privacy?hl=de</a>.</p>
 
-        <h3 class="font-semibold mb-2 mt-4 underline">Nutzung von Microsoft Clarity</h3>
-      <p>Im Fall einer Zustimmung zu statistischer Auswertung nutzt diese Webseite den Dienst "Clarity" der Microsoft Corporation. Clarity verwendet unter anderem Cookies,
-        die eine Analyse der Benutzung unserer Webseite ermöglichen, sowie einen sog. Tracking Code. Die erhobenen Informationen werden an Clarity übermittelt und dort gespeichert.
-        Diese können lt. Microsoft auch zu Werbezwecken genutzt werden. Siehe dazu Microsoft Privacy Statements. Für weitere Informationen zu Clarity siehe:
-      <a href="https://clarity.microsoft.com/terms" target="_blank" rel="noopener noreferrer">https://clarity.microsoft.com/terms</a>.</p>
+      <h3 class="font-semibold mb-2 mt-4 underline">Nutzung von Microsoft Clarity</h3>
+      <p>Im Fall einer Zustimmung zu statistischer Auswertung nutzt diese Webseite den Dienst "Clarity" der Microsoft Corporation. Clarity
+        verwendet unter anderem Cookies,
+        die eine Analyse der Benutzung unserer Webseite ermöglichen, sowie einen sog. Tracking Code. Die erhobenen Informationen werden an
+        Clarity übermittelt und dort gespeichert.
+        Diese können lt. Microsoft auch zu Werbezwecken genutzt werden. Siehe dazu Microsoft Privacy Statements. Für weitere Informationen
+        zu Clarity siehe:
+        <a href="https://clarity.microsoft.com/terms" target="_blank" rel="noopener noreferrer">https://clarity.microsoft.com/terms</a>.</p>
 
       <h2 class="text-2xl font-semibold mb-2 mt-4">6. Plugins und Tools</h2>
       <h3 class="font-semibold mb-2 mt-4 underline">Google Maps</h3>
@@ -411,7 +432,8 @@ import {Component, OnInit} from '@angular/core';
         <a href="https://privacy.google.com/businesses/gdprcontrollerterms/sccs/" target="_blank"
            rel="noopener noreferrer">https://privacy.google.com/businesses/gdprcontrollerterms/sccs/</a>.</p>
       <p>Mehr Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung von Google: <a
-        href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy?hl=de</a>.</p>
+        href="https://policies.google.com/privacy?hl=de" target="_blank"
+        rel="noopener noreferrer">https://policies.google.com/privacy?hl=de</a>.</p>
       <h2 class="text-2xl font-semibold mb-2 mt-4">7. eCommerce und Zahlungs­anbieter</h2>
       <h3 class="font-semibold mb-2 mt-4 underline">Verarbeiten von Daten (Kunden- und Vertragsdaten)</h3>
       <p>Wir erheben, verarbeiten und nutzen personenbezogene Daten nur, soweit sie für die Begründung, inhaltliche
