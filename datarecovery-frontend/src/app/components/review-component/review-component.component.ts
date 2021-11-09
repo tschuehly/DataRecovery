@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {ReviewDTO} from "../../dto/dto";
-import SwiperCore, {A11y, EffectCube, EffectFlip, Navigation, Pagination, Virtual} from "swiper/core";
+import {HttpClient} from '@angular/common/http';
+import {ReviewDTO} from '../../dto/dto';
+import SwiperCore, {A11y, EffectCube, EffectFlip, Navigation, Pagination, Virtual} from 'swiper';
 
 SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
 
@@ -98,9 +98,9 @@ export class ReviewComponentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.http.get("/api/review").subscribe((reviews: ReviewDTO[]) => {
-      this.reviews = reviews.sort((r1,r2) => r2.time-r1.time)
-    })
+    this.http.get('/api/review').subscribe((reviews: ReviewDTO[]) => {
+      this.reviews = reviews.sort((r1, r2) => r2.time - r1.time);
+    });
   }
 
 }

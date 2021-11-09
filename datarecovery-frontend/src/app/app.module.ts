@@ -17,7 +17,6 @@ import { ProductDetailComponent } from './containers/product-detail/product-deta
 import { UploadFileComponent } from './containers/upload-file/upload-file.component';
 import { UpdateComponent } from './components/update/update.component';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StaticComponent } from './containers/static/static.component';
 import {ClickOutsideModule} from 'ng-click-outside';
 import { CategoryComponent } from './components/category/category.component';
@@ -112,7 +111,6 @@ const cookieConfig:NgcCookieConsentConfig = {
     HttpClientModule,
     FormsModule,
     NgxPageScrollCoreModule.forRoot({duration: 700, scrollOffset: 80}),
-    BrowserAnimationsModule,
     ClickOutsideModule,
     NgcCookieConsentModule.forRoot(cookieConfig),
     SwiperModule
