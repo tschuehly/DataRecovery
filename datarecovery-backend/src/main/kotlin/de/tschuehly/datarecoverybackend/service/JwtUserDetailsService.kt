@@ -39,7 +39,7 @@ class JwtUserDetailsService(
             .withIssuedAt(Date.from(now))
             .withExpiresAt(Date.from(expiry))
             .withSubject(websiteUser.username)
-                .withClaim("id", websiteUser.id)
+            .withClaim("id", websiteUser.id)
             .sign(algorithm)
     }
 
@@ -55,9 +55,8 @@ class JwtUserDetailsService(
 
     fun loadUserByToken(token: String): JwtUserDetails? {
         return getDecodedToken(token)?.subject
-                ?.let { userRepository.findByUsername(it) }
-                ?.let { getUserDetails(it, token) } ?: throw SecurityException("Error in validating token")
-
+            ?.let { userRepository.findByUsername(it) }
+            ?.let { getUserDetails(it, token) } ?: throw SecurityException("Error in validating token")
     }
 
     private fun getDecodedToken(token: String): DecodedJWT? {

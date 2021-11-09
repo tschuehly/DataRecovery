@@ -14,7 +14,8 @@ import {Order, Product} from '../../model/model';
           <label class="py-4 px-12">Auftrag zur Datenrettung:
             <select class="block mt-2 w-full text-black" formControlName="product" #productSelect required>
               <option *ngFor="let product of products" [value]="product.id">
-                {{product.category.name}}  {{product.name}}  <span *ngIf="product.price">{{product.price | number : '.2':'de' }}€</span>
+                {{product.category.name}}  {{product.name}}  <span
+                *ngIf="product.price">{{product.price | number : '.2':'de' }}€</span>
               </option>
             </select>
           </label>
@@ -29,33 +30,37 @@ import {Order, Product} from '../../model/model';
             </label>
           </ng-container>
           <ng-container *ngIf="productSelect.value">
-
-            <label class="py-4 px-12 font-semibold">Ist eine Ratenzahlung gewünscht?:
+            <div class="py-4 px-12">
+              <label class="block mt-2">
+                <span class="font-bold">Optional:</span> Bis zu welchem Datum werden die Daten benötigt?
+                <input type="date" class="mt-2 ml-4 text-black" formControlName="deadline" />
+              </label>
+            </div>
+            <label class="py-4 px-12">Ist eine Ratenzahlung gewünscht?:
               <select class="block mt-2 w-full text-black" formControlName="monthlyPayment" required>
                 <option selected value=1>Keine Ratenzahlung</option>
-                <option value=2>Zweimonatige Ratenzahlung (1% Gebühr)</option>
+                <option value=2>2-monatige Ratenzahlung (2% Gebühr)</option>
+                <option value=6>6-monatige Ratenzahlung (6% Gebühr)</option>
               </select>
             </label>
           </ng-container>
-          <h2 class="px-12 font-semibold">Allgemeine Geschäftsbedingungen und Datenschutzrichtlinien:</h2>
-          <div class="flex px-12">
-            <input class="self-center" type="checkbox" formControlName="agb" required id="agbCheckbox" >
-            <label for="agbCheckbox" class="ml-4">
-              Hiermit bestätige ich die
-              <a class="font-semibold underline" routerLink="impressum">Datenschutzrichtlinien</a> und die
-              <a class="font-semibold underline" routerLink="agb">allgemeinen Geschäftsbedingungen</a></label>
 
-          </div>
+
+          <label class="py-4 px-12"><span class="font-bold">Optional:</span>   Zusätzliche Anmerkungen:
+            <textarea class="mt-1 w-full text-black" formControlName="note"></textarea>
+          </label>
+          <h2 class="font-semibold inline text-center"><a class="font-semibold underline" routerLink="agb">Allgemeine
+            Geschäftsbedingungen</a> und <a class="font-semibold underline" routerLink="datenschutz">Datenschutzrichtlinien</a>
+          </h2>
 
           <div class="flex justify-center mt-4 bg-silver p-4 rounded-b-2xl">
             <button (click)="submitProduct()"
                     class="bg-white py-2 px-4 shadow rounded text-black"
-                    [disabled]="!(this.orderForm.get('product').valid && this.orderForm.get('agb').value == true)"
-                    [ngClass]="{'bg-gray-300 cursor-default': !(this.orderForm.get('product').valid && this.orderForm.get('agb').value == true)}">
-              {{this.orderForm.get('product').valid && this.orderForm.get('agb').value == true ? "Auftragsdaten eingeben" : "Füllen Sie alle benötigten Felder aus" }}
+                    [disabled]="!(this.orderForm.get('product').valid )"
+                    [ngClass]="{'bg-gray-300 cursor-default': !(this.orderForm.get('product').valid)}">
+              {{this.orderForm.get('product').valid ? "Auftragsdaten eingeben" : "Füllen Sie alle benötigten Felder aus" }}
             </button>
           </div>
-
         </ng-container>
         <ng-container *ngIf="productFormFilled">
 
@@ -128,20 +133,23 @@ export class OrderFormComponent implements OnInit {
 
       }),
       product: [''],
+      note: [''],
       replacement: ['Sie senden einen eigenen Ersatzspeicher zur Sicherung mit: kostenfrei'],
-      agb: [''],
-      monthlyPayment: [1]
+      monthlyPayment: [1],
+      deadline: ['']
     });
-    this.orderForm.get('product').valid
   }
 
   onSubmit(): void {
     this.order = (this.orderForm.getRawValue() as Order);
+    console.log(this.order);
+    this.order.deadline = new Date(this.orderForm.get('deadline').value);
     this.order.orderProduct = this.products.find(product => product.id.toString() === this.orderForm.get('product').value);
     this.orderOutput.emit(this.order);
   }
-  submitProduct(){
-    console.log(this.orderForm.controls)
-    this.productFormFilled = true
+
+  submitProduct(): void {
+    console.log(this.orderForm.controls);
+    this.productFormFilled = true;
   }
 }

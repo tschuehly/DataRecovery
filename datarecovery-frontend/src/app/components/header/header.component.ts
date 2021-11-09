@@ -1,12 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import SwiperCore, {A11y, Autoplay, EffectCube, EffectFlip, Navigation, Pagination, Virtual} from "swiper";
+import SwiperCore, {A11y, Autoplay, EffectCube, EffectFlip, Navigation, Pagination, Virtual} from 'swiper';
 
 SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube, Autoplay]);
 
 @Component({
   selector: 'app-header',
   template: `
-    <swiper  class="bg-gray-main"
+    <swiper  class="bg-gray-main bg-circuit-board"
       [spaceBetween]="30"
       [effect]="'fade'"
       [navigation]="false"

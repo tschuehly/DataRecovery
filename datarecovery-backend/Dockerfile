@@ -3,9 +3,9 @@ WORKDIR /datarecovery-backend
 COPY build.gradle.kts build.gradle.kts
 COPY settings.gradle.kts settings.gradle.kts
 
-RUN gradle clean build --no-daemon > /dev/null 2>&1 || true
+RUN gradle clean build -x test --no-daemon > /dev/null 2>&1 || true
 COPY src src
-RUN gradle build --stacktrace
+RUN gradle build --stacktrace -x test
 RUN java -Djarmode=layertools -jar build/libs/datarecovery-*.jar extract
 
 FROM adoptopenjdk/openjdk15:jre-15.0.2_7-alpine AS prod

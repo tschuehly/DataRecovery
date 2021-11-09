@@ -22,7 +22,7 @@
             <li></li>
           </th>
           <td>
-            <h2 class="col-span-11 text-xl">bei beschädigten HDD-Festplatten, SSD-Speicher, USB-Sticks, micro SD- und SD-Karten 
+            <h2 class="col-span-11 text-xl">bei beschädigten HDD-Festplatten, SSD-Speicher, USB-Sticks, micro SD- und SD-Karten
               <p>oder nach versehentliches Löschen/Formatieren.</p></h2>
           </td>
         </tr>
@@ -64,18 +64,18 @@
           <td>
             <h2 class="col-span-11 text-xl">Sie gehen hier ausdrücklich <span class=" font-semibold">nicht</span> in Vorkasse, zudem gibt es keine versteckte Kosten.</h2>
             <h2 class="col-span-11 text-xl">Eine Bezahlung erfolgt nur <span class=" font-semibold">nach erfolgreicher Datenrettung. </span> </h2>
-            
-            
+
+
           </td>
         </tr>
       </table>
     </div>
-   
+
   </div>
 
 </div>
 
-<div class="bg-cover text-xl bg-gray-main text-gray-50" id="priceList">
+<div class="text-xl bg-gray-main bg-circuit-board text-gray-50" id="priceList">
   <h2 class="text-3xl text-gray-50 py-5 text-center tracking-wider">Ein Festpreis auch für komplexe Defekte</h2>
   <div class="container py-10 text-center rounded-2xl break-words" >
     <div class="bg-gray-main rounded-2xl" style="box-shadow: 0 2px 25px 0 black">
@@ -150,7 +150,7 @@
         <div class="flex-1 bg-contain bg-no-repeat bg-center " style="background-image: url('/assets/RAID Symbol.jpg')"></div>
       </div>
       <div class="flex flex-col md:flex-row bg-silver p-4 rounded-b-2xl justify-between text-black">
-        <div class="self-center text-base">Alle angegebenen Preise sind bereits inklusive 19% Mehrwertsteuer. Eine <span class=" font-semibold">zweimonatige Ratenzahlung</span> ist auf Wunsch möglich</div>
+        <div class="self-center text-base">Alle angegebenen Preise sind bereits inklusive 19% Mehrwertsteuer. Eine <span class=" font-semibold">Ratenzahlung</span> ist auf Wunsch möglich</div>
       </div>
     </div>
   </div>
@@ -280,13 +280,13 @@
 <div class="bg-white">
 <div class="bg-white container py-10">
   <div class="bg-gray-main text-white rounded-2xl"  style="box-shadow: 0 2px 25px 0 black;" id="order_form">
-  
+
   <app-order-form
     *ngIf="products && orderSubmitted === null"
     [products]="products"
     [replacementProducts]="replacementProducts"
     (orderOutput)="submitOrder($event)"></app-order-form>
-  
+
   <div *ngIf="orderSubmitted === false">
     <div class="bg-silver h-6 rounded-t-2xl"></div>
     <div class="grid grid-cols-2">
@@ -298,9 +298,9 @@
       </div>
     </div>
     <div class="bg-silver h-6 rounded-b-2xl"></div>
-  
+
   </div>
-  
+
   <div *ngIf="orderSubmitted === true || !products" id="order_submit">
     <div class="bg-silver h-6 rounded-t-2xl"></div>
     <div class="grid grid-cols-2" *ngIf="orderSubmitted === true">
@@ -309,7 +309,7 @@
         <p class="py-4 text-silver text-lg">Ihre Anfrage wurde erfolgreich übermittelt. <br> Sie erhalten eine Bestätigung per E-Mail.</p>
       </div>
     </div>
-  
+
     <div *ngIf="!products" class="text-center py-8">
       <p class="pb-8">Bitte kontaktieren sie Tobias Jungbauer über eine Email an:
         <span class="font-bold">info@jungbauerdatenrettung.de</span>
@@ -320,14 +320,14 @@
     </div>
     <div class="bg-silver h-6 rounded-b-2xl"></div>
   </div>
-  
+
   </div>
-  
+
 </div>
 </div>
 
 <div class="bg-white text-center">
-  
+
 </div>
 
 

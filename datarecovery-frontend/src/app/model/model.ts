@@ -1,3 +1,4 @@
+/* tslint:disable:variable-name */
 export class Customer{
   id: number;
   firstName: string;
@@ -12,23 +13,34 @@ export class Order{
   id: number;
   trackingId: string;
   orderDate: Date;
+  note: string;
   trackingState: orderStateEnum;
   orderProduct: Product;
   customer: Customer;
   replacement: string;
+  updateIdList: number[];
   updates: Update[];
   monthlyPayment: number;
+  deadline: Date;
+  completionDate: Date;
 }
 export enum orderStateEnum {
   orderReceived = 'Auftrag eingegangen',
   parcelReceived = 'Paket eingegangen',
   firstAnalysis = 'Erste Analyse',
-  orderedReplacementParts = 'Bestellung Ersatzteile',
+  orderedFirstPartDispender = 'Bestellung erster Teilespender',
+  orderedSecondPartDispender = 'Bestellung zweiter Teilespender',
+  orderedThirdPartDispender = 'Bestellung dritter Teilespender',
+  waitingForPinout = 'Warte auf Pinout',
   inRepair = 'Reparatur',
-  readingMemory = 'Auslesen Speicher',
+  readingMemory = 'Speicher wird ausgelesen',
+  reRead = 'Speicher wird erneut ausgelesen (Reread)',
   savingData = 'Abspeicherung Dateien',
+  storage = 'Einlagerung',
   parcelReturned = 'Rückversand',
-  orderCompleted = 'Auftrag abgeschlossen'
+  success = 'Datenrettung erfolgreich abgeschlossen',
+  failure = 'Datenrettung nicht erfolgreich abgeschlossen',
+  legacyComplete = 'Auftrag abgeschlossen'
 }
 export class Update{
   id: number;
@@ -39,7 +51,8 @@ export class Update{
 export class Picture{
   name: string;
   type: string;
-  data: File;
+  id: number;
+  imageId: string;
 }
 export class Product{
   constructor(public id: number = 0,
@@ -76,7 +89,7 @@ export class Review{
   author_url: string;
   profile_photo_url: string;
   rating: number;
-  relative_time_description: String
+  relative_time_description: string;
   text: string;
   time: number;
 }

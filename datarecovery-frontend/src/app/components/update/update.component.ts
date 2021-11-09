@@ -13,7 +13,7 @@ import {HttpClient} from '@angular/common/http';
               <input type="radio" (click)="addQuestion(question,'Ja')" name="question"> Ja
               <input type="radio" (click)="addQuestion(question,'Nein')" name="question"> Nein
           </label>
-          <form [formGroup]="updateForm" enctype="multipart/form-data">
+          <form [formGroup]="updateForm" class="text-black" enctype="multipart/form-data">
               <label>Beschreibung
                   <textarea class="block mt-2 w-96 h-96" formControlName="description"></textarea></label>
               <div class="flex flex-col my-4" *ngFor="let picture of pictureDetails.controls; let i = index">
@@ -24,8 +24,8 @@ import {HttpClient} from '@angular/common/http';
                       <input class="block mt-2 w-full" type="file" (change)="onFileChange($event,i)">
                   </label>
               </div>
-              <button class="button-primary" (click)="addImage()">Bild hinzufügen</button>
-              <button class="button-primary" (click)="addUpdateToOrder()">Update speichern</button>
+              <button class="border-2 rounded-xl p-2 text-black" (click)="addImage()">Bild hinzufügen</button>
+              <button class="border-2 rounded-xl p-2 text-black" (click)="addUpdateToOrder()">Update speichern</button>
           </form>
       </div>
   `,
@@ -45,7 +45,6 @@ export class UpdateComponent implements OnInit {
   ngOnInit(): void {
   }
   addUpdateToOrder(): void{
-    console.log(this.files);
     const updateData = new FormData();
     for (let i = 0; i < this.files.length; i++) {
       if (this.pictureDetails.controls[i].value === ''){
