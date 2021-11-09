@@ -12,4 +12,6 @@ class ReviewController(val reviewService: ReviewService) {
     fun getAllReviews() = reviewService.getAllReviews()
     @GetMapping("refresh")
     fun refreshReviews() = reviewService.refreshReviews()
+    @GetMapping("/detail")
+    fun getReviewDetail() = reviewService.getReviewDetail()
 }

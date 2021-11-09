@@ -1,26 +1,51 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {ReviewDTO} from '../../dto/dto';
-import SwiperCore, {A11y, EffectCube, EffectFlip, Navigation, Pagination, Virtual} from 'swiper';
+import {HttpClient} from "@angular/common/http";
+import {ReviewDTO} from "../../dto/dto";
+import SwiperCore, {A11y, EffectCube, EffectFlip, Navigation, Pagination, Virtual} from "swiper";
+import { ReviewDetailDTO } from 'src/app/model/model';
 
 SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
 
 @Component({
   selector: 'app-review-component',
   template: `
+    <div class="bg-gray-main bg-circuit-board text-white button">
+      <div class="flex justify-center pt-8 text-center">
+        <div>
+          <h3 class="text-4xl font-bold mb-4">Kundenbewertungen</h3>
+          <div class="flex items-center">
+            <svg class=" text-yellow-400 mx-1 w-8 h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path
+              d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+            </svg>
+            <svg class=" text-yellow-400 mx-1 w-8 h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path
+              d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+            </svg>
+            <svg class=" text-yellow-400 mx-1 w-8 h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path
+              d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+            </svg>
+            <svg class=" text-yellow-400 mx-1 w-8 h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path
+              d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+            </svg>
+            <svg class=" text-yellow-400 mx-1 w-8 h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path
+              d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+            </svg>
+            <span class="text-2xl font-semibold ml-4">
+               {{this.reviewDetail?.rating | number: '1.1' }} bei {{this.reviewDetail?.userRatingsCount}} Bewertungen
+            </span>
+          </div>
 
-
-    <div class="bg-white text-white">
-
-      <h1 class="text-3xl text-center pt-8 text-gray-main">Kundenbewertungen Ø5.0 (60)  </h1>
-
-
-
+        </div>
+      </div>
       <div class="px-0 md:container  py-4">
         <swiper class="my-4" [effect]="'slide'" [slidesPerView]="1"
                 [spaceBetween]="50" [virtual]="true" [navigation]="true" [pagination]="true">
           <ng-template swiperSlide *ngFor="let currentReview of reviews">
-            <div class="rounded-xl bg-gray-main p-6 md:w-4/5 mx-6 md:mx-auto mb-12" style="box-shadow: 0 2px 5px 0 grey">
+            <div class="rounded-xl bg-gray-main p-6 md:w-4/5 mx-6 md:mx-auto mb-12" style="box-shadow: 0 2px 25px 0 black">
               <div class="flex items-start justify-center">
                 <div class="hidden md:flex bg-contain bg-center bg-no-repeat w-36 h-44 mr-4"
                      [ngStyle]="{'background-image': 'url('+this.currentReview.profile_photo_url+')'}">
@@ -31,19 +56,19 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
                        class="font-bold text-lg underline">{{currentReview.author_name}}
                     </a>
                     <span class="inline-flex align-text-top">
-              <svg [ngClass]="currentReview.rating >  0 ? 'text-yellow-500':' text-white'"
+              <svg [ngClass]="currentReview.rating >  0 ? 'text-yellow-400':' text-gray-400'"
                    class="mx-1 w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path
                 d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-              <svg [ngClass]="currentReview.rating >  1 ? 'text-yellow-500':' text-white'"
+              <svg [ngClass]="currentReview.rating >  1 ? 'text-yellow-400':' text-gray-400'"
                    class="mx-1 w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path
                 d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-              <svg [ngClass]="currentReview.rating >  2 ? 'text-yellow-500':' text-white'"
+              <svg [ngClass]="currentReview.rating >  2 ? 'text-yellow-400':' text-gray-400'"
                    class="mx-1 w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path
                 d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-              <svg [ngClass]="currentReview.rating >  3 ? 'text-yellow-500':' text-white'"
+              <svg [ngClass]="currentReview.rating >  3 ? 'text-yellow-400':' text-gray-400'"
                    class="mx-1 w-4 h-4 fill-current " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path
                 d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-              <svg [ngClass]="currentReview.rating >  4 ? 'text-yellow-500':' text-white'"
+              <svg [ngClass]="currentReview.rating >  4 ? 'text-yellow-400':' text-gray-400'"
                    class="mx-1 w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path
                 d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
             </span>
@@ -51,7 +76,7 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
 
                   </div>
                   <div class="mt-3">
-                    <p class=" mt-1 max-w-xl pb-4 text-white">
+                    <p class=" mt-1 max-w-xl pb-4 text-gray-300">
                       {{showReview ? currentReview.text : (currentReview.text | First40Words) }}
                     </p>
                   </div>
@@ -93,14 +118,18 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
 export class ReviewComponentComponent implements OnInit {
   showReview = false;
   reviews: ReviewDTO[];
-
+  reviewDetail: ReviewDetailDTO;
   constructor(private http: HttpClient) {
   }
 
   ngOnInit(): void {
     this.http.get('/api/review').subscribe((reviews: ReviewDTO[]) => {
-      this.reviews = reviews.sort((r1, r2) => r2.time - r1.time);
-    });
+      this.reviews = reviews.sort((r1,r2) => r2.time-r1.time)
+    })
+    this.http.get('/api/review/detail').subscribe( (detail: ReviewDetailDTO) => {
+      this.reviewDetail = detail;
+    }
+    )
   }
 
 }

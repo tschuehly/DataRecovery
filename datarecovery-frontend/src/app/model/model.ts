@@ -84,3 +84,8 @@ export class User {
   role: string;
   email: string;
 }
+
+export class ReviewDetailDTO{
+  rating: number;
+  userRatingsCount: Number;
+}
