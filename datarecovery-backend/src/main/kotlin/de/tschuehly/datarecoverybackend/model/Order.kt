@@ -20,11 +20,17 @@ class Order(
     @OneToOne(cascade = [CascadeType.ALL])
     var customer: Customer?,
     var replacement: String,
-    @OneToMany(cascade = [CascadeType.ALL], mappedBy = "order")
-    @JsonManagedReference
+    @OneToMany(
+        cascade = [
+            CascadeType.PERSIST,
+            CascadeType.MERGE,
+            CascadeType.REFRESH
+        ],
+        mappedBy = "order"
+    )
     var updates: MutableList<Update> = ArrayList(),
     @Lob
-    @Type(type="org.hibernate.type.StringType")
+    @Type(type = "org.hibernate.type.StringType")
     var note: String?,
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
     var deadline: Date?,
