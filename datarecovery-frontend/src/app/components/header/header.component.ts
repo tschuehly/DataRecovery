@@ -6,6 +6,11 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube, A
 @Component({
   selector: 'app-header',
   template: `
+  <div class="bg-gray-main bg-circuit-board py-5">
+
+      <h1 class="text-3xl mb-8 text-white text-center">Arbeitseinblick anhand von Fallbeispiele:</h1>
+      
+          </div>
     <swiper  class="bg-gray-main bg-circuit-board"
       [spaceBetween]="30"
       [effect]="'fade'"

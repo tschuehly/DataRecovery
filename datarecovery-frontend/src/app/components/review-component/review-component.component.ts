@@ -9,16 +9,18 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
   selector: 'app-review-component',
   template: `
 
-    <div class="bg-gray-main text-white">
 
-      <h1 class="text-3xl text-center pt-8">Kundenbewertungen Ø5.0 (60)  </h1>
+    <div class="bg-white text-white">
+
+      <h1 class="text-3xl text-center pt-8 text-gray-main">Kundenbewertungen Ø5.0 (60)  </h1>
+
 
 
       <div class="px-0 md:container  py-4">
         <swiper class="my-4" [effect]="'slide'" [slidesPerView]="1"
                 [spaceBetween]="50" [virtual]="true" [navigation]="true" [pagination]="true">
           <ng-template swiperSlide *ngFor="let currentReview of reviews">
-            <div class="rounded-xl bg-gray-main p-6 md:w-4/5 mx-6 md:mx-auto mb-12" style="box-shadow: 0 2px 25px 0 black">
+            <div class="rounded-xl bg-gray-main p-6 md:w-4/5 mx-6 md:mx-auto mb-12" style="box-shadow: 0 2px 5px 0 grey">
               <div class="flex items-start justify-center">
                 <div class="hidden md:flex bg-contain bg-center bg-no-repeat w-36 h-44 mr-4"
                      [ngStyle]="{'background-image': 'url('+this.currentReview.profile_photo_url+')'}">
@@ -29,19 +31,19 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
                        class="font-bold text-lg underline">{{currentReview.author_name}}
                     </a>
                     <span class="inline-flex align-text-top">
-              <svg [ngClass]="currentReview.rating >  0 ? 'text-yellow-500':' text-gray-400'"
+              <svg [ngClass]="currentReview.rating >  0 ? 'text-yellow-500':' text-white'"
                    class="mx-1 w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path
                 d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-              <svg [ngClass]="currentReview.rating >  1 ? 'text-yellow-500':' text-gray-400'"
+              <svg [ngClass]="currentReview.rating >  1 ? 'text-yellow-500':' text-white'"
                    class="mx-1 w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path
                 d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-              <svg [ngClass]="currentReview.rating >  2 ? 'text-yellow-500':' text-gray-400'"
+              <svg [ngClass]="currentReview.rating >  2 ? 'text-yellow-500':' text-white'"
                    class="mx-1 w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path
                 d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-              <svg [ngClass]="currentReview.rating >  3 ? 'text-yellow-500':' text-gray-400'"
+              <svg [ngClass]="currentReview.rating >  3 ? 'text-yellow-500':' text-white'"
                    class="mx-1 w-4 h-4 fill-current " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path
                 d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-              <svg [ngClass]="currentReview.rating >  4 ? 'text-yellow-500':' text-gray-400'"
+              <svg [ngClass]="currentReview.rating >  4 ? 'text-yellow-500':' text-white'"
                    class="mx-1 w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path
                 d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
             </span>
@@ -49,7 +51,7 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
 
                   </div>
                   <div class="mt-3">
-                    <p class=" mt-1 max-w-xl pb-4 text-gray-300">
+                    <p class=" mt-1 max-w-xl pb-4 text-white">
                       {{showReview ? currentReview.text : (currentReview.text | First40Words) }}
                     </p>
                   </div>
