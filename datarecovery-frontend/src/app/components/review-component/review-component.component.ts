@@ -8,8 +8,12 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
 @Component({
   selector: 'app-review-component',
   template: `
-    <div class="bg-gray-main bg-circuit-board text-white">
-      <h1 class="text-3xl text-center pt-8">Kundenbewertungen Ø5.0 (56)  </h1>
+
+    <div class="bg-gray-main text-white">
+
+      <h1 class="text-3xl text-center pt-8">Kundenbewertungen Ø5.0 (60)  </h1>
+
+
       <div class="px-0 md:container  py-4">
         <swiper class="my-4" [effect]="'slide'" [slidesPerView]="1"
                 [spaceBetween]="50" [virtual]="true" [navigation]="true" [pagination]="true">

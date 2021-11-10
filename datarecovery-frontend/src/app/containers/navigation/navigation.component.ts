@@ -62,10 +62,10 @@ declare let gtag: Function;
           <h2 class="font-semibold pb-2">Ein Anruf klärt am schnellsten Ihr Anliegen:</h2>
           <button (click)="showPhone = false"><img class="inline" src="assets/x.svg"></button>
         </div>
-        <div class="flex flex-row pb-2">
-          <img class="pr-4" src="/assets/phone.svg">
-          <p class="font-semibold">0841 12840705 <br>0151 61408355</p>
-        </div>
+
+
+        <p class="font-semibold pb-2"><img class="inline pr-4" src="/assets/phone.svg">0151 61408355</p>
+
         <p>Mo.-Sa. 09.00-19.00 Uhr erreichbar.</p>
       </div>
       <div class="fixed right-4 bottom-4 z-50 flex flex-row ">
