@@ -9,9 +9,11 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
   selector: 'app-review-component',
   template: `
 
+
     <div class="bg-white text-white">
 
       <h1 class="text-3xl text-center pt-8 text-gray-main">Kundenbewertungen Ø5.0 (60)  </h1>
+
 
 
       <div class="px-0 md:container  py-4">
