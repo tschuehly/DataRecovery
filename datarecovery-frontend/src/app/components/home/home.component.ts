@@ -2,6 +2,7 @@ import {Component, HostListener, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Category, Order, Product} from '../../model/model';
 import {GoogleAnalyticsService} from "../../services/google-analytics.service";
+import {SwiperOptions} from 'swiper';
 
 @Component({
   selector: 'app-home',

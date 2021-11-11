@@ -16,6 +16,7 @@ import org.springframework.test.web.servlet.get
 import org.springframework.test.web.servlet.post
 import org.testcontainers.junit.jupiter.Testcontainers
 import java.io.File
+import java.util.*
 
 @Testcontainers
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -34,7 +35,8 @@ internal class OrderControllerIntegrationTest @Autowired constructor(val mockMvc
             status { isOk() }
             content { contentType(MediaType.APPLICATION_JSON) }
             jsonPath("$.id", allOf(notNullValue(), instanceOf(Number::class.java)))
-            jsonPath("$.customer.firstName", `is`("Thomas"))
+            jsonPath("$.trackingId",allOf(notNullValue(), instanceOf(String::class.java)) )
+            jsonPath("$.customer.firstName", `is`("Max"))
         }
     }
 

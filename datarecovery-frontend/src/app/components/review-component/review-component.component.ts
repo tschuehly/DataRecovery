@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {ReviewDTO} from "../../dto/dto";
-import SwiperCore, {A11y, EffectCube, EffectFlip, Navigation, Pagination, Virtual} from "swiper";
+import SwiperCore, {A11y, EffectCube, EffectFlip, Navigation, Pagination, SwiperOptions, Virtual} from 'swiper';
 import {ReviewDetailDTO} from '../../model/model';
 
 SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
@@ -42,8 +42,8 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
         </div>
       </div>
       <div class="px-0 md:container  py-4">
-        <swiper class="my-4" [effect]="'slide'" [slidesPerView]="1"
-                [spaceBetween]="50" [virtual]="true" [navigation]="true" [pagination]="true">
+        <swiper class="my-4"
+                [config]="config">
           <ng-template swiperSlide *ngFor="let currentReview of reviews">
             <div class="rounded-xl bg-gray-main p-6 md:w-4/5 mx-6 md:mx-auto mb-12" style="box-shadow: 0 2px 25px 0 black">
               <div class="flex items-start justify-center">
@@ -107,15 +107,17 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
     </div>
 
 
-  `,
-
-  styles: [
-    `.swiper-button-next {
-      display: none;
-    }`
-  ]
+  `
 })
 export class ReviewComponentComponent implements OnInit {
+  config: SwiperOptions = {
+    effect: 'slide',
+    slidesPerView: 1,
+    spaceBetween: 50,
+    virtual: true,
+    pagination : { dynamicBullets: true, dynamicMainBullets: 3},
+    navigation : {}
+  };
   showReview = false;
   reviews: ReviewDTO[];
   reviewDetail: ReviewDetailDTO;

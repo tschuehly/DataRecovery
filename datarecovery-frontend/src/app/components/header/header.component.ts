@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import SwiperCore, {A11y, Autoplay, EffectCube, EffectFlip, Navigation, Pagination, Virtual} from 'swiper';
+import SwiperCore, {A11y, Autoplay, EffectCube, EffectFlip, Navigation, Pagination, SwiperOptions, Virtual} from 'swiper';
 
 SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube, Autoplay]);
 
@@ -72,12 +72,12 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube, A
 `
   ]
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
+  config: SwiperOptions = {
+
+  };
   constructor() {
-  }
-
-  ngOnInit(): void {
   }
 
 }

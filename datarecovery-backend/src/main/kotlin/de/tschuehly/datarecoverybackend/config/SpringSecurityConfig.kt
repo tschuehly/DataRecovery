@@ -45,7 +45,7 @@ class SpringSecurityConfig(
                 "/*.css", "/assets/**", "/h2-console/*"
             ).permitAll()
             .antMatchers(
-                HttpMethod.GET, "/", "/api/review", "/api/review/refresh",
+                HttpMethod.GET, "/", "/api/review","/api/review/detail", "/api/review/refresh",
                 "/api/product", "/api/order/tracking", "/api/user/logout"
             ).permitAll()
             .antMatchers(HttpMethod.POST, "/api/order/create", "/api/user/login").permitAll()
