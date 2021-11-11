@@ -7,7 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import {NavigationComponent} from './containers/navigation/navigation.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { OrderFormComponent } from './containers/order-form/order-form.component';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {HttpClientModule} from '@angular/common/http';
 import { TrackingComponent } from './components/tracking/tracking.component';
 import { LoginComponent } from './components/login/login.component';
 import { OrderComponent } from './components/order/order.component';
@@ -33,7 +33,7 @@ import {First40WordsPipe} from "./pipes/first-twenty-words.pipe";
 import {SwiperModule} from "swiper/angular";
 import {GoogleAnalyticsService} from "./services/google-analytics.service";
 import { PrivacyComponent } from './containers/privacy/privacy.component';
-import { HeaderComponent } from './components/header/header.component';
+import { SlideShowComponent } from './components/header/slide-show.component';
 import { SiteNotFoundComponent } from './containers/site-not-found/site-not-found.component';
 registerLocaleData(localeDe);
 const cookieConfig:NgcCookieConsentConfig = {
@@ -101,7 +101,7 @@ const cookieConfig:NgcCookieConsentConfig = {
         ReviewComponentComponent,
         First40WordsPipe,
         PrivacyComponent,
-        HeaderComponent,
+        SlideShowComponent,
         SiteNotFoundComponent,
     ],
   imports: [

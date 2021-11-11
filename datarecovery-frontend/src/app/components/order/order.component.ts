@@ -10,11 +10,11 @@ import {OrderInfoDTO} from '../../dto/dto';
     <div class="container mx-auto h-full my-10">
       <div class="m-auto" *ngIf="!editOrder">
         <div class="flex mb-10">
-          <h1 class="text-2xl text-center flex-1" *ngIf="currentOrderView == 'awaited'">Erwartete Bestellungen</h1>
-          <h1 class="text-2xl text-center flex-1" *ngIf="currentOrderView == 'active'">Aktive Bestellungen </h1>
-          <h1 class="text-2xl text-center flex-1" *ngIf="currentOrderView == 'archive'">Archivierte Bestellungen </h1>
+          <h2 class="text-2xl text-center flex-1" *ngIf="currentOrderView === 'awaited'">Erwartete Bestellungen</h2>
+          <h2 class="text-2xl text==-center flex-1" *ngIf="currentOrderView === 'active'">Aktive Bestellungen </h2>
+          <h2 class="text-2xl text-center flex-1" *ngIf="currentOrderView === 'archive'">Archivierte Bestellungen </h2>
           <div class="mx-8 space-x-2">
-            <button class="border-2 p-2" [disabled]="page == 0"
+            <button class="border-2 p-2" [disabled]="page === 0"
                     (click)="page = page - 1; getOrders(currentOrderView, this.page)"><
             </button>
             <span>{{page}}</span>
