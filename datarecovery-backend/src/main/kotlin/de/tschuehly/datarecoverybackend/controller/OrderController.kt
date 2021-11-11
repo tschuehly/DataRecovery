@@ -21,11 +21,6 @@ class OrderController(
     @PostMapping("/updateStatus")
     fun updateStatus(@RequestBody order: Order) = orderService.updateStatus(order)
 
-    @PostMapping("/{id}/sendReminder")
-    fun sendReminder(
-        @PathVariable id: Long
-    ) = orderService.sendReminder(id)
-
     @GetMapping("/info")
     fun getOrderInfo() = orderService.getOrderInfo()
     @GetMapping("/archive")

@@ -44,9 +44,11 @@ import {OrderInfoDTO} from '../../dto/dto';
             <td class="border p-2">{{order.orderProduct.category.name}} {{order.orderProduct.name}}</td>
             <td class="border p-2">{{order.customer.firstName}} {{order.customer.lastName}}</td>
             <td class="border p-2">{{order.orderDate | date:'d.M.y H:mm':'+0400'}}</td>
-            <td class="border p-2 {{(getDaysTillDeadline(order.deadline) < 7 && order.deadline) ? 'bg-red-'+(700 - getDaysTillDeadline(order.deadline) * 100):''}}">{{getDaysTillDeadline(order.deadline)}}</td>
+            <td
+              class="border p-2 {{(getDaysTillDeadline(order.deadline) < 7 && order.deadline) ? 'bg-red-'+(700 - getDaysTillDeadline(order.deadline) * 100):''}}">{{getDaysTillDeadline(order.deadline)}}</td>
 
-            <td class="border p-2 {{order.completionDate > order.deadline  ? 'bg-purple-500':''}}">{{getDaysTillCompletion(order.completionDate)}}</td>
+            <td
+              class="border p-2 {{order.completionDate > order.deadline  ? 'bg-purple-500':''}}">{{getDaysTillCompletion(order.completionDate)}}</td>
             <td class="border p-2">{{order.trackingState}}</td>
             <td class="border pl-2">
               <button (click)="editOrder = order">
@@ -72,7 +74,7 @@ import {OrderInfoDTO} from '../../dto/dto';
                            [edit]="true"
                            (editOrder)="updateOrderState($event)"
                            (deleteOrder)="deleteOrder($event)"
-                           (close)="editOrder = null"
+                           (closeDetail)="editOrder = null"
                            (addUpdate)="createUpdate = true"></app-order-details>
         <ng-container *ngIf="createUpdate">
           <app-update [order]="editOrder" (updatedOrder)="editOrder = $event; createUpdate = false"></app-update>

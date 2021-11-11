@@ -239,7 +239,7 @@ class MailService(
         // language=HTML
         val statusString = """
             <h2 style="Margin-top: 0;Margin-bottom: 0;font-style: normal;font-weight: bold;color: #2e2e2e;font-size: 18px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;">
-                Wir haben ihre Datenträger noch nicht erhalten. Bitte kontaktieren Sie uns, falls sie das Paket schon verschickt haben.
+                Wir haben Ihren Datenträger noch nicht erhalten. Bitte antworten Sie hierauf, falls Sie noch offene Fragen haben oder den Speicher bereits versendet haben.
             </h2>"""
         val body = statusString + getTrackingFooter(order)
         val email = getHtmlEmail(body, order.orderDate)

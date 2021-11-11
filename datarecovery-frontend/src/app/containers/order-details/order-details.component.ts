@@ -1,7 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Order, orderStateEnum, Picture, Update} from '../../model/model';
 import {FormControl} from '@angular/forms';
-import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-order-details',
@@ -9,7 +8,7 @@ import {HttpClient} from "@angular/common/http";
     <div>
       <div class="flex  mb-5 ">
         <h1 class="text-center text-2xl flex-1">Bestellung vom {{order.orderDate | date:'d.M.y H:mm' }}</h1>
-        <button (click)="close.emit()">
+        <button (click)="closeDetail.emit()">
           <img alt="close" src="/assets/x.svg">
         </button>
       </div>
@@ -25,9 +24,9 @@ import {HttpClient} from "@angular/common/http";
           <span>Produkt: {{order.orderProduct.category.name}} {{order.orderProduct.name}} </span>
           <span>Preis: {{order.orderProduct.price | number : '.2':'de' }} €</span>
           <span>Ersatz: {{order.replacement}}</span>
-          <span *ngIf="order.monthlyPayment == 1">Keine Ratenzahlung</span>
-          <span *ngIf="order.monthlyPayment == 2">2 monatige Ratenzahlung</span>
-          <span *ngIf="order.monthlyPayment == 6">6 monatige Ratenzahlung</span>
+          <span *ngIf="order.monthlyPayment === 1">Keine Ratenzahlung</span>
+          <span *ngIf="order.monthlyPayment === 2">2 monatige Ratenzahlung</span>
+          <span *ngIf="order.monthlyPayment === 6">6 monatige Ratenzahlung</span>
 
         </div>
         <div class="col-span-2 flex justify-between" *ngIf="!edit">
@@ -123,15 +122,6 @@ import {HttpClient} from "@angular/common/http";
                       [ngValue]="state[1]">{{state[1]}}</option>
             </select>
           </div>
-          <div class="col-span-2 mt-6 flex justify-between" *ngIf="order.trackingState == orderStateEnum.orderReceived">
-            <button class="border-2 rounded-md p-2 border-black" (click)="sendReminder(order)">Email Reminder senden</button>
-            <div class="bg-green-500 p-4 rounded-md" *ngIf="emailSuccess == true">
-              Email erfolgreich versendet
-            </div>
-            <div class="bg-red-500 p-4 rounded-md" *ngIf="emailSuccess == false">
-              Email nicht erfolgreich versendet
-            </div>
-          </div>
           <div class="col-span-2 flex justify-between mt-6">
             <button class="border-2 rounded-md p-2 bg-red-500 border-black" (click)="deleteConfirm = true">
               <img alt="delete" src="/assets/trash-2.svg">
@@ -151,7 +141,7 @@ import {HttpClient} from "@angular/common/http";
           <h2 class="text-2xl">Update: {{update.id}}</h2>
           <span>Beschreibung:</span>
           <p class="text-xl whitespace-pre-wrap border p-2 my-2">{{update.description}}</p>
-          <span *ngIf="update.pictures.length != 0">Klicken um die Bilder zu vergrößern</span>
+          <span *ngIf="update.pictures.length !== 0">Klicken um die Bilder zu vergrößern</span>
           <div class="flex flex-row flex-wrap mt-2">
             <div *ngFor="let pic of update.pictures">
               <label class="cursor-pointer" (click)="togglePictureZoom(pic)">
@@ -180,12 +170,11 @@ export class OrderDetailsComponent implements OnInit {
   @Output() editOrder: EventEmitter<Order> = new EventEmitter<Order>();
   @Output() deleteOrder: EventEmitter<Order> = new EventEmitter<Order>();
   @Output() addUpdate: EventEmitter<Order> = new EventEmitter<Order>();
-  @Output() close: EventEmitter<void> = new EventEmitter();
+  @Output() closeDetail: EventEmitter<void> = new EventEmitter();
   deleteConfirm: boolean;
   daysToCompletion: number;
-  emailSuccess: boolean;
 
-  constructor(private http: HttpClient) {
+  constructor() {
 
   }
 
@@ -218,9 +207,4 @@ export class OrderDetailsComponent implements OnInit {
     pic[`zoomed`] = !pic[`zoomed`];
   }
 
-  sendReminder(order: Order): void {
-    this.http.post('/api/order/' + order.id + '/sendReminder', null, {responseType: 'text', observe: 'response'}).subscribe(res => {
-      this.emailSuccess = res.status === 200;
-    }, err => {this.emailSuccess = false});
-  }
 }

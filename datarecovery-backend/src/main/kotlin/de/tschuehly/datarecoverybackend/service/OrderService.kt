@@ -54,6 +54,7 @@ class OrderService(
                 InProcess.readingMemory -> mailService.sendReadingMemory(order)
                 InProcess.reRead -> mailService.sendReRead(order)
                 InProcess.savingData -> mailService.sendSavingData(order)
+                orderReceivedReminderSent -> mailService.sendReminder(order)
             }
         }
         return savedOrder
@@ -70,7 +71,7 @@ class OrderService(
         pictureFiles?.forEach { pictureFile ->
             val picture = Picture(pictureFile.originalFilename, pictureFile.contentType, update)
             update.pictures?.add(picture)
-            pictureContentStore.setContent(picture, pictureFile.inputStream)
+            pictureContentStore.setContent(picture, pictureFile.inputStream) //TODO: Image is always overwritten
         }
         order.addUpdateToOrder(update)
         orderRepository.save(order)
@@ -86,7 +87,7 @@ class OrderService(
 
     fun getAwaited(page: Number): List<Order> {
         val paging: Pageable = PageRequest.of(page.toInt(), 15)
-        return orderRepository.findByTrackingStateInOrderByOrderDateDesc(listOf(orderReceived), paging)
+        return orderRepository.findByTrackingStateInOrderByOrderDateDesc(listOf(orderReceived, orderReceivedReminderSent), paging)
     }
 
     fun getOrderInfo(): OrderInfoDTO {
@@ -97,20 +98,16 @@ class OrderService(
         )
     }
 
-    fun sendReminder(orderId: Long): ResponseEntity<String> {
-        mailService.sendReminder(getById(orderId))
-        return ResponseEntity(HttpStatus.OK)
-    }
-
     private val archiveList = listOf(
         storage,
         parcelReturned,
         Completed.success, Completed.failure, Completed.legacyComplete
     )
-    private val nonActiveList = listOf(orderReceived) + archiveList
+    private val nonActiveList = listOf(orderReceived,orderReceivedReminderSent) + archiveList
 
     companion object OrderState {
         const val orderReceived = "Auftrag eingegangen"
+        const val orderReceivedReminderSent = "Warte auf Ankunft / Erinnerung"
 
         object InProcess {
             const val parcelReceived = "Paket eingegangen"

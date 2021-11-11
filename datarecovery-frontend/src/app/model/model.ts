@@ -26,6 +26,7 @@ export class Order{
 }
 export enum orderStateEnum {
   orderReceived = 'Auftrag eingegangen',
+  orderReceivedReminderSent = 'Warte auf Ankunft / Erinnerung',
   parcelReceived = 'Paket eingegangen',
   firstAnalysis = 'Erste Analyse',
   orderedFirstPartDispender = 'Bestellung erster Teilespender',
