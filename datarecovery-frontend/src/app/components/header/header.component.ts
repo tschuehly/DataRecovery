@@ -8,7 +8,7 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube, A
   template: `
   <div class="bg-gray-main bg-circuit-board py-5">
 
-      <h1 class="text-3xl mb-8 text-white text-center">Arbeitseinblick nhand von Falleispiele:</h1>
+      <h1 class="text-3xl mb-8 text-white text-center">Arbeitseinblick anhand von Falleispiele:</h1>
       
           </div>
     <swiper  class="bg-gray-main bg-circuit-board"
