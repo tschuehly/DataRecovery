@@ -40,7 +40,7 @@ class SpringSecurityConfig(
             .and()
             .authorizeRequests()
             // Our public endpoints
-            .antMatchers("/index.html", "/favicon**.png", "/*.js", "/*.js.map", "/*.json", "/*.css", "/assets/**", "/h2-console/*", "/admin/instances").permitAll()
+            .antMatchers("/index.html", "/favicon**.png", "/*.js", "/*.js.map", "/*.json", "/*.css", "/assets/**", "/h2-console/*", "/admin/instances","/api/actuator/**").permitAll()
             .antMatchers(HttpMethod.GET, "/", "/api/review", "/api/review/refresh", "/api/product", "/api/order/tracking", "/api/user/logout", "/api/actuator/health").permitAll()
             .antMatchers(HttpMethod.POST, "/api/order/create", "/api/user/login").permitAll()
             .antMatchers(HttpMethod.POST, "/api/user/**").permitAll()

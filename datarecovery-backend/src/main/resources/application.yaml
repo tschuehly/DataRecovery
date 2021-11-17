@@ -7,28 +7,37 @@ spring:
     password: ${MAIL_SENDER_PASSWORD}
     properties.mail.smtp.auth: true
     properties.mail.smtp.starttls.enable: true
-
+  cloud:
+    discovery:
+      client:
+        simple:
+          instances:
+            test:
+              - uri: http://localhost:8088
+                metadata:
+                  management.context-path: /api/actuator
+  boot:
+    admin:
+      ui:
+        public-url: /api/admin
+      context-path: /api/admin
   liquibase:
     change-log: classpath:db/changelog/db.changelog-master.xml
     contexts: none
     default-schema: public
-  boot:
-    admin:
-      client:
-        url: http://127.0.0.1:8088/admin
-      context-path: /admin
 management:
   endpoints:
     web:
       exposure:
-        include: '*'
-        exclude: threaddump,heapdump
+        include: "*"
+        exclude: heapdump,threaddump
       base-path: /api/actuator
   endpoint:
     health:
       show-details: always
 server:
   port: 8088
+  forward-headers-strategy: native
 
 logging:
   level:
