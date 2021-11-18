@@ -16,8 +16,10 @@ import { Component, OnInit } from '@angular/core';
           Am Stein 9<br>
           85049 Ingolstadt<br><br>
           Telefon: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 0841 12840705<br>
+
           E-Mail: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="text-decoration:underline"><a
             href="mailto:info@jungbauerdatenrettung.de" target="_self">info@jungbauerdatenrettung.de</a></span><br>
+
           Steuernummer: &nbsp; &nbsp;&nbsp; 124/233/70627</p>
 
         <p>Umsatzsteuer-Identifikationsnummer: DE318961162</p>

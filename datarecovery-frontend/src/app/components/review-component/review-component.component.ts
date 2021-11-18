@@ -9,6 +9,7 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
 @Component({
   selector: 'app-review-component',
   template: `
+
     <div class="text-white button">
       <div class="flex justify-center pt-8 text-center text-black">
         <div>
@@ -41,6 +42,7 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
 
         </div>
       </div>
+
       <div class="px-0 md:container  py-4">
         <swiper class="my-4"
                 [config]="config">

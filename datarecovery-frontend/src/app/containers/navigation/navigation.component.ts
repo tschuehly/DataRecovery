@@ -64,8 +64,10 @@ declare let gtag: Function;
         </div>
 
 
+
         <p class="font-semibold pb-2">
           <img alt="phone" class="inline pr-4" src="/assets/phone.svg">0151 61408355</p>
+
 
         <p>Mo.-Sa. 09.00-19.00 Uhr erreichbar.</p>
       </div>
