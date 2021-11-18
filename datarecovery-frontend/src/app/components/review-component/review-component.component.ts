@@ -10,10 +10,11 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
   selector: 'app-review-component',
   template: `
     <div class="text-white button">
-      <div class="flex justify-center pt-8 text-center text-black">
+      <div class="flex justify-center  pt-8 text-center text-black">
         <div>
           <h3 class="text-4xl font-semibold mb-4 ">Kundenbewertungen</h3>
-          <div class="flex items-center">
+         
+          <div class="flex justify-center pt-4 items-center">
             <svg class=" text-yellow-400 mx-1 w-8 h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
               <path
               d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
@@ -34,11 +35,11 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
               <path
               d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
             </svg>
-            <span class="text-2xl font-semibold ml-4">
-               {{this.reviewDetail?.rating | number: '1.1' }} bei {{this.reviewDetail?.userRatingsCount}} Bewertungen
-            </span>
+            
           </div>
-
+          <span class="flex justify-center text-2xl ml-4">
+          Ø {{this.reviewDetail?.rating | number: '1.1' }} bei {{this.reviewDetail?.userRatingsCount}} Bewertungen
+       </span>
         </div>
       </div>
       <div class="px-0 md:container  py-4">
