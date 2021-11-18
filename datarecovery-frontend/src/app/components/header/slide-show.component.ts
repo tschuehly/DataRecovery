@@ -7,7 +7,7 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube, A
   selector: 'app-slide-show',
   template: `
     <div class="bg-gray-main bg-circuit-board py-10">
-      <h2 class="pb-8 text-3xl text-white text-center">Arbeitseinblick anhand von Fallbeispielen:</h2>
+      <h2 class="pb-8 text-3xl text-white text-center">Arbeitseinblick anhand von Fallbeispiele:</h2>
       <swiper
         [spaceBetween]="30"
         [effect]="'fade'"
