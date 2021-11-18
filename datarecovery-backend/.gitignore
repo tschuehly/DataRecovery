@@ -4,7 +4,8 @@ build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
-data
+/data
+.jpb
 
 src/main/resources/static/
 src/main/resources/productionData.sql

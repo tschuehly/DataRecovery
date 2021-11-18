@@ -28,7 +28,7 @@ Ich möchte Ihnen die höchstmögliche Transparenz zur geleisteten Arbeit und de
 Fragen Sie gerne nach, wie und mit welchem Werkzeug die Datenrettung durchgeführt worden ist.
 
 <span class="font-semibold">3. Vielschichtiges Angebot:</span>
-Ich bin mit meinem Know-how und meinem Equipment breit aufgestellt, so bearbeite ich nicht nur HDD und NAND Fälle, sondern biete auch SSD Datenrettung (SATA basiert) und zudem die RAID-Datenrettung an. 
+Ich bin mit meinem Know-how und meinem Equipment breit aufgestellt, so bearbeite ich nicht nur HDD und NAND Fälle, sondern biete auch SSD Datenrettung (SATA basiert) und zudem die RAID-Datenrettung an.
           </pre>
           <h2 class="text-2xl text-white font-bold py-6">Der erste Auftrag:</h2>
           <pre class="whitespace-pre-wrap">
@@ -74,12 +74,9 @@ Ich hoffe, dass Sie mein Angebot als fair empfinden werden und ich Sie mit meine
   `,
   styles: []
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent{
 
   constructor() {
-  }
-
-  ngOnInit(): void {
   }
 
 }

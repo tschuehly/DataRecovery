@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Category, Order, Product} from '../../model/model';
-import {FormArray, FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Category, Product} from '../../model/model';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-product-detail',

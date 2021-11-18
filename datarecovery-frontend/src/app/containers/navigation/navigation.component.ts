@@ -60,10 +60,15 @@ declare let gtag: Function;
       <div class="fixed w-64 bg-white rounded-xl bottom-4 left-4 z-50 p-4 shadow-2xl" *ngIf="showPhone">
         <div class="flex justify-around items-center pb-4">
           <h2 class="font-semibold pb-2">Ein Anruf klärt am schnellsten Ihr Anliegen:</h2>
-          <button (click)="showPhone = false"><img class="inline" src="assets/x.svg"></button>
+          <button (click)="showPhone = false"><img alt="close" class="inline" src="assets/x.svg"></button>
         </div>
 
-        <p class="font-semibold pb-2"><img class="inline pr-4" src="/assets/phone.svg">0151 61408355</p>
+
+
+        <p class="font-semibold pb-2">
+          <img alt="phone" class="inline pr-4" src="/assets/phone.svg">0151 61408355</p>
+
+
         <p>Mo.-Sa. 09.00-19.00 Uhr erreichbar.</p>
       </div>
       <div class="fixed right-4 bottom-4 z-50 flex flex-row ">
@@ -108,7 +113,7 @@ declare let gtag: Function;
               <p class="font-semibold text-center text-white">
                 Email:
                <a href="mailto:info@jungbauerdatenrettung.de"><span class="text-white">info@jungbauerdatenrettung.de</span></a><br/>
-               
+
                 Telefon: <span class="text-white">0841 12840705</span><br/>
 
                 Mobil: <span class="text-white">0151 61408355</span>
@@ -131,13 +136,13 @@ declare let gtag: Function;
           </div>
           <div class="col-span-2 pt-4 divide-x-2 divide-silver">
             <span class="pr-4">Website developed by <a class="font-bold" href="https://www.linkedin.com/in/tschuehly/">Thomas Schühly</a></span>
-            <span class="pl-4">Designed by <span class="whitespace-nowrap">Alina Göttig</span></span>
           </div>
           <div>
             <a class="" routerLink="/login" *ngIf="currentUser" (click)="logout.emit()">Logout</a>
           </div>
         </div>
       </footer>
+    </div>
     `
 })
 export class NavigationComponent implements OnInit {

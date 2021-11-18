@@ -12,24 +12,27 @@ import org.springframework.web.multipart.MultipartFile
 @RequestMapping("api/order")
 class OrderController(
     val orderService: OrderService,
-    private val logger: Logger) :
-    CrudController<Order, OrderRepository,OrderService>(orderService) {
+    private val logger: Logger
+) :
+    CrudController<Order, OrderRepository, OrderService>(orderService) {
     @PostMapping("/create")
     fun createOrder(@RequestBody order: Order) = orderService.createOrder(order)
 
     @PostMapping("/updateStatus")
-    fun updateStatus(@RequestBody order: Order) = orderService.updateState(order)
+    fun updateStatus(@RequestBody order: Order) = orderService.updateStatus(order)
 
+    @GetMapping("/info")
+    fun getOrderInfo() = orderService.getOrderInfo()
     @GetMapping("/archive")
-    fun getArchived(
+    fun getArchivedOrders(
         @RequestParam(defaultValue = "0") page: Number
     ): List<Order> = orderService.getArchived(page)
 
     @GetMapping("/active")
-    fun getActive(): List<Order> = orderService.getActive()
+    fun getActiveOrders(): List<Order> = orderService.getActive()
 
     @GetMapping("/awaited")
-    fun getAwaited(
+    fun getAwaitedOrders(
         @RequestParam(defaultValue = "0") page: Number
     ): List<Order> = orderService.getAwaited(page)
 
@@ -42,8 +45,7 @@ class OrderController(
     @PostMapping("/addUpdate/{id}", consumes = ["multipart/form-data"])
     fun addUpdateToOrder(
         @PathVariable id: Long,
-        @RequestParam("pictures",required = false) pictures : Array<MultipartFile>?,
-        @RequestParam("update",required = false) update: String
-    ): Order = orderService.addUpdateToOrder(id,update,pictures)
-
+        @RequestParam("pictures", required = false) pictures: Array<MultipartFile>?,
+        @RequestParam("update", required = false) update: String
+    ): Order = orderService.addUpdateToOrder(id, update, pictures)
 }

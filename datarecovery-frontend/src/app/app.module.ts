@@ -7,7 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import {NavigationComponent} from './containers/navigation/navigation.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { OrderFormComponent } from './containers/order-form/order-form.component';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {HttpClientModule} from '@angular/common/http';
 import { TrackingComponent } from './components/tracking/tracking.component';
 import { LoginComponent } from './components/login/login.component';
 import { OrderComponent } from './components/order/order.component';
@@ -17,7 +17,6 @@ import { ProductDetailComponent } from './containers/product-detail/product-deta
 import { UploadFileComponent } from './containers/upload-file/upload-file.component';
 import { UpdateComponent } from './components/update/update.component';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StaticComponent } from './containers/static/static.component';
 import {ClickOutsideModule} from 'ng-click-outside';
 import { CategoryComponent } from './components/category/category.component';
@@ -34,7 +33,7 @@ import {First40WordsPipe} from "./pipes/first-twenty-words.pipe";
 import {SwiperModule} from "swiper/angular";
 import {GoogleAnalyticsService} from "./services/google-analytics.service";
 import { PrivacyComponent } from './containers/privacy/privacy.component';
-import { HeaderComponent } from './components/header/header.component';
+import { SlideShowComponent } from './components/header/slide-show.component';
 import { SiteNotFoundComponent } from './containers/site-not-found/site-not-found.component';
 registerLocaleData(localeDe);
 const cookieConfig:NgcCookieConsentConfig = {
@@ -102,7 +101,7 @@ const cookieConfig:NgcCookieConsentConfig = {
         ReviewComponentComponent,
         First40WordsPipe,
         PrivacyComponent,
-        HeaderComponent,
+        SlideShowComponent,
         SiteNotFoundComponent,
     ],
   imports: [
@@ -112,7 +111,6 @@ const cookieConfig:NgcCookieConsentConfig = {
     HttpClientModule,
     FormsModule,
     NgxPageScrollCoreModule.forRoot({duration: 700, scrollOffset: 80}),
-    BrowserAnimationsModule,
     ClickOutsideModule,
     NgcCookieConsentModule.forRoot(cookieConfig),
     SwiperModule

@@ -1,10 +1,9 @@
 package de.tschuehly.datarecoverybackend.model
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize
 import javax.persistence.*
 
 @Entity
-class Category (
+class Category(
     var name: String?,
     var title: String?,
     @Column(length = 4000)
@@ -13,7 +12,7 @@ class Category (
     @ElementCollection
     var questions: MutableList<String> = ArrayList(),
     var sequenceId: Int?
-): BaseEntity(){
+) : BaseEntity() {
     override fun toString(): String {
         return "Category(name='$name', title='$title', description='$description')"
     }
