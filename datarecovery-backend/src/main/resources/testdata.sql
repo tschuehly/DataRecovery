@@ -98,6 +98,6 @@ INSERT INTO public.order_table (id, order_date, replacement, tracking_id, tracki
 INSERT INTO public.order_table (id, order_date, replacement, tracking_id, tracking_state, customer_id, order_product_id, monthly_payment) VALUES (55, '2021-05-25 14:08:54.861', 'WD Portable (externe Festplatte) 500GB : 50€'                          , '4f415d08-26b4-11ec-9621-0242ac130002', 'Bestellung Ersatzteile'                      , 32, 5 , 2);
 INSERT INTO public.order_table (id, order_date, replacement, tracking_id, tracking_state, customer_id, order_product_id, monthly_payment) VALUES (56, '2021-05-27 20:01:10.675', 'Sicherung auf WD Elements Portable externe Festplatte 500GB: 50,00 EUR', '4f415dd0-26b4-11ec-9621-0242ac130002', 'Speicher wird ausgelesen'                    , 53, 5 , 1);
 
-INSERT INTO public.website_user (id, email, password, role, username) VALUES (1, 'tobias@jungbauerdatenrettung.de', '$2y$12$W8MCcCaBjY6iubhELz5mDe1zJ/g3uLxRD6s2YSIPsOmtZYk0LVcSu', 'admin', 'admin');
+INSERT INTO public.website_user (id, email, password, role, username) VALUES (1, 'tobias@jungbauerdatenrettung.de', '$2a$12$F/KnVOtCNhFt37zki0GkteWiN8uplRqV3CyLR18hZkmjBZJmF20LK', 'admin', 'admin');
 
 

@@ -8,11 +8,6 @@ import javax.persistence.*
 class Picture(
     val name: String?,
     val type: String?,
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "update_id")
-    @JsonBackReference
-    val update: Update?,
-    @ContentId var imageId: String
+    @ContentId var imageId: String?
 ) : BaseEntity() {
-    constructor(name: String?, type: String?, update: Update) : this(name, type, update, "")
 }

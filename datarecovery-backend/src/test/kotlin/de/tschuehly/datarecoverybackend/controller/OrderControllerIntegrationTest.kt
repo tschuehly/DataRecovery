@@ -8,11 +8,14 @@ import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.data.web.JsonPath
 import org.springframework.http.MediaType
+import org.springframework.mock.web.MockMultipartFile
 import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.context.TestPropertySource
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.get
+import org.springframework.test.web.servlet.multipart
 import org.springframework.test.web.servlet.post
 import org.testcontainers.junit.jupiter.Testcontainers
 import java.io.File
@@ -65,5 +68,25 @@ internal class OrderControllerIntegrationTest @Autowired constructor(val mockMvc
             content { contentType(MediaType.APPLICATION_JSON) }
             jsonPath("$.*", hasSize<Any>(3))
         }
+    }
+
+    @Test
+    fun addUpdateWithPictureToOrder(){
+        val addUpdateResult = mockMvc.multipart("/api/order/addUpdate/56"){
+            file(
+                MockMultipartFile("pictures","testpicture_1.png","image/png",File("src/test/resources/data/testpicture_1.png").readBytes())
+            )
+            param("""update""","""{"description":"test"}""")
+
+        }.andExpect {
+            status { isOk() }
+            jsonPath("$.updates[0].pictures[0].imageId", allOf(notNullValue(), instanceOf(String::class.java)))
+        }.andReturn()
+        val imageId: Number = com.jayway.jsonpath.JsonPath.read(addUpdateResult.response.contentAsString,"$.updates[0].pictures[0].id")
+
+        mockMvc.get("/api/picture/$imageId").andExpect {
+            status { isOk() }
+        }
+
     }
 }

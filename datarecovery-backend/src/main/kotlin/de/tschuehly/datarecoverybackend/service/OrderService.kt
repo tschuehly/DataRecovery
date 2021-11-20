@@ -10,6 +10,7 @@ import de.tschuehly.datarecoverybackend.model.Picture
 import de.tschuehly.datarecoverybackend.model.Update
 import de.tschuehly.datarecoverybackend.repository.OrderProductRepository
 import de.tschuehly.datarecoverybackend.repository.OrderRepository
+import de.tschuehly.datarecoverybackend.repository.PictureRepository
 import org.slf4j.Logger
 import org.springframework.data.domain.PageRequest
 import org.springframework.data.domain.Pageable
@@ -26,6 +27,7 @@ class OrderService(
     private val orderRepository: OrderRepository,
     private val orderProductRepository: OrderProductRepository,
     private val mailService: MailService,
+    private val pictureRepository: PictureRepository,
     private val pictureContentStore: PictureContentStore,
     private val logger: Logger
 ) : CrudService<Order, OrderRepository>(orderRepository) {
@@ -66,12 +68,13 @@ class OrderService(
 
     fun addUpdateToOrder(id: Long, updateString: String, pictureFiles: Array<MultipartFile>?): Order {
         val update: Update = jacksonObjectMapper().readValue(updateString)
-        val order: Order = orderRepository.findByIdOrNull(id) ?: throw NoSuchElementException("")
+        val order: Order = orderRepository.findByIdOrNull(id) ?: throw NoSuchElementException("No Order found with ID $id")
         update.order = order
         pictureFiles?.forEach { pictureFile ->
-            val picture = Picture(pictureFile.originalFilename, pictureFile.contentType, update)
+            val picture = pictureRepository.save(Picture(pictureFile.originalFilename, pictureFile.contentType,null))
+            pictureContentStore.setContent(picture, pictureFile.inputStream)
+            pictureRepository.save(picture)
             update.pictures?.add(picture)
-            pictureContentStore.setContent(picture, pictureFile.inputStream) //TODO: Image is always overwritten
         }
         order.addUpdateToOrder(update)
         orderRepository.save(order)
