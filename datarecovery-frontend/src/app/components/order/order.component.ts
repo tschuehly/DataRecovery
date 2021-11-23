@@ -1,8 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient, HttpErrorResponse} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {Order} from '../../model/model';
 import {Router} from '@angular/router';
 import {OrderInfoDTO} from '../../dto/dto';
+import {catchError, combineLatest, map, Observable, of, startWith} from 'rxjs';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-order',
@@ -10,17 +12,18 @@ import {OrderInfoDTO} from '../../dto/dto';
     <div class="container mx-auto h-full my-10">
       <div class="m-auto" *ngIf="!editOrder">
         <div class="flex mb-10">
-          <h2 class="text-2xl text-center flex-1" *ngIf="currentOrderView === 'awaited'">Erwartete Bestellungen</h2>
-          <h2 class="text-2xl text==-center flex-1" *ngIf="currentOrderView === 'active'">Aktive Bestellungen </h2>
-          <h2 class="text-2xl text-center flex-1" *ngIf="currentOrderView === 'archive'">Archivierte Bestellungen </h2>
-          <div class="mx-8 space-x-2">
+          <h2 class="text-3xl text-center flex-1" *ngIf="currentOrderView === 'awaited'"> Erwartete Bestellungen</h2>
+          <h2 class="text-3xl text-center flex-1" *ngIf="currentOrderView === 'active'">  Aktive Bestellungen </h2>
+          <h2 class="text-3xl text-center flex-1" *ngIf="currentOrderView === 'archive'"> Archivierte Bestellungen </h2>
+        </div>
+        <div class="flex mb-10 justify-between ">
+          <input class="w-64" type="text" [formControl]="searchFilter" placeholder="Filter nach Bestellungen">
+          <div class="space-x-2">
             <button class="border-2 p-2" [disabled]="page === 0"
-                    (click)="page = page - 1; getOrders(currentOrderView, this.page)"><
-            </button>
+                    (click)="page = page - 1; getOrders(currentOrderView, this.page)"><</button>
             <span>{{page}}</span>
             <button class="border-2 p-2" (click)="page = page + 1; getOrders(currentOrderView, this.page)">></button>
-          </div>
-          <div class="space-x-4">
+
             <button class="border-2 p-2" (click)="switchView('awaited')">Erwartet [{{orderInfoDTO?.awaitedCount}}]</button>
             <button class="border-2 p-2" (click)="switchView('active')">In Bearbeitung [{{orderInfoDTO?.activeCount}}]</button>
             <button class="border-2 p-2" (click)="switchView('archive')">Archiv [{{orderInfoDTO?.archivedCount}}]</button>
@@ -39,7 +42,7 @@ import {OrderInfoDTO} from '../../dto/dto';
           <th class="border px-2 py-1">Edit</th>
           </thead>
           <tbody>
-          <tr *ngFor="let order of orders">
+          <tr *ngFor="let order of filteredOrders$ | async">
             <td class="border p-2">{{order.id}}</td>
             <td class="border p-2">{{order.orderProduct.category.name}} {{order.orderProduct.name}}</td>
             <td class="border p-2">{{order.customer.firstName}} {{order.customer.lastName}}</td>
@@ -87,12 +90,16 @@ import {OrderInfoDTO} from '../../dto/dto';
 })
 export class OrderComponent implements OnInit {
   orders: Order[];
+  orders$: Observable<Order[]>
+  filteredOrders$: Observable<Order[]>;
   editOrder: Order;
   createUpdate = false;
   currentOrderView = 'active';
   page = 0;
   dateNow: Date;
   orderInfoDTO: OrderInfoDTO;
+  searchFilter: FormControl;
+  searchFilter$: Observable<string>;
 
   constructor(private http: HttpClient, private router: Router) {
     this.dateNow = new Date();
@@ -104,10 +111,23 @@ export class OrderComponent implements OnInit {
   }
 
   getOrders(status: string, page: number): void {
-    this.http.get('api/order/' + status + '?page=' + page).subscribe((orders: Order[]) => {
-      this.orders = orders;
-      this.orders.forEach(o => o.orderDate = new Date(o.orderDate.toString()));
-      this.orders.sort((a, b) => {
+    this.orders$ = (this.http.get('api/order/' + status + '?page=' + page) as Observable<Order[]>).pipe(
+      catchError((error) => {
+        console.error('error loading the orders', error);
+        this.router.navigate(['/login']);
+        return of();
+      })
+    );
+
+    this.searchFilter = new FormControl('');
+    this.searchFilter$ = this.searchFilter.valueChanges.pipe(startWith(''));
+    this.filteredOrders$ = combineLatest([this.orders$,this.searchFilter$])
+      .pipe(map(([orders, filterString]) =>
+      orders.filter(order =>
+        order.customer.lastName.toLowerCase().indexOf(filterString.toLowerCase()) !== -1
+        ||
+        order.id.toString().indexOf(filterString) !== -1
+      ).sort((a, b) => {
         if (b.deadline == null && a.deadline == null){
           if (b.orderDate > a.orderDate) { return 1; }
           if (b.orderDate < a.orderDate) { return -1; }
@@ -115,14 +135,8 @@ export class OrderComponent implements OnInit {
         if (b.deadline == null) { return -1; }
         if (b.deadline < a.deadline) { return 1; }
         if (b.deadline > a.deadline) { return -1; }
-      });
-      console.log(this.orders.map(o => o.orderDate));
-    }, (error: HttpErrorResponse) => {
-      if (error.status === 401) {
-        this.router.navigate(['/login']);
-
-      }
-    });
+      })
+    ));
 
     this.http.get('api/order/info').subscribe((orderInfoDTO: OrderInfoDTO) => {
       this.orderInfoDTO = orderInfoDTO;
