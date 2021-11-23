@@ -126,6 +126,8 @@ export class OrderComponent implements OnInit {
       orders.filter(order =>
         order.customer.lastName.toLowerCase().indexOf(filterString.toLowerCase()) !== -1
         ||
+        order.customer.firstName.toLowerCase().indexOf(filterString.toLowerCase()) !== -1
+        ||
         order.id.toString().indexOf(filterString) !== -1
       ).sort((a, b) => {
         if (b.deadline == null && a.deadline == null){
