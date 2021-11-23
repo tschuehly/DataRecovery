@@ -11,9 +11,9 @@ declare let gtag: Function;
   selector: 'app-navigation',
   template: `
     <div class="flex flex-col h-screen">
-      <nav class="flex fixed justify-between w-full text-silver bg-gray-main z-50" id="navigation">
+      <nav class="flex fixed justify-between w-full text-silver bg-grey-main z-50" id="navigation">
         <a  href="/">
-          <div class="bg-gray-main pl-4 py-4">
+          <div class="bg-grey-main pl-4 py-4">
             <img src="/assets/LOGO_TJ_Datenrettung.svg" class="h-14 w-96" alt="Datenrettung Jungbauer Logo">
           </div>
         </a>
@@ -24,7 +24,7 @@ declare let gtag: Function;
             </svg>
           </button>
         </div>
-        <div class="items-center text-xl px-4  bg-gray-main" [ngClass]="mobileNavShow ? 'flex flex-col absolute right-0 top-20 w-full space-y-4 py-4 text-2xl font-semibold bg-gray-main text-white': 'hidden md:flex md:flex-row'">
+        <div class="items-center text-xl px-4  bg-grey-main" [ngClass]="mobileNavShow ? 'flex flex-col absolute right-0 top-20 w-full space-y-4 py-4 text-2xl font-semibold bg-grey-main text-white': 'hidden md:flex md:flex-row'">
 
         <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="">Startseite</a>
          <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="preise">Preise</a>
@@ -95,7 +95,7 @@ declare let gtag: Function;
           </a>
         </div>
       </div>
-      <footer class="pt-8 bg-gray-main text-silver">
+      <footer class="pt-8 bg-grey-main text-silver">
       <ng-container *ngIf="mapsIframeShow">
               <div class="h-72 mb-4 bg-white">
                 <iframe id="myFrame"

@@ -8,10 +8,10 @@ import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
   selector: 'app-blog',
   template: `
 
-    <div class="bg-center bg-gray-main bg-cover bg-no-repeat "
+    <div class="bg-center bg-grey-main bg-cover bg-no-repeat "
          style="background-image: url('/assets/prices_header.jpg')">
       <div class="flex md:ml-80 justify-center md:justify-start ">
-        <h1 class="text-4xl leading-relaxed text-center text-silver text-shadow bg-gray-main p-16">
+        <h1 class="text-4xl leading-relaxed text-center text-silver text-shadow bg-grey-main p-16">
           Tobias<br>Jungbauer<br>Datenrettung
         </h1>
       </div>
@@ -21,14 +21,66 @@ import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
         <div class="h-20 bg-white text-center">
           <h1 class="text-4xl text-black py-5 tracking-wider">Blogartikel</h1>
         </div>
-        <div class="bg-gray-main ">
-          <div class="container flex">
+        <div class="bg-grey-main bg-circuit-board">
+          <div class="bg-white max-w-4xl mx-auto border-b-2 border-grey-main">
+            <div class="text-grey-main py-8 flex flex-row justify-around">
+              <img class="h-40 " src="/assets/RAID%20Symbol(old).png">
+              <div>
+                <span>23 November 2021</span>
+                <div class="space-y-4">
+                  <a href="/blog/wie-teuer-ist-die-datenrettung">
+                    <h3 class="text-2xl font-bold">Wie teuer ist die Datenrettung </h3>
+                  </a>
+                  <p>
+                    Wie werden Daten von einem Apple Fusion Drive gerettet?
+                  </p>
+                  <button class="font-semibold">
+                    Mehr lesen  →
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
 
-            <div class="text-silver py-8 mx-auto justify-center space-y-4">
-              <div class="bg-silver text-black bg-circuit-board">
-                <a href="/blog/was-kostet-datenrettung">
-                  <h3>Was kostet Datenrettung</h3>
-                </a>
+          <!-- Artikeleintrag Anfang -->
+          <div class="bg-white max-w-4xl mx-auto border-b-2 border-grey-main">
+            <div class="text-grey-main py-8 flex flex-row justify-around">
+              <img class="h-40 " src="/assets/RAID%20Symbol(old).png">
+              <div>
+                <span>01 November 2021</span>
+                <div class="space-y-4">
+                  <a href="/blog/apple-fusion-drive-datenrettung">
+                    <h3 class="text-2xl font-bold">Apple Fusion Drive Datenrettung</h3>
+                  </a>
+                  <p>
+                    Wie werden Daten von einem Apple Fusion Drive gerettet?
+                  </p>
+                  <button class="font-semibold">
+                    Mehr lesen  →
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Artikeleintrag Ende -->
+
+          <div class="bg-white max-w-4xl mx-auto border-b-2 border-grey-main">
+            <div class="text-grey-main py-8 flex flex-row justify-around">
+              <img class="h-40 " src="/assets/RAID%20Symbol(old).png">
+              <div>
+                <span>01 November 2021</span>
+                <div class="space-y-4">
+                  <a href="/blog/ablauf-der-datenrettung-anhand-eines-beispiels">
+                    <h3 class="text-2xl font-bold">Ablauf der Datenrettung</h3>
+                  </a>
+                  <p>
+                    Wie werden Daten von einem Apple Fusion Drive gerettet?
+                  </p>
+                  <button class="font-semibold">
+                    Mehr lesen  →
+                  </button>
+                </div>
+
               </div>
             </div>
 

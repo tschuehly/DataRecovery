@@ -6,7 +6,7 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube, A
 @Component({
   selector: 'app-slide-show',
   template: `
-    <div class="bg-gray-main bg-circuit-board py-10">
+    <div class="bg-grey-main bg-circuit-board py-10">
       <h2 class="pb-8 text-3xl text-white text-center">Arbeitseinblick anhand von Fallbeispiele:</h2>
       <swiper
         [spaceBetween]="30"

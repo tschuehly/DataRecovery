@@ -13,7 +13,7 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
       <div class="flex justify-center  pt-8 text-center text-black">
         <div>
           <h3 class="text-4xl font-semibold mb-4 ">Kundenbewertungen</h3>
-         
+
           <div class="flex justify-center pt-4 items-center">
             <svg class=" text-yellow-400 mx-1 w-8 h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
               <path
@@ -35,7 +35,7 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
               <path
               d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
             </svg>
-            
+
           </div>
           <span class="flex justify-center text-2xl ml-4">
           Ø {{this.reviewDetail?.rating | number: '1.1' }} bei {{this.reviewDetail?.userRatingsCount}} Bewertungen
@@ -46,7 +46,7 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
         <swiper class="my-4"
                 [config]="config">
           <ng-template swiperSlide *ngFor="let currentReview of reviews">
-            <div class="rounded-xl bg-gray-main p-6 md:w-4/5 mx-6 md:mx-auto mb-12" style="box-shadow: 0 2px 25px 0 black">
+            <div class="rounded-xl bg-grey-main p-6 md:w-4/5 mx-6 md:mx-auto mb-12" style="box-shadow: 0 2px 25px 0 black">
               <div class="flex items-start justify-center">
                 <div class="hidden md:flex bg-contain bg-center bg-no-repeat w-36 h-44 mr-4"
                      [ngStyle]="{'background-image': 'url('+this.currentReview.profile_photo_url+')'}">

@@ -14,7 +14,7 @@ module.exports = {
     },
     extend: {
       colors:{
-        'gray-main' : 'rgb(35 35 35)',
+        'grey-main' : 'rgb(35 35 35)',
         'silver' : 'rgb(197 197 197)'
       },
       backgroundImage: theme => ({

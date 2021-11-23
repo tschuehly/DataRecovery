@@ -5,9 +5,9 @@ import {HttpClient} from "@angular/common/http";
 @Component({
   selector: 'app-prices',
   template: `
-    <div class="bg-center bg-gray-main bg-cover bg-no-repeat " style="background-image: url('/assets/prices_header.jpg')">
+    <div class="bg-center bg-grey-main bg-cover bg-no-repeat " style="background-image: url('/assets/prices_header.jpg')">
       <div class="flex md:ml-80 justify-center md:justify-start " >
-        <h1 class="text-4xl leading-relaxed text-center text-silver text-shadow bg-gray-main p-16">
+        <h1 class="text-4xl leading-relaxed text-center text-silver text-shadow bg-grey-main p-16">
           Tobias<br>Jungbauer<br>Datenrettung
         </h1>
       </div>
@@ -15,21 +15,21 @@ import {HttpClient} from "@angular/common/http";
     <div class="h-20 bg-white text-center">
       <h1 class="text-4xl text-black py-5 tracking-wider">Festpreise</h1>
     </div>
-    <div class="bg-gray-main  ">
+    <div class="bg-grey-main  ">
       <div class="container flex">
         <div class="text-silver py-8 mx-auto justify-center">
           <span class="font-bold text-white">Wichtig:</span> Es handelt sich um
           <span class="font-bold text-white">Festpreise</span>, die nur <span class="font-bold text-white">nach Erfolg</span> gelten.<br>
           Bei <span class="font-bold text-white">Misserfolg</span> erhalten Sie Ihren Speicher <span class="font-bold text-white">kostenfrei</span> innerhalb weniger Tagen zurück.<br>
           Alle angegebenen Preise sind bereits inklusive 19% Mehrwertsteuer.<br>
-      
+
         </div>
-        
+
       </div>
     </div>
     <div class="grid grid-cols-1 xl:grid-cols-2  border-b-2 border-t-2">
       <div class="text-white">
-          <div class="bg-gray-main p-12" style="box-shadow: 0 2px 25px 0 black">
+          <div class="bg-grey-main p-12" style="box-shadow: 0 2px 25px 0 black">
             <ng-container *ngFor="let category of categories " >
               <div class="mb-2">
                 <h1 class="text-lg font-semibold mt-4 pb-2">{{category.title}}</h1>
@@ -44,7 +44,7 @@ import {HttpClient} from "@angular/common/http";
         </div>
       </div>
 
-      <div class="bg-gray-main bg-cover bg-center" style="background-image:url('/assets/prices_main.jpg')"></div>
+      <div class="bg-grey-main bg-cover bg-center" style="background-image:url('/assets/prices_main.jpg')"></div>
     </div>
 
   `,
