@@ -78,39 +78,7 @@ import {FormControl} from '@angular/forms';
         </div>
         <div *ngIf="!edit" class="col-span-2 text-center mt-6">
           <h3 class="text-2xl font-bold">Status: {{order.trackingState}}</h3>
-          <div class="mt-4" [ngSwitch]="order.trackingState">
-            <p *ngSwitchCase="orderStateEnum.firstAnalysis">
-              In der ersten Analyse wird Ihr Speicher nun nach dem Ursprung des Fehlers untersucht.<br>
-              So können beispielsweise Schleifspuren auf einem Schreib-/Lesekopf einen Headcrash nachweisen und uns
-              Hinweise über den
-              Zustand der Oberfläche geben.<br/>
-            </p>
-            <p *ngSwitchCase="orderStateEnum.orderedFirstPartDispender">
-              Die Reparatur Ihres Speichers benötigt einen kompatiblen Teilespender, um Datenzugriff zu ermöglichen.
-              <br/>
-              Diesen finde Ich oftmals von Privatpersonen wie z.B. auf Ebay.<br/>
-            </p>
-            <p *ngSwitchCase="orderStateEnum.orderedSecondPartDispender">
-              Der vorherige Teilespender war entweder nicht kompatibel oder nahm zu schnell neuen Schaden.<br/>
-              Es wird nun mit einem zweiten Teilespender ein neuer Versuch gestartet.<br/>
-            </p>
-            <p *ngSwitchCase="orderStateEnum.orderedThirdPartDispender">
-              Der vorherige Teilespender war entweder nicht kompatibel oder nahm zu schnell neuen Schaden.<br/>
-              Es wird nun mit einem dritten Teilespender der letzte Versuch gestartet.<br/>
-            </p>
-            <p *ngSwitchCase="orderStateEnum.readingMemory">
-              Es besteht Datenzugriff auf Ihren Speicher. Dieser wird nun Sektor für Sektor ausgelesen.<br/>
-              Bitte melden Sie sich falls es Dateien gibt die priorisiert werden sollen.<br/>
-            </p>
-            <p *ngSwitchCase="orderStateEnum.savingData">
-              Die geretteten Dateien werden nun auf den Ersatzdatenträger abgespeichert.<br/>
-            </p>
-            <p *ngSwitchCase="orderStateEnum.reRead">
-              Der erste Lesedurchgang beinhaltet Fehler.<br/>
-              Es wird nun versucht durch erneute Lesezugriffe diese Fehler zu reduzieren oder bestenfalls vollständig zu
-              beseitigen.
-            </p>
-          </div>
+
 
         </div>
         <ng-container *ngIf="edit">
@@ -137,21 +105,75 @@ import {FormControl} from '@angular/forms';
             Willst du sicher diese Bestellung löschen?
           </button>
         </div>
-        <div *ngFor="let update of order.updates" class="col-span-2 border-2 rounded-md p-4">
-          <h2 class="text-2xl">Update: {{update.id}}</h2>
-          <span>Beschreibung:</span>
-          <p class="text-xl whitespace-pre-wrap border p-2 my-2">{{update.description}}</p>
-          <span *ngIf="update.pictures.length !== 0">Klicken um die Bilder zu vergrößern</span>
-          <div class="flex flex-row flex-wrap mt-2">
-            <div *ngFor="let pic of update.pictures">
-              <label class="cursor-pointer" (click)="togglePictureZoom(pic)">
-                <img class="mr-4"
-                     [ngClass]="pic['zoomed'] ? 'h-96' : 'h-32'"
-                     src="{{'/api/picture/'+ pic.id}}"
-                     [alt]="pic.name">{{pic.name}}
-              </label>
+        <div class="col-span-2">
+          <div class="flex flex-col md:grid grid-cols-12 text-gray-50">
 
-            </div>
+            <ng-container *ngFor="let update of order.updates; let first = first ;let last = last; let index = index;" class="">
+              <div class="flex md:contents">
+                <div class="col-end-2 mr-10 md:mx-auto relative">
+                  <div class="h-full w-7 flex items-center justify-center">
+                    <div class="h-full w-1 bg-grey-main pointer-events-none"></div>
+                  </div>
+                  <div class="w-7 h-7 absolute top-1/2 -mt-3 rounded-full bg-grey-main shadow text-center">{{order.updates.length - index}}</div>
+                </div>
+                <div class="bg-grey-main col-start-2 col-span-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+                  <h3 class="font-semibold text-lg my-1">{{update.date | date:'d.M.y'}} {{update.title}}:</h3>
+                  <p class="leading-tight text-justify w-full">
+
+                  </p>
+                  <ng-container [ngSwitch]="update.title">
+                    <p *ngSwitchCase="orderStateEnum.firstAnalysis">
+                      In der ersten Analyse wird Ihr Speicher nun nach dem Ursprung des Fehlers untersucht.<br>
+                      So können beispielsweise Schleifspuren auf einem Schreib-/Lesekopf einen Headcrash nachweisen und uns
+                      Hinweise über den
+                      Zustand der Oberfläche geben.<br/>
+                    </p>
+                    <p *ngSwitchCase="orderStateEnum.orderedFirstPartDispenser">
+                      Die Reparatur Ihres Speichers benötigt einen kompatiblen Teilespender, um Datenzugriff zu ermöglichen.
+                      <br/>
+                      Diesen finde Ich oftmals von Privatpersonen wie z.B. auf Ebay.<br/>
+                    </p>
+                    <p *ngSwitchCase="orderStateEnum.orderedSecondPartDispenser">
+                      Der vorherige Teilespender war entweder nicht kompatibel oder nahm zu schnell neuen Schaden.<br/>
+                      Es wird nun mit einem zweiten Teilespender ein neuer Versuch gestartet.<br/>
+                    </p>
+                    <p *ngSwitchCase="orderStateEnum.orderedThirdPartDispenser">
+                      Der vorherige Teilespender war entweder nicht kompatibel oder nahm zu schnell neuen Schaden.<br/>
+                      Es wird nun mit einem dritten Teilespender der letzte Versuch gestartet.<br/>
+                    </p>
+                    <p *ngSwitchCase="orderStateEnum.readingMemory">
+                      Es besteht Datenzugriff auf Ihren Speicher. Dieser wird nun Sektor für Sektor ausgelesen.<br/>
+                      Bitte melden Sie sich falls es Dateien gibt die priorisiert werden sollen.<br/>
+                    </p>
+                    <p *ngSwitchCase="orderStateEnum.savingData">
+                      Die geretteten Dateien werden nun auf den Ersatzdatenträger abgespeichert.<br/>
+                    </p>
+                    <p *ngSwitchCase="orderStateEnum.reRead">
+                      Der erste Lesedurchgang beinhaltet Fehler.<br/>
+                      Es wird nun versucht durch erneute Lesezugriffe diese Fehler zu reduzieren oder bestenfalls vollständig zu
+                      beseitigen.
+                    </p>
+                    <p *ngSwitchDefault>
+                      {{update.description}}
+                    </p>
+                  </ng-container>
+                  <span *ngIf="update.pictures.length !== 0">Klicken um die Bilder zu vergrößern</span>
+                  <div class="flex flex-row flex-wrap mt-2">
+                    <div *ngFor="let pic of update.pictures">
+                      <label class="cursor-pointer" (click)="togglePictureZoom(pic)">
+                        <img class="mr-4"
+                             [ngClass]="pic['zoomed'] ? 'h-96' : 'h-32'"
+                             src="{{'/api/picture/'+ pic.id}}"
+                             [alt]="pic.name">{{pic.name}}
+                      </label>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </ng-container>
+
           </div>
         </div>
       </div>
@@ -180,15 +202,21 @@ export class OrderDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.orderTrackingState = new FormControl(this.order.trackingState);
-    if (this.order.completionDate){
+    if (this.order.completionDate) {
       const diff = new Date(this.order.completionDate).getTime() - new Date().getTime();
       this.daysToCompletion = Math.floor(diff / (1000 * 3600 * 24));
     }
-    if (this.update?.pictures){
+    if (this.update?.pictures) {
       this.update.pictures.map(pic => {
         return {...pic, zoomed: false};
       });
     }
+
+    this.order.updates = this.order.updates.sort((u1, u2) => {
+      if (u1.date > u2.date) {
+        return -1;
+      }
+    });
   }
 
   saveOrder(): void {
@@ -196,7 +224,7 @@ export class OrderDetailsComponent implements OnInit {
     const date = new Date();
     date.setDate(date.getDate() + this.daysToCompletion);
     this.order.completionDate = date;
-    if (this.order.deadline != null){
+    if (this.order.deadline != null) {
       this.order.deadline = new Date(this.order.deadline);
 
     }

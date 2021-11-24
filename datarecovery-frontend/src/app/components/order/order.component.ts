@@ -150,19 +150,19 @@ export class OrderComponent implements OnInit {
     this.http.post('api/order/updateStatus', editOrder).subscribe((order: Order) => {
       console.log(order);
       this.updateOrders(order);
-
     });
     this.editOrder = null;
   }
 
   updateOrders(order: Order): void {
-    this.orders = this.orders.map(o => {
+    this.filteredOrders$ = this.filteredOrders$.pipe(map(orderArray =>
+    orderArray.map(o => {
       if (o.id === order.id){
         return order;
       }else {
         return o;
       }
-    } );
+    })));
   }
 
   deleteOrder(order: Order): void {

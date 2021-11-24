@@ -29,9 +29,9 @@ export enum orderStateEnum {
   orderReceivedReminderSent = 'Warte auf Ankunft / Erinnerung',
   parcelReceived = 'Paket eingegangen',
   firstAnalysis = 'Erste Analyse',
-  orderedFirstPartDispender = 'Bestellung erster Teilespender',
-  orderedSecondPartDispender = 'Bestellung zweiter Teilespender',
-  orderedThirdPartDispender = 'Bestellung dritter Teilespender',
+  orderedFirstPartDispenser = 'Bestellung erster Teilespender',
+  orderedSecondPartDispenser = 'Bestellung zweiter Teilespender',
+  orderedThirdPartDispenser = 'Bestellung dritter Teilespender',
   waitingForPinout = 'Warte auf Pinout',
   inRepair = 'Reparatur',
   readingMemory = 'Speicher wird ausgelesen',
@@ -45,6 +45,7 @@ export enum orderStateEnum {
 }
 export class Update{
   id: number;
+  title: string;
   description: string;
   date: Date;
   pictures: Picture[];

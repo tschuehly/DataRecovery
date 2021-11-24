@@ -13,5 +13,9 @@
                  stripComments="true"/>
     </changeSet>
     <include file="db/changelog/changelog-production.xml"  context="prod"/>
-
+    <changeSet id="1635077864679-14" author="tschuehly">
+        <addColumn tableName="update">
+            <column name="title" type="VARCHAR(255)"/>
+        </addColumn>
+    </changeSet>
 </databaseChangeLog>

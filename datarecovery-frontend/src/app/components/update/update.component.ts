@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {FormArray, FormControl, FormGroup} from '@angular/forms';
 import {Order, Update} from '../../model/model';
 import {HttpClient} from '@angular/common/http';
@@ -32,7 +32,7 @@ import {HttpClient} from '@angular/common/http';
   styles: [
   ]
 })
-export class UpdateComponent implements OnInit {
+export class UpdateComponent  {
   @Input() order: Order;
   @Output() updatedOrder: EventEmitter<Order> = new EventEmitter<Order>();
   updateForm = new FormGroup({
@@ -42,8 +42,7 @@ export class UpdateComponent implements OnInit {
   files: File[] = [];
   constructor(private http: HttpClient) { }
 
-  ngOnInit(): void {
-  }
+
   addUpdateToOrder(): void{
     const updateData = new FormData();
     for (let i = 0; i < this.files.length; i++) {
