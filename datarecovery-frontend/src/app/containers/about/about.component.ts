@@ -3,7 +3,7 @@ import {Component, OnInit} from '@angular/core';
 @Component({
   selector: 'app-about',
   template: `
-    <div class="py-10 bg-right bg-gray-main bg-cover bg-no-repeat "
+    <div class="py-10 bg-right bg-grey-main bg-cover bg-no-repeat "
          style="background-image: url('/assets/hdd_arbeitsweise.png')">
       <div class="flex md:ml-32 py-10 justify-center md:justify-start">
         <div class="text-4xl leading-relaxed text-center text-silver text-shadow">
@@ -16,10 +16,12 @@ import {Component, OnInit} from '@angular/core';
       <div class="h-20 bg-white text-center">
         <h1 class="text-4xl text-black py-5 tracking-wider">Philosophie</h1>
       </div>
-      <div class="bg-gray-main text-silver border-b-2 border-silver pb-8">
+      <div class="bg-grey-main text-white border-b-2 border-silver pb-8">
         <div class="container">
-          <h2 class="text-2xl text-white font-bold py-6">Die Vorteile meines Angebots sind:</h2>
           <pre class="whitespace-pre-wrap">
+<span class="text-4xl text-bold text-lg">meine Philosophie</span>
+<span class="text-bold text-lg text-silver">Updated am 30.05.2021, 17:36 von Tobias Jungbauer</span>
+
 <span class="font-semibold ">1. Bei mir müssen Sie niemals in Vorkasse gehen:</span>
 So bearbeite ich alle meine Fälle zu einem im Verhältnis zum Markt preiswerten Festpreis und das zudem nur nach Erfolg. Bei Misserfolg verlange ich keine Gebühren.
 
@@ -55,7 +57,8 @@ Dazugekommen sind eine Laminar Flowbox, die es mir fortan erlaubte, unter Reinra
           </pre>
           <h2 class="text-2xl text-white font-bold py-6">Die Situation Heute:</h2>
           <pre class="whitespace-pre-wrap">
-Mittlerweile habe ich weit über 500 Datenrettungsfälle bearbeitet. Mit diesen kamen immer neue Herausforderungen, die nach harter Arbeit neue Lösungen hervorbrachten.
+Mittlerweile habe ich über 500 Datenrettungsfälle erfolgreich bearbeitet. 
+Mit diesen kamen immer neue Herausforderungen, die nach harter Arbeit neue Lösungen hervorbrachten.
 Um die bestmögliche Erfolgsquote zu erreichen, habe ich auch weiterhin sehr viel Zeit und Geld investiert, sodass ich mittlerweile auch die schwierigsten Fälle, bei denen oftmals ein vorheriger Bearbeiter bereits aufgegeben hat, bearbeiten kann, um zumindest eine Teildatenrettung zu erzielen.
 So arbeite ich mittlerweile auch mit Festplatten mit beschädigten Oberflächen oder repariere äußerst schwierige Festplattenmodelle wie z.B. aus der Seagate Rosewood Familie, die namhafte Anbieter nicht bearbeiten wollen.
 Dabei habe ich meine Anfänge nicht vergessen.

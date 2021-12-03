@@ -11,9 +11,9 @@ declare let gtag: Function;
   selector: 'app-navigation',
   template: `
     <div class="flex flex-col h-screen">
-      <nav class="flex fixed justify-between w-full text-silver bg-gray-main z-50" id="navigation">
+      <nav class="flex fixed justify-between w-full text-silver bg-grey-main z-50" id="navigation">
         <a  href="/">
-          <div class="bg-gray-main pl-4 py-4">
+          <div class="bg-grey-main pl-4 py-4">
             <img src="/assets/LOGO_TJ_Datenrettung.svg" class="h-14 w-96" alt="Datenrettung Jungbauer Logo">
           </div>
         </a>
@@ -24,26 +24,28 @@ declare let gtag: Function;
             </svg>
           </button>
         </div>
-        <div class="items-center text-xl px-4  bg-gray-main" [ngClass]="mobileNavShow ? 'flex flex-col absolute right-0 top-20 w-full space-y-4 py-4 text-2xl font-semibold bg-gray-main text-white': 'hidden md:flex md:flex-row'">
+        <div class="items-center text-xl px-4  bg-grey-main" [ngClass]="mobileNavShow ? 'flex flex-col absolute right-0 top-20 w-full space-y-4 py-4 text-2xl font-semibold bg-grey-main text-white': 'hidden md:flex md:flex-row'">
 
         <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="">Startseite</a>
-         <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="preise">Preise</a>
-          <a class="cursor-pointer p-2" (click)="scrollToOrder(); mobileNavShow = false">Auftrag</a>
-          <a (click)="mobileNavShow = false;scrollToContact()" class="cursor-pointer p-2">Kontakt</a>
+          <a class="cursor-pointer p-2" (click)="scrollToOrder(); mobileNavShow = false">Auftragsformular</a>
+          <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="preise">Preise</a>
           <div class="h-full text-center flex"  (clickOutside)="dropdownShow = false" [exclude]="'div.dropdown'"
                [excludeBeforeClick]="true" [ngClass]="{'bg-gray-300 md:bg-black ': dropdownShow}">
             <a class="cursor-pointer self-center p-2" (click)="dropdownShow = !dropdownShow">Arbeitsweise</a>
+            
 
 
             <div class="grid gap-2 absolute justify-evenly p-3 bg-gray-300 text-xl dropdown text-black"
                  style="margin-right: 2.8rem; top: 5.5rem;" *ngIf="dropdownShow" [ngStyle]="mobileNavShow ? {'top':'0','width':'100%','left':'0','padding':'48px 0px','gap':'1.5rem'}:{}">
               <a (click)="mobileNavShow = false" routerLink="/datenrettung/hdd">HDD Festplatten</a>
               <a (click)="mobileNavShow = false" routerLink="/datenrettung/ssd">SSD Festplatten</a>
-              <a (click)="mobileNavShow = false" routerLink="/datenrettung/flash">USB Stick<br>SD Karte</a>
-              <a (click)="mobileNavShow = false" routerLink="/datenrettung/raid">RAID<br>Fusion Drive</a>
+              <a (click)="mobileNavShow = false" routerLink="/datenrettung/flash">USB Stick &<br>SD Karte</a>
+              <a (click)="mobileNavShow = false" routerLink="/datenrettung/raid">RAID &<br>Fusion Drive</a>
             </div>
           </div>
           <a (click)="mobileNavShow = false" class="cursor-pointer p-2" routerLink="philosophie">Philosophie</a>
+          <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="blog">Blog</a>
+          <a (click)="mobileNavShow = false;scrollToContact()" class="cursor-pointer p-2">Kontakt</a>
           <div *ngIf="currentUser">
             <a (click)="mobileNavShow = false" class=" p-2" routerLink="/order">Bestellungen</a>
             <a (click)="mobileNavShow = false" class=" p-2" routerLink="/product">Produkte</a>
@@ -94,7 +96,7 @@ declare let gtag: Function;
           </a>
         </div>
       </div>
-      <footer class="pt-8 bg-gray-main text-silver">
+      <footer class="pt-8 bg-grey-main text-silver">
       <ng-container *ngIf="mapsIframeShow">
               <div class="h-72 mb-4 bg-white">
                 <iframe id="myFrame"
@@ -169,7 +171,7 @@ export class NavigationComponent implements OnInit {
     this.innerWidth = document.documentElement.clientWidth;
     this.statusChangeSubscription = this.ccService.statusChange$.subscribe(
       (event: NgcStatusChangeEvent) => {
-        if(event.status === "allow"){
+        if(event.status === 'allow'){
           let node = document.createElement('script'); // creates the script tag
           node.src = 'https://www.googletagmanager.com/gtag/js?id=G-VPEC2J7SDM'; // sets the source (insert url in between quotes)
           node.type = 'text/javascript'; // set the script type
@@ -191,7 +193,7 @@ export class NavigationComponent implements OnInit {
             }
           });
         }
-        if(event.status === "deny"){
+        if(event.status === 'deny'){
           this.mapsIframeShow = false;
         }
       });

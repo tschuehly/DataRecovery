@@ -64,7 +64,7 @@
         </tr>
         <tr>
           <td class="flex justify-end pt-4">
-            <button class="text-xl bg-gray-main py-2 px-4 shadow rounded text-white">
+            <button class="text-xl bg-grey-main py-2 px-4 shadow rounded text-white">
               <a href="preise">Direkt zu den Preisen</a>
             </button>
           </td>
@@ -80,16 +80,16 @@
 
 
 <app-review-component></app-review-component>
-<div class="text-xl bg-gray-main bg-circuit-board text-gray-50" id="priceList">
+<div class="text-xl bg-grey-main bg-circuit-board text-gray-50" id="priceList">
 
 
   <h2 class="text-3xl text-gray-50 py-5 text-center tracking-wider">Ein Festpreis auch für komplexe Fälle</h2>
 
 
-  
+
 
   <div class="container py-10 text-center rounded-2xl break-words">
-    <div class="bg-gray-main rounded-2xl" style="box-shadow: 0 2px 25px 0 black">
+    <div class="bg-grey-main rounded-2xl" style="box-shadow: 0 2px 25px 0 black">
 
       <div class="flex text-center">
         <div class="flex-1 bg-cover bg-center rounded-tl-2xl" style="background-image: url('/assets/usb.jpg')"></div>
@@ -268,10 +268,15 @@
             <p class="text-lg">Nach der Wiederherstellung werden Ihnen Ihre Dateien und die Rechnung zugesandt.</p>
             <p class="text-lg">Kosten entstehen dabei für Sie nur nach erfolgreicher Datenrettung und zum angebenen Festpreis.</p>
           </div>
+          
         </div>
 
       </div>
-
+      <td class="flex justify-end pt-4">
+        <button class="text-xl bg-grey-main py-2 px-4 shadow rounded text-white">
+          <a href="https://www.jungbauerdatenrettung.de/blog/ablauf-der-datenrettung-anhand-eines-beispiels">weiteres zum Ablauf</a>
+        </button>
+      </td>
     </div>
   </div>
 
@@ -280,7 +285,7 @@
 
 <div class="bg-white">
   <div class="bg-white container py-10">
-    <div class="bg-gray-main text-white rounded-2xl" style="box-shadow: 0 2px 25px 0 black;" id="order_form">
+    <div class="bg-grey-main text-white rounded-2xl" style="box-shadow: 0 2px 25px 0 black;" id="order_form">
 
       <app-order-form
         *ngIf="products && orderSubmitted === null"
