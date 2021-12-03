@@ -59,7 +59,7 @@ declare let gtag: Function;
         <router-outlet></router-outlet>
       </div>
 
-      <div class="fixed w-64 bg-white rounded-xl bottom-4 left-4 z-50 p-4 shadow-2xl" *ngIf="showPhone">
+      <div class="fixed w-64 bg-white rounded-xl bottom-4 right-20 z-50 p-4 shadow-2xl" *ngIf="showPhone">
         <div class="flex justify-around items-center pb-4">
           <h2 class="font-semibold pb-2">Ein Anruf klärt am schnellsten Ihr Anliegen:</h2>
           <button (click)="showPhone = false"><img alt="close" class="inline" src="assets/x.svg"></button>
@@ -82,7 +82,7 @@ declare let gtag: Function;
           </button>
         </div>
       </div>
-      <div class="fixed right-10 bottom-10 shadow-2xl rounded-xl z-20" [ngClass]="wawidgetHidden ? 'hidden':''">
+      <div class="fixed right-20 bottom-4 shadow-2xl rounded-xl z-20" [ngClass]="wawidgetHidden ? 'hidden':''">
         <div class="flex align-middle text-white p-4 rounded-t-xl " style="background-color: rgb(9, 94, 84)">
           <span class="px-2">Jetzt Tobias Jungbauer kontaktieren</span>
           <button (click)="wawidgetHidden = true">
