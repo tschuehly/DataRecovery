@@ -27,24 +27,25 @@ declare let gtag: Function;
         <div class="items-center text-xl px-4  bg-grey-main" [ngClass]="mobileNavShow ? 'flex flex-col absolute right-0 top-20 w-full space-y-4 py-4 text-2xl font-semibold bg-grey-main text-white': 'hidden md:flex md:flex-row'">
 
         <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="">Startseite</a>
-         <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="preise">Preise</a>
-         <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="blog">Blog</a>
           <a class="cursor-pointer p-2" (click)="scrollToOrder(); mobileNavShow = false">Auftragsformular</a>
-          <a (click)="mobileNavShow = false;scrollToContact()" class="cursor-pointer p-2">Kontakt</a>
+          <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="preise">Preise</a>
           <div class="h-full text-center flex"  (clickOutside)="dropdownShow = false" [exclude]="'div.dropdown'"
                [excludeBeforeClick]="true" [ngClass]="{'bg-gray-300 md:bg-black ': dropdownShow}">
             <a class="cursor-pointer self-center p-2" (click)="dropdownShow = !dropdownShow">Arbeitsweise</a>
+            
 
 
             <div class="grid gap-2 absolute justify-evenly p-3 bg-gray-300 text-xl dropdown text-black"
                  style="margin-right: 2.8rem; top: 5.5rem;" *ngIf="dropdownShow" [ngStyle]="mobileNavShow ? {'top':'0','width':'100%','left':'0','padding':'48px 0px','gap':'1.5rem'}:{}">
               <a (click)="mobileNavShow = false" routerLink="/datenrettung/hdd">HDD Festplatten</a>
               <a (click)="mobileNavShow = false" routerLink="/datenrettung/ssd">SSD Festplatten</a>
-              <a (click)="mobileNavShow = false" routerLink="/datenrettung/flash">USB Stick<br>SD Karte</a>
-              <a (click)="mobileNavShow = false" routerLink="/datenrettung/raid">RAID<br>Fusion Drive</a>
+              <a (click)="mobileNavShow = false" routerLink="/datenrettung/flash">USB Stick &<br>SD Karte</a>
+              <a (click)="mobileNavShow = false" routerLink="/datenrettung/raid">RAID &<br>Fusion Drive</a>
             </div>
           </div>
           <a (click)="mobileNavShow = false" class="cursor-pointer p-2" routerLink="philosophie">Philosophie</a>
+          <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="blog">Blog</a>
+          <a (click)="mobileNavShow = false;scrollToContact()" class="cursor-pointer p-2">Kontakt</a>
           <div *ngIf="currentUser">
             <a (click)="mobileNavShow = false" class=" p-2" routerLink="/order">Bestellungen</a>
             <a (click)="mobileNavShow = false" class=" p-2" routerLink="/product">Produkte</a>

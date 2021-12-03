@@ -19,20 +19,20 @@ import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
     <ng-container *ngIf="!articleUrl">
       <div>
         <div class="h-20 bg-white text-center">
-          <h1 class="text-4xl text-black py-5 tracking-wider">Blogartikel</h1>
+          <h1 class="text-4xl text-black py-5 tracking-wider">Blogübersicht</h1>
         </div>
         <div class="bg-grey-main bg-circuit-board">
           <div class="bg-white max-w-4xl mx-auto border-b-2 border-grey-main">
             <div class="text-grey-main py-8 flex flex-row justify-around">
-              <img class="h-40 " src="/assets/RAID%20Symbol(old).png">
+              <img class="h-40 " src="/assets/android-icon-192x192.png">
               <div>
-                <span>23 November 2021</span>
+                <span>Updated am 29.11.2021, 16:14 von Tobias Jungbauer</span>
                 <div class="space-y-4">
                   <a href="/blog/wie-teuer-ist-die-datenrettung">
-                    <h3 class="text-2xl font-bold">Wie teuer ist die Datenrettung </h3>
+                    <h3 class="text-2xl font-bold">Datenrettung Kosten</h3>
                   </a>
                   <p>
-                    Wie werden Daten von einem Apple Fusion Drive gerettet?
+                    Wie kommen die Preise zustande? Details zu Kosten aus...
                   </p>
                   <button class="font-semibold">
                     Mehr lesen  →
@@ -45,15 +45,15 @@ import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
           <!-- Artikeleintrag Anfang -->
           <div class="bg-white max-w-4xl mx-auto border-b-2 border-grey-main">
             <div class="text-grey-main py-8 flex flex-row justify-around">
-              <img class="h-40 " src="/assets/RAID%20Symbol(old).png">
+              <img class="h-40 " src="/assets/android-icon-192x192.png">
               <div>
-                <span>01 November 2021</span>
+                <span>Updated am 03.12.2021, 12:31 von Tobias Jungbauer</span>
                 <div class="space-y-4">
                   <a href="/blog/apple-fusion-drive-datenrettung">
                     <h3 class="text-2xl font-bold">Apple Fusion Drive Datenrettung</h3>
                   </a>
                   <p>
-                    Wie werden Daten von einem Apple Fusion Drive gerettet?
+                    Wie werden Daten von einem Apple Fusion Drive gerettet?...                                                       
                   </p>
                   <button class="font-semibold">
                     Mehr lesen  →
@@ -66,15 +66,15 @@ import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
 
           <div class="bg-white max-w-4xl mx-auto border-b-2 border-grey-main">
             <div class="text-grey-main py-8 flex flex-row justify-around">
-              <img class="h-40 " src="/assets/RAID%20Symbol(old).png">
+              <img class="h-40 " src="/assets/android-icon-192x192.png">
               <div>
-                <span>01 November 2021</span>
+                <span>Updated am 03.12.2021, 14:56 von Tobias Jungbauer</span>
                 <div class="space-y-4">
                   <a href="/blog/ablauf-der-datenrettung-anhand-eines-beispiels">
                     <h3 class="text-2xl font-bold">Ablauf der Datenrettung</h3>
                   </a>
                   <p>
-                    Wie werden Daten von einem Apple Fusion Drive gerettet?
+                    Wie läuft ein Auftrag bei Tobias Jungbauer Datenrettung ab?
                   </p>
                   <button class="font-semibold">
                     Mehr lesen  →
