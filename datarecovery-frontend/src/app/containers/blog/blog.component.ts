@@ -22,70 +22,75 @@ import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
           <h1 class="text-4xl text-black py-5 tracking-wider">Blogübersicht</h1>
         </div>
         <div class="bg-grey-main bg-circuit-board">
-          <div class="bg-white max-w-4xl mx-auto border-b-2 border-grey-main">
-            <div class="text-grey-main py-8 flex flex-row justify-around">
-              <img class="h-40 " src="/assets/android-icon-192x192.png">
-              <div>
-                <span>Updated am 29.11.2021, 16:14 von Tobias Jungbauer</span>
+          <div class="bg-white max-w-4xl mx-auto border-b-2 border-t-2 border-grey-main">
+            <div class="text-grey-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center">
+              <div class="h-40 flex-shrink-0  w-full md:w-96  my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
+                   style="background-image: url('/assets/android-icon-192x192.png')">
+              </div>
+              <div class="">
+                <a routerLink="/blog/datenrettung-kosten" href="/blog/datenrettung-kosten" class="py-2">
+                  <h3 class="text-2xl font-bold">Datenrettung Kosten</h3>
+                </a>
+                <div class="py-2 italic">Updated am 29.11.2021, 16:14 von Tobias Jungbauer</div>
                 <div class="space-y-4">
-                  <a href="/blog/wie-teuer-ist-die-datenrettung">
-                    <h3 class="text-2xl font-bold">Datenrettung Kosten</h3>
-                  </a>
-                  <p>
+                  <p class="pb-2">
                     Wie kommen die Preise zustande? Details zu Kosten aus...
                   </p>
-                  <button class="font-semibold">
+                  <a routerLink="/blog/datenrettung-kosten" href="/blog/datenrettung-kosten" class="font-semibold">
                     Mehr lesen  →
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
           <!-- Artikeleintrag Anfang -->
-          <div class="bg-white max-w-4xl mx-auto border-b-2 border-grey-main">
-            <div class="text-grey-main py-8 flex flex-row justify-around">
-              <img class="h-40 " src="/assets/android-icon-192x192.png">
-              <div>
-                <span>Updated am 03.12.2021, 12:31 von Tobias Jungbauer</span>
+          <div class="bg-white max-w-4xl mx-auto border-b-2 border-t-2 border-grey-main">
+            <div class="text-grey-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center">
+              <div class="h-40 flex-shrink-0 w-full md:w-96  my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
+                   style="background-image: url('/assets/android-icon-192x192.png')">
+              </div>
+              <div class="">
+                <a routerLink="/blog/apple-fusion-drive-datenrettung" href="/blog/apple-fusion-drive-datenrettung" class="py-2">
+                  <h3 class="text-2xl font-bold">Apple Fusion Drive Datenrettung</h3>
+                </a>
+                <div class="py-2 italic">Updated am 03.12.2021, 12:31 von Tobias Jungbauer</div>
                 <div class="space-y-4">
-                  <a href="/blog/apple-fusion-drive-datenrettung">
-                    <h3 class="text-2xl font-bold">Apple Fusion Drive Datenrettung</h3>
-                  </a>
-                  <p>
-                    Wie werden Daten von einem Apple Fusion Drive gerettet?...                                                       
+                  <p class="pb-2">
+                    Wie werden Daten von einem Apple Fusion Drive gerettet?...
                   </p>
-                  <button class="font-semibold">
+                  <a routerLink="/blog/apple-fusion-drive-datenrettung" href="/blog/apple-fusion-drive-datenrettung" class="font-semibold">
                     Mehr lesen  →
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
           <!-- Artikeleintrag Ende -->
 
-          <div class="bg-white max-w-4xl mx-auto border-b-2 border-grey-main">
-            <div class="text-grey-main py-8 flex flex-row justify-around">
-              <img class="h-40 " src="/assets/android-icon-192x192.png">
-              <div>
-                <span>Updated am 03.12.2021, 14:56 von Tobias Jungbauer</span>
+          <div class="bg-white max-w-4xl mx-auto border-b-2 border-t-2 border-grey-main">
+            <div class="text-grey-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center">
+              <div class="h-40 flex-shrink-0 w-full md:w-96 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
+                   style="background-image: url('/assets/android-icon-192x192.png')">
+              </div>
+              <div class="">
+                <a routerLink="/blog/ablauf-der-datenrettung-anhand-eines-beispiels" href="/blog/ablauf-der-datenrettung-anhand-eines-beispiels" class="py-2">
+                  <h3 class="text-2xl font-bold">Ablauf der Datenrettung</h3>
+                </a>
+                <div class="py-2 italic">Updated am 03.12.2021, 14:56 von Tobias Jungbauer</div>
                 <div class="space-y-4">
-                  <a href="/blog/ablauf-der-datenrettung-anhand-eines-beispiels">
-                    <h3 class="text-2xl font-bold">Ablauf der Datenrettung</h3>
-                  </a>
-                  <p>
+                  <p class="pb-2">
                     Wie läuft ein Auftrag bei Tobias Jungbauer Datenrettung ab?
                   </p>
-                  <button class="font-semibold">
+                  <a routerLink="/blog/ablauf-der-datenrettung-anhand-eines-beispiels" href="/blog/ablauf-der-datenrettung-anhand-eines-beispiels" class="font-semibold">
                     Mehr lesen  →
-                  </button>
+                  </a>
                 </div>
-
               </div>
             </div>
-
-
           </div>
+
+
         </div>
       </div>
     </ng-container>
