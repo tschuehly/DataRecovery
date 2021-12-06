@@ -13,7 +13,10 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube, A
         [effect]="'fade'"
         [navigation]="true"
         centeredSlides="true"
-        [autoplay]="true">
+        [autoplay]="{delay: 5000}"
+        [speed]="600"
+
+      >
 
         <ng-template swiperSlide>
           <div class="swiper_img flex content-center bg-cover md:bg-auto md:bg-contain bg-center bg-no-repeat"
