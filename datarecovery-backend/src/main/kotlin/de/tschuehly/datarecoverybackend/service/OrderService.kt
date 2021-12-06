@@ -83,14 +83,14 @@ class OrderService(
     }
 
     fun getArchived(page: Number): List<Order> {
-        val paging: Pageable = PageRequest.of(page.toInt(), 15)
+        val paging: Pageable = PageRequest.of(page.toInt(), 1000)
         return orderRepository.findByTrackingStateInOrderByOrderDateDesc(archiveList, paging)
     }
 
     fun getActive(): List<Order> = orderRepository.findByTrackingStateNotIn(nonActiveList)
 
     fun getAwaited(page: Number): List<Order> {
-        val paging: Pageable = PageRequest.of(page.toInt(), 15)
+        val paging: Pageable = PageRequest.of(page.toInt(), 1000)
         return orderRepository.findByTrackingStateInOrderByOrderDateDesc(listOf(orderReceived, orderReceivedReminderSent), paging)
     }
 
