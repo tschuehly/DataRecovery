@@ -9,14 +9,16 @@ spring:
     properties.mail.smtp.starttls.enable: true
   servlet:
     multipart:
-      max-file-size: 20MB
+      max-file-size: 2000MB
+      max-request-size: 2000MB
   liquibase:
     change-log: classpath:db/changelog/db.changelog-master.xml
     contexts: none
     default-schema: public
 server:
   port: 8088
-
+  tomcat:
+    max-http-form-post-size: 2000MB
 logging:
   level:
     org.springframework.web: INFO
