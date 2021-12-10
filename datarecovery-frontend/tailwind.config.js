@@ -1,6 +1,5 @@
 module.exports = {
-  purge: ["./src/**/*.html", "./src/**/*.ts"],
-  darkMode: false, // or 'media' or 'class'
+  content: ["./src/**/*.{html,ts}"],
   theme: {
     container:{
       screens: {
@@ -22,12 +21,6 @@ module.exports = {
         'img-flash': "url('/assets/flash2.JPG')"
       })
     },
-  },
-  variants: {
-    mixBlendMode: ['responsive'],
-    backgroundBlendMode: ['responsive'],
-    isolation: ['responsive'],
-    extend: {},
   },
   plugins: [
     require('@tailwindcss/forms'),
