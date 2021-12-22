@@ -22,7 +22,6 @@ server:
 logging:
   level:
     org.springframework.web: INFO
-    org.springframework.security: DEBUG
 
 ---
 # Run a docker container with docker run -d --name some-postgres -e POSTGRES_PASSWORD=password -p 5432:5432 postgres:13.4

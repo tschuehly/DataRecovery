@@ -2,6 +2,7 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {FormArray, FormControl, FormGroup} from '@angular/forms';
 import {Order, Update} from '../../model/model';
 import {HttpClient} from '@angular/common/http';
+import imageCompression from 'browser-image-compression';
 
 @Component({
   selector: 'app-update',
@@ -15,7 +16,7 @@ import {HttpClient} from '@angular/common/http';
           </label>
           <form [formGroup]="updateForm" class="text-black" enctype="multipart/form-data">
               <label>Beschreibung
-                  <textarea class="block mt-2 w-96 h-96" formControlName="description"></textarea></label>
+                  <textarea class="block mt-2 w-full h-96" formControlName="description"></textarea></label>
               <div class="flex flex-col my-4" *ngFor="let picture of pictureDetails.controls; let i = index">
                   <label>Bildtitel
                       <input [formControl]="picture" type="text">
@@ -24,9 +25,11 @@ import {HttpClient} from '@angular/common/http';
                       <input class="block mt-2 w-full" type="file" (change)="onFileChange($event,i)">
                   </label>
               </div>
-              <button class="border-2 rounded-xl p-2 text-black" (click)="addImage()">Bild hinzufügen</button>
-              <button class="border-2 rounded-xl p-2 text-black" (click)="addUpdateToOrder()">Update speichern</button>
-          </form>
+              <div class="flex justify-between my-4">
+                <button class="border-2 rounded-xl p-2 text-black" (click)="addImage()">Bild hinzufügen</button>
+                <button class="border-2 rounded-xl p-2 text-black" (click)="addUpdateToOrder()">Update speichern</button>
+              </div>
+              </form>
       </div>
   `,
   styles: [
@@ -43,9 +46,11 @@ export class UpdateComponent  {
   constructor(private http: HttpClient) { }
 
 
-  addUpdateToOrder(): void{
+  async addUpdateToOrder(): Promise<void>{
     const updateData = new FormData();
     for (let i = 0; i < this.files.length; i++) {
+      console.log(this.files[i].size)
+      this.files[i] = await this.compressPicture(this.files[i])
       if (this.pictureDetails.controls[i].value === ''){
         updateData.append('pictures', this.files[i], this.files[i].name );
       }else {
@@ -57,6 +62,14 @@ export class UpdateComponent  {
       this.updatedOrder.emit(order);
     });
 
+  }
+
+  compressPicture(file: File): Promise<File>{
+    const options = {
+      maxWidthOrHeight: 1920,
+      useWebWorker: true
+    }
+    return imageCompression(file, options)
   }
 
   addImage(): void{

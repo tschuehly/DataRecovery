@@ -65,7 +65,7 @@ import {Router} from "@angular/router";
           </tbody>
         </table>
         <div class="text-right mt-4">
-          <button class="border-2 rounded-xl p-2 text-black" (click)="editProduct = newProduct()">Neues Produkt</button>
+          <button class="border-2 rounded-xl p-2 text-black" (click)="editProduct = {}">Neues Produkt</button>
         </div>
       </div>
       <div *ngIf="editProduct" class="m-auto border shadow-xl px-14 py-10">
@@ -96,33 +96,22 @@ export class ProductComponent implements OnInit {
       }
     });
     this.http.get('api/product').subscribe((products: Product[]) => {
-      this.products = products.sort((p1,p2) => p1.category.name.localeCompare(p2.category.name))
-        .sort((p1) => p1.category.replacement ? 1 : -1);
+      this.products = products.sort(
+        (p1,p2) => p1.category?.name?.localeCompare(p2?.category?.name)
+        )
+        .sort((p1) => p1.category?.replacement ? 1 : -1);
     });
   }
 
   saveProduct(productToSave: Product): void {
-    if(productToSave.id === null){
-      this.http.post('api/product', productToSave).subscribe((product: Product) => {
-        if (this.products.find(c => c.id === product.id)){
-          this.products = this.products.map( c => c.id === product.id ? product : c);
-        }else {
-          this.products.push(product);
-        }
-      });
-    }else {
-      this.http.put('api/product', productToSave).subscribe((product: Product) => {
-        this.products = this.products.map( p => p.id === product.id ? product : p);
-      });
-    }
-    this.editProduct = null;
-  }
-
-  newProduct(): Product{
-    this.http.post('api/product', {}).subscribe((product: Product) => {
-      this.editProduct = product;
+    this.http.post('api/product', productToSave).subscribe((product: Product) => {
+      if (this.products.find(c => c.id === product.id)){
+        this.products = this.products.map( c => c.id === product.id ? product : c);
+      }else {
+        this.products.push(product);
+      }
     });
-    return this.editProduct;
+    this.editProduct = null;
   }
 
   deleteProduct(product: Product) {

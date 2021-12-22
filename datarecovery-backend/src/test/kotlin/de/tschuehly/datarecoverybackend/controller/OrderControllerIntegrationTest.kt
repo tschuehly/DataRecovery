@@ -89,4 +89,17 @@ internal class OrderControllerIntegrationTest @Autowired constructor(val mockMvc
         }
 
     }
+
+    @Test
+    fun addProduct() {
+        mockMvc.post("/api/product") {
+            contentType = MediaType.APPLICATION_JSON
+            content = """{"id":null,"category":{"id":"2"},"name":"test","price":"987","sequenceId":123}"""
+        }.andExpect {
+            status { isOk() }
+            jsonPath("$.id", allOf(notNullValue(), instanceOf(Number::class.java)))
+            jsonPath("$.name", `is`("test"))
+        }
+    }
+
 }
