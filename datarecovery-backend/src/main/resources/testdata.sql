@@ -1,3 +1,5 @@
+ALTER SEQUENCE HIBERNATE_SEQUENCE RESTART WITH 200;
+
 --
 -- Data for Name: category;
 --
