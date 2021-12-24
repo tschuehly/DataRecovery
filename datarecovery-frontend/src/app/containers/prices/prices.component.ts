@@ -13,16 +13,20 @@ import {HttpClient} from "@angular/common/http";
       </div>
     </div>
     <div class="h-20 bg-white text-center">
-      <h1 class="text-4xl text-black py-5 tracking-wider">Festpreise</h1>
+      <h1 class="text-4xl text-black py-5 tracking-wider">Datenrettung Kosten</h1>
     </div>
     <div class="bg-grey-main  ">
       <div class="container flex">
         <div class="text-silver py-8 mx-auto justify-center">
-          <span class="font-bold text-white">Wichtig:</span> Es handelt sich um
-          <span class="font-bold text-white">Festpreise</span>, die nur <span class="font-bold text-white">nach Erfolg</span> gelten.<br>
-          Bei <span class="font-bold text-white">Misserfolg</span> erhalten Sie Ihren Speicher <span class="font-bold text-white">kostenfrei</span> innerhalb weniger Tagen zurück.<br>
+          <span class="font-bold text-red-800">Wichtig:</span> Es handelt sich um
+          <span class="font-bold text-white">Festpreise</span>, die <span class="font-bold text-white">nur nach Erfolg</span> gelten.<br>
+          <span class="font-bold text-white">Bei Misserfolg</span> erhalten Sie Ihren Speicher <span class="font-bold text-white">kostenfrei </span>zurück.<br>
           Alle angegebenen Preise sind bereits inklusive 19% Mehrwertsteuer.<br>
-
+          <div class="flex justify-end pt-4">
+            <button class="text-xl bg-white py-2 px-4 shadow rounded text-black">
+            <a href="">zum Auftragsformular</a>
+           </button>
+          </div>
         </div>
 
       </div>
@@ -31,7 +35,8 @@ import {HttpClient} from "@angular/common/http";
       <div class="text-white">
           <div class="bg-grey-main p-12" style="box-shadow: 0 2px 25px 0 black">
             <ng-container *ngFor="let category of categories " >
-              <div class="mb-2">
+        
+            <div class="mb-2">
                 <h1 class="text-lg font-semibold mt-4 pb-2">{{category.title}}</h1>
                 <div class="whitespace-pre-wrap" *ngIf="category.description">{{category.description}}</div>
                 <ng-container *ngFor="let product of products">
