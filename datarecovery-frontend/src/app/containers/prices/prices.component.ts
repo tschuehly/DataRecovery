@@ -18,15 +18,11 @@ import {HttpClient} from "@angular/common/http";
     <div class="bg-grey-main  ">
       <div class="container flex">
         <div class="text-silver py-8 mx-auto justify-center">
-          <span class="font-bold text-red-800">Wichtig:</span> Es handelt sich um
+          <span class="font-bold text-white">Wichtig:</span> Es handelt sich um
           <span class="font-bold text-white">Festpreise</span>, die <span class="font-bold text-white">nur nach Erfolg</span> gelten.<br>
           <span class="font-bold text-white">Bei Misserfolg</span> erhalten Sie Ihren Speicher <span class="font-bold text-white">kostenfrei </span>zurück.<br>
           Alle angegebenen Preise sind bereits inklusive 19% Mehrwertsteuer.<br>
-          <div class="flex justify-end pt-4">
-            <button class="text-xl bg-white py-2 px-4 shadow rounded text-black">
-            <a href="">zum Auftragsformular</a>
-           </button>
-          </div>
+         
         </div>
 
       </div>
