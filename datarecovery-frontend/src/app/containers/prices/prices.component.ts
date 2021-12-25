@@ -22,7 +22,6 @@ import {HttpClient} from "@angular/common/http";
           <span class="font-bold text-white">Festpreise</span>, die <span class="font-bold text-white">nur nach Erfolg</span> gelten.<br>
           <span class="font-bold text-white">Bei Misserfolg</span> erhalten Sie Ihren Speicher <span class="font-bold text-white">kostenfrei </span>zurück.<br>
           Alle angegebenen Preise sind bereits inklusive 19% Mehrwertsteuer.<br>
-         
         </div>
 
       </div>
