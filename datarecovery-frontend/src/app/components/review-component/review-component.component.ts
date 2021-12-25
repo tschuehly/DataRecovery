@@ -85,12 +85,12 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
                     <button class="border border-gray-300 p-2 rounded">
                       <a class="md:hidden"
                       href="https://search.google.com/local/reviews?placeid=ChIJU5PnJJcznEcRy2VAwpDd1Dc&q=Tobias+Jungbauer+Datenrettung+-+AmmerseeDatenrettung.de&hl=de&gl=DE">
-                        Alle Bewertungen
+                        Alle Bewertungen einsehen
                       </a>
                       <a class="hidden md:block"
                         href="https://search.google.com/local/reviews?placeid=ChIJU5PnJJcznEcRy2VAwpDd1Dc&q=Tobias+Jungbauer+Datenrettung+-+AmmerseeDatenrettung.de&hl=de&gl=DE"
                         rel="noopener">
-                        Alle Bewertungen
+                        Alle Bewertungen einsehen
                       </a>
                     </button>
                     <button *ngIf="currentReview.text.split(' ').length > 40" (click)="showReview = !showReview">vollständige
