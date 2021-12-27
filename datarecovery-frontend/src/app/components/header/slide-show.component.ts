@@ -7,7 +7,7 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube, A
   selector: 'app-slide-show',
   template: `
     <div class="bg-grey-main bg-circuit-board py-10">
-      <h2 class="pb-8 text-3xl text-white text-center">Einblick von HDD, SSD, USB-Stick und (micro) SD-Karte Datenrettung:</h2>
+      <h2 class="pb-8 text-3xl text-white text-center">Einblick in die HDD, SSD, USB-Stick und (micro) SD-Karten Datenrettung</h2>
       <swiper
         [spaceBetween]="30"
         [effect]="'fade'"
