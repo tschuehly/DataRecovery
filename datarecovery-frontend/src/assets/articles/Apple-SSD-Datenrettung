@@ -44,7 +44,7 @@ Um Datenzugriff auf die Kundendaten zu ermöglichen müssen wir nun noch den Tra
   <img class="h-85 object-cover object-center" src="artikel 4.PNG">
 </div>
 <span class="font-semibold">
-Nun haben wir auch Zugriff auf die Userarea - den Kundendaten.
+Nun haben wir auch Zugriff auf die Userarea / den Kundendaten.
   </span>
 <div class="flex grid-cols-3 flex-wrap gap-4">
   <img class="h-80 object-cover object-right" src="assets/artikel 7.PNG">
@@ -58,7 +58,9 @@ Um die Lesbakeit diesmal zu verbessern setzen wir nun die Speicherchips auf ca. 
   <img class="h-80 object-cover object-right" src="assets/artikel 8.PNG">
   <img class="h-80 object-cover object-center" src="assets/MVIMG_20211224_220650-min.jpg">
 </div>
-
+<span class="font-semibold">
+Die geretteten Dateien senden wir nun unseren Kunden zu.
+</span>
 Tobias Jungbauer
 Datenrettung
 Am Stein 9
