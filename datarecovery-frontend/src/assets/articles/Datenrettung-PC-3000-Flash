@@ -1,0 +1,35 @@
+<div>
+  <div class="h-20 bg-white text-center">
+    <h1 class="text-4xl text-black py-5 tracking-wider">PC-3000 UDMA</h1>
+  </div>
+  <div class="bg-grey-main text-white border-b-2 border-silver py-8">
+    <pre class="container whitespace-pre-wrap">
+<span class="text-4xl text-bold text-lg">Datenrettung mit PC-3000 UDMA</span>
+<span class="text-bold text-lg text-silver">Updated am 02.01.2022, 13:46 von Tobias Jungbauer</span>
+
+<span class="font-semibold">
+Der PC-3000 Flash ist ein Hardware-Software-System zur Wiederherstellung von Daten von NAND-basierten Geräten in solchen Fällen, in denen kein Zugriff über die zugewiesene Laufwerksschnittstelle mehr möglich ist:
+
+UFD (USB-Flash-Laufwerk)
+SD (Secure Digital Card)
+CF (Compact Flash)
+Micro SD (Micro Secure Digital Card)
+MS (Memory Stick)
+Monolithische Flash-Geräte
+    
+Das PC-3000-Flash-System ermöglicht die Diagnose eines Flash-Laufwerks und die Ermittlung der Ursache des Problems. Alle Funktionsstörungen von Flash-Laufwerken können in zwei Gruppen unterteilt werden: logisch (alle Einheiten des Geräts und des Mikrochips funktionieren einwandfrei und fehlerfrei, es tritt jedoch ein Problem mit dem beschädigten Dateisystem, den versehentlich gelöschten Dateien und den Daten auf Verlust nach dem Formatieren usw.) und physische (Beschädigung elektronischer Komponenten oder der Firmware, was zu einem Laufwerksausfall führt). Leistungsstabilisatoren, der Controller-Mikrochip oder die Firmware des Laufwerks im Controller (oder im Servicebereich der Speicherchips) sind die häufigsten Fehlerursachen.
+Um jedes dieser Probleme zu lösen, verwendet der PC-3000 Flash eine Reihe eigener Tools und Methoden, mit denen die Fehlfunktion erkannt und auf Benutzerdaten zugegriffen werden kann.
+</span>
+<div class="flex grid-cols-3 flex-wrap gap-4">
+    <img class="h-85 object-cover object-center" src="artikel 4.PNG">
+  </div>
+  <span class="font-semibold">
+Spiderboardadapter:
+
+Der Spider Board Adapter wurde entwickelt, um mit Pins sich mit monolithischen Flash-Geräten zu verbinden.
+Dies ist die neue revolutionäre Technik zur Wiederherstellung von Daten aus beschädigten Monolithen.
+</span>
+Es sind keine aufwendigen Lötarbeiten erforderlich.
+<span class="font-semibold">
+Kaufen können Sie das PC-3000 Flash entweder direkt über ACE-Lab oder in Deutschland über mh-Service.
+</span> 

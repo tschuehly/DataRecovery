@@ -14,7 +14,7 @@ Hiermit möchte ich auf den Ablauf einer SSD-Datenrettung einer defekten Macbook
   <img class="h-85 object-cover object-center" src="assets/MVIMG_20211224_214303-min.jpg">
 </div>
 <span class="font-semibold">
-Kunde teilte mit: "Die SSD wird an keinem Endgerät, dass weder im Gerätemannager, noch im BIOS mehr erkannt."
+Unser Kunde teilte mit: "Die SSD wird an keinem Endgerät, dass weder im Gerätemannager, noch im BIOS mehr erkannt."
 Wenn wir die SSD an unser PC-3000 UDMA anschießen sehen wir im Statusregister, dass die SSD nach dem Starten im Status "BSY" feststeckt.
 </span>  
 <div class="flex grid-cols-3 flex-wrap gap-4">
@@ -52,7 +52,7 @@ Nun haben wir auch Zugriff auf die Userarea / den Kundendaten.
 </div>
 <span class="font-semibold">
 Da einige Sektoren aufgrund schlechter Chipqualität nicht lesbar waren gehen wir in den "Reread" (das erneute Auslesen).
-Um die Lesbakeit diesmal zu verbessern setzen wir nun die Speicherchips auf ca. -50°C. 
+Um die Lesbakeit diesmal zu verbessern kühlen wir nun die Speicherchips auf ca. -50°C. 
 </span>
 <div class="flex grid-cols-3 flex-wrap gap-4">
   <img class="h-80 object-cover object-right" src="assets/artikel 8.PNG">
@@ -61,10 +61,3 @@ Um die Lesbakeit diesmal zu verbessern setzen wir nun die Speicherchips auf ca. 
 <span class="font-semibold">
 Die geretteten Dateien senden wir nun unseren Kunden zu.
 </span>
-Tobias Jungbauer
-Datenrettung
-Am Stein 9
-85049 Ingolstadt
-
-Gerne können wir auch einen Termin für eine persönliche Übergabe vereinbaren.
-Falls Sie versenden bitte möglichst stoßfest und mit einer Sendeverfolgung.
