@@ -45,11 +45,14 @@ PATA HDD (85 cm) Stromkabel
 PATA-SATA-Netzteil (15 cm)
 PC-3000 UDMA-Software, Ressourcendatenbank
     
-</span> 
-    <div class="flex grid-cols-3 flex-wrap gap-4">
-        <img class="h-85 object-cover object-center" src="udma.PNG">
+<div class="flex grid sm:grid-cols-2 grid-cols-1">
+        <div class="overflow-hidden">
+          <label class="">
+            <img src="assets/pc3000udma.webp" alt="pc3000udma">
+            Bildquelle: https://www.acelaboratory.com/pc3000.udma.php
+          </label>
+        </div>
       </div>
- <span class="font-semibold">
- Bildquelle: https://www.acelaboratory.com/pc3000.udma.php
+<span class="font-semibold">
  Kaufen können Sie das PC-3000 UDMA entweder direkt von ACE-Lab oder in Deutschland über mh-Service.
 </span>

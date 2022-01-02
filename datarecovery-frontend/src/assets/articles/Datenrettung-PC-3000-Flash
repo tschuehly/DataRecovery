@@ -21,15 +21,19 @@ Das PC-3000-Flash-System ermöglicht die Diagnose eines Flash-Laufwerks und die 
 Um jedes dieser Probleme zu lösen, verwendet der PC-3000 Flash eine Reihe eigener Tools und Methoden, mit denen die Fehlfunktion erkannt und auf Benutzerdaten zugegriffen werden kann.
 </span>
 <div class="flex grid-cols-3 flex-wrap gap-4">
-    <img class="h-85 object-cover object-center" src="artikel 4.PNG">
+    <img class="h-85 object-cover object-center" src="pc3000flash.webp">
   </div>
   <span class="font-semibold">
+Bildquelle: https://www.acelaboratory.com/pc3000flash.php
 Spiderboardadapter:
-
 Der Spider Board Adapter wurde entwickelt, um mit Pins sich mit monolithischen Flash-Geräten zu verbinden.
 Dies ist die neue revolutionäre Technik zur Wiederherstellung von Daten aus beschädigten Monolithen.
-</span>
-Es sind keine aufwendigen Lötarbeiten erforderlich.
+Es sind keine aufwendigen Lötarbeiten erforderlich.</span>
+<div class="flex grid-cols-3 flex-wrap gap-4">
+    <img class="h-85 object-cover object-center" src="pc3000flashspider.webp">
+  </div>
 <span class="font-semibold">
+Bildquelle: https://www.acelaboratory.com/pc3000flash.php#Spider
 Kaufen können Sie das PC-3000 Flash entweder direkt über ACE-Lab oder in Deutschland über mh-Service.
-</span> 
+</span>
+
