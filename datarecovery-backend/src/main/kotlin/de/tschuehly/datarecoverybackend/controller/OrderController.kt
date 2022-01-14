@@ -36,6 +36,11 @@ class OrderController(
         @RequestParam(defaultValue = "0") page: Number
     ): List<Order> = orderService.getAwaited(page)
 
+    @GetMapping("/search")
+    fun getBySearchTerm(
+        @RequestParam searchTerm: String
+    ): List<Order> = orderService.getBySearchTerm(searchTerm)
+
     @GetMapping("/tracking")
     fun getByTrackingId(
         @RequestParam trackingId: String,

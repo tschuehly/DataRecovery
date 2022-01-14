@@ -1,10 +1,10 @@
-import {Component, OnInit} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Order} from '../../model/model';
-import {Router} from '@angular/router';
-import {OrderInfoDTO} from '../../dto/dto';
-import {catchError, combineLatest, map, Observable, of, startWith} from 'rxjs';
-import {FormControl} from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Order } from '../../model/model';
+import { Router } from '@angular/router';
+import { OrderInfoDTO } from '../../dto/dto';
+import { catchError, combineLatest, map, Observable, of, startWith } from 'rxjs';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-order',
@@ -17,7 +17,7 @@ import {FormControl} from '@angular/forms';
           <h2 class="text-3xl text-center flex-1" *ngIf="currentOrderView === 'archive'"> Archivierte Bestellungen </h2>
         </div>
         <div class="flex mb-10 justify-between ">
-          <input class="w-64" type="text" [formControl]="searchFilter" placeholder="Filter nach Bestellungen">
+          <input class="w-64" type="text" [formControl]="searchFilter" placeholder="Filter nach Bestellungen" >
           <div class="space-x-2">
             <button class="border-2 p-2" [disabled]="page === 0"
                     (click)="page = page - 1; getOrders(currentOrderView, this.page)"><</button>
@@ -121,24 +121,33 @@ export class OrderComponent implements OnInit {
 
     this.searchFilter = new FormControl('');
     this.searchFilter$ = this.searchFilter.valueChanges.pipe(startWith(''));
-    this.filteredOrders$ = combineLatest([this.orders$,this.searchFilter$])
-      .pipe(map(([orders, filterString]) =>
-      orders.filter(order =>
-        order.customer.lastName.toLowerCase().indexOf(filterString.toLowerCase()) !== -1
-        ||
-        order.customer.firstName.toLowerCase().indexOf(filterString.toLowerCase()) !== -1
-        ||
-        order.id.toString().indexOf(filterString) !== -1
-      ).sort((a, b) => {
-        if (b.deadline == null && a.deadline == null){
-          if (b.orderDate > a.orderDate) { return 1; }
-          if (b.orderDate < a.orderDate) { return -1; }
-        }
-        if (b.deadline == null) { return -1; }
-        if (b.deadline < a.deadline) { return 1; }
-        if (b.deadline > a.deadline) { return -1; }
-      })
-    ));
+
+    this.searchFilter.valueChanges.subscribe(x => {
+      console.log(x)
+      if (x !== '') {
+        this.filteredOrders$ = (this.http.get('api/order/search' + '?searchTerm=' + x) as Observable<Order[]>).pipe(
+          catchError((error) => {
+            console.error('error loading the orders', error);
+            return of();
+          })
+        );
+      } else {
+        this.filteredOrders$ = this.orders$
+          .pipe(map((orders) =>
+            orders.sort((a, b) => {
+              if (b.deadline == null && a.deadline == null) {
+                if (b.orderDate > a.orderDate) { return 1; }
+                if (b.orderDate < a.orderDate) { return -1; }
+              }
+              if (b.deadline == null) { return -1; }
+              if (b.deadline < a.deadline) { return 1; }
+              if (b.deadline > a.deadline) { return -1; }
+            })
+          ));
+      }
+    })
+
+
 
     this.http.get('api/order/info').subscribe((orderInfoDTO: OrderInfoDTO) => {
       this.orderInfoDTO = orderInfoDTO;
@@ -156,13 +165,13 @@ export class OrderComponent implements OnInit {
 
   updateOrders(order: Order): void {
     this.filteredOrders$ = this.filteredOrders$.pipe(map(orderArray =>
-    orderArray.map(o => {
-      if (o.id === order.id){
-        return order;
-      }else {
-        return o;
-      }
-    })));
+      orderArray.map(o => {
+        if (o.id === order.id) {
+          return order;
+        } else {
+          return o;
+        }
+      })));
   }
 
   deleteOrder(order: Order): void {
@@ -189,7 +198,7 @@ export class OrderComponent implements OnInit {
   }
 
   getDaysTillCompletion(completionDate: Date): number {
-    if (completionDate == null){
+    if (completionDate == null) {
       return null;
     }
     const days = new Date(completionDate).getTime() - new Date().getTime();
