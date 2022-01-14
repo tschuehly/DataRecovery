@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -19,7 +19,7 @@ import {Component, OnInit} from '@angular/core';
       <div class="bg-grey-main text-white border-b-2 border-silver pb-8">
         <div class="container">
           <pre class="whitespace-pre-wrap">
-<span class="text-4xl text-bold text-lg">Philosophie</span>
+<span class="text-bold text-lg">Philosophie</span>
 <span class="text-bold text-lg text-silver">Updated am 30.05.2021, 17:36 von Tobias Jungbauer</span>
 
 <span class="font-semibold ">1. Bei mir müssen Sie niemals in Vorkasse gehen:</span>
@@ -77,7 +77,7 @@ Ich hoffe, dass Sie mein Angebot als fair empfinden werden und ich Sie mit meine
   `,
   styles: []
 })
-export class AboutComponent{
+export class AboutComponent {
 
   constructor() {
   }
