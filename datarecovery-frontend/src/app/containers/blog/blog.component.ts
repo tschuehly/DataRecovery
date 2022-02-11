@@ -102,10 +102,10 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                 <a routerLink="/blog/apple-ssd-datenrettung" href="/blog/apple-ssd-datenrettung" class="py-2">
                   <h2 class="text-2xl font-bold">Apple SSD Datenrettung</h2>
                 </a>
-                <div class="py-2 italic">Updated am 03.12.2021, 12:31 von Tobias Jungbauer</div>
+                <div class="py-2 italic">Updated am 11.02.2022, 05:31 von Tobias Jungbauer</div>
                 <div class="space-y-4">
                   <h3 class="pb-2">
-                    Wie werden Daten von einem Apple Fusion Drive gerettet?...
+                    Wie werden Daten von einem Apple SSD-Speicher gerettet?
                   </h3>
                   <a routerLink="/blog/apple-ssd-datenrettung" href="/blog/apple-ssd-datenrettung" class="font-semibold">
                     Mehr lesen  →
@@ -123,12 +123,12 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
               </div>
               <div class="flex-1">
                 <a routerLink="/blog/datenrettung-pc-3000-flash" href="/blog/datenrettung-pc-3000-flash" class="py-2">
-                  <h2 class="text-2xl font-bold">datenrettung-pc-3000-flash</h2>
+                  <h2 class="text-2xl font-bold">PC-3000-Flash</h2>
                 </a>
-                <div class="py-2 italic">Updated am 03.12.2021, 12:31 von Tobias Jungbauer</div>
+                <div class="py-2 italic">Updated am 11.02.2022, 05:41 von Tobias Jungbauer</div>
                 <div class="space-y-4">
                   <h3 class="pb-2">
-                    Wie werden Daten von einem Apple Fusion Drive gerettet?...
+                    Wie funktioniert das PC-3000 Flash?
                   </h3>
                   <a routerLink="/blog/datenrettung-pc-3000-flash" href="/blog/datenrettung-pc-3000-flash" class="font-semibold">
                     Mehr lesen  →
@@ -146,12 +146,12 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
               </div>
               <div class="flex-1">
                 <a routerLink="/blog/datenrettung-pc-3000-udma" href="/blog/datenrettung-pc-3000-udma" class="py-2">
-                  <h2 class="text-2xl font-bold">datenrettung-pc-3000-udma</h2>
+                  <h2 class="text-2xl font-bold">PC-3000 UDMA</h2>
                 </a>
-                <div class="py-2 italic">Updated am 03.12.2021, 12:31 von Tobias Jungbauer</div>
+                <div class="py-2 italic">Updated am 11.02.2022, 05:59 von Tobias Jungbauer</div>
                 <div class="space-y-4">
                   <h3 class="pb-2">
-                    Wie werden Daten von einem Apple Fusion Drive gerettet?...
+                    Wie funktioniert das PC-3000 UDMA?
                   </h3>
                   <a routerLink="/blog/datenrettung-pc-3000-udma" href="/blog/datenrettung-pc-3000-udma" class="font-semibold">
                     Mehr lesen  →
@@ -169,12 +169,12 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
               </div>
               <div class="flex-1">
                 <a routerLink="/blog/gebrochene-micro-sd-karte" href="/blog/gebrochene-micro-sd-karte" class="py-2">
-                  <h2 class="text-2xl font-bold">gebrochene-micro-sd-karte</h2>
+                  <h2 class="text-2xl font-bold">Datenrettung zerbrochene micro SD-Karte</h2>
                 </a>
-                <div class="py-2 italic">Updated am 03.12.2021, 12:31 von Tobias Jungbauer</div>
+                <div class="py-2 italic">Updated am 11.02.2022, 06:12 von Tobias Jungbauer</div>
                 <div class="space-y-4">
                   <h3 class="pb-2">
-                    Wie werden Daten von einem Apple Fusion Drive gerettet?...
+                    Wie werden Daten von gebrochenen micro SD-Karten gerettet?
                   </h3>
                   <a routerLink="/blog/gebrochene-micro-sd-karte" href="/blog/gebrochene-micro-sd-karte" class="font-semibold">
                     Mehr lesen  →
