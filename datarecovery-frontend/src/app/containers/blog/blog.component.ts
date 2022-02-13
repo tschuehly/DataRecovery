@@ -18,15 +18,18 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
     </div>
     <ng-container *ngIf="!articleUrl">
       <div>
-        <div class="h-20 bg-white text-center">
+        <div class="bg-white text-center">
           <h1 class="text-4xl text-black py-5 tracking-wider">Blogübersicht</h1>
         </div>
         <div class="bg-grey-main bg-circuit-board space-y-4 p-6">
           <div class="bg-white max-w-4xl mx-auto rounded-2xl">
             <div class="text-grey-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center">
-              <div class="h-40 flex-shrink-0 w-80  my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                   style="background-image: url('/assets/android-icon-192x192.png')">
-              </div>
+              <a routerLink="/blog/datenrettung-kosten" href="/blog/datenrettung-kosten">
+                <div class="h-40 flex-shrink-0 w-80  my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
+                     style="background-image: url('/assets/android-icon-192x192.png')">
+                </div>
+              </a>
+
               <div class="flex-1">
                 <a routerLink="/blog/datenrettung-kosten" href="/blog/datenrettung-kosten" class="py-2">
                   <h2 class="text-2xl font-bold">Datenrettung Kosten</h2>
@@ -66,7 +69,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
               </div>
             </div>
           </div>
-          
+
 
           <!-- Artikeleintrag Ende -->
 
@@ -92,7 +95,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
             </div>
           </div>
 
-          
+
           <div class="bg-white max-w-4xl mx-auto rounded-2xl">
             <div class="text-grey-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center">
               <div class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
@@ -115,7 +118,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
             </div>
           </div>
 
-          
+
           <div class="bg-white max-w-4xl mx-auto rounded-2xl">
             <div class="text-grey-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center">
               <div class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
@@ -138,7 +141,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
             </div>
           </div>
 
-          
+
           <div class="bg-white max-w-4xl mx-auto rounded-2xl">
             <div class="text-grey-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center">
               <div class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
@@ -161,7 +164,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
             </div>
           </div>
 
-          
+
           <div class="bg-white max-w-4xl mx-auto rounded-2xl">
             <div class="text-grey-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center">
               <div class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"

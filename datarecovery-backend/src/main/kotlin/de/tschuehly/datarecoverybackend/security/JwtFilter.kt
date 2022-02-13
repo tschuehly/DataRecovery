@@ -17,15 +17,17 @@ class JwtFilter(
     private val COOKIEHEADER = "Cookie"
 
     @Throws
-    override fun doFilterInternal(request: HttpServletRequest, response: HttpServletResponse, filterChain: FilterChain) {
+    override fun doFilterInternal(
+        request: HttpServletRequest,
+        response: HttpServletResponse,
+        filterChain: FilterChain
+    ) {
         try {
             getToken(request)
                 ?.let { jwtUserDetailsService.loadUserByToken(it) }
 
                 ?.let { jwtUserDetails ->
-                    JWTPreAuthenticationToken(
-                        jwtUserDetails, WebAuthenticationDetailsSource().buildDetails(request)
-                    )
+                    JWTPreAuthenticationToken(jwtUserDetails, WebAuthenticationDetailsSource().buildDetails(request))
                 }
                 ?.let { SecurityContextHolder.getContext().authentication = it }
         } catch (e: SecurityException) {

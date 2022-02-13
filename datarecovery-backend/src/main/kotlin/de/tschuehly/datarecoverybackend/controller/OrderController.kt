@@ -1,6 +1,5 @@
 package de.tschuehly.datarecoverybackend.controller
 
-import de.tschuehly.datarecoverybackend.dto.OrderListDTO
 import de.tschuehly.datarecoverybackend.helpers.CrudController
 import de.tschuehly.datarecoverybackend.model.Order
 import de.tschuehly.datarecoverybackend.repository.OrderRepository

@@ -12,7 +12,7 @@ import {HttpClient} from "@angular/common/http";
         </h1>
       </div>
     </div>
-    <div class="h-20 bg-white text-center">
+    <div class="bg-white text-center">
       <h1 class="text-4xl text-black py-5 tracking-wider">Datenrettung Kosten</h1>
     </div>
     <div class="bg-grey-main  ">
@@ -30,7 +30,7 @@ import {HttpClient} from "@angular/common/http";
       <div class="text-white">
           <div class="bg-grey-main p-12" style="box-shadow: 0 2px 25px 0 black">
             <ng-container *ngFor="let category of categories " >
-        
+
             <div class="mb-2">
                 <h1 class="text-lg font-semibold mt-4 pb-2">{{category.title}}</h1>
                 <div class="whitespace-pre-wrap" *ngIf="category.description">{{category.description}}</div>

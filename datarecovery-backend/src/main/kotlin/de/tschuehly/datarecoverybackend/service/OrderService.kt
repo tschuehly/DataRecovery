@@ -2,7 +2,6 @@ package de.tschuehly.datarecoverybackend.service
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import de.tschuehly.datarecoverybackend.dto.OrderListDTO
 import de.tschuehly.datarecoverybackend.helpers.CrudService
 import de.tschuehly.datarecoverybackend.helpers.PictureContentStore
 import de.tschuehly.datarecoverybackend.model.Order

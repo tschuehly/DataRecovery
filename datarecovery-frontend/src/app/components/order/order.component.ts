@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient, HttpParams} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {Order, orderStateEnum} from '../../model/model';
 import { Router } from '@angular/router';
-import { catchError, combineLatest, map, Observable, of, startWith } from 'rxjs';
+import { catchError, map, Observable, of, startWith } from 'rxjs';
 import { FormControl } from '@angular/forms';
-import {OrderTrackingStateInfoDTO} from '../../dto/dto';
 
 @Component({
   selector: 'app-order',
   template: `
     <div class="container mx-auto h-full my-10">
       <div class="m-auto" *ngIf="!editOrder">
-        <div class="flex mb-10 flex-col gap-4">
+        <div class="flex mb-10 flex-col gap-4 ">
           <input class="w-full" type="text" [formControl]="searchFilter" placeholder="Filter nach Bestellungen">
           <div class="flex flex-row flex-wrap gap-4">
             <button class="border-2 p-2" (click)="getOrders([oState.orderReceived])">Erwartet [{{getCountByTrackingState(oState.orderReceived)}}]</button>

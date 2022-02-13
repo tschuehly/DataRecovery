@@ -1,8 +1,8 @@
-import {Component, EventEmitter, HostListener, Inject, Input, OnInit, Output} from '@angular/core';
-import {User} from '../../model/model';
-import {NavigationEnd, Router} from '@angular/router';
-import {PageScrollService} from 'ngx-page-scroll-core';
-import {DOCUMENT} from '@angular/common';
+import { Component, EventEmitter, HostListener, Inject, Input, OnInit, Output } from '@angular/core';
+import { User } from '../../model/model';
+import { NavigationEnd, Router } from '@angular/router';
+import { PageScrollService } from 'ngx-page-scroll-core';
+import { DOCUMENT } from '@angular/common';
 import { NgcCookieConsentService, NgcStatusChangeEvent } from 'ngx-cookieconsent';
 import { Subscription } from 'rxjs';
 
@@ -10,51 +10,53 @@ declare let gtag: Function;
 @Component({
   selector: 'app-navigation',
   template: `
-    <div class="flex flex-col h-screen">
-      <nav class="flex fixed justify-between w-full text-silver bg-grey-main z-50" id="navigation">
-        <a  href="/">
-          <div class="bg-grey-main pl-4 py-4">
-            <img src="/assets/LOGO_TJ_Datenrettung.svg" class="h-14 w-96" alt="Datenrettung Jungbauer Logo">
-          </div>
-        </a>
-        <div class="flex md:hidden items-center mx-4 flex-shrink">
-          <button class="p-2 border border-silver rounded" aria-label="Mobile Menu Button" (click)="mobileNavShow = !mobileNavShow">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 top-" style="stroke: #8f8f8f">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+    <div class="flex flex-col h-screen text-lg">
+      <nav class="flex sticky w-full bg-grey-main text-2xl font-extralight  text-white p-4 justify-center
+                    flex-col md:flex-row flex-wrap" id="navigation">
+        <div class="md:w-fit flex justify-between md:block shrink-0">
+          <a href="/">
+            <img class="h-16" src="/assets/LOGO_TJ_Datenrettung.webp">
+          </a>
+          <button class="block md:hidden" (click)="mobileNavShow = !mobileNavShow">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="40"
+                 height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="18" x2="20" y2="18" />
             </svg>
+
           </button>
         </div>
-        <div class="items-center text-xl px-4  bg-grey-main" [ngClass]="mobileNavShow ? 'flex flex-col absolute right-0 top-20 w-full space-y-4 py-4 text-2xl font-semibold bg-grey-main text-white': 'hidden md:flex md:flex-row'">
 
-        <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="">Startseite</a>
-          <a class="cursor-pointer p-2" (click)="scrollToOrder(); mobileNavShow = false">Auftragsformular</a>
-          <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="preise">Preisliste</a>
-          <div class="h-full text-center flex"  (clickOutside)="dropdownShow = false" [exclude]="'div.dropdown'"
+        <div class="flex flex-1 md:flex-row py-4 text-center md:space-y-0 space-x-8 xl:justify-end justify-center xl:space-x-12"
+             [ngClass]="mobileNavShow ? 'flex flex-col space-x-0':'hidden md:flex'">
+          <a class="cursor-pointer" (click)="scrollToOrder(); mobileNavShow = false">Auftrag</a>
+          <a class="cursor-pointer" (click)="mobileNavShow = false" routerLink="preise">Preise</a>
+          <div class="h-full text-center flex self-center"  (clickOutside)="dropdownShow = false" [exclude]="'div.dropdown'"
                [excludeBeforeClick]="true" [ngClass]="{'bg-gray-300 md:bg-black ': dropdownShow}">
-            <a class="cursor-pointer self-center p-2" (click)="dropdownShow = !dropdownShow">Arbeitsweise</a>
-            
-
-
-            <div class="grid gap-2 absolute justify-evenly p-3 bg-gray-300 text-xl dropdown text-black"
-                 style="margin-right: 2.8rem; top: 5.5rem;" *ngIf="dropdownShow" [ngStyle]="mobileNavShow ? {'top':'0','width':'100%','left':'0','padding':'48px 0px','gap':'1.5rem'}:{}">
+            <a class="cursor-pointer self-center " (click)="dropdownShow = !dropdownShow">Arbeitsweise</a>
+            <div class="grid ga absolute justify-evenly p-3 bg-gray-300 text-xl dropdown text-black"
+                 *ngIf="dropdownShow" [ngStyle]="mobileNavShow ? {'top':'0','width':'100%','left':'0','padding':'48px 0px','gap':'1.5rem'}:{}">
               <a (click)="mobileNavShow = false" routerLink="/datenrettung/hdd">HDD Festplatten</a>
               <a (click)="mobileNavShow = false" routerLink="/datenrettung/ssd">SSD Festplatten</a>
               <a (click)="mobileNavShow = false" routerLink="/datenrettung/flash">USB Stick &<br>SD Karte</a>
               <a (click)="mobileNavShow = false" routerLink="/datenrettung/raid">RAID &<br>Fusion Drive</a>
             </div>
           </div>
-          <a (click)="mobileNavShow = false" class="cursor-pointer p-2" routerLink="philosophie">Philosophie</a>
-          <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="blog">Blog</a>
-          <a (click)="mobileNavShow = false;scrollToContact()" class="cursor-pointer p-2">Kontakt</a>
-          <div *ngIf="currentUser">
-            <a (click)="mobileNavShow = false" class=" p-2" routerLink="/order">Bestellungen</a>
-            <a (click)="mobileNavShow = false" class=" p-2" routerLink="/product">Produkte</a>
-            <a (click)="mobileNavShow = false" class=" p-2" routerLink="/category">Kategorien</a>
-          </div>
+          <a (click)="mobileNavShow = false" class="cursor-pointer" routerLink="philosophie">Philosophie</a>
+          <a class="cursor-pointer" (click)="mobileNavShow = false" routerLink="blog">Blog</a>
+          <a (click)="mobileNavShow = false;scrollToContact()" class="cursor-pointer">Kontakt</a>
+          <ng-container *ngIf="currentUser">
+            <a (click)="mobileNavShow = false" class="cursor-pointer" routerLink="/order">Bestellungen</a>
+            <a (click)="mobileNavShow = false" class="cursor-pointer" routerLink="/product">Produkte</a>
+            <a (click)="mobileNavShow = false" class="cursor-pointer" routerLink="/category">Kategorien</a>
+          </ng-container>
         </div>
       </nav>
 
-      <div class="flex-grow mt-20">
+      <div class="flex-grow">
 
         <router-outlet></router-outlet>
       </div>
@@ -159,9 +161,9 @@ export class NavigationComponent implements OnInit {
   private popupOpenSubscription: Subscription;
   private statusChangeSubscription: Subscription;
   constructor(private router: Router,
-              private pageScrollService: PageScrollService,
-              @Inject(DOCUMENT) private document: any,
-              private ccService: NgcCookieConsentService) {
+    private pageScrollService: PageScrollService,
+    @Inject(DOCUMENT) private document: any,
+    private ccService: NgcCookieConsentService) {
     router.events.subscribe(_ => {
       this.dropdownShow = false;
     });
@@ -171,7 +173,7 @@ export class NavigationComponent implements OnInit {
     this.innerWidth = document.documentElement.clientWidth;
     this.statusChangeSubscription = this.ccService.statusChange$.subscribe(
       (event: NgcStatusChangeEvent) => {
-        if(event.status === 'allow'){
+        if (event.status === 'allow') {
           let node = document.createElement('script'); // creates the script tag
           node.src = 'https://www.googletagmanager.com/gtag/js?id=G-VPEC2J7SDM'; // sets the source (insert url in between quotes)
           node.type = 'text/javascript'; // set the script type
@@ -183,7 +185,7 @@ export class NavigationComponent implements OnInit {
           gtag('js', new Date());
           this.mapsIframeShow = true;
           this.router.events.subscribe(event => {
-            if(event instanceof NavigationEnd){
+            if (event instanceof NavigationEnd) {
               gtag('config', 'G-VPEC2J7SDM',
                 {
                   'page_path': event.urlAfterRedirects,
@@ -193,7 +195,7 @@ export class NavigationComponent implements OnInit {
             }
           });
         }
-        if(event.status === 'deny'){
+        if (event.status === 'deny') {
           this.mapsIframeShow = false;
         }
       });
@@ -205,11 +207,11 @@ export class NavigationComponent implements OnInit {
   }
   @HostListener("window:scroll", ["$event"])
   onWindowScroll() {
-    if(document.getElementById('priceList') != null){
+    if (document.getElementById('priceList') != null) {
       let pos = (document.documentElement.scrollTop || document.body.scrollTop)
       let max = document.getElementById('priceList').scrollHeight + document.getElementById('priceList').offsetHeight - 200
-      if(pos > max )   {
-        if(this.showPhoneCounter < 1 && document.body.clientWidth > 512){
+      if (pos > max) {
+        if (this.showPhoneCounter < 1 && document.body.clientWidth > 512) {
           this.showPhone = true;
         }
         this.showPhoneCounter += 1;
