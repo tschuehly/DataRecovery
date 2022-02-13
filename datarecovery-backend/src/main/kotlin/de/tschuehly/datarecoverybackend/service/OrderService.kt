@@ -2,7 +2,7 @@ package de.tschuehly.datarecoverybackend.service
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import de.tschuehly.datarecoverybackend.dto.OrderInfoDTO
+import de.tschuehly.datarecoverybackend.dto.OrderListDTO
 import de.tschuehly.datarecoverybackend.helpers.CrudService
 import de.tschuehly.datarecoverybackend.helpers.PictureContentStore
 import de.tschuehly.datarecoverybackend.model.Order
@@ -12,13 +12,11 @@ import de.tschuehly.datarecoverybackend.repository.OrderProductRepository
 import de.tschuehly.datarecoverybackend.repository.OrderRepository
 import de.tschuehly.datarecoverybackend.repository.PictureRepository
 import org.slf4j.Logger
-import org.springframework.data.domain.Example
 import org.springframework.data.domain.PageRequest
 import org.springframework.data.domain.Pageable
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Service
 import org.springframework.web.multipart.MultipartFile
-import java.lang.NumberFormatException
 import java.util.*
 
 @Suppress("SpringJavaInjectionPointsAutowiringInspection")
@@ -31,6 +29,7 @@ class OrderService(
     private val pictureContentStore: PictureContentStore,
     private val logger: Logger
 ) : CrudService<Order, OrderRepository>(orderRepository) {
+
     fun createOrder(order: Order): Order {
         order.orderDate = Date()
         order.trackingState = orderReceived
@@ -86,43 +85,20 @@ class OrderService(
         return order
     }
 
-    fun getArchived(page: Number): List<Order> {
-        val paging: Pageable = PageRequest.of(page.toInt(), 1000)
-        return orderRepository.findByTrackingStateInOrderByOrderDateDesc(archiveList, paging)
-    }
-
-    fun getActive(): List<Order> = orderRepository.findByTrackingStateNotIn(nonActiveList)
-
-    fun getAwaited(page: Number): List<Order> {
-        val paging: Pageable = PageRequest.of(page.toInt(), 1000)
-        return orderRepository.findByTrackingStateInOrderByOrderDateDesc(
-            listOf(
-                orderReceived,
-                orderReceivedReminderSent
-            ), paging
-        )
-    }
-
-    fun getOrderInfo(): OrderInfoDTO {
-        return OrderInfoDTO(
-            activeCount = orderRepository.countOrdersByTrackingStateNotIn(nonActiveList),
-            awaitedCount = orderRepository.countOrdersByTrackingStateIn(listOf(orderReceived)),
-            archivedCount = orderRepository.countOrdersByTrackingStateIn(archiveList)
-        )
-    }
-
     fun getBySearchTerm(searchTerm: String): List<Order> {
         return repository.findBySearchTerm(
             searchTerm, searchTerm, searchTerm
         )
     }
 
-    private val archiveList = listOf(
-        storage,
-        parcelReturned,
-        Completed.success, Completed.failure, Completed.legacyComplete
-    )
-    private val nonActiveList = listOf(orderReceived, orderReceivedReminderSent) + archiveList
+    fun getByTrackingStateList(stateList: List<String>): List<Order> {
+        return repository.findByTrackingStateInOrderByOrderDateDesc(stateList)
+
+    }
+
+    fun getOrderInfo(): Any {
+        return repository.getInfo()
+    }
 
     companion object OrderState {
         const val orderReceived = "Auftrag eingegangen"

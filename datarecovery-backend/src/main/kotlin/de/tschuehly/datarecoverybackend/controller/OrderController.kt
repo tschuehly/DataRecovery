@@ -1,5 +1,6 @@
 package de.tschuehly.datarecoverybackend.controller
 
+import de.tschuehly.datarecoverybackend.dto.OrderListDTO
 import de.tschuehly.datarecoverybackend.helpers.CrudController
 import de.tschuehly.datarecoverybackend.model.Order
 import de.tschuehly.datarecoverybackend.repository.OrderRepository
@@ -23,18 +24,11 @@ class OrderController(
 
     @GetMapping("/info")
     fun getOrderInfo() = orderService.getOrderInfo()
-    @GetMapping("/archive")
-    fun getArchivedOrders(
-        @RequestParam(defaultValue = "0") page: Number
-    ): List<Order> = orderService.getArchived(page)
 
-    @GetMapping("/active")
-    fun getActiveOrders(): List<Order> = orderService.getActive()
-
-    @GetMapping("/awaited")
-    fun getAwaitedOrders(
-        @RequestParam(defaultValue = "0") page: Number
-    ): List<Order> = orderService.getAwaited(page)
+    @GetMapping("/state")
+    fun getByTrackingStateList(
+        @RequestParam("state") stateList: List<String>
+    ): List<Order> = orderService.getByTrackingStateList(stateList)
 
     @GetMapping("/search")
     fun getBySearchTerm(

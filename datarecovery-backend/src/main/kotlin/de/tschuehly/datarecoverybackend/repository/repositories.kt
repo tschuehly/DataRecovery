@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query
 
 interface OrderRepository : JpaRepository<Order, Long> {
     fun findByTrackingIdAndCustomer_PostalCode(trackingId: String, postalCode: String): Order?
-    fun findByTrackingStateInOrderByOrderDateDesc(trackingStateList: List<String>, pageable: Pageable): List<Order>
+    fun findByTrackingStateInOrderByOrderDateDesc(trackingStateList: List<String>): List<Order>
     fun findByTrackingStateNotIn(trackingStateList: List<String>): List<Order>
     fun countOrdersByTrackingStateIn(trackingStateList: List<String>): Number
     fun countOrdersByTrackingStateNotIn(trackingStateList: List<String>): Number
@@ -24,6 +24,9 @@ interface OrderRepository : JpaRepository<Order, Long> {
         customer_lastName: String,
         id: String
     ): List<Order>
+
+    @Query("select count(o) as cnt, o.trackingState as trackingState from Order o group by o.trackingState")
+    fun getInfo(): List<Any>
 }
 
 interface CustomerRepository : JpaRepository<Customer, Long>

@@ -1,33 +1,35 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Order } from '../../model/model';
+import {HttpClient, HttpParams} from '@angular/common/http';
+import {Order, orderStateEnum} from '../../model/model';
 import { Router } from '@angular/router';
-import { OrderInfoDTO } from '../../dto/dto';
 import { catchError, combineLatest, map, Observable, of, startWith } from 'rxjs';
 import { FormControl } from '@angular/forms';
+import {OrderTrackingStateInfoDTO} from '../../dto/dto';
 
 @Component({
   selector: 'app-order',
   template: `
     <div class="container mx-auto h-full my-10">
       <div class="m-auto" *ngIf="!editOrder">
-        <div class="flex mb-10">
-          <h2 class="text-3xl text-center flex-1" *ngIf="currentOrderView === 'awaited'"> Erwartete Bestellungen</h2>
-          <h2 class="text-3xl text-center flex-1" *ngIf="currentOrderView === 'active'">  Aktive Bestellungen </h2>
-          <h2 class="text-3xl text-center flex-1" *ngIf="currentOrderView === 'archive'"> Archivierte Bestellungen </h2>
-        </div>
-        <div class="flex mb-10 justify-between ">
-          <input class="w-64" type="text" [formControl]="searchFilter" placeholder="Filter nach Bestellungen" >
-          <div class="space-x-2">
-            <button class="border-2 p-2" [disabled]="page === 0"
-                    (click)="page = page - 1; getOrders(currentOrderView, this.page)"><</button>
-            <span>{{page}}</span>
-            <button class="border-2 p-2" (click)="page = page + 1; getOrders(currentOrderView, this.page)">></button>
-
-            <button class="border-2 p-2" (click)="switchView('awaited')">Erwartet [{{orderInfoDTO?.awaitedCount}}]</button>
-            <button class="border-2 p-2" (click)="switchView('active')">In Bearbeitung [{{orderInfoDTO?.activeCount}}]</button>
-            <button class="border-2 p-2" (click)="switchView('archive')">Archiv [{{orderInfoDTO?.archivedCount}}]</button>
-
+        <div class="flex mb-10 flex-col gap-4">
+          <input class="w-full" type="text" [formControl]="searchFilter" placeholder="Filter nach Bestellungen">
+          <div class="flex flex-row flex-wrap gap-4">
+            <button class="border-2 p-2" (click)="getOrders([oState.orderReceived])">Erwartet [{{getCountByTrackingState(oState.orderReceived)}}]</button>
+            <button class="border-2 p-2" (click)="getOrders([oState.parcelReceived])">Paket eingegangen [{{getCountByTrackingState(oState.parcelReceived)}}]</button>
+            <button class="border-2 p-2" (click)="getOrders([oState.firstAnalysis])">Erste Analyse [{{getCountByTrackingState(oState.firstAnalysis)}}]</button>
+            <button class="border-2 p-2" (click)="getOrders([oState.orderedFirstPartDispenser])">Bestellung erster Teilespender [{{getCountByTrackingState(oState.orderedFirstPartDispenser)}}]</button>
+            <button class="border-2 p-2" (click)="getOrders([oState.orderedSecondPartDispenser])">Bestellung zweiter Teilespender [{{getCountByTrackingState(oState.orderedSecondPartDispenser)}}]
+            </button>
+            <button class="border-2 p-2" (click)="getOrders([oState.orderedThirdPartDispenser])">Bestellung Dritter Teilespender [{{getCountByTrackingState(oState.orderedThirdPartDispenser)}}]</button>
+            <button class="border-2 p-2" (click)="getOrders([oState.readingMemory])">Speicher wird ausgelesen [{{getCountByTrackingState(oState.readingMemory)}}]</button>
+            <button class="border-2 p-2" (click)="getOrders([oState.reRead])">Speicher wird erneut ausgelesen [{{getCountByTrackingState(oState.reRead)}}]</button>
+            <button class="border-2 p-2" (click)="getOrders([oState.savingData])">Abspeicherung Dateien [{{getCountByTrackingState(oState.savingData)}}]</button>
+            <button class="border-2 p-2" (click)="getOrders([oState.storage])">Einlagerung [{{getCountByTrackingState(oState.storage)}}]</button>
+            <button class="border-2 p-2" (click)="getOrders([oState.parcelReturned,
+            oState.success,
+            oState.failure,
+            oState.legacyComplete])">Archiv [{{getArchiveCount()}}]
+            </button>
           </div>
         </div>
         <table class="border table-auto mx-auto">
@@ -94,24 +96,50 @@ export class OrderComponent implements OnInit {
   filteredOrders$: Observable<Order[]>;
   editOrder: Order;
   createUpdate = false;
-  currentOrderView = 'active';
-  page = 0;
+  currentOrderView = [orderStateEnum.orderReceived];
   dateNow: Date;
-  orderInfoDTO: OrderInfoDTO;
   searchFilter: FormControl;
   searchFilter$: Observable<string>;
-
+  oState = orderStateEnum;
+  trackingStateCount: Map<string,number> = new Map;
   constructor(private http: HttpClient, private router: Router) {
     this.dateNow = new Date();
   }
 
 
   ngOnInit(): void {
-    this.getOrders(this.currentOrderView, this.page);
+
+    this.getOrders(this.currentOrderView);
+
+    this.http.get("api/order/info").subscribe((data: Array<Array<any>>) => {
+      data.map(info => {
+        this.trackingStateCount.set(info[1],info[0])
+      })
+    })
+
+  }
+  getArchiveCount(){
+    try{
+      return this.trackingStateCount.get(this.oState.parcelReceived)
+        + this.trackingStateCount.get(this.oState.success)
+        + this.trackingStateCount.get(this.oState.failure)
+        + this.trackingStateCount.get(this.oState.legacyComplete)
+    }catch (e){
+      return 0
+    }
   }
 
-  getOrders(status: string, page: number): void {
-    this.orders$ = (this.http.get('api/order/' + status + '?page=' + page) as Observable<Order[]>).pipe(
+  getCountByTrackingState(state: string): number{
+    try{
+      return this.trackingStateCount.get(state)
+    }catch (e){
+      return 0
+    }
+  }
+
+  getOrders(stateList: string[]): void {
+    let stateString = "?state=" + stateList.join("&state=")
+    this.filteredOrders$ = (this.http.get('api/order/state'+stateString) as Observable<Order[]>).pipe(
       catchError((error) => {
         console.error('error loading the orders', error);
         this.router.navigate(['/login']);
@@ -132,7 +160,7 @@ export class OrderComponent implements OnInit {
           })
         );
       } else {
-        this.filteredOrders$ = this.orders$
+        this.filteredOrders$ = this.filteredOrders$
           .pipe(map((orders) =>
             orders.sort((a, b) => {
               if (b.deadline == null && a.deadline == null) {
@@ -146,13 +174,6 @@ export class OrderComponent implements OnInit {
           ));
       }
     })
-
-
-
-    this.http.get('api/order/info').subscribe((orderInfoDTO: OrderInfoDTO) => {
-      this.orderInfoDTO = orderInfoDTO;
-    });
-
   }
 
   updateOrderState(editOrder: Order): void {
@@ -180,12 +201,6 @@ export class OrderComponent implements OnInit {
     });
     this.editOrder = null;
 
-  }
-
-  switchView(status: string): void {
-    this.page = 0;
-    this.currentOrderView = status;
-    this.getOrders(status, this.page);
   }
 
   getDaysTillDeadline(deadline: Date): string {
