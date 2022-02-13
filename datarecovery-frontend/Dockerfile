@@ -1,4 +1,4 @@
-FROM node:15.12.0-alpine3.10 AS builder
+FROM node:17-alpine3.14 AS builder
 WORKDIR /datarecovery-frontend
 COPY package.json package-lock.json ./
 RUN npm install
