@@ -30,7 +30,7 @@ declare let gtag: Function;
           </button>
         </div>
 
-        <div class="flex flex-1 md:flex-row py-4 text-center md:space-y-0 space-x-8 xl:justify-end justify-center xl:space-x-12"
+        <div class="flex flex-1 md:flex-row py-4 text-center md:space-y-0 space-y-4 space-x-8 xl:justify-end justify-center xl:space-x-12"
              [ngClass]="mobileNavShow ? 'flex flex-col space-x-0':'hidden md:flex'">
           <a class="cursor-pointer" (click)="scrollToOrder(); mobileNavShow = false">Auftrag</a>
           <a class="cursor-pointer" (click)="mobileNavShow = false" routerLink="preise">Preise</a>

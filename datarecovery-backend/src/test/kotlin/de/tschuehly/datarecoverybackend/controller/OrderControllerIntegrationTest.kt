@@ -34,55 +34,44 @@ internal class OrderControllerIntegrationTest @Autowired constructor(val mockMvc
         mockMvc.post("/api/order/create") {
             contentType = MediaType.APPLICATION_JSON
             content = File("src/test/resources/data/createOrder.json").readText()
-                }.andExpect {
+        }.andExpect {
             status { isOk() }
             content { contentType(MediaType.APPLICATION_JSON) }
             jsonPath("$.id", allOf(notNullValue(), instanceOf(Number::class.java)))
-            jsonPath("$.trackingId",allOf(notNullValue(), instanceOf(String::class.java)) )
+            jsonPath("$.trackingId", allOf(notNullValue(), instanceOf(String::class.java)))
             jsonPath("$.customer.firstName", `is`("Max"))
         }
     }
 
     @Test
     fun getArchived() {
-        mockMvc.get("/api/order/archive").andExpect {
-            status { isOk() }
-            content { contentType(MediaType.APPLICATION_JSON) }
-            jsonPath("$.*", hasSize<Any>(2))
-        }
-    }
-
-    @Test
-    fun shouldReturnAllActiveOrders() {
-        mockMvc.get("/api/order/active").andExpect {
-            status { isOk() }
-            content { contentType(MediaType.APPLICATION_JSON) }
-            jsonPath("$.*", hasSize<Any>(4))
-        }
-    }
-
-    @Test
-    fun getAwaited() {
-        mockMvc.get("/api/order/awaited").andExpect {
+        mockMvc.get("/api/order/state?state=Auftrag eingegangen").andExpect {
             status { isOk() }
             content { contentType(MediaType.APPLICATION_JSON) }
             jsonPath("$.*", hasSize<Any>(3))
         }
     }
 
+
     @Test
-    fun addUpdateWithPictureToOrder(){
-        val addUpdateResult = mockMvc.multipart("/api/order/addUpdate/56"){
+    fun addUpdateWithPictureToOrder() {
+        val addUpdateResult = mockMvc.multipart("/api/order/addUpdate/56") {
             file(
-                MockMultipartFile("pictures","testpicture_1.png","image/png",File("src/test/resources/data/testpicture_1.png").readBytes())
+                MockMultipartFile(
+                    "pictures",
+                    "testpicture_1.png",
+                    "image/png",
+                    File("src/test/resources/data/testpicture_1.png").readBytes()
+                )
             )
-            param("""update""","""{"description":"test"}""")
+            param("""update""", """{"description":"test"}""")
 
         }.andExpect {
             status { isOk() }
             jsonPath("$.updates[0].pictures[0].imageId", allOf(notNullValue(), instanceOf(String::class.java)))
         }.andReturn()
-        val imageId: Number = com.jayway.jsonpath.JsonPath.read(addUpdateResult.response.contentAsString,"$.updates[0].pictures[0].id")
+        val imageId: Number =
+            com.jayway.jsonpath.JsonPath.read(addUpdateResult.response.contentAsString, "$.updates[0].pictures[0].id")
 
         mockMvc.get("/api/picture/$imageId").andExpect {
             status { isOk() }
