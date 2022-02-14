@@ -34,15 +34,15 @@ declare let gtag: Function;
              [ngClass]="mobileNavShow ? 'flex flex-col space-x-0':'hidden md:flex'">
           <a class="cursor-pointer" (click)="scrollToOrder(); mobileNavShow = false">Auftragsformular</a>
           <a class="cursor-pointer" (click)="mobileNavShow = false" routerLink="preise">Preise</a>
-          <div class="h-full text-center flex self-center"  (clickOutside)="dropdownShow = false" [exclude]="'div.dropdown'"
-               [excludeBeforeClick]="true" [ngClass]="{'bg-gray-300 md:bg-black ': dropdownShow}">
+          <div class="h-full text-left flex self-center"  (clickOutside)="dropdownShow = false" [exclude]="'div.dropdown'"
+               [excludeBeforeClick]="true" [ngClass]="{'bg-gray-300 md:bg-black': dropdownShow}">
             <a class="cursor-pointer self-center " (click)="dropdownShow = !dropdownShow">Einblick</a>
-            <div class="grid ga absolute justify-evenly p-3 bg-gray-300 text-xl dropdown text-black"
+            <div class="border-solid border-2 border-black grid ga absolute justify-evenly p-4 bg-gray-300 text-2xl dropdown text-black py-4"
                  *ngIf="dropdownShow" [ngStyle]="mobileNavShow ? {'top':'0','width':'100%','left':'0','padding':'48px 0px','gap':'1.5rem'}:{}">
-              <a (click)="mobileNavShow = false" routerLink="/datenrettung/hdd">HDD Festplatten</a>
-              <a (click)="mobileNavShow = false" routerLink="/datenrettung/ssd">SSD Festplatten</a>
-              <a (click)="mobileNavShow = false" routerLink="/datenrettung/flash">USB Stick &<br>SD Karte</a>
-              <a (click)="mobileNavShow = false" routerLink="/datenrettung/raid">RAID &<br>Fusion Drive</a>
+              <a (click)="mobileNavShow = false" routerLink="/datenrettung/hdd">->HDD Festplatten</a>
+              <a (click)="mobileNavShow = false" routerLink="/datenrettung/ssd">->SSD Speicher</a>
+              <a (click)="mobileNavShow = false" routerLink="/datenrettung/flash">->USB Stick<br>->(micro) SD Karte</a>
+              <a (click)="mobileNavShow = false" routerLink="/datenrettung/raid">->RAID<br>->Fusion Drive</a>
             </div>
           </div>
           <a (click)="mobileNavShow = false" class="cursor-pointer" routerLink="philosophie">Philosophie</a>
