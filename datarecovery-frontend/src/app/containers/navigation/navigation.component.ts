@@ -32,11 +32,11 @@ declare let gtag: Function;
 
         <div class="flex flex-1 md:flex-row py-4 text-center md:space-y-0 space-y-4 space-x-8 xl:justify-end justify-center xl:space-x-12"
              [ngClass]="mobileNavShow ? 'flex flex-col space-x-0':'hidden md:flex'">
-          <a class="cursor-pointer" (click)="scrollToOrder(); mobileNavShow = false">Auftrag</a>
+          <a class="cursor-pointer" (click)="scrollToOrder(); mobileNavShow = false">Auftragsformular</a>
           <a class="cursor-pointer" (click)="mobileNavShow = false" routerLink="preise">Preise</a>
           <div class="h-full text-center flex self-center"  (clickOutside)="dropdownShow = false" [exclude]="'div.dropdown'"
                [excludeBeforeClick]="true" [ngClass]="{'bg-gray-300 md:bg-black ': dropdownShow}">
-            <a class="cursor-pointer self-center " (click)="dropdownShow = !dropdownShow">Arbeitsweise</a>
+            <a class="cursor-pointer self-center " (click)="dropdownShow = !dropdownShow">Einblick</a>
             <div class="grid ga absolute justify-evenly p-3 bg-gray-300 text-xl dropdown text-black"
                  *ngIf="dropdownShow" [ngStyle]="mobileNavShow ? {'top':'0','width':'100%','left':'0','padding':'48px 0px','gap':'1.5rem'}:{}">
               <a (click)="mobileNavShow = false" routerLink="/datenrettung/hdd">HDD Festplatten</a>
