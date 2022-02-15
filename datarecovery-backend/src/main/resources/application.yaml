@@ -10,8 +10,6 @@ spring:
   mustache:
     suffix: .html
     cache: true
-    prefix: file:src/main/resources/templates/
-    expose-request-attributes: true
   servlet:
     multipart:
       max-file-size: 2000MB
