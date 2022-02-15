@@ -7,6 +7,11 @@ spring:
     password: ${MAIL_SENDER_PASSWORD}
     properties.mail.smtp.auth: true
     properties.mail.smtp.starttls.enable: true
+  mustache:
+    suffix: .html
+    cache: true
+    prefix: file:src/main/resources/templates/
+    expose-request-attributes: true
   servlet:
     multipart:
       max-file-size: 2000MB
@@ -36,10 +41,10 @@ spring:
     password: password
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-#    hibernate:
-#      ddl-auto: update
+  #    hibernate:
+  #      ddl-auto: update
   liquibase:
-#    enabled: false
+    #    enabled: false
     contexts: dev
 
 ---

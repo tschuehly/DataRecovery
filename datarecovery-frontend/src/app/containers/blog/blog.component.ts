@@ -207,7 +207,7 @@ export class BlogComponent implements OnInit {
     this.route.params.subscribe(value => {
       this.articleUrl = value.articleUrl;
       if (this.articleUrl) {
-        this.http.get('/assets/articles/' + this.articleUrl + '.html',
+        this.http.get('api/article/' + this.articleUrl,
           {
             headers: new HttpHeaders({ 'Content-Type': 'text/plain' }),
             responseType: 'text'

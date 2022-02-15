@@ -42,10 +42,10 @@ class SpringSecurityConfig(
             // Our public endpoints
             .antMatchers(
                 "/index.html", "/favicon**.png", "/*.js", "/*.js.map", "/*.json",
-                "/*.css", "/assets/**", "/h2-console/*"
+                "/*.css", "/assets/**", "/h2-console/*", "/api/article/**"
             ).permitAll()
             .antMatchers(
-                HttpMethod.GET, "/", "/api/review","/api/review/detail", "/api/review/refresh",
+                HttpMethod.GET, "/", "/api/review", "/api/review/detail", "/api/review/refresh",
                 "/api/product", "/api/order/tracking", "/api/user/logout"
             ).permitAll()
             .antMatchers(HttpMethod.POST, "/api/order/create", "/api/user/login").permitAll()
@@ -55,6 +55,7 @@ class SpringSecurityConfig(
             .and()
             .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter::class.java)
     }
+
     @Bean
     fun corsConfigurationSource(): CorsConfigurationSource? {
         val configuration = CorsConfiguration()

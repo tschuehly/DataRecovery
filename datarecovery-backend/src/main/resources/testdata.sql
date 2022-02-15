@@ -22,7 +22,7 @@ Apple Fusiondrive: iMac (defekt), 1TB HDD (fehlerfrei) + 128Gb SSD (fehlerfrei):
 Apple Fusiondrive: iMac (fehlerfrei), 1TB HDD (defekt) + 128Gb SSD (fehlerfrei): 550,00 EUR ',
         'RAID oder Apple Fusiondrive', false, 'RAID & Apple Fusion Drive:', 3);
 INSERT INTO public.category (id, description, name, replacement, title, sequence_id)
-VALUES (4, NULL, 'USB-Stick oder (micro) SD-Karte', false, 'Datenrettung bei defekten USB-Stick / (micro) SD-Karte
+VALUES (4, NULL, 'Defekte (micro) SD-Karte oder USB-Stick', false, 'Datenrettung bei defekten USB-Stick / (micro) SD-Karte
 (wird nicht erkannt, möchte formatiert werden):', NULL);
 INSERT INTO public.category (id, description, name, replacement, title, sequence_id)
 VALUES (19, NULL, 'WD Portable (externe Festplatte)', true, NULL, NULL);
@@ -35,7 +35,8 @@ VALUES (36, '', 'Sicherung auf WD Elements Portable externer Festplatte', true, 
 INSERT INTO public.category (id, description, name, replacement, title, sequence_id)
 VALUES (37, '', 'SSD', false, 'Datenrettung bei defekter SSD (SATA-basiert / kein NVMe):', 1);
 INSERT INTO public.category (id, description, name, replacement, title, sequence_id)
-VALUES (38, '', 'SD-Karte oder USB-Stick', false, 'Datenrettung bei defekter (micro) SD-Karte oder USB-Stick:', 2);
+VALUES (38, '', 'Defekte (micro) SD-Karte oder USB-Stick', false,
+        'Datenrettung bei defekter (micro) SD-Karte oder USB-Stick:', 2);
 INSERT INTO public.category (id, description, name, replacement, title, sequence_id)
 VALUES (39, 'Gerne erstelle ich Ihnen hier ein für Ihr Fall spezifisches Angebot.
 Bitte nennen Sie mir dafür die Anzahl an Festplatten, die Kapazität pro Festplatte, das RAID Level und ob bzw. wie viele Festplatten physisch beschädigt sind.
