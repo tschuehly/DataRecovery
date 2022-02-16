@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Category, Product} from "../../model/model";
 import {HttpClient} from "@angular/common/http";
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-prices',
@@ -41,6 +42,9 @@ import {HttpClient} from "@angular/common/http";
                 </ng-container>
               </div>
             </ng-container>
+            <button class="text-xl bg-white py-2 px-4 shadow rounded text-black" (click)="scrollToOrder();">
+              Zum Auftragsformular
+            </button>
         </div>
       </div>
 
@@ -56,7 +60,7 @@ export class PricesComponent implements OnInit {
   flashProduct: Product[];
   categories: Category[];
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,private router: Router) { }
 
   ngOnInit(): void {
 
@@ -71,5 +75,19 @@ export class PricesComponent implements OnInit {
       console.log(this.categories)
     })
   }
+
+
+  scrollToOrder(): void {
+    this.router.navigate(['']).then(_ => {
+      setTimeout(function () {
+        let orderForm = document.getElementById('order_form')
+        orderForm.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        })
+      }, 200)
+    });
+  }
+
 
 }
