@@ -10,7 +10,7 @@ import {Order, Product} from '../../model/model';
     </div>
     <form [formGroup]="this.orderForm" (ngSubmit)="onSubmit()">
       <div class="flex flex-col gap-2">
-        <ng-container *ngIf="!productFormFilled">
+        <ng-container *ngIf="!productFormFilled" >
           <label class="py-4 px-12">Auftrag zur Datenrettung:
             <select class="block mt-2 w-full text-black" formControlName="product" #productSelect required>
               <option *ngFor="let product of products" [value]="product.id">

@@ -157,7 +157,7 @@ import {FormControl} from '@angular/forms';
                       {{update.description}}
                     </p>
                   </ng-container>
-                  <span *ngIf="update.pictures.length !== 0">Klicken um die Bilder zu vergrößern</span>
+                  <span *ngIf="update?.pictures?.length !== 0">Klicken um die Bilder zu vergrößern</span>
                   <div class="flex flex-row flex-wrap mt-2">
                     <div *ngFor="let pic of update.pictures">
                       <label class="cursor-pointer" (click)="togglePictureZoom(pic)">

@@ -8,15 +8,19 @@ import imageCompression from 'browser-image-compression';
   selector: 'app-update',
   template: `
       <div class="flex flex-col">
-          <h1 class="text-2xl">Neues Update erstellen</h1>
-          <label *ngFor="let question of this.order.orderProduct.category.questions">
+          <div class="flex ">
+            <h1 class="text-2xl text-center flex-1">Neues Update erstellen</h1>
+            <button class="flex-0" (click)="this.updatedOrder.emit(order)">
+              <img alt="close" src="/assets/x.svg">
+            </button>
+          </div>
+          <label *ngFor="let question of this.order.orderProduct.category.questions" class="text-center my-4">
               {{question}}
               <input type="radio" (click)="addQuestion(question,'Ja')" name="question"> Ja
               <input type="radio" (click)="addQuestion(question,'Nein')" name="question"> Nein
           </label>
-          <form [formGroup]="updateForm" class="text-black" enctype="multipart/form-data">
-              <label>Beschreibung
-                  <textarea class="block mt-2 w-full h-96" formControlName="description"></textarea></label>
+          <form [formGroup]="updateForm" class="text-black my-4" enctype="multipart/form-data">
+              <textarea class="block mt-2 w-full h-96 m-auto" formControlName="description"></textarea>
               <div class="flex flex-col my-4" *ngFor="let picture of pictureDetails.controls; let i = index">
                   <label>Bildtitel
                       <input [formControl]="picture" type="text">
@@ -25,10 +29,11 @@ import imageCompression from 'browser-image-compression';
                       <input class="block mt-2 w-full" type="file" (change)="onFileChange($event,i)">
                   </label>
               </div>
-              <div class="flex justify-between my-4">
-                <button class="border-2 rounded-xl p-2 text-black" (click)="addImage()">Bild hinzufügen</button>
-                <button class="border-2 rounded-xl p-2 text-black" (click)="addUpdateToOrder()">Update speichern</button>
-              </div>
+            <div class="flex justify-between mt-6">
+              <button class="border-2 rounded-xl p-2 text-black" (click)="addImage()">Bild hinzufügen</button>
+              <button class="border-2 rounded-xl p-2 text-black" (click)="addUpdateToOrder()">Update speichern</button>
+
+            </div>
               </form>
       </div>
   `,
