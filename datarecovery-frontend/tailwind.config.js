@@ -13,7 +13,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        'grey-main': 'rgb(35 35 35)',
+        'gray-main': 'rgb(35 35 35)',
         'silver': 'rgb(197 197 197)'
       },
       backgroundImage: ({

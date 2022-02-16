@@ -8,10 +8,10 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   selector: 'app-blog',
   template: `
 
-      <div class="bg-center bg-grey-main bg-cover bg-no-repeat "
+      <div class="bg-center bg-gray-main bg-cover bg-no-repeat "
            style="background-image: url('/assets/prices_header.jpg')">
           <div class="flex md:ml-80 justify-center md:justify-start ">
-        <span class="text-4xl leading-relaxed text-center text-silver text-shadow bg-grey-main p-16">
+        <span class="text-4xl leading-relaxed text-center text-silver text-shadow bg-gray-main p-16">
           Tobias<br>Jungbauer<br>Datenrettung
         </span>
           </div>
@@ -21,9 +21,9 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
               <div class="bg-white text-center">
                   <h1 class="text-4xl text-black py-5 tracking-wider">Blogübersicht</h1>
               </div>
-              <div class="bg-grey-main bg-circuit-board space-y-4 p-6">
+              <div class="bg-gray-main bg-circuit-board space-y-4 p-6">
                   <div class="bg-white max-w-4xl mx-auto rounded-2xl">
-                      <div class="text-grey-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center">
+                      <div class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center">
                           <a routerLink="/blog/datenrettung-kosten" href="/blog/datenrettung-kosten">
                               <div class="h-40 flex-shrink-0 w-80  my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
                                    style="background-image: url('/assets/favicon/android-icon-192x192.png')">
@@ -49,7 +49,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
                   <!-- Artikeleintrag Anfang -->
                   <div class="bg-white max-w-4xl mx-auto rounded-2xl">
-                      <div class="text-grey-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center">
+                      <div class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center">
                           <div class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
                                style="background-image: url('/assets/favicon/android-icon-192x192.png')">
                           </div>
@@ -76,7 +76,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                   <!-- Artikeleintrag Ende -->
 
                   <div class="bg-white max-w-4xl mx-auto rounded-2xl">
-                      <div class="text-grey-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center">
+                      <div class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center">
                           <div class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
                                style="background-image: url('/assets/favicon/android-icon-192x192.png')">
                           </div>
@@ -101,7 +101,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 
                   <div class="bg-white max-w-4xl mx-auto rounded-2xl">
-                      <div class="text-grey-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center">
+                      <div class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center">
                           <div class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
                                style="background-image: url('/assets/favicon/android-icon-192x192.png')">
                           </div>
@@ -124,7 +124,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 
                   <div class="bg-white max-w-4xl mx-auto rounded-2xl">
-                      <div class="text-grey-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center">
+                      <div class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center">
                           <div class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
                                style="background-image: url('/assets/favicon/android-icon-192x192.png')">
                           </div>
@@ -148,7 +148,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 
                   <div class="bg-white max-w-4xl mx-auto rounded-2xl">
-                      <div class="text-grey-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center">
+                      <div class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center">
                           <div class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
                                style="background-image: url('/assets/favicon/android-icon-192x192.png')">
                           </div>
@@ -172,7 +172,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 
                   <div class="bg-white max-w-4xl mx-auto rounded-2xl">
-                      <div class="text-grey-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center">
+                      <div class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center">
                           <div class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
                                style="background-image: url('/assets/favicon/android-icon-192x192.png')">
                           </div>

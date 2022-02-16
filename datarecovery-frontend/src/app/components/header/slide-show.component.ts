@@ -6,7 +6,7 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube, A
 @Component({
   selector: 'app-slide-show',
   template: `
-    <div class="bg-grey-main bg-circuit-board py-10">
+    <div class="bg-gray-main bg-circuit-board py-10">
       <swiper
         [spaceBetween]="30"
         [effect]="'fade'"

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-about',
   template: `
-    <div class="p-10 bg-right bg-grey-main bg-cover bg-no-repeat "
+    <div class="p-10 bg-right bg-gray-main bg-cover bg-no-repeat "
          style="background-image: url('/assets/hdd_arbeitsweise.png')">
       <div class="flex md:ml-32 py-10 justify-center md:justify-start">
         <div class="text-4xl leading-relaxed text-center text-silver text-shadow">
@@ -16,7 +16,7 @@ import { Component, OnInit } from '@angular/core';
       <div class="bg-white text-center">
         <h1 class="text-4xl text-black py-5 tracking-wider">Philosophie</h1>
       </div>
-      <div class="bg-grey-main text-white border-b-2 border-silver pb-8">
+      <div class="bg-gray-main text-white border-b-2 border-silver pb-8">
         <div class="container py-10">
           <pre class="whitespace-pre-wrap">
 <span class="text-bold text-lg">Philosophie</span>

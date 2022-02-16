@@ -11,7 +11,7 @@ declare let gtag: Function;
   selector: 'app-navigation',
   template: `
     <div class="flex flex-col h-screen text-lg">
-      <nav class="flex sticky w-full bg-grey-main text-2xl font-extralight  text-white px-2 py-4 md:p-4 justify-center
+      <nav class="flex sticky w-full bg-gray-main text-2xl font-extralight  text-white px-2 py-4 md:p-4 justify-center
                     flex-col md:flex-row flex-wrap" id="navigation">
         <div class="md:w-fit flex justify-between md:block shrink-0">
           <a href="/">
@@ -97,7 +97,7 @@ declare let gtag: Function;
           </a>
         </div>
       </div>
-      <footer class="pt-8 bg-grey-main text-silver">
+      <footer class="pt-8 bg-gray-main text-silver">
       <ng-container *ngIf="mapsIframeShow">
               <div class="h-72 mb-4 bg-white">
                 <iframe id="myFrame"

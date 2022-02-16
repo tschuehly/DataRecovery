@@ -112,11 +112,11 @@ import {FormControl} from '@angular/forms';
               <div class="flex md:contents">
                 <div class="col-end-2 mr-10 md:mx-auto relative">
                   <div class="h-full w-7 flex items-center justify-center">
-                    <div class="h-full w-1 bg-grey-main pointer-events-none"></div>
+                    <div class="h-full w-1 bg-gray-main pointer-events-none"></div>
                   </div>
-                  <div class="w-7 h-7 absolute top-1/2 -mt-3 rounded-full bg-grey-main shadow text-center">{{order.updates.length - index}}</div>
+                  <div class="w-7 h-7 absolute top-1/2 -mt-3 rounded-full bg-gray-main shadow text-center">{{order.updates.length - index}}</div>
                 </div>
-                <div class="bg-grey-main col-start-2 col-span-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+                <div class="bg-gray-main col-start-2 col-span-10 p-4 rounded-xl my-4 mr-auto shadow-md">
                   <h3 class="font-semibold text-lg my-1">{{update.date | date:'d.M.y'}} {{update.title}}:</h3>
                   <p class="leading-tight text-justify w-full">
 
