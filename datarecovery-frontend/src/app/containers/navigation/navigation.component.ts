@@ -11,34 +11,54 @@ declare let gtag: Function;
   selector: 'app-navigation',
   template: `
     <div class="flex flex-col h-screen">
-      <nav class="flex fixed justify-between p-4 w-full text-blue-900 bg-blue-50 shadow z-50">
-        <a routerLink="">
-          <div class="px-2 text-2xl font-bold">Datenrettung Schilling<br>Ludwigsburg</div>
-        </a>
-        <div class="flex md:hidden items-center mx-4 ">
-          <button class="p-2 border border-silver rounded" (click)="mobileNavShow = !mobileNavShow">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 top-" style="stroke: #8f8f8f">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      <nav class="flex sticky w-full text-2xl font-extralight text-blue-900 px-2 py-4 md:p-4 justify-center
+                    flex-col md:flex-row flex-wrap" id="navigation">
+        <div class="md:w-fit flex justify-between md:block shrink-0">
+          <a href="/">
+            <div class="py-4 px-2 text-2xl font-bold word">Datenrettung Schilling Ludwigsburg</div>
+          </a>
+          <button class="block md:hidden text-black" (click)="mobileNavShow = !mobileNavShow">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="40"
+                 height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="18" x2="20" y2="18" />
             </svg>
           </button>
         </div>
-        <div class="items-center text-xl px-2 font-semibold" (clickOutside)="mobileNavShow = false" exclude="nav" [ngClass]="mobileNavShow ? 'flex flex-col absolute right-0 top-20 mt-2 bg-blue-100 text-blue-900 w-full space-y-4 py-4 text-2xl font-semibold bg-gray-main text-white  border-b-2 border-t-2 border-blue-900': 'hidden md:flex md:flex-row'">
-          <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="">Startseite</a>
-          <a class="cursor-pointer p-2" (click)="scrollToOrder(); mobileNavShow = false">Auftrag</a>
-          <a class="cursor-pointer p-2" (click)="mobileNavShow = false" routerLink="preise">Preise</a>
-          <a class="cursor-pointer p-2" (click)="mobileNavShow = false"  routerLink="/datenrettung/flash">Arbeitsweise</a>
-          <a class="cursor-pointer  p-2"  (click)="scrollToContact(); mobileNavShow = false">Kontakt</a>
-          <div *ngIf="currentUser">
-            <a class="mr-2 ml-2" routerLink="/order">Bestellungen</a>
-            <a class="mr-2 ml-2" routerLink="/product">Produkte</a>
-            <a class="mr-2 ml-2" routerLink="/category">Kategorien</a>
-          </div>
+
+        <div class="flex flex-1 md:flex-row py-4 text-center md:space-y-0 space-y-4 md:space-x-12 lg:justify-end justify-center xl:space-x-12"
+             [ngClass]="mobileNavShow ? 'flex flex-col space-x-0':'hidden md:flex'">
+          <a class="cursor-pointer" routerLink="auftrag" href="auftrag"> Auftragsformular</a>
+          <a class="cursor-pointer" (click)="mobileNavShow = false" routerLink="preise" href="preise">Preise</a>
+          <a class="cursor-pointer" (click)="mobileNavShow = false"  routerLink="/datenrettung/flash">Arbeitsweise</a>
+          <a (click)="mobileNavShow = false;scrollToContact()" class="cursor-pointer">Kontakt</a>
+          <ng-container *ngIf="currentUser">
+            <a (click)="mobileNavShow = false" class="cursor-pointer" routerLink="/order">Bestellungen</a>
+            <a (click)="mobileNavShow = false" class="cursor-pointer" routerLink="/product">Produkte</a>
+            <a (click)="mobileNavShow = false" class="cursor-pointer" routerLink="/category">Kategorien</a>
+          </ng-container>
         </div>
       </nav>
-
-    <div class="flex-grow pt-24 bg-blue-100 text-gray-700">
+    <div class="flex-grow bg-blue-100 text-gray-700">
         <router-outlet></router-outlet>
     </div>
+
+      <div class="text-center py-6 my-10">
+        <div class="flex justify-around items-center pb-4">
+          <h2 class="text-xl font-bold underline text-center inline">Haben Sie noch Fragen?</h2>
+        </div>
+        <h3 class="font-semibold pb-2">Ein Anruf klärt am schnellsten Ihr Anliegen: </h3>
+        <a class="" href="tel:+4915221408008">
+          <p class="font-semibold my-2">
+            <img class="inline pr-4" src="/assets/phone.svg">0152 21408008</p>
+        </a>
+        <p>Auch an Wochenenden und Feiertagen erreichbar.</p>
+        <p>Oder per Email: <a class="font-bold" href="mailto:info@datenrettung-schilling.de">info@datenrettung-schilling.de</a></p>
+      </div>
+
       <div class="fixed w-64 bg-white rounded-xl bottom-4 right-20 z-50 p-4 shadow" *ngIf="showPhone">
         <div class="flex justify-around items-center pb-4">
           <h2 class="text-xl font-bold underline text-center inline">Haben Sie noch Fragen?</h2>
@@ -79,7 +99,7 @@ declare let gtag: Function;
         </div>
       </div>
 
-    <button  (click)="mapsIframeShow = true" style="height: 300px">
+    <button  (click)="showMaps()" style="height: 300px">
       <div  *ngIf="!mapsIframeShow" class="bg-gray-200 text-center py-8">
         <span>Hier klicken um Google Maps anzuzeigen. Dabei werden Daten und Cookies von Google geladen</span>
       </div>
@@ -113,7 +133,7 @@ declare let gtag: Function;
             <a routerLink="impressum" class="pr-4">Impressum</a><a routerLink="datenschutz" class="px-4">Datenschutz</a><a class="pl-4" routerLink="agb">AGB</a>
           </div>
           <div class="col-span-2 mt-4">
-            Made with 💗 by <a class="font-bold" href="https://www.linkedin.com/in/tschuehly/">Thomas Schühly</a>
+            Webseite entwickelt von <a class="font-bold" href="https://www.linkedin.com/in/tschuehly/">Thomas Schühly</a>
           </div>
           <div>
             <a class="mr-2 ml-2" routerLink="/login" *ngIf="currentUser" (click)="logout.emit()">Logout</a>
@@ -130,9 +150,9 @@ export class NavigationComponent implements OnInit {
   @Output() logout: EventEmitter<null> = new EventEmitter();
   public innerWidth: any;
   dropdownShow = false;
-  mobileNavShow: boolean = false;
-  wawidgetHidden: boolean = true;
-  mapsIframeShow: boolean = false;
+  mobileNavShow = false;
+  wawidgetHidden = true;
+  mapsIframeShow = false;
 
   showPhone = false;
   constructor(private router: Router,
@@ -143,6 +163,10 @@ export class NavigationComponent implements OnInit {
     });
   }
 
+  showMaps(): void{
+    this.mapsIframeShow = true;
+    this.innerWidth = document.documentElement.clientWidth;
+  }
   ngOnInit(): void {
     this.innerWidth = document.documentElement.clientWidth;
   }
@@ -152,25 +176,13 @@ export class NavigationComponent implements OnInit {
     this.innerWidth = document.documentElement.clientWidth;
   }
 
-  scrollToOrder(): void {
-    this.router.navigate(['']).then(_ => {
-      setTimeout(function () {
-        let orderForm = document.getElementById('order_form')
-        orderForm.scrollIntoView({
-          behavior: "smooth",
-          block: "center"
-        })
-      }, 200)
-    });
-  }
-
   scrollToContact(): void {
-    setTimeout(function () {
-      let contact = document.getElementById('contact')
+    setTimeout(function() {
+      const contact = document.getElementById('contact');
       contact.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-      })
-    }, 200)
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }, 200);
   }
 }

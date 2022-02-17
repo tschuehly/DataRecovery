@@ -11,6 +11,7 @@ import {ImprintComponent} from "./containers/imprint/imprint.component";
 import {PricesComponent} from "./containers/prices/prices.component";
 import {AgbComponent} from "./containers/agb/agb.component";
 import {PrivacyComponent} from "./containers/privacy/privacy.component";
+import {OrderSiteComponent} from './components/order-site/order-site.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,8 @@ const routes: Routes = [
   {path: 'datenschutz', component: PrivacyComponent},
   {path: 'agb', component: AgbComponent},
   {path: 'preise', component: PricesComponent},
+  {path: 'auftrag', component: OrderSiteComponent},
+  {path: 'auftrag/:categoryId', component: OrderSiteComponent},
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],

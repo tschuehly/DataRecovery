@@ -19,7 +19,7 @@ import {Category, Order, Product} from '../../model/model';
               </option>
             </select>
           </label>
-          <label class="py-4 font-semibold" [hidden]="this.orderForm.get('selectedCategory').invalid" >Welche Größe hat Ihr Datenträger?
+          <label class="py-4 font-semibold">Welche Größe hat Ihr Datenträger?
             <select class="block mt-2 w-full text-black" formControlName="product" #productSelect required>
               <ng-container *ngFor="let product of products">
                 <option *ngIf="product.category.id == this.orderForm.get('selectedCategory').value" [value]="product.id">
@@ -29,7 +29,7 @@ import {Category, Order, Product} from '../../model/model';
               </ng-container>
             </select>
           </label>
-          <ng-container *ngIf="productSelect.value">
+          <ng-container>
             <label class="py-4 font-semibold">Ersatzdatenträger zur Abspeicherung:
               <select class="block mt-2 w-full text-black" formControlName="replacement" required>
                 <option selected>Sie senden einen eigenen Ersatzspeicher zur Sicherung mit: kostenfrei</option>
@@ -48,7 +48,7 @@ import {Category, Order, Product} from '../../model/model';
                     class=" py-2 px-4  text-lg shadow rounded  border-2 border-black"
                     [disabled]="!(this.orderForm.get('product').valid)"
                     [ngClass]="!(this.orderForm.get('product').valid) ? 'bg-gray-200 cursor-default text-black': 'bg-blue-900 text-white tracking-wider font-semibold'">
-              <ng-container *ngIf="this.orderForm.get('product').valid">Auftragsdaten eingeben</ng-container>
+              <ng-container *ngIf="this.orderForm.get('product').valid">Adresse eingeben</ng-container>
               <ng-container *ngIf="!this.orderForm.get('product').valid">Wählen Sie Ihren Datenträger aus</ng-container>
             </button>
           </div>

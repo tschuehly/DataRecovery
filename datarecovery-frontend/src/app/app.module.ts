@@ -30,6 +30,7 @@ import localeDe from '@angular/common/locales/de';
 import {First40WordsPipe} from "./pipes/first-twenty-words.pipe";
 import {SwiperModule} from "swiper/angular";
 import { PrivacyComponent } from './containers/privacy/privacy.component';
+import { OrderSiteComponent } from './components/order-site/order-site.component';
 registerLocaleData(localeDe);
 @NgModule({
     declarations: [
@@ -53,6 +54,7 @@ registerLocaleData(localeDe);
         AgbComponent,
         First40WordsPipe,
         PrivacyComponent,
+        OrderSiteComponent,
     ],
   imports: [
     BrowserModule,

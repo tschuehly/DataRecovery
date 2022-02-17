@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Category, Product} from "../../model/model";
-import {HttpClient} from "@angular/common/http";
+import {Category, Product} from '../../model/model';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-prices',
@@ -32,6 +32,11 @@ import {HttpClient} from "@angular/common/http";
                 </ng-container>
               </div>
             </ng-container>
+            <div class="flex justify-center">
+              <a
+                class="bg-blue-900 text-white text-xl p-4 rounded-md mx-2 mt-2"
+                href="auftrag">Auftrag zur Datenrettung</a>
+            </div>
         </div>
       </div>
       <div class="flex justify-center">
@@ -58,9 +63,9 @@ export class PricesComponent implements OnInit {
       this.categories = this.products.map(p => p.category);
       const categoryIds = this.categories.map(c => c.id);
       this.categories = this.categories.filter(({id}, index) => !categoryIds.includes(id, index + 1));
-      this.categories.sort((c1,c2) => c1.sequenceId - c2.sequenceId)
-      console.log(this.categories)
-    })
+      this.categories.sort((c1, c2) => c1.sequenceId - c2.sequenceId);
+      console.log(this.categories);
+    });
   }
 
 }

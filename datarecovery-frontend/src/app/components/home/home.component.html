@@ -10,35 +10,35 @@
     <h1 class="text-center text-4xl mb-12 col-span-12 font-bold text-gray-900">
       Datenrettung zu fairen Konditionen in Ludwigsburg
     </h1>
-    <div class="inline-grid grid-cols-12 gap-2 m-auto">
-      <svg class="col-span-1 justify-self-center self-center" viewBox="0 0 24 24" width="24" height="24"
-           stroke="#1E3A8A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="20 6 9 17 4 12"></polyline>
-      </svg>
-      <span class="col-span-11 text-xl">bei defekten USB-Sticks, microSD- und SD-Karten</span>
-      <svg class="col-span-1 justify-self-center self-center" viewBox="0 0 24 24" width="24" height="24"
-           stroke="#1E3A8A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="20 6 9 17 4 12"></polyline>
-      </svg>
-      <span class="col-span-11 text-xl">auf Hardwareebene und mit modernster Datenrettungstechnik</span>
-      <svg class="col-span-1 justify-self-center self-center" viewBox="0 0 24 24" width="24" height="24"
-           stroke="#1E3A8A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="20 6 9 17 4 12"></polyline>
-      </svg>
-      <span class="col-span-11 text-xl">Datenrettung zu fairen Festpreisen</span>
-      <svg class="col-span-1 justify-self-center self-center" viewBox="0 0 24 24" width="24" height="24"
-           stroke="#1E3A8A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="20 6 9 17 4 12"></polyline>
-      </svg>
-      <span class="col-span-11 text-xl">alle Fälle werden lokal in Ludwigsburg bearbeitet</span>
-      <svg class="col-span-1 justify-self-center self-center" viewBox="0 0 24 24" width="24" height="24"
-           stroke="#1E3A8A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="20 6 9 17 4 12"></polyline>
-      </svg>
-      <span class="col-span-11 text-xl">Sie gehen hier ausdrücklich <span class="font-bold">nicht</span> in Vorkasse, zudem gibt es keine versteckte Kosten.
-Eine Bezahlung erfolgt nur <span class="font-bold">nach erfolgreicher Datenrettung.</span></span>
-
+    <div class="flex flex-row flex-wrap justify-center">
+      <div class="inline-grid grid-cols-12 gap-2 m-auto text-2xl">
+        <svg class="col-span-1 justify-self-center self-center" viewBox="0 0 24 24" width="24" height="24"
+             stroke="#1E3A8A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        <span class="col-span-11">Bezahlung nur <span class="font-bold">nach erfolgreicher Datenrettung</span></span>
+        <svg class="col-span-1 justify-self-center self-center" viewBox="0 0 24 24" width="24" height="24"
+             stroke="#1E3A8A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        <span class="col-span-11"><span class="font-bold">Keine</span> versteckte Kosten</span>
+        <svg class="col-span-1 justify-self-center self-center" viewBox="0 0 24 24" width="24" height="24"
+             stroke="#1E3A8A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        <span class="col-span-11">Datenrettung zu fairen <span class="font-bold">Festpreisen</span></span>
+        <svg class="col-span-1 justify-self-center self-center" viewBox="0 0 24 24" width="24" height="24"
+             stroke="#1E3A8A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        <span class="col-span-11"><span class="font-bold">Lokal</span> in Ludwigsburg</span>
+      </div>
+      <a class=" flex items-center  flex-col mt-8" href="https://www.linkedin.com/in/cassandra-schilling-620a69216/" target="_blank">
+        <img class="rounded-full h-40 w-40 object-cover" src="assets/_DSC2091.JPG">
+        <span class="pt-4 font-bold text-xl">Cassandra Schilling</span>
+      </a>
     </div>
+
   </div>
 </div>
 <div class="relative -mt-12 lg:-mt-24">
@@ -110,8 +110,7 @@ Eine Bezahlung erfolgt nur <span class="font-bold">nach erfolgreicher Datenrettu
             </table>
             <button
               class="bg-blue-900 text-white p-2 rounded-md mx-2 mt-2"
-              (click)="selectedCategoryId = category.id; scrollToOrder()"
-            >{{category.name}} Datenrettung</button>
+              routerLink="auftrag/{{category.id}}">{{category.name}} Datenrettung</button>
           </div>
         </div>
       </div>
@@ -219,6 +218,11 @@ Eine Bezahlung erfolgt nur <span class="font-bold">nach erfolgreicher Datenrettu
         </div>
       </div>
 
+      <div class="flex justify-center">
+        <button
+          class="bg-blue-900 text-white text-xl p-4 rounded-md mx-2 mt-2"
+          routerLink="auftrag">Auftrag zur Datenrettung</button>
+      </div>
     </div>
     <!--<div class="flex justify-center">
       <div class="h-80 w-64 border shadow-2xl rounded-2xl justify-self-center inline-table">
@@ -244,63 +248,3 @@ Eine Bezahlung erfolgt nur <span class="font-bold">nach erfolgreicher Datenrettu
 
 
 </div>
-<div class="text-center py-6 my-10">
-  <div class="flex justify-around items-center pb-4">
-    <h2 class="text-xl font-bold underline text-center inline">Haben Sie noch Fragen?</h2>
-  </div>
-  <h3 class="font-semibold pb-2">Ein Anruf klärt am schnellsten Ihr Anliegen: </h3>
-  <a class="" href="tel:+4915221408008">
-    <p class="font-semibold my-2">
-      <img class="inline pr-4" src="/assets/phone.svg">0152 21408008</p>
-  </a>
-  <p>Auch an Wochenenden und Feiertagen erreichbar.</p>
-  <p>Oder per Email: <a class="font-bold" href="mailto:info@datenrettung-schilling.de">info@datenrettung-schilling.de</a></p>
-
-</div>
-
-<div>
-  <div class="py-6 bg-white text-gray-800 px-2" id="order_form">
-
-    <app-order-form
-      *ngIf="products && orderSubmitted === null"
-      [categoryId]="selectedCategoryId"
-      [products]="products"
-      [replacementProducts]="replacementProducts"
-      (orderOutput)="submitOrder($event)"></app-order-form>
-
-    <div class="p-12 text-blue-900 text-xl font-bold mt-8 bg-blue-100 rounded-xl"  id="order_submit" *ngIf="orderSubmitted !== null">
-      <ng-container *ngIf="orderSubmitted === true">
-        <pre class="whitespace-pre-wrap">
-Ihr Auftrag wurde erfolgreich übermittelt.
-
-Sie sollten bald eine Bestätigungsmail mit weiteren Informationen erhalten.
-
-Schauen Sie auch in Ihrem Spam Ordner nach!
-        </pre>
-      </ng-container>
-      <ng-container *ngIf="orderSubmitted === false">
-      <p class="inline-block">Ihre Auftrag konnte nicht übermittelt werden.<br>
-        Bitte kontaktieren sie Cassandra Schilling über eine Email an:<br>
-        <button class="btn btn-primary mt-4">
-          <a href="mailto:info@datenrettung-schilling.de?subject=Anfrage%20wegen%20einer%20Datenrettung&amp">info@datenrettung-schilling.de</a>
-        </button>
-      </p>
-      </ng-container>
-    </div>
-
-    <div *ngIf="!products" class="text-center py-8">
-      <p>Bitte kontaktieren sie Cassandra Schilling über eine Email an:
-        <span class="text-green-700 font-bold">info@datenrettung-schilling.de</span>
-      </p>
-      <button class="border-2 rounded-md p-2 mt-4">
-
-        <a
-          href="mailto:info@datenrettung-schilling.de?subject=Anfrage%20wegen%20einer%20Datenrettung&amp">Hier
-          klicken um eine Email zu senden</a>
-      </button>
-    </div>
-
-  </div>
-</div>
-
-
