@@ -11,11 +11,13 @@ import de.tschuehly.datarecoverybackend.repository.OrderProductRepository
 import de.tschuehly.datarecoverybackend.repository.OrderRepository
 import de.tschuehly.datarecoverybackend.repository.PictureRepository
 import org.slf4j.Logger
-import org.springframework.data.domain.PageRequest
-import org.springframework.data.domain.Pageable
 import org.springframework.data.repository.findByIdOrNull
+import org.springframework.scheduling.annotation.Scheduled
 import org.springframework.stereotype.Service
 import org.springframework.web.multipart.MultipartFile
+import java.time.Duration
+import java.time.Instant
+import java.time.LocalDate
 import java.util.*
 
 @Suppress("SpringJavaInjectionPointsAutowiringInspection")
@@ -55,6 +57,7 @@ class OrderService(
                 InProcess.reRead -> mailService.sendReRead(order)
                 InProcess.savingData -> mailService.sendSavingData(order)
                 orderReceivedReminderSent -> mailService.sendReminder(order)
+                Completed.success -> order.completionDate = Date()
             }
             order.addUpdateToOrder(Update(title = order.trackingState, order = order))
 
@@ -97,6 +100,21 @@ class OrderService(
 
     fun getOrderInfo(): Any {
         return repository.getInfo()
+    }
+
+    @Scheduled(cron = "0 0 6 * * *", zone = "Europe/Paris")
+    fun checkForCompletionDateSendReviewReminder() {
+        logger.info("Check for orders older than 6 Days and sending Email")
+        val orders = orderRepository.findByCompletionDateGreaterThanAndCompletionDateLessThan(
+            Date.from(Instant.now().minus(Duration.ofDays(7))),
+            Date.from(Instant.now().minus(Duration.ofDays(6)))
+        ).let { orders -> orders.filter { it.trackingState == Completed.success } }
+
+        orders.forEach {
+            mailService.sendReviewReminder(it)
+            logger.info("Sending Email to ${it.customer?.firstName} ${it.customer?.lastName}")
+        }
+
     }
 
     companion object OrderState {

@@ -19,6 +19,7 @@ class MailService(
     @Value("\${MAIL_SENDER_USERNAME}")
     lateinit var emailAdr: String
 
+
     fun getMimeMessageAndHelper(order: Order): Pair<MimeMessage, MimeMessageHelper> {
         val msg = javaMailSender.createMimeMessage()
         msg.setFrom(emailAdr)
@@ -204,6 +205,7 @@ class MailService(
         ${order.customer?.tel} <br />
         <br />
         """
+
     // language=HTML
     fun getOrderConfirmationBody(order: Order) = """
         <h2 style="Margin-top: 0;Margin-bottom: 0;font-style: normal;font-weight: normal;color: #2e2e2e;font-size: 18px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;">
@@ -242,6 +244,35 @@ class MailService(
                 Wir haben Ihren Datenträger noch nicht erhalten. Bitte antworten Sie hierauf, falls Sie noch offene Fragen haben oder den Speicher bereits versendet haben.
             </h2>"""
         val body = statusString + getTrackingFooter(order)
+        val email = getHtmlEmail(body, order.orderDate)
+        helper.setText(email, true)
+        javaMailSender.send(msg)
+    }
+
+    fun sendReviewReminder(order: Order) {
+
+        val (msg, helper) = getMimeMessageAndHelper(order)
+
+        helper.setSubject("Sind sie zufrieden mit Ihrer Datenrettung?")
+        // language=HTML
+        val body = """
+           <h3 style="Margin-top: 0;Margin-bottom: 0;font-style: normal;font-weight: normal;color: #2e2e2e;font-size: 16px;text-decoration: underline;line-height: 26px;font-family: Cabin,Avenir,sans-serif;">
+                    Sind sie zufrieden mit Ihrer Datenrettung? <br/>
+            </h3>
+            <p style="Margin-top: 16px;Margin-bottom: 0;">
+            Nicht einmal 10% meiner Kunden geben eine Rückmeldung bezüglich deren Zufriedenheit über meine Arbeit. Sehr gerne nehme ich mich Ihrer Kritik an und freue mich auch über lobende Worte.<br><br>
+            
+            Sie können mich dafür ebenfalls jederzeit telefonisch erreichen.<br><br>
+            
+            Für mich als kleines Unternehmen sind Google Bewertungen von sehr großer Bedeutung. Mit der Anzahl dieser wird mein Ranking innerhalb der Suchmaschine stark beeinflusst.<br><br>
+            
+            Bereits eine reine Sternebewertung ohne Text hilft mir enorm.<br><br>
+            
+            Hier können Sie eine Google Bewertung verfassen:<br><br>
+            <a href='https://g.page/r/CctlQMKQ3dQ3EA0/review'>Google Maps</a><br>
+            
+            Achtung: Die bisher noch gesicherten Daten Ihres geretteten Speichers werden in 7-Tagen restlos von meinen Rechnern entfernt. Bitte melden Sie sich, falls Sie Ihre Daten noch nicht erhalten haben sollten.<br><br></p>
+            """
         val email = getHtmlEmail(body, order.orderDate)
         helper.setText(email, true)
         javaMailSender.send(msg)

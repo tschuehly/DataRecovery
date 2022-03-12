@@ -4,6 +4,7 @@ import de.tschuehly.datarecoverybackend.model.*
 import org.springframework.data.domain.Pageable
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.jpa.repository.Query
+import java.util.*
 
 interface OrderRepository : JpaRepository<Order, Long> {
     fun findByTrackingIdAndCustomer_PostalCode(trackingId: String, postalCode: String): Order?
@@ -11,6 +12,7 @@ interface OrderRepository : JpaRepository<Order, Long> {
     fun findByTrackingStateNotIn(trackingStateList: List<String>): List<Order>
     fun countOrdersByTrackingStateIn(trackingStateList: List<String>): Number
     fun countOrdersByTrackingStateNotIn(trackingStateList: List<String>): Number
+    fun findByCompletionDateGreaterThanAndCompletionDateLessThan(startDate: Date, endDate: Date): List<Order>
 
     @Suppress("JpaQlInspection")
     @Query(
