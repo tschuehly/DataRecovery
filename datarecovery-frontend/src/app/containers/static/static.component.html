@@ -14,22 +14,24 @@
     <div class="container py-8">
 
       <span class="underline text-2xl font-bold">Datenrettung HDD-Festplatte</span>
-      <pre class="whitespace-pre-wrap py-2"><span class="whitespace-pre-wrap py-2 text-bold text-lg text-silver">Updated am 03.12.2021, 17:55 von Tobias Jungbauer</span> </pre><pre class="whitespace-pre-wrap py-8">
+      <pre class="whitespace-pre-wrap py-2"><span class="whitespace-pre-wrap py-2 text-bold text-lg text-silver">Updated am 27.03.22, 07:55 von Tobias Jungbauer</span> </pre><pre class="whitespace-pre-wrap py-8">
 <span class="font-semibold">Es wird die Datenrettung für HDD-Festplatten angeboten, die beispielsweise:</span>
+- Dateien anzeigen, sich aber nicht auslesen lassen
 - nicht mehr erkannt werden
 - "klackern" oder "fiepsen" (mechanische Schäden)
-- Dateien anzeigen, sich aber nicht auslesen lassen
 - Fehlermeldungen ausgeben (wie CRC-Fehler oder E/A-Fehler)
 
 <span class="font-semibold">Typische Ursachen dabei sind:</span>
 - defekte Schreib-/Leseköpfe nach einem Headcrash (z.B. durch Erschütterung oder Alter)
 - defektes PCB (z.B. durch das Verwenden eines falschen Netzteils)
 - fehlerhafte ServiceArea oder eine fehlerhafte Boot-ROM ("Firmware Bug")
+
+<span class="text-red">Gerne nehme ich auch Aufträge an, die von vorherigen Laboren aufgegeben wurden!</span>
 <div class="flex justify-end pt-4"><button class="text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">Direkt zu den Preisen</a></button></div>
 <span class="font-semibold">Vorgehensweise:</span>
-❶ Der erste Schritt in der HDD-Datenrettung ist eine Fehlerdiagnose anzustellen.
+❶ Der erste Schritt in der HDD-Datenrettung ist eine Fehlerdiagnose anzustellen. Hierfür wird z.B. auch über ein COM Terminal Fehlermeldungen (z.B. ServoError, SIM Error, etc.) ausgelesen.
 
-❷ Danach wird die HDD von fehlerhaften Bauteilen befreit (z.B. Schreib-/Leseköpfe ausgetauscht) oder z.B. Fehler in der Firmware und BOOT-ROM behoben, bis der Zugriff auf Ihre Dateien möglich ist.
+❷ Danach wird die HDD von fehlerhaften Bauteilen befreit (z.B. Schreib-/Leseköpfe ausgetauscht) oder z.B. Fehler in der Firmware und BOOT-ROM behoben und modifiziert, bis der Zugriff auf Ihre Dateien möglich ist.
 
 ❸ Es wird nun ein Image Ihrer Festplatten erstellt und Ihre Dateien werden hierraus auf einen anderen Speicher abgespeichert.
 
@@ -51,16 +53,6 @@ Haar ~70µm
 
 Jede Veruneinigung beschädigt daher potenziell Oberfläche und Leseköpfe.
 
-- Austausch und Anlernen des PCB (printed circuit board):
-<div class="flex grid-cols-3 flex-wrap gap-4">
-  <img class="h-80 object-cover object-center" src="assets/HDD_arbeitsweise_PCB2.jpg">
-  <img class="h-80 object-cover object-center" src="assets/HDD_arbeitsweise_PCB1.jpg">
-</div>
-Bei modernen Festplatten muss für ein Austausch des PCB in der Regel immer die originale BOOT-ROM auf das neue PCB übertragen werden.
-Grund dafür sind viele verschiedene FW Versionen und teilweise festplattenspezifische (adaptive) Module innerhalb der BOOT-ROM.
-Bei einigen Festplattenmodellen wird die ServiceArea mit einer Verschlüsselung (z.B. SED bei WD) gesichert.
-Um hier dennoch die nötigen Arbeiten durchführen zu können gibt es spezielle "unlocked PCBs".
-
 - Arbeiten an der ServiceArea und BOOT-ROM:
 <div class="flex grid-cols-3 flex-wrap gap-4">
   <img class="h-80 object-cover object-left" src="assets/arbeitsweise_hdd_SA.PNG">
@@ -79,10 +71,20 @@ Als Alternative zur Analyse der Schreib-/Leseköpfe kann man auch die Oberflöch
 Das ist z.B. nötig, wenn die Festplatte bereits woanders neue Schreib-/Leseköpfe bekommen hat und die Originalen nicht mehr vorhanden sind.
 Auch nutzt man diese Technik, wenn der Motor getauscht werden muss.
 
+- Austausch und Anlernen des PCB (printed circuit board):
+<div class="flex grid-cols-3 flex-wrap gap-4">
+  <img class="h-80 object-cover object-center" src="assets/HDD_arbeitsweise_PCB2.jpg">
+  <img class="h-80 object-cover object-center" src="assets/HDD_arbeitsweise_PCB1.jpg">
+</div>
+Bei modernen Festplatten muss für ein Austausch des PCB in der Regel immer die originale BOOT-ROM auf das neue PCB übertragen werden.
+Grund dafür sind viele verschiedene FW Versionen und teilweise festplattenspezifische (adaptive) Module innerhalb der BOOT-ROM.
+Bei einigen Festplattenmodellen wird die ServiceArea mit einer Verschlüsselung (z.B. SED bei WD) gesichert.
+Um hier dennoch die nötigen Arbeiten durchführen zu können gibt es spezielle "unlocked PCBs".
+
 - die Herstellung von Werkzeuge für die Datenrettung:
 <div class="flex grid-cols-3 flex-wrap gap-4">
-  <img class="h-80 object-cover object-center" src="assets/Chitubox.PNG">
   <img class="h-80 object-cover object-right" src="assets/1640221182228.jpg">
+  <img class="h-80 object-cover object-center" src="assets/Chitubox.PNG">
 </div>
 Nicht für jedes Festplattenmodell gibt es passendes Werkzeug zum Austausch der Schreib-/Leseköpfe direkt zum Kaufen.
 Vorallen moderne Festplatten wie Seagate Rosewood und co. bieten hier nur sehr wenig Platz im Inneren.
@@ -92,6 +94,16 @@ Eigenes Werkzeug mit einer Genauigkeit von 35µm Herstellen zu können bringt da
 <img class="h-80 object-cover object-right" src="assets/hdd_arbeitsweise_4.jpg">
 Die Kabine erzeugt ein Überdruck durch ein HEPA Filter des Typs H14.
 Dieser besitzt einen Abscheidegrad von 99,995%. Das bedeutet, dass der Filter bei einer Partikelgröße von 0,12 μm (nach MPPS) mindestens 99,995% aller Partikel herausfiltert. Der Überdruck verhindert, dass von außerhalb Partikel hineinfallen können.
+
+<span class ="font-semibold">Beispiele spektakulärer Schäden:</span>
+<div class="flex grid-cols-3 flex-wrap gap-4">
+❶<img class="h-80 object-cover object-right" src="assets/articles/wasserschaden.jpg">
+❷<img class="h-80 object-cover object-right" src="assets/articles/1648419003590-min.jpg">
+❸<img class="h-80 object-cover object-right" src="assets/articles/1648418965066-min.jpg">
+</div>
+❶ Wasserschäden 
+❷ stark Verformte/zerfetzte Schreib-/Leseköpfe
+❸ Beschädigte Oberflächen
 
 Preisliste:
 Defekte HDD-Festplatte bis 1TB Festplattenkapazität: 299,00 €*
