@@ -232,7 +232,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                           <h3 class="pb-2">
                               Wie funktioniert die Datenrettung bei RAID 1 und warum wird Sie überhaupt benötigt?
                           </h3>
-                          <a routerLink="/blog/QNAP-RAID-1" href="/blog/QNAP-RAID-1"
+                          <a routerLink="/blog/QNAP-RAID-1" href="/blog/qnap-raid-1"
                              class="font-semibold">
                               Mehr lesen →
                           </a>
