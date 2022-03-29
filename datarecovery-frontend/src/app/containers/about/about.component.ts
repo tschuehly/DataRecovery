@@ -19,8 +19,10 @@ import { Component, OnInit } from '@angular/core';
       <div class="bg-gray-main text-white border-b-2 border-silver pb-8">
         <div class="container py-10">
           <pre class="whitespace-pre-wrap">
-<span class="text-2xl text-bold text-lg">Philosophie</span>
-<span class="text-bold text-lg text-silver">Updated am 30.05.2021, 17:36 von Tobias Jungbauer</span>
+<span class="underline text-2xl font-bold">Konzept und über mich</span>
+<span class="text-bold text-lg text-silver">Updated am 29.03.2022, 04:48 von Tobias Jungbauer</span>
+
+Mein persöhnliches Ziel ist es das fairste Datenrettungsangebot Deutschlands anzubieten und den Markt damit zu revolutionieren. Daraus ergeben Sie u.a. folgende Punkte:
 
 <span class="font-semibold ">1. Bei mir müssen Sie niemals in Vorkasse gehen:</span>
 So bearbeite ich alle meine Fälle zu einem im Verhältnis zum Markt preiswerten Festpreis und das zudem nur nach Erfolg. Bei Misserfolg verlange ich keine Gebühren.
@@ -30,10 +32,12 @@ Ich möchte die höchstmögliche Transparenz zur geleisteten Arbeit und den dazu
 
 <span class="font-semibold">3. Vielschichtiges Angebot:</span>
 Ich bin mit meinem Know-how und meinem Equipment breit aufgestellt, so bearbeite ich nicht nur HDD und NAND Fälle, sondern biete auch SSD Datenrettung (SATA basiert) und zudem die RAID-Datenrettung an.
+
+Meine Gründe und Motivation für die Preisgestaltung bzw. auch das Konzept dahinter erfahren Sie <a href="/blog/datenrettung-kosten" class="underline font-bold">hier</a>.
           </pre>
-          <h2 class="text-2xl underline text-white font-bold py-6">Der erste Auftrag:</h2>
+          <h2 class="text-xl underline text-white font-bold py-6">Der erste Auftrag:</h2>
           <pre class="whitespace-pre-wrap">
-Bereits zu meiner Schulzeit, als auch begleitend während meines Elektrotechnikstudiums, arbeitete ich bei einem mittelständischen Elektronikdienstleister, bei dem ich das ESD-geschützte Arbeiten an elektronischen Baugruppen, z.B. Löten an SMD und THT Bauteilen lernen konnte, als auch für optische Systeme unter Reinraumbedingungen arbeiten durfte.
+Bereits zu meiner frühen Schulzeit, als auch begleitend während meines Ingenieurstudium, arbeitete ich bei einem mittelständischen Elektronikdienstleister, bei dem ich das ESD-geschützte Arbeiten an elektronischen Baugruppen, z.B. Löten an SMD und THT Bauteilen lernen konnte, als auch für optische Systeme unter Reinraumbedingungen arbeiten durfte.
 
 Meinen ersten Auftrag zu einer Datenrettung erhielt ich zu dieser Zeit.
 Eine Festplatte aus dem Freundeskreis, bei der ein Angebot einer professionellen Datenrettung im vierstelligen Betrag vorlag und dies für den Besitzer nun mal viel zu teuer war.
@@ -43,18 +47,18 @@ Damals mit noch nicht professionellen Mitteln, sondern mit einer simplen Linux S
 
 Darüber erschüttert, dass das Angebot für die Datenrettung dieser Festplatte im vierstelligen Bereich lag, fing ich an, meine Dienste günstig, bereits damals zu einem Festpreis nach Erfolg unter der Webseite ammerseedatenrettung.de anzubieten.
           </pre>
-          <h2 class="text-2xl underline text-white font-bold py-6">Der Einstieg in die professionellen NAND-Datenrettung:</h2>
+          <h2 class="text-xl underline text-white font-bold py-6">Der Einstieg in die professionellen NAND-Datenrettung:</h2>
           <pre class="whitespace-pre-wrap">
 Ich konnte mit meiner damaligen Methodik bereits einige Kunden glücklich machen, doch nicht lange dauerte es, dass ich Aufträge erhielt, bei denen ich mit meinen damals nicht professionellen Mitteln keine Lösung erzielen konnte, aber der festen Überzeugung war, dass man hier noch etwas aus technischer Sicht tun können muss.
 Mit der Situation unzufrieden fing ich an zu recherchieren und nahm mein komplettes von Studentenjobs erspartes Geld in die Hand, um mein erstes Produkt von ACE Lab zu erwerben. Den PC-3000 Flash.
 Hiermit konnte ich nun NAND-Speicher bearbeiten, die vom Computer nicht mehr erkannt worden sind und somit mit reiner Software nicht lösbar waren! Ein großer Fortschritt.
           </pre>
-          <h2 class="text-2xl underline text-white font-bold py-6">Der Einstieg in die professionellen HDD Datenrettung:</h2>
+          <h2 class="text-xl underline text-white font-bold py-6">Der Einstieg in die professionellen HDD Datenrettung:</h2>
           <pre class="whitespace-pre-wrap">
 Aufgrund der emotionalen Kritik eines Kunden, dass ich seinen Festplattenfall trotz keiner klackernden Geräusche mit meinen damaligen Mitteln nicht lösen konnte und auch wegen meines persönlichen Ehrgeizes, welcher mir nicht erlaubte, meiner Meinung nach technisch lösbare Fälle aufzugeben, entschied ich mich wenige Monate später diesmal meinen damaligen kompletten Besitz, zwei Motorräder, zu verkaufen, um mir entsprechendes Equipment anzuschaffen.
 Dazugekommen sind eine Laminar Flowbox, die es mir fortan erlaubte, unter Reinraumbedingungen zu arbeiten, als auch das PC-3000 UDMA von ACE Lab, womit ich nun die technische Unterstützung auf Herstellerebene diverser Festplattenmodelle erhielt.
           </pre>
-          <h2 class="text-2xl underline text-white font-bold py-6">Die Situation Heute:</h2>
+          <h2 class="text-xl underline text-white font-bold py-6">Die Situation Heute:</h2>
           <pre class="whitespace-pre-wrap">
 Mittlerweile habe ich über 600 Datenrettungsfälle erfolgreich bearbeitet.
 Mit diesen kamen immer neue Herausforderungen, die nach harter Arbeit neue Lösungen hervorbrachten.

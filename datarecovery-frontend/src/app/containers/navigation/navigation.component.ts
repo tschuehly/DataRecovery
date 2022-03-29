@@ -41,7 +41,9 @@ declare let gtag: Function;
               <a (click)="mobileNavShow = false" routerLink="/datenrettung/hdd"   href="/datenrettung/hdd">HDD Festplatten</a>
               <a (click)="mobileNavShow = false" routerLink="/datenrettung/ssd"   href="/datenrettung/ssd">SSD Speicher</a>
               <a (click)="mobileNavShow = false" routerLink="/datenrettung/flash" href="/datenrettung/flash">USB Stick<br>(micro) SD Karte</a>
-              <a (click)="mobileNavShow = false" routerLink="/datenrettung/raid"  href="/datenrettung/raid">RAID<br>Fusion Drive</a>
+              <a (click)="mobileNavShow = false" routerLink="/blog/apple-fusion-drive-datenrettung"  href="/blog/apple-fusion-drive-datenrettung">Apple Fusion Drive</a>
+              <a (click)="mobileNavShow = false" routerLink="/datenrettung/raid"  href="/datenrettung/raid">RAID</a>
+              
             </div>
           </div>
           <a (click)="mobileNavShow = false" class="cursor-pointer" routerLink="philosophie" href="philosophie">Philosophie</a>
@@ -62,7 +64,7 @@ declare let gtag: Function;
 
       <div class="fixed w-64 bg-white rounded-xl bottom-4 right-20 z-50 p-4 shadow-2xl" *ngIf="showPhone">
         <div class="flex justify-around items-center pb-4">
-          <h2 class="font-semibold pb-2">Ein Anruf klärt am schnellsten Ihr Anliegen:</h2>
+          <h2 class="font-semibold pb-2">Noch offene Fragen? Ein Anruf klärt am schnellsten auf:</h2>
           <button (click)="showPhone = false"><img alt="close" class="inline" src="assets/x.svg"></button>
         </div>
 
@@ -136,7 +138,7 @@ declare let gtag: Function;
             <a routerLink="impressum" class="pr-4">Impressum</a><a routerLink="datenschutz" class="px-4">Datenschutz</a><a class="pl-4" routerLink="agb">AGB</a>
           </div>
           <div class="col-span-2 pt-4 divide-x-2 divide-silver">
-            <span class="pr-4">Website developed by <a class="font-bold" href="https://www.linkedin.com/in/tschuehly/">Thomas Schühly</a></span>
+            <span class="pr-4">Website developed by <a class="font-bold" href="https://www.linkedin.com/in/tschuehly/">Thomas Schühly</a> and Tobias Jungbauer</span>
           </div>
           <div>
             <a class="" routerLink="/login" *ngIf="currentUser" (click)="logout.emit()">Logout</a>

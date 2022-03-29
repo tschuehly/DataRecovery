@@ -32,7 +32,7 @@ import {Order, Product} from '../../model/model';
           <ng-container *ngIf="productSelect.value">
             <div class="py-4 px-12">
               <label class="block mt-2">
-                <span class="font-bold">Optional:</span> Bis zu welchem Datum werden die Daten benötigt?
+                <span class="font-bold">Optional:</span> Handelt es sich um zeitkritische Daten?
                 <input type="date" class="mt-2 ml-4 text-black" formControlName="deadline" />
               </label>
             </div>
@@ -46,7 +46,7 @@ import {Order, Product} from '../../model/model';
           </ng-container>
 
 
-          <label class="py-4 px-12"><span class="font-bold">Optional:</span>   Zusätzliche Anmerkungen:
+          <label class="py-4 px-12">Zielsetzung (z.B. Ordner X-Y am wichtigsten) & zusätzliche Anmerkungen:
             <textarea class="mt-1 w-full text-black" formControlName="note"></textarea>
           </label>
           <h2 class="font-semibold inline text-center"><a class="font-semibold underline" routerLink="agb">Allgemeine

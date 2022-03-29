@@ -19,10 +19,11 @@ import {Router} from '@angular/router';
     <div class="bg-gray-main  ">
       <div class="container flex">
         <div class="text-white py-8 mx-auto justify-center">
-          <span class="font-bold underline text-white">Wichtig:</span> Es handelt sich um
-          <span class="text-white font-semibold">Festpreise</span>, die <span class=" text-white">nur nach Erfolg</span> gelten.<br>
-          <span class="text-white font-semibold">Bei Misserfolg</span> erhalten Sie Ihren Speicher <span class="text-white font-semibold">kostenfrei </span>zurück.<br>
-          Alle angegebenen Preise sind bereits inklusive 19% Mehrwertsteuer.<br>
+          <span class="text-white">❶</span> Es handelt sich um
+          <span class="text-white">Festpreise</span>, die <span class=" text-white">nur nach Erfolg</span> gelten.<br>
+          <span class="text-white">❷ Der Erfolg wird anhand von Ihnen gestellten Zielen definiert (z.B. "User-Ordner").<br>
+          <span class="text-white">❸ Bei Misserfolg</span> erhalten Sie Ihren Speicher <span class="text-white">kostenfrei </span>zurück.</span><br>
+          
         
         </div>
 
@@ -31,7 +32,7 @@ import {Router} from '@angular/router';
     <div class="grid grid-cols-1 xl:grid-cols-2  border-b-2 border-t-2">
       <div class="text-white">
           <div class="bg-gray-main p-12" style="box-shadow: 0 2px 25px 0 black">
-          <span class="font-bold text-2xl underline text-white">Festpreise:</span>
+          <span class="font-bold text-2xl underline text-white">Festpreise (bereits inklusive 19% Mehrwertsteuer eingerechnet):</span>
             <ng-container *ngFor="let category of categories " >
 
             <div class="mb-2">
@@ -50,6 +51,7 @@ import {Router} from '@angular/router';
               weiter zum Ablauf & Auftrag
             </button> 
             </div>
+            Meine Gründe und Motivation für die Preisgestaltung bzw. auch das Konzept dahinter erfahren Sie <a href="/blog/datenrettung-kosten" class="underline font-bold">hier</a>.
         </div>
       </div>
 
