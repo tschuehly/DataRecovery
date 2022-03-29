@@ -1,0 +1,54 @@
+<div>
+    <div class="bg-white text-center">
+      <h1 class="text-4xl text-black py-5 tracking-wider">QNAP RAID 1 Datenrettung (z.B. TR-002, TS-231K, TS-451D2-2G)</h1>
+    </div>
+    <div class="bg-gray-main text-white border-b-2 border-silver py-8">
+      <pre class="container whitespace-pre-wrap">
+  <h2 class="font-bold text-xl underline">QNAP RAID 1 Datenrettung (z.B. TR-002, TS-231K, TS-451D2-2G)</h2><span class="text-bold text-lg text-silver">Updated am 29.03.2022, 22:04 Uhr von Tobias Jungbauer</span>
+
+Vieler meiner Kunden machen den Fehler bei RAID 1 Speicher exakt die gleichen Festplatten zu verbauen. Doch warum ist das ein Fehler?
+Wie Sie vermutlich bereits wissen werden bei RAID 1 die Daten jeweils gleichzeitig auf beide der Festplatten beschrieben. Das heißt die Belastung auf den jeweiligen Festplatten ist die gleiche!
+
+Wenn Sie nun exakt die gleichen Festplatten (gleiches Modell, gleiche Revision, gleiches Alter) nehmen und wie genannt die Belastung auch gleich ist, ist es nicht unwahrscheinlich, dass Sie einen gleichzeitigen Ausfall erleben werden!
+Das ist der Hauptgrund warum Kunden trotz RAID 1 eine Datenrettung benötigen.
+
+Identische Festplatten bei RAID 1 zu verbauen ist keine gute Idee:
+<img class="h-85 object-cover object-center" src="/assets/articles/qnap0.jpg">
+
+In diesem Beispiel haben wir zwei defekte WD60EFRX 6TB Festplatten, die exakt gleichzeitig ausgefallen sind.
+Der gleichzeitige Ausfall macht ein Rebuild über das Gerät nicht mehr möglich.
+
+Zur Analyse:
+In der Servicearea sehen wir Beschädigungen an einzelnen unwichtigeren Modulen bei beiden Festplatten, was aber ein erstes Indiz auf eine beschädigte Oberfläche ist:
+<img class="h-85 object-cover object-center" src="/assets/articles/qnap3.PNG">
+
+Mit dem Zugriff auf der User-Area können wir jeden einzelnen Lesekopf testen. Wir sehen H-8 besitzt keine Lesefähigkeit in seinen Bereichen.
+<img class="h-85 object-cover object-center" src="/assets/articles/qnap2.PNG">
+
+Die Vorgehensweise der Datenrettung ist nun wie folgt:
+1.	Reparatur der Servicearea + Austausch der Schreib-/Leseköpfe
+2.	Auslesen der Festplatte + Reread (erneuter Leseversuch) der problematischen Sektoren
+3.	Rekonstruktion der Synology Ordnerstruktur 
+
+Zu 1.: 
+Festplatten besitzen zwei Kopien pro Modul als Servicearea. Hier können Teile aus der einen Kopie in die beschädigten Teile der anderen Kopie eingesetzt werden. Auch gibt es Module, die nicht festplattenspezifisch sind und durch Module aus einer anderen Festplatte ersetzt werden können.
+Die Schreib-/Leseköpfe wurden in diesem Fall ausgetauscht um wieder zugriff auf die daten von H-8 zu ermöglichen.
+
+Zu 2.: 
+Um das Auslesen der Festplatte zu optimieren können wir bei WD Festplatten zudem unwichtige Module deaktivieren. So erreichen wir trotz Fehler akzeptable Lesegeschwindigkeiten. 
+Wie das funktioniert, sehen Sie hier: https://blog.acelaboratory.com/western-digital-time-limited-error-recovery.html
+
+Zu 3.: 
+Einen einzelnen RAID 1 Speicher von QNAP einfach an Linux anzuschießen, reicht in der Regel nicht um die originale Ordnerstruktur angezeigt zu bekommen.
+So auch in diesem Fall.
+
+Vor der Rekonstruktion der Ordnerstruktur:
+<img class="h-85 object-cover object-center" src="/assets/articles/qnap1.PNG">
+
+Und hier nach der Rekonstruktion:
+<img class="h-85 object-cover object-center" src="/assets/articles/qnap2.jpg">
+
+Nach dem Auslesen und Rekonstruieren des RAIDs ist die Datenrettung abgeschlossen.
+</pre>
+</div>
+</div>
