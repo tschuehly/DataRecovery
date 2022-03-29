@@ -19,10 +19,10 @@ import { Component, OnInit } from '@angular/core';
       <div class="bg-gray-main text-white border-b-2 border-silver pb-8">
         <div class="container py-10">
           <pre class="whitespace-pre-wrap">
-<span class="underline text-2xl font-bold">Konzept und über mich</span>
+<span class="underline text-2xl font-bold">Über mich</span>
 <span class="text-bold text-lg text-silver">Updated am 29.03.2022, 04:48 von Tobias Jungbauer</span>
 
-Mein persöhnliches Ziel ist es das fairste Datenrettungsangebot Deutschlands anzubieten und den Markt damit zu revolutionieren. Daraus ergeben Sie u.a. folgende Punkte:
+Mein persönlicher Anspruch ist es das beste und fairste Datenrettungsangebot Deutschlands anzubieten und den Markt damit zu revolutionieren. Daraus ergeben Sie u.a. folgende Punkte:
 
 <span class="font-semibold ">1. Bei mir müssen Sie niemals in Vorkasse gehen:</span>
 So bearbeite ich alle meine Fälle zu einem im Verhältnis zum Markt preiswerten Festpreis und das zudem nur nach Erfolg. Bei Misserfolg verlange ich keine Gebühren.
