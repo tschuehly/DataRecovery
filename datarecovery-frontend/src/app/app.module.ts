@@ -68,14 +68,14 @@ const cookieConfig: NgcCookieConsentConfig = {
   },
   type: 'opt-in',
   content: {
-    message: 'Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies.',
+    message: 'Um unsere Webseite graphisch optimal zu gestalten und fortlaufend verbessern zu können verwenden wir Cookies.',
     dismiss: 'Got it!',
     deny: 'Cookies verbieten',
     link: 'Datenschutzbestimmungen',
     href: '/datenschutz',
     policy: 'Cookie Policy',
     header: 'Cookies used on the website!',
-    allow: 'Cookies erlauben'
+    allow: 'Cookies erlauben <div class="h-20"> <img src="/assets/favicon/icons8-cookie-100.png"> </div>'
   }
 };
 @NgModule({
