@@ -201,7 +201,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                            style="background-image: url('/assets/favicon/android-icon-192x192.png')">
                       </div>
                       <div class="flex-1">
-                          <a routerLink="/blog/synology-RAID-1" href="/blog/synology-RAID-1" class="py-2">
+                          <a routerLink="/blog/synology-raid-1-datenrettung" href="/blog/synology-raid-1-datenrettung" class="py-2">
                               <h2 class="text-2xl font-bold">Synology RAID 1 Datenrettung</h2>
                           </a>
                           <div class="py-2 italic">Updated am 28.03.2022, 16:51 von Tobias Jungbauer</div>
@@ -209,7 +209,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                               <h3 class="pb-2">
                                   Wie funktioniert die Datenrettung bei RAID 1 und warum wird Sie überhaupt benötigt?
                               </h3>
-                              <a routerLink="/blog/synology-RAID-1" href="/blog/synology-RAID-1"
+                              <a routerLink="/blog/synology-raid-1-datenrettung" href="/blog/synology-raid-1-datenrettung"
                                  class="font-semibold">
                                   Mehr lesen →
                               </a>
@@ -224,7 +224,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                        style="background-image: url('/assets/favicon/android-icon-192x192.png')">
                   </div>
                   <div class="flex-1">
-                      <a routerLink="/blog/QNAP-RAID-1-datenrettung" href="/blog/QNAP-RAID-1-datenrettung" class="py-2">
+                      <a routerLink="/blog/qnap-raid-1-datenrettung" href="/blog/qnap-raid-1-datenrettung" class="py-2">
                           <h2 class="text-2xl font-bold">QNAP RAID 1 Datenrettung</h2>
                       </a>
                       <div class="py-2 italic">Updated am 29.03.2022, 22:04 von Tobias Jungbauer</div>
