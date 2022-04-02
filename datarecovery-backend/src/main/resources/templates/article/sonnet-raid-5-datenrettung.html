@@ -1,9 +1,38 @@
 <div>
-    <div class="bg-white text-center">
-      <h1 class="text-4xl text-black py-5 tracking-wider">Sonnet Fusion RX1600Fibre Rackmount RAID Datenrettung:</h1>
-    </div>
-    <div class="bg-gray-main text-white border-b-2 border-silver py-8">
-      <pre class="container whitespace-pre-wrap">
-  <h2 class="font-bold text-xl underline">Sonnet Fusion RX1600Fibre Rackmount 32x 2TB HDD als RAID 5:</h2><span class="text-bold text-lg text-silver">Updated am 31.03.2022, 22:04 Uhr von Tobias Jungbauer</span>
-  coming soon!
+  <div class="bg-white text-center">
+    <h1 class="text-4xl text-black py-5 tracking-wider">Sonnet Fusion RX1600Fibre Rackmount RAID Datenrettung:</h1>
   </div>
+  <div class="bg-gray-main text-white border-b-2 border-silver py-8">
+    <pre class="container whitespace-pre-wrap">
+<h2 class="font-bold text-xl underline">Sonnet Fusion RX1600Fibre Rackmount 32x 2TB HDD als RAID 5:</h2><span class="text-bold text-lg text-silver">Updated am 02.04.2022, 05:04 Uhr von Tobias Jungbauer</span>
+
+Wir haben hier zwei Sonnet Fusion RX1600, die als Master und Slave Konfiguration ein RAID 5 mit 30 Teilnehmer + 2 Hot-Spares vor dem Ausfall gebildet hatten. Genutzt wurde dieser RAID von einer Firma für Film- und Postproduktion als Datenarchiv.
+
+Der Kunde erhielt von mir die komplette Datenrettung samt neuen Datenträger zum Abspeichern für 2952,99€ brutto.
+Ontrack hatte den RAID vor mir und berechnete laut Kundenaussage über 3000,00€ für die Analyse alleine. 
+Für die Datenrettung selber sollten bei Ontrack weitere 40.000€ fällig werden, was der Kunde selbstredend ablehnte.
+
+<img class="h-85 object-cover object-center" src="/assets/articles/sonnet-0.jpg">
+
+Auch für solche große RAID-Konfigurationen, die Vorgehensweise ist immer die selbe:
+❶ Überprüfen und ggf. Reparatur der einzelnen Teilnehmer
+❷ Auslesen der einzelnen Teilnehmer in ein virtuelles Image
+❸ Virtuelles Zusammensetzen/Rekonstruktion der RAID-Struktur
+
+zu 1 & 2.:
+Währenddessen dieser Arbeitsschritt bei wenigen Teilnehmern schnell über die Bühne geht, kostet es hier bei 32 HDDs einiges an Zeit.
+Erst wenn wir alle Teilnehmer überprüft und ausgelesen haben geht es zum nächsten Schritt.
+<img class="h-85 object-cover object-center" src="/assets/articles/sonnet-1.PNG">
+
+zu 3.:
+a) Die Herausforderung hier war, dass sowohl Teile des Dateisytems, als auch Metadaten, die uns Information zur RAID Konfiguration geben, durch ein fehlerhaften Rebuildversuch überschrieben worden sind:
+<img class="h-85 object-cover object-center" src="/assets/articles/sonnet-2.PNG">
+b) Das einzige was in dieser Situation uns hilft ist händisch einzelne Teilnehmer zu kombinieren und mit einer RAW-Recovery, auch mit "try & error", zu testen. Das machen wir solange für alle Teilnehmer bis "das Puzzle" gelöst ist:
+<img class="h-85 object-cover object-center" src="/assets/articles/sonnet-3.PNG">
+c) Am Ende haben wir dann damit auch wieder das originale Dateisystem und Ordnerstruktur wiederherstellen können:
+<img class="h-85 object-cover object-center" src="/assets/articles/InkedInkedsonnet-4_LI.jpg">
+
+
+Falls noch Fragen offen sind rufen Sie am besten unter 0841 12840705 an oder schreiben eine Email an: info@jungbauerdatenrettung.de
+
+</div>
