@@ -14,7 +14,7 @@ import {Router} from '@angular/router';
       </div>
     </div>
     <div class="bg-white text-center">
-      <h1 class="text-4xl text-black py-5 tracking-wider">Datenrettung Kosten</h1>
+      <h1 class="text-4xl text-black py-5 tracking-wider">Datenrettung Preise</h1>
     </div>
     <div class="bg-gray-main  ">
       <div class="container flex">
