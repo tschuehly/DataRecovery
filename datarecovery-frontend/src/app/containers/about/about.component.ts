@@ -22,10 +22,10 @@ import { Component, OnInit } from '@angular/core';
 <span class="underline text-2xl font-bold">Über mich</span>
 <span class="text-bold text-lg text-silver">Updated am 29.03.2022, 04:48 von Tobias Jungbauer</span>
 
-Mein persönlicher Anspruch ist es das beste und fairste Datenrettungsangebot Deutschlands anzubieten und den Markt damit zu revolutionieren. Daraus ergeben Sie u.a. folgende Punkte:
+Mein persönlicher Anspruch ist es das beste und fairste Datenrettungsangebot anzubieten und den Markt damit zu revolutionieren. Daraus ergeben Sie u.a. folgende Punkte:
 
 <span class="font-semibold ">1. Bei mir müssen Sie niemals in Vorkasse gehen:</span>
-So bearbeite ich alle meine Fälle zu einem im Verhältnis zum Markt preiswerten Festpreis und das zudem nur nach Erfolg. Bei Misserfolg verlange ich keine Gebühren.
+So bearbeite ich alle meine Fälle zu einem im Verhältnis zum Markt preiswerten Festpreis und das zudem nur nach Erfolg, den Sie selver im Voraus definiert haben. Bei Misserfolg verlange ich keine Gebühren.
 
 <span class="font-semibold">2. Meine Transparenz:</span>
 Ich möchte die höchstmögliche Transparenz zur geleisteten Arbeit und den dazugehörigen technischen Hintergrund geben. Fragen Sie gerne nach, wie und mit welchem Werkzeug die Datenrettung durchgeführt worden ist.
