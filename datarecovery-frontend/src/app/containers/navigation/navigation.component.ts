@@ -64,7 +64,7 @@ declare let gtag: Function;
 
       <div class="fixed w-64 bg-white rounded-xl bottom-4 right-20 z-50 p-4 shadow-2xl" *ngIf="showPhone">
         <div class="flex justify-around items-center pb-4">
-          <h2 class="font-semibold pb-2">Noch offene Fragen? Sie können anrufen oder auch Whatsapp nutzen:</h2>
+          <h2> <span class="font-semibold pb-2">Noch offene Fragen? </span>Ein Anruf klärt es am schnellsten:</h2>
           <button (click)="showPhone = false"><img alt="close" class="inline" src="assets/x.svg"></button>
         </div>
 
