@@ -41,6 +41,7 @@ import imageCompression from 'browser-image-compression';
   ]
 })
 export class UpdateComponent  {
+
   @Input() order: Order;
   @Output() updatedOrder: EventEmitter<Order> = new EventEmitter<Order>();
   updateForm = new FormGroup({

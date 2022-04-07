@@ -43,16 +43,16 @@ declare let gtag: Function;
               <a (click)="mobileNavShow = false" routerLink="/datenrettung/flash" href="/datenrettung/flash">USB Stick<br>(micro) SD Karte</a>
               <a (click)="mobileNavShow = false" routerLink="/blog/apple-fusion-drive-datenrettung"  href="/blog/apple-fusion-drive-datenrettung">Apple Fusion Drive</a>
               <a (click)="mobileNavShow = false" routerLink="/datenrettung/raid"  href="/datenrettung/raid">RAID</a>
-              
+
             </div>
           </div>
           <a (click)="mobileNavShow = false" class="cursor-pointer" routerLink="philosophie" href="philosophie">Philosophie</a>
           <a class="cursor-pointer" (click)="mobileNavShow = false" routerLink="blog" href="blog">Blog</a>
           <a (click)="mobileNavShow = false;scrollToContact()" class="cursor-pointer">Kontakt</a>
           <ng-container *ngIf="currentUser">
-            <a (click)="mobileNavShow = false" class="cursor-pointer" routerLink="/order">Bestellungen</a>
-            <a (click)="mobileNavShow = false" class="cursor-pointer" routerLink="/product">Produkte</a>
-            <a (click)="mobileNavShow = false" class="cursor-pointer" routerLink="/category">Kategorien</a>
+            <a (click)="mobileNavShow = false" class="cursor-pointer" routerLink="/admin/order">Bestellungen</a>
+            <a (click)="mobileNavShow = false" class="cursor-pointer" routerLink="/admin/product">Produkte</a>
+            <a (click)="mobileNavShow = false" class="cursor-pointer" routerLink="/admin/category">Kategorien</a>
           </ng-container>
         </div>
       </nav>

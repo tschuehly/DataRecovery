@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Order, orderStateEnum} from '../../model/model';
+import { HttpClient }  from '@angular/common/http';
+import { Order, orderStateEnum} from '../../model/model';
 import { Router } from '@angular/router';
 import { catchError, map, Observable, of, startWith } from 'rxjs';
 import { FormControl } from '@angular/forms';
@@ -202,13 +202,13 @@ export class OrderComponent implements OnInit {
 
   }
 
-  getDaysTillDeadline(deadline: Date): string {
+  getDaysTillDeadline(deadline: Date): number {
     if (deadline == null) {
-      return '';
+      return null
     }
     const milSeconds = Date.parse(deadline.toString()) - this.dateNow.getTime();
     const timeToDeadline = milSeconds / (1000 * 3600 * 24);
-    return Math.floor(timeToDeadline).toString();
+    return Math.floor(timeToDeadline);
   }
 
   getDaysTillCompletion(completionDate: Date): number {

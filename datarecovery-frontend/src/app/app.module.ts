@@ -4,23 +4,13 @@ import {NgModule, ViewChild} from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import {NavigationComponent} from './containers/navigation/navigation.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { NavigationComponent} from './containers/navigation/navigation.component';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { OrderFormComponent } from './containers/order-form/order-form.component';
-import {HttpClientModule} from '@angular/common/http';
-import { TrackingComponent } from './components/tracking/tracking.component';
-import { LoginComponent } from './components/login/login.component';
-import { OrderComponent } from './components/order/order.component';
-import { OrderDetailsComponent } from './containers/order-details/order-details.component';
-import { ProductComponent } from './components/product/product.component';
-import { ProductDetailComponent } from './containers/product-detail/product-detail.component';
-import { UploadFileComponent } from './containers/upload-file/upload-file.component';
-import { UpdateComponent } from './components/update/update.component';
+import { HttpClientModule} from '@angular/common/http';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { StaticComponent } from './containers/static/static.component';
-import {ClickOutsideModule} from 'ng-click-outside';
-import { CategoryComponent } from './components/category/category.component';
-import { CategoryDetailComponent } from './containers/category-detail/category-detail.component';
+import { ClickOutsideModule} from 'ng-click-outside';
 import { ImprintComponent } from './containers/imprint/imprint.component';
 import { PricesComponent } from './containers/prices/prices.component';
 import { AgbComponent } from './containers/agb/agb.component';
@@ -31,11 +21,13 @@ import {NgcCookieConsentConfig, NgcCookieConsentModule} from 'ngx-cookieconsent'
 import { ReviewComponentComponent } from './components/review-component/review-component.component';
 import {First40WordsPipe} from './pipes/first-twenty-words.pipe';
 import {SwiperModule} from 'swiper/angular';
-import {GoogleAnalyticsService} from './services/google-analytics.service';
+import { GoogleAnalyticsService} from './services/google-analytics.service';
 import { PrivacyComponent } from './containers/privacy/privacy.component';
 import { SlideShowComponent } from './components/header/slide-show.component';
 import { SiteNotFoundComponent } from './containers/site-not-found/site-not-found.component';
 import {BlogComponent} from './containers/blog/blog.component';
+
+
 registerLocaleData(localeDe);
 const cookieConfig: NgcCookieConsentConfig = {
   cookie: {
@@ -84,17 +76,7 @@ const cookieConfig: NgcCookieConsentConfig = {
         HomeComponent,
         NavigationComponent,
         OrderFormComponent,
-        TrackingComponent,
-        LoginComponent,
-        OrderComponent,
-        OrderDetailsComponent,
-        ProductComponent,
-        ProductDetailComponent,
-        UploadFileComponent,
-        UpdateComponent,
         StaticComponent,
-        CategoryComponent,
-        CategoryDetailComponent,
         ImprintComponent,
         PricesComponent,
         AgbComponent,

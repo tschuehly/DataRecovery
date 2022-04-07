@@ -65,7 +65,7 @@ import {Router} from "@angular/router";
           </tbody>
         </table>
         <div class="text-right mt-4">
-          <button class="border-2 rounded-xl p-2 text-black" (click)="editProduct = {}">Neues Produkt</button>
+          <button class="border-2 rounded-xl p-2 text-black" (click)="editProduct = emptyProduct()">Neues Produkt</button>
         </div>
       </div>
       <div *ngIf="editProduct" class="m-auto border shadow-xl px-14 py-10">
@@ -101,6 +101,10 @@ export class ProductComponent implements OnInit {
         )
         .sort((p1) => p1.category?.replacement ? 1 : -1);
     });
+  }
+
+  emptyProduct(): Product{
+    return {} as Product
   }
 
   saveProduct(productToSave: Product): void {
