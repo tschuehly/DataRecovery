@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient }  from '@angular/common/http';
-import { Order, orderStateEnum} from '../../model/model';
+import { HttpClient } from '@angular/common/http';
+import { Order, orderStateEnum } from '../../model/model';
 import { Router } from '@angular/router';
 import { catchError, map, Observable, of, startWith } from 'rxjs';
 import { FormControl } from '@angular/forms';
@@ -100,7 +100,7 @@ export class OrderComponent implements OnInit {
   searchFilter: FormControl;
   searchFilter$: Observable<string>;
   oState = orderStateEnum;
-  trackingStateCount: Map<string,number> = new Map;
+  trackingStateCount: Map<string, number> = new Map;
   constructor(private http: HttpClient, private router: Router) {
     this.dateNow = new Date();
   }
@@ -112,36 +112,36 @@ export class OrderComponent implements OnInit {
 
     this.http.get("api/order/info").subscribe((data: Array<Array<any>>) => {
       data.map(info => {
-        this.trackingStateCount.set(info[1],info[0])
+        this.trackingStateCount.set(info[1], info[0])
       })
     })
 
   }
-  getArchiveCount(){
-    try{
+  getArchiveCount() {
+    try {
       return this.trackingStateCount.get(this.oState.parcelReceived)
         + this.trackingStateCount.get(this.oState.success)
         + this.trackingStateCount.get(this.oState.failure)
         + this.trackingStateCount.get(this.oState.legacyComplete)
-    }catch (e){
+    } catch (e) {
       return 0
     }
   }
 
-  getCountByTrackingState(state: string): number{
-    try{
+  getCountByTrackingState(state: string): number {
+    try {
       return this.trackingStateCount.get(state)
-    }catch (e){
+    } catch (e) {
       return 0
     }
   }
 
   getOrders(stateList: string[]): void {
     let stateString = "?state=" + stateList.join("&state=")
-    this.filteredOrders$ = (this.http.get('api/order/state'+stateString) as Observable<Order[]>).pipe(
+    this.filteredOrders$ = (this.http.get('api/order/state' + stateString) as Observable<Order[]>).pipe(
       catchError((error) => {
         console.error('error loading the orders', error);
-        this.router.navigate(['/login']);
+        this.router.navigate(['/admin/login']);
         return of();
       })
     );

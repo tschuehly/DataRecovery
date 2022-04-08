@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Category, Product} from '../../model/model';
-import {HttpClient, HttpErrorResponse} from '@angular/common/http';
-import {Router} from "@angular/router";
+import { Category, Product } from '../../model/model';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-product',
@@ -84,34 +84,34 @@ export class ProductComponent implements OnInit {
   categories: Category[];
   editProduct: Product;
   showDelConfirm: boolean = false;
-  constructor(private http: HttpClient,private router: Router) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
     this.http.get('api/category').subscribe((categories: Category[]) => {
       this.categories = categories;
-    },(error:HttpErrorResponse) => {
-      if(error.status === 401){
-        this.router.navigate(['/login'])
+    }, (error: HttpErrorResponse) => {
+      if (error.status === 401) {
+        this.router.navigate(['/admin/login'])
 
       }
     });
     this.http.get('api/product').subscribe((products: Product[]) => {
       this.products = products.sort(
-        (p1,p2) => p1.category?.name?.localeCompare(p2?.category?.name)
-        )
+        (p1, p2) => p1.category?.name?.localeCompare(p2?.category?.name)
+      )
         .sort((p1) => p1.category?.replacement ? 1 : -1);
     });
   }
 
-  emptyProduct(): Product{
+  emptyProduct(): Product {
     return {} as Product
   }
 
   saveProduct(productToSave: Product): void {
     this.http.post('api/product', productToSave).subscribe((product: Product) => {
-      if (this.products.find(c => c.id === product.id)){
-        this.products = this.products.map( c => c.id === product.id ? product : c);
-      }else {
+      if (this.products.find(c => c.id === product.id)) {
+        this.products = this.products.map(c => c.id === product.id ? product : c);
+      } else {
         this.products.push(product);
       }
     });
@@ -119,7 +119,7 @@ export class ProductComponent implements OnInit {
   }
 
   deleteProduct(product: Product) {
-    this.http.delete('api/product/' +product.id).subscribe( _=>{
+    this.http.delete('api/product/' + product.id).subscribe(_ => {
       this.products = this.products.filter(p => p.id !== product.id)
     })
   }

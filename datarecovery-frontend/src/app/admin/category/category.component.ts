@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Category, Product} from '../../model/model';
-import {HttpClient, HttpErrorResponse} from '@angular/common/http';
-import {Router} from "@angular/router";
+import { Category, Product } from '../../model/model';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-category',
@@ -84,32 +84,32 @@ export class CategoryComponent implements OnInit {
   ngOnInit(): void {
     this.http.get('api/category').subscribe((categories: Category[]) => {
       this.categories = categories;
-    },(error:HttpErrorResponse) => {
-      if(error.status === 401){
-        this.router.navigate(['/login'])
+    }, (error: HttpErrorResponse) => {
+      if (error.status === 401) {
+        this.router.navigate(['/admin/login'])
 
       }
     });
   }
 
   saveCategory(categoryToSave: Category): void {
-    if (categoryToSave.id === null){
+    if (categoryToSave.id === null) {
       this.http.post('api/category', categoryToSave).subscribe((category: Category) => {
-        if (this.categories.find(c => c.id === category.id)){
-          this.categories = this.categories.map( c => c.id === category.id ? category : c);
-        }else {
+        if (this.categories.find(c => c.id === category.id)) {
+          this.categories = this.categories.map(c => c.id === category.id ? category : c);
+        } else {
           this.categories.push(category);
         }
       });
-    }else {
+    } else {
       this.http.put('api/category', categoryToSave).subscribe((category: Category) => {
-        this.categories = this.categories.map( c => c.id === category.id ? category : c);
+        this.categories = this.categories.map(c => c.id === category.id ? category : c);
       });
     }
     this.editCategory = null;
   }
 
-  newCategory(): Category{
+  newCategory(): Category {
     const cat = {} as Category;
     cat.questions = [];
     return this.editCategory = cat;

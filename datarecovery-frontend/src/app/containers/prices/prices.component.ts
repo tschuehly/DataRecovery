@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Category, Product} from "../../model/model";
-import {HttpClient} from "@angular/common/http";
-import {Router} from '@angular/router';
+import { Category, Product } from "../../model/model";
+import { HttpClient } from "@angular/common/http";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-prices',
@@ -17,8 +17,8 @@ import {Router} from '@angular/router';
       <h1 class="text-4xl text-black py-5 tracking-wider">Datenrettung Preise</h1>
     </div>
     <div class="bg-gray-main  ">
-      <div class="container flex">
-        <div class="text-white py-8 mx-auto justify-center">
+      <div class="container flex ">
+        <div class="text-white py-4 mx-auto justify-center">
           <span class="text-white">❶</span> Es handelt sich um
           <span class="text-white">Festpreise</span>, die <span class=" text-white">nur nach Erfolg</span> gelten.<br>
           <span class="text-white">❷ Der Erfolg wird anhand von Ihnen gestellten Zielen definiert (z.B. "User-Ordner").<br>
@@ -31,7 +31,7 @@ import {Router} from '@angular/router';
     </div>
     <div class="grid grid-cols-1 xl:grid-cols-2  border-b-2 border-t-2">
       <div class="text-white">
-          <div class="bg-gray-main p-12" style="box-shadow: 0 2px 25px 0 black">
+          <div class="bg-gray-main px-4 py-12" style="box-shadow: 0 2px 25px 0 black">
           <span class="font-bold text-2xl underline text-white">Festpreise nach Erfolg:</span>
             <ng-container *ngFor="let category of categories " >
 
@@ -68,18 +68,18 @@ export class PricesComponent implements OnInit {
   flashProduct: Product[];
   categories: Category[];
 
-  constructor(private http: HttpClient,private router: Router) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
 
-    this.http.get('api/product').subscribe( data => {
+    this.http.get('api/product').subscribe(data => {
       this.products = data as Product[];
       this.products = this.products.filter(p => p.category.replacement !== true);
-      this.products.sort((p1,p2) => p1.sequenceId - p2.sequenceId)
+      this.products.sort((p1, p2) => p1.sequenceId - p2.sequenceId)
       this.categories = this.products.map(p => p.category);
       const categoryIds = this.categories.map(c => c.id);
-      this.categories = this.categories.filter(({id}, index) => !categoryIds.includes(id, index + 1));
-      this.categories.sort((c1,c2) => c1.sequenceId - c2.sequenceId)
+      this.categories = this.categories.filter(({ id }, index) => !categoryIds.includes(id, index + 1));
+      this.categories.sort((c1, c2) => c1.sequenceId - c2.sequenceId)
       console.log(this.categories)
     })
   }

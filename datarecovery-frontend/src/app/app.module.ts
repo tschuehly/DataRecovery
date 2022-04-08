@@ -23,9 +23,10 @@ import {First40WordsPipe} from './pipes/first-twenty-words.pipe';
 import {SwiperModule} from 'swiper/angular';
 import { GoogleAnalyticsService} from './services/google-analytics.service';
 import { PrivacyComponent } from './containers/privacy/privacy.component';
-import { SlideShowComponent } from './components/header/slide-show.component';
+import { SlideShowComponent } from './components/slide-show/slide-show.component';
 import { SiteNotFoundComponent } from './containers/site-not-found/site-not-found.component';
 import {BlogComponent} from './containers/blog/blog.component';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 
 registerLocaleData(localeDe);
@@ -97,7 +98,8 @@ const cookieConfig: NgcCookieConsentConfig = {
     NgxPageScrollCoreModule.forRoot({duration: 700, scrollOffset: 80}),
     ClickOutsideModule,
     NgcCookieConsentModule.forRoot(cookieConfig),
-    SwiperModule
+    SwiperModule,
+    ScullyLibModule
   ],
   providers: [
     GoogleAnalyticsService

@@ -85,13 +85,15 @@ declare let gtag: Function;
           </button>
         </div>
       </div>
-      <div class="fixed right-20 bottom-4 shadow-2xl rounded-xl z-20" [ngClass]="wawidgetHidden ? 'hidden':''">
+      <div class="fixed right-24 bottom-4 shadow-2xl rounded-xl z-20" *ngIf="!wawidgetHidden" >
         <div class="flex align-middle text-white p-4 rounded-t-xl " style="background-color: rgb(9, 94, 84)">
           <span class="px-2">Jetzt Tobias Jungbauer kontaktieren</span>
           <button (click)="wawidgetHidden = true">
             <img src="/assets/x-square.svg" alt="Close Whatsapp Widget Button"></button>
         </div>
-        <div class="h-20" style="background-image: url('/assets/wa_bg.png') ;background-color: #E5DDD5"></div>
+        <div class="h-20" style="background-color: #E5DDD5">
+            <img src="/assets/wa_bg.png" class="overflow-hidden h-20 object-none w-full" loading="lazy">
+        </div>
         <div class="bg-white flex justify-center p-2 rounded-b-xl">
           <a href="https://wa.me/+4915161408355">
             <button class="flex align-middle p-2 pr-4 rounded text-white" style="background-color: #14C656">
@@ -137,11 +139,11 @@ declare let gtag: Function;
           <div class=" border-b py-4 divide-x-2 divide-silver text-gray-50">
             <a routerLink="impressum" class="pr-4">Impressum</a><a routerLink="datenschutz" class="px-4">Datenschutz</a><a class="pl-4" routerLink="agb">AGB</a>
           </div>
-          <div class="col-span-2 pt-4 divide-x-2 divide-silver">
-            <span class="pr-4">Website developed by <a class="font-bold" href="https://www.linkedin.com/in/tschuehly/">Thomas Schühly</a> and Tobias Jungbauer</span>
+          <div class="col-span-2 py-16 divide-x-2 divide-silver">
+            <span class="pr-4">Website developed by <a class="font-bold" href="https://www.linkedin.com/in/tschuehly/">Thomas Schühly</a></span>
           </div>
           <div>
-            <a class="" routerLink="/login" *ngIf="currentUser" (click)="logout.emit()">Logout</a>
+            <a class="" routerLink="/admin/login" *ngIf="currentUser" (click)="logout.emit()">Logout</a>
           </div>
         </div>
       </footer>

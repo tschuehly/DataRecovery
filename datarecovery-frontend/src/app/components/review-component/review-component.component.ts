@@ -1,8 +1,8 @@
-import {Component, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {ReviewDTO} from "../../dto/dto";
-import SwiperCore, {A11y, EffectCube, EffectFlip, Navigation, Pagination, SwiperOptions, Virtual} from 'swiper';
-import {ReviewDetailDTO} from '../../model/model';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+import { ReviewDTO } from "../../dto/dto";
+import SwiperCore, { A11y, EffectCube, EffectFlip, Navigation, Pagination, SwiperOptions, Virtual } from 'swiper';
+import { ReviewDetailDTO } from '../../model/model';
 
 SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
 
@@ -12,7 +12,7 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
     <div class="text-white button">
       <div class="flex justify-center  pt-8 text-center text-black">
         <div>
-          <h3 class="text-4xl font-semibold mb-4 ">Bewertungen aus Google</h3>
+          <h3 class="text-2xl md:text-4xl font-semibold mb-4 ">Bewertungen aus Google</h3>
 
           <div class="flex justify-center pt-4 items-center">
             <svg class=" text-yellow-400 mx-1 w-8 h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -46,7 +46,7 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
         <swiper class="my-4"
                 [config]="config">
           <ng-template swiperSlide *ngFor="let currentReview of reviews">
-            <div class="rounded-xl bg-gray-main p-6 md:w-4/5 mx-6 md:mx-auto mb-12" style="box-shadow: 0 2px 25px 0 black">
+            <div class="rounded-xl bg-gray-main p-6 md:w-4/5 mx-6 md:mx-auto mb-12">
               <div class="flex items-start justify-center">
                 <div class="hidden md:flex bg-contain bg-center bg-no-repeat w-36 h-44 mr-4"
                      [ngStyle]="{'background-image': 'url('+this.currentReview.profile_photo_url+')'}">
@@ -116,8 +116,8 @@ export class ReviewComponentComponent implements OnInit {
     slidesPerView: 1,
     spaceBetween: 50,
     virtual: true,
-    pagination : { dynamicBullets: true, dynamicMainBullets: 1},
-    navigation : {}
+    pagination: { dynamicBullets: true, dynamicMainBullets: 1 },
+    navigation: {}
   };
   showReview = false;
   reviews: ReviewDTO[];
@@ -127,9 +127,9 @@ export class ReviewComponentComponent implements OnInit {
 
   ngOnInit(): void {
     this.http.get('/api/review').subscribe((reviews: ReviewDTO[]) => {
-      this.reviews = reviews.sort((r1,r2) => r2.time-r1.time)
+      this.reviews = reviews.sort((r1, r2) => r2.time - r1.time)
     })
-    this.http.get('/api/review/detail').subscribe( (detail: ReviewDetailDTO) => {
+    this.http.get('/api/review/detail').subscribe((detail: ReviewDetailDTO) => {
       this.reviewDetail = detail;
     }
     )

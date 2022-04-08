@@ -6,14 +6,14 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube, A
 @Component({
   selector: 'app-slide-show',
   template: `
-    <div class="bg-gray-main bg-circuit-board py-10 flex flex-row  justify-between">
-        <button>
-          <img src="/assets/arrow-left.svg" (click)="previousPicture()">
+    <div class="bg-gray-main bg-circuit-board py-6 md:p-10 flex flex-row justify-between max-h-[40rem]">
+        <button class="w-10 shrink-0" (click)="previousPicture()">
+          <img src="/assets/arrow-left.svg" >
         </button>
-      <div class="flex object-contain justify-center aspect-[10/8]  max-h-[30vh]">
-        <img [src]='"/assets/header_main/header_("+ currentImageIndex +").webp"' loading=lazy>
+      <div class="flex object-cover justify-center grow max-w-[80%]">
+        <img [src]='"/assets/header_main/header_("+ currentImageIndex +").webp"'>
       </div>
-        <button (click)="nextPicture()">
+        <button class="w-10 shrink-0" (click)="nextPicture()">
           <img src="/assets/arrow-right.svg" >
         </button>
     </div>
@@ -30,23 +30,23 @@ export class SlideShowComponent {
   constructor() {
   }
 
-  nextPicture() : void {
-    if(this.currentImageIndex == 8){
+  nextPicture(): void {
+    if (this.currentImageIndex == 8) {
       this.currentImageIndex = 1
-    }else{
+    } else {
       this.currentImageIndex = this.currentImageIndex + 1
     }
   }
 
-  previousPicture():void{
-    if(this.currentImageIndex == 1){
+  previousPicture(): void {
+    if (this.currentImageIndex == 1) {
       this.currentImageIndex = 8
-    }else{
+    } else {
       this.currentImageIndex = this.currentImageIndex - 1
     }
 
   }
 
-  
+
 
 }
