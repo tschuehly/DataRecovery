@@ -13,8 +13,7 @@ COPY package.json package-lock.json ./
 RUN npm install
 COPY . ./
 RUN npm run build:prod
-RUN npm run scully -- --scanRoutes --showGuessError
-run ls -alh ./dist/datarecovery-frontend
+RUN npm run build:scully
 
 FROM nginx:1.19.8-alpine AS prod
 COPY nginx.conf /etc/nginx/conf.d/default.conf

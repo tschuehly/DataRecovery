@@ -5,13 +5,9 @@
     "ng": "ng",
     "start": "cross-env NG_PERSISTENT_BUILD_CACHE=1 ng serve --hmr --proxy-config src/proxy.conf.json --disable-host-check ",
     "scully": "npx scully --watch serve --proxy-config src/proxy.conf.json",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "build:app": "ng build --prod --build-optimizer",
     "build:prod": "cross-env NODE_ENV=production ng build --configuration production --aot --build-optimizer",
-    "source-map-explorer": "source-map-explorer dist/datarecovery-frontend/*.js"
+    "build:scully": "npx scully --scanRoutes",
+    "source-map-explorer": "npm run build:prod && source-map-explorer dist/datarecovery-frontend/**/*.js"
   },
   "private": true,
   "dependencies": {
