@@ -49,11 +49,11 @@ import { Order, Product } from '../../model/model';
           <label class="py-4 px-12">Zielsetzung (z.B. Ordner X-Y am wichtigsten) & zusätzliche Anmerkungen:
             <textarea class="mt-1 w-full text-black" formControlName="note"></textarea>
           </label>
-          <h2 class="font-semibold inline text-center"><a class="font-semibold text-sm md:text-xl underline" routerLink="agb">Allgemeine
-            Geschäftsbedingungen</a> und <a class="font-semibold underline" routerLink="datenschutz">Datenschutzrichtlinien</a>
+          <h2 class="font-semibold text-sm md:text-xl inline text-center"><a class="font-semibold text-sm md:text-xl underline" routerLink="agb">Allgemeine
+            Geschäftsbedingungen</a> und <a class="font-semibold text-sm md:text-xl underline" routerLink="datenschutz">Datenschutzrichtlinien</a>
           </h2>
 
-          <div class="flex justify-center mt-4 bg-silver p-4 rounded-b-2xl">
+          <div class="flex justify-center mt-4 bg-silver text-sm md:text-xl p-4 rounded-b-2xl">
             <button (click)="submitProduct()"
                     class="bg-white py-2 px-4 shadow rounded text-black"
                     [disabled]="!(this.orderForm.get('product').valid )"
@@ -86,7 +86,7 @@ import { Order, Product } from '../../model/model';
             <label>Optional: Telefonnummer
               <input type="text" class="mt-1 w-full text-black" formControlName="tel"></label>
           </div>
-          <div class="flex justify-center mt-4 bg-silver p-4 rounded-b-2xl">
+          <div class="flex justify-center mt-4 bg-silver text-sm md:text-xl p-4 rounded-b-2xl">
             <button type="submit"
                     class="bg-white py-2 px-4 shadow rounded text-black "
                     [ngClass]="{'bg-gray-300 cursor-default': !orderForm.valid}"
