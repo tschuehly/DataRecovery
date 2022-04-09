@@ -32,7 +32,7 @@ import { Router } from '@angular/router';
     <div class="grid grid-cols-1 xl:grid-cols-2  border-b-2 border-t-2">
       <div class="text-white">
           <div class="bg-gray-main px-4 py-12" style="box-shadow: 0 2px 25px 0 black">
-          <span class="font-bold text-2xl underline text-white">Festpreise nach Erfolg:</span>
+          <span class="font-bold text-xl md:text-2xl underline text-white">Festpreise nach Erfolg:</span>
             <ng-container *ngFor="let category of categories " >
 
             <div class="mb-2">
