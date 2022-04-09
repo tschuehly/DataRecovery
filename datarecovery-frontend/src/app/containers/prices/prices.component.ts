@@ -8,13 +8,13 @@ import { Router } from '@angular/router';
   template: `
     <div class="bg-center bg-gray-main bg-cover bg-no-repeat " style="background-image: url('/assets/prices_header.jpg')">
       <div class="flex md:ml-80 justify-center md:justify-start " >
-        <h1 class="text-4xl leading-relaxed text-center text-silver text-shadow bg-gray-main p-16">
+        <h1 class="text-2xl md:text-4xl leading-relaxed text-center text-silver text-shadow bg-gray-main p-16">
           Tobias<br>Jungbauer<br>Datenrettung
         </h1>
       </div>
     </div>
     <div class="bg-white text-center">
-      <h1 class="text-4xl text-black py-5 tracking-wider">Datenrettung Preise</h1>
+      <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">Datenrettung Preise</h1>
     </div>
     <div class="bg-gray-main  ">
       <div class="container flex ">
@@ -47,7 +47,7 @@ import { Router } from '@angular/router';
               
             </ng-container>
             <div class="flex justify-end pt-8">
-          <button class="text-xl bg-white py-3 px-4 shadow rounded text-black" (click)="scrollToOrder();">
+          <button class="text-lg md:text-xl bg-white py-3 px-4 shadow rounded text-black" (click)="scrollToOrder();">
               weiter zum Ablauf & Auftrag
             </button> 
             </div>

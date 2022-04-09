@@ -114,7 +114,7 @@ declare let gtag: Function;
         <div class="mb-4 text-center">
           <div class=" flex flex-col md:flex-row justify-evenly pb-4"  id="contact">
             <div>
-              <h1 class="pt-4 md:mt-0 mb-2 text-4xl text-center text-gray-50">Kontakt</h1>
+              <h1 class="pt-4 md:mt-0 mb-2 text-2xl md:text-4xl text-center text-gray-50">Kontakt</h1>
               <p class="font-semibold text-center text-white">
                 Email:
                <a href="mailto:info@jungbauerdatenrettung.de"><span class="text-white">info@jungbauerdatenrettung.de</span></a><br/>
@@ -126,7 +126,7 @@ declare let gtag: Function;
             </div>
 
             <div>
-              <h1 class="pt-4 md:mt-0 mb-2 text-4xl text-center text-white">Adresse</h1>
+              <h1 class="pt-4 md:mt-0 mb-2 text-2xl md:text-4xl text-center text-white">Adresse</h1>
               <p class="font-semibold text-white text-center">
                 Tobias Jungbauer<br/>
                 Datenrettung<br/>

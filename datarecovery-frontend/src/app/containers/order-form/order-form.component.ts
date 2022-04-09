@@ -49,7 +49,7 @@ import { Order, Product } from '../../model/model';
           <label class="py-4 px-12">Zielsetzung (z.B. Ordner X-Y am wichtigsten) & zusätzliche Anmerkungen:
             <textarea class="mt-1 w-full text-black" formControlName="note"></textarea>
           </label>
-          <h2 class="font-semibold inline text-center"><a class="font-semibold underline" routerLink="agb">Allgemeine
+          <h2 class="font-semibold inline text-center"><a class="font-semibold text-lg md:text-xl underline" routerLink="agb">Allgemeine
             Geschäftsbedingungen</a> und <a class="font-semibold underline" routerLink="datenschutz">Datenschutzrichtlinien</a>
           </h2>
 

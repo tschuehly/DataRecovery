@@ -37,7 +37,7 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
             </svg>
 
           </div>
-          <span class="flex justify-center text-2xl ml-4">
+          <span class="flex justify-center text-xl md:text-2xl ml-4">
           Ø {{this.reviewDetail?.rating | number: '1.1' }} bei {{this.reviewDetail?.userRatingsCount}} Bewertungen
        </span>
         </div>
@@ -81,7 +81,7 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
                       {{showReview ? currentReview.text : (currentReview.text | First40Words) }}
                     </p>
                   </div>
-                  <div class="flex justify-between space-x-2">
+                  <div class="flex justify-between text-lg md:text-xl space-x-2">
                     <button class="border border-gray-300 p-2 rounded">
                       <a class="md:hidden"
                       href="https://search.google.com/local/reviews?placeid=ChIJU5PnJJcznEcRy2VAwpDd1Dc&q=Tobias+Jungbauer+Datenrettung+-+AmmerseeDatenrettung.de&hl=de&gl=DE">
