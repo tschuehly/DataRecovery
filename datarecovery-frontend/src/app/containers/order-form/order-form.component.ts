@@ -5,7 +5,7 @@ import { Order, Product } from '../../model/model';
 @Component({
   selector: 'app-order-form',
   template: `
-    <div class="w-full text-center  text-2xl md:text-4xl p-8">
+    <div class="w-full text-center text-3xl md:text-4xl p-8">
       <h1>Auftragsformular</h1>
     </div>
     <form [formGroup]="this.orderForm" (ngSubmit)="onSubmit()">
@@ -53,7 +53,7 @@ import { Order, Product } from '../../model/model';
             Geschäftsbedingungen</a> und <a class="font-semibold text-sm md:text-xl underline" routerLink="datenschutz">Datenschutzrichtlinien</a>
           </h2>
 
-          <div class="flex justify-center mt-4 bg-silver text-sm md:text-xl p-4 rounded-b-2xl">
+          <div class="flex justify-center mt-4 bg-silver text-lg md:text-xl p-4 rounded-b-2xl">
             <button (click)="submitProduct()"
                     class="bg-white py-2 px-4 shadow rounded text-black"
                     [disabled]="!(this.orderForm.get('product').valid )"
