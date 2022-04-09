@@ -20,13 +20,3 @@
 html, body { height: 100%; }
 body,pre { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-@import 'swiper/css/bundle';
-
-.swiper-button-next,.swiper-button-prev{
-  color: #c5c5c5;
-}
-@media (min-width: 768px) {
-  .swiper-button-next,.swiper-button-prev{
-    display: flex;
-  }
-}
