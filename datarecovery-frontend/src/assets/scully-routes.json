@@ -1,1 +1,15 @@
-[{"route":"/"},{"route":"/tracking"},{"route":"/impressum"},{"route":"/datenschutz"},{"route":"/agb"},{"route":"/philosophie"},{"route":"/preise"},{"route":"/blog"},{"route":"/404"},{"route":"/admin/order"},{"route":"/admin/login"},{"route":"/admin/product"},{"route":"/admin/category"}]
+[
+  { "route": "/" },
+  { "route": "/tracking" },
+  { "route": "/impressum" },
+  { "route": "/datenschutz" },
+  { "route": "/agb" },
+  { "route": "/philosophie" },
+  { "route": "/preise" },
+  { "route": "/blog" },
+  { "route": "/404" },
+  { "route": "/admin/order" },
+  { "route": "/admin/login" },
+  { "route": "/admin/product" },
+  { "route": "/admin/category" }
+]

@@ -1,6 +1,6 @@
 import { ScullyConfig } from '@scullyio/scully';
 import '@scullyio/scully-plugin-puppeteer';
-import { myPlugin } from './scully/plugins'
+import { myPlugin } from './scully/plugins';
 export const config: ScullyConfig = {
   projectRoot: './src',
   projectName: 'datarecovery-frontend',

@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
 
-declare let gtag:Function;
+declare let gtag: Function;
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GoogleAnalyticsService {
-
-  constructor() { }
+  constructor() {}
 
   public eventEmitter(
     eventName: string,
@@ -15,14 +14,13 @@ export class GoogleAnalyticsService {
     eventAction: string,
     eventLabel: string = null,
     eventValue: number = null
-  ){
-    console.log("Event emit")
-    gtag('config', 'G-VPEC2J7SDM', { 'anonymize_ip': true });
+  ) {
+    console.log('Event emit');
+    gtag('config', 'G-VPEC2J7SDM', { anonymize_ip: true });
     gtag('event', eventName, {
       eventCategory: eventCategory,
       eventLabel: eventLabel,
-      eventValue: eventValue
+      eventValue: eventValue,
     });
-
   }
 }

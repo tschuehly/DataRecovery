@@ -1,4 +1,4 @@
-import {Order} from '../model/model';
+import { Order } from '../model/model';
 
 export class ReviewDTO {
   author_name: string;
@@ -10,10 +10,10 @@ export class ReviewDTO {
   time: number;
 }
 
-export class OrderTrackingStateInfoDTO{
+export class OrderTrackingStateInfoDTO {
   trackingState: string;
   count: number;
-  constructor(trackingState,count) {
+  constructor(trackingState, count) {
     this.trackingState = trackingState;
     this.count = count;
   }

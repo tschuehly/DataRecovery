@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OrderComponent } from './order/order.component';
 import { RouterModule, Routes } from '@angular/router';
-import { OrderDetailsComponent } from './order-details/order-details.component'
+import { OrderDetailsComponent } from './order-details/order-details.component';
 import { UpdateComponent } from './update/update.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -11,14 +11,13 @@ import { LoginComponent } from './login/login.component';
 import { CategoryComponent } from './category/category.component';
 import { ProductComponent } from './product/product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
-import { CategoryDetailComponent } from './category-detail/category-detail.component'
-
+import { CategoryDetailComponent } from './category-detail/category-detail.component';
 
 const routes: Routes = [
-  {path: 'order', component: OrderComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'product', component: ProductComponent},
-  {path: 'category', component: CategoryComponent},
+  { path: 'order', component: OrderComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'product', component: ProductComponent },
+  { path: 'category', component: CategoryComponent },
 ];
 
 @NgModule({
@@ -39,7 +38,6 @@ const routes: Routes = [
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-
-  ]
+  ],
 })
-export class AdminModule { }
+export class AdminModule {}

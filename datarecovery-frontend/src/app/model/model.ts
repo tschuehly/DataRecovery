@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/naming-convention, no-underscore-dangle, id-blacklist, id-match */
-export class Customer{
+export class Customer {
   id: number;
   firstName: string;
   lastName: string;
@@ -9,7 +9,7 @@ export class Customer{
   city: string;
   street: string;
 }
-export class Order{
+export class Order {
   id: number;
   trackingId: string;
   orderDate: Date;
@@ -41,32 +41,33 @@ export enum orderStateEnum {
   parcelReturned = 'Rückversand',
   success = 'Datenrettung erfolgreich abgeschlossen',
   failure = 'Datenrettung nicht erfolgreich abgeschlossen',
-  legacyComplete = 'Auftrag abgeschlossen'
+  legacyComplete = 'Auftrag abgeschlossen',
 }
-export class Update{
+export class Update {
   id: number;
   title: string;
   description: string;
   date: Date;
   pictures: Picture[];
 }
-export class Picture{
+export class Picture {
   name: string;
   type: string;
   id: number;
   imageId: string;
 }
-export class Product{
-  constructor(public id: number = 0,
-              public category: Category ,
-              public name: string = '',
-              public price: number  = 0,
-              public createDate: string = new Date().toISOString().substring(0, 19),
-              public sequenceId: number
+export class Product {
+  constructor(
+    public id: number = 0,
+    public category: Category,
+    public name: string = '',
+    public price: number = 0,
+    public createDate: string = new Date().toISOString().substring(0, 19),
+    public sequenceId: number
   ) {}
 }
 
-export class Category{
+export class Category {
   id: string;
   name: string;
   title: string;
@@ -87,7 +88,7 @@ export class User {
   email: string;
 }
 
-export class ReviewDetailDTO{
+export class ReviewDetailDTO {
   rating: number;
   userRatingsCount: Number;
 }
