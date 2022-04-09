@@ -115,7 +115,7 @@ declare let gtag: Function;
           <div class=" flex flex-col md:flex-row justify-evenly pb-4"  id="contact">
             <div>
               <h1 class="pt-4 md:mt-0 mb-2 text-2xl md:text-4xl text-center text-gray-50">Kontakt</h1>
-              <p class="font-semibold text-center text-white">
+              <p class="font-semibold text-center text-xl md:text-2xl text-white">
                 Email:
                <a href="mailto:info@jungbauerdatenrettung.de"><span class="text-white">info@jungbauerdatenrettung.de</span></a><br/>
 
@@ -127,7 +127,7 @@ declare let gtag: Function;
 
             <div>
               <h1 class="pt-4 md:mt-0 mb-2 text-2xl md:text-4xl text-center text-white">Adresse</h1>
-              <p class="font-semibold text-white text-center">
+              <p class="font-semibold text-xl md:text-2xl  text-white text-center">
                 Tobias Jungbauer<br/>
                 Datenrettung<br/>
                 Am Stein 9<br/>
@@ -136,10 +136,10 @@ declare let gtag: Function;
             </div>
           </div>
 
-          <div class=" border-b py-4 divide-x-2 divide-silver text-gray-50">
+          <div class=" border-b py-4 divide-x-2 text-lg md:text-xl divide-silver text-gray-50">
             <a routerLink="impressum" class="pr-4">Impressum</a><a routerLink="datenschutz" class="px-4">Datenschutz</a><a class="pl-4" routerLink="agb">AGB</a>
           </div>
-          <div class="col-span-2 py-16 divide-x-2 divide-silver">
+          <div class="col-span-2 text-lg md:text-xl py-16 divide-x-2 divide-silver">
             <span class="pr-4">Website developed by <a class="font-bold" href="https://www.linkedin.com/in/tschuehly/">Thomas Schühly</a></span>
           </div>
           <div>

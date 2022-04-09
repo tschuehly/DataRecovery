@@ -12,7 +12,7 @@ SwiperCore.use([Virtual, Navigation, A11y, Pagination, EffectFlip, EffectCube]);
     <div class="text-white button">
       <div class="flex justify-center  pt-8 text-center text-black">
         <div>
-          <h3 class="text-2xl md:text-4xl font-semibold mb-4 ">Bewertungen aus Google</h3>
+          <h3 class="text-3xl md:text-4xl font-semibold mb-4 ">Bewertungen aus Google</h3>
 
           <div class="flex justify-center pt-4 items-center">
             <svg class=" text-yellow-400 mx-1 w-8 h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
