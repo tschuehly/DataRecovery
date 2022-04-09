@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
     <div class="p-10 bg-right bg-gray-main bg-cover bg-no-repeat "
          style="background-image: url('/assets/hdd_arbeitsweise.png')">
       <div class="flex md:ml-32 py-10 justify-center md:justify-start">
-        <div class="text-4xl leading-relaxed text-center text-silver text-shadow">
+        <div class="text-2xl md:text-4xl leading-relaxed text-center text-silver text-shadow">
           Tobias<br>Jungbauer<br>Datenrettung
         </div>
       </div>
@@ -14,12 +14,12 @@ import { Component, OnInit } from '@angular/core';
     <article>
 
       <div class="bg-white text-center">
-        <h1 class="text-4xl text-black py-5 tracking-wider">Philosophie</h1>
+        <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">Philosophie</h1>
       </div>
       <div class="bg-gray-main text-white border-b-2 border-silver pb-8">
         <div class="container py-10">
           <pre class="whitespace-pre-wrap">
-<span class="underline text-2xl font-bold">Über mich</span>
+<span class="underline text-xl md:text-2xl font-bold">Über mich</span>
 <span class="text-bold text-lg text-silver">Updated am 29.03.2022, 04:48 von Tobias Jungbauer</span>
 
 Mein persönlicher Anspruch ist es das beste und fairste Datenrettungsangebot anzubieten und den Markt damit zu revolutionieren. Daraus ergeben Sie u.a. folgende Punkte:
