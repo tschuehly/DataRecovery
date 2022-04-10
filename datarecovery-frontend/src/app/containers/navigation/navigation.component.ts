@@ -287,7 +287,7 @@ declare let gtag: Function;
           >
             <div>
               <h1
-                class="pt-4 md:mt-0 mb-2 text-2xl md:text-4xl text-center text-gray-50"
+                class="pt-4 md:mt-0 mb-2 text-3xl md:text-4xl text-center text-gray-50"
               >
                 Kontakt
               </h1>
@@ -309,7 +309,7 @@ declare let gtag: Function;
 
             <div>
               <h1
-                class="pt-4 md:mt-0 mb-2 text-2xl md:text-4xl text-center text-white"
+                class="pt-4 md:mt-0 mb-2 text-3xl md:text-4xl text-center text-white"
               >
                 Adresse
               </h1>
@@ -327,16 +327,16 @@ declare let gtag: Function;
           <div
             class=" border-b py-4 divide-x-2 divide-silver text-gray-50"
           >
-            <a routerLink="impressum" class="pr-4 text-lg md:text-xl">Impressum</a
-            ><a routerLink="datenschutz" class="px-4 text-lg md:text-xl">Datenschutz</a
-            ><a class="pl-4 text-lg md:text-xl" routerLink="agb">AGB</a>
+            <a routerLink="impressum" class="pr-4 text-sm md:text-xl">Impressum</a
+            ><a routerLink="datenschutz" class="px-4 text-sm md:text-xl">Datenschutz</a
+            ><a class="pl-4 text-sm md:text-xl" routerLink="agb">AGB</a>
           </div>
           <div
             class="col-span-2 py-16 divide-x-2 divide-silver"
           >
-            <span class="pr-4  text-lg md:text-xl"
+            <span class="pr-4  text-sm md:text-xl"
               >Website developed by
-              <a class="font-bold" href="https://www.linkedin.com/in/tschuehly/"
+              <a class="font-bold text-sm md:text-xl" href="https://www.linkedin.com/in/tschuehly/"
                 >Thomas Schühly</a
               ></span
             >
