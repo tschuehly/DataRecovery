@@ -49,7 +49,7 @@ import { Router } from '@angular/router';
           >
           <ng-container *ngFor="let category of categories">
             <div class="mb-2">
-              <h1 class="font-semibold text-lg md:text-xl mt-4 pb-2">
+              <h1 class="font-semibold text-lg mt-4 pb-2">
                 {{ category.title }}
               </h1>
               <div class="whitespace-pre-wrap" *ngIf="category.description">
