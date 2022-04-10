@@ -11,6 +11,16 @@ import { Component } from '@angular/core';
       <div class="flex object-cover justify-center grow max-w-[80%]">
         <img
           [src]="'/assets/header_main/header_(' + currentImageIndex + ').webp'"
+          [srcset]="
+            '/assets/header_main/header_(' +
+            currentImageIndex +
+            ')_small.webp 480w, /assets/header_main/header_(' +
+            currentImageIndex +
+            ').webp 1080w'
+          "
+          sizes="50vw"
+        />
+
         />
       </div>
       <button class="w-10 shrink-0" (click)="nextPicture()">
