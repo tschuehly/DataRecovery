@@ -332,14 +332,9 @@ declare let gtag: Function;
             ><a class="pl-4 text-sm md:text-xl" routerLink="agb">AGB</a>
           </div>
           <div
-            class="col-span-2 py-16 divide-x-2 divide-silver"
-          >
+            class="col-span-2 py-16 divide-x-2 divide-silver">
             <span class="pr-4  text-sm md:text-xl"
-              >Website developed by
-              <a class="font-bold text-sm md:text-xl" href="https://www.linkedin.com/in/tschuehly/"
-                >Thomas Schühly</a
-              ></span
-            >
+              >Website developed by <a class="font-bold text-sm md:text-xl" href="https://www.linkedin.com/in/tschuehly/" >Thomas Schühly</a></span>
           </div>
           <div>
             <a
