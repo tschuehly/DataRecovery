@@ -25,8 +25,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
         </div>
         <div class="bg-gray-main bg-circuit-board space-y-4 p-6">
           <div class="bg-white max-w-4xl mx-auto rounded-2xl">
-            <div
-              class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
+            <div class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
             >
               <a
                 routerLink="/blog/datenrettung-kosten"
@@ -46,7 +45,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                 >
                   <h2 class="text-2xl font-bold">Datenrettung Kosten</h2>
                 </a>
-                <div class="py-2 italic">
+                <div class="py-2 text-sm md:text-lg italic">
                   Updated am 29.11.2021, 16:14 von Tobias Jungbauer
                 </div>
                 <div class="space-y-4">
@@ -84,7 +83,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                     Apple Fusion Drive Datenrettung
                   </h2>
                 </a>
-                <div class="py-2 italic">
+                <div class="py-2 italic text-sm md:text-lg">
                   Updated am 03.12.2021, 12:31 von Tobias Jungbauer
                 </div>
                 <div class="space-y-4">
@@ -121,7 +120,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                 >
                   <h2 class="text-2xl font-bold">Ablauf der Datenrettung</h2>
                 </a>
-                <div class="py-2 italic">
+                <div class="py-2 italic text-sm md:text-lg">
                   Updated am 03.12.2021, 14:56 von Tobias Jungbauer
                 </div>
                 <div class="space-y-4">
@@ -156,7 +155,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                 >
                   <h2 class="text-2xl font-bold">Apple SSD Datenrettung</h2>
                 </a>
-                <div class="py-2 italic">
+                <div class="py-2 italic text-sm md:text-lg">
                   Updated am 11.02.2022, 05:31 von Tobias Jungbauer
                 </div>
                 <div class="space-y-4">
@@ -191,7 +190,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                 >
                   <h2 class="text-2xl font-bold">PC-3000-Flash</h2>
                 </a>
-                <div class="py-2 italic">
+                <div class="py-2 italic text-sm md:text-lg">
                   Updated am 11.02.2022, 05:41 von Tobias Jungbauer
                 </div>
                 <div class="space-y-4">
@@ -224,8 +223,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                 >
                   <h2 class="text-2xl font-bold">PC-3000 UDMA</h2>
                 </a>
-                <div class="py-2 italic">
-                  Updated am 11.02.2022, 05:59 von Tobias Jungbauer
+                <div class="py-2 italic text-sm md:text-lg">
+                  Updated am 10.04.2022, 17:53 von Tobias Jungbauer
                 </div>
                 <div class="space-y-4">
                   <h3 class="pb-2">Wie funktioniert das PC-3000 UDMA?</h3>
@@ -259,7 +258,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                     Datenrettung zerbrochene micro SD-Karte
                   </h2>
                 </a>
-                <div class="py-2 italic">
+                <div class="py-2 italic text-sm md:text-lg">
                   Updated am 11.02.2022, 06:12 von Tobias Jungbauer
                 </div>
                 <div class="space-y-4">
@@ -296,7 +295,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                     Synology RAID 1 Datenrettung
                   </h2>
                 </a>
-                <div class="py-2 italic">
+                <div class="py-2 italic text-sm md:text-lg">
                   Updated am 28.03.2022, 16:51 von Tobias Jungbauer
                 </div>
                 <div class="space-y-4">
@@ -332,7 +331,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                 >
                   <h2 class="text-2xl font-bold">QNAP RAID 1 Datenrettung</h2>
                 </a>
-                <div class="py-2 italic">
+                <div class="py-2 italic text-sm md:text-lg">
                   Updated am 29.03.2022, 22:04 von Tobias Jungbauer
                 </div>
                 <div class="space-y-4">
@@ -370,7 +369,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                     Sonnet Fusion RX1600Fibre Rackmount RAID Datenrettung
                   </h2>
                 </a>
-                <div class="py-2 italic">
+                <div class="py-2 italic text-sm md:text-lg">
                   Updated am 02.04.2022, 05:04 von Tobias Jungbauer
                 </div>
                 <div class="space-y-4">
