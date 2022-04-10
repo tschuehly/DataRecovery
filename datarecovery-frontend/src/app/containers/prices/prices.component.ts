@@ -25,7 +25,7 @@ import { Router } from '@angular/router';
     </div>
     <div class="bg-gray-main  ">
       <div class="container flex ">
-        <div class="text-white py-4 mx-auto justify-center">
+        <div class="text-white text-base md:text-xl py-4 mx-auto justify-center">
           <span class="text-white">❶</span> Es handelt sich um
           <span class="text-white">Festpreise</span>, die
           <span class=" text-white">nur nach Erfolg</span> gelten.<br />
@@ -44,12 +44,12 @@ import { Router } from '@angular/router';
           class="bg-gray-main px-4 py-12"
           style="box-shadow: 0 2px 25px 0 black"
         >
-          <span class="font-bold text-sm md:text-2xl underline text-white"
+          <span class="font-bold text-lg md:text-2xl underline text-white"
             >Festpreise nach Erfolg:</span
           >
           <ng-container *ngFor="let category of categories">
             <div class="mb-2">
-              <h1 class="font-semibold mt-4 pb-2">
+              <h1 class="font-semibold text-lg md:text-2xl mt-4 pb-2">
                 {{ category.title }}
               </h1>
               <div class="whitespace-pre-wrap" *ngIf="category.description">
