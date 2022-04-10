@@ -199,7 +199,7 @@ declare let gtag: Function;
           <img alt="phone" class="inline pr-4" src="/assets/phone.svg" />0151 61408355
         </p>
 
-        <p class="text-lg md:text-xl">Mo.-Sa. 10:00-20:00 Uhr erreichbar.</p>
+        <p class="text-lg">Mo.-Sa. 10:00-20:00 Uhr erreichbar.</p>
       </div>
       <div class="fixed right-4 bottom-4 z-50 flex flex-row ">
         <button
