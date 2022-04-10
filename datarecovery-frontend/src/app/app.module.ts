@@ -3,32 +3,23 @@ import { NgModule, ViewChild } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
-import { NavigationComponent } from './containers/navigation/navigation.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { OrderFormComponent } from './containers/order-form/order-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
-import { StaticComponent } from './containers/static/static.component';
 import { ClickOutsideModule } from 'ng-click-outside';
-import { ImprintComponent } from './containers/imprint/imprint.component';
 import { PricesComponent } from './containers/prices/prices.component';
-import { AgbComponent } from './containers/agb/agb.component';
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
-import { AboutComponent } from './containers/about/about.component';
+import { AboutComponent } from './components/insight/about/about.component';
 import {
   NgcCookieConsentConfig,
   NgcCookieConsentModule,
 } from 'ngx-cookieconsent';
-import { ReviewComponentComponent } from './components/review-component/review-component.component';
-import { First40WordsPipe } from './pipes/first-twenty-words.pipe';
 import { GoogleAnalyticsService } from './services/google-analytics.service';
-import { PrivacyComponent } from './containers/privacy/privacy.component';
-import { SlideShowComponent } from './components/slide-show/slide-show.component';
 import { SiteNotFoundComponent } from './containers/site-not-found/site-not-found.component';
-import { BlogComponent } from './containers/blog/blog.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
+import { HomeModule } from './components/home/home.module';
 
 registerLocaleData(localeDe);
 const cookieConfig: NgcCookieConsentConfig = {
@@ -67,7 +58,7 @@ const cookieConfig: NgcCookieConsentConfig = {
     dismiss: 'Got it!',
     deny: 'Cookies verbieten',
     link: 'Datenschutzbestimmungen',
-    href: '/datenschutz',
+    href: 'rechtliches/datenschutz',
     policy: '',
     header: 'Cookies used on the website!',
     allow:
@@ -77,20 +68,9 @@ const cookieConfig: NgcCookieConsentConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     NavigationComponent,
-    OrderFormComponent,
-    StaticComponent,
-    ImprintComponent,
     PricesComponent,
-    AgbComponent,
-    AboutComponent,
-    ReviewComponentComponent,
-    First40WordsPipe,
-    PrivacyComponent,
-    SlideShowComponent,
     SiteNotFoundComponent,
-    BlogComponent,
   ],
   imports: [
     BrowserModule,
@@ -102,6 +82,7 @@ const cookieConfig: NgcCookieConsentConfig = {
     ClickOutsideModule,
     NgcCookieConsentModule.forRoot(cookieConfig),
     ScullyLibModule,
+    HomeModule,
   ],
   providers: [GoogleAnalyticsService],
   bootstrap: [AppComponent],
