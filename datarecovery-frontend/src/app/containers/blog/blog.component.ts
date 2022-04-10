@@ -12,7 +12,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
     >
       <div class="flex md:ml-80 justify-center md:justify-start ">
         <span
-          class="text-4xl leading-relaxed text-center text-silver text-shadow bg-gray-main p-16"
+          class="text-2xl md:text-4xl  leading-relaxed text-center text-silver text-shadow bg-gray-main p-16"
         >
           Tobias<br />Jungbauer<br />Datenrettung
         </span>
@@ -21,7 +21,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
     <ng-container *ngIf="!articleUrl">
       <div>
         <div class="bg-white text-center">
-          <h1 class="text-4xl text-black py-5 tracking-wider">Blogübersicht</h1>
+          <h1 class="text-2xl md:text-4xl  text-black py-5 tracking-wider">Blogübersicht</h1>
         </div>
         <div class="bg-gray-main bg-circuit-board space-y-4 p-6">
           <div class="bg-white max-w-4xl mx-auto rounded-2xl">
