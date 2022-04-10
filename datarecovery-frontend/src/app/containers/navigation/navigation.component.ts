@@ -325,16 +325,16 @@ declare let gtag: Function;
           </div>
 
           <div
-            class=" border-b py-4 divide-x-2 text-lg md:text-xl divide-silver text-gray-50"
+            class=" border-b py-4 divide-x-2 divide-silver text-gray-50"
           >
-            <a routerLink="impressum" class="pr-4">Impressum</a
-            ><a routerLink="datenschutz" class="px-4">Datenschutz</a
-            ><a class="pl-4" routerLink="agb">AGB</a>
+            <a routerLink="impressum" class="pr-4 text-lg md:text-xl">Impressum</a
+            ><a routerLink="datenschutz" class="px-4 text-lg md:text-xl">Datenschutz</a
+            ><a class="pl-4 text-lg md:text-xl" routerLink="agb">AGB</a>
           </div>
           <div
-            class="col-span-2 text-lg md:text-xl py-16 divide-x-2 divide-silver"
+            class="col-span-2 py-16 divide-x-2 divide-silver"
           >
-            <span class="pr-4"
+            <span class="pr-4  text-lg md:text-xl"
               >Website developed by
               <a class="font-bold" href="https://www.linkedin.com/in/tschuehly/"
                 >Thomas Schühly</a
