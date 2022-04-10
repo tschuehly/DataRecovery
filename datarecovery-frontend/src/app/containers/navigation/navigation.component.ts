@@ -187,20 +187,19 @@ declare let gtag: Function;
       >
         <div class="flex justify-around items-center pb-4">
           <h2>
-            <span class="font-semibold pb-2">Noch offene Fragen? </span>Ein
-            Anruf klärt es am schnellsten:
+            <span class="font-semibold text-lg md:text-xl pb-2">Noch offene Fragen? </span>
+            Ein Anruf klärt es am schnellsten:
           </h2>
           <button (click)="showPhone = false">
             <img alt="close" class="inline" src="assets/x.svg" />
           </button>
         </div>
 
-        <p class="font-semibold pb-2">
-          <img alt="phone" class="inline pr-4" src="/assets/phone.svg" />0151
-          61408355
+        <p class="font-semibold text-lg md:text-xl pb-2">
+          <img alt="phone" class="inline pr-4" src="/assets/phone.svg" />0151 61408355
         </p>
 
-        <p>Mo.-Sa. 10:00-20:00 Uhr erreichbar.</p>
+        <p class="text-lg md:text-xl">Mo.-Sa. 10:00-20:00 Uhr erreichbar.</p>
       </div>
       <div class="fixed right-4 bottom-4 z-50 flex flex-row ">
         <button
@@ -236,7 +235,7 @@ declare let gtag: Function;
           class="flex align-middle text-white p-4 rounded-t-xl "
           style="background-color: rgb(9, 94, 84)"
         >
-          <span class="px-2">Jetzt Tobias Jungbauer kontaktieren</span>
+          <span class="px-2 text-lg md:text-xl">Jetzt Tobias Jungbauer kontaktieren</span>
           <button (click)="wawidgetHidden = true">
             <img
               src="/assets/x-square.svg"

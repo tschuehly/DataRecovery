@@ -39,7 +39,7 @@ import { Router } from '@angular/router';
       </div>
     </div>
     <div class="grid grid-cols-1 xl:grid-cols-2  border-b-2 border-t-2">
-      <div class="text-white text-base md:text-xl">
+      <div class="text-white text-base md:text-lg">
         <div
           class="bg-gray-main px-4 py-12"
           style="box-shadow: 0 2px 25px 0 black"
