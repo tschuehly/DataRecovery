@@ -52,11 +52,11 @@ import { Router } from '@angular/router';
               <h1 class="font-semibold text-lg mt-4 pb-2">
                 {{ category.title }}
               </h1>
-              <div class="whitespace-pre-wrap" *ngIf="category.description">
+              <div class="whitespace-pre-wrap text-lg" *ngIf="category.description">
                 {{ category.description }}
               </div>
               <ng-container *ngFor="let product of products">
-                <div
+                <div class="text-lg"
                   *ngIf="product.category.id === category.id && product.price"
                 >
                   {{ category.name }} {{ product.name }}

@@ -34,7 +34,6 @@ Tatsächlich sind bei über 90% der defekten SSD-Speicher, die nicht mehr erkann
 Wenn vom Chip nun zu viele Teile der Firmware nicht mehr für den Controller lesbar werden, schafft die SSD es nicht mehr zu booten.
 
 Aber dafür gibt es eine Lösung: Man bootet die SSD über das externe Hochladen der Firmware (in den RAM der SSD) und ermöglicht dadurch den Zugriff auf die Servicearea bzw. später auf die Userarea, wo sich auch die gewünschten Dateien befinden.
-<div class="flex justify-end pt-4"><button class="text-lg md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
   </pre>
         <div class="flex grid-cols-2 flex-wrap gap-4">
           <img
@@ -57,7 +56,7 @@ Defekte SSD-Festplatte bis 1TB Festplattenkapazität: 250,00 €*
 Defekte SSD-Festplatte bis 2TB Festplattenkapazität: 350,00 €*
 Defekte SSD-Festplatte bis 4TB Festplattenkapazität: 450,00 €*
 *bereits inkl. 19% Mehrwertsteuer
-
+<div class="flex justify-end pt-4"><button class="text-lg md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
 Falls noch Fragen offen sind rufen Sie am besten unter 0841 12840705 an oder schreiben eine Email an: info@jungbauerdatenrettung.de
     </pre>
       </div>

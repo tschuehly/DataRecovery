@@ -185,22 +185,22 @@ declare let gtag: Function;
         class="fixed w-64 bg-white rounded-xl bottom-4 right-20 z-50 p-4 shadow-2xl"
         *ngIf="showPhone"
       >
-        <div class="flex justify-around items-center pb-4">
+        <div class="flex justify-around items-center text-base md:text-lg pb-4">
           <h2>
-            <span class="font-semibold pb-2">Noch offene Fragen? </span>Ein
-            Anruf klärt es am schnellsten:
+            <span class="font-semibold pb-2">Noch offene Fragen? </span>
+            <p> Ein Anruf klärt es am schnellsten: </p>
           </h2>
           <button (click)="showPhone = false">
             <img alt="close" class="inline" src="assets/x.svg" />
           </button>
         </div>
 
-        <p class="font-semibold pb-2">
+        <p class="font-semibold text-base md:text-lg pb-2">
           <img alt="phone" class="inline pr-4" src="/assets/phone.svg" />0151
           61408355
         </p>
 
-        <p>Mo.-Sa. 10:00-20:00 Uhr erreichbar.</p>
+        <p class="text-base md:text-lg">Mo.-Sa. 10:00-20:00 Uhr erreichbar.</p>
       </div>
       <div class="fixed right-4 bottom-4 z-50 flex flex-row ">
         <button
