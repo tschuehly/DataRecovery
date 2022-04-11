@@ -33,7 +33,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
               >
                 <div
                   class="h-40 flex-shrink-0 w-80  my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                  style="background-image: url('/assets/favicon/android-icon-192x192.png')"
+                  style="background-image: url('/assets/favicon/fav.PNG')"
                 ></div>
               </a>
 
@@ -71,7 +71,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
             >
               <div
                 class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                style="background-image: url('/assets/favicon/android-icon-192x192.png')"
+                style="background-image: url('/assets/favicon/fav.PNG')"
               ></div>
               <div class="flex-1">
                 <a
@@ -110,7 +110,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
             >
               <div
                 class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                style="background-image: url('/assets/favicon/android-icon-192x192.png')"
+                style="background-image: url('/assets/favicon/fav.PNG')"
               ></div>
               <div class="flex-1">
                 <a
@@ -145,7 +145,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
             >
               <div
                 class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                style="background-image: url('/assets/favicon/android-icon-192x192.png')"
+                style="background-image: url('/assets/favicon/fav.PNG')"
               ></div>
               <div class="flex-1">
                 <a
@@ -180,7 +180,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
             >
               <div
                 class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                style="background-image: url('/assets/favicon/android-icon-192x192.png')"
+                style="background-image: url('/assets/favicon/fav.PNG')"
               ></div>
               <div class="flex-1">
                 <a
@@ -213,7 +213,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
             >
               <div
                 class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                style="background-image: url('/assets/favicon/android-icon-192x192.png')"
+                style="background-image: url('/assets/favicon/fav.PNG')"
               ></div>
               <div class="flex-1">
                 <a
@@ -246,7 +246,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
             >
               <div
                 class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                style="background-image: url('/assets/favicon/android-icon-192x192.png')"
+                style="background-image: url('/assets/favicon/fav.PNG')"
               ></div>
               <div class="flex-1">
                 <a
@@ -283,7 +283,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
             >
               <div
                 class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                style="background-image: url('/assets/favicon/android-icon-192x192.png')"
+                style="background-image: url('/assets/favicon/fav.PNG')"
               ></div>
               <div class="flex-1">
                 <a
@@ -321,7 +321,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
             >
               <div
                 class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                style="background-image: url('/assets/favicon/android-icon-192x192.png')"
+                style="background-image: url('/assets/favicon/fav.PNG')"
               ></div>
               <div class="flex-1">
                 <a
@@ -357,7 +357,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
             >
               <div
                 class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                style="background-image: url('/assets/favicon/android-icon-192x192.png')"
+                style="background-image: url('/assets/favicon/fav.PNG')"
               ></div>
               <div class="flex-1">
                 <a
