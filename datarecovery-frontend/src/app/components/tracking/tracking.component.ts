@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Order } from '../../../model/model';
+import { Order } from '../../model/model';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({

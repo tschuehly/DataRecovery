@@ -22,7 +22,7 @@ import { Component, OnInit } from '@angular/core';
         </h1>
       </div>
       <div class="bg-gray-main text-white border-b-2 border-silver pb-8">
-        <div class="container py-10">
+        <div class="container py-10 px-3">
           <pre class="whitespace-pre-wrap">
 <span class="underline text-xl md:text-2xl font-bold">Über mich</span>
 <span class="text-bold text-lg text-silver">Updated am 29.03.2022, 04:48 von Tobias Jungbauer</span>

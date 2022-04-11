@@ -6,7 +6,6 @@ import { OrderDetailsComponent } from './order-details/order-details.component';
 import { UpdateComponent } from './update/update.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { TrackingComponent } from './tracking/tracking.component';
 import { LoginComponent } from './login/login.component';
 import { CategoryComponent } from './category/category.component';
 import { ProductComponent } from './product/product.component';
@@ -25,7 +24,6 @@ const routes: Routes = [
     OrderComponent,
     OrderDetailsComponent,
     UpdateComponent,
-    TrackingComponent,
     LoginComponent,
     CategoryComponent,
     CategoryDetailComponent,
@@ -39,5 +37,6 @@ const routes: Routes = [
     HttpClientModule,
     FormsModule,
   ],
+  exports: [OrderDetailsComponent],
 })
 export class AdminModule {}

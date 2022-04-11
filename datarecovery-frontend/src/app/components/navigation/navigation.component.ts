@@ -32,6 +32,10 @@ declare let gtag: Function;
             <img
               class="h-16 object-contain"
               src="/assets/LOGO_TJ_Datenrettung.webp"
+              [srcset]="
+                '/assets/LOGO_TJ_Datenrettung_small.webp 480w, /assets/LOGO_TJ_Datenrettung.webp 1080w'
+              "
+              sizes="50vw"
             />
           </a>
           <button
@@ -138,8 +142,8 @@ declare let gtag: Function;
           <a
             (click)="mobileNavShow = false"
             class="cursor-pointer"
-            routerLink="philosophie"
-            href="philosophie"
+            routerLink="datenrettung/philosophie"
+            href="datenrettung/philosophie"
             >Philosophie</a
           >
           <a
@@ -417,7 +421,7 @@ export class NavigationComponent implements OnInit {
         document.getElementById('priceList').offsetHeight -
         200;
       if (pos > max) {
-        if (this.showPhoneCounter < 1 && document.body.clientWidth > 512) {
+        if (this.showPhoneCounter) {
           this.showPhone = true;
         }
         this.showPhoneCounter += 1;

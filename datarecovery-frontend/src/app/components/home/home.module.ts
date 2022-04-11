@@ -10,6 +10,7 @@ import { SlideShowComponent } from './slide-show/slide-show.component';
 import { ReviewComponent } from './review/review.component';
 import { HomeComponent } from './home.component';
 import { OrderFormComponent } from './order-form/order-form.component';
+import { PriceListComponent } from './price-list/price-list.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { OrderFormComponent } from './order-form/order-form.component';
     SlideShowComponent,
     ReviewComponent,
     OrderFormComponent,
+    PriceListComponent,
   ],
   imports: [
     CommonModule,

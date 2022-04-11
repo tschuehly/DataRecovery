@@ -3,24 +3,17 @@ import { Component } from '@angular/core';
   selector: 'app-slide-show',
   template: `
     <div
-      class="bg-gray-main bg-circuit-board py-6 md:p-10 flex flex-row justify-around max-h-[40rem]"
+      class="bg-gray-main bg-circuit-board py-6 md:p-10 flex flex-row max-h-[40rem]"
     >
       <button class="w-10 shrink-0" (click)="previousPicture()">
         <img src="/assets/arrow-left.svg" />
       </button>
-      <div class="flex object-cover justify-center grow max-w-[80%]">
+      <div class="flex grow justify-center">
         <img
+          class="flex-1 md:flex-none"
           [src]="'/assets/header_main/header_(' + currentImageIndex + ').webp'"
-          [srcset]="
-            '/assets/header_main/header_(' +
-            currentImageIndex +
-            ')_small.webp 480w, /assets/header_main/header_(' +
-            currentImageIndex +
-            ').webp 1080w'
-          "
+          [srcset]="headerImage()"
           sizes="50vw"
-        />
-
         />
       </div>
       <button class="w-10 shrink-0" (click)="nextPicture()">
@@ -48,5 +41,14 @@ export class SlideShowComponent {
     } else {
       this.currentImageIndex = this.currentImageIndex - 1;
     }
+  }
+  headerImage(): string {
+    return (
+      '/assets/header_main/header_(' +
+      this.currentImageIndex +
+      ')_small.webp 480w, /assets/header_main/header_(' +
+      this.currentImageIndex +
+      ').webp 1080w'
+    );
   }
 }

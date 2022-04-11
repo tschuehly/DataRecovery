@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { TrackingComponent } from './components/admin/tracking/tracking.component';
 import { ImprintComponent } from './components/legal/imprint/imprint.component';
 import { PricesComponent } from './containers/prices/prices.component';
 import { AgbComponent } from './components/legal/agb/agb.component';
@@ -11,8 +10,6 @@ import { SiteNotFoundComponent } from './containers/site-not-found/site-not-foun
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'tracking', component: TrackingComponent },
-  { path: 'tracking/:trackingId/:postalCode', component: TrackingComponent },
   {
     path: 'admin',
     loadChildren: () =>
@@ -39,6 +36,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./components/legal/legal.module').then((m) => m.LegalModule),
   },
+  { path: 'tracking', loadChildren: () => import('./components/tracking/tracking.module').then(m => m.TrackingModule) },
   { path: '**', redirectTo: '/404' },
 ];
 @NgModule({

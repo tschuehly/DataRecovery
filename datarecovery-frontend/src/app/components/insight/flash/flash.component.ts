@@ -21,7 +21,7 @@ import { Component } from '@angular/core';
       </h1>
     </div>
     <div class="bg-gray-main text-white border-b-2 border-silver pb-8">
-      <div class="container py-8">
+      <div class="container py-8 px-3">
         <span class="underline text-xl md:text-2xl font-bold py-6"
           >Datenrettung für USB-Stick und (micro) SD-Karte</span
         >
