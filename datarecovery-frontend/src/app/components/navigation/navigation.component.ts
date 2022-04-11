@@ -32,10 +32,6 @@ declare let gtag: Function;
             <img
               class="h-16 object-contain"
               src="/assets/LOGO_TJ_Datenrettung.webp"
-              [srcset]="
-                '/assets/LOGO_TJ_Datenrettung_small.webp 480w, /assets/LOGO_TJ_Datenrettung.webp 1080w'
-              "
-              sizes="50vw"
             />
           </a>
           <button
@@ -142,8 +138,8 @@ declare let gtag: Function;
           <a
             (click)="mobileNavShow = false"
             class="cursor-pointer"
-            routerLink="datenrettung/philosophie"
-            href="datenrettung/philosophie"
+            routerLink="philosophie"
+            href="philosophie"
             >Philosophie</a
           >
           <a
@@ -191,19 +187,20 @@ declare let gtag: Function;
       >
         <div class="flex justify-around items-center pb-4">
           <h2>
-            <span class="font-semibold text-lg md:text-xl pb-2">Noch offene Fragen? </span>
-            Ein Anruf klärt es am schnellsten:
+            <span class="font-semibold pb-2">Noch offene Fragen? </span>Ein
+            Anruf klärt es am schnellsten:
           </h2>
           <button (click)="showPhone = false">
             <img alt="close" class="inline" src="assets/x.svg" />
           </button>
         </div>
 
-        <p class="font-semibold text-lg md:text-xl pb-2">
-          <img alt="phone" class="inline pr-4" src="/assets/phone.svg" />0151 61408355
+        <p class="font-semibold pb-2">
+          <img alt="phone" class="inline pr-4" src="/assets/phone.svg" />0151
+          61408355
         </p>
 
-        <p class="text-lg">Mo.-Sa. 10:00-20:00 Uhr erreichbar.</p>
+        <p>Mo.-Sa. 10:00-20:00 Uhr erreichbar.</p>
       </div>
       <div class="fixed right-4 bottom-4 z-50 flex flex-row ">
         <button
@@ -239,7 +236,7 @@ declare let gtag: Function;
           class="flex align-middle text-white p-4 rounded-t-xl "
           style="background-color: rgb(9, 94, 84)"
         >
-          <span class="px-2 text-lg md:text-xl">Jetzt Tobias Jungbauer kontaktieren</span>
+          <span class="px-2">Jetzt Tobias Jungbauer kontaktieren</span>
           <button (click)="wawidgetHidden = true">
             <img
               src="/assets/x-square.svg"
@@ -290,14 +287,14 @@ declare let gtag: Function;
           >
             <div>
               <h1
-                class="pt-4 md:mt-0 mb-2 text-semibold text-3xl md:text-4xl text-center text-gray-50"
+                class="pt-4 md:mt-0 mb-2 text-2xl md:text-4xl text-center text-gray-50"
               >
                 Kontakt
               </h1>
               <p
-                class="text-center text-lg md:text-2xl text-white"
+                class="font-semibold text-center text-lg md:text-2xl text-white"
               >
-                E-Mail:
+                Email:
                 <a href="mailto:info@jungbauerdatenrettung.de"
                   ><span class="text-white"
                     >info@jungbauerdatenrettung.de</span
@@ -312,12 +309,12 @@ declare let gtag: Function;
 
             <div>
               <h1
-                class="pt-4 md:mt-0 mb-2 text-3xl text-semibold md:text-4xl text-center text-white"
+                class="pt-4 md:mt-0 mb-2 text-2xl md:text-4xl text-center text-white"
               >
                 Adresse
               </h1>
               <p
-                class="text-lg md:text-2xl  text-white text-center"
+                class="font-semibold text-lg md:text-2xl  text-white text-center"
               >
                 Tobias Jungbauer<br />
                 Datenrettung<br />
@@ -328,16 +325,21 @@ declare let gtag: Function;
           </div>
 
           <div
-            class=" border-b py-4 divide-x-2 divide-silver text-gray-50"
+            class=" border-b py-4 divide-x-2 text-lg md:text-xl divide-silver text-gray-50"
           >
-            <a routerLink="rechtliches/impressum" class="pr-4 text-sm md:text-xl">Impressum</a
-            ><a routerLink="rechtliches/datenschutz" class="px-4 text-sm md:text-xl">Datenschutz</a
-            ><a class="pl-4 text-sm md:text-xl" routerLink="rechtliches/agb">AGB</a>
+            <a routerLink="impressum" class="pr-4 text-sm md:text-xl">Impressum</a
+            ><a routerLink="datenschutz" class="px-4 text-sm md:text-xl">Datenschutz</a
+            ><a class="pl-4 text-sm md:text-xl" routerLink="agb">AGB</a>
           </div>
           <div
-            class="col-span-2 py-16 divide-x-2 divide-silver">
-            <span class="pr-4  text-sm md:text-xl"
-              >Website developed by <a class="font-bold text-sm md:text-xl" href="https://www.linkedin.com/in/tschuehly/" >Thomas Schühly</a></span>
+            class="col-span-2 text-lg md:text-xl py-16 divide-x-2 divide-silver"
+          >
+            <span class="pr-4"
+              >Website developed by
+              <a class="font-bold" href="https://www.linkedin.com/in/tschuehly/"
+                >Thomas Schühly</a
+              ></span
+            >
           </div>
           <div>
             <a
@@ -421,7 +423,7 @@ export class NavigationComponent implements OnInit {
         document.getElementById('priceList').offsetHeight -
         200;
       if (pos > max) {
-        if (this.showPhoneCounter) {
+        if (this.showPhoneCounter < 1 ) {
           this.showPhone = true;
         }
         this.showPhoneCounter += 1;

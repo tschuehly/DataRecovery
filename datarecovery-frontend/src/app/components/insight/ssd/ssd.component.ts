@@ -21,20 +21,20 @@ import { Component, OnInit } from '@angular/core';
       </h1>
     </div>
     <div class="bg-gray-main border-b-2 border-silver pb-8">
-      <div class="text-white container py-8 px-3">
+      <div class="text-white container py-8">
         <span class="underline text-xl md:text-2xl font-bold py-6"
           >SSD-Speicher Datenrettung:</span
         >
         <pre
           class="whitespace-pre-wrap py-2"
-        ><span class="text-bold text-lg text-silver">Updated am 03.12.2021, 18:05 von Tobias Jungbauer</span></pre>
-        <pre class="whitespace-pre-wrap py-8">
+        ><span class="text-bold text-sm md:text-lg text-silver">Updated am 03.12.2021, 18:05 von Tobias Jungbauer</span></pre>
+        <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
 Tatsächlich sind bei über 90% der defekten SSD-Speicher, die nicht mehr erkannt werden, einer der NAND-Chips die Fehlerursache. Warum ist das so? Die SSD eigene Firmware wird auch auf den Speicherbausteinen abgespeichert.
 
 Wenn vom Chip nun zu viele Teile der Firmware nicht mehr für den Controller lesbar werden, schafft die SSD es nicht mehr zu booten.
 
 Aber dafür gibt es eine Lösung: Man bootet die SSD über das externe Hochladen der Firmware (in den RAM der SSD) und ermöglicht dadurch den Zugriff auf die Servicearea bzw. später auf die Userarea, wo sich auch die gewünschten Dateien befinden.
-<div class="flex justify-end pt-4"><button class="text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
+<div class="flex justify-end pt-4"><button class="text-lg md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
   </pre>
         <div class="flex grid-cols-2 flex-wrap gap-4">
           <img
@@ -42,7 +42,7 @@ Aber dafür gibt es eine Lösung: Man bootet die SSD über das externe Hochladen
             src="assets/ssd_arbeitsweise.jpg"
           />
         </div>
-        <pre class="whitespace-pre-wrap py-8">
+        <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
 
 
 In meiner Datenbank sind tausende an verschiedene „Loader“ für verschiedene Controller, die dieses Prozedere ermöglichen.

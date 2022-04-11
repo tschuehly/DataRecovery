@@ -14,7 +14,7 @@ import { Component } from '@angular/core';
       </h2>
 
       <div
-        class="container px-4 md:px-8 py-10 text-center break-words rounded-2xl"
+        class="container px-4 md:px-8 py-10 text-center break-words rounded-2xl text-lg"
       >
         <div
           class="bg-gray-main rounded-2xl"
@@ -42,13 +42,13 @@ import { Component } from '@angular/core';
               <h2 class="col-span-2 p-4 text-xl md:text-2xl text">
                 Defekte(r) USB Stick / (micro-) SD Karte
               </h2>
-              <div class="p-4 text-base leading-relaxed border-r border-white">
+              <div class="p-4 leading-relaxed border-r border-white">
                 <div>Festpreis</div>
                 <div>50,00 €</div>
                 <div>75,00 €</div>
                 <div>150,00 €</div>
               </div>
-              <div class="p-4 text-base leading-relaxed border-l border-white">
+              <div class="p-4 leading-relaxed border-l border-white">
                 <div>Kapazität</div>
                 <div>≤ 8 GB</div>
                 <div>≤ 16 GB</div>
@@ -88,17 +88,13 @@ import { Component } from '@angular/core';
               <h2 class="col-span-2 p-4 text-xl md:text-2xl text">
                 Defekte HDD-Festplatte
               </h2>
-              <div
-                class="p-4 text-base text-xl leading-relaxed border-r border-white"
-              >
+              <div class="p-4 leading-relaxed border-r border-white">
                 <div>Festpreis</div>
                 <div>300,00 €</div>
                 <div>400,00 €</div>
                 <div>500,00 €</div>
               </div>
-              <div
-                class="p-4 text-base text-xl leading-relaxed border-l border-white"
-              >
+              <div class="p-4 leading-relaxed border-l border-white">
                 <div>Kapazität</div>
                 <div>≤ 1 TB</div>
                 <div>≤ 2 TB</div>
@@ -109,17 +105,13 @@ import { Component } from '@angular/core';
               <h2 class="col-span-2 p-4 text-xl md:text-2xl text">
                 Defekte SSD-Speicher (SATA-basiert)
               </h2>
-              <div
-                class="p-4 text-base text-xl leading-relaxed border-r border-white"
-              >
+              <div class="p-4 leading-relaxed border-r border-white">
                 <div>Festpreis</div>
                 <div>200,00 €</div>
                 <div>250,00 €</div>
                 <div>350,00 €</div>
               </div>
-              <div
-                class="p-4 text-base text-xl leading-relaxed border-l border-white"
-              >
+              <div class="p-4 leading-relaxed border-l border-white">
                 <div>Kapazität</div>
                 <div>≤ 512 GB</div>
                 <div>≤ 1 TB</div>
@@ -160,9 +152,7 @@ import { Component } from '@angular/core';
               <h2 class="p-4 text-xl md:text-2xl text">
                 RAID & Apple Fusion Drive (iMac)
               </h2>
-              <div
-                class="px-4 pl-8 text-xl text-base leading-relaxed text-left"
-              >
+              <div class="px-4 pl-8 leading-relaxed text-left">
                 abhängig von:
                 <div>- Anzahl an Festplatten</div>
                 <div>- Kapazität pro Festplatte</div>

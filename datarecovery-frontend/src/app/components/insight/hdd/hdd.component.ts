@@ -3,32 +3,31 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-hdd',
   template: `
-  <div
-    class="py-10 bg-right bg-gray-main bg-cover bg-no-repeat"
-    style="background-image: url('/assets/hdd_arbeitsweise.png')"
-  >
-    <div class="flex md:ml-32 py-10 justify-center md:justify-start">
-      <h2
-        class="text-2xl md:text-4xl leading-relaxed text-center text-silver text-shadow"
-      >
-        Tobias<br />Jungbauer<br />Datenrettung
-      </h2>
+    <div
+      class="py-10 bg-right bg-gray-main bg-cover bg-no-repeat"
+      style="background-image: url('/assets/hdd_arbeitsweise.png')"
+    >
+      <div class="flex md:ml-32 py-10 justify-center md:justify-start">
+        <h2
+          class="text-2xl md:text-4xl leading-relaxed text-center text-silver text-shadow"
+        >
+          Tobias<br />Jungbauer<br />Datenrettung
+        </h2>
+      </div>
     </div>
-  </div>
-  <div class="bg-white text-center">
-    <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">
-      Datenrettung Festplatte
-    </h1>
-  </div>
-  <div class="bg-gray-main text-white border-b-2 border-silver pb-8">
-    <div class="container py-8 px-3">
-      <span class="underline text-xl md:text-2xl font-bold"
-        >Datenrettung der HDD-Festplatte</span
-      >
-      <pre
-        class="whitespace-pre-wrap py-2"
-      ><span class="whitespace-pre-wrap py-2 text-bold text-lg text-silver">Updated am 27.03.22, 07:55 von Tobias Jungbauer</span> </pre>
-      <pre class="whitespace-pre-wrap py-8">
+    <div class="bg-white text-center">
+      <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">
+        Datenrettung Festplatte
+      </h1>
+    </div>
+    <div class="bg-gray-main text-white border-b-2 border-silver pb-8">
+      <div class="container py-8 px-3">
+        <span class="underline text-xl md:text-2xl font-bold"
+          >Datenrettung der HDD-Festplatte</span
+        >
+        <pre class="whitespace-pre-wrap py-2">
+<span class="whitespace-pre-wrap py-2 text-bold text-sm md:text-lg text-silver">Updated am 27.03.22, 07:55 von Tobias Jungbauer</span> </pre>
+        <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
 <span class="font-semibold">Es wird die professionelle Datenrettung für HDD-Festplatten angeboten, die beispielsweise:</span>
 - Dateien anzeigen, sich aber nicht auslesen lassen
 - nicht mehr erkannt werden
@@ -133,43 +132,37 @@ Defekte HDD-Festplatte bis 6TB Festplattenkapazität: 600,00 €*
 *bereits inkl. 19% Mehrwertsteuer
 
         </pre>
-      <h2 class="underline text-xl md:text-2xl font-bold my-6">
-        Verwendete Hard- Und Software
-      </h2>
-      <pre class="whitespace-pre-wrap py-8">
+        <h2 class="underline text-xl md:text-2xl font-bold my-6">
+          Verwendete Hard- Und Software
+        </h2>
+        <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
 Das PC-3000 UDMA ist eine Hardware-Software-Lösung zur Diagnose und Reparatur von Festplatten auf Basis von SATA- (Serial ATA) und ATA- (IDE) Schnittstellen für zahlreiche Hersteller (Seagate, Western Digital, Fujitsu, Samsung, Maxtor, Quantum, IBM (HGST) ), HITACHI, TOSHIBA), für verschiedene Kapazitäten (von 500 MB bis 8 TB) und verschiedene Formfaktoren: 3,5 "- Desktop-Laufwerke, 2,5" - und 1,8 "- Laptop-Laufwerke.
 Das PC-3000 UDMA bildet zusammen mit dem Data Extractor UDMA das PC-3000 UDMA Professional-System, mit dem Daten von der SATA-, ATA- (IDE-) Festplatte wiederhergestellt werden können. Wenn Sie Ihre Festplatte reparieren lassen möchten, benötigen Sie eine Lösung wie durch das PC-3000 UDMA. </pre
-      >
-      <pre class="whitespace-pre-wrap py-8">
+        >
+        <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
 Ein zweikanaliger Spannungsversorgungsadapter befindet sich auf der Platinensteuerung und bietet eine unabhängige Spannungsversorgung von +5 V, +12 V sowie Schutz vor Überspannungs- und Stromüberlastung. Im Notfall wird die Stromversorgung der Festplatte automatisch abgeschaltet.
 Zusätzlich verfügt jeder Kanal über eine Rückkopplungsschaltung mit spezieller Verwaltungssoftware, die die Versorgungsspannungswerte steuert und den Benutzer über Probleme mit der Speiseschaltung informiert.
 
 </pre
-      >
-      <div class="flex grid sm:grid-cols-2 grid-cols-1">
-        <div class="overflow-hidden">
-          <label class="">
-            <img src="assets/pc3000udma.webp" alt="pc3000udma" />
-            Bildquelle: https://www.acelaboratory.com/pc3000.udma.php
-          </label>
+        >
+        <div class="flex grid sm:grid-cols-2 text-sm md:text-xl grid-cols-1">
+          <div class="overflow-hidden">
+            <label class="">
+              <img src="assets/pc3000udma.webp" alt="pc3000udma" />
+              Bildquelle: https://www.acelaboratory.com/pc3000.udma.php
+            </label>
+          </div>
+        </div>
+
+        <div class="text-white text-sm md:text-xl py-8">
+          Falls noch Fragen offen sind rufen Sie am besten unter 0841 12840705
+          an oder schreiben eine Email an: info@jungbauerdatenrettung.de
         </div>
       </div>
-
-      <div class="text-white py-8">
-        Falls noch Fragen offen sind rufen Sie am besten unter 0841 12840705 an
-        oder schreiben eine Email an: info@jungbauerdatenrettung.de
-      </div>
     </div>
-  </div>
-
   `,
-  styles: [
-  ]
+  styles: [],
 })
-export class HddComponent  {
-
-  constructor() { }
-
-  
-
+export class HddComponent {
+  constructor() {}
 }

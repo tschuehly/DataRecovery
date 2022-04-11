@@ -21,14 +21,14 @@ import { Component } from '@angular/core';
       </h1>
     </div>
     <div class="bg-gray-main border-b-2 border-silver">
-      <div class="text-white container py-8 px-3">
+      <div class="text-white container py-8">
         <span class="text-xl md:text-2xl font-bold underline"
           >RAID Datenrettung (z.B. RAID 0, 1, 5 oder JBOD):</span
         >
         <pre
           class="whitespace-pre-wrap py-2"
-        ><span class="text-bold text-lg text-silver">Updated am 31.03.2022, 21:22 von Tobias Jungbauer</span></pre>
-        <pre class="whitespace-pre-wrap py-8">
+        ><span class="text-bold text-sm md:text-lg text-silver">Updated am 31.03.2022, 21:22 von Tobias Jungbauer</span></pre>
+        <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
 Die angebotene RAID-Datenrettung richtet sich an Fälle, wenn ein "Rebuild" nicht möglich oder bereits gescheitert ist:
 z.B. wenn es sich um ein RAID 0 oder JBOD handelt, mehrere Volumes bei RAID 1 oder 5 beschädigt worden sind oder der RAID-Controller selbst defekt ist. Oftmals verursachen auch die Firmware der RAID Controller von Synology, QNAP und co. nach dem gescheiterten Rebuildversuch das ungewünschte Löschen des Dateisystems.
 <span class="text-white">
@@ -53,7 +53,7 @@ Besonderheit: Auch wenn Sie Ihre Konfiguration wie RAID-Typ, Block Size, Parity 
         <div class="flex grid-cols-2 gap-4 h-80 mb-4">
           <img src="assets/raid1.jpg" />
         </div>
-        <pre class="whitespace-pre-wrap py-8">
+        <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
 Unterstützt werden sowohl Software-RAID als auch Hardware-RAID, wie z.B. in NAS.
 Auch Apple Fusion Drive wird unterstützt. Hier werden Ihre  Dateien auch bei Defekt des iMac oder der HDD-Festplatte wiederhergestellt.
 
