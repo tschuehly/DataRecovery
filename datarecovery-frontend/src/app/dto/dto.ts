@@ -18,3 +18,11 @@ export class OrderTrackingStateInfoDTO {
     this.count = count;
   }
 }
+
+export class KeywordRankDTO {
+  id: Number;
+  keyword: String;
+  url: String;
+  rank: Number;
+  requestTime: Date;
+}

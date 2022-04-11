@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~13.2.2",
     "@angular/platform-server": "^12",
     "@angular/router": "~13.2.2",
+    "@swimlane/ngx-charts": "^20.1.0",
     "browser-image-compression": "^1.0.17",
     "cookieconsent": "^3.1.1",
     "ng-click-outside": "9.0.0",
@@ -39,6 +40,9 @@
     "@angular-eslint/template-parser": "13.1.0",
     "@angular/cli": "~13.2.3",
     "@angular/compiler-cli": "~13.2.2",
+    "@scullyio/ng-lib": "^2.1.29",
+    "@scullyio/scully": "^2.1.29",
+    "@scullyio/scully-plugin-puppeteer": "^2.1.29",
     "@tailwindcss/aspect-ratio": "latest",
     "@tailwindcss/forms": "latest",
     "@tailwindcss/line-clamp": "latest",
@@ -54,9 +58,6 @@
     "tailwindcss": "^3.0.22",
     "tailwindcss-blend-mode": "^1.0.0",
     "ts-node": "~10.5.0",
-    "typescript": "4.5.5",
-    "@scullyio/ng-lib": "^2.1.29",
-    "@scullyio/scully": "^2.1.29",
-    "@scullyio/scully-plugin-puppeteer": "^2.1.29"
+    "typescript": "4.5.5"
   }
 }

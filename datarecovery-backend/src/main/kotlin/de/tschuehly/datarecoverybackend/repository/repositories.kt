@@ -41,3 +41,5 @@ interface UserRepository : JpaRepository<WebsiteUser?, Long?> {
     override fun findAll(): List<WebsiteUser?>
     fun findByUsername(name: String): WebsiteUser?
 }
+
+interface KeywordRankRepository : JpaRepository<KeywordRank, Long>

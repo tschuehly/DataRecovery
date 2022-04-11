@@ -11,12 +11,16 @@ import { CategoryComponent } from './category/category.component';
 import { ProductComponent } from './product/product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { CategoryDetailComponent } from './category-detail/category-detail.component';
+import { KeywordComponent } from './keyword/keyword.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
   { path: 'order', component: OrderComponent },
   { path: 'login', component: LoginComponent },
   { path: 'product', component: ProductComponent },
   { path: 'category', component: CategoryComponent },
+  { path: 'keyword', component: KeywordComponent },
 ];
 
 @NgModule({
@@ -29,6 +33,7 @@ const routes: Routes = [
     CategoryDetailComponent,
     ProductComponent,
     ProductDetailComponent,
+    KeywordComponent,
   ],
   imports: [
     CommonModule,
@@ -36,6 +41,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
+    NgxChartsModule,
   ],
   exports: [OrderDetailsComponent],
 })

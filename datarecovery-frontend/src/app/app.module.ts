@@ -20,13 +20,14 @@ import { GoogleAnalyticsService } from './services/google-analytics.service';
 import { SiteNotFoundComponent } from './containers/site-not-found/site-not-found.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { HomeModule } from './components/home/home.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 registerLocaleData(localeDe);
 const cookieConfig: NgcCookieConsentConfig = {
   cookie: {
     domain: 'www.jungbauerdatenrettung.de',
   },
-  position: 'bottom-left',
+  position: 'bottom',
   theme: 'edgeless',
   palette: {
     popup: {
@@ -59,7 +60,7 @@ const cookieConfig: NgcCookieConsentConfig = {
     deny: 'Cookies verbieten',
     link: 'Datenschutzbestimmungen',
     href: 'rechtliches/datenschutz',
-    policy: '',
+    policy: 'Cookie Policy',
     header: 'Cookies used on the website!',
     allow:
       '<div class="flex flex-row items-center">Cookies erlauben <img class="h-12" src="/assets/favicon/icons8-cookie-100.png"> </div>',
@@ -83,6 +84,7 @@ const cookieConfig: NgcCookieConsentConfig = {
     NgcCookieConsentModule.forRoot(cookieConfig),
     ScullyLibModule,
     HomeModule,
+    BrowserAnimationsModule,
   ],
   providers: [GoogleAnalyticsService],
   bootstrap: [AppComponent],
