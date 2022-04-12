@@ -91,8 +91,8 @@ import { Component } from '@angular/core';
               <div class="p-4 leading-relaxed border-r border-white">
                 <div>Festpreis</div>
                 <div>300,00 €</div>
-                <div>400,00 €</div>
-                <div>500,00 €</div>
+                <div>350,00 €</div>
+                <div>450,00 €</div>
               </div>
               <div class="p-4 leading-relaxed border-l border-white">
                 <div>Kapazität</div>
@@ -109,7 +109,7 @@ import { Component } from '@angular/core';
                 <div>Festpreis</div>
                 <div>200,00 €</div>
                 <div>250,00 €</div>
-                <div>350,00 €</div>
+                <div>300,00 €</div>
               </div>
               <div class="p-4 leading-relaxed border-l border-white">
                 <div>Kapazität</div>

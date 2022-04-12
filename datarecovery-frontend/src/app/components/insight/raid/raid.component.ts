@@ -28,7 +28,7 @@ import { Component } from '@angular/core';
         <pre
           class="whitespace-pre-wrap py-2"
         ><span class="text-bold text-sm md:text-lg text-silver">Updated am 31.03.2022, 21:22 von Tobias Jungbauer</span></pre>
-<pre class="whitespace-pre-wrap text-sm md:text-xl py-8"><span class="text-white">Gerne nehme ich auch Aufträge an, die von vorherigen Laboren aufgegeben oder zu nur sehr hohen Preisen angeboten wurden.
+<pre class="whitespace-pre-wrap text-sm md:text-xl py-8"><span class="text-white">Gerne nehme ich auch Aufträge an, die von vorherigen Laboren aufgegeben oder die Datenrettung zu nur wesentlich höheren Preisen angeboten wurde.
 Ich stehe zu 100% hinter meinem Tun. Meine Mission ist es die professionelle Datenrettung für möglichst jeden zugänglich zu machen.
 Weiteres dazu und warum ich dafür Festpreise als die fairste und transparenteste Methode halte erfahren Sie <a href="/blog/datenrettung-kosten" class="underline font-bold">hier</a>.<div class="flex justify-end pt-4"><button class="text-lg md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>  </span>
 <span class="font-semibold text-base md:text-xl">Die angebotene RAID-Datenrettung richtet sich an Fälle:</span>
@@ -65,9 +65,9 @@ ggf. Reparaturkosten von einer HDD oder SSD
 
 Preisbeispiele für RAID-Konfigurationen mit defekter HDD-Festplatte(n):
 z.B. RAID: Raidlevel 1 mit 2x 2TB HDD (1x davon defekt): 150,00 EUR
-z.B. RAID: Raidlevel 0 mit 2x 2TB HDD (1x davon defekt): 550,00 EUR
+z.B. RAID: Raidlevel 0 mit 2x 2TB HDD (1x davon defekt): 500,00 EUR
 z.B. RAID: Raidlevel 5 mit 32x 2TB HDD (2x davon defekt): 2800,00 EUR
-z.B. RAID: JBOD mit 4x 6TB HDD (1x davon defekt): 1500,00 EUR
+z.B. RAID: JBOD mit 4x 6TB HDD (1x davon defekt): 1450,00 EUR
 
 
 Falls noch Fragen offen sind rufen Sie am besten unter 0841 12840705 an oder schreiben eine Email an: info@jungbauerdatenrettung.de

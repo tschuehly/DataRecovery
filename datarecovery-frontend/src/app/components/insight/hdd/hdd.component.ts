@@ -28,7 +28,7 @@ import { Component } from '@angular/core';
         <pre class="whitespace-pre-wrap py-2">
 <span class="whitespace-pre-wrap py-2 text-bold text-sm md:text-lg text-silver">Updated am 27.03.22, 07:55 von Tobias Jungbauer</span> </pre>
 <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
-Gerne nehme ich auch Aufträge an, die von vorherigen Laboren aufgegeben oder zu nur sehr hohen Preisen angeboten wurden.
+Gerne nehme ich auch Aufträge an, die von vorherigen Laboren aufgegeben oder die Datenrettung zu nur wesentlich höheren Preisen angeboten wurde.
 Ich stehe zu 100% hinter meinem Tun. Meine Mission ist es die professionelle Datenrettung für möglichst jeden zugänglich zu machen.
 Weiteres dazu und warum ich dafür Festpreise als die fairste und transparenteste Methode halte erfahren Sie <a href="/blog/datenrettung-kosten" class="underline font-bold">hier</a>.<div class="flex justify-end pt-4"><button class="text-lg md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
 <span class="font-semibold text-base md:text-xl">Es wird die Datenrettung für HDD-Festplatten angeboten, die z.B.:</span>
@@ -122,9 +122,9 @@ Dieser besitzt einen Abscheidegrad von 99,995%. Das bedeutet, dass der Filter be
 
 Festpreisliste nach von Ihnen definierten Erfolg:
 Defekte HDD-Festplatte bis 1TB Festplattenkapazität: 300,00 €*
-Defekte HDD-Festplatte bis 2TB Festplattenkapazität: 400,00 €*
-Defekte HDD-Festplatte bis 4TB Festplattenkapazität: 500,00 €*
-Defekte HDD-Festplatte bis 6TB Festplattenkapazität: 600,00 €*
+Defekte HDD-Festplatte bis 2TB Festplattenkapazität: 350,00 €*
+Defekte HDD-Festplatte bis 4TB Festplattenkapazität: 450,00 €*
+Defekte HDD-Festplatte bis 6TB Festplattenkapazität: 550,00 €*
 *bereits inkl. 19% Mehrwertsteuer
 </span>
         <h2 class="text-base md:text-xl underline font-bold my-6">Verwendete Hard- Und Software</h2><pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
