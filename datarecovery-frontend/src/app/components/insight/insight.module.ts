@@ -19,5 +19,6 @@ import { AboutComponent } from './about/about.component';
     AboutComponent
   ],
   imports: [CommonModule, InsightRoutingModule],
+  providers: []
 })
 export class InsightModule {}

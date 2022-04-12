@@ -8,7 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { ClickOutsideModule } from 'ng-click-outside';
-import { PricesComponent } from './containers/prices/prices.component';
+import { PricesComponent } from './components/prices/prices.component';
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
 import { AboutComponent } from './components/insight/about/about.component';
@@ -17,7 +17,7 @@ import {
   NgcCookieConsentModule,
 } from 'ngx-cookieconsent';
 import { GoogleAnalyticsService } from './services/google-analytics.service';
-import { SiteNotFoundComponent } from './containers/site-not-found/site-not-found.component';
+import { SiteNotFoundComponent } from './components/site-not-found/site-not-found.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { HomeModule } from './components/home/home.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';

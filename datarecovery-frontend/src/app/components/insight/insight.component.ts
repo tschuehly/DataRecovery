@@ -1,20 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-insight',
-  template: `
-    <p>
-      insight works!
-    </p>
-  `,
-  styles: [
-  ]
+  template: ` <router-outlet></router-outlet> `,
+  styles: [],
 })
-export class InsightComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class InsightComponent {
+  constructor() {}
 }

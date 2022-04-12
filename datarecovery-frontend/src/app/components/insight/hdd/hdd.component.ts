@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, EventEmitter, Output } from '@angular/core';
+import { ScrollService } from '../../../services/scroll.service';
 @Component({
   selector: 'app-hdd',
   template: `
@@ -114,7 +114,7 @@ Dieser besitzt einen Abscheidegrad von 99,995%. Das bedeutet, dass der Filter be
 ❷<img class="h-80 object-cover object-right" src="assets/articles/1648419003590-min.jpg">
 ❸<img class="h-80 object-cover object-right" src="assets/articles/1648418965066-min.jpg">
 </div>
-❶ Wasserschäden 
+❶ Wasserschäden
 ❷ stark Verformte/zerfetzte Schreib-/Leseköpfe
 ❸ Beschädigte Oberflächen
 
@@ -127,7 +127,7 @@ Defekte HDD-Festplatte bis 6TB Festplattenkapazität: 550,00 €*
 </span>
         <h2 class="text-base md:text-xl underline font-bold my-6">Verwendete Hard- Und Software</h2><pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
 Das PC-3000 UDMA ist eine Hardware-Software-Lösung zur Diagnose und Reparatur von Festplatten auf Basis von SATA- (Serial ATA) und ATA- (IDE) Schnittstellen für zahlreiche Hersteller (Seagate, Western Digital, Fujitsu, Samsung, Maxtor, Quantum, IBM (HGST) ), HITACHI, TOSHIBA), für verschiedene Kapazitäten (von 500 MB bis 8 TB) und verschiedene Formfaktoren: 3,5 "- Desktop-Laufwerke, 2,5" - und 1,8 "- Laptop-Laufwerke.
-Das PC-3000 UDMA bildet zusammen mit dem Data Extractor UDMA das PC-3000 UDMA Professional-System, mit dem Daten von der SATA-, ATA- (IDE-) Festplatte wiederhergestellt werden können. Wenn Sie Ihre Festplatte reparieren lassen möchten, benötigen Sie eine Lösung wie durch das PC-3000 UDMA. </pre>  
+Das PC-3000 UDMA bildet zusammen mit dem Data Extractor UDMA das PC-3000 UDMA Professional-System, mit dem Daten von der SATA-, ATA- (IDE-) Festplatte wiederhergestellt werden können. Wenn Sie Ihre Festplatte reparieren lassen möchten, benötigen Sie eine Lösung wie durch das PC-3000 UDMA. </pre>
 Ein zweikanaliger Spannungsversorgungsadapter befindet sich auf der Platinensteuerung und bietet eine unabhängige Spannungsversorgung von +5 V, +12 V sowie Schutz vor Überspannungs- und Stromüberlastung. Im Notfall wird die Stromversorgung der Festplatte automatisch abgeschaltet.
 Zusätzlich verfügt jeder Kanal über eine Rückkopplungsschaltung mit spezieller Verwaltungssoftware, die die Versorgungsspannungswerte steuert und den Benutzer über Probleme mit der Speiseschaltung informiert.
 </pre>
@@ -150,5 +150,5 @@ Zusätzlich verfügt jeder Kanal über eine Rückkopplungsschaltung mit speziell
   styles: [],
 })
 export class HddComponent {
-  constructor() {}
+  constructor(public scrollService: ScrollService) {}
 }

@@ -92,7 +92,7 @@ import { Component } from '@angular/core';
                 <div>Festpreis</div>
                 <div>300,00 €</div>
                 <div>350,00 €</div>
-                <div>450,00 €</div>
+                <div>475,00 €</div>
               </div>
               <div class="p-4 leading-relaxed border-l border-white">
                 <div>Kapazität</div>

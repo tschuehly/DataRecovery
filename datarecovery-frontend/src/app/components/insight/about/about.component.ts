@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScrollService } from 'src/app/services/scroll.service';
 
 @Component({
   selector: 'app-about',
@@ -94,5 +95,5 @@ Ich hoffe, dass Sie mein Angebot als fair empfinden werden und ich Sie mit meine
   styles: [],
 })
 export class AboutComponent {
-  constructor() {}
+  constructor(public scrollService: ScrollService) {}
 }

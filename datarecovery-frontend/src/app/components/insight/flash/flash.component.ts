@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollService } from 'src/app/services/scroll.service';
 
 @Component({
   selector: 'app-flash',
@@ -86,5 +87,5 @@ Falls noch Fragen offen sind rufen Sie am besten unter 0841 12840705 an oder sch
   styles: [],
 })
 export class FlashComponent {
-  constructor() {}
+  constructor(public scrollService: ScrollService) {}
 }

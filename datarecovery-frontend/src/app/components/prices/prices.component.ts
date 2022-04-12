@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Category, Product } from '../../model/model';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { ScrollService } from 'src/app/services/scroll.service';
 
 @Component({
   selector: 'app-prices',
@@ -25,7 +26,9 @@ import { Router } from '@angular/router';
     </div>
     <div class="bg-gray-main  ">
       <div class="container flex ">
-        <div class="text-white text-base md:text-xl py-4 mx-auto justify-center">
+        <div
+          class="text-white text-base md:text-xl py-4 mx-auto justify-center"
+        >
           <span class="text-white">❶</span> Es handelt sich um
           <span class="text-white">Festpreise</span>, die
           <span class=" text-white">nur nach Erfolg</span> gelten.<br />
@@ -70,7 +73,7 @@ import { Router } from '@angular/router';
           <div class="flex justify-end pt-8">
             <button
               class="text-lg md:text-xl bg-white py-3 px-4 shadow rounded text-black"
-              (click)="scrollToOrder()"
+              (click)="this.scrollService.scrollToOrder()"
             >
               weiter zum Ablauf & Auftrag
             </button>
@@ -97,7 +100,7 @@ export class PricesComponent implements OnInit {
   flashProduct: Product[];
   categories: Category[];
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, public scrollService: ScrollService) {}
 
   ngOnInit(): void {
     this.http.get('api/product').subscribe((data) => {
@@ -113,18 +116,6 @@ export class PricesComponent implements OnInit {
       );
       this.categories.sort((c1, c2) => c1.sequenceId - c2.sequenceId);
       console.log(this.categories);
-    });
-  }
-
-  scrollToOrder(): void {
-    this.router.navigate(['']).then((_) => {
-      setTimeout(function () {
-        let orderForm = document.getElementById('order_form');
-        orderForm.scrollIntoView({
-          behavior: 'smooth',
-          block: 'center',
-        });
-      }, 200);
     });
   }
 }

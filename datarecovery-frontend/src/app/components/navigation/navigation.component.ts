@@ -154,29 +154,36 @@ declare let gtag: Function;
             class="cursor-pointer"
             >Kontakt</a
           >
-          <ng-container *ngIf="currentUser">
-            <a
-              (click)="mobileNavShow = false"
-              class="cursor-pointer"
-              routerLink="/admin/order"
-              >Bestellungen</a
-            >
-            <a
-              (click)="mobileNavShow = false"
-              class="cursor-pointer"
-              routerLink="/admin/product"
-              >Produkte</a
-            >
-            <a
-              (click)="mobileNavShow = false"
-              class="cursor-pointer"
-              routerLink="/admin/category"
-              >Kategorien</a
-            >
-          </ng-container>
         </div>
       </nav>
-
+      <div class="bg-neutral-700 text-white flex justify-around py-4">
+        <ng-container *ngIf="currentUser">
+          <a
+            (click)="mobileNavShow = false"
+            class="cursor-pointer"
+            routerLink="/admin/order"
+            >Bestellungen</a
+          >
+          <a
+            (click)="mobileNavShow = false"
+            class="cursor-pointer"
+            routerLink="/admin/keyword"
+            >Keyword</a
+          >
+          <a
+            (click)="mobileNavShow = false"
+            class="cursor-pointer"
+            routerLink="/admin/product"
+            >Produkte</a
+          >
+          <a
+            (click)="mobileNavShow = false"
+            class="cursor-pointer"
+            routerLink="/admin/category"
+            >Kategorien</a
+          >
+        </ng-container>
+      </div>
       <div class="flex-grow">
         <router-outlet></router-outlet>
       </div>
@@ -188,7 +195,7 @@ declare let gtag: Function;
         <div class="flex justify-around items-center text-base md:text-lg pb-4">
           <h2>
             <span class="font-semibold pb-2">Noch offene Fragen? </span>
-            <p> Ein Anruf klärt es am schnellsten: </p>
+            <p>Ein Anruf klärt es am schnellsten:</p>
           </h2>
           <button (click)="showPhone = false">
             <img alt="close" class="inline" src="assets/x.svg" />
@@ -327,8 +334,10 @@ declare let gtag: Function;
           <div
             class=" border-b py-4 divide-x-2 text-lg md:text-xl divide-silver text-gray-50"
           >
-            <a routerLink="impressum" class="pr-4 text-sm md:text-xl">Impressum</a
-            ><a routerLink="datenschutz" class="px-4 text-sm md:text-xl">Datenschutz</a
+            <a routerLink="impressum" class="pr-4 text-sm md:text-xl"
+              >Impressum</a
+            ><a routerLink="datenschutz" class="px-4 text-sm md:text-xl"
+              >Datenschutz</a
             ><a class="pl-4 text-sm md:text-xl" routerLink="agb">AGB</a>
           </div>
           <div
@@ -423,7 +432,7 @@ export class NavigationComponent implements OnInit {
         document.getElementById('priceList').offsetHeight -
         200;
       if (pos > max) {
-        if (this.showPhoneCounter < 1 ) {
+        if (this.showPhoneCounter < 1) {
           this.showPhone = true;
         }
         this.showPhoneCounter += 1;
