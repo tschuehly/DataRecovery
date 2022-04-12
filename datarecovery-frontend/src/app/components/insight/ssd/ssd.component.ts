@@ -29,6 +29,10 @@ import { Component, OnInit } from '@angular/core';
           class="whitespace-pre-wrap py-2"
         ><span class="text-bold text-sm md:text-lg text-silver">Updated am 03.12.2021, 18:05 von Tobias Jungbauer</span></pre>
         <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
+Gerne nehme ich auch Aufträge an, die von vorherigen Laboren aufgegeben oder zu nur sehr hohen Preisen angeboten wurden.
+Ich stehe zu 100% hinter meinem Tun. Meine Mission ist es die professionelle Datenrettung für möglichst jeden zugänglich zu machen.
+Weiteres dazu und warum ich dafür Festpreise als die fairste und transparenteste Methode halte erfahren Sie <a href="/blog/datenrettung-kosten" class="underline font-bold">hier</a>.<div class="flex justify-end pt-4"><button class="text-lg md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
+
 Tatsächlich sind bei über 90% der defekten SSD-Speicher, die nicht mehr erkannt werden, einer der NAND-Chips die Fehlerursache. Warum ist das so? Die SSD eigene Firmware wird auch auf den Speicherbausteinen abgespeichert.
 
 Wenn vom Chip nun zu viele Teile der Firmware nicht mehr für den Controller lesbar werden, schafft die SSD es nicht mehr zu booten.
@@ -56,7 +60,7 @@ Defekte SSD-Festplatte bis 1TB Festplattenkapazität: 250,00 €*
 Defekte SSD-Festplatte bis 2TB Festplattenkapazität: 350,00 €*
 Defekte SSD-Festplatte bis 4TB Festplattenkapazität: 450,00 €*
 *bereits inkl. 19% Mehrwertsteuer
-<div class="flex justify-end pt-4"><button class="text-lg md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
+
 Falls noch Fragen offen sind rufen Sie am besten unter 0841 12840705 an oder schreiben eine Email an: info@jungbauerdatenrettung.de
     </pre>
       </div>
