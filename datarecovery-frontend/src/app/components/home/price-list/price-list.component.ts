@@ -107,7 +107,7 @@ import { Component } from '@angular/core';
               </h2>
               <div class="p-4 leading-relaxed border-r border-white">
                 <div>Festpreis</div>
-                <div>200,00 €</div>
+                <div>225,00 €</div>
                 <div>250,00 €</div>
                 <div>300,00 €</div>
               </div>
