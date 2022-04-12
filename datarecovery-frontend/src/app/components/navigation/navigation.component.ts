@@ -156,7 +156,7 @@ declare let gtag: Function;
           >
         </div>
       </nav>
-      <div class="bg-neutral-700 text-white flex justify-around py-4">
+      <div class="bg-white text-black flex justify-around py-4">
         <ng-container *ngIf="currentUser">
           <a
             (click)="mobileNavShow = false"

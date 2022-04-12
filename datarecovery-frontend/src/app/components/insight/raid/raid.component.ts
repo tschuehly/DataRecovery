@@ -22,7 +22,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
       </h1>
     </div>
     <div class="bg-gray-main border-b-2 border-silver">
-      <div class="text-white container py-8">
+      <div class="text-white container py-8 px-3">
         <span class="text-xl md:text-2xl font-bold underline"
           >RAID Datenrettung (z.B. RAID 0, 1, 5 oder JBOD):</span
         >
