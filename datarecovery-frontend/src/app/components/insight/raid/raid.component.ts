@@ -28,9 +28,7 @@ import { Component } from '@angular/core';
         <pre
           class="whitespace-pre-wrap py-2"
         ><span class="text-bold text-sm md:text-lg text-silver">Updated am 31.03.2022, 21:22 von Tobias Jungbauer</span></pre>
-<pre class="whitespace-pre-wrap text-sm md:text-xl py-8"><span class="text-white">Gerne nehme ich auch Aufträge an, die von vorherigen Laboren aufgegeben oder die Datenrettung zu nur wesentlich höheren Preisen angeboten wurde.
-Ich stehe zu 100% hinter meinem Tun. Meine Mission ist es die professionelle Datenrettung für möglichst jeden zugänglich zu machen.
-Weiteres dazu und warum ich dafür Festpreise als die fairste und transparenteste Methode halte erfahren Sie <a href="/blog/datenrettung-kosten" class="underline font-bold">hier</a>.<div class="flex justify-end pt-4"><button class="text-lg md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>  </span>
+<pre class="whitespace-pre-wrap text-sm md:text-xl py-8"><span class="text-white">Gerne nehme ich auch Aufträge an, die von vorherigen Laboren aufgegeben oder die Datenrettung zu nur wesentlich höheren Preisen angeboten wurde. Ich stehe zu 100% hinter meinem Tun. Meine Mission ist es die professionelle Datenrettung für möglichst jeden zugänglich zu machen. Weiteres dazu und warum ich dafür Festpreise als die fairste und transparenteste Methode halte erfahren Sie <a href="/blog/datenrettung-kosten" class="underline font-bold">hier</a>.<div class="flex justify-end pt-4"><button class="text-lg md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>  </span>
 <span class="font-semibold text-base md:text-xl">Die angebotene RAID-Datenrettung richtet sich an Fälle:</span>
 wenn ein "Rebuild" nicht möglich oder bereits gescheitert ist, z.B. wenn es sich um ein RAID 0 oder JBOD handelt, mehrere Volumes bei RAID 1 oder 5 beschädigt worden sind oder der RAID-Controller selbst defekt ist. Oftmals verursacht auch die Firmware der RAID Controller von Synology, QNAP und co. nach gescheiterten Rebuildversuch das ungewünschte Löschen des Dateisystems.
 
