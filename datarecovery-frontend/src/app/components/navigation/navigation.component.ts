@@ -156,8 +156,7 @@ declare let gtag: Function;
           >
         </div>
       </nav>
-      <div class="bg-white text-black flex justify-around py-4">
-        <ng-container *ngIf="currentUser">
+      <div *ngIf="currentUser" class="bg-neutral-700 text-white flex justify-around py-4">
           <a
             (click)="mobileNavShow = false"
             class="cursor-pointer"
@@ -182,7 +181,6 @@ declare let gtag: Function;
             routerLink="/admin/category"
             >Kategorien</a
           >
-        </ng-container>
       </div>
       <div class="flex-grow">
         <router-outlet></router-outlet>
