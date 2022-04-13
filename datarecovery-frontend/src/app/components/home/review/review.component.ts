@@ -12,7 +12,7 @@ import { ReviewDetailDTO } from '../../../model/model';
             Google Bewertungen
           </h3>
 
-          <div class="flex justify-center pt-4 items-center">
+          <div class="flex justify-center pt-2 items-center">
             <svg
               class=" text-yellow-400 mx-1 w-8 h-8 fill-current"
               xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +59,7 @@ import { ReviewDetailDTO } from '../../../model/model';
               />
             </svg>
           </div>
-          <span class="flex justify-center text-xl md:text-2xl ml-4">
+          <span class="flex justify-center text-lg md:text-xl ml-4 pt-2">
             Ø {{ this.reviewDetail?.rating | number: '1.1' }} bei
             {{ this.reviewDetail?.userRatingsCount }} Bewertungen
           </span>
@@ -88,7 +88,7 @@ import { ReviewDetailDTO } from '../../../model/model';
               ></div>
               <div>
                 <div
-                  class="flex flex-wrap sm:space-x-4 items-center flex-col space-y-2 sm:flex-row justify-center sm:justify-start"
+                  class="flex flex-wrap sm:space-x-4 items-center px-2 flex-col space-y-2 sm:flex-row justify-center sm:justify-start"
                 >
                   <a
                     href="{{ this.reviews[this.reviewIndex].author_url }}"
@@ -174,7 +174,7 @@ import { ReviewDetailDTO } from '../../../model/model';
                 </div>
                 <div class="mt-3">
                   <p
-                    class=" mt-1 max-w-xl pb-4  text-lg md:text-xl text-gray-300"
+                    class=" mt-1 max-w-xl pb-4 px-2 text-base md:text-lg text-gray-300"
                   >
                     {{
                       showReview
@@ -183,21 +183,21 @@ import { ReviewDetailDTO } from '../../../model/model';
                     }}
                   </p>
                 </div>
-                <div class="flex justify-between text-lg md:text-xl space-x-2">
+                <div class="flex justify-between text-sm md:text-lg px-2 space-x-2">
                   <a
-                    class="border border-gray-300  text-lg md:text-xl p-2 rounded"
+                    class="border border-gray-300 text-lg md:text-xl p-2 rounded"
                     href="https://search.google.com/local/reviews?placeid=ChIJU5PnJJcznEcRy2VAwpDd1Dc&q=Tobias+Jungbauer+Datenrettung+-+AmmerseeDatenrettung.de&hl=de&gl=DE"
                   >
                     Alle Bewertungen einsehen
                   </a>
                   <button
-                    class="text-lg md:text-xl"
+                    
                     *ngIf="
                       this.reviews[this.reviewIndex].text.split(' ').length > 40
                     "
                     (click)="showReview = !showReview"
                   >
-                    vollständige Rezension lesen
+                    ... vollständige Rezension lesen
                   </button>
                 </div>
               </div>

@@ -9,7 +9,7 @@ import { Order, Product } from '../../../model/model';
       <h1>Auftragsformular</h1>
     </div>
     <form [formGroup]="this.orderForm" (ngSubmit)="onSubmit()">
-      <div class="flex flex-col gap-2">
+      <div class="flex flex-col gap-2 text-base md:text-lg">
         <ng-container *ngIf="!productFormFilled">
           <label class="py-4 px-12"
             >Auftrag zur Datenrettung:
@@ -80,15 +80,15 @@ import { Order, Product } from '../../../model/model';
               formControlName="note"
             ></textarea>
           </label>
-          <h2 class="font-semibold text-sm md:text-xl inline text-center">
+          <h2 class="font-semibold text-base md:text-lg inline text-center py-4">
             <a
-              class="font-semibold text-sm md:text-xl underline"
+              class="font-semibold underline"
               routerLink="rechtliches/agb"
               >Allgemeine Geschäftsbedingungen</a
             >
             und
             <a
-              class="font-semibold text-sm md:text-xl underline"
+              class="font-semibold  underline"
               routerLink="rechtliches/datenschutz"
               >Datenschutzrichtlinien</a
             >

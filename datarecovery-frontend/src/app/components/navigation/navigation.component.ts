@@ -281,14 +281,14 @@ declare let gtag: Function;
             ></iframe>
           </div>
         </ng-container>
-        <div class="mb-4 text-center">
+        <div class="mb-4 py-4 text-center">
           <div
             class=" flex flex-col md:flex-row justify-evenly pb-4"
             id="contact"
           >
             <div>
               <h1
-                class="font-semibold pt-4 md:mt-0 mb-2 text-xl md:text-3xl text-center text-gray-50"
+                class="font-semibold pt-4 md:mt-0 mb-2 text-2xl md:text-3xl text-center text-gray-50"
               >
                 Kontakt
               </h1>
@@ -311,7 +311,7 @@ declare let gtag: Function;
 
             <div>
               <h1
-                class="font-semibold pt-4 md:mt-0 mb-2 text-xl md:text-3xl text-center text-white"
+                class="font-semibold pt-4 md:mt-0 mb-2 text-2xl md:text-3xl text-center text-white"
               >
                 Adresse
               </h1>
@@ -327,16 +327,17 @@ declare let gtag: Function;
           </div>
 
           <div
-            class=" border-b py-4 divide-x-2 text-lg md:text-xl divide-silver text-gray-50"
+            class="border-b pt-10 py-4 divide-x-2 text-lg md:text-xl divide-silver text-gray-50"
           >
-            <a routerLink="/rechtliches/impressum" class="pr-4 text-sm md:text-xl"
+            <a routerLink="/rechtliches/impressum" class="px-4 text-sm md:text-xl"
               >Impressum</a
             ><a routerLink="/rechtliches/datenschutz" class="px-4 text-sm md:text-xl"
               >Datenschutz</a
-            ><a class="pl-4 text-sm md:text-xl" routerLink="/rechtliches/agb">AGB</a>
+            ><a routerLink="/rechtliches/agb" class="px-4 text-sm md:text-xl"
+              >AGB</a>
           </div>
           <div
-            class="col-span-2 text-lg md:text-xl py-16 divide-x-2 divide-silver"
+            class="col-span-2 pt-5 text-base md:text-lg divide-x-2 divide-silver"
           >
             <span class="pr-4"
               >Website developed by

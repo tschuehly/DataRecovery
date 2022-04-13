@@ -8,13 +8,13 @@ import { Component } from '@angular/core';
       id="priceList"
     >
       <h2
-        class="py-8 text-3xl md:text-4xl tracking-wider text-center text-gray-50"
+        class="pt-10 py-4 text-3xl md:text-4xl tracking-wider text-center text-gray-50"
       >
         Ein Festpreis auch für komplexe Fälle
       </h2>
 
       <div
-        class="container px-4 md:px-8 py-10 text-center break-words rounded-2xl text-lg"
+        class="container px-4 md:px-8 py-8 text-center break-words rounded-2xl"
       >
         <div
           class="bg-gray-main rounded-2xl"
@@ -39,16 +39,16 @@ import { Component } from '@angular/core';
               </picture>
             </div>
             <div class="grid grid-cols-2 pb-4">
-              <h2 class="col-span-2 p-4 text-xl md:text-2xl text">
+              <h2 class="col-span-2 p-4  text-xl">
                 Defekte(r) USB Stick / (micro-) SD Karte
               </h2>
-              <div class="p-4 leading-relaxed border-r border-white">
+              <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
                 <div>Festpreis</div>
                 <div>50,00 €</div>
                 <div>75,00 €</div>
                 <div>150,00 €</div>
               </div>
-              <div class="p-4 leading-relaxed border-l border-white">
+              <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
                 <div>Kapazität</div>
                 <div>≤ 8 GB</div>
                 <div>≤ 16 GB</div>
@@ -85,16 +85,16 @@ import { Component } from '@angular/core';
               </picture>
             </div>
             <div class="grid grid-cols-2 py-4">
-              <h2 class="col-span-2 p-4 text-xl md:text-2xl text">
+              <h2 class="col-span-2 p-4 text-xl">
                 Defekte HDD-Festplatte
               </h2>
-              <div class="p-4 leading-relaxed border-r border-white">
+              <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
                 <div>Festpreis</div>
                 <div>300,00 €</div>
                 <div>350,00 €</div>
                 <div>475,00 €</div>
               </div>
-              <div class="p-4 leading-relaxed border-l border-white">
+              <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
                 <div>Kapazität</div>
                 <div>≤ 1 TB</div>
                 <div>≤ 2 TB</div>
@@ -102,16 +102,16 @@ import { Component } from '@angular/core';
               </div>
             </div>
             <div class="grid grid-cols-2 py-4">
-              <h2 class="col-span-2 p-4 text-xl md:text-2xl text">
+              <h2 class="col-span-2 p-4 text-xl">
                 Defekte SSD-Speicher (SATA-basiert)
               </h2>
-              <div class="p-4 leading-relaxed border-r border-white">
+              <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
                 <div>Festpreis</div>
                 <div>225,00 €</div>
                 <div>250,00 €</div>
                 <div>300,00 €</div>
               </div>
-              <div class="p-4 leading-relaxed border-l border-white">
+              <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
                 <div>Kapazität</div>
                 <div>≤ 512 GB</div>
                 <div>≤ 1 TB</div>
@@ -149,10 +149,10 @@ import { Component } from '@angular/core';
               </picture>
             </div>
             <div class="grid pb-4">
-              <h2 class="p-4 text-xl md:text-2xl text">
+              <h2 class="p-4 text-xl">
                 RAID & Apple Fusion Drive (iMac)
               </h2>
-              <div class="px-4 pl-8 leading-relaxed text-left">
+              <div class="px-4 py-2 pl-8 leading-relaxed text-left text-base md:text-lg">
                 abhängig von:
                 <div>- Anzahl an Festplatten</div>
                 <div>- Kapazität pro Festplatte</div>
@@ -178,7 +178,7 @@ import { Component } from '@angular/core';
           <div
             class="flex flex-col justify-between p-4 text-black md:flex-row bg-silver rounded-b-2xl"
           >
-            <div class="self-center text-base">
+            <div class="self-center text-base md:text-lg">
               Alle angegebenen Preise sind bereits inklusive 19% Mehrwertsteuer.
             </div>
 
