@@ -64,18 +64,12 @@ declare let gtag: Function;
             mobileNavShow ? 'flex flex-col space-x-0' : 'hidden md:flex'
           "
         >
-          <a
+        <a
             class="cursor-pointer"
             (click)="scrollToOrder(); mobileNavShow = false"
             >Auftragsformular</a
           >
-          <a
-            class="cursor-pointer"
-            (click)="mobileNavShow = false"
-            routerLink="preise"
-            href="preise"
-            >Preise</a
-          >
+        
           <div
             class="h-full text-left flex self-center"
             (clickOutside)="dropdownShow = false"
@@ -86,8 +80,9 @@ declare let gtag: Function;
             <a
               class="cursor-pointer self-center "
               (click)="dropdownShow = !dropdownShow"
-              >Einblick</a
+              >Wie funktioniert es?</a
             >
+            
             <div
               class="border-solid border-2 border-black grid ga absolute justify-evenly p-4 bg-gray-300 text-2xl dropdown text-black py-4 space-y-4"
               *ngIf="dropdownShow"
@@ -136,11 +131,11 @@ declare let gtag: Function;
             </div>
           </div>
           <a
-            (click)="mobileNavShow = false"
             class="cursor-pointer"
-            routerLink="philosophie"
-            href="philosophie"
-            >Philosophie</a
+            (click)="mobileNavShow = false"
+            routerLink="preise"
+            href="preise"
+            >Preise</a
           >
           <a
             class="cursor-pointer"
@@ -149,6 +144,7 @@ declare let gtag: Function;
             href="blog"
             >Blog</a
           >
+          
           <a
             (click)="mobileNavShow = false; scrollToContact()"
             class="cursor-pointer"
