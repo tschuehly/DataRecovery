@@ -288,16 +288,17 @@ declare let gtag: Function;
           >
             <div>
               <h1
-                class="pt-4 md:mt-0 mb-2 text-2xl md:text-4xl text-center text-gray-50"
+                class="font-semibold pt-4 md:mt-0 mb-2 text-xl md:text-3xl text-center text-gray-50"
               >
                 Kontakt
               </h1>
               <p
-                class="font-semibold text-center text-lg md:text-2xl text-white"
+                class=" text-center text-lg md:text-xl text-white"
               >
-                Email:
+                E-Mail:
                 <a href="mailto:info@jungbauerdatenrettung.de"
-                  ><span class="text-white"
+                  >
+                  <span class="text-white"
                     >info@jungbauerdatenrettung.de</span
                   ></a
                 ><br />
@@ -310,12 +311,12 @@ declare let gtag: Function;
 
             <div>
               <h1
-                class="pt-4 md:mt-0 mb-2 text-2xl md:text-4xl text-center text-white"
+                class="font-semibold pt-4 md:mt-0 mb-2 text-xl md:text-3xl text-center text-white"
               >
                 Adresse
               </h1>
               <p
-                class="font-semibold text-lg md:text-2xl  text-white text-center"
+                class=" text-lg md:text-xl  text-white text-center"
               >
                 Tobias Jungbauer<br />
                 Datenrettung<br />
