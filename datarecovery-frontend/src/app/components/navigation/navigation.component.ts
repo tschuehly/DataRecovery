@@ -332,11 +332,11 @@ declare let gtag: Function;
           <div
             class=" border-b py-4 divide-x-2 text-lg md:text-xl divide-silver text-gray-50"
           >
-            <a routerLink="impressum" class="pr-4 text-sm md:text-xl"
+            <a routerLink="/rechtliches/Impressum" class="pr-4 text-sm md:text-xl"
               >Impressum</a
-            ><a routerLink="datenschutz" class="px-4 text-sm md:text-xl"
+            ><a routerLink="/rechtliches/datenschutz" class="px-4 text-sm md:text-xl"
               >Datenschutz</a
-            ><a class="pl-4 text-sm md:text-xl" routerLink="agb">AGB</a>
+            ><a class="pl-4 text-sm md:text-xl" routerLink="/rechtliches/agb">AGB</a>
           </div>
           <div
             class="col-span-2 text-lg md:text-xl py-16 divide-x-2 divide-silver"
