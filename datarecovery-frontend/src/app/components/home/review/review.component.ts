@@ -9,7 +9,7 @@ import { ReviewDetailDTO } from '../../../model/model';
       <div class="flex justify-center text-center text-black">
         <div>
           <h3 class="text-3xl md:text-4xl font-semibold ">
-            Google Bewertungen
+            Wir sind fair & zuverlässig
           </h3>
 
           <div class="flex justify-center pt-2 items-center">

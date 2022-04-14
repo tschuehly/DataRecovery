@@ -43,15 +43,17 @@ import { Component } from '@angular/core';
                 Defekte(r) USB Stick / (micro-) SD Karte
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
-                <div>Festpreis</div>
+              <div class="pb-2">Festpreise</div>
                 <div>50,00 €</div>
                 <div>75,00 €</div>
+                <div>100,00 €</div>
                 <div>150,00 €</div>
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
-                <div>Kapazität</div>
+                <div class="pb-2">Speichergrößen</div>
                 <div>≤ 8 GB</div>
                 <div>≤ 16 GB</div>
+                <div>≤ 32 GB</div>
                 <div>≤ 64 GB</div>
               </div>
             </div>
@@ -89,16 +91,18 @@ import { Component } from '@angular/core';
                 Defekte HDD-Festplatte
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
-                <div>Festpreis</div>
+              <div class="pb-2">Festpreise</div>
                 <div>300,00 €</div>
                 <div>350,00 €</div>
                 <div>475,00 €</div>
+                <div>600,00 €</div>
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
-                <div>Kapazität</div>
+              <div class="pb-2">Speichergrößen</div>
                 <div>≤ 1 TB</div>
                 <div>≤ 2 TB</div>
                 <div>≤ 4 TB</div>
+                <div>≤ 6 TB</div>
               </div>
             </div>
             <div class="grid grid-cols-2 py-4">
@@ -106,16 +110,18 @@ import { Component } from '@angular/core';
                 Defekte SSD-Speicher (SATA-basiert)
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
-                <div>Festpreis</div>
+              <div class="pb-2">Festpreise</div>
                 <div>225,00 €</div>
                 <div>250,00 €</div>
                 <div>300,00 €</div>
+                <div>425,00 €</div>
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
-                <div>Kapazität</div>
+              <div class="pb-2">Speichergrößen</div>
                 <div>≤ 512 GB</div>
                 <div>≤ 1 TB</div>
                 <div>≤ 2 TB</div>
+                <div>≤ 4 TB</div>
               </div>
             </div>
 
