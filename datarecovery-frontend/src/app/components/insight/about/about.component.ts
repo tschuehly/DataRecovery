@@ -26,18 +26,18 @@ import { ScrollService } from 'src/app/services/scroll.service';
         <div class="container py-10 px-3">
           <pre class="whitespace-pre-wrap">
 <span class="underline text-xl md:text-2xl font-bold">Über mich</span>
-<span class="text-bold text-lg text-silver">Updated am 29.03.2022, 04:48 von Tobias Jungbauer</span>
+<span class="text-bold text-lg text-silver">Updated am 16.04.2022, 18:38 von Tobias Jungbauer</span>
 
-Mein persönlicher Anspruch ist es das beste und fairste Datenrettungsangebot anzubieten und den Markt damit zu revolutionieren. Daraus ergeben Sie u.a. folgende Punkte:
+Ich möchte die höchstmögliche Transparenz, Fairness und Qualität während der Datenrettung anbieten. Daraus ergeben Sie u.a. folgende Punkte:
 
-<span class="font-semibold ">1. Bei mir müssen Sie niemals in Vorkasse gehen:</span>
-So bearbeite ich alle meine Fälle zu einem im Verhältnis zum Markt preiswerten Festpreis und das zudem nur nach Erfolg, den Sie selber im Voraus definiert haben. Bei Misserfolg verlange ich keine Gebühren.
+<span class="font-semibold ">1. Preise unabhängig der Wichtigkeit der Daten:</span>
+Alle meine Fälle werden zu einem preiswerten Festpreis bearbeitet. Erfolgsversprechen: Bei Misserfolg entstehen keine Gebühren trotz Aufwand.
 
 <span class="font-semibold">2. Meine Transparenz:</span>
-Ich möchte die höchstmögliche Transparenz zur geleisteten Arbeit und den dazugehörigen technischen Hintergrund geben. Fragen Sie gerne nach, wie und mit welchem Werkzeug die Datenrettung durchgeführt worden ist.
+Ich möchte die Transparenz zur geleisteten Arbeit und den dazugehörigen technischen Hintergrund geben. Fragen Sie gerne nach, wie und mit welchem Werkzeug die Datenrettung durchgeführt worden ist.
 
 <span class="font-semibold">3. Vielschichtiges Angebot:</span>
-Ich bin mit meinem Know-how und meinem Equipment breit aufgestellt, so bearbeite ich nicht nur HDD und NAND Fälle, sondern biete auch SSD Datenrettung (SATA basiert) und zudem die RAID-Datenrettung an.
+Ich bin mit meinem Know-how und meinem Equipment breit aufgestellt und ausgezeichnet ausgestattet, so bearbeite ich nicht nur HDD und NAND Fälle, sondern biete auch SSD Datenrettung (SATA basiert) und zudem die RAID-Datenrettung an.
 
 Meine Gründe und Motivation für die Preisgestaltung bzw. auch das Konzept dahinter erfahren Sie <a href="/blog/datenrettung-kosten" class="underline font-bold">hier</a>.
           </pre>
@@ -77,7 +77,7 @@ Dazugekommen sind eine Laminar Flowbox, die es mir fortan erlaubte, unter Reinra
             Die Situation Heute:
           </h2>
           <pre class="whitespace-pre-wrap">
-Mittlerweile habe ich über 600 Datenrettungsfälle erfolgreich bearbeitet.
+Mittlerweile habe ich über 700 Datenrettungsfälle erfolgreich bearbeitet.
 Mit diesen kamen immer neue Herausforderungen, die nach harter Arbeit neue Lösungen hervorbrachten.
 Um die bestmögliche Erfolgsquote zu erreichen, habe ich auch weiterhin sehr viel Zeit und Geld investiert, sodass ich mittlerweile auch die schwierigsten Fälle, bei denen oftmals ein vorheriger Bearbeiter bereits aufgegeben hat, bearbeiten kann, um zumindest eine Teildatenrettung zu erzielen.
 So arbeite ich mittlerweile auch mit Festplatten mit beschädigten Oberflächen oder repariere äußerst schwierige Festplattenmodelle wie z.B. aus der Seagate Rosewood Familie, die namhafte Anbieter nicht bearbeiten wollen.

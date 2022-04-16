@@ -22,7 +22,7 @@ import { ScrollService } from '../../../services/scroll.service';
     </div>
     <div class="bg-gray-main text-white border-b-2 border-silver pb-8">
       <div class="container py-8 px-3">
-        <span class="underline text-xl md:text-2xl font-bold"
+        <span class=" text-xl md:text-2xl font-bold"
           >Datenrettung der HDD-Festplatte</span
         >
         <pre class="whitespace-pre-wrap py-2">
