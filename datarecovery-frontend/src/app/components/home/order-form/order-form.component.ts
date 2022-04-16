@@ -59,15 +59,15 @@ import { Order, Product } from '../../../model/model';
               </label>
             </div>
             <label class="py-4 px-12"
-              >Ist eine Ratenzahlung gewünscht?:
+              >Bezahlung bei erfolgreicher Datenrettung:
               <select
                 class="block mt-2 w-full text-black"
                 formControlName="monthlyPayment"
                 required
               >
-                <option selected value="1">Keine Ratenzahlung</option>
-                <option value="2">2-monatige Ratenzahlung (2% Gebühr)</option>
-                <option value="6">6-monatige Ratenzahlung (6% Gebühr)</option>
+                <option selected value="1">Auf Rechnung, 14 Tage Zahlungsfrist nach Erhalt der geretteten Daten (Standard)</option>
+                <option value="2">Auf Rechnung, 30 Tage Zahlungsfrist nach Erhalt der geretteten Daten (1% Gebühr)</option>
+                <option value="6">Auf Rechnung, 60 Tage Zahlungsfrist nach Erhalt der geretteten Daten (4% Gebühr)</option>
               </select>
             </label>
           </ng-container>
