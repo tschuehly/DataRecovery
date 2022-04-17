@@ -189,7 +189,7 @@ declare let gtag: Function;
         <div class="flex justify-around items-center text-base md:text-lg pb-4">
           <h2>
           <div class="flex justify-center">
-  <img class="h-28 pb-2" src="assets/Profil.jpg">
+  <img class="h-28 md:h-32 pb-2" src="assets/Profil.jpg">
   </div>
             <span class="font-semibold pb-2">Noch offene Fragen? </span>
             <p>Ein Anruf klärt es am schnellsten:</p>
