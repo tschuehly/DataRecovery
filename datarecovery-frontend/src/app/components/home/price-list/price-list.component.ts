@@ -44,10 +44,10 @@ import { Component } from '@angular/core';
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
               <div class="pb-2">Festpreise</div>
-                <div>49 €</div>
-                <div>75 €</div>
-                <div>99 €</div>
-                <div>149 €</div>
+                <div>49,00 €</div>
+                <div>75,00 €</div>
+                <div>99,00 €</div>
+                <div>149,00 €</div>
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
                 <div class="pb-2">Speichergrößen</div>
@@ -92,10 +92,10 @@ import { Component } from '@angular/core';
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
               <div class="pb-2">Festpreise</div>
-                <div>299 €</div>
-                <div>349 €</div>
-                <div>475 €</div>
-                <div>599 €</div>
+                <div>299,00 €</div>
+                <div>349,00 €</div>
+                <div>475,00 €</div>
+                <div>599,00 €</div>
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
               <div class="pb-2">Speichergrößen</div>
@@ -111,10 +111,10 @@ import { Component } from '@angular/core';
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
               <div class="pb-2">Festpreise</div>
-                <div>225 €</div>
-                <div>249 €</div>
-                <div>299 €</div>
-                <div>425 €</div>
+                <div>225,00 €</div>
+                <div>249,00 €</div>
+                <div>299,00 €</div>
+                <div>425,00 €</div>
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
               <div class="pb-2">Speichergrößen</div>

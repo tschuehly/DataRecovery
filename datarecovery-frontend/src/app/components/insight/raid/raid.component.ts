@@ -64,10 +64,9 @@ ggf. Reparaturkosten von einer HDD oder SSD
 
 Preisbeispiele für RAID-Konfigurationen mit defekter HDD-Festplatte(n):
 z.B. RAID: Raidlevel 1 mit 2x 2TB HDD (1x davon defekt): 150,00 EUR
-z.B. RAID: Raidlevel 0 mit 2x 2TB HDD (1x davon defekt): 500,00 EUR
-z.B. RAID: Raidlevel 5 mit 32x 2TB HDD (2x davon defekt): 2800,00 EUR
-z.B. RAID: JBOD mit 4x 6TB HDD (1x davon defekt): 1450,00 EUR
-
+z.B. RAID: Raidlevel 0 mit 2x 2TB HDD (1x davon defekt): 499,00 EUR
+z.B. RAID: Raidlevel 5 mit 30x 2TB HDD (3x davon defekt): 2849,00 EUR
+z.B. RAID: JBOD mit 4x 6TB HDD (1x davon defekt): 1499,00 EUR
 
 Falls noch Fragen offen sind rufen Sie am besten unter 0841 12840705 an oder schreiben eine Email an: info@jungbauerdatenrettung.de
         </pre
