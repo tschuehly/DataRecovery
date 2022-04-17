@@ -9,7 +9,7 @@ import { ReviewDetailDTO } from '../../../model/model';
       <div class="flex justify-center text-center text-black">
         <div>
           <h3 class="text-3xl md:text-4xl font-semibold ">
-            Zuverlässig, transparent und fair:
+            Wir sind zuverlässig, transparent & fair:
           </h3>
 
           <div class="flex justify-center pt-2 items-center">
