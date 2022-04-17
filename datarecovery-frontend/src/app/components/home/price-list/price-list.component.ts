@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
       <h2
         class="pt-10 py-4 text-3xl md:text-4xl tracking-wider text-center text-gray-50"
       >
-        Ein Festpreis auch für komplexe Fälle
+        Ein Festpreis für alle (auch Hardware-) Defekte 
       </h2>
 
       <div
@@ -44,10 +44,10 @@ import { Component } from '@angular/core';
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
               <div class="pb-2">Festpreise</div>
-                <div>50,00 €</div>
-                <div>75,00 €</div>
-                <div>100,00 €</div>
-                <div>150,00 €</div>
+                <div>49 €</div>
+                <div>75 €</div>
+                <div>99 €</div>
+                <div>149 €</div>
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
                 <div class="pb-2">Speichergrößen</div>
@@ -92,10 +92,10 @@ import { Component } from '@angular/core';
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
               <div class="pb-2">Festpreise</div>
-                <div>300,00 €</div>
-                <div>350,00 €</div>
-                <div>475,00 €</div>
-                <div>600,00 €</div>
+                <div>299 €</div>
+                <div>349 €</div>
+                <div>475 €</div>
+                <div>599 €</div>
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
               <div class="pb-2">Speichergrößen</div>
@@ -111,10 +111,10 @@ import { Component } from '@angular/core';
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
               <div class="pb-2">Festpreise</div>
-                <div>225,00 €</div>
-                <div>250,00 €</div>
-                <div>300,00 €</div>
-                <div>425,00 €</div>
+                <div>225 €</div>
+                <div>249 €</div>
+                <div>299 €</div>
+                <div>425 €</div>
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
               <div class="pb-2">Speichergrößen</div>
@@ -185,7 +185,7 @@ import { Component } from '@angular/core';
             class="flex flex-col justify-between p-4 text-black md:flex-row bg-silver rounded-b-2xl"
           >
             <div class="self-center text-base md:text-lg">
-              Alle angegebenen Preise sind bereits inklusive 19% Mehrwertsteuer.
+              Alle angegebenen Festpreise sind bereits inklusive 19% Mehrwertsteuer.
             </div>
 
             <td class="flex justify-end pt-4">
