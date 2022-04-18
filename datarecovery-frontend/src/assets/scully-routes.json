@@ -1,15 +1,1 @@
-[
-  { "route": "/" },
-  { "route": "/tracking" },
-  { "route": "/impressum" },
-  { "route": "/datenschutz" },
-  { "route": "/agb" },
-  { "route": "/philosophie" },
-  { "route": "/preise" },
-  { "route": "/blog" },
-  { "route": "/404" },
-  { "route": "/admin/order" },
-  { "route": "/admin/login" },
-  { "route": "/admin/product" },
-  { "route": "/admin/category" }
-]
+[{"route":"/"},{"route":"/preise"},{"route":"/404"},{"route":"/datenrettung/hdd"},{"route":"/datenrettung/flash"},{"route":"/datenrettung/ssd"},{"route":"/datenrettung/raid"},{"route":"/datenrettung/philosophie"},{"route":"/datenrettung"},{"route":"/rechtliches/impressum"},{"route":"/rechtliches/datenschutz"},{"route":"/rechtliches/agb"},{"route":"/tracking/order"},{"route":"/tracking/login"},{"route":"/tracking/product"},{"route":"/tracking/category"},{"route":"/tracking/keyword"}]
