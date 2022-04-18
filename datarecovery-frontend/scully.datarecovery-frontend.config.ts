@@ -20,9 +20,6 @@ export const config: ScullyConfig = {
     '/tracking': {
       type: 'ignored',
     },
-    '/api/:route': {
-      type: 'addFake',
-    },
   },
   puppeteerLaunchOptions: {
     args: ['--no-sandbox', '--disable-setuid--sandbox'],
