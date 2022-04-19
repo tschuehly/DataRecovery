@@ -119,9 +119,10 @@ Dieser besitzt einen Abscheidegrad von 99,995%. Das bedeutet, dass der Filter be
 ❸ Beschädigte Oberflächen
 
 Festpreisliste nach von Ihnen definierten Erfolg:
-Defekte HDD-Festplatte bis 1TB Festplattenkapazität: 299,00 €*
-Defekte HDD-Festplatte bis 2TB Festplattenkapazität: 349,00 €*
-Defekte HDD-Festplatte bis 4TB Festplattenkapazität: 475,00 €*
+Defekte HDD-Festplatte bis 500GB Festplattenkapazität: 299,00 €*
+Defekte HDD-Festplatte bis 1TB Festplattenkapazität: 349,00 €*
+Defekte HDD-Festplatte bis 2TB Festplattenkapazität: 399,00 €*
+Defekte HDD-Festplatte bis 4TB Festplattenkapazität: 499,00 €*
 Defekte HDD-Festplatte bis 6TB Festplattenkapazität: 599,00 €*
 *bereits inkl. 19% Mehrwertsteuer
 </span>
