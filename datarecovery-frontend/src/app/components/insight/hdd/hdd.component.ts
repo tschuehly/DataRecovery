@@ -76,8 +76,8 @@ Unsere Aufgabe ist daher diese beschädigten Module zu reparieren und zu einer a
 
 <span class="underline">- Plattern Swap, z.B. um den Motor zu tauschen oder die Oberflächen nach Beschädigungen zu inspizieren:</span>
 <div class="flex grid-cols-3 flex-wrap gap-4">
-  <img class="h-80 object-cover object-right" src="assets/hdd4.jpg">
-  <img class="h-80 object-cover object-center" src="assets/arbeitsweise_hdd_platternswap.jpg">
+  <img class="h-80 object-cover object-right" src="assets/articles/platternswap_1.jpg">
+  <img class="h-80 object-cover object-center" src="assets/articles/platternswap_2 (2).jpg">
 </div>
 Als Alternative zur Analyse der Schreib-/Leseköpfe kann man auch die Oberflöchen direkt inspizieren.
 Das ist z.B. nötig, wenn die Festplatte bereits woanders neue Schreib-/Leseköpfe bekommen hat und die Originalen nicht mehr vorhanden sind.
@@ -119,10 +119,10 @@ Dieser besitzt einen Abscheidegrad von 99,995%. Das bedeutet, dass der Filter be
 ❸ Beschädigte Oberflächen
 
 Festpreisliste nach von Ihnen definierten Erfolg:
-Defekte HDD-Festplatte bis 1TB Festplattenkapazität: 300,00 €*
-Defekte HDD-Festplatte bis 2TB Festplattenkapazität: 350,00 €*
-Defekte HDD-Festplatte bis 4TB Festplattenkapazität: 450,00 €*
-Defekte HDD-Festplatte bis 6TB Festplattenkapazität: 550,00 €*
+Defekte HDD-Festplatte bis 1TB Festplattenkapazität: 299,00 €*
+Defekte HDD-Festplatte bis 2TB Festplattenkapazität: 349,00 €*
+Defekte HDD-Festplatte bis 4TB Festplattenkapazität: 475,00 €*
+Defekte HDD-Festplatte bis 6TB Festplattenkapazität: 599,00 €*
 *bereits inkl. 19% Mehrwertsteuer
 </span>
         <h2 class="text-base md:text-xl underline font-bold my-6">Verwendete Hard- Und Software</h2><pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
