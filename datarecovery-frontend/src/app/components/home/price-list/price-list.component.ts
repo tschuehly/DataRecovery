@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
       id="priceList"
     >
       <h2
-        class="pt-10 py-4 text-3xl md:text-4xl tracking-wider text-center text-gray-50"
+        class="pt-10 py-4 text-2xl md:text-4xl tracking-wider text-center text-gray-50"
       >
         Ein Festpreis für alle (auch Hardware-) Defekte 
       </h2>

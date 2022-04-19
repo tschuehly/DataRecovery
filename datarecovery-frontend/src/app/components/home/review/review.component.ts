@@ -8,7 +8,7 @@ import { ReviewDetailDTO } from '../../../model/model';
     <div class="text-white button my-8">
       <div class="flex justify-center text-center text-black">
         <div>
-          <h3 class="text-3xl md:text-4xl font-semibold ">
+          <h3 class="text-2xl md:text-4xl font-semibold ">
             Wir sind zuverlässig, transparent & fair:
           </h3>
 
