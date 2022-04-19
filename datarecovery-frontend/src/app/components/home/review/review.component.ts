@@ -69,13 +69,13 @@ import { ReviewDetailDTO } from '../../../model/model';
         class="px-0 py-4 flex flex-col justify-evenly items-center md:flex-row gap-4"
       >
         <button
-          class="hidden md:block w-14 h-14 shrink-0 bg-gray-main rounded-full ml-4"
+          class="hidden md:block w-7 h-7 md:w-12 md:h-12 shrink-0 bg-gray-main rounded-full ml-4"
           (click)="previousReview()"
         >
           <img src="/assets/arrow-left.svg" />
         </button>
-        <div class="">
-          <div class="rounded-xl bg-gray-main p-6 mx-4 md:mx-0">
+        <div class="px-0 py-4 flex flex-col justify-evenly items-center md:flex-row gap-4">
+          <div class="rounded-xl bg-gray-main p-6 mx-6 md:mx-0">
             <div class="flex items-center justify-center">
               <div
                 class="hidden md:flex bg-contain bg-center bg-no-repeat w-36 h-44"
@@ -204,16 +204,16 @@ import { ReviewDetailDTO } from '../../../model/model';
             </div>
           </div>
         </div>
-        <div class="flex flex-row justify-around w-full md:w-auto my-4">
+        <div class="flex flex-row justify-around w-full md:w-auto md:my-4">
           <button
-            class="md:hidden block w-14 h-14 shrink-0 bg-gray-main rounded-full"
+            class="md:hidden block w-8 h-8 md:w-12 md:h-12 shrink-0 bg-gray-main rounded-full"
             (click)="previousReview()"
           >
             <img src="/assets/arrow-left.svg" />
           </button>
 
           <button
-            class="w-14 h-14 shrink-0 bg-gray-main rounded-full  mr-4"
+            class="w-8 h-8 md:w-12 md:h-12 shrink-0 bg-gray-main rounded-full  mr-0"
             (click)="nextReview()"
           >
             <img src="/assets/arrow-right.svg" />

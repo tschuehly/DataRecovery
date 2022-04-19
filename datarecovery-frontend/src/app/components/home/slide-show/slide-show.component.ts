@@ -3,9 +3,9 @@ import { Component } from '@angular/core';
   selector: 'app-slide-show',
   template: `
     <div
-      class="bg-gray-main bg-circuit-board py-6 md:p-10 flex flex-row max-h-[40rem]"
+      class="bg-gray-main bg-circuit-board py-10 md:p-8 flex max-h-[40rem]"
     >
-      <button class="w-10 shrink-0" (click)="previousPicture()">
+      <button class="w-7 md:w-12 shrink-0" (click)="previousPicture()">
         <img src="/assets/arrow-left.svg" />
       </button>
       <div class="flex grow justify-center">
@@ -16,7 +16,7 @@ import { Component } from '@angular/core';
           sizes="50vw"
         />
       </div>
-      <button class="w-10 shrink-0" (click)="nextPicture()">
+      <button class="w-7 md:w-12 shrink-0" (click)="nextPicture()">
         <img src="/assets/arrow-right.svg" />
       </button>
     </div>
