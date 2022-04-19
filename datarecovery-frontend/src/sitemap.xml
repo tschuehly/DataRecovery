@@ -1,57 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>https://www.jungbauerdatenrettung.de</loc>
+      <loc>https://www.jungbauerdatenrettung.de</loc>    
+      <lastmod>2022-04-18T08:00:00+00:00</lastmod>
    </url>
    <url>
       <loc>https://www.jungbauerdatenrettung.de/preise</loc>
+       <lastmod>2022-04-18T08:00:00+00:00</lastmod>
    </url>
    <url>
       <loc>https://www.jungbauerdatenrettung.de/datenrettung/hdd</loc>
+      <lastmod>2022-04-18T08:00:00+00:00</lastmod>
    </url>
    <url>
       <loc>https://www.jungbauerdatenrettung.de/datenrettung/ssd</loc>
+      <lastmod>2022-04-18T08:00:00+00:00</lastmod>
    </url>
    <url>
       <loc>https://www.jungbauerdatenrettung.de/datenrettung/flash</loc>
+      <lastmod>2022-04-18T08:00:00+00:00</lastmod>
+      <lastmod>2022-04-18T08:00:00+00:00</lastmod>
    </url>
    <url>
       <loc>https://www.jungbauerdatenrettung.de/datenrettung/raid</loc>
+      <lastmod>2022-04-18T08:00:00+00:00</lastmod>
    </url>
    <url>
       <loc>https://www.jungbauerdatenrettung.de/datenrettung/philosophie</loc>
+      <lastmod>2022-04-18T08:00:00+00:00</lastmod>
    </url>
    <url>
       <loc>https://www.jungbauerdatenrettung.de/blog</loc>
+      <lastmod>2022-04-18T08:00:00+00:00</lastmod>
    </url>
    <url>
       <loc>https://www.jungbauerdatenrettung.de/blog/apple-fusion-drive-datenrettung</loc>
+      <lastmod>2022-04-18T08:00:00+00:00</lastmod>
    </url>
    <url>
       <loc>https://www.jungbauerdatenrettung.de/blog/datenrettung-kosten</loc>
+      <lastmod>2022-04-18T08:00:00+00:00</lastmod>
    </url>
    <url>
       <loc>https://www.jungbauerdatenrettung.de/blog/ablauf-der-datenrettung-anhand-eines-beispiels</loc>
+      <lastmod>2022-04-18T08:00:00+00:00</lastmod>
    </url>
    <url>
       <loc>https://www.jungbauerdatenrettung.de/blog/apple-ssd-datenrettung</loc>
+      <lastmod>2022-04-18T08:00:00+00:00</lastmod>
    </url>
    <url>
       <loc>https://www.jungbauerdatenrettung.de/blog/datenrettung-pc-3000-flash</loc>
+      <lastmod>2022-04-18T08:00:00+00:00</lastmod>
    </url>
    <url>
-   <loc>https://www.jungbauerdatenrettung.de/blog/datenrettung-pc-3000-udma</loc>
-  </url>
- <url>
+      <loc>https://www.jungbauerdatenrettung.de/blog/datenrettung-pc-3000-udma</loc>
+      <lastmod>2022-04-18T08:00:00+00:00</lastmod>
+   </url>
+   <url>
       <loc>https://www.jungbauerdatenrettung.de/blog/gebrochene-micro-sd-karte</loc>
+      <lastmod>2022-04-18T08:00:00+00:00</lastmod>
    </url>
    <url>
       <loc>https://www.jungbauerdatenrettung.de/blog/synology-raid-1-datenrettung</loc>
+      <lastmod>2022-04-18T08:00:00+00:00</lastmod>
    </url>
    <url>
       <loc>https://www.jungbauerdatenrettung.de/blog/qnap-raid-1-datenrettung</loc>
+      <lastmod>2022-04-18T08:00:00+00:00</lastmod>
    </url>
    <url>
       <loc>https://www.jungbauerdatenrettung.de/blog/sonnet-raid-5-datenrettung</loc>
+      <lastmod>2022-04-18T08:00:00+00:00</lastmod>
    </url>
 </urlset>
