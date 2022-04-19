@@ -446,7 +446,7 @@ export class BlogComponent implements OnInit {
       this.articleUrl = value.articleUrl;
       if (this.articleUrl) {
         this.http
-          .get('api/article/' + this.articleUrl, {
+          .get('api/article/' + this.articleUrl.toLowerCase(), {
             headers: new HttpHeaders({ 'Content-Type': 'text/plain' }),
             responseType: 'text',
           })
