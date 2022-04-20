@@ -30,7 +30,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
         class="whitespace-pre-wrap py-2"
       ><span class="text-bold text-sm md:text-lg text-silver">Updated am 03.12.2021, 17:59 von Tobias Jungbauer</span></pre>
       <pre class="whitespace-pre-wrap text-sm md:text-xl py-8 py-8">
-Gerne bearbeite ich auch Aufträge, die von vorherigen Bearbeitern aufgegeben oder bei denen die Datenrettung nur zu einem Vielfachen meines Festpreises angeboten worden ist. Mein Ziel ist es die professionelle Datenrettung für möglichst jeden zugänglich zu machen. <div class="flex justify-end pt-4"><button class="text-lg md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
+Gerne bearbeite ich auch Aufträge, die von vorherigen Bearbeitern aufgegeben oder bei denen die Datenrettung nur zu einem Vielfachen meines Festpreises angeboten worden ist. Mein Ziel ist es die professionelle Datenrettung für möglichst jeden zugänglich zu machen. <div class="flex justify-end pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
 <span class="font-semibold text-base md:text-xl">Es wird die Datenrettung für USB-Sticks und (micro) SD-Karten angeboten:</span>
 - die z.B. nicht mehr erkannt werden
 - die z.B. Dateien anzeigen, aber sich nicht auslesen lassen
@@ -67,7 +67,7 @@ Defekte (micro) SD-Karte oder USB-Stick bis 32GB Datenträgerkapazität: 125,00 
 Defekte (micro) SD-Karte oder USB-Stick bis 64GB Datenträgerkapazität: 149,00 €*
 Defekte (micro) SD-Karte oder USB-Stick bis 128GB Datenträgerkapazität: 249,00 €*
 *bereits inkl. 19% Mehrwertsteuer
-<div class="flex justify-end pt-4"><button class="text-lg md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
+
 <h2 class="underline text-xl md:text-2xl font-bold my-6">Verwendete Hard- Und Software</h2><pre class="whitespace-pre-wrap py-8 text-sm md:text-xl overflow-hidden">Der PC-3000 Flash ist ein Hardware-Software-Lösung zur Wiederherstellung von Daten von NAND-basierten Geräten in solchen Fällen, in denen kein Zugriff über die zugewiesene Laufwerksschnittstelle mehr möglich ist.
 
 Funktionsstörungen können vom PC-3000 Flash mit einer Reihe eigener Tools und Methoden umgangen werden.
