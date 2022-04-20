@@ -31,8 +31,12 @@ import { ScrollService } from 'src/app/services/scroll.service';
         ><span class="text-bold text-sm md:text-lg text-silver">Updated am 03.12.2021, 18:05 von Tobias Jungbauer</span></pre>
         <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
 Gerne bearbeite ich auch Aufträge, die von vorherigen Bearbeitern aufgegeben oder bei denen die Datenrettung nur zu einem Vielfachen meines Festpreises angeboten worden ist. Mein Ziel ist es die professionelle Datenrettung für möglichst jeden zugänglich zu machen. <div class="flex justify-end pt-4"><button class="text-lg md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
+<span class="font-semibold text-base md:text-xl">Es wird die Datenrettung für SSD Speicher angeboten:</span>
+- die z.B. nicht mehr erkannt werden
+- die z.B. Dateien anzeigen, aber sich nicht auslesen lassen
+- bei denen z.B. Windows Sie beim Anstecken auffordert zu formatieren
 
-Tatsächlich sind bei über 90% der defekten SSD-Speicher, die nicht mehr erkannt werden, einer der NAND-Chips die Fehlerursache. Warum ist das so? Die SSD eigene Firmware wird auch auf den Speicherbausteinen abgespeichert.
+Tatsächlich sind bei über 90% der defekten SSD-Speicher, die nicht mehr erkannt werden, einer der NAND-Speicherbausteine die Fehlerursache. Warum ist das so? Die SSD eigene Firmware wird ebenfalls auf den Speicherbausteinen abgespeichert.
 
 Wenn vom Chip nun zu viele Teile der Firmware nicht mehr für den Controller lesbar werden, schafft die SSD es nicht mehr zu booten.
 
@@ -46,8 +50,7 @@ Aber dafür gibt es eine Lösung: Man bootet die SSD über das externe Hochladen
         </div>
         <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
 
-
-In meiner Datenbank sind tausende an verschiedene „Loader“ für verschiedene Controller, die dieses Prozedere ermöglichen.
+        In meiner Datenbank sind tausende an verschiedene „Loader“ für verschiedene Controller, die dieses Prozedere ermöglichen.
 
 Abgesehen davon biete ich auch das Beseitigen von Hardwareschäden seitens der austauschbaren Elektrotechnik an.
 

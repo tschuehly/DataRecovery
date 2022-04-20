@@ -32,8 +32,8 @@ import { ScrollService } from 'src/app/services/scroll.service';
       <pre class="whitespace-pre-wrap text-sm md:text-xl py-8 py-8">
 Gerne bearbeite ich auch Aufträge, die von vorherigen Bearbeitern aufgegeben oder bei denen die Datenrettung nur zu einem Vielfachen meines Festpreises angeboten worden ist. Mein Ziel ist es die professionelle Datenrettung für möglichst jeden zugänglich zu machen. <div class="flex justify-end pt-4"><button class="text-lg md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
 <span class="font-semibold text-base md:text-xl">Es wird die Datenrettung für USB-Sticks und (micro) SD-Karten angeboten:</span>
-- die z.B. am Endgerät nicht mehr erkannt werden
-- die z.B. Dateien anzeigen, aber sich nicht richtig auslesen lassen
+- die z.B. nicht mehr erkannt werden
+- die z.B. Dateien anzeigen, aber sich nicht auslesen lassen
 - bei denen z.B. Windows Sie beim Anstecken auffordert zu formatieren
 - die z.B. über z.B. Sony Kamera oder Android Smartphone formatiert worden sind
 
