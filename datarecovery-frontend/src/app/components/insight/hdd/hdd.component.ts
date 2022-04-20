@@ -27,8 +27,7 @@ import { ScrollService } from '../../../services/scroll.service';
         >
         <pre class="whitespace-pre-wrap py-2">
 <span class="whitespace-pre-wrap py-2 text-bold text-sm md:text-lg text-silver">Updated am 27.03.22, 07:55 von Tobias Jungbauer</span> </pre>
-<pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
-Gerne nehme ich auch Aufträge an, die von vorherigen Laboren aufgegeben oder die Datenrettung zu nur wesentlich höheren Preisen angeboten wurde. Ich stehe zu 100% hinter meinem Tun. Meine Mission ist es die professionelle Datenrettung für möglichst jeden zugänglich zu machen. Weiteres dazu und warum ich dafür Festpreise als die fairste und transparenteste Methode halte erfahren Sie <a href="/blog/datenrettung-kosten" class="underline font-bold">hier</a>.<div class="flex justify-end pt-4"><button class="text-lg md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
+<pre class="whitespace-pre-wrap text-sm md:text-xl py-8">Gerne bearbeite ich auch die Aufträge, die von vorherigen Bearbeitern aufgegeben oder bei denen die Datenrettung nur zu einem Vielfachen meines Festpreises angeboten worden ist. Mein Ziel ist es die professionelle Datenrettung für möglichst jeden zugänglich zu machen. <div class="flex justify-end pt-4"><button class="text-lg md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
 <span class="font-semibold text-base md:text-xl">Es wird die Datenrettung für HDD-Festplatten angeboten, die z.B.:</span>
 - Dateien anzeigen, sich aber nicht auslesen lassen
 - nicht mehr erkannt werden
@@ -46,7 +45,7 @@ Gerne nehme ich auch Aufträge an, die von vorherigen Laboren aufgegeben oder di
 ❷ Reparatur unter Reinraumbedingungen: die HDD von fehlerhaften mechanischen Bauteilen befreit (oftmals Schreib-/Leseköpfe) und ServiceArea bzw. Systemfiles werden modifiziert, bis der Zugriff auf Ihre Dateien möglich ist.
 ❸ Auslesen: Die Daten der Festplatte werden Sektor für Sektor ausgelesen.
 
-<span class="font-semibold text-base md:text-xl">Übliche Arbeiten dabei sind:</span>
+<span class="font-semibold text-base md:text-xl">Typische Arbeiten dabei sind:</span>
 <span class="underline">- mikroskopische Analyse und Austausch der Schreib-/Leseköpfe:</span>
 <div class="flex grid-cols-3 flex-wrap gap-4">
 <img class="h-80 object-cover object-center" src="assets/HDDarbeitsweise_head.JPG">

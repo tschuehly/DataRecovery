@@ -30,14 +30,17 @@ import { ScrollService } from 'src/app/services/scroll.service';
         class="whitespace-pre-wrap py-2"
       ><span class="text-bold text-sm md:text-lg text-silver">Updated am 03.12.2021, 17:59 von Tobias Jungbauer</span></pre>
       <pre class="whitespace-pre-wrap text-sm md:text-xl py-8 py-8">
-Gerne nehme ich auch Aufträge an, die von vorherigen Laboren aufgegeben oder die Datenrettung zu nur wesentlich höheren Preisen angeboten wurde. Ich stehe zu 100% hinter meinem Tun. Meine Mission ist es die professionelle Datenrettung für möglichst jeden zugänglich zu machen. Weiteres dazu und warum ich dafür Festpreise als die fairste und transparenteste Methode halte erfahren Sie <a href="/blog/datenrettung-kosten" class="underline font-bold">hier</a>.<div class="flex justify-end pt-4"><button class="text-lg md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
-
+Gerne bearbeite ich auch die Aufträge, die von vorherigen Bearbeitern aufgegeben oder bei denen die Datenrettung nur zu einem Vielfachen meines Festpreises angeboten worden ist. Mein Ziel ist es die professionelle Datenrettung für möglichst jeden zugänglich zu machen. <div class="flex justify-end pt-4"><button class="text-lg md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
 <span class="font-semibold text-base md:text-xl">Es wird die Datenrettung für USB-Sticks und (micro) SD-Karten angeboten:</span>
 - die z.B. am Endgerät nicht mehr erkannt werden
 - die z.B. Dateien anzeigen, aber sich nicht richtig auslesen lassen
 - bei denen z.B. Windows Sie beim Anstecken auffordert zu formatieren
 - die z.B. über z.B. Sony Kamera oder Android Smartphone formatiert worden sind
 
+<div class="flex grid-cols-2 flex-wrap gap-4">
+<img class="h-96 object-cover" src="assets/index/flash3.webp">
+  <img class="h-96 object-cover" src="assets/header_main/header_(4).webp">
+</div>
 <span class="font-semibold text-base md:text-xl">Für die Datenrettung gibt es drei Ansätze:</span>
 ❶ Reparatur der Hardware und Reballing der Speicherchips (z.B. bei Wasserschaden)
 ❷ Auslesen mit reiner Software (für beschädigte Dateisysteme aber ohne Hardwarefehler)

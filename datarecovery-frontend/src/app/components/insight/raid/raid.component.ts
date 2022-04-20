@@ -29,11 +29,11 @@ import { ScrollService } from 'src/app/services/scroll.service';
         <pre
           class="whitespace-pre-wrap py-2"
         ><span class="text-bold text-sm md:text-lg text-silver">Updated am 31.03.2022, 21:22 von Tobias Jungbauer</span></pre>
-<pre class="whitespace-pre-wrap text-sm md:text-xl py-8"><span class="text-white">Gerne nehme ich auch Aufträge an, die von vorherigen Laboren aufgegeben oder die Datenrettung zu nur wesentlich höheren Preisen angeboten wurde. Ich stehe zu 100% hinter meinem Tun. Meine Mission ist es die professionelle Datenrettung für möglichst jeden zugänglich zu machen. Weiteres dazu und warum ich dafür Festpreise als die fairste und transparenteste Methode halte erfahren Sie <a href="/blog/datenrettung-kosten" class="underline font-bold">hier</a>.<div class="flex justify-end pt-4"><button class="text-lg md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>  </span>
+<pre class="whitespace-pre-wrap text-sm md:text-xl py-8">Gerne bearbeite ich auch die Aufträge, die von vorherigen Bearbeitern aufgegeben oder bei denen die Datenrettung nur zu einem Vielfachen meines Festpreises angeboten worden ist. Mein Ziel ist es die professionelle Datenrettung für möglichst jeden zugänglich zu machen. <div class="flex justify-end pt-4"><button class="text-lg md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
 <span class="font-semibold text-base md:text-xl">Die angebotene RAID-Datenrettung richtet sich an Fälle:</span>
 wenn ein "Rebuild" nicht möglich oder bereits gescheitert ist, z.B. wenn es sich um ein RAID 0 oder JBOD handelt, mehrere Volumes bei RAID 1 oder 5 beschädigt worden sind oder der RAID-Controller selbst defekt ist. Oftmals verursacht auch die Firmware der RAID Controller von Synology, QNAP und co. nach gescheiterten Rebuildversuch das ungewünschte Löschen des Dateisystems.
 
-<span class="font-semibold text-base md:text-xl">Hier finden Sie Beispiele anhand bereits abgeschlossener Fälle:</span>
+<span class="font-semibold text-base md:text-xl">Beispiele anhand bereits abgeschlossener Fälle:</span>
 1. Synology RAID 1 (z.B. DS220+, DS220J, DS720+, DS218): <a href="/blog/synology-raid-1-datenrettung" class="underline font-bold">hier klicken</a>
 2. QNAP RAID 1 (z.B. TR-002, TS-231K, TS-451D2-2G): <a href="/blog/qnap-raid-1-datenrettung" class="underline font-bold">hier klicken</a>
 3. Sonnet Fusion RX1600Fibre Rackmount 32x 2TB HDD als RAID 5: <a href="/blog/sonnet-raid-5-datenrettung" class="underline font-bold">hier klicken</a>
@@ -44,7 +44,7 @@ wenn ein "Rebuild" nicht möglich oder bereits gescheitert ist, z.B. wenn es sic
 Dafür werden nur einzelne Festplatten vor Ort benötigt, aber nicht mehr der RAID Controller.
 Mit dieser Datenrettungsmethode werden Ihre Dateien, ohne Veränderung an den einzelnen Festplatten, virtuell zusammengesetzt.
 
-<span class="font-semibold text-base md:text-xl">Besonderheit:</span> Auch wenn Sie Ihre Konfiguration wie RAID-Typ, Block Size, Parity Order oder Delay nicht wissen oder auch noch die Reihenfolge der Datenträger durcheinandergebracht haben können wir Ihre Dateien aus den einzelnen Festplatten inkl. Ordnerstruktur rekonstruieren!</pre>
+<span class="font-semibold text-base md:text-xl">Besonderheit:</span> Auch wenn die Konfiguration wie RAID-Typ, Block Size, Parity Order oder Delay nicht bekannt ist oder auch die Reihenfolge der Datenträger durcheinandergebracht worden ist können Ihre Dateien aus den einzelnen Festplatten rekonstruiert werden!</pre>
 
         <div class="flex grid-cols-2 gap-4 h-80 mb-4">
           <img src="assets/raid1.jpg" />
