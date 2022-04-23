@@ -29,13 +29,14 @@ import { ScrollService } from '../../../services/scroll.service';
 <span class="whitespace-pre-wrap py-2 text-bold text-sm md:text-lg text-silver">Updated am 27.03.22, 07:55 von Tobias Jungbauer</span> </pre>
 <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">Gerne bearbeite ich auch Aufträge, die von vorherigen Bearbeitern aufgegeben oder bei denen die Datenrettung nur zu einem Vielfachen meines Festpreises angeboten worden ist. Mein Ziel ist es die professionelle Datenrettung für möglichst jeden zugänglich zu machen. <div class="flex justify-end pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
 <span class="font-semibold text-base md:text-xl">Es wird die Datenrettung für HDD-Festplatten angeboten, die z.B.:</span>
-- Dateien anzeigen, sich aber nicht auslesen lassen
 - nicht mehr erkannt werden
+- erkannt werden, sich aber nicht korrekt auslesen lassen
 - "klackern" oder "fiepsen" (mechanische Schäden)
 - Fehlermeldungen ausgeben (wie CRC-Fehler oder E/A-Fehler)
 
+
 <span class="font-semibold text-base md:text-xl">Typische Ursachen dabei sind:</span>
-- defekte Schreib-/Leseköpfe nach einem Headcrash (z.B. durch Erschütterung oder hohes Alter)
+- beschädigte Schreib-/Leseköpfe nach einem Headcrash (meist "klackernde Geräusche" z.B. typisch nach einem Sturz)
 - beschädigte Oberflächen, die zu schlecht lesbaren Bereichen sowohl in Userarea als auch Servicearea führen
 - defektes PCB (z.B. durch das Verwenden eines falschen Netzteils)
 - fehlerhafte ServiceArea bzw. Systemfiles ("Firmware Bug", oftmals korrupte Fehlerlisten)
