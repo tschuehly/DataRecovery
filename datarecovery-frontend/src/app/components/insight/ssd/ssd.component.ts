@@ -24,14 +24,14 @@ import { ScrollService } from 'src/app/services/scroll.service';
     <div class="bg-gray-main border-b-2 border-silver pb-8">
       <div class="text-white container py-8 px-3">
         <span class="underline text-xl md:text-2xl font-bold"
-          >SSD-Speicher Datenrettung:</span
+          >SSD Datenrettung:</span
         >
         <pre
           class="whitespace-pre-wrap py-2"
         ><span class="text-bold text-sm md:text-lg text-silver">Updated am 03.12.2021, 18:05 von Tobias Jungbauer</span></pre>
         <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
-Gerne bearbeite ich auch Aufträge, die von vorherigen Bearbeitern aufgegeben oder bei denen die Datenrettung nur zu einem Vielfachen meines Festpreises angeboten worden ist. Mein Ziel ist es die professionelle Datenrettung für möglichst jeden zugänglich zu machen. <div class="flex justify-end pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
-<span class="font-semibold text-base md:text-xl">Es wird die Datenrettung für SSD Speicher angeboten:</span>
+Gerne bearbeite ich auch Aufträge, die von vorherigen Bearbeitern aufgegeben oder bei denen die SSD Datenrettung nur zu einem Vielfachen meines Festpreises angeboten worden ist. Mein Ziel ist es die professionelle Datenrettung möglichst jedem zu ermöglichen. <div class="flex justify-end pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
+<span class="font-semibold text-base md:text-xl">Es wird die SSD Datenrettung angeboten für Speicher:</span>
 - die z.B. nicht mehr erkannt werden
 - die z.B. Dateien anzeigen, aber sich nicht auslesen lassen
 - bei denen z.B. Windows Sie beim Anstecken auffordert zu formatieren
