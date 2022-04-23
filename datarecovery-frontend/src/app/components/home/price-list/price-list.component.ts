@@ -92,7 +92,7 @@ import { Component } from '@angular/core';
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
               <div class="pb-2">Festpreise</div>
-                <div>299,00 €</div>
+                <div>325,00 €</div>
                 <div>349,00 €</div>
                 <div>399,00 €</div>
                 <div>499,00 €</div>
@@ -111,10 +111,10 @@ import { Component } from '@angular/core';
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
               <div class="pb-2">Festpreise</div>
-                <div>225,00 €</div>
-                <div>249,00 €</div>
+                <div>275,00 €</div>
                 <div>299,00 €</div>
-                <div>425,00 €</div>
+                <div>349,00 €</div>
+                <div>449,00 €</div>
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
               <div class="pb-2">Speichergrößen</div>
