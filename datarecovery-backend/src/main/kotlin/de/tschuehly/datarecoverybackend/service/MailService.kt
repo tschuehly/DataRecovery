@@ -229,8 +229,8 @@ class MailService(
         <span style="font-weight: bold">Preis:</span> ${"%.2f".format(order.orderProduct.price)} €<br />
         <span style="font-weight: bold">Ersatzdatenträger: </span>${order.replacement}<br />
         ${if (order.note == null) "" else "<span style=\"font-weight: bold\">Zusätzliche Bemerkungen: </span>${order.note}<br />"}
-        ${if (order.monthlyPayment == 2) "<span style=\"font-weight: bold\">Auf Rechnung: </span> 30 Tage Zahlungsfrist nach Erhalt der geretteten Daten (2% Gebühr)<br />" else ""}
-        ${if (order.monthlyPayment == 6) "<span style=\"font-weight: bold\">Auf Rechnung: </span> 60 Tage Zahlungsfrist nach Erhalt der geretteten Daten (4% Gebühr)<br />" else ""}
+        ${if (order.monthlyPayment == 2) "<span style=\"font-weight: bold\">Auf Rechnung: </span> 30 Tage Zahlungsfrist nach Erhalt der geretteten Daten (1% Gebühr)<br />" else ""}
+        ${if (order.monthlyPayment == 6) "<span style=\"font-weight: bold\">Auf Rechnung: </span> 60 Tage Zahlungsfrist nach Erhalt der geretteten Daten (2% Gebühr)<br />" else ""}
         
         """
 
