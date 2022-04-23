@@ -57,7 +57,7 @@ Abgesehen davon biete ich auch das Beseitigen von Hardwareschäden seitens der a
 Leider werden im Moment bei mir nur SATA basierte SSD-Festplatten unterstützt. Defekte M.2 SSDs daher nur, wenn diese nicht auf PCIe (NVMe), sondern ebenfalls auf das SATA Protokoll basieren.
 
 Festpreisliste nach von Ihnen definierten Erfolg:
-Defekte SSD-Festplatte bis 512GB Festplattenkapazität: 249,00 €*
+Defekte SSD-Festplatte bis 512GB Festplattenkapazität: 275,00 €*
 Defekte SSD-Festplatte bis 1TB Festplattenkapazität: 299,00 €*
 Defekte SSD-Festplatte bis 2TB Festplattenkapazität: 349,00 €*
 Defekte SSD-Festplatte bis 4TB Festplattenkapazität: 449,00 €*
