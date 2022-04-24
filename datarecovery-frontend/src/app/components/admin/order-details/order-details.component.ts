@@ -6,65 +6,63 @@ import { FormControl } from '@angular/forms';
   selector: 'app-order-details',
   template: `
     <div>
-      <div class="flex  mb-5 ">
+      <div class="flex relative">
         <h1 class="text-center text-2xl flex-1">
           Bestellung vom {{ order.orderDate | date: 'd.M.y H:mm' }}
         </h1>
-        <button (click)="closeDetail.emit()">
+        <button (click)="closeDetail.emit()" class="md:absolute md:right-1">
           <img alt="close" src="/assets/x.svg" />
         </button>
       </div>
-      <div class="grid grid-cols-2 text-lg gap-4">
+      <div *ngIf="!edit" class="col-span-2 col-div-2 text-center pb-4">
+        <h3 class="text-2xl font-bold">Status: {{ order.trackingState }}</h3>
+      </div>
+      <div class="flex flex-col md:grid md: grid-cols-2 text-lg  text-center">
         <div *ngIf="order.customer as c" class="flex flex-col">
-          <span>{{ c.firstName }} {{ c.lastName }}</span>
+          <div>{{ c.firstName }} {{ c.lastName }}</div>
           <a class="font-semibold" href="mailto:{{ c.email }}">{{ c.email }}</a>
-          <span>{{ c.street }}</span>
-          <span>{{ c.postalCode }} {{ c.city }}</span>
-          <span>{{ c.tel }}</span>
+          <div>{{ c.street }}</div>
+          <div>{{ c.postalCode }} {{ c.city }}</div>
+          <div>{{ c.tel }}</div>
         </div>
-        <div class="flex flex-col text-right">
-          <span
-            >Produkt: {{ order.orderProduct.category.name }}
+        <div class="flex flex-col">
+          <div>
+            Produkt: {{ order.orderProduct.category.name }}
             {{ order.orderProduct.name }}
-          </span>
-          <span
-            >Preis: {{ order.orderProduct.price | number: '.2':'de' }} €</span
-          >
-          <span>Ersatz: {{ order.replacement }}</span>
-          <span *ngIf="order.monthlyPayment === 1">Keine Ratenzahlung</span>
-          <span *ngIf="order.monthlyPayment === 2"
-            >2 monatige Ratenzahlung</span
-          >
-          <span *ngIf="order.monthlyPayment === 6"
-            >6 monatige Ratenzahlung</span
-          >
+          </div>
+          <div>Preis: {{ order.orderProduct.price | number: '.2':'de' }} €</div>
+          <div>Ersatz: {{ order.replacement }}</div>
+          <div *ngIf="order.monthlyPayment === 1">Keine Ratenzahlung</div>
+          <div *ngIf="order.monthlyPayment === 2">2 monatige Ratenzahlung</div>
+          <div *ngIf="order.monthlyPayment === 6">6 monatige Ratenzahlung</div>
         </div>
-        <div class="col-span-2 flex justify-between" *ngIf="!edit">
+        <div class="" *ngIf="!edit">
           <ng-container *ngIf="order.deadline; else noDeadline">
-            <span>Deadline: {{ order.deadline | date: 'd.M.y':'+0400' }}</span>
+            <div>Deadline: {{ order.deadline | date: 'd.M.y':'+0400' }}</div>
           </ng-container>
           <ng-template #noDeadline>Keine Deadline angegeben</ng-template>
 
-          <span>Vorrausichtliche Bearbeitungsdauer: </span>
+          <div>Vorrausichtliche Bearbeitungsdauer:</div>
           <ng-container *ngIf="daysToCompletion as d">
-            <span *ngIf="d < 3">Weniger als 3 Tage</span>
-            <span *ngIf="d < 6 && d > 2">3 bis 5 Tage</span>
-            <span *ngIf="d < 8 && d > 5">6 bis 7 Tage</span>
-            <span *ngIf="d < 15 && d > 7">Ein bis zwei Wochen</span>
-            <span *ngIf="d < 30 && d > 14">Zwei bis vier Wochen</span>
-            <span *ngIf="30 < d">Über vier Wochen</span>
+            <div *ngIf="d < 3">Weniger als 3 Tage</div>
+            <div *ngIf="d < 6 && d > 2">3 bis 5 Tage</div>
+            <div *ngIf="d < 8 && d > 5">6 bis 7 Tage</div>
+            <div *ngIf="d < 15 && d > 7">Ein bis zwei Wochen</div>
+            <div *ngIf="d < 30 && d > 14">Zwei bis vier Wochen</div>
+            <div *ngIf="30 < d">Über vier Wochen</div>
           </ng-container>
         </div>
-        <div class="col-span-2" *ngIf="edit">
+
+        <div class="col-div-2" *ngIf="edit">
           <div class="flex flex-col space-y-4 align-middle">
             <label class="flex">
               <div class="w-80">
-                <span *ngIf="order.deadline; else noDeadline">
+                <div *ngIf="order.deadline; else noDeadline">
                   Deadline:
                   {{ order.deadline | date: 'd.M.y':'+0400' }}
-                </span>
+                </div>
                 <ng-template #noDeadline>
-                  <span>Keine Deadline</span>
+                  <div>Keine Deadline</div>
                 </ng-template>
               </div>
               <input
@@ -76,7 +74,7 @@ import { FormControl } from '@angular/forms';
             <label class="flex">
               <div class="w-80">
                 Fertig vorrausichtlich:
-                <span>{{ order.completionDate | date: 'd.M.y':'+0400' }}</span>
+                <div>{{ order.completionDate | date: 'd.M.y':'+0400' }}</div>
               </div>
               <div>
                 <input
@@ -84,28 +82,25 @@ import { FormControl } from '@angular/forms';
                   type="number"
                   [(ngModel)]="daysToCompletion"
                 />
-                <span class="-ml-28">Tage</span>
+                <div class="-ml-28">Tage</div>
               </div>
             </label>
           </div>
         </div>
-        <div class="col-span-2" *ngIf="order.note">
+        <div class="col-div-2" *ngIf="order.note">
           <h2 class="font-semibold">Zusätzliche Anmerkung:</h2>
-          <span>{{ order.note?.trim() }}</span>
-        </div>
-        <div *ngIf="!edit" class="col-span-2 text-center mt-6">
-          <h3 class="text-2xl font-bold">Status: {{ order.trackingState }}</h3>
+          <div>{{ order.note?.trim() }}</div>
         </div>
         <ng-container *ngIf="edit">
-          <div class="col-span-2 mt-6">
-            <span class="mr-4">{{ order.trackingState }}</span>
+          <div class="col-div-2 mt-6">
+            <div class="mr-4">{{ order.trackingState }}</div>
             <select [formControl]="orderTrackingState">
               <option *ngFor="let state of orderStateList" [ngValue]="state[1]">
                 {{ state[1] }}
               </option>
             </select>
           </div>
-          <div class="col-span-2 flex justify-between mt-6">
+          <div class="col-div-2 flex justify-between mt-6">
             <button
               class="border-2 rounded-md p-2 bg-red-500 border-black"
               (click)="deleteConfirm = true"
@@ -126,7 +121,7 @@ import { FormControl } from '@angular/forms';
             </button>
           </div>
         </ng-container>
-        <div *ngIf="deleteConfirm" class="mt-10 flex justify-end col-span-2">
+        <div *ngIf="deleteConfirm" class="mt-10 flex justify-end col-div-2">
           <button
             (click)="deleteOrder.emit(order)"
             class="border-2 rounded-md p-2 bg-red-500 border-black"
@@ -134,7 +129,7 @@ import { FormControl } from '@angular/forms';
             Willst du sicher diese Bestellung löschen?
           </button>
         </div>
-        <div class="col-span-2">
+        <div class="col-div-2">
           <div class="flex flex-col md:grid grid-cols-12 text-gray-50">
             <ng-container
               *ngFor="
@@ -159,7 +154,7 @@ import { FormControl } from '@angular/forms';
                   </div>
                 </div>
                 <div
-                  class="bg-gray-main col-start-2 col-span-10 p-4 rounded-xl my-4 mr-auto shadow-md"
+                  class="bg-gray-main col-start-2 col-div-10 p-4 rounded-xl my-4 mr-auto shadow-md"
                 >
                   <h3 class="font-semibold text-lg my-1">
                     {{ update.date | date: 'd.M.y' }} {{ update.title }}:
@@ -214,9 +209,9 @@ import { FormControl } from '@angular/forms';
                       {{ update.description }}
                     </p>
                   </ng-container>
-                  <span *ngIf="update?.pictures?.length !== 0"
-                    >Klicken um die Bilder zu vergrößern</span
-                  >
+                  <div *ngIf="update?.pictures?.length !== 0">
+                    Klicken um die Bilder zu vergrößern
+                  </div>
                   <div class="flex flex-row flex-wrap mt-2">
                     <div *ngFor="let pic of update.pictures">
                       <label

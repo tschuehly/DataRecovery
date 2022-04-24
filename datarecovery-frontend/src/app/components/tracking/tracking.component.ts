@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-tracking',
   template: `
-    <div class="container mx-auto p-20">
+    <div class="md:container mx-auto md:py-10">
       <div class="border shadow-xl px-14 py-10" *ngIf="!order">
         <h1 class="text-4xl text-center mb-5">
           Aktuellen Status der Datenrettung erfragen
@@ -51,7 +51,7 @@ import { ActivatedRoute } from '@angular/router';
           </div>
         </form>
       </div>
-      <div *ngIf="order" class="border shadow-xl px-14 py-10">
+      <div *ngIf="order" class="border shadow-xl px-2 md:px-14 py-10">
         <app-order-details [order]="order"></app-order-details>
       </div>
     </div>

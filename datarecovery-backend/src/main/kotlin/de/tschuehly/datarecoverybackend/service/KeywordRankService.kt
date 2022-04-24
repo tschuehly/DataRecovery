@@ -59,6 +59,7 @@ class KeywordRankService(
                 }
             } catch (e: Exception) {
                 logger.error("Could not get rank for keyword: $keyword")
+                logger.error(e.toString())
             }
             Thread.sleep(15000)
         }
