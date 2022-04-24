@@ -17,13 +17,13 @@ import { ScrollService } from '../../../services/scroll.service';
     </div>
     <div class="bg-white text-center">
       <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">
-        Datenrettung HDD
+        HDD Datenrettung
       </h1>
     </div>
     <div class="bg-gray-main text-white border-b-2 border-silver pb-8">
       <div class="container py-8 px-3">
         <span class=" text-xl md:text-2xl font-bold"
-          >Datenrettung HDD</span
+          >HDD Datenrettung</span
         >
         <pre class="whitespace-pre-wrap py-2">
 <span class="whitespace-pre-wrap py-2 text-bold text-sm md:text-lg text-silver">Updated am 27.03.22, 07:55 von Tobias Jungbauer</span> </pre>
