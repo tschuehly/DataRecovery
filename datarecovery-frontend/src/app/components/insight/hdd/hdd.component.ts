@@ -29,7 +29,7 @@ import { ScrollService } from '../../../services/scroll.service';
 <span class="whitespace-pre-wrap py-2 text-bold text-sm md:text-lg text-silver">Updated am 27.03.22, 07:55 von Tobias Jungbauer</span> </pre>
 <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">Gerne bearbeite ich auch Aufträge, die von vorherigen Bearbeitern aufgegeben oder bei denen die HDD Datenrettung nur zu einem Vielfachen meines Festpreises angeboten worden ist. Mein Ziel ist es die professionelle Datenrettung möglichst jedem zu ermöglichen. <div class="flex justify-end pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
 <span class="font-semibold text-base md:text-xl">Es wird die Datenrettung für HDD-Festplatten angeboten, die z.B.:</span>
-- nicht mehr erkannt werden
+- nicht mehr erkannt werden (z.B. typisch für externe WD 2,5" oder 3,5" Seagate HDDs)
 - erkannt werden, sich aber nicht korrekt auslesen lassen
 - "klackern" oder "fiepsen" (mechanische Schäden)
 - Fehlermeldungen ausgeben (wie CRC-Fehler oder E/A-Fehler)
@@ -38,8 +38,9 @@ import { ScrollService } from '../../../services/scroll.service';
 <span class="font-semibold text-base md:text-xl">Typische Ursachen dabei sind:</span>
 - beschädigte Schreib-/Leseköpfe nach einem Headcrash (meist "klackernde Geräusche" z.B. typisch nach einem Sturz)
 - beschädigte Oberflächen, die zu schlecht lesbaren Bereichen sowohl in Userarea als auch Servicearea führen
-- defektes PCB (z.B. durch das Verwenden eines falschen Netzteils)
 - fehlerhafte ServiceArea bzw. Systemfiles ("Firmware Bug", oftmals korrupte Fehlerlisten)
+- defektes PCB (z.B. durch das Verwenden eines falschen Netzteils)
+
 <span class="text-white">
 <span class="font-semibold text-base md:text-xl">Vorgehensweise HDD-Datenrettung:</span>
 ❶ Fehlerdiagnose: hierfür werden z.B. über ein COM Terminal Fehlermeldungen und ROM (z.B. ServoError, SIM Error, etc.) ausgelesen.
