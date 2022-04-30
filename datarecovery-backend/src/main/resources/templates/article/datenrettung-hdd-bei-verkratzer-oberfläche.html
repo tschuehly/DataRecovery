@@ -1,12 +1,12 @@
 <div>
   <div class="bg-white text-center">
-    <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">Datenrettung 2.5“ WD-Festplatte bei verkratzter Oberfläche:</h1>
+    <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">Datenrettung Festplatte bei verkratzter Oberfläche:</h1>
   </div>
   <div class="bg-gray-main text-white border-b-2 border-silver py-8">
     <pre class="container whitespace-pre-wrap px-3">
 <h2 class="font-bold text-xl">Datenrettung 2.5“ WD-Festplatte bei verkratzter Oberfläche:</h2><span class="text-bold text-sm md:text-lg text-silver">Updated am 30.04.2022, 23:31 Uhr von Tobias Jungbauer</span>
 <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
-Anders als es oftmals behauptet wird ist es nicht komplett aussichtslos, wenn einer der Oberflächen durch beschädigte Schreib-/Leseköpfe verkratzt worden ist.
+Es ist nicht komplett aussichtslos, wenn einer der Oberflächen durch beschädigte Schreib-/Leseköpfe verkratzt worden ist.
 
 <img class="h-80 object-cover object-right" src="assets/articles/image1.jpeg">
 Zum einen können hier meistens die Daten der übrigen Oberflächen gerettet werden, aber oftmals auch Teile aus der verkratzten Oberfläche was ich anhand folgenden Beispiels zeigen möchte:
@@ -18,10 +18,11 @@ Zur Analyse:
 Die Oberfläche von H-1 hat eine mit bloßem Auge sichtbare Schleifspur. Die Oberfläche von H-0 scheint zumindest makroskopisch unbeschädigt.
 
 Wir versuchen zunächst nur die Daten der besseren Oberfläche auszulesen.
-Die erste Herausforderung hier ist, dass beide Leseköpfe auf dem gleichen Arm liegen.
+Man muss dabei beachten, dass beide Leseköpfe auf dem gleichen Arm liegen.
 Das heißt wenn H-1 an der Schleifspur hängen bleibt crasht automatisch auch H-0.
 
 Die Lösung ist bei einigen Festplattenmodellen das Abschneiden des Lesekopfs der schlechten Oberfläche (hier H-1). Bei WD dürfen wir das jedoch nicht, da die Festplatte den Innenwiderstand der Leseköpfe misst und uns durch das Abschneiden mit einem internen Fehler den Dienst erst gar nicht aufnimmt.
+
 In solchen Fällen ist die gängige Methode den Lesekopf minimal von der Oberfläche weg zu biegen, sodass dieser keinen Kontakt mit der Oberfläche mehr haben kann.
 
 <div class="flex grid-cols-3 flex-wrap gap-4">
@@ -29,7 +30,7 @@ In solchen Fällen ist die gängige Methode den Lesekopf minimal von der Oberfl�
 <img class="h-80 object-cover object-right" src="assets/articles/image3.jpeg"></div>
 Damit die Festplatte sich nur mit dem einen angeschlossenen Lesekopf dennoch initialisiert deaktivieren wir die Servicearea von H-1. Das machen wir indem wir die Adressen von Copy-0 und Copy-1 beide auf die gleiche Adresse von H-0 setzen. 
 
-<img class="h-80 object-cover object-right" src="assets/articles/image4.jpeg">
+<img class="h-80 object-cover object-right" src="assets/articles/image4.png">
 Dadurch können wir nun die die Festplatte nur über H-0 initialisieren und die Daten von Oberfläche H-0 komplett auslesen. In der Software könne wir H-1 zudem abschalten, dass die Software erst gar nicht versucht Adressen dieser Oberfläche auszulesen.
 
 Soweit der einfache Part! Nun kommt der spannende Teil.
@@ -40,12 +41,12 @@ Die Herausforderung nun ist, dass der neue Lesekopf sehr schnell selbst durch di
 Auf Höhe der Spur, die betroffen ist, besitzt die HDD Ihre Servicearea. Doch wie verhindern wir nun, dass die HDD die Servicearea nutzt?
 
 ❶ Hintergrundprozesse abstellen:
-<img class="h-80 object-cover object-right" src="assets/articles/image5.jpeg">
+<img class="h-80 object-cover object-right" src="assets/articles/image5.png">
 Bei Seagate durch ein Patch an Systemfile 93 (HDD ID) oder wie in diesem Fall mit dem TLER Feature bei WD-Festplatten werden Background Prozesse, die sonst im laufenden Betrieb Zugriff auf die SA bedeuten würden, abgestellt.
 
 ❷ Stand-by Trick: 
 <div class="flex grid-cols-3 flex-wrap gap-4">
-<img class="h-80 object-cover object-right" src="assets/articles/image6.jpeg">
+<img class="h-80 object-cover object-right" src="assets/articles/image6.png">
 <img class="h-80 object-cover object-right" src="assets/articles/image7.jpeg"></div>
 Wir setzen die HDD während nur H-0 verbunden haben in den Stand-by-Modus. Währenddessen wir nun H-1 durch neue Leseköpfe zuschalten lassen wir das PCB am Strom im Stand-by-Modus hängen, sodass wir die Festplatte später nicht mehr initialisieren müssen.
 
@@ -54,18 +55,18 @@ Währenddessen nun das PCB weiterhin im Stand-by ist tauschen wir die Leseköpfe
 Wir verschrauben es wieder mit dem PCB und holen es aus dem Stand-by heraus.
 
 Voila! Wir haben Datenzugriff auf H-1:
-<img class="h-80 object-cover object-right" src="assets/articles/image9.jpeg">
+<img class="h-80 object-cover object-right" src="assets/articles/image9.png">
 Und das auch mit akzeptablem Tempo:
-<img class="h-80 object-cover object-right" src="assets/articles/image10.jpeg">
+<img class="h-80 object-cover object-right" src="assets/articles/image10.png">
 
 ❸ Auslesen der Kundendaten:
 Die Methodik ist nun, dass wir uns von „beiden Seiten“ den Beschädigungen annähern.
 Dafür lesen wir erst von den hohen LBA zu den niedrigen und danach von den niedrigen zu den hohen. Sobald wir uns der Schadstelle annähern, wechseln wir.
 <div class="flex grid-cols-3 flex-wrap gap-4">
-<img class="h-80 object-cover object-right" src="assets/articles/image11.jpeg">
-<img class="h-80 object-cover object-right" src="assets/articles/image12.jpeg"></div>
+<img class="h-80 object-cover object-right" src="assets/articles/image11.png">
+<img class="h-80 object-cover object-right" src="assets/articles/image12.png"></div>
 Wir können nun auch die MFT Map der NTFS Partition auslesen und daraus die Ordnerstruktur zurückholen:
-<img class="h-80 object-cover object-right" src="assets/articles/image13.jpeg">
+<img class="h-80 object-cover object-right" src="assets/articles/image13.png">
 Mit der Ordnerstruktur können wir nun die wichtigsten Dateien priorisieren.
 
 Wir lesen die Daten nun aus und tauschen die Leseköpfe so oft bzw. wiederholen die genannten Schritte, bis wir alle unbeschädigten Bereiche gerettet haben.
