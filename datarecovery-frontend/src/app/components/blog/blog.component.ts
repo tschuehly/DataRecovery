@@ -471,11 +471,11 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
             ></div>
             <div class="flex-1">
               <a
-                routerLink="/blog/externe-festplatte-wird-nicht-erkannt"
-                href="/blog/externe-festplatte-wird-nicht-erkannt"
+                routerLink="/blog/datenrettung-hdd-bei-verkratzer-oberfläche"
+                href="/blog/datenrettung-hdd-bei-verkratzer-oberfläche"
                 class="py-2"
               >
-                <h2 class="text-2xl font-bold">Datenrettung 2.5“ WD-Festplatte bei verkratzter Oberfläche:</h2>
+                <h2 class="text-2xl font-bold">Datenrettung 2.5“ WD-Festplatte bei verkratzter Oberfläche</h2>
               </a>
               <div class="py-2 italic text-sm md:text-lg">
                 Updated am 30.04.2022, 23:31 von Tobias Jungbauer
