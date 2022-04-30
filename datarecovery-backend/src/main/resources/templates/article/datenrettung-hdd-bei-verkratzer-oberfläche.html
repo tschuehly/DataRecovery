@@ -41,31 +41,37 @@ Die Herausforderung nun ist, dass der neue Lesekopf sehr schnell selbst durch di
 Auf Höhe der Spur, die betroffen ist, besitzt die HDD Ihre Servicearea. Doch wie verhindern wir nun, dass die HDD die Servicearea nutzt?
 
 ❶ Hintergrundprozesse abstellen:
+
 <img class="h-80 object-cover object-right" src="assets/articles/image5.png">
 Bei Seagate durch ein Patch an Systemfile 93 (HDD ID) oder wie in diesem Fall mit dem TLER Feature bei WD-Festplatten werden Background Prozesse, die sonst im laufenden Betrieb Zugriff auf die SA bedeuten würden, abgestellt.
 
 ❷ Stand-by Trick: 
+
 <div class="flex grid-cols-3 flex-wrap gap-4">
 <img class="h-80 object-cover object-right" src="assets/articles/image6.png">
 <img class="h-80 object-cover object-right" src="assets/articles/image7.jpeg"></div>
 Wir setzen die HDD während nur H-0 verbunden haben in den Stand-by-Modus. Währenddessen wir nun H-1 durch neue Leseköpfe zuschalten lassen wir das PCB am Strom im Stand-by-Modus hängen, sodass wir die Festplatte später nicht mehr initialisieren müssen.
 
 Währenddessen nun das PCB weiterhin im Stand-by ist tauschen wir die Leseköpfe von der Festplatte aus und lassen nun auch H-1 verbunden.
+
 <img class="h-80 object-cover object-right" src="assets/articles/image8.jpeg">
 Wir verschrauben es wieder mit dem PCB und holen es aus dem Stand-by heraus.
 
 Voila! Wir haben Datenzugriff auf H-1:
+
 <img class="h-80 object-cover object-right" src="assets/articles/image9.png">
 Und das auch mit akzeptablem Tempo:
+
 <img class="h-80 object-cover object-right" src="assets/articles/image10.png">
 
 ❸ Auslesen der Kundendaten:
 Die Methodik ist nun, dass wir uns von „beiden Seiten“ den Beschädigungen annähern.
 Dafür lesen wir erst von den hohen LBA zu den niedrigen und danach von den niedrigen zu den hohen. Sobald wir uns der Schadstelle annähern, wechseln wir.
-<div class="flex grid-cols-3 flex-wrap gap-4">
+
 <img class="h-80 object-cover object-right" src="assets/articles/image11.png">
 <img class="h-80 object-cover object-right" src="assets/articles/image12.png"></div>
 Wir können nun auch die MFT Map der NTFS Partition auslesen und daraus die Ordnerstruktur zurückholen:
+
 <img class="h-80 object-cover object-right" src="assets/articles/image13.png">
 Mit der Ordnerstruktur können wir nun die wichtigsten Dateien priorisieren.
 
