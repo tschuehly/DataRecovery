@@ -460,6 +460,42 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
               </div>
             </div>
           </div>
+
+          <div class="bg-white max-w-4xl mx-auto rounded-2xl">
+          <div
+            class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
+          >
+            <div
+              class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
+              style="background-image: url('/assets/favicon/fav.PNG')"
+            ></div>
+            <div class="flex-1">
+              <a
+                routerLink="/blog/externe-festplatte-wird-nicht-erkannt"
+                href="/blog/externe-festplatte-wird-nicht-erkannt"
+                class="py-2"
+              >
+                <h2 class="text-2xl font-bold">Datenrettung 2.5“ WD-Festplatte bei verkratzter Oberfläche:</h2>
+              </a>
+              <div class="py-2 italic text-sm md:text-lg">
+                Updated am 30.04.2022, 23:31 von Tobias Jungbauer
+              </div>
+              <div class="space-y-4">
+                <h3 class="pb-2">
+                  Wie funktioniert die Datenrettung bei einer verkratzen HDD Festplatte? Ist es wirklich aussichtslos?
+                </h3>
+                <a
+                  routerLink="/blog/datenrettung-hdd-bei-verkratzer-oberfläche"
+                  href="/blog/datenrettung-hdd-bei-verkratzer-oberfläche"
+                  class="font-semibold"
+                >
+                  Mehr lesen →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         </div>
       </div>
     </ng-container>
