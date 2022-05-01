@@ -48,7 +48,9 @@ import { ScrollService } from '../../../services/scroll.service';
 ❸ Auslesen: Die Daten der Festplatte werden Sektor für Sektor ausgelesen.
 
 <span class="font-semibold text-base md:text-xl">Typische Arbeiten dabei sind:</span>
+
 <span class="underline">- mikroskopische Analyse und Austausch der Schreib-/Leseköpfe:</span>
+
 <div class="flex grid-cols-3 flex-wrap gap-4">
 <img class="h-80 object-cover object-center" src="assets/HDDarbeitsweise_head.JPG">
 <img class="h-80 object-cover object-right" src="assets/hdd_arbeitsweise_headreplacement.jpg">
@@ -66,9 +68,10 @@ Haar ~70µm
 Jede Veruneinigung beschädigt daher potenziell Oberfläche und Leseköpfe.
 
 <span class="underline">- Arbeiten an der ServiceArea bzw. Systemfiles und BOOT-ROM:</span>
+
 <div class="flex grid-cols-3 flex-wrap gap-4">
-  <img class="h-80 object-cover object-left" src="assets/articles/sa-1.PNG">
-  <img class="h-80 object-cover object-left" src="assets/articles/sa-2.PNG">
+  <img class="h-80 object-cover object-left" src="assets/articles/sa-1.jpg">
+  <img class="h-80 object-cover object-left" src="assets/articles/sa-2.jpg">
 </div>
 Bei einem Headcrash kommt es zur Berührung zwischen Schreib-/Lesekopf und der jeweligen Oberfläche.
 Dabei wird die Oberfläche gerne auch im Bereich der Servicearea beschädigt.
@@ -76,6 +79,7 @@ Servicemodule werden dadurch für die Festplatte nicht mehr lesbar, was der Funk
 Unsere Aufgabe ist daher diese beschädigten Module zu reparieren und zu einer anderen Stelle zu verschieben.
 
 <span class="underline">- Plattern Swap, z.B. um den Motor zu tauschen oder die Oberflächen nach Beschädigungen zu inspizieren:</span>
+
 <div class="flex grid-cols-3 flex-wrap gap-4">
   <img class="h-80 object-cover object-right" src="assets/articles/platternswap_1.jpg">
   <img class="h-80 object-cover object-center" src="assets/articles/platternswap_2 (2).jpg">
@@ -85,6 +89,7 @@ Das ist z.B. nötig, wenn die Festplatte bereits woanders neue Schreib-/Leseköp
 Auch nutzt man diese Technik, wenn der Motor getauscht werden muss.
 
 <span class="underline">- Austausch und Anlernen des PCB (printed circuit board):</span>
+
 <div class="flex grid-cols-3 flex-wrap gap-4">
   <img class="h-80 object-cover object-center" src="assets/HDD_arbeitsweise_PCB2.jpg">
   <img class="h-80 object-cover object-center" src="assets/HDD_arbeitsweise_PCB1.jpg">
@@ -95,15 +100,17 @@ Bei einigen Festplattenmodellen wird die ServiceArea mit einer Verschlüsselung 
 Um hier dennoch die nötigen Arbeiten durchführen zu können gibt es spezielle "unlocked PCBs".
 
 <span class="underline">- die Herstellung von Werkzeuge für die Datenrettung:</span>
+
 <div class="flex grid-cols-3 flex-wrap gap-4">
   <img class="h-80 object-cover object-right" src="assets/1640221182228.jpg">
-  <img class="h-80 object-cover object-center" src="assets/Chitubox.PNG">
+  <img class="h-80 object-cover object-center" src="assets/Chitubox.jpg">
 </div>
 Nicht für jedes Festplattenmodell gibt es passendes Werkzeug zum Austausch der Schreib-/Leseköpfe direkt zu Kaufen.
 Vorallen moderne Festplatten wie Seagate Rosewood und co. bieten hier nur sehr wenig Platz im Inneren.
 Eigenes Werkzeug mit einer Genauigkeit von 35µm Herstellen zu können bringt daher einige Vorteile.
 
 <span class ="underline">-Alle Arbeiten werden ausschließlich unter Reinraumbedingungen nach DIN 14644-1 ISO 5, ESD-geschützt und vor Ort durchgeführt:</span>
+
 <img class="h-80 object-cover object-right" src="assets/hdd_arbeitsweise_4.jpg">
 Die Kabine erzeugt ein Überdruck durch ein HEPA Filter des Typs H14.
 Dieser besitzt einen Abscheidegrad von 99,995%. Das bedeutet, dass der Filter bei einer Partikelgröße von 0,12 μm (nach MPPS) mindestens 99,995% aller Partikel herausfiltert. Der Überdruck verhindert, dass von außerhalb Partikel hineinfallen können.
