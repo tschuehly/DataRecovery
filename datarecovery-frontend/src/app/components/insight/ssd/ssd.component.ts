@@ -50,7 +50,7 @@ Aber dafür gibt es eine Lösung: Man bootet die SSD über das externe Hochladen
         </div>
         <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
 
-        In meiner Datenbank sind tausende an verschiedene „Loader“ für verschiedene Controller, die dieses Prozedere ermöglichen.
+In meiner Datenbank sind etliche verschiedene „Loader“ für verschiedene Controller bzw. FW Versionen, die dieses Prozedere ermöglichen.
 
 Abgesehen davon biete ich auch das Beseitigen von Hardwareschäden seitens der austauschbaren Elektrotechnik an.
 
