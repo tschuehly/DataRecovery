@@ -37,8 +37,9 @@ class OrderService(
         order.orderProduct.id = null
         order.orderProduct = orderProductRepository.save(order.orderProduct)
         order.addUpdateToOrder(Update(title = order.trackingState, order = order))
-        mailService.sendOrderConfirmation(order)
-        return orderRepository.save(order)
+        val savedOrder = orderRepository.save(order)
+        mailService.sendOrderConfirmation(savedOrder)
+        return savedOrder
     }
 
     fun updateStatus(order: Order): Order {

@@ -6,7 +6,10 @@ import { FormControl } from '@angular/forms';
   selector: 'app-order-details',
   template: `
     <div>
-      <div class="flex relative">
+      <div class="flex relative mb-4">
+        <div class="text-2xl md:absolute md:left-1">
+          ID: {{order.id}}
+        </div>
         <h1 class="text-center text-2xl flex-1">
           Bestellung vom {{ order.orderDate | date: 'd.M.y H:mm' }}
         </h1>
@@ -14,7 +17,7 @@ import { FormControl } from '@angular/forms';
           <img alt="close" src="/assets/x.svg" />
         </button>
       </div>
-      <div *ngIf="!edit" class="col-span-2 col-div-2 text-center pb-4">
+      <div *ngIf="!edit" class="col-span-2 text-center pb-4">
         <h3 class="text-2xl font-bold">Status: {{ order.trackingState }}</h3>
       </div>
       <div class="flex flex-col md:grid md: grid-cols-2 text-lg  text-center">
@@ -52,8 +55,7 @@ import { FormControl } from '@angular/forms';
             <div *ngIf="30 < d">Über vier Wochen</div>
           </ng-container>
         </div>
-
-        <div class="col-div-2" *ngIf="edit">
+        <div class="col-span-2 mt-4" *ngIf="edit">
           <div class="flex flex-col space-y-4 align-middle">
             <label class="flex">
               <div class="w-80">
@@ -87,20 +89,20 @@ import { FormControl } from '@angular/forms';
             </label>
           </div>
         </div>
-        <div class="col-div-2" *ngIf="order.note">
+        <div class="col-span-2" *ngIf="order.note">
           <h2 class="font-semibold">Zusätzliche Anmerkung:</h2>
           <div>{{ order.note?.trim() }}</div>
         </div>
         <ng-container *ngIf="edit">
-          <div class="col-div-2 mt-6">
-            <div class="mr-4">{{ order.trackingState }}</div>
+          <div class="col-span-2 mt-6">
+            <span class="mr-4">{{ order.trackingState }}</span>
             <select [formControl]="orderTrackingState">
               <option *ngFor="let state of orderStateList" [ngValue]="state[1]">
                 {{ state[1] }}
               </option>
             </select>
           </div>
-          <div class="col-div-2 flex justify-between mt-6">
+          <div class="col-span-2 flex justify-between mt-6">
             <button
               class="border-2 rounded-md p-2 bg-red-500 border-black"
               (click)="deleteConfirm = true"
@@ -121,7 +123,7 @@ import { FormControl } from '@angular/forms';
             </button>
           </div>
         </ng-container>
-        <div *ngIf="deleteConfirm" class="mt-10 flex justify-end col-div-2">
+        <div *ngIf="deleteConfirm" class="mt-10 flex justify-end col-span-2">
           <button
             (click)="deleteOrder.emit(order)"
             class="border-2 rounded-md p-2 bg-red-500 border-black"
@@ -129,7 +131,7 @@ import { FormControl } from '@angular/forms';
             Willst du sicher diese Bestellung löschen?
           </button>
         </div>
-        <div class="col-div-2">
+        <div class="col-span-2 mt-4">
           <div class="flex flex-col md:grid grid-cols-12 text-gray-50">
             <ng-container
               *ngFor="
@@ -154,7 +156,7 @@ import { FormControl } from '@angular/forms';
                   </div>
                 </div>
                 <div
-                  class="bg-gray-main col-start-2 col-div-10 p-4 rounded-xl my-4 mr-auto shadow-md"
+                  class="bg-gray-main col-start-2 col-span-10 p-4 rounded-xl my-4 mr-auto shadow-md"
                 >
                   <h3 class="font-semibold text-lg my-1">
                     {{ update.date | date: 'd.M.y' }} {{ update.title }}:
