@@ -1,30 +1,33 @@
 <div>
-    <div class="bg-white text-center">
-      <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">externe HDD wird nicht erkannt</h1>
-    </div>
-    <div class="bg-gray-main text-white border-b-2 border-silver py-8">
-      <pre class="container whitespace-pre-wrap px-3">
-  <h2 class="font-bold text-xl">externe HDD wird nicht erkannt (z.B. WD Portable, Toshiba Canvio oder Seagate Expansion):</h2><span class="text-bold text-sm md:text-lg text-silver">Updated am 30.04.2022, 07:23 Uhr von Tobias Jungbauer</span>
-  <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
-Hiermit möchte ich auf einer der typischsten Datenrettungsfälle eingehen: externe HDDs die nicht mehr erkannt werden 
-(insbesondere: auch nicht im BIOS). Was kann man hier tun?
+  <div class="bg-white text-center">
+    <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">externe HDD wird nicht erkannt</h1>
+  </div>
+  <div class="bg-gray-main text-white border-b-2 border-silver py-8">
+    <pre class="container whitespace-pre-wrap px-3">
+<h2 class="font-bold text-xl">externe HDD wird nicht erkannt (z.B. WD Portable, Toshiba Canvio oder Seagate Expansion):</h2><span class="text-bold text-sm md:text-lg text-silver">Updated am 30.04.2022, 07:23 Uhr von Tobias Jungbauer</span>
+<pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
+Die externe HDD wird nicht mehr erkannt (insbesondere: auch nicht im BIOS). Was kann man hier tun?
 
 <img class="h-80 object-cover object-right" src="assets/articles/WD-HDD_1.jpg">
-Als allererstes sollten Sie überprüfen, ob es an Ihrem Rechner oder am verwendeten USB-Kabel liegt. Testen Sie dafür an einem anderen Computer oder mindestens an einem anderen USB Port. Auch USB-Kabel Verlängerungen können störend sein.
+Zunächst zu dem was Sie selbst testen sollten:
+Überprüfen Sie ob es an Ihrem Rechner oder am verwendeten USB-Kabel liegt. Testen Sie dafür an einem anderen Computer oder mindestens an einem anderen USB Port. Auch USB-Kabel Verlängerungen können störend sein.
+Vielleicht handelt es sich um eine am MacOS formatierte Festplatte (z.B. HFS+) und Sie versuchten es an Windows anzuschließen?
+Bei Möglichkeit können Sie es auch über Linux (z.B. PartedMagic) versuchen.
 
-Zudem achten Sie darauf ob das Anschließen der Festplatte Ihren Rechner verlangsamt und ob die Festplatte überhaupt in der Datenträgerverwaltung oder im BIOS angezeigt wird. Sollte das Anschließen Ihren Rechner verlangsamen oder wird die Festplatte nicht mal mehr im BIOS erkannt liegt ein Hardwareschaden an der HDD vor.
+Wenn Sie klackernde oder schleifende Geräusche hören müssen Sie den Selbstversuch abbrechen. Beschreiben Sie zudem den Speicher nicht. Sie sollten nur lesen!
 
-Ursache für externe Festplatten, die wegen Hardwareschäden nicht mehr erkannt werden ist der Headcrash (Berührung Leseköpfe mit Oberfläche). Dadruch kommt es in der Regel z.B. zu:
+Wenn das Anschließen der HDD dennoch Ihren Rechner verlangsamt oder die Festplatte weiterhin nicht mal in der Datenträgerverwaltung oder im BIOS angezeigt wird liegt ein Hardwareschaden an der HDD vor.
 
-- einer beschädigten Oberfläche
-- dadurch entstandene fehlerhafte Sektoren haben Fehlerlisten überfüllt, was zu Einschränkungen in der Firmware führt
+Ursache für externe HDDs, die wegen Hardwareschäden nicht mehr erkannt werden ist in der Regel immer der Headcrash (Berührung Sensoren mit Oberfläche). Dadruch kommt es z.B. zu:
+- beschädigten Oberflächen
+- dadurch entstandene fehlerhafte Sektoren haben Fehlerlisten überfüllt -> Festplatte reagiert nurnoch sehr langsam bis garnicht mehr
 - somit zu fehlerhaften Modulen aus der Servicearea (entspricht "Firmware der HDD")
 - ohne klackernde Geräusche: einzelne beschädigte oder schwache Leseköpfe außerhalb der Servicearea
 - mit klackernden Geräuschen: beschädigte Leseköpfe, die die Servicearea betreffen
 
 Zu einem Headcrash kann es z.B. durch einem Sturz, aber auch z.B. durch hohes Alter kommen.
 
-Die Reparatur dieses Schadens bzw. die Datenrettung funktioniert bei uns wie folgt:
+Die professionelle Datenrettung für diesen Schaden funktioniert nun wie folgt:
 
 ❶ Austausch USB-PCB mit SATA-PCB:
 <img class="h-80 object-cover object-right" src="assets/articles/WD-HDD_2.jpg">
@@ -38,27 +41,27 @@ Da sich die HDD direkt beim initialisieren aufhängt unterbinden wir den automat
 
 ❸ Manuelles intialisieren des "Loaders" in den RAM der HDD und Backup der Servicearea Module
 <div class="flex grid-cols-3 flex-wrap gap-4">
-  <img class="h-80 object-cover object-right" src="assets/articles/externeWD_7.PNG">
-  <img class="h-80 object-cover object-right" src="assets/articles/externeWD_8.PNG"></div>
+<img class="h-80 object-cover object-right" src="assets/articles/externeWD_7.PNG">
+<img class="h-80 object-cover object-right" src="assets/articles/externeWD_8.PNG"></div>
 Da wir den SA Zugang zuvor gesperrt haben müssen wir den Loader manuell hochladen.
 Das Servicearea Backup dient als Sicherheit falls spätere Änderungen rückgängig gemacht werden müssen.
 
 ❹ Test der Schreib-Lesefunktion und ggf. Austausch
 <div class="flex grid-cols-3 flex-wrap gap-4">
-  <img class="h-80 object-cover object-right" src="assets/articles/externeWD_10.PNG">
-  <img class="h-80 object-cover object-right" src="assets/articles/WD-HDD_4.jpg"></div>
+<img class="h-80 object-cover object-right" src="assets/articles/externeWD_10.PNG">
+<img class="h-80 object-cover object-right" src="assets/articles/WD-HDD_4.jpg"></div>
 Sollten einzelne Leseköpfe nicht lesen oder innerhalb der Servicearea nicht schreiben können müssen wir diese nun austauschen.
 
 ❺ Ggf. Reparatur und Modifikationen an der Servicearea
 <div class="flex grid-cols-3 flex-wrap gap-4">
-  <img class="h-80 object-cover object-right" src="assets/articles/externeWD_11.PNG">
-  <img class="h-80 object-cover object-right" src="assets/articles/externeWD_12.PNG"></div>
+<img class="h-80 object-cover object-right" src="assets/articles/externeWD_11.PNG">
+<img class="h-80 object-cover object-right" src="assets/articles/externeWD_12.PNG"></div>
 Mit funktionierenden Schreib-/Leseköpfe können wir nun auch die Servicearea modifizieren, dass sich die HDD ohne aufhängen selbst wieder initialisieren kann und uns möglichst gute Auslesegeschwindigkeiten liefert.
 
 ❻ Datenzugriff und Auslesen der HDD
 <div class="flex grid-cols-3 flex-wrap gap-4">
-  <img class="h-80 object-cover object-right" src="assets/articles/externeWD_14.PNG">
-  <img class="h-80 object-cover object-right" src="assets/articles/externeWD_15.PNG"></div>
+<img class="h-80 object-cover object-right" src="assets/articles/externeWD_14.PNG">
+<img class="h-80 object-cover object-right" src="assets/articles/externeWD_15.PNG"></div>
 Wir haben nun Datenzugriff und können die Festplatte auslesen. Lesefehler versuchen wir durch mehrfache Durchgänge und Anpassung der Leseparameter anschließend zu reduzieren. Am Ende speichern wir die Dateien auf einem neuen Speicher ab.
 
 Festpreisliste nach von Ihnen definierten Erfolg:
@@ -70,7 +73,8 @@ Defekte HDD-Festplatte bis 6TB Festplattenkapazität: 625,00 €*
 *bereits inkl. 19% Mehrwertsteuer
 
 Falls noch Fragen offen sind rufen Sie am besten unter 0841 12840705 an oder schreiben eine Email an: info@jungbauerdatenrettung.de
-  </pre>
-  </div>
-  </div>
+</pre>
+</div>
+</div>
+
   

@@ -6,25 +6,28 @@
       <pre class="container whitespace-pre-wrap px-3">
   <h2 class="font-bold text-xl">externe Festplatte wird nicht erkannt (z.B. WD Portable, Toshiba Canvio oder Seagate Expansion):</h2><span class="text-bold text-sm md:text-lg text-silver">Updated am 30.04.2022, 07:23 Uhr von Tobias Jungbauer</span>
   <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
-Hiermit möchte ich auf einer der typischsten Datenrettungsfälle eingehen: externe Festplatten die nicht mehr erkannt werden 
-(insbesondere: auch nicht im BIOS). Was kann man hier tun?
+Die externe Festplatte wird nicht mehr erkannt (insbesondere: auch nicht im BIOS). Was kann man hier tun?
 
 <img class="h-80 object-cover object-right" src="assets/articles/WD-HDD_1.jpg">
-Als allererstes sollten Sie überprüfen, ob es an Ihrem Rechner oder am verwendeten USB-Kabel liegt. Testen Sie dafür an einem anderen Computer oder mindestens an einem anderen USB Port. Auch USB-Kabel Verlängerungen können störend sein.
+Zunächst zu dem was Sie selbst testen sollten:
+Überprüfen Sie ob es an Ihrem Rechner oder am verwendeten USB-Kabel liegt. Testen Sie dafür an einem anderen Computer oder mindestens an einem anderen USB Port. Auch USB-Kabel Verlängerungen können störend sein.
+Vielleicht handelt es sich um eine am MacOS formatierte Festplatte (z.B. HFS+) und Sie versuchten es an Windows anzuschließen?
+Bei Möglichkeit können Sie es auch über Linux (z.B. PartedMagic) versuchen.
 
-Zudem achten Sie darauf ob das Anschließen der Festplatte Ihren Rechner verlangsamt und ob die Festplatte überhaupt in der Datenträgerverwaltung oder im BIOS angezeigt wird. Sollte das Anschließen Ihren Rechner verlangsamen oder wird die Festplatte nicht mal mehr im BIOS erkannt liegt ein Hardwareschaden an der HDD vor.
+Wenn Sie klackernde oder schleifende Geräusche hören müssen Sie den Selbstversuch abbrechen. Beschreiben Sie zudem den Speicher nicht. Sie sollten nur lesen!
 
-Ursache für externe Festplatten, die wegen Hardwareschäden nicht mehr erkannt werden ist der Headcrash (Berührung Leseköpfe mit Oberfläche). Dadruch kommt es in der Regel z.B. zu:
+Wenn das Anschließen der Festplatte dennoch Ihren Rechner verlangsamt oder die Festplatte weiterhin nicht mal in der Datenträgerverwaltung oder im BIOS angezeigt wird liegt ein Hardwareschaden an der HDD vor.
 
-- einer beschädigten Oberfläche
-- dadurch entstandene fehlerhafte Sektoren haben Fehlerlisten überfüllt, was zu Einschränkungen in der Firmware führt
+Ursache für externe Festplatten, die wegen Hardwareschäden nicht mehr erkannt werden ist in der Regel immer der Headcrash (Berührung Sensoren mit Oberfläche). Dadruch kommt es z.B. zu:
+- beschädigten Oberflächen
+- dadurch entstandene fehlerhafte Sektoren haben Fehlerlisten überfüllt -> Festplatte reagiert nurnoch sehr langsam bis garnicht mehr
 - somit zu fehlerhaften Modulen aus der Servicearea (entspricht "Firmware der HDD")
 - ohne klackernde Geräusche: einzelne beschädigte oder schwache Leseköpfe außerhalb der Servicearea
 - mit klackernden Geräuschen: beschädigte Leseköpfe, die die Servicearea betreffen
 
 Zu einem Headcrash kann es z.B. durch einem Sturz, aber auch z.B. durch hohes Alter kommen.
 
-Die Reparatur dieses Schadens bzw. die Datenrettung funktioniert bei uns wie folgt:
+Die professionelle Datenrettung für diesen Schaden funktioniert nun wie folgt:
 
 ❶ Austausch USB-PCB mit SATA-PCB:
 <img class="h-80 object-cover object-right" src="assets/articles/WD-HDD_2.jpg">
