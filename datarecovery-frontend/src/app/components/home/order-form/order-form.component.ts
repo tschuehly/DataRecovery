@@ -83,7 +83,7 @@ import { Order, Product } from '../../../model/model';
           <h2 class="font-semibold text-base md:text-lg inline text-center py-4">
           <a
             class="font-semibold "
-            >Kosten Rückversand: a) nach Erfolg: 4,99€ b) bei Misserfolg: kostenfrei</a
+            >Rückversand: nach Erfolg: 4,99€ (Misserfolg: kostenfrei)</a
           >
         </h2>
           <div
@@ -172,7 +172,7 @@ import { Order, Product } from '../../../model/model';
                 class="mt-1 w-full text-black"
                 formControlName="tel"
             /></label>
-            <h2 class="font-semibold text-base md:text-lg inline text-center py-4">
+            <p class="font-semibold text-base md:text-lg inline text-center py-4">
             <a
               class="font-semibold underline"
               routerLink="rechtliches/agb"
@@ -184,7 +184,7 @@ import { Order, Product } from '../../../model/model';
               routerLink="rechtliches/datenschutz"
               >Datenschutzrichtlinien</a
             >
-          </h2>
+          </p>
           </div>
           <div
             class="flex justify-center mt-4 bg-silver text-sm md:text-xl p-4 rounded-b-2xl"
