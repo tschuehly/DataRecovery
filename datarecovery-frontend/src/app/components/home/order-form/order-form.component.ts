@@ -81,19 +81,11 @@ import { Order, Product } from '../../../model/model';
             ></textarea>
           </label>
           <h2 class="font-semibold text-base md:text-lg inline text-center py-4">
-            <a
-              class="font-semibold underline"
-              routerLink="rechtliches/agb"
-              >Allgemeine Geschäftsbedingungen</a
-            >
-            und
-            <a
-              class="font-semibold  underline"
-              routerLink="rechtliches/datenschutz"
-              >Datenschutzrichtlinien</a
-            >
-          </h2>
-
+          <a
+            class="font-semibold "
+            >Kosten Rückversand: a) nach Erfolg: 4,99€ b) bei Misserfolg: kostenfrei</a
+          >
+        </h2>
           <div
             class="flex justify-center mt-4 bg-silver text-lg md:text-xl p-4 rounded-b-2xl"
           >
@@ -180,6 +172,19 @@ import { Order, Product } from '../../../model/model';
                 class="mt-1 w-full text-black"
                 formControlName="tel"
             /></label>
+            <h2 class="font-semibold text-base md:text-lg inline text-center py-4">
+            <a
+              class="font-semibold underline"
+              routerLink="rechtliches/agb"
+              >Allgemeine Geschäftsbedingungen</a
+            >
+            und
+            <a
+              class="font-semibold  underline"
+              routerLink="rechtliches/datenschutz"
+              >Datenschutzrichtlinien</a
+            >
+          </h2>
           </div>
           <div
             class="flex justify-center mt-4 bg-silver text-sm md:text-xl p-4 rounded-b-2xl"
