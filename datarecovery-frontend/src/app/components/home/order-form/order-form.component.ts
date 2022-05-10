@@ -83,7 +83,7 @@ import { Order, Product } from '../../../model/model';
           <h2 class="font-semibold text-base md:text-lg inline text-center py-4">
           <a
             class="font-semibold "
-            >Rückversand nach erfolgreicher Datenrettung: 4,99€ (Misserfolg: kostenfrei)</a
+            >Rückversand nach erfolgreicher Datenrettung: 4,99€ (Misserfolg: kostenfreier Rückversand)</a
           >
         </h2>
           <div
@@ -173,7 +173,7 @@ import { Order, Product } from '../../../model/model';
                 formControlName="tel"
             /></label>
             <p class="font-semibold text-base md:text-lg inline text-center py-4">
-            zu den<a
+            zu den <a
               class="font-semibold underline"
               routerLink="rechtliches/agb"
               >allgemeinen Geschäftsbedingungen</a
