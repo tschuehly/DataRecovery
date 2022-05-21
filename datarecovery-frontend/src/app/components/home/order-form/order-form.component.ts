@@ -83,7 +83,7 @@ import { Order, Product } from '../../../model/model';
           <h2 class="font-semibold text-base md:text-lg inline text-center py-4">
           <a
             class="font-semibold "
-            >Rückversand: 4,99€ (falls Misserfolg: kostenfreier Rückversand)</a
+            >Rückversand: 4,99€ (Misserfolg: inkl. Rückversand kostenfrei)</a
           >
         </h2>
           <div
