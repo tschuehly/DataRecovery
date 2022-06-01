@@ -1,18 +1,17 @@
 package de.tschuehly.datarecoverybackend.model
 
 import org.springframework.security.core.GrantedAuthority
-import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
 
 data class JwtUserDetails(
     private val username: String,
     private val password: String,
-    val authorities: List<SimpleGrantedAuthority>,
+    val authorities: List<GrantedAuthority>,
     val token: String
 ) : UserDetails {
 
-    override fun getAuthorities(): MutableCollection<out GrantedAuthority> {
-        return authorities.toMutableList()
+    override fun getAuthorities(): Collection<GrantedAuthority> {
+        return authorities.toList()
     }
 
     override fun getPassword(): String {

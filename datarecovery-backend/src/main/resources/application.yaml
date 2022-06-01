@@ -25,7 +25,7 @@ server:
 logging:
   level:
     org.springframework.web: INFO
-
+#logging.level.org.springframework.security: TRACE
 ---
 # Run a docker container with docker run -d --name some-postgres -e POSTGRES_PASSWORD=password -p 5432:5432 postgres:13.4
 # Then you can use JPABuddy to update the schema
@@ -107,3 +107,28 @@ spring:
       ddl-auto: validate
   liquibase:
     contexts: prod
+
+---
+stages: # List of stages for jobs, and their order of execution
+  - archive
+image:
+  alpine:3.15.0
+
+variables:
+  GIT_SSL_NO_VERIFY: "true"
+  ZIP_NAME: $CI_PROJECT_NAME-$CI_COMMIT_SHORT_SHA.zip
+
+archive-repo: # This job runs in the build stage, which runs first.
+  stage: archive
+  #  rules:
+  #    - if: $CI_COMMIT_TAG
+  script:
+    - apk add zip
+    - apk add curl
+    - apk add jq
+    - |
+      metadata=$(jq '. +={"commitsha": '\"${CI_COMMIT_SHA}\"',"projectname":'\"${CI_PROJECT_NAME}\"'}' application.json5)
+    - echo ${metadata}
+    - zip ${ZIP_NAME} ./*
+    - ls
+    - curl --insecure --location --request POST 'https://platform-marketplace-service.integration.usu.k8s.aspera.usu.grp/main/api/upload' --form 'repoDir=@'"./${ZIP_NAME}" --form 'metadata='"${metadata}"

@@ -31,13 +31,12 @@ class SpringSecurityConfig(
             .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
             .and()
             .exceptionHandling()
-            .authenticationEntryPoint { request: HttpServletRequest?, response: HttpServletResponse, ex: AuthenticationException ->
+            .authenticationEntryPoint { _: HttpServletRequest?, response: HttpServletResponse, ex: AuthenticationException ->
                 response.sendError(
                     HttpServletResponse.SC_UNAUTHORIZED,
                     ex.message
                 )
-            }
-            .and()
+            }.and()
             .authorizeRequests()
             // Our public endpoints
             .antMatchers(
@@ -46,11 +45,11 @@ class SpringSecurityConfig(
             ).permitAll()
             .antMatchers(
                 HttpMethod.GET, "/", "/api/review", "/api/review/detail", "/api/review/refresh",
-                "/api/product", "/api/order/tracking", "/api/user/logout"
+                "/api/product", "/api/order/tracking", "/api/user/logout", "/api/picture/**"
             ).permitAll()
             .antMatchers(HttpMethod.POST, "/api/order/create", "/api/user/login").permitAll()
             .antMatchers(HttpMethod.POST, "/api/user/**").permitAll()
-            // Our private endpoints
+            // Our private endpoints.
             .anyRequest().authenticated()
             .and()
             .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter::class.java)
