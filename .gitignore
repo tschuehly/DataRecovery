@@ -3,3 +3,4 @@ volumes
 *.env
 postgres-data
 out
+/.idea/

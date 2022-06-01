@@ -2,6 +2,7 @@ package de.tschuehly.datarecoverybackend.controller
 
 import de.tschuehly.datarecoverybackend.model.Product
 import de.tschuehly.datarecoverybackend.repository.ProductRepository
+import org.springframework.security.access.prepost.PreAuthorize
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable

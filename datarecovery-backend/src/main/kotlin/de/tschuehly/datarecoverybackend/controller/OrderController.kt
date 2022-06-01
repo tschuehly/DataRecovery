@@ -5,9 +5,11 @@ import de.tschuehly.datarecoverybackend.model.Order
 import de.tschuehly.datarecoverybackend.repository.OrderRepository
 import de.tschuehly.datarecoverybackend.service.OrderService
 import org.slf4j.Logger
+import org.springframework.security.access.prepost.PreAuthorize
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.multipart.MultipartFile
 
+@PreAuthorize("hasRole('ADMIN')")
 @RestController
 @RequestMapping("api/order")
 class OrderController(
@@ -15,6 +17,8 @@ class OrderController(
     private val logger: Logger
 ) :
     CrudController<Order, OrderRepository, OrderService>(orderService) {
+
+    @PreAuthorize("permitAll()")
     @PostMapping("/create")
     fun createOrder(@RequestBody order: Order) = orderService.createOrder(order)
 
@@ -24,6 +28,7 @@ class OrderController(
     @GetMapping("/info")
     fun getOrderInfo() = orderService.getOrderInfo()
 
+    @PreAuthorize("hasAnyRole('B2B','ADMIN')")
     @GetMapping("/state")
     fun getByTrackingStateList(
         @RequestParam("state") stateList: List<String>
@@ -34,6 +39,7 @@ class OrderController(
         @RequestParam searchTerm: String
     ): List<Order> = orderService.getBySearchTerm(searchTerm)
 
+    @PreAuthorize("permitAll()")
     @GetMapping("/tracking")
     fun getByTrackingId(
         @RequestParam trackingId: String,
