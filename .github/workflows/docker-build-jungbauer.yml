@@ -1,15 +1,43 @@
-name: Docker Build and Push 
+name: Test, Build and Publish Application
 on:
   push:
-    branches: [ jungbauer_deploy ]
+    branches: [ jungbauer_deploy, jungbauer_test ]
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  MAIL_SENDER_USERNAME: ${{ secrets.MAIL_SENDER_USERNAME}}
+  MAIL_SENDER_PASSWORD: ${{ secrets.MAIL_SENDER_PASSWORD}}
+  MAIL_SENDER_HOST: ${{ secrets.MAIL_SENDER_HOST}}
+  MAIL_SENDER_PORT: ${{ secrets.MAIL_SENDER_PORT}}
+  DATABASE_USERNAME: ${{ secrets.DATABASE_USERNAME}}
+  REMOTE_DOCKER: ${{ secrets.REMOTE_DOCKER}}
+  VIRTUAL_HOST: ${{ secrets.VIRTUAL_HOST}}
+  LETSENCRYPT_HOST: ${{ secrets.LETSENCRYPT_HOST}}
+  VIRTUAL_PORT: ${{ secrets.VIRTUAL_PORT}}
+  GOOGLEMAPS_PLACEID: ${{ secrets.GOOGLEMAPS_PLACEID}}
+  GOOGLEMAPS_APIKEY: ${{ secrets.GOOGLEMAPS_APIKEY}}
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - name: Set up JDK 15
+        uses: actions/setup-java@v3
+        with:
+          java-version: '15'
+          distribution: 'adopt'
+      - name: Change wrapper permissions
+        run: chmod +x ./datarecovery-backend/gradlew
+      - name: Run the Gradle tests
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: test
+          build-root-directory: datarecovery-backend
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
 
       - name: docker build
         run: | 
