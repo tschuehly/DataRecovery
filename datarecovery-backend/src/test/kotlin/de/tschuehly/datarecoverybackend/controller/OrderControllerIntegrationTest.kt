@@ -11,6 +11,8 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.data.web.JsonPath
 import org.springframework.http.MediaType
 import org.springframework.mock.web.MockMultipartFile
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
+import org.springframework.security.test.context.support.WithMockUser
 import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.context.TestPropertySource
 import org.springframework.test.web.servlet.MockMvc
@@ -23,13 +25,11 @@ import java.util.*
 
 @Testcontainers
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@TestPropertySource(
-    locations = ["classpath:testEnvironment.env"]
-)
-@AutoConfigureMockMvc(addFilters = false)
+@AutoConfigureMockMvc
 @ActiveProfiles(profiles = ["integrationTest"])
 internal class OrderControllerIntegrationTest @Autowired constructor(val mockMvc: MockMvc) : IntegrationTestBase() {
     @Test
+    @WithMockUser(username = "anonymous")
     fun createOrder() {
         mockMvc.post("/api/order/create") {
             contentType = MediaType.APPLICATION_JSON
@@ -44,6 +44,7 @@ internal class OrderControllerIntegrationTest @Autowired constructor(val mockMvc
     }
 
     @Test
+    @WithMockUser(username = "admin", roles = ["ADMIN"])
     fun getArchived() {
         mockMvc.get("/api/order/state?state=Auftrag eingegangen").andExpect {
             status { isOk() }
@@ -52,8 +53,17 @@ internal class OrderControllerIntegrationTest @Autowired constructor(val mockMvc
         }
     }
 
+    @Test
+    @WithMockUser(username = "user")
+    fun getArchivedShouldFail() {
+        mockMvc.get("/api/order/state?state=Auftrag eingegangen").andExpect {
+            status { isForbidden() }
+        }
+    }
+
 
     @Test
+    @WithMockUser(username = "admin", roles = ["ADMIN"])
     fun addUpdateWithPictureToOrder() {
         val addUpdateResult = mockMvc.multipart("/api/order/addUpdate/56") {
             file(
@@ -80,6 +90,7 @@ internal class OrderControllerIntegrationTest @Autowired constructor(val mockMvc
     }
 
     @Test
+    @WithMockUser(username = "admin", roles = ["ADMIN"])
     fun addProduct() {
         mockMvc.post("/api/product") {
             contentType = MediaType.APPLICATION_JSON

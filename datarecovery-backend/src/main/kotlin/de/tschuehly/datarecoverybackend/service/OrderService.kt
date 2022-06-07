@@ -10,14 +10,16 @@ import de.tschuehly.datarecoverybackend.model.Update
 import de.tschuehly.datarecoverybackend.repository.OrderProductRepository
 import de.tschuehly.datarecoverybackend.repository.OrderRepository
 import de.tschuehly.datarecoverybackend.repository.PictureRepository
+import de.tschuehly.datarecoverybackend.repository.UserRepository
 import org.slf4j.Logger
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.scheduling.annotation.Scheduled
+import org.springframework.security.core.authority.SimpleGrantedAuthority
+import org.springframework.security.core.context.SecurityContextHolder
 import org.springframework.stereotype.Service
 import org.springframework.web.multipart.MultipartFile
 import java.time.Duration
 import java.time.Instant
-import java.time.LocalDate
 import java.util.*
 
 @Suppress("SpringJavaInjectionPointsAutowiringInspection")
@@ -28,7 +30,8 @@ class OrderService(
     private val mailService: MailService,
     private val pictureRepository: PictureRepository,
     private val pictureContentStore: PictureContentStore,
-    private val logger: Logger
+    private val logger: Logger,
+    private val userRepository: UserRepository
 ) : CrudService<Order, OrderRepository>(orderRepository) {
 
     fun createOrder(order: Order): Order {
@@ -95,8 +98,16 @@ class OrderService(
     }
 
     fun getByTrackingStateList(stateList: List<String>): List<Order> {
-        return repository.findByTrackingStateInOrderByOrderDateDesc(stateList)
+        val orderList = repository.findByTrackingStateInOrderByOrderDateDesc(stateList)
+        val auth = SecurityContextHolder.getContext().authentication
 
+        if (auth.authorities.any { it == SimpleGrantedAuthority("ROLE_B2B") }) {
+            val email = userRepository.findByUsername(auth.name)?.email
+            return orderList.filter { order ->
+                order.customer?.email == email
+            }
+        }
+        return orderList
     }
 
     fun getOrderInfo(): Any {

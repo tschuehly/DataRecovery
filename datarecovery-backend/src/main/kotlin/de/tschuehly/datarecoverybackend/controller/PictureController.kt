@@ -5,15 +5,19 @@ import de.tschuehly.datarecoverybackend.service.PictureService
 import org.springframework.core.io.InputStreamResource
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
+import org.springframework.security.access.prepost.PreAuthorize
 import org.springframework.web.bind.annotation.*
 
+
 @Suppress("SpringJavaInjectionPointsAutowiringInspection")
+
 @RestController
 @RequestMapping("api/picture")
 class PictureController(
     val pictureService: PictureService,
     val pictureContentStore: PictureContentStore,
 ) {
+    @PreAuthorize("permitAll()")
     @GetMapping("/{id}")
     fun getById(
         @PathVariable id: Long,

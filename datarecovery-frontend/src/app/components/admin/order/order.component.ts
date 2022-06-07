@@ -22,71 +22,71 @@ import { FormControl } from '@angular/forms';
               class="border-2 p-2"
               (click)="getOrders([oState.orderReceived])"
             >
-              Erwartet [{{ getCountByTrackingState(oState.orderReceived) }}]
+              Erwartet{{ getCountByTrackingStateString(oState.orderReceived) }}
             </button>
             <button
               class="border-2 p-2"
               (click)="getOrders([oState.parcelReceived])"
             >
-              Paket eingegangen [{{
-                getCountByTrackingState(oState.parcelReceived)
-              }}]
+              Paket eingegangen {{
+              getCountByTrackingStateString(oState.parcelReceived)
+              }}
             </button>
             <button
               class="border-2 p-2"
               (click)="getOrders([oState.firstAnalysis])"
             >
-              Erste Analyse [{{
-                getCountByTrackingState(oState.firstAnalysis)
-              }}]
+              Erste Analyse {{
+              getCountByTrackingStateString(oState.firstAnalysis)
+              }}
             </button>
             <button
               class="border-2 p-2"
               (click)="getOrders([oState.orderedFirstPartDispenser])"
             >
-              Bestellung erster Teilespender [{{
-                getCountByTrackingState(oState.orderedFirstPartDispenser)
-              }}]
+              Bestellung erster Teilespender {{
+              getCountByTrackingStateString(oState.orderedFirstPartDispenser)
+              }}
             </button>
             <button
               class="border-2 p-2"
               (click)="getOrders([oState.orderedSecondPartDispenser])"
             >
-              Bestellung zweiter Teilespender [{{
-                getCountByTrackingState(oState.orderedSecondPartDispenser)
-              }}]
+              Bestellung zweiter Teilespender {{
+              getCountByTrackingStateString(oState.orderedSecondPartDispenser)
+              }}
             </button>
             <button
               class="border-2 p-2"
               (click)="getOrders([oState.orderedThirdPartDispenser])"
             >
-              Bestellung Dritter Teilespender [{{
-                getCountByTrackingState(oState.orderedThirdPartDispenser)
-              }}]
+              Bestellung Dritter Teilespender {{
+              getCountByTrackingStateString(oState.orderedThirdPartDispenser)
+              }}
             </button>
             <button
               class="border-2 p-2"
               (click)="getOrders([oState.readingMemory])"
             >
-              Speicher wird ausgelesen [{{
-                getCountByTrackingState(oState.readingMemory)
-              }}]
+              Speicher wird ausgelesen {{
+              getCountByTrackingStateString(oState.readingMemory)
+              }}
             </button>
             <button class="border-2 p-2" (click)="getOrders([oState.reRead])">
-              Speicher wird erneut ausgelesen [{{
-                getCountByTrackingState(oState.reRead)
-              }}]
+              Speicher wird erneut ausgelesen {{
+              getCountByTrackingStateString(oState.reRead)
+              }}
             </button>
             <button
               class="border-2 p-2"
               (click)="getOrders([oState.savingData])"
             >
-              Abspeicherung Dateien [{{
-                getCountByTrackingState(oState.savingData)
-              }}]
+              Abspeicherung Dateien {{
+              getCountByTrackingStateString(oState.savingData)
+              }}
             </button>
             <button class="border-2 p-2" (click)="getOrders([oState.storage])">
-              Einlagerung [{{ getCountByTrackingState(oState.storage) }}]
+              Einlagerung {{ getCountByTrackingStateString(oState.storage) }}
             </button>
             <button
               class="border-2 p-2"
@@ -99,77 +99,77 @@ import { FormControl } from '@angular/forms';
                 ])
               "
             >
-              Archiv [{{ getArchiveCount() }}]
+              Archiv {{ getArchiveCount() }}
             </button>
           </div>
         </div>
         <table class="border table-auto mx-auto">
           <thead>
-            <th class="border px-2 py-1">ID</th>
-            <th class="border px-2 py-1">Produkt</th>
-            <th class="border px-2 py-1">Kunde</th>
-            <th class="border px-2 py-1">Orderdatum</th>
-            <th class="border px-2 py-1">Deadline</th>
-            <th class="border px-2 py-1">Bearbeitungsdauer</th>
-            <th class="border px-2 py-1">Status</th>
-            <th class="border px-2 py-1">Edit</th>
+          <th class="border px-2 py-1">ID</th>
+          <th class="border px-2 py-1">Produkt</th>
+          <th class="border px-2 py-1">Kunde</th>
+          <th class="border px-2 py-1">Orderdatum</th>
+          <th class="border px-2 py-1">Deadline</th>
+          <th class="border px-2 py-1">Bearbeitungsdauer</th>
+          <th class="border px-2 py-1">Status</th>
+          <th class="border px-2 py-1">Edit</th>
           </thead>
           <tbody>
-            <tr *ngFor="let order of filteredOrders$ | async">
-              <td class="border p-2">{{ order.id }}</td>
-              <td class="border p-2">
-                {{ order.orderProduct.category.name }}
-                {{ order.orderProduct.name }}
-              </td>
-              <td class="border p-2">
-                {{ order.customer.firstName }} {{ order.customer.lastName }}
-              </td>
-              <td class="border p-2">
-                {{ order.orderDate | date: 'd.M.y H:mm':'+0400' }}
-              </td>
-              <td
-                class="border p-2 {{
+          <tr *ngFor="let order of filteredOrders$ | async">
+            <td class="border p-2">{{ order.id }}</td>
+            <td class="border p-2">
+              {{ order.orderProduct.category.name }}
+              {{ order.orderProduct.name }}
+            </td>
+            <td class="border p-2">
+              {{ order.customer.firstName }} {{ order.customer.lastName }}
+            </td>
+            <td class="border p-2">
+              {{ order.orderDate | date: 'd.M.y H:mm':'+0400' }}
+            </td>
+            <td
+              class="border p-2 {{
                   getDaysTillDeadline(order.deadline) < 7 && order.deadline
                     ? 'bg-red-' +
                       (700 - getDaysTillDeadline(order.deadline) * 100)
                     : ''
                 }}"
-              >
-                {{ getDaysTillDeadline(order.deadline) }}
-              </td>
+            >
+              {{ getDaysTillDeadline(order.deadline) }}
+            </td>
 
-              <td
-                class="border p-2 {{
+            <td
+              class="border p-2 {{
                   order.completionDate > order.deadline ? 'bg-purple-500' : ''
                 }}"
-              >
-                {{ getDaysTillCompletion(order.completionDate) }}
-              </td>
-              <td class="border p-2">{{ order.trackingState }}</td>
-              <td class="border pl-2">
-                <button (click)="editOrder = order">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="icon icon-tabler icon-tabler-edit"
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="#2c3e50"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path
-                      d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3"
-                    />
-                    <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />
-                    <line x1="16" y1="5" x2="19" y2="8" />
-                  </svg>
-                </button>
-              </td>
-            </tr>
+            >
+              {{ getDaysTillCompletion(order.completionDate) }}
+            </td>
+            <td class="border p-2">{{ order.trackingState }}</td>
+            <td class="border pl-2">
+              <button (click)="editOrder = order">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-edit"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="#2c3e50"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <path
+                    d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3"
+                  />
+                  <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3"/>
+                  <line x1="16" y1="5" x2="19" y2="8"/>
+                </svg>
+              </button>
+            </td>
+          </tr>
           </tbody>
         </table>
       </div>
@@ -221,25 +221,26 @@ export class OrderComponent implements OnInit {
     });
   }
   getArchiveCount() {
-    try {
-      return (
-        this.trackingStateCount.get(this.oState.parcelReceived) +
-        this.trackingStateCount.get(this.oState.success) +
-        this.trackingStateCount.get(this.oState.failure) +
-        this.trackingStateCount.get(this.oState.legacyComplete)
-      );
-    } catch (e) {
-      return 0;
+    this.getCountByTrackingState(this.oState.parcelReceived)
+    this.getCountByTrackingState(this.oState.success)
+    this.getCountByTrackingState(this.oState.failure)
+    this.getCountByTrackingState(this.oState.legacyComplete)
+  }
+  getCountByTrackingState(state: string): number{
+    let count = this.trackingStateCount.get(state)
+    if(this.trackingStateCount !== undefined && count !== undefined){
+      return count
     }
+    return 0
   }
 
-  getCountByTrackingState(state: string): number {
-    try {
-      return this.trackingStateCount.get(state);
-    } catch (e) {
-      return 0;
+  getCountByTrackingStateString(state: string): string {
+    if(this.getCountByTrackingState(state) == 0){
+      return ""
     }
+    return  "[" + this.getCountByTrackingState(state).toString() + "]"
   }
+
 
   getOrders(stateList: string[]): void {
     let stateString = '?state=' + stateList.join('&state=');

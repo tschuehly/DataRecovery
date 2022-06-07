@@ -1,8 +1,7 @@
 package de.tschuehly.datarecoverybackend.model
 
-import com.fasterxml.jackson.annotation.JsonBackReference
 import org.springframework.content.commons.annotations.ContentId
-import javax.persistence.*
+import javax.persistence.Entity
 
 @Entity
 class Picture(

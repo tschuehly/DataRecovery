@@ -200,40 +200,43 @@ VALUES (65, '2021-05-18 20:01:10.675', 'Sicherung auf WD Elements Portable exter
         '4f415dd0-26b4-11ec-9621-0242ac13000218', 'Auftrag abgeschlossen', 53, 5, 1);
 
 INSERT INTO public.website_user (id, email, password, role, username)
-VALUES (1, 'tobias@jungbauerdatenrettung.de', '$2a$12$F/KnVOtCNhFt37zki0GkteWiN8uplRqV3CyLR18hZkmjBZJmF20LK', 'admin',
+VALUES (1, 'tobias@jungbauerdatenrettung.de', '$2a$12$F/KnVOtCNhFt37zki0GkteWiN8uplRqV3CyLR18hZkmjBZJmF20LK', 'ADMIN',
         'admin');
+INSERT INTO public.website_user (id, email, password, role, username)
+VALUES (2, 'tobias@jungbauerdatenrettung.de', '$2a$12$F/KnVOtCNhFt37zki0GkteWiN8uplRqV3CyLR18hZkmjBZJmF20LK', 'B2B',
+        'b2b');
 
-INSERT INTO public.keyword_rank("ID", "KEYWORD", "URL", "RANK", "REQUEST_TIME")
+INSERT INTO public.keyword_rank(id, keyword, url, rank, request_time)
 VALUES (0, 'Datenretter', 'https://www.jungbauerdatenrettung.de/', 30, TIMESTAMP '2022-04-11 19:32:05.287');
-INSERT INTO public.keyword_rank("ID", "KEYWORD", "URL", "RANK", "REQUEST_TIME")
+INSERT INTO public.keyword_rank(id, keyword, url, rank, request_time)
 VALUES (1, 'Datenrettung Festplatte', 'https://www.jungbauerdatenrettung.de/', 20, TIMESTAMP '2022-04-11 19:32:15.653');
-INSERT INTO public.keyword_rank("ID", "KEYWORD", "URL", "RANK", "REQUEST_TIME")
+INSERT INTO public.keyword_rank(id, keyword, url, rank, request_time)
 VALUES (2, 'Datenrettung HDD', 'https://www.jungbauerdatenrettung.de/', 12, TIMESTAMP '2022-04-11 19:32:26.04');
-INSERT INTO public.keyword_rank("ID", "KEYWORD", "URL", "RANK", "REQUEST_TIME")
+INSERT INTO public.keyword_rank(id, keyword, url, rank, request_time)
 VALUES (3, 'Datenrettung', 'https://www.jungbauerdatenrettung.de/', 39, TIMESTAMP '2022-04-11 19:32:36.354');
-INSERT INTO public.keyword_rank("ID", "KEYWORD", "URL", "RANK", "REQUEST_TIME")
+INSERT INTO public.keyword_rank(id, keyword, url, rank, request_time)
 VALUES (4, 'SSD Datenrettung', 'https://www.jungbauerdatenrettung.de/', 40, TIMESTAMP '2022-04-11 19:33:07.496');
-INSERT INTO public.keyword_rank("ID", "KEYWORD", "URL", "RANK", "REQUEST_TIME")
+INSERT INTO public.keyword_rank(id, keyword, url, rank, request_time)
 VALUES (5, 'Datenrettung Kosten', 'https://www.jungbauerdatenrettung.de/blog/datenrettung-kosten', 29,
         TIMESTAMP '2022-04-11 19:33:38.402');
-INSERT INTO public.keyword_rank("ID", "KEYWORD", "URL", "RANK", "REQUEST_TIME")
+INSERT INTO public.keyword_rank(id, keyword, url, rank, request_time)
 VALUES (6, 'Datenrettung Festplatte Kosten', 'https://www.jungbauerdatenrettung.de/', 20,
         TIMESTAMP '2022-04-11 19:33:48.695');
-INSERT INTO public.keyword_rank("ID", "KEYWORD", "URL", "RANK", "REQUEST_TIME")
+INSERT INTO public.keyword_rank(id, keyword, url, rank, request_time)
 VALUES (7, 'Datenretter', 'https://www.jungbauerdatenrettung.de/', 25, TIMESTAMP '2022-04-12 20:43:43.249');
-INSERT INTO public.keyword_rank("ID", "KEYWORD", "URL", "RANK", "REQUEST_TIME")
+INSERT INTO public.keyword_rank(id, keyword, url, rank, request_time)
 VALUES (8, 'Datenrettung Festplatte', 'https://www.jungbauerdatenrettung.de/', 20,
         TIMESTAMP '2022-04-12 20:43:53.699');
-INSERT INTO public.keyword_rank("ID", "KEYWORD", "URL", "RANK", "REQUEST_TIME")
+INSERT INTO public.keyword_rank(id, keyword, url, rank, request_time)
 VALUES (9, 'Datenrettung HDD', 'https://www.jungbauerdatenrettung.de/', 5, TIMESTAMP '2022-04-12 20:44:04.092');
-INSERT INTO public.keyword_rank("ID", "KEYWORD", "URL", "RANK", "REQUEST_TIME")
+INSERT INTO public.keyword_rank(id, keyword, url, rank, request_time)
 VALUES (10, 'Datenrettung', 'https://www.jungbauerdatenrettung.de/', 41, TIMESTAMP '2022-04-12 20:44:14.42');
-INSERT INTO public.keyword_rank("ID", "KEYWORD", "URL", "RANK", "REQUEST_TIME")
+INSERT INTO public.keyword_rank(id, keyword, url, rank, request_time)
 VALUES (11, 'SSD Datenrettung', 'https://www.jungbauerdatenrettung.de/blog/apple-ssd-datenrettung', 31,
         TIMESTAMP '2022-04-12 20:44:45.532');
-INSERT INTO public.keyword_rank("ID", "KEYWORD", "URL", "RANK", "REQUEST_TIME")
+INSERT INTO public.keyword_rank(id, keyword, url, rank, request_time)
 VALUES (12, 'Datenrettung Kosten', 'https://www.jungbauerdatenrettung.de/blog/datenrettung-kosten', 80,
         TIMESTAMP '2022-04-12 20:45:16.371');
-INSERT INTO public.keyword_rank("ID", "KEYWORD", "URL", "RANK", "REQUEST_TIME")
+INSERT INTO public.keyword_rank(id, keyword, url, rank, request_time)
 VALUES (13, 'Datenrettung Festplatte Kosten', 'https://www.jungbauerdatenrettung.de/', 12,
         TIMESTAMP '2022-04-12 20:45:26.638');

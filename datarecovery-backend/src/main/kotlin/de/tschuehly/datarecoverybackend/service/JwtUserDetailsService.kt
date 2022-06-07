@@ -8,7 +8,7 @@ import de.tschuehly.datarecoverybackend.model.JwtUserDetails
 import de.tschuehly.datarecoverybackend.model.WebsiteUser
 import de.tschuehly.datarecoverybackend.repository.UserRepository
 import de.tschuehly.datarecoverybackend.security.SecurityProperties
-import org.springframework.security.core.authority.AuthorityUtils
+import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.security.core.userdetails.UserDetailsService
 import org.springframework.stereotype.Service
@@ -45,10 +45,12 @@ class JwtUserDetailsService(
 
     private fun getUserDetails(websiteUser: WebsiteUser?, token: String): JwtUserDetails {
         websiteUser ?: throw Error()
+        val authorities = ArrayList<GrantedAuthority>()
+        authorities.add(SimpleGrantedAuthority(String.format("ROLE_%s", websiteUser.role)));
         return JwtUserDetails(
             websiteUser.username,
             websiteUser.password,
-            AuthorityUtils.commaSeparatedStringToAuthorityList(websiteUser.role) as List<SimpleGrantedAuthority>,
+            authorities,
             token
         )
     }

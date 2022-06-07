@@ -2,20 +2,14 @@ package de.tschuehly.datarecoverybackend.service
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import de.tschuehly.datarecoverybackend.helpers.CrudService
-import de.tschuehly.datarecoverybackend.model.Customer
 import de.tschuehly.datarecoverybackend.model.KeywordRank
-import de.tschuehly.datarecoverybackend.repository.CustomerRepository
 import de.tschuehly.datarecoverybackend.repository.KeywordRankRepository
 import org.slf4j.Logger
-import org.springframework.http.HttpStatus
 import org.springframework.scheduling.annotation.Scheduled
 import org.springframework.stereotype.Service
 import org.springframework.web.client.RestTemplate
-import org.springframework.web.server.ResponseStatusException
 import java.net.URLEncoder
 import java.util.*
-import java.util.concurrent.TimeUnit
-import javax.annotation.PostConstruct
 
 @Service
 class KeywordRankService(
