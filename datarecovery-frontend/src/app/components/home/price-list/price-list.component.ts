@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
       <h2
         class="pt-10 py-4 text-2xl md:text-4xl tracking-wider text-center text-gray-50"
       >
-        Ein Festpreis für alle (auch Hardware-) Defekte 
+        Ein Preis für alle Defekte nach der Gesamtkapazität des Speichers:
       </h2>
 
       <div
@@ -43,7 +43,7 @@ import { Component } from '@angular/core';
                 Defekte(r) USB Stick / (micro-) SD Karte
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
-              <div class="pb-2">Festpreise</div>
+              <div class="pb-2">Festpreise*</div>
                 <div>99,00 €</div>
                 <div>125,00 €</div>
                 <div>149,00 €</div>
@@ -91,7 +91,7 @@ import { Component } from '@angular/core';
                 Defekte HDD-Festplatte
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
-              <div class="pb-2">Festpreise</div>
+              <div class="pb-2">Festpreise* & **</div>
                 <div>299,00 €</div>
                 <div>349,00 €</div>
                 <div>399,00 €</div>
@@ -110,7 +110,7 @@ import { Component } from '@angular/core';
                 Defekte SSD-Speicher (SATA-basiert)
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
-              <div class="pb-2">Festpreise</div>
+              <div class="pb-2">Festpreise*</div>
                 <div>275,00 €</div>
                 <div>299,00 €</div>
                 <div>349,00 €</div>
@@ -185,7 +185,9 @@ import { Component } from '@angular/core';
             class="flex flex-col justify-between p-4 text-black md:flex-row bg-silver rounded-b-2xl"
           >
             <div class="self-center text-base md:text-lg">
-              Alle angegebenen Festpreise sind bereits inklusive 19% Mehrwertsteuer.
+              *Alle angegebenen Festpreise sind bereits inklusive 19% Mehrwertsteuer.
+              **bei selbstgeöffnete/verunreinigten HDD Festplatten entfallen die Festpreise. 
+              Fragen Sie in diesem Spezialfall bitte gesondert nach den entsprechenden Konditionen.
             </div>
 
             <td class="flex justify-end pt-4">

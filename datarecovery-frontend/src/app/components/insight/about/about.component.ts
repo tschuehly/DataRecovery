@@ -28,7 +28,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
 <span class="underline text-xl md:text-2xl font-bold">Über mich</span>
 <span class="text-bold text-lg text-silver">Updated am 16.04.2022, 18:38 von Tobias Jungbauer</span>
 
-Ich möchte die höchstmögliche Transparenz, Fairness und Qualität während der Datenrettung anbieten. Daraus ergeben Sie u.a. folgende Punkte:
+Ziele: Transparenz, Fairness und Qualität während der Datenrettung. Daraus ergeben Sie u.a. folgende Punkte:
 
 <span class="font-semibold ">1. Preise unabhängig der Wichtigkeit der Daten:</span>
 Alle meine Fälle werden zu einem preiswerten Festpreis bearbeitet. Erfolgsversprechen: Bei Misserfolg entstehen keine Gebühren trotz Aufwand.
@@ -45,7 +45,7 @@ Meine Gründe und Motivation für die Preisgestaltung bzw. auch das Konzept dahi
             Der erste Auftrag:
           </h2>
           <pre class="whitespace-pre-wrap">
-Bereits zu meiner frühen Schulzeit, als auch begleitend während meines Ingenieurstudium, arbeitete ich bei einem mittelständischen Elektronikdienstleister, bei dem ich das ESD-geschützte Arbeiten an elektronischen Baugruppen, z.B. Löten an SMD und THT Bauteilen lernen konnte, als auch für optische Systeme unter Reinraumbedingungen arbeiten durfte.
+Bereits zu meiner frühen Schulzeit, als auch begleitend während meines Ingenieurstudiums, arbeitete ich bei einem mittelständischen Elektronikdienstleister, bei dem ich das ESD-geschützte Arbeiten an elektronischen Baugruppen, z.B. Löten an SMD und THT Bauteilen lernen konnte, als auch für optische Systeme unter Reinraumbedingungen arbeiten durfte.
 
 Meinen ersten Auftrag zu einer Datenrettung erhielt ich zu dieser Zeit.
 Eine Festplatte aus dem Freundeskreis, bei der ein Angebot einer professionellen Datenrettung im vierstelligen Betrag vorlag und dies für den Besitzer nun mal viel zu teuer war.

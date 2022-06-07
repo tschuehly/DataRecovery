@@ -79,10 +79,8 @@ import { ScrollService } from 'src/app/services/scroll.service';
             </button>
           </div>
           <br />Alle Preise sind bereits inklusive 19% Mehrwertsteuer.<br />
-          Meine Gründe und Motivation für die Preisgestaltung bzw. auch das
-          Konzept dahinter erfahren Sie
-          <a href="/blog/datenrettung-kosten" class="underline font-bold"
-            >hier</a
+          Bei selbstgeöffnete/verunreinigten HDD Festplatten entfallen die angegebenen Festpreise. 
+          Fragen Sie in diesem Spezialfall bitte gesondert nach den entsprechenden Konditionen.
           >.
         </div>
       </div>

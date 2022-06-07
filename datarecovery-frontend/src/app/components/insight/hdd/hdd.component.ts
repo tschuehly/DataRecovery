@@ -27,7 +27,7 @@ import { ScrollService } from '../../../services/scroll.service';
         >
         <pre class="whitespace-pre-wrap py-2">
 <span class="whitespace-pre-wrap py-2 text-bold text-sm md:text-lg text-silver">Updated am 27.03.22, 07:55 von Tobias Jungbauer</span> </pre>
-<pre class="whitespace-pre-wrap text-sm md:text-xl py-8">Gerne bearbeite ich auch Aufträge, die von vorherigen Bearbeitern aufgegeben oder bei denen die HDD Datenrettung nur zu einem Vielfachen meines Festpreises angeboten worden ist. Mein Ziel ist es die professionelle Datenrettung möglichst jedem zu ermöglichen. <div class="flex justify-end pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
+<pre class="whitespace-pre-wrap text-sm md:text-xl py-8">Bitte öffnen Sie Ihre Festplatten wenn Ihnen Ihre Daten wichtig sind nicht selber. Gerne bearbeite ich auch Aufträge, die von vorherigen Bearbeitern aufgegeben oder bei denen die HDD Datenrettung nur zu einem Vielfachen meines Festpreises angeboten worden ist.<div class="flex justify-end pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
 <span class="font-semibold text-base md:text-xl">Es wird die Datenrettung für HDD-Festplatten angeboten, die z.B.:</span>
 - nicht mehr erkannt werden (z.B. typisch für externe WD 2,5" oder 3,5" Seagate HDDs)
 - erkannt werden, sich aber nicht korrekt auslesen lassen
@@ -132,7 +132,8 @@ Defekte HDD-Festplatte bis 1TB Festplattenkapazität: 349,00 €*
 Defekte HDD-Festplatte bis 2TB Festplattenkapazität: 399,00 €*
 Defekte HDD-Festplatte bis 4TB Festplattenkapazität: 499,00 €*
 Defekte HDD-Festplatte bis 6TB Festplattenkapazität: 625,00 €*
-*bereits inkl. 19% Mehrwertsteuer
+*Festpreise und bereits inkl. 19% Mehrwertsteuer. Festpreise entfallen bei selbstgeöffnete/verunreinigten HDD Festplatten. 
+Fragen Sie hier bitte gesondert nach den entsprechenden Konditionen.
 </span>
         <h2 class="text-base md:text-xl underline font-bold my-6">Verwendete Hard- Und Software</h2><pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
 Das PC-3000 UDMA ist eine Hardware-Software-Lösung zur Diagnose und Reparatur von Festplatten auf Basis von SATA- (Serial ATA) und ATA- (IDE) Schnittstellen für zahlreiche Hersteller (Seagate, Western Digital, Fujitsu, Samsung, Maxtor, Quantum, IBM (HGST) ), HITACHI, TOSHIBA), für verschiedene Kapazitäten (von 500 MB bis 8 TB) und verschiedene Formfaktoren: 3,5 "- Desktop-Laufwerke, 2,5" - und 1,8 "- Laptop-Laufwerke.
