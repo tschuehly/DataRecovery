@@ -78,10 +78,9 @@ import { ScrollService } from 'src/app/services/scroll.service';
               weiter zum Ablauf & Auftrag
             </button>
           </div>
-          <br />Alle Preise sind bereits inklusive 19% Mehrwertsteuer.<br />
-          Bei selbstgeöffnete/verunreinigten HDD Festplatten entfallen die angegebenen Festpreise. 
-          Fragen Sie in diesem Spezialfall bitte gesondert nach den entsprechenden Konditionen.
-          >.
+          <br />Alle Preise sind bereits inklusive 19% Mehrwertsteuer.<br/>
+          <br />Bei selbstgeöffnete/verunreinigten HDD Festplatten entfallen die angegebenen Festpreise. 
+          Fragen Sie in diesem Spezialfall bitte gesondert nach den entsprechenden Konditionen.<br/>
         </div>
       </div>
 

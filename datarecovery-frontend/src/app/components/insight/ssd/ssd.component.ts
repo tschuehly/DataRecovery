@@ -53,20 +53,27 @@ Aber dafür gibt es für die meisten Modellen eine Lösung: Man bootet die SSD �
 In meiner Datenbank sind etliche verschiedene „Loader“ für verschiedene Controller bzw. FW Versionen, die dieses Prozedere ermöglichen.
 
 <div class="flex grid-cols-3 flex-wrap gap-4">
-  <img class="h-80 object-cover object-left" src="assets/articles/ssd_1.PNG">
-  <img class="h-80 object-cover object-left" src="assets/articles/ssd_2.PNG">
-</div>
+<img class="h-80 object-cover object-left" src="assets/ssd_1.PNG">
 
-Dadurch kann die SSD initialisiert werden und die Daten einmalig ausgelesen werden:
 
-<div class="flex grid-cols-3 flex-wrap gap-4">
-  <img class="h-80 object-cover object-left" src="assets/articles/ssd_3.PNG">
-  <img class="h-80 object-cover object-left" src="assets/articles/ssd_4.PNG">
-  <img class="h-80 object-cover object-left" src="assets/articles/ssd_5.PNG">
+<img class="h-80 object-cover object-left" src="assets/ssd_2.PNG">
 </div>
+Dadurch kann die SSD initialisiert werden und die Daten einmalig ausgelesen werden.
+Die Reihenfolge ist hier wie folgt:
+
+➀ Loader Upload in den RAM der SSD:
+<img class="h-120 object-cover object-left" src="assets/ssd_3.PNG">
+
+➁ Erstellen des virtuellen Translators (Zuweisung PBA Adressen zu LBA Adressen):
+<img class="h-120 object-cover object-left" src="assets/ssd_4.PNG">
+
+➂ Datenzugriff:
+<img class="h-120 object-cover object-left" src="assets/ssd_5.PNG">
+
 
 Entscheidend für den Datenrettungserfolg ist die Auslesequalität der einzelnen Speicherbausteine.
-Merfache Leseversuche, das Anpassen der Lesetimings als auch der Umgebungstemperatur schaffen hier aber oftmals auch bei schlechten Fällen Besserung.
+
+Merfache Leseversuche, das Anpassen der Lesetimings, als auch der Umgebungstemperatur (-40°C) schaffen hier aber oftmals auch bei vermeitlich schlechten Fällen Besserung.
 
 
 Abgesehen davon biete ich auch das Beseitigen von Hardwareschäden seitens der austauschbaren Elektronik an.

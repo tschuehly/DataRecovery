@@ -17,18 +17,18 @@ import { ScrollService } from '../../../services/scroll.service';
     </div>
     <div class="bg-white text-center">
       <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">
-        HDD Datenrettung
+        HDD-Festplatten Datenrettung
       </h1>
     </div>
     <div class="bg-gray-main text-white border-b-2 border-silver pb-8">
       <div class="container py-8 px-3">
         <span class=" text-xl md:text-2xl font-bold"
-          >HDD Datenrettung</span
+          >HDD-Festplatten Datenrettung</span
         >
         <pre class="whitespace-pre-wrap py-2">
 <span class="whitespace-pre-wrap py-2 text-bold text-sm md:text-lg text-silver">Updated am 27.03.22, 07:55 von Tobias Jungbauer</span> </pre>
-<pre class="whitespace-pre-wrap text-sm md:text-xl py-8">Bitte öffnen Sie Ihre Festplatten wenn Ihnen Ihre Daten wichtig sind nicht selber. Gerne bearbeite ich auch Aufträge, die von vorherigen Bearbeitern aufgegeben oder bei denen die HDD Datenrettung nur zu einem Vielfachen meines Festpreises angeboten worden ist.<div class="flex justify-end pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
-<span class="font-semibold text-base md:text-xl">Es wird die Datenrettung für HDD-Festplatten angeboten, die z.B.:</span>
+<pre class="whitespace-pre-wrap text-sm md:text-xl py-8">Bitte öffnen Sie Ihre Festplatten sofern Ihnen Ihre Daten wichtig sind nicht selber. Gerne bearbeite ich auch Aufträge, die von vorherigen Bearbeitern aufgegeben oder bei denen die HDD Datenrettung nur zu einem Vielfachen meines Festpreises angeboten worden ist.<div class="flex justify-end pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
+<span class="font-semibold text-base md:text-xl">Angeboten wird die Datenrettung für HDD-Festplatten, die z.B.:</span>
 - nicht mehr erkannt werden (z.B. typisch für externe WD 2,5" oder 3,5" Seagate HDDs)
 - erkannt werden, sich aber nicht korrekt auslesen lassen
 - "klackern" oder "fiepsen" (mechanische Schäden)
