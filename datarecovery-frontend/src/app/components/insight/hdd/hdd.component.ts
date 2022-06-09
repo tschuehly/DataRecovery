@@ -35,14 +35,14 @@ import { ScrollService } from '../../../services/scroll.service';
 - Fehlermeldungen ausgeben (wie CRC-Fehler oder E/A-Fehler)
 
 
-<span class="font-semibold text-base md:text-xl">Typische Ursachen dabei sind:</span>
+<span class="font-semibold text-base md:text-xl">In der Regel sind dabei die Ursachen:</span>
 - beschädigte Schreib-/Leseköpfe nach einem Headcrash (meist "klackernde Geräusche" z.B. typisch nach einem Sturz)
 - beschädigte Oberflächen, die zu schlecht lesbaren Bereichen sowohl in Userarea als auch Servicearea führen
 - fehlerhafte ServiceArea bzw. Systemfiles ("Firmware Bug", oftmals korrupte Fehlerlisten)
 - defektes PCB (z.B. durch das Verwenden eines falschen Netzteils)
 
-<span class="font-semibold text-base md:text-xl">Typische Arbeiten dafür sind:</span>
 
+<span class="font-semibold text-base md:text-xl">Typische Arbeiten zur Lösung sind:</span>
 <span class="underline">- mikroskopische Analyse und Austausch der Schreib-/Leseköpfe:</span>
 
 <div class="flex grid-cols-3 flex-wrap gap-4">
@@ -128,7 +128,7 @@ Defekte HDD-Festplatte bis 4TB Festplattenkapazität: 499,00 €*
 Defekte HDD-Festplatte bis 6TB Festplattenkapazität: 625,00 €*
 *Festpreise und bereits inkl. 19% Mehrwertsteuer. Festpreise entfallen bei selbstgeöffnete/verunreinigten HDD Festplatten. 
 Fragen Sie hier bitte gesondert nach den entsprechenden Konditionen.
-</span>
+
         <h2 class="text-base md:text-xl underline font-bold my-6">Verwendete Hard- Und Software</h2><pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
 Das PC-3000 UDMA ist eine Hardware-Software-Lösung zur Diagnose und Reparatur von Festplatten auf Basis von SATA- (Serial ATA) und ATA- (IDE) Schnittstellen für zahlreiche Hersteller (Seagate, Western Digital, Fujitsu, Samsung, Maxtor, Quantum, IBM (HGST) ), HITACHI, TOSHIBA), für verschiedene Kapazitäten (von 500 MB bis 8 TB) und verschiedene Formfaktoren: 3,5 "- Desktop-Laufwerke, 2,5" - und 1,8 "- Laptop-Laufwerke.
 Das PC-3000 UDMA bildet zusammen mit dem Data Extractor UDMA das PC-3000 UDMA Professional-System, mit dem Daten von der SATA-, ATA- (IDE-) Festplatte wiederhergestellt werden können. Wenn Sie Ihre Festplatte reparieren lassen möchten, benötigen Sie eine Lösung wie durch das PC-3000 UDMA. </pre>
