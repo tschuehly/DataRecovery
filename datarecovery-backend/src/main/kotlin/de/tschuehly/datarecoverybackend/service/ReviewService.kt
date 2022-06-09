@@ -28,11 +28,10 @@ class ReviewService(val logger: Logger, val reviewRepository: ReviewRepository) 
     fun refreshReviews() {
         getReviewData()?.let { reviewData ->
             val mapper = jacksonObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
-            println(reviewData)
             try {
-                val reviews: List<Review> = mapper.readValue(
+                val reviews: List<Review> = mapper.readValue<List<Review>>(
                     mapper.readTree(reviewData).get("result").get("reviews").toString()
-                )
+                ).filter { it.rating != 5 }
                 reviewRepository.saveAll(reviews)
                 logger.info("Refreshed all Reviews")
                 return
