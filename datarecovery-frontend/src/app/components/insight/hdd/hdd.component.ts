@@ -41,13 +41,7 @@ import { ScrollService } from '../../../services/scroll.service';
 - fehlerhafte ServiceArea bzw. Systemfiles ("Firmware Bug", oftmals korrupte Fehlerlisten)
 - defektes PCB (z.B. durch das Verwenden eines falschen Netzteils)
 
-<span class="text-white">
-<span class="font-semibold text-base md:text-xl">Vorgehensweise HDD-Datenrettung:</span>
-❶ Fehlerdiagnose: hierfür werden z.B. über ein COM Terminal Fehlermeldungen und ROM (z.B. ServoError, SIM Error, etc.) ausgelesen.
-❷ Reparatur unter Reinraumbedingungen: die HDD von fehlerhaften mechanischen Bauteilen befreit (oftmals Schreib-/Leseköpfe) und ServiceArea bzw. Systemfiles werden modifiziert, bis der Zugriff auf Ihre Dateien möglich ist.
-❸ Auslesen: Die Daten der Festplatte werden Sektor für Sektor ausgelesen.
-
-<span class="font-semibold text-base md:text-xl">Typische Arbeiten dabei sind:</span>
+<span class="font-semibold text-base md:text-xl">Typische Arbeiten dafür sind:</span>
 
 <span class="underline">- mikroskopische Analyse und Austausch der Schreib-/Leseköpfe:</span>
 
