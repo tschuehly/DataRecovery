@@ -31,7 +31,8 @@ class ReviewService(val logger: Logger, val reviewRepository: ReviewRepository) 
             try {
                 val reviews: List<Review> = mapper.readValue<List<Review>>(
                     mapper.readTree(reviewData).get("result").get("reviews").toString()
-                ).filter { it.rating != 5 }
+                ).filter { it.rating == 5 }
+                logger.info(reviews.toString())
                 reviewRepository.saveAll(reviews)
                 logger.info("Refreshed all Reviews")
                 return
