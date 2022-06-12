@@ -35,8 +35,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
           <span class="text-white"
             >❷ Der Erfolg wird anhand von Ihnen gestellten Zielen definiert
             (z.B. "User-Ordner").<br />
-            <span class="text-white">❸ Bei Misserfolg</span> erhalten Sie Ihren
-            Speicher <span class="text-white">kostenfrei </span>zurück.</span
+            <span class="text-white">❸ Bei Misserfolg</span> inkl. Rückversand (DHL) keine Kosten.</span
           ><br />
         </div>
       </div>
@@ -47,8 +46,8 @@ import { ScrollService } from 'src/app/services/scroll.service';
           class="bg-gray-main px-4 py-12"
           style="box-shadow: 0 2px 25px 0 black"
         >
-          <span class="font-bold text-2xl underline text-white"
-            >Festpreise nach Erfolg:</span
+          <span class="font-bold text-2xl text-white"
+            >Festpreise nach Gesamtkapazität:</span
           >
           <ng-container *ngFor="let category of categories">
             <div class="mb-2">
@@ -80,7 +79,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
           </div>
           <br />Alle Preise sind bereits inklusive 19% Mehrwertsteuer.<br/>
           <br />Bei selbstgeöffnete/verunreinigten HDD Festplatten entfallen die angegebenen Festpreise. 
-          Fragen Sie in diesem Spezialfall bitte gesondert nach den entsprechenden Konditionen.<br/>
+          <p>Fragen Sie in diesem Spezialfall bitte gesondert nach den entsprechenden Konditionen.<p><br/>
         </div>
       </div>
 
