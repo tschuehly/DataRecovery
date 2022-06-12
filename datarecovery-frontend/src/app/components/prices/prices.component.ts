@@ -35,7 +35,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
           <span class="text-white"
             >❷ Der Erfolg wird anhand von Ihnen gestellten Zielen definiert
             (z.B. "User-Ordner").<br />
-            <span class="text-white">❸ Bei Misserfolg</span> inkl. Rückversand (DHL) keine Kosten.</span
+            <span class="text-white">❸ Bei Misserfolg</span> inkl. Rückversand (DHL Paket) kostenfrei.</span
           ><br />
         </div>
       </div>

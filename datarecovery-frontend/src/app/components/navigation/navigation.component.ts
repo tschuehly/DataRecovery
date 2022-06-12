@@ -191,7 +191,7 @@ declare let gtag: Function;
           <div class="flex justify-center">
   <img class="h-24 md:h-28 pb-2" src="assets/Profil.jpg">
   </div>
-            <span class="font-semibold pb-2">Noch offene Fragen? </span>
+            <span class="font-semibold pb-2">Gibt es Fragen? </span>
             <p>Ein Anruf klärt es am schnellsten:</p>
           </h2>
           <button (click)="showPhone = false">
