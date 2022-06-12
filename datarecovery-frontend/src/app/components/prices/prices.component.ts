@@ -29,9 +29,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
         <div
           class="text-white text-base md:text-xl py-4 mx-auto justify-center"
         >
-          <span class="text-white">❶</span> Es handelt sich um
-          <span class="text-white">Festpreise</span>, die
-          <span class=" text-white">nur nach Erfolg</span> gelten.<br />
+          <span class="text-white">❶</span> Festpreise werden bei Erfolg berechnet (keine Vorkasse).<br />
           <span class="text-white"
             >❷ Der Erfolg wird anhand von Ihnen gestellten Zielen definiert
             (z.B. "User-Ordner").<br />
