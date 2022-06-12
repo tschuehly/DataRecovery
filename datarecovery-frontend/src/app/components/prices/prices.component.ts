@@ -21,7 +21,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
     </div>
     <div class="bg-white text-center">
       <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">
-        Datenrettung Preise
+      Preise
       </h1>
     </div>
     <div class="bg-gray-main  ">
@@ -29,15 +29,9 @@ import { ScrollService } from 'src/app/services/scroll.service';
         <div
           class="text-white text-base md:text-xl py-4 mx-auto justify-center"
         >
-          <span class="text-white">❶</span> Es handelt sich um
-          <span class="text-white">Festpreise</span>, die
-          <span class=" text-white">nur nach Erfolg</span> gelten.<br />
-          <span class="text-white"
-            >❷ Der Erfolg wird anhand von Ihnen gestellten Zielen definiert
-            (z.B. "User-Ordner").<br />
-            <span class="text-white">❸ Bei Misserfolg</span> erhalten Sie Ihren
-            Speicher <span class="text-white">kostenfrei </span>zurück.</span
-          ><br />
+        <p class="text-white font-semibold">Preiskonzept bei jungbauerdatenrettung:</p>
+        <p> Durch modernste Technik und Festpreiskonzept haben wir einen Kostenvorteil. </p>
+        <p> Diesen Vorteil geben wir in Form von attraktiven Preisen an unsere Kunden weiter.</p>
         </div>
       </div>
     </div>
@@ -47,19 +41,19 @@ import { ScrollService } from 'src/app/services/scroll.service';
           class="bg-gray-main px-4 py-12"
           style="box-shadow: 0 2px 25px 0 black"
         >
-          <span class="font-bold text-2xl underline text-white"
-            >Festpreise nach Erfolg:</span
+          <span class="font-bold text-xl md:text-2xl text-white"
+            >Festpreise nach Gesamtkapazität:</span
           >
           <ng-container *ngFor="let category of categories">
             <div class="mb-2">
-              <h1 class="font-semibold text-lg mt-4 pb-2">
+              <h1 class="font-semibold text-base md:text-lg mt-4 pb-2">
                 {{ category.title }}
               </h1>
-              <div class="whitespace-pre-wrap text-lg" *ngIf="category.description">
+              <div class="whitespace-pre-wrap text-base md:text-lg" *ngIf="category.description">
                 {{ category.description }}
               </div>
               <ng-container *ngFor="let product of products">
-                <div class="text-lg"
+                <div class="text-base md:text-lg"
                   *ngIf="product.category.id === category.id && product.price"
                 >
                   {{ category.name }} {{ product.name }}
@@ -72,7 +66,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
           </ng-container>
           <div class="flex justify-end pt-8">
             <button
-              class="text-lg md:text-xl bg-white py-3 px-4 shadow rounded text-black"
+              class="text-base md:text-xl bg-white py-3 px-4 shadow rounded text-black"
               (click)="this.scrollService.scrollToOrder()"
             >
               weiter zum Ablauf & Auftrag
@@ -80,7 +74,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
           </div>
           <br />Alle Preise sind bereits inklusive 19% Mehrwertsteuer.<br/>
           <br />Bei selbstgeöffnete/verunreinigten HDD Festplatten entfallen die angegebenen Festpreise. 
-          Fragen Sie in diesem Spezialfall bitte gesondert nach den entsprechenden Konditionen.<br/>
+          <p>Fragen Sie in diesem Spezialfall bitte gesondert nach den entsprechenden Konditionen.<p><br/>
         </div>
       </div>
 

@@ -66,8 +66,6 @@ import { Order, Product } from '../../../model/model';
                 required
               >
                 <option selected value="1">Auf Rechnung, 14 Tage Zahlungsfrist nach Erhalt der geretteten Daten (Standard)</option>
-                <option value="2">Auf Rechnung, 30 Tage Zahlungsfrist nach Erhalt der geretteten Daten (1% Gebühr)</option>
-                <option value="6">Auf Rechnung, 60 Tage Zahlungsfrist nach Erhalt der geretteten Daten (2% Gebühr)</option>
               </select>
             </label>
           </ng-container>

@@ -35,9 +35,7 @@ import { FormControl } from '@angular/forms';
           </div>
           <div>Preis: {{ order.orderProduct.price | number: '.2':'de' }} €</div>
           <div>Ersatz: {{ order.replacement }}</div>
-          <div *ngIf="order.monthlyPayment === 1">Keine Ratenzahlung</div>
-          <div *ngIf="order.monthlyPayment === 2">2 monatige Ratenzahlung</div>
-          <div *ngIf="order.monthlyPayment === 6">6 monatige Ratenzahlung</div>
+          <div *ngIf="order.monthlyPayment === 1">Rechnung 14 Tage nach erfolgreicher Datenrettung</div>
         </div>
         <div class="" *ngIf="!edit">
           <ng-container *ngIf="order.deadline; else noDeadline">

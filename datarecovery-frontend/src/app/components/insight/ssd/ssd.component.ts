@@ -18,7 +18,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
     </div>
     <div class="bg-white text-center">
       <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">
-        SSD-Speicher Datenrettung
+        SSD Datenrettung
       </h1>
     </div>
     <div class="bg-gray-main border-b-2 border-silver pb-8">
@@ -30,19 +30,21 @@ import { ScrollService } from 'src/app/services/scroll.service';
           class="whitespace-pre-wrap py-2"
         ><span class="text-bold text-sm md:text-lg text-silver">Updated am 03.12.2021, 18:05 von Tobias Jungbauer</span></pre>
         <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
-Gerne bearbeite ich auch Aufträge, die überhaupt nicht mehr erkannt werden oder von vorherigen Bearbeitern aufgegeben oder bei denen die SSD Datenrettung nur zu einem Vielfachen meines Festpreises angeboten worden ist. <div class="flex justify-end pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
 <span class="font-semibold text-base md:text-xl">Es wird die SSD Datenrettung angeboten für Speicher:</span>
-- die z.B. nicht mehr erkannt werden
-- die z.B. Dateien anzeigen, aber sich nicht auslesen lassen
+- die überhaupt nicht mehr erkannt werden (auch nicht im BIOS)
+- oder Dateien anzeigen, aber sich nicht auslesen lassen
 - bei denen z.B. Windows Sie beim Anstecken auffordert zu formatieren
 
-Tatsächlich sind bei nahezu allen defekten SSD-Speicher, die nicht mehr erkannt werden, einer oder mehrere der NAND-Speicherbausteine die Fehlerursache. Warum ist das so? Die SSD eigene Firmware wird ebenfalls auf den Speicherbausteinen abgespeichert.
+Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen. <div class="flex pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">Preisliste</a></button></div>
 
-Wenn vom Chip nun zu viele Teile der Firmware nicht mehr für den Controller lesbar werden, schafft die SSD es nicht mehr zu booten.
+<span class="font-semibold text-base md:text-xl">Vorgehensweise:</span>
+Tatsächlich sind bei nahezu allen defekten SSD-Speichern einer oder mehrere der NAND-Speicherbausteine die Fehlerursache. 
+Warum ist das so? Die SSD eigene Firmware wird ebenfalls auf den Speicherbausteinen abgespeichert.
 
-Aber dafür gibt es für die meisten Modellen eine Lösung: Man bootet die SSD über das externe Hochladen der Firmware (in den RAM der SSD) und ermöglicht dadurch den Zugriff auf die Servicearea bzw. später auf die Userarea, wo sich auch die gewünschten Dateien befinden.
-  </pre>
-        <div class="flex grid-cols-2 flex-wrap gap-4">
+Wenn vom Chip nun relevante Abschnitte der Firmware nicht mehr für den Controller lesbar werden, schafft die SSD es nicht mehr zu booten.
+
+Die Datenrettung klappt aber wie folgt: Wir booten die SSD über das externe Hochladen der Firmware (in den RAM der SSD) und ermöglicht dadurch den Zugriff auf die Servicearea bzw. später auf die Userarea, wo sich die zu rettenen Dateien befinden.
+  </pre>  <div class="flex grid-cols-2 flex-wrap gap-4">
           <img
             class="h-96 object-cover object-right"
             src="assets/SSD_beispiel.jpg"
@@ -50,7 +52,7 @@ Aber dafür gibt es für die meisten Modellen eine Lösung: Man bootet die SSD �
         </div>
         <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
 
-In meiner Datenbank sind etliche verschiedene „Loader“ für verschiedene Controller bzw. FW Versionen, die dieses Prozedere ermöglichen.
+In der Datenbank von ACE-Lab stehen uns etliche verschiedene „Loader“ für verschiedene Controller bzw. FW Versionen zur Verfügung.
 
 <div class="flex grid-cols-3 flex-wrap gap-4">
 <img class="h-80 object-cover object-left" src="assets/ssd_1.PNG">
@@ -58,8 +60,8 @@ In meiner Datenbank sind etliche verschiedene „Loader“ für verschiedene Con
 
 <img class="h-80 object-cover object-left" src="assets/ssd_2.PNG">
 </div>
-Dadurch kann die SSD initialisiert werden und die Daten einmalig ausgelesen werden.
-Die Reihenfolge ist hier wie folgt:
+Dadurch kann die SSD initialisiert und Nutzerdaten ausgelesen werden.
+Die Funktionsweise ist hier wie folgt:
 
 ➀ Loader Upload in den RAM der SSD:
 <img class="h-120 object-cover object-left" src="assets/ssd_3.PNG">
@@ -69,18 +71,15 @@ Die Reihenfolge ist hier wie folgt:
 
 ➂ Datenzugriff:
 <img class="h-120 object-cover object-left" src="assets/ssd_5.PNG">
-
-
 Entscheidend für den Datenrettungserfolg ist die Auslesequalität der einzelnen Speicherbausteine.
 
 Merfache Leseversuche, das Anpassen der Lesetimings, als auch der Umgebungstemperatur (-40°C) schaffen hier aber oftmals auch bei vermeitlich schlechten Fällen Besserung.
-
 
 Abgesehen davon biete ich auch das Beseitigen von Hardwareschäden seitens der austauschbaren Elektronik an.
 Leider werden im Moment bei mir nur SATA basierte SSD-Festplatten unterstützt. Defekte M.2 SSDs daher nur, wenn diese nicht auf PCIe (NVMe), sondern ebenfalls auf das SATA Protokoll basieren.
 
 Festpreisliste nach von Ihnen definierten Erfolg:
-Defekte SSD-Festplatte bis 512GB Festplattenkapazität: 275,00 €*
+Defekte SSD-Festplatte bis 512GB Festplattenkapazität: 249,00 €*
 Defekte SSD-Festplatte bis 1TB Festplattenkapazität: 299,00 €*
 Defekte SSD-Festplatte bis 2TB Festplattenkapazität: 349,00 €*
 Defekte SSD-Festplatte bis 4TB Festplattenkapazität: 449,00 €*

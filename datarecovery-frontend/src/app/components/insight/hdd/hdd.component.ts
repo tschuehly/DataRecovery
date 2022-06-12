@@ -17,7 +17,7 @@ import { ScrollService } from '../../../services/scroll.service';
     </div>
     <div class="bg-white text-center">
       <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">
-        HDD-Festplatten Datenrettung
+        HDD Datenrettung
       </h1>
     </div>
     <div class="bg-gray-main text-white border-b-2 border-silver pb-8">
@@ -27,22 +27,18 @@ import { ScrollService } from '../../../services/scroll.service';
         >
         <pre class="whitespace-pre-wrap py-2">
 <span class="whitespace-pre-wrap py-2 text-bold text-sm md:text-lg text-silver">Updated am 27.03.22, 07:55 von Tobias Jungbauer</span> </pre>
-<pre class="whitespace-pre-wrap text-sm md:text-xl py-8">Bitte öffnen Sie Ihre Festplatten sofern Ihnen Ihre Daten wichtig sind nicht selber. Gerne bearbeite ich auch Aufträge, die von vorherigen Bearbeitern aufgegeben oder bei denen die HDD Datenrettung nur zu einem Vielfachen meines Festpreises angeboten worden ist.<div class="flex justify-end pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
+
+<pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
 <span class="font-semibold text-base md:text-xl">Angeboten wird die Datenrettung für HDD-Festplatten, die z.B.:</span>
-- nicht mehr erkannt werden (z.B. typisch für externe WD 2,5" oder 3,5" Seagate HDDs)
-- erkannt werden, sich aber nicht korrekt auslesen lassen
-- "klackern" oder "fiepsen" (mechanische Schäden)
-- Fehlermeldungen ausgeben (wie CRC-Fehler oder E/A-Fehler)
+- sich nicht mehr korrekt auslesen lassen bzw. nur sehr langsam reagieren
+- oder überhaupt nicht mehr erkannt werden
+- ggf. "klackern" oder "fiepsen" (mechanische Schäden)
+- ggf. Fehlermeldungen ausgeben (wie CRC-Fehler oder E/A-Fehler)
 
+⚠ Bitte öffnen Sie Ihre Festplatte nicht selbst und vermeiden Sie bei "klackern" weitere Einschaltvorgänge. 
+Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen. <div class="flex pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">Preisliste</a></button></div>
 
-<span class="font-semibold text-base md:text-xl">In der Regel sind dabei die Ursachen:</span>
-- beschädigte Schreib-/Leseköpfe nach einem Headcrash (meist "klackernde Geräusche" z.B. typisch nach einem Sturz)
-- beschädigte Oberflächen, die zu schlecht lesbaren Bereichen sowohl in Userarea als auch Servicearea führen
-- fehlerhafte ServiceArea bzw. Systemfiles ("Firmware Bug", oftmals korrupte Fehlerlisten)
-- defektes PCB (z.B. durch das Verwenden eines falschen Netzteils)
-
-
-<span class="font-semibold text-base md:text-xl">Typische Arbeiten zur Lösung sind:</span>
+<span class="font-semibold text-base md:text-xl">Typische Arbeiten zur Datenrettung sind:</span>
 <span class="underline">- mikroskopische Analyse und Austausch der Schreib-/Leseköpfe:</span>
 
 <div class="flex grid-cols-3 flex-wrap gap-4">
@@ -125,7 +121,7 @@ Defekte HDD-Festplatte bis 500GB Festplattenkapazität: 299,00 €*
 Defekte HDD-Festplatte bis 1TB Festplattenkapazität: 349,00 €*
 Defekte HDD-Festplatte bis 2TB Festplattenkapazität: 399,00 €*
 Defekte HDD-Festplatte bis 4TB Festplattenkapazität: 499,00 €*
-Defekte HDD-Festplatte bis 6TB Festplattenkapazität: 625,00 €*
+Defekte HDD-Festplatte bis 6TB Festplattenkapazität: 599,00 €*
 *Festpreise und bereits inkl. 19% Mehrwertsteuer. Festpreise entfallen bei selbstgeöffnete/verunreinigten HDD Festplatten. 
 Fragen Sie hier bitte gesondert nach den entsprechenden Konditionen.
 

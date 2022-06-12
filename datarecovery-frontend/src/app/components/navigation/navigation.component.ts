@@ -69,7 +69,13 @@ declare let gtag: Function;
             (click)="scrollToOrder(); mobileNavShow = false"
             >Auftragsformular</a
           >
-        
+          <a
+          class="cursor-pointer"
+          (click)="mobileNavShow = false"
+          routerLink="preise"
+          href="preise"
+          >Preise</a
+        >
           <div
             class="h-full text-left flex self-center"
             (clickOutside)="dropdownShow = false"
@@ -80,7 +86,7 @@ declare let gtag: Function;
             <a
               class="cursor-pointer self-center "
               (click)="dropdownShow = !dropdownShow"
-              >Wie funktioniert es?</a
+              >Arbeitsweise</a
             >
             
             <div
@@ -130,13 +136,7 @@ declare let gtag: Function;
               >
             </div>
           </div>
-          <a
-            class="cursor-pointer"
-            (click)="mobileNavShow = false"
-            routerLink="preise"
-            href="preise"
-            >Preise</a
-          >
+          
           <a
             class="cursor-pointer"
             (click)="mobileNavShow = false"
@@ -191,7 +191,7 @@ declare let gtag: Function;
           <div class="flex justify-center">
   <img class="h-24 md:h-28 pb-2" src="assets/Profil.jpg">
   </div>
-            <span class="font-semibold pb-2">Noch offene Fragen? </span>
+            <span class="font-semibold pb-2">Gibt es Fragen? </span>
             <p>Ein Anruf klärt es am schnellsten:</p>
           </h2>
           <button (click)="showPhone = false">
@@ -344,7 +344,7 @@ declare let gtag: Function;
           >
             <span class="pr-4"
               >Website developed by
-              <a class="font-bold" href="https://www.linkedin.com/in/tschuehly/"
+              <a class="font-bold" href="https://www.schuehly-it.de/"
                 >Thomas Schühly</a
               ></span
             >

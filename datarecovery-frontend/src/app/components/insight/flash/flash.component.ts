@@ -18,53 +18,57 @@ import { ScrollService } from 'src/app/services/scroll.service';
   </div>
   <div class="bg-white text-center">
     <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">
-      Datenrettung USB-Stick und (micro) SD-Karte
+      NAND Flash Datenrettung
     </h1>
   </div>
   <div class="bg-gray-main text-white border-b-2 border-silver pb-8">
     <div class="container py-8 px-3">
       <span class=" text-xl md:text-2xl font-bold py-6"
-        >Datenrettung für USB-Stick und (micro) SD-Karte</span
-      >
+        >Datenrettung für USB-Stick und (micro) SD-Karte</span>
       <pre
         class="whitespace-pre-wrap py-2"
       ><span class="text-bold text-sm md:text-lg text-silver">Updated am 03.12.2021, 17:59 von Tobias Jungbauer</span></pre>
       <pre class="whitespace-pre-wrap text-sm md:text-xl py-8 py-8">
-Gerne bearbeite ich auch Aufträge, die von vorherigen Bearbeitern aufgegeben oder bei denen die Datenrettung nur zu einem Vielfachen meines Festpreises angeboten worden ist. Mein Ziel ist es die professionelle Datenrettung möglichst jedem zu ermöglichen. <div class="flex justify-end pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
 <span class="font-semibold text-base md:text-xl">Es wird die Datenrettung für USB-Sticks und (micro) SD-Karten angeboten:</span>
-- die z.B. nicht mehr erkannt werden
-- die z.B. Dateien anzeigen, aber sich nicht auslesen lassen
-- bei denen z.B. Windows Sie beim Anstecken auffordert zu formatieren
-- die z.B. über z.B. Sony Kamera oder Android Smartphone formatiert worden sind
+- die z.B. überhaupt nicht mehr erkannt werden
+- oder sich anderweitig nicht auslesen lassen
+- bei denen Windows Sie beim Anstecken auffordert zu formatieren
+- oder die über ein Android Smartphone oder Sony Kamera formatiert worden sind
+
+Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen. <div class="flex pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">Preisliste</a></button></div>
+
+<span class="font-semibold text-base md:text-xl">Vorgehensweise NAND-Datenrettung:</span>
 
 <div class="flex grid-cols-2 flex-wrap gap-4">
-<img class="h-96 object-cover" src="assets/index/flash3.webp">
-  <img class="h-96 object-cover" src="assets/header_main/header_(4).webp">
+<img class="h-96 object-cover" src="assets/mSD-Bild.png">
+<img class="h-96 object-cover" src="assets/flash_arbeitsweise2.png.jpg">
 </div>
-<span class="font-semibold text-base md:text-xl">Für die Datenrettung gibt es drei Ansätze:</span>
-❶ Reparatur der Hardware und Reballing der Speicherchips (z.B. bei Wasserschaden)
-❷ Auslesen mit reiner Software (für beschädigte Dateisysteme aber ohne Hardwarefehler)
-❸ Das direkte Auslesen der internen NAND-Speicherbausteine des Datenträgers, sprich ohne Controller (für Hardwarefehler)
+Bei Speichern mit PCB (z.B. USB-Stick) kann hier der NAND-Chip einfach heruntergenommen und ausgelesen werden. 
+
+Bei Monolithspeicher (z.B. micro SD-Karten) setzt man stattdessen auf der Oberfläche auf der eigenen Oberfläche an und liest über die eigenen Leiterbahnen des Speichers den internen NAND-Chip aus.
 
 <div class="flex grid-cols-2 flex-wrap gap-4">
-  <img class="h-96 object-cover" src="assets/flash_arbeitsweise2.png.jpg">
-  <img class="h-96 object-cover" src="assets/IMG_20180914_170148.jpg">
+  <img class="h-96 object-cover" src="assets/header_main/header_(5).webp">
+  <img class="h-96 object-cover" src="assets/header_main/header_(2).webp">
 </div>
 <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
-zu 3: Damit können die meisten Defekte umgangen werden und auch das Wiederherstellen nach Löschen/Formatieren über das Smartphone und Kamera (z.B. Sony) ermöglicht werden, bei der handelsübliche Software keine Ergebnisse liefern kann.
-
-Bei Speichern mit PCB kann hier der NAND-Chip einfach heruntergenommen werden. Bei Monolithspeicher setzt man stattdessen auf der Oberfläche an einem sogenannten "technischen Pinout" an und liest über die eigenen Leiterbahnen des Speichers den internen NAND-Chip aus.
 
 Sobald die Chipdaten ausgelesen sind werden daraus mit Hilfe der Speicherungslogik des ehemaligen Controllers die Dateien virtuell wieder zusammengesetzt.
+
 Nach einigen Anpassungen wird am Ende ein Image erzeugt, sodass Ihre Dateien bestenfalls vollständig und in ursprünglicher Ordnerstruktur rekonstruiert worden sind.
+
+<div class="flex grid-cols-2 flex-wrap gap-4">
+  <img class="h-96 object-cover" src="assets/Sandisk_1.png">
+  <img class="h-96 object-cover" src="assets/sandisk_2.png">
+</div>
 
 Folgende Chips werden zum Auslesen unterstützt: TSOP-48, BGA-152 und LGA/TLGA-52/60, welche die üblichen Formate für beispielsweise USB-Sticks oder SD-Karten darstellen, wie weitere 112 verschiedene Monolitharten.
 
-Festpreisliste nach von Ihnen definierten Erfolg:
-Defekte (micro) SD-Karte oder USB-Stick bis 16GB Datenträgerkapazität: 99,00 €*
-Defekte (micro) SD-Karte oder USB-Stick bis 32GB Datenträgerkapazität: 125,00 €*
-Defekte (micro) SD-Karte oder USB-Stick bis 64GB Datenträgerkapazität: 149,00 €*
-Defekte (micro) SD-Karte oder USB-Stick bis 128GB Datenträgerkapazität: 249,00 €*
+Festpreise nach Gesamtkapazität und nur nach Erfolg:
+Defekte (micro) SD-Karte oder USB-Stick bis 16GB Datenträgerkapazität: 50,00 €*
+Defekte (micro) SD-Karte oder USB-Stick bis 64GB Datenträgerkapazität: 125,00 €*
+Defekte (micro) SD-Karte oder USB-Stick bis 128GB Datenträgerkapazität: 225,00 €*
+Defekte (micro) SD-Karte oder USB-Stick bis 256GB Datenträgerkapazität: 425,00 €*
 *bereits inkl. 19% Mehrwertsteuer
 
 <h2 class="underline text-xl md:text-2xl font-bold my-6">Verwendete Hard- Und Software</h2><pre class="whitespace-pre-wrap py-8 text-sm md:text-xl overflow-hidden">Der PC-3000 Flash ist ein Hardware-Software-Lösung zur Wiederherstellung von Daten von NAND-basierten Geräten in solchen Fällen, in denen kein Zugriff über die zugewiesene Laufwerksschnittstelle mehr möglich ist.
