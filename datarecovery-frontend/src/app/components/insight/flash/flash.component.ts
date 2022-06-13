@@ -35,7 +35,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
 - bei denen Windows Sie beim Anstecken auffordert zu formatieren
 - oder die über ein Android Smartphone oder Sony Kamera formatiert worden sind
 
-Falls Sie Fragen haben können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen.
+Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen.
 
 Arbeitsweise NAND-Datenrettung:
 <div class="flex grid-cols-2 flex-wrap gap-4">

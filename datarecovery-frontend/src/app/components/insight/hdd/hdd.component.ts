@@ -27,9 +27,9 @@ import { ScrollService } from '../../../services/scroll.service';
         >
         <pre class="whitespace-pre-wrap py-2">
 <span class="whitespace-pre-wrap py-2 text-bold text-sm md:text-lg text-silver">Updated am 27.03.22, 07:55 von Tobias Jungbauer</span> </pre>
-<pre class="whitespace-pre-wrap text-sm md:text-xl py-8">⚠ Entscheidend für den Datenrettungserfolg ist die Unversehrtheit der jeweiligen Oberflächen der Datenscheiben. 
-Bitte öffnen Sie Ihre Festplatten daher nicht selbst und vermeiden Sie bei "klackern" weitere Einschaltvorgänge. 
-Telefonisch erreichbar unter 0841 12840705 (Mo.-Sa. 10:00-20:00 Uhr)
+<pre class="whitespace-pre-wrap text-sm md:text-xl py-8">⚠ Entscheidend für den Datenrettungserfolg ist die Unversehrtheit der einzelnen Datenscheiben/Oberflächen. 
+Bitte öffnen Sie Ihre Festplatte aus diesem Grund nicht selbst und vermeiden Sie bei "klackern" weitere Einschaltvorgänge. 
+Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen.
 
 
 <span class="font-semibold text-base md:text-xl">Angeboten wird die Datenrettung für HDD-Festplatten, die z.B.:</span>

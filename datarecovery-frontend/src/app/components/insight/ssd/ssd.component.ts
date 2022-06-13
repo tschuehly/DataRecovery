@@ -35,6 +35,10 @@ import { ScrollService } from 'src/app/services/scroll.service';
 - oder Dateien anzeigen, aber sich nicht auslesen lassen
 - bei denen z.B. Windows Sie beim Anstecken auffordert zu formatieren
 
+Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen.
+
+
+<span class="font-semibold text-base md:text-xl">Vorgehensweise:</span>
 Tatsächlich sind bei nahezu allen defekten SSD-Speichern einer oder mehrere der NAND-Speicherbausteine die Fehlerursache. 
 Warum ist das so? Die SSD eigene Firmware wird ebenfalls auf den Speicherbausteinen abgespeichert.
 
@@ -48,7 +52,7 @@ Die Datenrettung klappt aber wie folgt: Wir booten die SSD über das externe Hoc
           />
         </div>
         <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
-        
+
 In der Datenbank von ACE-Lab stehen uns etliche verschiedene „Loader“ für verschiedene Controller bzw. FW Versionen zur Verfügung.
 
 <div class="flex grid-cols-3 flex-wrap gap-4">
