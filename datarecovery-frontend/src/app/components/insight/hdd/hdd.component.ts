@@ -27,13 +27,16 @@ import { ScrollService } from '../../../services/scroll.service';
         >
         <pre class="whitespace-pre-wrap py-2">
 <span class="whitespace-pre-wrap py-2 text-bold text-sm md:text-lg text-silver">Updated am 27.03.22, 07:55 von Tobias Jungbauer</span> </pre>
-<pre class="whitespace-pre-wrap text-sm md:text-xl py-8">Bitte öffnen Sie Ihre Festplatten sofern Ihnen Ihre Daten wichtig sind nicht selber. Gerne bearbeite ich auch Aufträge, die von vorherigen Bearbeitern aufgegeben oder bei denen die HDD Datenrettung nur zu einem Vielfachen meines Festpreises angeboten worden ist.<div class="flex justify-end pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
-<span class="font-semibold text-base md:text-xl">Angeboten wird die Datenrettung für HDD-Festplatten, die z.B.:</span>
-- nicht mehr erkannt werden (z.B. typisch für externe WD 2,5" oder 3,5" Seagate HDDs)
-- erkannt werden, sich aber nicht korrekt auslesen lassen
-- "klackern" oder "fiepsen" (mechanische Schäden)
-- Fehlermeldungen ausgeben (wie CRC-Fehler oder E/A-Fehler)
+<pre class="whitespace-pre-wrap text-sm md:text-xl py-8">⚠ Entscheidend für den Datenrettungserfolg ist die Unversehrtheit der jeweiligen Oberflächen der Datenscheiben. 
+Bitte öffnen Sie Ihre Festplatten daher nicht selbst und vermeiden Sie bei "klackern" weitere Einschaltvorgänge. 
+Telefonisch erreichbar unter 0841 12840705 (Mo.-Sa. 10:00-20:00 Uhr)
 
+
+<span class="font-semibold text-base md:text-xl">Angeboten wird die Datenrettung für HDD-Festplatten, die z.B.:</span>
+- nicht mehr erkannt werden (z.B. typisch für externe WD 2,5" oder 3,5" Seagate)
+- oder sich nicht korrekt auslesen lassen
+- "klackern" oder "fiepsen" (mechanische Schäden)
+- oder Fehlermeldungen ausgeben (wie CRC-Fehler oder E/A-Fehler)
 
 <span class="font-semibold text-base md:text-xl">In der Regel sind dabei die Ursachen:</span>
 - beschädigte Schreib-/Leseköpfe nach einem Headcrash (meist "klackernde Geräusche" z.B. typisch nach einem Sturz)
@@ -41,8 +44,7 @@ import { ScrollService } from '../../../services/scroll.service';
 - fehlerhafte ServiceArea bzw. Systemfiles ("Firmware Bug", oftmals korrupte Fehlerlisten)
 - defektes PCB (z.B. durch das Verwenden eines falschen Netzteils)
 
-
-<span class="font-semibold text-base md:text-xl">Typische Arbeiten zur Lösung sind:</span>
+<span class="font-semibold text-base md:text-xl">Typische Arbeiten zur Datenrettung sind:</span>
 <span class="underline">- mikroskopische Analyse und Austausch der Schreib-/Leseköpfe:</span>
 
 <div class="flex grid-cols-3 flex-wrap gap-4">

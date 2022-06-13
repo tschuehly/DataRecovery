@@ -29,7 +29,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
         <pre
           class="whitespace-pre-wrap py-2"
         ><span class="text-bold text-sm md:text-lg text-silver">Updated am 31.03.2022, 21:22 von Tobias Jungbauer</span></pre>
-<pre class="whitespace-pre-wrap text-sm md:text-xl py-8">Gerne bearbeite ich auch Aufträge, die von vorherigen Bearbeitern aufgegeben oder bei denen die RAID Datenrettung nur zu einem Vielfachen meines Festpreises angeboten worden ist. Mein Ziel ist es die professionelle Datenrettung möglichst jedem zu ermöglichen. <div class="flex justify-end pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
+<pre class="whitespace-pre-wrap text-sm md:text-xl py-8">Gerne bearbeite ich auch Aufträge, die von vorherigen Bearbeitern aufgegeben oder bei denen die RAID Datenrettung nur zu einem Vielfachen meines Festpreises angeboten worden ist. Falls Sie Fragen haben können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen. <div class="flex justify-end pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">direkt zur Festpreisliste</a></button></div>
 <span class="font-semibold text-base md:text-xl">Die angebotene RAID-Datenrettung richtet sich an Fälle:</span>
 wenn ein "Rebuild" nicht möglich oder bereits gescheitert ist, z.B. wenn es sich um ein RAID 0 oder JBOD handelt, mehrere Volumes bei RAID 1 oder 5 beschädigt worden sind oder der RAID-Controller selbst defekt ist. Oftmals verursacht auch die Firmware der RAID Controller von Synology, QNAP und co. nach gescheiterten Rebuildversuch das ungewünschte Löschen des Dateisystems.
 
