@@ -30,7 +30,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
           class="whitespace-pre-wrap py-2"
         ><span class="text-bold text-sm md:text-lg text-silver">Updated am 31.03.2022, 21:22 von Tobias Jungbauer</span></pre>
 <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
-<span class="font-semibold text-base md:text-xl">Die angebotene RAID-Datenrettung richtet sich an Fälle:</span>
+<span class="font-semibold text-base md:text-xl">RAID- & NAS-Datenrettung:</span>
 wenn ein "Rebuild" nicht möglich oder bereits gescheitert ist, d.h wenn es sich z.B. um einen RAID 0 oder JBOD handelt, mehrere Volumes bei RAID 1 oder 5 beschädigt sind oder der RAID-Controller selbst defekt ist. Oftmals verursacht auch die Firmware der RAID Controller von Synology, QNAP und co. nach gescheiterten Rebuildversuch das ungewünschte Löschen des Dateisystems.
 
 Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen. <div class="flex pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">-> direkt zur Festpreisliste</a></button></div>
@@ -45,6 +45,7 @@ Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anruf
 <span class="font-semibold text-base md:text-xl">Vorgehensweise RAID-Datenrettung:</span>
 Dafür werden nur einzelne Festplatten benötigt, aber nicht mehr der RAID Controller.
 Mit dieser Datenrettungsmethode werden die Dateien, ohne Veränderung an den einzelnen Festplatten, virtuell zusammengesetzt.
+Diese Methodik ist zusätzlich wesentlich sicherer als ein Rebuild ohne Backup mit ggf. weiteren beschädigten HDDs.
 
 <span class="font-semibold text-base md:text-xl">Besonderheit:</span> Auch wenn die Konfiguration wie RAID-Typ, Block Size, Parity Order oder Delay nicht bekannt ist oder auch die Reihenfolge der Datenträger durcheinandergebracht worden ist können Ihre Dateien aus den einzelnen Festplatten rekonstruiert werden!</pre>
 
