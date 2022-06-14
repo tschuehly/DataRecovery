@@ -27,16 +27,16 @@ import { ScrollService } from '../../../services/scroll.service';
         >
         <pre class="whitespace-pre-wrap py-2">
 <span class="whitespace-pre-wrap py-2 text-bold text-sm md:text-lg text-silver">Updated am 27.03.22, 07:55 von Tobias Jungbauer</span> </pre>
-<pre class="whitespace-pre-wrap text-sm md:text-xl py-8">⚠ Entscheidend für den Datenrettungserfolg ist die Unversehrtheit der einzelnen Datenscheiben/Oberflächen. 
-Bitte öffnen Sie Ihre Festplatte aus diesem Grund nicht selbst und vermeiden Sie bei "klackern" weitere Einschaltvorgänge. 
-Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen.
-Um direkt zu den Preisen zu kommen klicken Sie <a class="underline" href="preise">hier</a>
 
+<pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
 <span class="font-semibold text-base md:text-xl">Angeboten wird die Datenrettung für HDD-Festplatten, die z.B.:</span>
-- nicht mehr erkannt werden (z.B. typisch für externe WD 2,5" oder 3,5" Seagate)
-- oder sich nicht korrekt auslesen lassen
-- "klackern" oder "fiepsen" (mechanische Schäden)
-- oder Fehlermeldungen ausgeben (wie CRC-Fehler oder E/A-Fehler)
+- sich nicht mehr korrekt auslesen lassen bzw. nur sehr langsam reagieren
+- oder überhaupt nicht mehr erkannt werden
+- ggf. "klackern" oder "fiepsen" (mechanische Schäden)
+- ggf. Fehlermeldungen ausgeben (wie CRC-Fehler oder E/A-Fehler)
+
+⚠ Bitte öffnen Sie Ihre Festplatte niemals selbst und vermeiden Sie bei "klackern" weitere Einschaltvorgänge. 
+Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen. <div class="flex pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">-> direkt zur Festpreisliste</a></button></div>
 
 <span class="font-semibold text-base md:text-xl">In der Regel sind dabei die Ursachen:</span>
 - beschädigte Schreib-/Leseköpfe nach einem Headcrash (meist "klackernde Geräusche" z.B. typisch nach einem Sturz)

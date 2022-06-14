@@ -36,8 +36,10 @@ import { ScrollService } from 'src/app/services/scroll.service';
 - oder die über ein Android Smartphone oder Sony Kamera formatiert worden sind
 
 Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen.
+<div class="flex pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">-> direkt zur Festpreisliste</a></button></div>
 
-Arbeitsweise NAND-Datenrettung:
+<span class="font-semibold text-base md:text-xl">Arbeitsweise NAND-Datenrettung:</span>
+
 <div class="flex grid-cols-2 flex-wrap gap-4">
   <img class="h-96 object-cover" src="assets/flash_arbeitsweise2.png.jpg">
   <img class="h-96 object-cover" src="assets/mSD-Bild.png">
