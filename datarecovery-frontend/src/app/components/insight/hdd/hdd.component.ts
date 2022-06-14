@@ -30,7 +30,7 @@ import { ScrollService } from '../../../services/scroll.service';
 <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">⚠ Entscheidend für den Datenrettungserfolg ist die Unversehrtheit der einzelnen Datenscheiben/Oberflächen. 
 Bitte öffnen Sie Ihre Festplatte aus diesem Grund nicht selbst und vermeiden Sie bei "klackern" weitere Einschaltvorgänge. 
 Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen.
-
+Um direkt zu den Preisen zu kommen klicken Sie <a class="underline" href="preise">hier</a>
 
 <span class="font-semibold text-base md:text-xl">Angeboten wird die Datenrettung für HDD-Festplatten, die z.B.:</span>
 - nicht mehr erkannt werden (z.B. typisch für externe WD 2,5" oder 3,5" Seagate)
