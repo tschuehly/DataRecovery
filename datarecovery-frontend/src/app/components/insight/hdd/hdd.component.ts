@@ -35,7 +35,7 @@ import { ScrollService } from '../../../services/scroll.service';
 - ggf. "klackern" oder "fiepsen" (mechanische Schäden)
 - ggf. Fehlermeldungen ausgeben (wie CRC-Fehler oder E/A-Fehler)
 
-⚠ Bitte öffnen Sie Ihre Festplatte niemals selbst und vermeiden Sie bei "klackern" weitere Einschaltvorgänge. 
+⚠ Bitte öffnen Sie Ihre Festplatte nicht selbst und vermeiden Sie bei "klackern" weitere Einschaltvorgänge. 
 Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen. <div class="flex pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">-> direkt zur Festpreisliste</a></button></div>
 
 <span class="font-semibold text-base md:text-xl">In der Regel sind dabei die Ursachen:</span>
