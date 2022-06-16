@@ -66,10 +66,10 @@ Nach einigen Anpassungen wird am Ende ein Image erzeugt, sodass Ihre Dateien bes
 Folgende Chips werden zum Auslesen unterstützt: TSOP-48, BGA-152 und LGA/TLGA-52/60, welche die üblichen Formate für beispielsweise USB-Sticks oder SD-Karten darstellen, wie weitere 112 verschiedene Monolitharten.
 
 Festpreise nach Gesamtkapazität und nur nach Erfolg:
-Defekte (micro) SD-Karte oder USB-Stick bis 16GB Datenträgerkapazität: 75,00 €*
-Defekte (micro) SD-Karte oder USB-Stick bis 32GB Datenträgerkapazität: 99,00 €*
+Defekte (micro) SD-Karte oder USB-Stick bis 16GB Datenträgerkapazität: 50,00 €*
 Defekte (micro) SD-Karte oder USB-Stick bis 64GB Datenträgerkapazität: 125,00 €*
 Defekte (micro) SD-Karte oder USB-Stick bis 128GB Datenträgerkapazität: 225,00 €*
+Defekte (micro) SD-Karte oder USB-Stick bis 256GB Datenträgerkapazität: 425,00 €*
 *bereits inkl. 19% Mehrwertsteuer
 
 <h2 class="underline text-xl md:text-2xl font-bold my-6">Verwendete Hard- Und Software</h2><pre class="whitespace-pre-wrap py-8 text-sm md:text-xl overflow-hidden">Der PC-3000 Flash ist ein Hardware-Software-Lösung zur Wiederherstellung von Daten von NAND-basierten Geräten in solchen Fällen, in denen kein Zugriff über die zugewiesene Laufwerksschnittstelle mehr möglich ist.
