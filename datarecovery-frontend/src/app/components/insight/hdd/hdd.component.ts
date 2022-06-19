@@ -17,7 +17,7 @@ import { ScrollService } from '../../../services/scroll.service';
     </div>
     <div class="bg-white text-center">
       <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">
-        HDD-Festplatten Datenrettung
+        HDD Datenrettung
       </h1>
     </div>
     <div class="bg-gray-main text-white border-b-2 border-silver pb-8">
