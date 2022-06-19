@@ -32,7 +32,6 @@ import { ScrollService } from 'src/app/services/scroll.service';
         <p class="text-white font-semibold">Preiskonzept bei jungbauerdatenrettung:</p>
         <p> Durch modernste Technik und Festpreiskonzept haben wir einen Kostenvorteil. </p>
         <p> Diesen Vorteil geben wir in Form von attraktiven Preisen an unsere Kunden weiter.</p>
-        <p> Überzeugen Sie sich selbst. </p>
         </div>
       </div>
     </div>
@@ -42,19 +41,19 @@ import { ScrollService } from 'src/app/services/scroll.service';
           class="bg-gray-main px-4 py-12"
           style="box-shadow: 0 2px 25px 0 black"
         >
-          <span class="font-bold text-2xl text-white"
+          <span class="font-bold text-xl md:text-2xl text-white"
             >Festpreise nach Gesamtkapazität:</span
           >
           <ng-container *ngFor="let category of categories">
             <div class="mb-2">
-              <h1 class="font-semibold text-lg mt-4 pb-2">
+              <h1 class="font-semibold text-base md:text-lg mt-4 pb-2">
                 {{ category.title }}
               </h1>
-              <div class="whitespace-pre-wrap text-lg" *ngIf="category.description">
+              <div class="whitespace-pre-wrap text-base md:text-lg" *ngIf="category.description">
                 {{ category.description }}
               </div>
               <ng-container *ngFor="let product of products">
-                <div class="text-lg"
+                <div class="text-base md:text-lg"
                   *ngIf="product.category.id === category.id && product.price"
                 >
                   {{ category.name }} {{ product.name }}
@@ -67,7 +66,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
           </ng-container>
           <div class="flex justify-end pt-8">
             <button
-              class="text-lg md:text-xl bg-white py-3 px-4 shadow rounded text-black"
+              class="text-base md:text-xl bg-white py-3 px-4 shadow rounded text-black"
               (click)="this.scrollService.scrollToOrder()"
             >
               weiter zum Ablauf & Auftrag
