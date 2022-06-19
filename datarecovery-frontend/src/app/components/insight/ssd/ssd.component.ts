@@ -35,8 +35,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
 - oder Dateien anzeigen, aber sich nicht auslesen lassen
 - bei denen z.B. Windows Sie beim Anstecken auffordert zu formatieren
 
-Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen.
-
+Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen. <div class="flex pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">Preisliste</a></button></div>
 
 <span class="font-semibold text-base md:text-xl">Vorgehensweise:</span>
 Tatsächlich sind bei nahezu allen defekten SSD-Speichern einer oder mehrere der NAND-Speicherbausteine die Fehlerursache. 

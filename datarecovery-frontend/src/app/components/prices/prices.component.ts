@@ -21,7 +21,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
     </div>
     <div class="bg-white text-center">
       <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">
-        Datenrettung Preise
+      Preise
       </h1>
     </div>
     <div class="bg-gray-main  ">
@@ -29,12 +29,10 @@ import { ScrollService } from 'src/app/services/scroll.service';
         <div
           class="text-white text-base md:text-xl py-4 mx-auto justify-center"
         >
-          <span class="text-white">❶</span> Festpreise werden bei Erfolg berechnet (keine Vorkasse).<br />
-          <span class="text-white"
-            >❷ Der Erfolg wird anhand von Ihnen gestellten Zielen definiert
-            (z.B. "User-Ordner").<br />
-            <span class="text-white">❸ Bei Misserfolg</span> inkl. Rückversand (DHL Paket) kostenfrei.</span
-          ><br />
+        <p class="text-white font-semibold">Preiskonzept bei jungbauerdatenrettung:</p>
+        <p> Durch modernste Technik und Festpreiskonzept haben wir einen Kostenvorteil. </p>
+        <p> Diesen Vorteil geben wir in Form von attraktiven Preisen an unsere Kunden weiter.</p>
+        <p> Überzeugen Sie sich selbst. </p>
         </div>
       </div>
     </div>

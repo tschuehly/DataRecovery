@@ -36,13 +36,7 @@ import { ScrollService } from '../../../services/scroll.service';
 - ggf. Fehlermeldungen ausgeben (wie CRC-Fehler oder E/A-Fehler)
 
 ⚠ Bitte öffnen Sie Ihre Festplatte nicht selbst und vermeiden Sie bei "klackern" weitere Einschaltvorgänge. 
-Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen. <div class="flex pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">-> direkt zur Festpreisliste</a></button></div>
-
-<span class="font-semibold text-base md:text-xl">In der Regel sind dabei die Ursachen:</span>
-- beschädigte Schreib-/Leseköpfe nach einem Headcrash (meist "klackernde Geräusche" z.B. typisch nach einem Sturz)
-- beschädigte Oberflächen, die zu schlecht lesbaren Bereichen sowohl in Userarea als auch Servicearea führen
-- fehlerhafte ServiceArea bzw. Systemfiles ("Firmware Bug", oftmals korrupte Fehlerlisten)
-- defektes PCB (z.B. durch das Verwenden eines falschen Netzteils)
+Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen. <div class="flex pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">Preisliste</a></button></div>
 
 <span class="font-semibold text-base md:text-xl">Typische Arbeiten zur Datenrettung sind:</span>
 <span class="underline">- mikroskopische Analyse und Austausch der Schreib-/Leseköpfe:</span>

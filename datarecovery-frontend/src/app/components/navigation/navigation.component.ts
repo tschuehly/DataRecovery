@@ -69,7 +69,13 @@ declare let gtag: Function;
             (click)="scrollToOrder(); mobileNavShow = false"
             >Auftragsformular</a
           >
-        
+          <a
+          class="cursor-pointer"
+          (click)="mobileNavShow = false"
+          routerLink="preise"
+          href="preise"
+          >Preise</a
+        >
           <div
             class="h-full text-left flex self-center"
             (clickOutside)="dropdownShow = false"
@@ -80,7 +86,7 @@ declare let gtag: Function;
             <a
               class="cursor-pointer self-center "
               (click)="dropdownShow = !dropdownShow"
-              >Wie funktioniert es?</a
+              >Arbeitsweise</a
             >
             
             <div
@@ -130,13 +136,7 @@ declare let gtag: Function;
               >
             </div>
           </div>
-          <a
-            class="cursor-pointer"
-            (click)="mobileNavShow = false"
-            routerLink="preise"
-            href="preise"
-            >Preise</a
-          >
+          
           <a
             class="cursor-pointer"
             (click)="mobileNavShow = false"

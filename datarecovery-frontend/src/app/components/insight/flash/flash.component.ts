@@ -35,14 +35,13 @@ import { ScrollService } from 'src/app/services/scroll.service';
 - bei denen Windows Sie beim Anstecken auffordert zu formatieren
 - oder die über ein Android Smartphone oder Sony Kamera formatiert worden sind
 
-Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen.
-<div class="flex pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">-> direkt zur Festpreisliste</a></button></div>
+Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen. <div class="flex pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">Preisliste</a></button></div>
 
-<span class="font-semibold text-base md:text-xl">Arbeitsweise NAND-Datenrettung:</span>
+<span class="font-semibold text-base md:text-xl">Vorgehensweise NAND-Datenrettung:</span>
 
 <div class="flex grid-cols-2 flex-wrap gap-4">
-  <img class="h-96 object-cover" src="assets/flash_arbeitsweise2.png.jpg">
-  <img class="h-96 object-cover" src="assets/mSD-Bild.png">
+<img class="h-96 object-cover" src="assets/mSD-Bild.png">
+<img class="h-96 object-cover" src="assets/flash_arbeitsweise2.png.jpg">
 </div>
 Bei Speichern mit PCB (z.B. USB-Stick) kann hier der NAND-Chip einfach heruntergenommen und ausgelesen werden. 
 
@@ -50,7 +49,7 @@ Bei Monolithspeicher (z.B. micro SD-Karten) setzt man stattdessen auf der Oberfl
 
 <div class="flex grid-cols-2 flex-wrap gap-4">
   <img class="h-96 object-cover" src="assets/header_main/header_(5).webp">
-  <img class="h-96 object-cover" src="assets/header_main/header_(6).webp">
+  <img class="h-96 object-cover" src="assets/header_main/header_(2).webp">
 </div>
 <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
 
