@@ -18,7 +18,6 @@ import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 
 @Configuration
-@EnableGlobalMethodSecurity(prePostEnabled = true)
 @EnableWebSecurity(debug = false)
 class SpringSecurityConfig(
     val jwtFilter: JwtFilter
@@ -50,7 +49,8 @@ class SpringSecurityConfig(
             .antMatchers(HttpMethod.POST, "/api/order/create", "/api/user/login").permitAll()
             .antMatchers(HttpMethod.POST, "/api/user/**").permitAll()
             // Our private endpoints.
-            .anyRequest().authenticated()
+            .antMatchers(HttpMethod.GET, "/api/order/**").hasAnyRole("B2B", "ADMIN")
+            .anyRequest().hasRole("ADMIN")
             .and()
             .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter::class.java)
     }

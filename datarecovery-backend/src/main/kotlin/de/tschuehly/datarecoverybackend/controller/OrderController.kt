@@ -9,7 +9,6 @@ import org.springframework.security.access.prepost.PreAuthorize
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.multipart.MultipartFile
 
-@PreAuthorize("hasRole('ADMIN')")
 @RestController
 @RequestMapping("api/order")
 class OrderController(
@@ -18,7 +17,6 @@ class OrderController(
 ) :
     CrudController<Order, OrderRepository, OrderService>(orderService) {
 
-    @PreAuthorize("permitAll()")
     @PostMapping("/create")
     fun createOrder(@RequestBody order: Order) = orderService.createOrder(order)
 
@@ -28,7 +26,6 @@ class OrderController(
     @GetMapping("/info")
     fun getOrderInfo() = orderService.getOrderInfo()
 
-    @PreAuthorize("hasAnyRole('B2B','ADMIN')")
     @GetMapping("/state")
     fun getByTrackingStateList(
         @RequestParam("state") stateList: List<String>

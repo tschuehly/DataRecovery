@@ -111,7 +111,15 @@ class OrderService(
     }
 
     fun getOrderInfo(): Any {
+        val auth = SecurityContextHolder.getContext().authentication
+        if (auth.authorities.any { it == SimpleGrantedAuthority("ROLE_B2B") }) {
+            val email = userRepository.findByUsername(auth.name)?.email
+            email?.let {
+                return repository.getInfoByEmail(email)
+            }
+        }
         return repository.getInfo()
+
     }
 
     @Scheduled(cron = "0 0 6 * * *", zone = "Europe/Paris")

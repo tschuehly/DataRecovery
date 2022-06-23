@@ -76,7 +76,7 @@ INSERT INTO public.customer (id, city, email, first_name, last_name, postal_code
 VALUES (34, 'Osnabrück', 'tobias.jungbauer@googlemail.com', 'Tobias', 'Jungbauer', '41234', 'Spitalhof 105a',
         '97123871');
 INSERT INTO public.customer (id, city, email, first_name, last_name, postal_code, street, tel)
-VALUES (53, 'Ludwigsburg', 'thomas.schuehly@outlook.com', 'Thomas', 'Schuehly', '71638', 'Kaiserstraße 25', '97123871');
+VALUES (53, 'Ludwigsburg', 'tobias@jungbauerdatenrettung.de', 'Thomas', 'Schuehly', '71638', 'Kaiserstraße 25', '97123871');
 
 
 --

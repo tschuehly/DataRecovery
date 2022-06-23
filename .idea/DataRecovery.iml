@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/datarecovery-frontend/src" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/datarecovery-frontend/dist" />
       <excludeFolder url="file://$MODULE_DIR$/datarecovery-frontend/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/datarecovery-frontend/.angular" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

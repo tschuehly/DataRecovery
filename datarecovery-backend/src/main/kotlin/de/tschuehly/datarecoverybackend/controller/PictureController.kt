@@ -17,7 +17,6 @@ class PictureController(
     val pictureService: PictureService,
     val pictureContentStore: PictureContentStore,
 ) {
-    @PreAuthorize("permitAll()")
     @GetMapping("/{id}")
     fun getById(
         @PathVariable id: Long,

@@ -4,6 +4,7 @@ import de.tschuehly.datarecoverybackend.model.*
 import org.springframework.data.domain.Pageable
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.jpa.repository.Query
+import org.springframework.data.repository.query.Param
 import java.util.*
 
 interface OrderRepository : JpaRepository<Order, Long> {
@@ -27,8 +28,20 @@ interface OrderRepository : JpaRepository<Order, Long> {
         id: String
     ): List<Order>
 
-    @Query("select count(o) as cnt, o.trackingState as trackingState from Order o group by o.trackingState")
+    @Query(
+        "select count(o) as cnt, o.trackingState as trackingState " +
+                "from Order o " +
+                "group by o.trackingState"
+    )
     fun getInfo(): List<Any>
+
+    @Query(
+        "select count(o) as cnt, o.trackingState as trackingState " +
+                "from Order o " +
+                "where o.customer.email = :email " +
+                "group by o.trackingState"
+    )
+    fun getInfoByEmail(@Param("email") email: String): List<Any>
 }
 
 interface CustomerRepository : JpaRepository<Customer, Long>
