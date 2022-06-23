@@ -14,6 +14,7 @@ import { CategoryDetailComponent } from './category-detail/category-detail.compo
 import { KeywordComponent } from './keyword/keyword.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   { path: 'order', component: OrderComponent },
@@ -34,6 +35,7 @@ const routes: Routes = [
     ProductComponent,
     ProductDetailComponent,
     KeywordComponent,
+    RegisterComponent,
   ],
   imports: [
     CommonModule,

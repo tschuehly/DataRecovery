@@ -1,5 +1,6 @@
 package de.tschuehly.datarecoverybackend.controller
 
+import de.tschuehly.datarecoverybackend.model.Order
 import de.tschuehly.datarecoverybackend.model.WebsiteUser
 import de.tschuehly.datarecoverybackend.service.JwtUserDetailsService
 import de.tschuehly.datarecoverybackend.service.UserService
@@ -25,7 +26,8 @@ class UserController(
     @GetMapping("/authorities")
     fun getAuthorities(): String? {
         try {
-            val roles = SecurityContextHolder.getContext().authentication.authorities.joinToString { it -> it.authority }
+            val roles =
+                SecurityContextHolder.getContext().authentication.authorities.joinToString { it -> it.authority }
             return "{ \"roles\": \"$roles\" }"
         } catch (e: Error) {
             logger.error(e.toString())
@@ -41,7 +43,10 @@ class UserController(
         val authenticationToken = UsernamePasswordAuthenticationToken(credentials["username"], credentials["password"])
         SecurityContextHolder.getContext().authentication = authenticationProvider.authenticate(authenticationToken)
         val user = userService.getCurrentUser()
-        response.setHeader("Set-Cookie", "JWT=Bearer ${jwtUserDetailsService.createToken(user)}; Secure; HttpOnly; SameSite=Strict;Max-Age=6000;Path=/ ")
+        response.setHeader(
+            "Set-Cookie",
+            "JWT=Bearer ${jwtUserDetailsService.createToken(user)}; Secure; HttpOnly; SameSite=Strict;Max-Age=6000;Path=/ "
+        )
         return user
     }
 
@@ -51,4 +56,9 @@ class UserController(
         response.setHeader("Set-Cookie", "JWT=Bearer $jwtToken; Secure; HttpOnly; SameSite=Strict;Max-Age=-1;Path=/")
         return "{\"logout\": \"true\"}"
     }
+
+    @PostMapping("/register")
+    fun register(
+        @RequestBody user: WebsiteUser
+    ) = userService.createUser(user)
 }
