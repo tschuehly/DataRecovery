@@ -1,17 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { ImprintComponent } from './components/legal/imprint/imprint.component';
 import { PricesComponent } from './components/prices/prices.component';
-import { AgbComponent } from './components/legal/agb/agb.component';
-import { AboutComponent } from './components/insight/about/about.component';
-import { PrivacyComponent } from './components/legal/privacy/privacy.component';
 import { SiteNotFoundComponent } from './components/site-not-found/site-not-found.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {
-    path: 'admin',
+    path: 'b2b',
     loadChildren: () =>
       import(`./components/admin/admin.module`).then(
         (module) => module.AdminModule

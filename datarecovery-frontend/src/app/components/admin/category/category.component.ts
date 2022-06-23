@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Category, Product } from '../../../model/model';
+import { Category} from '../../../model/model';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 
@@ -121,7 +121,7 @@ export class CategoryComponent implements OnInit {
       },
       (error: HttpErrorResponse) => {
         if (error.status === 401) {
-          this.router.navigate(['/admin/login']);
+          this.router.navigate(['/b2b/login']);
         }
       }
     );

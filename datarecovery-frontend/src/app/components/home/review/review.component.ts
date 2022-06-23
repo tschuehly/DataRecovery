@@ -91,15 +91,15 @@ import { ReviewDetailDTO } from '../../../model/model';
                   class="flex flex-wrap sm:space-x-4 items-center px-2 flex-col space-y-2 sm:flex-row justify-center sm:justify-start"
                 >
                   <a
-                    href="{{ this.reviews[this.reviewIndex].author_url }}"
+                    href="{{ this.reviews[this.reviewIndex]?.author_url }}"
                     target="_blank"
                     class="font-bold text-lg underline"
-                    >{{ this.reviews[this.reviewIndex].author_name }}
+                    >{{ this.reviews[this.reviewIndex]?.author_name }}
                   </a>
                   <span class="inline-flex align-text-top">
                     <svg
                       [ngClass]="
-                        this.reviews[this.reviewIndex].rating > 0
+                        this.reviews[this.reviewIndex]?.rating > 0
                           ? 'text-yellow-400'
                           : ' text-gray-400'
                       "
@@ -113,7 +113,7 @@ import { ReviewDetailDTO } from '../../../model/model';
                     </svg>
                     <svg
                       [ngClass]="
-                        this.reviews[this.reviewIndex].rating > 1
+                        this.reviews[this.reviewIndex]?.rating > 1
                           ? 'text-yellow-400'
                           : ' text-gray-400'
                       "
@@ -127,7 +127,7 @@ import { ReviewDetailDTO } from '../../../model/model';
                     </svg>
                     <svg
                       [ngClass]="
-                        this.reviews[this.reviewIndex].rating > 2
+                        this.reviews[this.reviewIndex]?.rating > 2
                           ? 'text-yellow-400'
                           : ' text-gray-400'
                       "
@@ -141,7 +141,7 @@ import { ReviewDetailDTO } from '../../../model/model';
                     </svg>
                     <svg
                       [ngClass]="
-                        this.reviews[this.reviewIndex].rating > 3
+                        this.reviews[this.reviewIndex]?.rating > 3
                           ? 'text-yellow-400'
                           : ' text-gray-400'
                       "
@@ -155,7 +155,7 @@ import { ReviewDetailDTO } from '../../../model/model';
                     </svg>
                     <svg
                       [ngClass]="
-                        this.reviews[this.reviewIndex].rating > 4
+                        this.reviews[this.reviewIndex]?.rating > 4
                           ? 'text-yellow-400'
                           : ' text-gray-400'
                       "
@@ -169,7 +169,7 @@ import { ReviewDetailDTO } from '../../../model/model';
                     </svg>
                   </span>
                   <span class="text-gray-300 text-sm">{{
-                    this.reviews[this.reviewIndex].relative_time_description
+                    this.reviews[this.reviewIndex]?.relative_time_description
                   }}</span>
                 </div>
                 <div class="mt-3">
@@ -178,8 +178,8 @@ import { ReviewDetailDTO } from '../../../model/model';
                   >
                     {{
                       showReview
-                        ? this.reviews[this.reviewIndex].text
-                        : (this.reviews[this.reviewIndex].text | First40Words)
+                        ? this.reviews[this.reviewIndex]?.text
+                        : (this.reviews[this.reviewIndex]?.text | First40Words)
                     }}
                   </p>
                 </div>
@@ -191,9 +191,9 @@ import { ReviewDetailDTO } from '../../../model/model';
                     Alle Bewertungen einsehen
                   </a>
                   <button
-                    
+
                     *ngIf="
-                      this.reviews[this.reviewIndex].text.split(' ').length > 40
+                      this.reviews[this.reviewIndex]?.text.split(' ').length > 40
                     "
                     (click)="showReview = !showReview"
                   >

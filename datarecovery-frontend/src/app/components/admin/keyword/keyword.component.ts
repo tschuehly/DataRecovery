@@ -108,7 +108,7 @@ export class KeywordComponent implements OnInit {
       },
       (error: HttpErrorResponse) => {
         if (error.status === 401) {
-          this.router.navigate(['/admin/login']);
+          this.router.navigate(['/b2b/login']);
         }
       }
     );

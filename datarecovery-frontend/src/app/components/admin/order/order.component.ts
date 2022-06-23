@@ -249,7 +249,7 @@ export class OrderComponent implements OnInit {
     ).pipe(
       catchError((error) => {
         console.error('error loading the orders', error);
-        this.router.navigate(['/admin/login']);
+        this.router.navigate(['/b2b/login']);
         return of();
       })
     );

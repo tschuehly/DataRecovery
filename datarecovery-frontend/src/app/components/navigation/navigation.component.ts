@@ -88,7 +88,7 @@ declare let gtag: Function;
               (click)="dropdownShow = !dropdownShow"
               >Arbeitsweise</a
             >
-            
+
             <div
               class="border-solid border-2 border-black grid ga absolute justify-evenly p-4 bg-gray-300 text-2xl dropdown text-black py-4 space-y-4"
               *ngIf="dropdownShow"
@@ -136,7 +136,7 @@ declare let gtag: Function;
               >
             </div>
           </div>
-          
+
           <a
             class="cursor-pointer"
             (click)="mobileNavShow = false"
@@ -144,7 +144,7 @@ declare let gtag: Function;
             href="blog"
             >Blog</a
           >
-          
+
           <a
             (click)="mobileNavShow = false; scrollToContact()"
             class="cursor-pointer"
@@ -156,25 +156,28 @@ declare let gtag: Function;
           <a
             (click)="mobileNavShow = false"
             class="cursor-pointer"
-            routerLink="/admin/order"
+            routerLink="/b2b/order"
             >Bestellungen</a
           >
           <a
+            *ngIf="currentUser.role.includes('ADMIN')"
             (click)="mobileNavShow = false"
             class="cursor-pointer"
-            routerLink="/admin/keyword"
+            routerLink="/b2b/keyword"
             >Keyword</a
           >
           <a
+            *ngIf="currentUser.role.includes('ADMIN')"
             (click)="mobileNavShow = false"
             class="cursor-pointer"
-            routerLink="/admin/product"
+            routerLink="/b2b/product"
             >Produkte</a
           >
           <a
+            *ngIf="currentUser.role.includes('ADMIN')"
             (click)="mobileNavShow = false"
             class="cursor-pointer"
-            routerLink="/admin/category"
+            routerLink="/b2b/category"
             >Kategorien</a
           >
       </div>
@@ -352,7 +355,7 @@ declare let gtag: Function;
           <div>
             <a
               class=""
-              routerLink="/admin/login"
+              routerLink="/b2b/login"
               *ngIf="currentUser"
               (click)="logout.emit()"
               >Logout</a
@@ -374,7 +377,6 @@ export class NavigationComponent implements OnInit {
   showPhone = false;
   showPhoneCounter = 0;
 
-  private popupOpenSubscription: Subscription;
   private statusChangeSubscription: Subscription;
   constructor(
     private router: Router,
@@ -388,6 +390,7 @@ export class NavigationComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.currentUser)
     this.innerWidth = document.documentElement.clientWidth;
     this.statusChangeSubscription = this.ccService.statusChange$.subscribe(
       (event: NgcStatusChangeEvent) => {
