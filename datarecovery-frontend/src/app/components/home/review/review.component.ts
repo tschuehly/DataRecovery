@@ -8,9 +8,9 @@ import { ReviewDetailDTO } from '../../../model/model';
     <div class="text-white button my-8">
       <div class="flex justify-center text-center text-black">
         <div>
-          <h3 class="text-2xl md:text-4xl font-semibold ">
+          <h2 class="text-2xl md:text-4xl font-semibold ">
           Kundenbewertungen:
-          </h3>
+          </h2>
 
           <div class="flex justify-center pt-2 items-center">
             <svg

@@ -18,7 +18,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
   </div>
   <div class="bg-white text-center">
     <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">
-      NAND Flash Datenrettung
+      SD-Karte Datenrettung & USB-Stick Datenrettung
     </h1>
   </div>
   <div class="bg-gray-main text-white border-b-2 border-silver pb-8">
@@ -29,7 +29,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
         class="whitespace-pre-wrap py-2"
       ><span class="text-bold text-sm md:text-lg text-silver">Updated am 03.12.2021, 17:59 von Tobias Jungbauer</span></pre>
       <pre class="whitespace-pre-wrap text-sm md:text-xl py-8 py-8">
-<span class="font-semibold text-base md:text-xl">Es wird die Datenrettung für USB-Sticks und (micro) SD-Karten angeboten:</span>
+<span class="font-semibold text-base md:text-xl">Datenrettung für USB-Sticks und (micro) SD-Karten:</span>
 - die z.B. überhaupt nicht mehr erkannt werden
 - oder sich anderweitig nicht auslesen lassen
 - bei denen Windows Sie beim Anstecken auffordert zu formatieren
@@ -37,7 +37,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
 
 Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen. <div class="flex pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">Preisliste</a></button></div>
 
-<span class="font-semibold text-base md:text-xl">Vorgehensweise NAND-Datenrettung:</span>
+<span class="font-semibold text-base md:text-xl">Vorgehensweise:</span>
 
 <div class="flex grid-cols-2 flex-wrap gap-4">
 <img class="h-96 object-cover" src="assets/mSD-Bild.png">
@@ -65,10 +65,10 @@ Nach einigen Anpassungen wird am Ende ein Image erzeugt, sodass Ihre Dateien bes
 Folgende Chips werden zum Auslesen unterstützt: TSOP-48, BGA-152 und LGA/TLGA-52/60, welche die üblichen Formate für beispielsweise USB-Sticks oder SD-Karten darstellen, wie weitere 112 verschiedene Monolitharten.
 
 Festpreise nach Gesamtkapazität und nur nach Erfolg:
-Defekte (micro) SD-Karte oder USB-Stick bis 16GB Datenträgerkapazität: 50,00 €*
-Defekte (micro) SD-Karte oder USB-Stick bis 64GB Datenträgerkapazität: 125,00 €*
-Defekte (micro) SD-Karte oder USB-Stick bis 128GB Datenträgerkapazität: 225,00 €*
-Defekte (micro) SD-Karte oder USB-Stick bis 256GB Datenträgerkapazität: 425,00 €*
+Defekte (micro) SD-Karte oder USB-Stick bis 32GB Datenträgerkapazität: 75,00 €*
+Defekte (micro) SD-Karte oder USB-Stick bis 64GB Datenträgerkapazität: 99,00 €*
+Defekte (micro) SD-Karte oder USB-Stick bis 128GB Datenträgerkapazität: 199,00 €*
+Defekte (micro) SD-Karte oder USB-Stick bis 256GB Datenträgerkapazität: 399,00 €*
 *bereits inkl. 19% Mehrwertsteuer
 
 <h2 class="underline text-xl md:text-2xl font-bold my-6">Verwendete Hard- Und Software</h2><pre class="whitespace-pre-wrap py-8 text-sm md:text-xl overflow-hidden">Der PC-3000 Flash ist ein Hardware-Software-Lösung zur Wiederherstellung von Daten von NAND-basierten Geräten in solchen Fällen, in denen kein Zugriff über die zugewiesene Laufwerksschnittstelle mehr möglich ist.

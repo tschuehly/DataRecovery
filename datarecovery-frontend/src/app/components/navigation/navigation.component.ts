@@ -65,12 +65,12 @@ declare let gtag: Function;
           "
         >
         <button
-            class="cursor-pointer"
+            class="cursor-pointer font-medium"
             (click)="scrollToOrder(); mobileNavShow = false"
             >Auftragsformular</button
           >
           <a
-          class="cursor-pointer"
+          class="cursor-pointer font-medium"
           (click)="mobileNavShow = false"
           routerLink="preise"
           href="preise"
@@ -84,7 +84,7 @@ declare let gtag: Function;
             [ngClass]="{ 'bg-gray-300 md:bg-black': dropdownShow }"
           >
             <button
-              class="cursor-pointer self-center "
+              class="cursor-pointer self-center font-medium"
               (click)="dropdownShow = !dropdownShow"
               >Arbeitsweise</button
             >
@@ -138,7 +138,7 @@ declare let gtag: Function;
           </div>
 
           <a
-            class="cursor-pointer"
+            class="cursor-pointer font-medium"
             (click)="mobileNavShow = false"
             routerLink="blog"
             href="blog"
@@ -147,7 +147,7 @@ declare let gtag: Function;
 
           <button
             (click)="mobileNavShow = false; scrollToContact()"
-            class="cursor-pointer"
+            class="cursor-pointer font-medium"
             >Kontakt</button
           >
         </div>
@@ -191,7 +191,7 @@ declare let gtag: Function;
           <div class="flex justify-center">
   <img class="h-24 md:h-28 pb-2" src="assets/Profil.jpg">
   </div>
-            <span class="font-semibold pb-2">Gibt es Fragen? </span>
+            <span class="font-semibold pb-2">Haben Sie Fragen? </span>
             <p>Ein Anruf klärt es am schnellsten:</p>
           </h2>
           <button (click)="showPhone = false">
@@ -200,8 +200,7 @@ declare let gtag: Function;
         </div>
 
         <p class="font-semibold text-base md:text-lg pb-2">
-          <img alt="phone" class="inline pr-4" src="/assets/phone.svg" />0151
-          61408355
+          <img alt="phone" class="inline pr-4" src="/assets/phone.svg" />0841 12840705
         </p>
 
         <p class="text-base md:text-lg">Mo.-Sa. 10:00-20:00 Uhr erreichbar.</p>
@@ -290,11 +289,11 @@ declare let gtag: Function;
             id="contact"
           >
             <div>
-              <h1
+              <h3
                 class="font-semibold pt-4 md:mt-0 mb-2 text-2xl md:text-3xl text-center text-gray-50"
               >
                 Kontakt
-              </h1>
+              </h3>
               <p
                 class=" text-center text-lg md:text-xl text-white"
               >
@@ -313,11 +312,11 @@ declare let gtag: Function;
             </div>
 
             <div>
-              <h1
+              <h3
                 class="font-semibold pt-4 md:mt-0 mb-2 text-2xl md:text-3xl text-center text-white"
               >
                 Adresse
-              </h1>
+              </h3>
               <p
                 class=" text-lg md:text-xl  text-white text-center"
               >

@@ -17,19 +17,19 @@ import { ScrollService } from '../../../services/scroll.service';
     </div>
     <div class="bg-white text-center">
       <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">
-        HDD Datenrettung
+        HDD-Festplatten Datenrettung
       </h1>
     </div>
     <div class="bg-gray-main text-white border-b-2 border-silver pb-8">
       <div class="container py-8 px-3">
         <span class=" text-xl md:text-2xl font-bold"
-          >HDD-Festplatten Datenrettung</span
+          >Festplatten Datenrettung</span
         >
         <pre class="whitespace-pre-wrap py-2">
 <span class="whitespace-pre-wrap py-2 text-bold text-sm md:text-lg text-silver">Updated am 27.03.22, 07:55 von Tobias Jungbauer</span> </pre>
 
 <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
-<span class="font-semibold text-base md:text-xl">Angeboten wird die Datenrettung für HDD-Festplatten, die z.B.:</span>
+<span class="font-semibold text-base md:text-xl">Datenrettung für HDD-Festplatten, die z.B.:</span>
 - sich nicht mehr korrekt auslesen lassen bzw. nur sehr langsam reagieren
 - oder überhaupt nicht mehr erkannt werden
 - ggf. "klackern" oder "fiepsen" (mechanische Schäden)
@@ -38,7 +38,7 @@ import { ScrollService } from '../../../services/scroll.service';
 ⚠ Bitte öffnen Sie Ihre Festplatte nicht selbst und vermeiden Sie bei "klackern" weitere Einschaltvorgänge. 
 Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen. <div class="flex pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">Preisliste</a></button></div>
 
-<span class="font-semibold text-base md:text-xl">Typische Arbeiten zur Datenrettung sind:</span>
+<span class="font-semibold text-base md:text-xl">Vorgehensweise:</span>
 <span class="underline">- mikroskopische Analyse und Austausch der Schreib-/Leseköpfe:</span>
 
 <div class="flex grid-cols-3 flex-wrap gap-4">
@@ -96,7 +96,7 @@ Um hier dennoch die nötigen Arbeiten durchführen zu können gibt es spezielle 
   <img class="h-80 object-cover object-center" src="assets/Chitubox.jpg">
 </div>
 Nicht für jedes Festplattenmodell gibt es passendes Werkzeug zum Austausch der Schreib-/Leseköpfe direkt zu Kaufen.
-Vorallen moderne Festplatten wie Seagate Rosewood und co. bieten hier nur sehr wenig Platz im Inneren.
+Vor allen moderne Festplatten wie Seagate Rosewood und co. bieten hier nur sehr wenig Platz im Inneren.
 Eigenes Werkzeug mit einer Genauigkeit von 35µm Herstellen zu können bringt daher einige Vorteile.
 
 <span class ="underline">-Alle Arbeiten werden ausschließlich unter Reinraumbedingungen nach DIN 14644-1 ISO 5, ESD-geschützt und vor Ort durchgeführt:</span>
@@ -117,8 +117,7 @@ Dieser besitzt einen Abscheidegrad von 99,995%. Das bedeutet, dass der Filter be
 ❸ Beschädigte Oberflächen
 
 Festpreisliste nach von Ihnen definierten Erfolg:
-Defekte HDD-Festplatte bis 500GB Festplattenkapazität: 299,00 €*
-Defekte HDD-Festplatte bis 1TB Festplattenkapazität: 349,00 €*
+Defekte HDD-Festplatte bis 1TB Festplattenkapazität: 299,00 €*
 Defekte HDD-Festplatte bis 2TB Festplattenkapazität: 399,00 €*
 Defekte HDD-Festplatte bis 4TB Festplattenkapazität: 499,00 €*
 Defekte HDD-Festplatte bis 6TB Festplattenkapazität: 599,00 €*

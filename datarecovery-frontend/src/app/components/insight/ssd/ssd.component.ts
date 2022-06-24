@@ -30,7 +30,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
           class="whitespace-pre-wrap py-2"
         ><span class="text-bold text-sm md:text-lg text-silver">Updated am 03.12.2021, 18:05 von Tobias Jungbauer</span></pre>
         <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
-<span class="font-semibold text-base md:text-xl">Es wird die SSD Datenrettung angeboten für Speicher:</span>
+<span class="font-semibold text-base md:text-xl"> SSD Datenrettung für Speicher:</span>
 - die überhaupt nicht mehr erkannt werden (auch nicht im BIOS)
 - oder Dateien anzeigen, aber sich nicht auslesen lassen
 - bei denen z.B. Windows Sie beim Anstecken auffordert zu formatieren

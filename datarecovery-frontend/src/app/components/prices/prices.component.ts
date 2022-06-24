@@ -12,16 +12,16 @@ import { ScrollService } from 'src/app/services/scroll.service';
       style="background-image: url('/assets/prices_header.jpg')"
     >
       <div class="flex md:ml-80 justify-center md:justify-start ">
-        <h1
+        <h2
           class="text-2xl md:text-4xl leading-relaxed text-center text-silver text-shadow bg-gray-main p-16"
         >
           Tobias<br />Jungbauer<br />Datenrettung
-        </h1>
+        </h2>
       </div>
     </div>
     <div class="bg-white text-center">
       <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">
-      Preise
+      Datenrettung Preise
       </h1>
     </div>
     <div class="bg-gray-main  ">
@@ -30,8 +30,10 @@ import { ScrollService } from 'src/app/services/scroll.service';
           class="text-white text-base md:text-xl py-4 mx-auto justify-center"
         >
         <p class="text-white font-semibold">Preiskonzept bei jungbauerdatenrettung:</p>
-        <p> Durch modernste Technik und Festpreiskonzept haben wir einen Kostenvorteil. </p>
-        <p> Diesen Vorteil geben wir in Form von attraktiven Preisen an unsere Kunden weiter.</p>
+        <p> Durch Eigeninitiative und dem Festpreiskonzept habe ich einen <a routerLink="/blog/datenrettung-kosten" class="underline"
+        >Kostenvorteil</a>. </p>
+        <p> Diesen Vorteil gebe ich in Form von attraktiven Preisen an unsere Kunden weiter.</p>
+        <p>Bezahlung nur nach Erfolg, den Sie im Voraus selbst definieren (z.B. "Ordner x" am wichtigsten).</p>
         </div>
       </div>
     </div>
@@ -73,8 +75,6 @@ import { ScrollService } from 'src/app/services/scroll.service';
             </button>
           </div>
           <br />Alle Preise sind bereits inklusive 19% Mehrwertsteuer.<br/>
-          <br />Bei selbstgeöffnete/verunreinigten HDD Festplatten entfallen die angegebenen Festpreise. 
-          <p>Fragen Sie in diesem Spezialfall bitte gesondert nach den entsprechenden Konditionen.<p><br/>
         </div>
       </div>
 

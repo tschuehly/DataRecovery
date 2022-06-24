@@ -61,10 +61,6 @@ Die unterstützten RAID Level sind:
 - Kombinierte Level: 10, 50, 60, 51 usw.
 
 <span class="font-semibold text-base md:text-xl">Mir ist Offenheit und Transparenz wichtig, daher finden Sie hier direkt die Preiskalkulation:</span>
-50,00 € Grundpreis
-50,00 € pro 1TB Nettokapazität
-ggf. Reparaturkosten von einzelnen HDD oder SSD
-
 Preisbeispiele für RAID-Konfigurationen mit defekte(n) HDD-Festplatte(n):
 z.B. Raidlevel 1 mit 2x 2TB HDD (1x davon defekt): 150,00 EUR*
 z.B. Raidlevel 0 mit 2x 2TB HDD (1x davon defekt): 549,00 EUR*
@@ -73,7 +69,7 @@ z.B. JBOD mit 4x 6TB HDD (1x davon defekt): 1549,00 EUR*
 *alle Preise inkl. 19% Mehrwersteuer und nur nach Erfolg. Bei Misserfolg zu 100% inkl. Rückversand kostenfrei.
 
 
-Falls noch Fragen offen sind rufen Sie am besten unter 0841 12840705 an oder schreiben eine Email an: info@jungbauerdatenrettung.de
+Falls Fragen offen sind rufen Sie am besten unter 0841 12840705 an oder schreiben eine Email an: info@jungbauerdatenrettung.de
         </pre
         >
       </div>

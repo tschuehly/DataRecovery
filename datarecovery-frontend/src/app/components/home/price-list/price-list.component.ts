@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
       <h2
         class="pt-10 py-4 text-2xl md:text-4xl tracking-wider text-center text-gray-50"
       >
-        Festpreise nach Gesamtkapazität:
+        Festpreise auch für komplexe Fälle:
       </h2>
 
       <div
@@ -44,14 +44,14 @@ import { Component } from '@angular/core';
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
               <div class="pb-2">Festpreise¹</div>
-                <div>50,00 €</div>
-                <div>125,00 €</div>
-                <div>225,00 €</div>
-                <div>425,00 €</div>
+                <div>75,00 €</div>
+                <div>99,00 €</div>
+                <div>199,00 €</div>
+                <div>399,00 €</div>
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
                 <div class="pb-2">Speichergrößen</div>
-                <div>≤ 16 GB</div>
+                <div>≤ 32 GB</div>
                 <div>≤ 64 GB</div>
                 <div>≤ 128 GB</div>
                 <div>≤ 256 GB</div>
@@ -91,18 +91,18 @@ import { Component } from '@angular/core';
                 Defekte HDD-Festplatte
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
-              <div class="pb-2">Festpreise¹² </div>
+              <div class="pb-2">Festpreise¹ </div>
                 <div>299,00 €</div>
-                <div>349,00 €</div>
                 <div>399,00 €</div>
                 <div>499,00 €</div>
+                <div>599,00 €</div>
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
               <div class="pb-2">Speichergrößen</div>
-                <div>≤ 500 GB</div>
                 <div>≤ 1 TB</div>
                 <div>≤ 2 TB</div>
                 <div>≤ 4 TB</div>
+                <div>≤ 6 TB</div>
               </div>
             </div>
             <div class="grid grid-cols-2 py-4">
@@ -185,10 +185,7 @@ import { Component } from '@angular/core';
             class="flex flex-col justify-between p-4 text-black md:flex-row bg-silver rounded-b-2xl"
           >
             <div class="justify-center text-base md:text-lg">
-<p>¹Alle angegebenen Festpreise sind bereits inklusive 19% Mehrwertsteuer.</p>
-<p>²Bei selbstgeöffnete/verunreinigten HDD-Festplatten entfallen die Festpreise. </p>
-            </div>
-
+<p>¹Alle angegebenen Festpreise sind bereits inklusive 19% Mehrwertsteuer.</p></div>
             <td class="flex justify-end pt-4">
               <button
                 class="px-4 py-2 text-lg md:text-xl text-white rounded shadow bg-gray-main"
