@@ -59,6 +59,13 @@ import { ReviewDetailDTO } from '../../../model/model';
               />
             </svg>
           </div>
+          <div class="hidden" itemscope itemtype="https://schema.org/AggregateRating" >
+            <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/LocalBusiness">
+              <span itemprop="name">Datenrettung Tobias Jungbauer</span>
+            </div>
+            <span itemprop="ratingValue">{{ this.reviewDetail?.rating | number: '1.1' }}</span> bei
+            <span itemprop="ratingCount">{{ this.reviewDetail?.userRatingsCount }}</span> Bewertungen
+          </div>
           <span class="flex justify-center text-lg md:text-xl ml-4 pt-2">
             Ø {{ this.reviewDetail?.rating | number: '1.1' }} bei
             {{ this.reviewDetail?.userRatingsCount }} Bewertungen
@@ -191,7 +198,7 @@ import { ReviewDetailDTO } from '../../../model/model';
                     Alle Bewertungen einsehen
                   </a>
                   <button
-                    
+
                     *ngIf="
                       this.reviews[this.reviewIndex].text.split(' ').length > 40
                     "
@@ -209,14 +216,14 @@ import { ReviewDetailDTO } from '../../../model/model';
             class="md:hidden block w-8 h-8 md:w-12 md:h-12 shrink-0 bg-gray-main rounded-full"
             (click)="previousReview()"
           >
-            <img src="/assets/arrow-left.svg" />
+            <img src="/assets/arrow-left.svg" alt="arrow left"/>
           </button>
 
           <button
             class="w-8 h-8 md:w-12 md:h-12 shrink-0 bg-gray-main rounded-full  mr-0"
             (click)="nextReview()"
           >
-            <img src="/assets/arrow-right.svg" />
+            <img src="/assets/arrow-right.svg" alt="arrow right" />
           </button>
         </div>
       </div>

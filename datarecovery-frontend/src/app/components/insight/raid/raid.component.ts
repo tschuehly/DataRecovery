@@ -33,7 +33,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
 <span class="font-semibold text-base md:text-xl">RAID- & NAS-Datenrettung:</span>
 wenn ein "Rebuild" nicht möglich oder bereits gescheitert ist, d.h wenn es sich z.B. um einen RAID 0 oder JBOD handelt, mehrere Volumes bei RAID 1 oder 5 beschädigt sind oder der RAID-Controller selbst defekt ist. Oftmals verursacht auch die Firmware der RAID Controller von Synology, QNAP und co. nach gescheiterten Rebuildversuch das ungewünschte Löschen des Dateisystems.
 
-Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen. 
+Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen.
 
 <span class="font-semibold text-base md:text-xl">Beispiele anhand bereits abgeschlossener Fälle:</span>
 1. Synology RAID 1 (z.B. DS220+, DS220J, DS720+, DS218): <a href="/blog/synology-raid-1-datenrettung" class="underline font-bold">hier klicken</a>
@@ -50,7 +50,7 @@ Diese Methodik ist zusätzlich wesentlich sicherer als ein Rebuild ohne Backup m
 <span class="font-semibold text-base md:text-xl">Besonderheit:</span> Auch wenn die Konfiguration wie RAID-Typ, Block Size, Parity Order oder Delay nicht bekannt ist oder auch die Reihenfolge der Datenträger durcheinandergebracht worden ist können Ihre Dateien aus den einzelnen Festplatten rekonstruiert werden!</pre>
 
         <div class="flex grid-cols-2 gap-4 h-80 mb-4">
-          <img src="assets/raid1.jpg" />
+          <img src="assets/raid1.jpg" height=""/>
         </div>
         <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
 Unterstützt werden sowohl Software-RAID als auch Hardware-RAID, wie z.B. in NAS.

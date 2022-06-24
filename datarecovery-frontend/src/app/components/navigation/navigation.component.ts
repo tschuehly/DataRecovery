@@ -21,10 +21,10 @@ declare let gtag: Function;
 @Component({
   selector: 'app-navigation',
   template: `
-    <div class="flex flex-col h-screen text-lg">
+    <div class="flex flex-col text-lg">
       <nav
         class="flex sticky w-full bg-gray-main text-2xl font-extralight  text-white px-2 py-4 md:p-4 justify-center
-                    flex-col md:flex-row flex-wrap"
+                    flex-col md:flex-row flex-wrap top-0 z-[400]"
         id="navigation"
       >
         <div class="md:w-fit flex justify-between md:block shrink-0">
@@ -64,10 +64,10 @@ declare let gtag: Function;
             mobileNavShow ? 'flex flex-col space-x-0' : 'hidden md:flex'
           "
         >
-        <a
+        <button
             class="cursor-pointer"
             (click)="scrollToOrder(); mobileNavShow = false"
-            >Auftragsformular</a
+            >Auftragsformular</button
           >
           <a
           class="cursor-pointer"
@@ -83,12 +83,12 @@ declare let gtag: Function;
             [excludeBeforeClick]="true"
             [ngClass]="{ 'bg-gray-300 md:bg-black': dropdownShow }"
           >
-            <a
+            <button
               class="cursor-pointer self-center "
               (click)="dropdownShow = !dropdownShow"
-              >Arbeitsweise</a
+              >Arbeitsweise</button
             >
-            
+
             <div
               class="border-solid border-2 border-black grid ga absolute justify-evenly p-4 bg-gray-300 text-2xl dropdown text-black py-4 space-y-4"
               *ngIf="dropdownShow"
@@ -136,7 +136,7 @@ declare let gtag: Function;
               >
             </div>
           </div>
-          
+
           <a
             class="cursor-pointer"
             (click)="mobileNavShow = false"
@@ -144,11 +144,11 @@ declare let gtag: Function;
             href="blog"
             >Blog</a
           >
-          
-          <a
+
+          <button
             (click)="mobileNavShow = false; scrollToContact()"
             class="cursor-pointer"
-            >Kontakt</a
+            >Kontakt</button
           >
         </div>
       </nav>

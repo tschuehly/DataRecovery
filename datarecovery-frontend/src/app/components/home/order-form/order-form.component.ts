@@ -79,9 +79,9 @@ import { Order, Product } from '../../../model/model';
             ></textarea>
           </label>
           <h2 class="font-semibold text-base md:text-lg inline text-center py-4">
-          <a
+          <button
             class="font-semibold "
-            >Rückversand: 4,99€ (Misserfolg: inkl. Rückversand kostenfrei)</a
+            >Rückversand: 4,99€ (Misserfolg: inkl. Rückversand kostenfrei)</button
           >
         </h2>
           <div

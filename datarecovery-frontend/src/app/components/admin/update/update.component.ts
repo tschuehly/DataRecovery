@@ -11,7 +11,7 @@ import imageCompression from 'browser-image-compression';
       <div class="flex ">
         <h1 class="text-2xl text-center flex-1">Neues Update erstellen</h1>
         <button class="flex-0" (click)="this.updatedOrder.emit(order)">
-          <img alt="close" src="/assets/x.svg" />
+          <img alt="close" src="/assets/x.svg" width="36" height="36"/>
         </button>
       </div>
       <label

@@ -6,10 +6,11 @@ import { Component } from '@angular/core';
       class="bg-gray-main bg-circuit-board py-10 md:p-8 flex max-h-[40rem]"
     >
       <button class="w-7 md:w-12 shrink-0" (click)="previousPicture()">
-        <img src="/assets/arrow-left.svg" />
+        <img width="68" height="68" src="/assets/arrow-left.svg" alt="left arrow"/>
       </button>
       <div class="flex grow justify-center">
         <img
+          alt="header image"
           class="flex-1 md:flex-none"
           [src]="'/assets/header_main/header_(' + currentImageIndex + ').webp'"
           [srcset]="headerImage()"
@@ -17,7 +18,7 @@ import { Component } from '@angular/core';
         />
       </div>
       <button class="w-7 md:w-12 shrink-0" (click)="nextPicture()">
-        <img src="/assets/arrow-right.svg" />
+        <img width="68" height="68" src="/assets/arrow-right.svg" alt="right arrow"/>
       </button>
     </div>
   `,

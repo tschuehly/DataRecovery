@@ -63,7 +63,7 @@ const cookieConfig: NgcCookieConsentConfig = {
     policy: 'Cookie Policy',
     header: 'Cookies used on the website!',
     allow:
-      '<div class="flex flex-row items-center">Cookies erlauben <img class="h-12" src="/assets/favicon/icons8-cookie-100.png"> </div>',
+      '<div class="flex flex-row items-center">Cookies erlauben <img class="h-12" width="100" height="100" src="/assets/favicon/icons8-cookie-100.png" alt="cookie"> </div>',
   },
 };
 @NgModule({
