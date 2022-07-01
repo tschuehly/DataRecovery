@@ -54,8 +54,8 @@ const cookieConfig: NgcCookieConsentConfig = {
   },
   type: 'opt-in',
   content: {
-    message:
-      '<div class="text-sm md:text-lg">Um unsere Webseite graphisch optimal zu gestalten und fortlaufend verbessern zu können verwenden wir Cookies.</div>',
+    message: 
+      '<div class="text-sm md:text-lg">Um die Webseite optimal zu gestalten und fortlaufend verbessern zu können verwenden wir Cookies.</div>',
     dismiss: 'Got it!',
     deny: 'Cookies verbieten',
     link: 'Datenschutzbestimmungen',
