@@ -38,7 +38,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
 Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anrufen. <div class="flex pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="preise">Preisliste</a></button></div>
 
 <span class="font-semibold text-base md:text-xl">Vorgehensweise:</span>
-Tatsächlich sind bei nahezu allen defekten SSD-Speichern einer oder mehrere der NAND-Speicherbausteine die Fehlerursache. 
+Tatsächlich sind bei nahezu allen nicht mehr im BIOS sichtbaren SSD-Speicher einer oder mehrere der NAND-Speicherbausteine die Fehlerursache. 
 Warum ist das so? Die SSD eigene Firmware wird ebenfalls auf den Speicherbausteinen abgespeichert.
 
 Wenn vom Chip nun relevante Abschnitte der Firmware nicht mehr für den Controller lesbar werden, schafft die SSD es nicht mehr zu booten.
