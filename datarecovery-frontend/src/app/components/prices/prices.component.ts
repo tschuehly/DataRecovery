@@ -32,7 +32,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
         <p class="text-white font-semibold">Preiskonzept bei jungbauerdatenrettung:</p>
         <p> Durch modernste Technik und dem Festpreiskonzept haben wir einen <a routerLink="/blog/datenrettung-kosten" class="underline"
         >Kostenvorteil</a>. </p>
-        <p> Diesen Vorteil gebe ich in Form von attraktiven Preisen an unsere Kunden weiter.</p>
+        <p> Dieser Vorteil wird in Form von attraktiven Preisen an unsere Kunden weitergegeben.</p>
         <p>Bezahlung nur nach Erfolg, den Sie im Voraus selbst definieren (z.B. "Ordner x" am wichtigsten).</p>
         </div>
       </div>
