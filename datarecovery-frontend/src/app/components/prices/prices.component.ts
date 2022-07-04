@@ -29,9 +29,9 @@ import { ScrollService } from 'src/app/services/scroll.service';
         <div
           class="text-white text-base md:text-xl py-4 mx-auto justify-center"
         >
-        <p> Durch modernste Technik und dem Festpreiskonzept haben wir einen <a routerLink="/blog/datenrettung-kosten" class="underline"
-        >Kostenvorteil</a>. </p>
-        <p> Dieser Vorteil wird in Form von attraktiven Preisen an unsere Kunden weitergegeben.</p>
+        <p> Durch Eigeninitiative, moderne Technik und Festpreismodell haben wir einen <a routerLink="/blog/datenrettung-kosten" class="underline"
+        >Kostenvorteil gegenüber Mitbewerber</a>. </p>
+        <p> Diesen Vorteil geben wir in Form von attraktiven Preisen an unsere Kunden weiter.</p>
         <p>Bezahlung nur nach Erfolg, den Sie im Voraus selbst definieren (z.B. "Ordner x" am wichtigsten).</p>
         </div>
       </div>

@@ -185,6 +185,8 @@ import { Component } from '@angular/core';
             class="flex flex-col justify-between p-4 text-black md:flex-row bg-silver rounded-b-2xl"
           >
             <div class="justify-center text-base md:text-lg">
+            <p>Warum wir Festpreise nach Erfolg als das fairste und transparenteste Modell sehen erfahren Sie hier: <a routerLink="/blog/datenrettung-kosten" class="underline"
+                  >Kostenvorteil gegenüber Mitbewerber.</a></p>
 <p>¹Alle angegebenen Festpreise sind bereits inklusive 19% Mehrwertsteuer.</p></div>
             <td class="flex justify-end pt-4">
               <button
@@ -193,8 +195,7 @@ import { Component } from '@angular/core';
                 <a href="preise">weitere Kapazitäten</a>
               </button>
             </td>
-<p> Warum wir uns für Festpreise nach Erfolg entschieden haben erfahren Sie hier: <a routerLink="/blog/datenrettung-kosten" class="underline"
->Kostenvorteil.</a>
+
           </div>
         </div>
       </div>
