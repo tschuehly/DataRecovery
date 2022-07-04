@@ -29,7 +29,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
         <div
           class="text-white text-base md:text-xl py-4 mx-auto justify-center"
         >
-        <p>Was uns wesentlich von unserer Konkurrenz unterscheidet erfahren Sie hier: <a routerLink="/blog/datenrettung-kosten" class="underline">Vorteile gegenüber Mitbewerber</a>. </p>
+        <p>Was uns von unserer Konkurrenz unterscheidet erfahren Sie hier: <a routerLink="/blog/datenrettung-kosten" class="underline">Vorteile gegenüber Mitbewerber</a>. </p>
         <p>Bezahlung nur nach Erfolg, den Sie im Voraus selbst definieren (z.B. "Ordner x" am wichtigsten).</p>
         </div>
       </div>
