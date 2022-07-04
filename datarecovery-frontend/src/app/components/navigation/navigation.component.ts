@@ -86,7 +86,7 @@ declare let gtag: Function;
             <button
               class="cursor-pointer self-center font-medium"
               (click)="dropdownShow = !dropdownShow"
-              >Arbeitsweise</button
+              >Wie funktioniert es?</button
             >
 
             <div
