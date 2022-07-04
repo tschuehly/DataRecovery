@@ -193,7 +193,7 @@ import { Component } from '@angular/core';
                 <a href="preise">weitere Kapazitäten</a>
               </button>
             </td>
-<p> Warum Festpreise erfahren Sie hier: <a routerLink="/blog/datenrettung-kosten" class="underline"
+<p> Warum wir uns für Festpreise nach Erfolg entschieden haben erfahren Sie hier: <a routerLink="/blog/datenrettung-kosten" class="underline"
 >Kostenvorteil.</a>
           </div>
         </div>
