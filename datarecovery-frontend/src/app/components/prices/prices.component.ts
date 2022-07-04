@@ -30,7 +30,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
           class="text-white text-base md:text-xl py-4 mx-auto justify-center"
         >
         <p>Bezahlung nur nach Erfolg, den Sie im Voraus selbst definieren (z.B. "Ordner x" am wichtigsten).</p>
-        <p>Wie wir uns von unseren Konkurrenten unterscheiden erfahren Sie hier: <a routerLink="/blog/datenrettung-kosten" class="underline">Kostenvorteil gegenüber Mitbewerber</a>. </p>
+        <p>Wie wir uns von unseren Mitbewerber unterscheiden erfahren Sie hier: <a routerLink="/blog/datenrettung-kosten" class="underline">Kostenvorteil gegenüber Mitbewerber</a>. </p>
         </div>
       </div>
     </div>
