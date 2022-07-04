@@ -64,6 +64,13 @@ declare let gtag: Function;
             mobileNavShow ? 'flex flex-col space-x-0' : 'hidden md:flex'
           "
         >
+        <a
+          class="cursor-pointer font-medium"
+          (click)="mobileNavShow = false"
+          routerLink="/"
+          href="/"
+          >Startseite</a
+        >
         <button
             class="cursor-pointer font-medium"
             (click)="scrollToOrder(); mobileNavShow = false"
