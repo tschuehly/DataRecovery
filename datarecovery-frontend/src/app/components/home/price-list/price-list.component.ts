@@ -8,10 +8,9 @@ import { Component } from '@angular/core';
       id="priceList"
     >
       <h2
-        class="pt-10 py-4 text-2xl md:text-4xl tracking-wider text-center text-gray-50"
+        class="pt-10 py-4 text-2xl md:text-3xl tracking-wider text-center text-gray-50"
       >
-      <a routerLink="/preise" class="underline"
-      >Festpreise auch für komplexe Fälle</a>:
+      <a class="underline" href="preise">Festpreise auch für komplexe Fälle</a>:
       </h2>
 
       <div
