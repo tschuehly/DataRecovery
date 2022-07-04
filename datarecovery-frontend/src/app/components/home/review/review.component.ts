@@ -10,7 +10,7 @@ import { ReviewDetailDTO } from '../../../model/model';
         <div>
           <h2 class="text-2xl md:text-4xl font-semibold ">
           <a class="underline" href="https://search.google.com/local/reviews?placeid=ChIJU5PnJJcznEcRy2VAwpDd1Dc&q=Tobias+Jungbauer+Datenrettung+-+AmmerseeDatenrettung.de&hl=de&gl=DE"
-                >Kundenbewertungen:</a
+                >Kundenbewertungen:</a>
           </h2>
 
           <div class="flex justify-center pt-2 items-center">
