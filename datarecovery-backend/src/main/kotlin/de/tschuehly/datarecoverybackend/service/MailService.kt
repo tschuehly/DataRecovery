@@ -253,11 +253,11 @@ class MailService(
 
         val (msg, helper) = getMimeMessageAndHelper(order)
 
-        helper.setSubject("Sind sie zufrieden mit Ihrer Datenrettung?")
+        helper.setSubject("Sind Sie zufrieden mit Ihrer Datenrettung?")
         // language=HTML
         val body = """
            <h3 style="Margin-top: 0;Margin-bottom: 0;font-style: normal;font-weight: normal;color: #2e2e2e;font-size: 16px;text-decoration: underline;line-height: 26px;font-family: Cabin,Avenir,sans-serif;">
-                    Sind sie zufrieden mit Ihrer Datenrettung? <br/>
+                    Sind Sie zufrieden mit Ihrer Datenrettung? <br/>
             </h3>
             <p style="Margin-top: 16px;Margin-bottom: 0;">
             Nicht einmal 10% meiner Kunden geben eine Rückmeldung bezüglich deren Zufriedenheit über meine Arbeit. Sehr gerne nehme ich mich Ihrer Kritik an und freue mich auch über lobende Worte.<br><br>
