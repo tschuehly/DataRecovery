@@ -74,7 +74,7 @@ Unsere Aufgabe ist daher diese beschädigten Module zu reparieren und zu einer a
   <img class="h-80 object-cover object-right" src="assets/articles/platternswap_1.jpg">
   <img class="h-80 object-cover object-center" src="assets/articles/platternswap_2 (2).jpg">
 </div>
-Als Alternative zur Analyse der Schreib-/Leseköpfe kann man auch die Oberflöchen direkt inspizieren.
+Als Alternative zur Analyse der Schreib-/Leseköpfe kann man auch die Oberflächen direkt inspizieren.
 Das ist z.B. nötig, wenn die Festplatte bereits woanders neue Schreib-/Leseköpfe bekommen hat und die Originalen nicht mehr vorhanden sind.
 Auch nutzt man diese Technik, wenn der Motor getauscht werden muss.
 
