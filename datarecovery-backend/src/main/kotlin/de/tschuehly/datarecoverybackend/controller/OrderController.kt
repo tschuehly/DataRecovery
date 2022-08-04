@@ -1,5 +1,6 @@
 package de.tschuehly.datarecoverybackend.controller
 
+import de.tschuehly.datarecoverybackend.dto.TrackingDTO
 import de.tschuehly.datarecoverybackend.helpers.CrudController
 import de.tschuehly.datarecoverybackend.model.Order
 import de.tschuehly.datarecoverybackend.repository.OrderRepository
@@ -45,6 +46,14 @@ class OrderController(
         @RequestParam trackingId: String,
         @RequestParam postalCode: String
     ): Order = orderService.getByTrackingIdAndPostalCode(trackingId, postalCode)
+
+    @PreAuthorize("permitAll()")
+    @PostMapping("/trackingB2BList")
+    fun getListByTrackingIdsAndPostalCodes(
+        @RequestBody trackingDTO : List<TrackingDTO>
+    ) = orderService.getListByTrackingDTO(trackingDTO)
+
+
 
     @PostMapping("/addUpdate/{id}", consumes = ["multipart/form-data"])
     fun addUpdateToOrder(

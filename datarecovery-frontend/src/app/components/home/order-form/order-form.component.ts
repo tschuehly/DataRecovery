@@ -19,6 +19,7 @@ import { Order, Product } from '../../../model/model';
               #productSelect
               required
             >
+              <option value="" disabled selected>Hier klicken um den Datenträger auswählen</option>
               <option *ngFor="let product of products" [value]="product.id">
                 {{ product.category.name }} {{ product.name }}
                 <span *ngIf="product.price"

@@ -45,10 +45,10 @@ class SpringSecurityConfig(
             ).permitAll()
             .antMatchers(
                 HttpMethod.GET, "/", "/api/review", "/api/review/detail", "/api/review/refresh",
-                "/api/product", "/api/order/tracking", "/api/user/logout", "/api/picture/**"
+                "/api/product", "/api/order/tracking",  "/api/user/logout", "/api/picture/**"
             ).permitAll()
             .antMatchers(HttpMethod.POST, "/api/order/create", "/api/user/login").permitAll()
-            .antMatchers(HttpMethod.POST, "/api/user/**").permitAll()
+            .antMatchers(HttpMethod.POST, "/api/user/**", "/api/order/trackingB2BList").permitAll()
             // Our private endpoints.
             .anyRequest().authenticated()
             .and()

@@ -2,6 +2,7 @@ package de.tschuehly.datarecoverybackend.service
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import de.tschuehly.datarecoverybackend.dto.TrackingDTO
 import de.tschuehly.datarecoverybackend.helpers.CrudService
 import de.tschuehly.datarecoverybackend.helpers.PictureContentStore
 import de.tschuehly.datarecoverybackend.model.Order
@@ -127,6 +128,12 @@ class OrderService(
             logger.info("Sending Email to ${it.customer?.firstName} ${it.customer?.lastName}")
         }
 
+    }
+
+    fun getListByTrackingDTO(trackingDTO: List<TrackingDTO>): List<Order> {
+        return trackingDTO.mapNotNull {
+            orderRepository.findByTrackingIdAndCustomer_PostalCode(it.trackingId, it.postalCode)
+        }
     }
 
     companion object OrderState {
