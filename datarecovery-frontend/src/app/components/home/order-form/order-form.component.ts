@@ -112,7 +112,7 @@ import { Order, Product } from '../../../model/model';
             formGroupName="customer"
           >
             <label
-              >Vorname
+              >Vorname und Nachname
               <input
                 type="text"
                 class="mt-1 w-full text-black"
@@ -121,7 +121,7 @@ import { Order, Product } from '../../../model/model';
               />
             </label>
             <label
-              >Nachname
+              >Firma (optional)
               <input
                 type="text"
                 class="mt-1 w-full text-black"

@@ -198,7 +198,8 @@ class MailService(
         <a href=https://www.jungbauerdatenrettung.de//tracking/${order.trackingId}/${order.customer?.postalCode}>Aktueller Status</a>
         <br/>
         <h2 style="Margin-top: 20px;Margin-bottom: 0;font-style: normal;font-weight: normal;color: #2e2e2e;font-size: 18px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;">Ihre Auftragsdaten</h2><p style="Margin-top: 16px;Margin-bottom: 20px;">
-        ${order.customer?.firstName} ${order.customer?.lastName}<br />
+        ${order.customer?.firstName} <br />
+        ${order.customer?.lastName}<br />
         ${order.customer?.email}<br />
         ${order.customer?.street} <br />
         ${order.customer?.postalCode} ${order.customer?.city}<br />
@@ -219,7 +220,8 @@ class MailService(
         &nbsp;</p>
         
         <h2 style="Margin-top: 20px;Margin-bottom: 0;font-style: normal;font-weight: normal;color: #2e2e2e;font-size: 18px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;">Ihre Auftragsdaten zu ID: ${order.id}</h2><p style="Margin-top: 16px;Margin-bottom: 20px;">
-        ${order.customer?.firstName} ${order.customer?.lastName}<br />
+        ${order.customer?.firstName} <br />
+        ${order.customer?.lastName}<br />
         ${order.customer?.email}<br />
         ${order.customer?.street} <br />
         ${order.customer?.postalCode} ${order.customer?.city}<br />
