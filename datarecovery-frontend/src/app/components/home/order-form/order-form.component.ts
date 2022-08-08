@@ -121,7 +121,7 @@ import { Order, Product } from '../../../model/model';
               />
             </label>
             <label
-              >Optional: Firma
+              >Firma (optional)
               <input
                 type="text"
                 class="mt-1 w-full text-black"
