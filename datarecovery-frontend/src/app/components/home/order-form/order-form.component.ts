@@ -19,7 +19,7 @@ import { Order, Product } from '../../../model/model';
               #productSelect
               required
             >
-              <option value="" disabled selected>Hier klicken um den Typ zu wählen</option>
+              <option value="" disabled selected>Hier klicken um Art zu wählen</option>
               <option *ngFor="let product of products" [value]="product.id">
                 {{ product.category.name }} {{ product.name }}
                 <span *ngIf="product.price"
