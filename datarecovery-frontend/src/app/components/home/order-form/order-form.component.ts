@@ -121,12 +121,11 @@ import { Order, Product } from '../../../model/model';
               />
             </label>
             <label
-              >Firma (optional)
+              >Optional: Firma
               <input
                 type="text"
                 class="mt-1 w-full text-black"
                 formControlName="lastName"
-                required
               />
             </label>
             <label
@@ -165,11 +164,12 @@ import { Order, Product } from '../../../model/model';
                 required
             /></label>
             <label
-              >Optional: Telefonnummer
+              >Telefonnummer
               <input
                 type="text"
                 class="mt-1 w-full text-black"
                 formControlName="tel"
+                required
             /></label>
             <p class="font-semibold text-base md:text-lg inline text-center py-4">
             zu den <a
