@@ -25,7 +25,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
       <div class="bg-gray-main text-white border-b-2 border-silver pb-8">
         <div class="container py-10 px-3">
           <pre class="whitespace-pre-wrap">
-<span class="underline text-xl md:text-2xl font-bold">Über mich</span>
+<span class="underline text-xl md:text-2xl font-bold">Philosophie</span>
 <span class="text-bold text-lg text-silver">Updated am 16.04.2022, 18:38 von Tobias Jungbauer</span>
 
 Ziele: Transparenz, Fairness und Qualität während der Datenrettung. Daraus ergeben Sie u.a. folgende Punkte:
@@ -42,16 +42,16 @@ Ich bin mit meinem Know-how und meinem Equipment breit aufgestellt und ausgezeic
 Meine Gründe und Motivation für die Preisgestaltung bzw. auch das Konzept dahinter erfahren Sie <a href="/blog/datenrettung-kosten" class="underline font-bold">hier</a>.
           </pre>
           <h2 class="text-xl underline text-white font-bold py-6">
-            Der erste Auftrag:
+          Über mich:
           </h2>
           <pre class="whitespace-pre-wrap">
+<img class="h-80 object-cover object-right" src="assets/Profilbild_eckig.jpg">
 Bereits zu meiner frühen Schulzeit, als auch begleitend während meines Ingenieurstudiums, arbeitete ich bei einem mittelständischen Elektronikdienstleister, bei dem ich das ESD-geschützte Arbeiten an elektronischen Baugruppen, z.B. Löten an SMD und THT Bauteilen lernen konnte, als auch für optische Systeme unter Reinraumbedingungen arbeiten durfte.
 
 Meinen ersten Auftrag zu einer Datenrettung erhielt ich zu dieser Zeit.
 Eine Festplatte aus dem Freundeskreis, bei der ein Angebot einer professionellen Datenrettung im vierstelligen Betrag vorlag und dies für den Besitzer nun mal viel zu teuer war.
 
-Schon immer kannte ich mich gut mit Computern aus und half gerne Freunde und Verwandte, die damit Schwierigkeiten hatten. So kam diese Festplatte zu mir.
-Damals mit noch nicht professionellen Mitteln, sondern mit einer simplen Linux Software war es tatsächlich möglich gewesen, die Daten vollständig zu lesen.
+Schon immer kannte ich mich gut mit Computern aus und half gerne Freunde und Verwandte, die damit Schwierigkeiten hatten. So kam diese Festplatte zu mir. Damals mit noch nicht professionellen Mitteln, sondern mit einer simplen Linux Software war es tatsächlich möglich gewesen, die Daten vollständig zu lesen.
 
 Darüber erschüttert, dass das Angebot für die Datenrettung dieser Festplatte im vierstelligen Bereich lag, fing ich an, meine Dienste günstig, bereits damals zu einem Festpreis nach Erfolg unter der Webseite ammerseedatenrettung.de anzubieten.
           </pre
