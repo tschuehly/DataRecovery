@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
       <h2
         class="pt-10 py-4 text-2xl md:text-3xl tracking-wider text-center text-gray-50"
       >
-      <a class="underline" href="preise">Festpreise nach Erfolg auch für komplexe Fälle</a>:
+      <a class="underline" href="preise">Festpreise nach Erfolg</a>:
       </h2>
 
       <div
@@ -156,7 +156,7 @@ import { Component } from '@angular/core';
             </div>
             <div class="grid pb-4">
               <h2 class="p-4 text-xl">
-                RAID & Apple Fusion Drive (iMac)
+                NAS / RAID, Apple Fusion Drive
               </h2>
               <div class="px-4 py-2 pl-8 leading-relaxed text-left text-base md:text-lg">
                 abhängig von:
