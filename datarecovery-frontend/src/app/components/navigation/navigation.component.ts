@@ -74,7 +74,7 @@ declare let gtag: Function;
         <button
             class="cursor-pointer font-medium"
             (click)="scrollToOrder(); mobileNavShow = false"
-            >Auftragsformular</button
+            >Auftrag</button
           >
           <a
           class="cursor-pointer font-medium"

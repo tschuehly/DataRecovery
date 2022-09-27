@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
       <h2
         class="pt-10 py-4 text-2xl md:text-3xl tracking-wider text-center text-gray-50"
       >
-      <a class="underline" href="preise">Festpreise nach Erfolg</a>:
+      <a class="underline" href="preise">Festpreise nur nach Erfolg</a>:
       </h2>
 
       <div
