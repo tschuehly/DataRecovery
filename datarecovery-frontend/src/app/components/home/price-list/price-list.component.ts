@@ -107,7 +107,7 @@ import { Component } from '@angular/core';
             </div>
             <div class="grid grid-cols-2 py-4">
               <h2 class="col-span-2 p-4 text-xl">
-                Beschädigte SSD-Speicher (SATA-basiert)
+                Beschädigter SSD-Speicher (SATA-basiert)
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
               <div class="pb-2">Festpreise¹</div>
