@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
       <h2
         class="pt-10 py-4 text-2xl md:text-3xl tracking-wider text-center text-gray-50"
       >
-      <a class="underline" href="preise">Festpreise bei Erfolg</a>:
+      <a class="underline" href="preise">Preise bei Erfolg</a>:
       </h2>
 
       <div
@@ -88,7 +88,7 @@ import { Component } from '@angular/core';
             </div>
             <div class="grid grid-cols-2 py-4">
               <h2 class="col-span-2 p-4 text-xl">
-                Defekte HDD-Festplatte
+                Beschädigte HDD-Festplatte
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
               <div class="pb-2">Festpreise¹ </div>
@@ -107,7 +107,7 @@ import { Component } from '@angular/core';
             </div>
             <div class="grid grid-cols-2 py-4">
               <h2 class="col-span-2 p-4 text-xl">
-                Defekte SSD-Speicher (SATA-basiert)
+                Beschädigte SSD-Speicher (SATA-basiert)
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
               <div class="pb-2">Festpreise¹</div>
@@ -163,7 +163,7 @@ import { Component } from '@angular/core';
                 <div>- Anzahl an Festplatten</div>
                 <div>- Kapazität pro Festplatte</div>
                 <div>- RAID Level</div>
-                <div>- ggf. Beschädigung der Festplatten</div>
+                <div>- ggf. Reparatur einzelner Festplatten</div>
               </div>
             </div>
 
