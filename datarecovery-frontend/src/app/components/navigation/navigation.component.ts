@@ -30,8 +30,8 @@ declare let gtag: Function;
         <div class="md:w-fit flex justify-between md:block shrink-0">
           <a href="/">
             <img
-              class="h-16 object-contain"
-              src="/assets/LOGO_TJ_Datenrettung.webp"
+              class="h-20 object-contain"
+              src="/assets/brand black thick(1).svg"
             />
           </a>
           <button
@@ -59,7 +59,7 @@ declare let gtag: Function;
         </div>
 
         <div
-          class="flex flex-1 md:flex-row py-4 text-center md:space-y-0 space-y-4 space-x-8 xl:justify-end justify-center xl:space-x-12"
+          class="flex flex-1 md:flex-row py-6 text-center md:space-y-0 space-y-4 space-x-8 xl:justify-end justify-center xl:space-x-12"
           [ngClass]="
             mobileNavShow ? 'flex flex-col space-x-0' : 'hidden md:flex'
           "
