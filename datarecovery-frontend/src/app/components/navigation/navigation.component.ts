@@ -199,7 +199,7 @@ declare let gtag: Function;
   <img class="h-28 md:h-32 pb-2" src="assets/Profil.jpg">
   </div>
             <span class="font-semibold pb-2">Haben Sie Fragen? </span>
-            <p>Ein Anruf klärt es am besten:</p>
+            <p>Ein Anruf klärt es am einfachsten:</p>
           </h2>
           <button (click)="showPhone = false">
             <img alt="close" class="inline" src="assets/x.svg" />
