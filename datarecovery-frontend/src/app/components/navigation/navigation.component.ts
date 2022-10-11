@@ -196,10 +196,10 @@ declare let gtag: Function;
         <div class="flex justify-around items-center text-base md:text-lg pb-4">
           <h2>
           <div class="flex justify-center">
-  <img class="h-28 md:h-36 pb-2" src="assets/Profil.PNG">
+  <img class="h-28 md:h-32 pb-2" src="assets/Profil.jpg">
   </div>
             <span class="font-semibold pb-2">Haben Sie Fragen? </span>
-            <p>Ein Anruf klärt es am einfachsten:</p>
+            <p>Gerne können Sie diese per Telefon stellen:</p>
           </h2>
           <button (click)="showPhone = false">
             <img alt="close" class="inline" src="assets/x.svg" />
