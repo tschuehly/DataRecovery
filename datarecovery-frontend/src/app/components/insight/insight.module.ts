@@ -8,6 +8,9 @@ import { SsdComponent } from './ssd/ssd.component';
 import { FlashComponent } from './flash/flash.component';
 import { RaidComponent } from './raid/raid.component';
 import { AboutComponent } from './about/about.component';
+import { UsbComponent } from './usb/usb.component';
+import { SdComponent } from './sd/sd.component';
+import { SmartphoneComponent } from './smartphone/smartphone.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { AboutComponent } from './about/about.component';
     SsdComponent,
     FlashComponent,
     RaidComponent,
-    AboutComponent
+    AboutComponent,
+    UsbComponent,
+    SdComponent,
+    SmartphoneComponent
   ],
   imports: [CommonModule, InsightRoutingModule],
   providers: []
