@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
       <h2
         class="pt-10 py-4 text-2xl md:text-3xl tracking-wider text-center text-gray-50"
       >
-      <a class="underline" href="preise">Festpreis auch für komplexe Fälle</a>:
+      <a class="underline" href="preise">Ein Preis für alle Schäden</a>:
       </h2>
 
       <div
@@ -184,8 +184,9 @@ import { Component } from '@angular/core';
           <div
             class="flex flex-col justify-between p-4 text-black md:flex-row bg-silver rounded-b-2xl"
           >
-            <div class="justify-center text-base md:text-lg">
-<p>¹Alle angegebenen Festpreise sind bereits inklusive 19% Mehrwertsteuer.</p></div>
+<div class="justify-start text-base md:text-lg">
+¹Alle angegebenen Festpreise sind bereits inklusive 19% Mehrwertsteuer
+<td>+ Kosten entstehen nur bei Erfolg.</td></div>
             <td class="flex justify-end pt-4">
               <button
                 class="px-4 py-2 text-lg md:text-xl text-white rounded shadow bg-gray-main"
