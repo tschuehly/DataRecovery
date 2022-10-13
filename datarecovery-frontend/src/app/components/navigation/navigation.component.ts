@@ -127,13 +127,7 @@ declare let gtag: Function;
                 (click)="mobileNavShow = false"
                 routerLink="/datenrettung/usb"
                 href="/datenrettung/usb"
-                >USB Stick</a
-              >
-              <a
-                (click)="mobileNavShow = false"
-                routerLink="/datenrettung/smartphone"
-                href="/datenrettung/smartphone"
-                >Smartphone</a
+                >USB-Stick</a
               >
               <a
                 (click)="mobileNavShow = false"
