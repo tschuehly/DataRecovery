@@ -18,18 +18,18 @@ import { ScrollService } from 'src/app/services/scroll.service';
   </div>
   <div class="bg-white text-center">
     <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">
-      SD-Karte Datenrettung & USB-Stick Datenrettung
+      USB-Stick Datenrettung
     </h1>
   </div>
   <div class="bg-gray-main text-white border-b-2 border-silver pb-8">
     <div class="container py-8 px-3">
       <span class=" text-xl md:text-2xl font-bold py-6"
-        >Datenrettung für USB-Stick und (micro) SD-Karte</span>
+        >Datenrettung für USB-Sticks</span>
       <pre
         class="whitespace-pre-wrap py-2"
       ><span class="text-bold text-sm md:text-lg text-silver">Updated am 03.12.2021, 17:59 von Tobias Jungbauer</span></pre>
       <pre class="whitespace-pre-wrap text-sm md:text-xl py-8 py-8">
-<span class="font-semibold text-base md:text-xl">Datenrettung für USB-Sticks und (micro) SD-Karten:</span>
+<span class="font-semibold text-base md:text-xl">Datenrettung für USB-Sticks:</span>
 - die z.B. überhaupt nicht mehr erkannt werden
 - oder sich anderweitig nicht auslesen lassen
 - bei denen Windows Sie beim Anstecken auffordert zu formatieren
@@ -43,9 +43,9 @@ Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anruf
 <img class="h-96 object-cover" src="assets/mSD-Bild.png">
 <img class="h-96 object-cover" src="assets/flash_arbeitsweise2.png.jpg">
 </div>
-Bei Speichern mit PCB (z.B. USB-Stick) kann hier der NAND-Chip einfach heruntergenommen und ausgelesen werden. 
+Bei Speichern mit PCB kann hier der NAND-Chip einfach heruntergenommen und ausgelesen werden. 
 
-Bei Monolithspeicher (z.B. micro SD-Karten) setzt man stattdessen auf der Oberfläche auf der eigenen Oberfläche an und liest über die eigenen Leiterbahnen des Speichers den internen NAND-Chip aus.
+Bei Monolithspeicher (wie auch micro SD-Karten) setzt man stattdessen auf der Oberfläche auf der eigenen Oberfläche an und liest über die eigenen Leiterbahnen des Speichers den internen NAND-Chip aus.
 
 <div class="flex grid-cols-2 flex-wrap gap-4">
   <img class="h-96 object-cover" src="assets/header_main/header_(5).webp">
@@ -65,10 +65,10 @@ Nach einigen Anpassungen wird am Ende ein Image erzeugt, sodass Ihre Dateien bes
 Folgende Chips werden zum Auslesen unterstützt: TSOP-48, BGA-152 und LGA/TLGA-52/60, welche die üblichen Formate für beispielsweise USB-Sticks oder SD-Karten darstellen, wie weitere 112 verschiedene Monolitharten.
 
 Festpreise nach Gesamtkapazität und nur nach Erfolg:
-Defekte (micro) SD-Karte oder USB-Stick bis 32GB Datenträgerkapazität: 75,00 €*
-Defekte (micro) SD-Karte oder USB-Stick bis 64GB Datenträgerkapazität: 99,00 €*
-Defekte (micro) SD-Karte oder USB-Stick bis 128GB Datenträgerkapazität: 199,00 €*
-Defekte (micro) SD-Karte oder USB-Stick bis 256GB Datenträgerkapazität: 399,00 €*
+Defekte (micro) SD-Karte oder USB-Stick bis 32GB Datenträgerkapazität: 99,00 €*
+Defekte (micro) SD-Karte oder USB-Stick bis 64GB Datenträgerkapazität: 149,00 €*
+Defekte (micro) SD-Karte oder USB-Stick bis 128GB Datenträgerkapazität: 249,00 €*
+Defekte (micro) SD-Karte oder USB-Stick bis 256GB Datenträgerkapazität: 449,00 €*
 *bereits inkl. 19% Mehrwertsteuer
 
 <h2 class="underline text-xl md:text-2xl font-bold my-6">Verwendete Hard- Und Software</h2><pre class="whitespace-pre-wrap py-8 text-sm md:text-xl overflow-hidden">Der PC-3000 Flash ist ein Hardware-Software-Lösung zur Wiederherstellung von Daten von NAND-basierten Geräten in solchen Fällen, in denen kein Zugriff über die zugewiesene Laufwerksschnittstelle mehr möglich ist.
