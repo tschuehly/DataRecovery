@@ -57,7 +57,7 @@ Haar ~70µm
 
 Jede Veruneinigung beschädigt daher potenziell Oberfläche und Leseköpfe.
 
-<span class="underline">- Arbeiten an der ServiceArea bzw. Systemfiles und BOOT-ROM:</span>
+<span class="underline">- Arbeiten an der ServiceArea bzw. Systemfiles und Boot-ROM:</span>
 
 <div class="flex grid-cols-3 flex-wrap gap-4">
   <img class="h-80 object-cover object-left" src="assets/articles/sa-1.jpg">
@@ -84,8 +84,8 @@ Auch nutzt man diese Technik, wenn der Motor getauscht werden muss.
   <img class="h-80 object-cover object-center" src="assets/HDD_arbeitsweise_PCB2.jpg">
   <img class="h-80 object-cover object-center" src="assets/HDD_arbeitsweise_PCB1.jpg">
 </div>
-Bei modernen Festplatten muss für ein Austausch in der Regel immer die originale BOOT-ROM auf das neue PCB übertragen werden.
-Grund dafür sind viele verschiedene FW Versionen und festplattenspezifische (adaptive) Module innerhalb der BOOT-ROM.
+Bei modernen Festplatten muss für ein Austausch in der Regel immer die originale Boot-ROM auf das neue PCB übertragen werden.
+Grund dafür sind viele verschiedene FW Versionen und festplattenspezifische (adaptive) Module innerhalb der Boot-ROM.
 Bei einigen Festplattenmodellen wird die ServiceArea mit einer Verschlüsselung (z.B. SED bei WD) gesichert.
 Um hier dennoch die nötigen Arbeiten durchführen zu können gibt es spezielle "unlocked PCBs".
 

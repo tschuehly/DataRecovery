@@ -71,11 +71,6 @@ declare let gtag: Function;
           href="/"
           >Startseite</a
         >
-        <button
-            class="cursor-pointer font-medium"
-            (click)="scrollToOrder(); mobileNavShow = false"
-            >Auftrag</button
-          >
           <a
           class="cursor-pointer font-medium"
           (click)="mobileNavShow = false"
@@ -83,6 +78,11 @@ declare let gtag: Function;
           href="preise"
           >Preise</a
         >
+        <button
+            class="cursor-pointer font-medium"
+            (click)="scrollToOrder(); mobileNavShow = false"
+            >Auftrag</button
+          >
           <div
             class="h-full text-left flex self-center"
             (clickOutside)="dropdownShow = false"
@@ -149,20 +149,18 @@ declare let gtag: Function;
               >
             </div>
           </div>
-
           <a
-            class="cursor-pointer font-medium"
-            (click)="mobileNavShow = false"
-            routerLink="blog"
-            href="blog"
-            >Blog</a
-          >
-
+          class="cursor-pointer font-medium"
+          (click)="mobileNavShow = false"
+          routerLink="/datenrettung/philosophie"
+          href="/datenrettung/philosophie"
+          >Philosophie </a
+        >
           <button
-            (click)="mobileNavShow = false; scrollToContact()"
-            class="cursor-pointer font-medium"
-            >Kontakt</button
-          >
+          (click)="mobileNavShow = false; scrollToContact()"
+          class="cursor-pointer font-medium"
+          >Kontakt</button
+        >
         </div>
       </nav>
       <div *ngIf="currentUser" class="bg-neutral-700 text-white flex justify-around py-4">
@@ -350,6 +348,8 @@ declare let gtag: Function;
               >Datenschutz</a
             ><a routerLink="/rechtliches/agb" class="px-4 text-base md:text-xl"
               >AGB</a>
+              <a routerLink="/blog" class="px-4 text-base md:text-xl"
+              >Blog</a>
           </div>
           <div
             class="col-span-2 pt-5 text-base md:text-lg divide-x-2 divide-silver"
