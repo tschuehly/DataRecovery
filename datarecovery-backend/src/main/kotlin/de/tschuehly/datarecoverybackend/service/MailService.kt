@@ -1,6 +1,7 @@
 package de.tschuehly.datarecoverybackend.service
 
 import de.tschuehly.datarecoverybackend.model.Order
+import de.tschuehly.datarecoverybackend.model.Update
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.core.io.ResourceLoader
 import org.springframework.mail.javamail.JavaMailSender
@@ -28,11 +29,11 @@ class MailService(
         return Pair(msg, helper)
     }
 
-    fun getHtmlEmail(body: String, orderDate: Date?): String {
+    fun getHtmlEmail(body: String, orderDate: Date?, id: Long?): String {
         var html = resourceLoader.getResource("classpath:templates/emailtemplate.html").file
             .readText(charset = Charsets.UTF_8)
         html = html.replace("MESSAGEBODY", body)
-        html = html.replace("MESSAGETITLE", "Ihr Auftrag vom ${SimpleDateFormat("dd.MM.yyyy").format(orderDate)}")
+        html = html.replace("MESSAGETITLE", "Ihr Auftrag ID: $id vom ${SimpleDateFormat("dd.MM.yyyy").format(orderDate)}")
         return html
     }
 
@@ -43,10 +44,10 @@ class MailService(
         // language=HTML
         val statusString = """
             <h2 style="Margin-top: 0;Margin-bottom: 0;font-style: normal;font-weight: bold;color: #2e2e2e;font-size: 18px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;">
-            Der Status Ihres Auftrages wurde geändert zu: <br/><br/>
+            Der Status Ihres Auftrages: ${order.id} wurde geändert zu: <br/><br/>
             </h2>"""
         val body = statusString + content + getTrackingFooter(order)
-        val email = getHtmlEmail(body, order.orderDate)
+        val email = getHtmlEmail(body, order.orderDate, order.id)
         helper.setText(email, true)
         javaMailSender.send(msg)
     }
@@ -54,10 +55,32 @@ class MailService(
     fun sendOrderConfirmation(order: Order) { // TODO: Error Handling
         val (msg, helper) = getMimeMessageAndHelper(order)
         helper.setSubject("Ihr Auftrag zur Datenrettung | Tobias Jungbauer Datenrettung")
-        val email = getHtmlEmail(getOrderConfirmationBody(order), order.orderDate)
+        val email = getHtmlEmail(getOrderConfirmationBody(order), order.orderDate, order.id)
         helper.setText(email, true)
         javaMailSender.send(msg)
         helper.setTo("ammersee.datenrettung@gmail.com")
+        javaMailSender.send(msg)
+    }
+
+    fun sendManualUpdate(order: Order, update: Update){
+        val picturesAvailable = "<br/> Es wurden Bilder hochgeladen die sie im aktuellen Status anschauen können".takeIf { update.pictures?.isNotEmpty() == true } ?: ""
+
+        val (msg, helper) = getMimeMessageAndHelper(order)
+
+        helper.setSubject("Neues Update | Tobias Jungbauer Datenrettung")
+        // language=HTML
+        val statusString = """
+            <h2 style="Margin-top: 0;Margin-bottom: 0;font-style: normal;font-weight: bold;color: #2e2e2e;font-size: 18px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;">
+            Es wurde ein neues Update  hinzugefügt <br/><br/>
+            </h2>"""
+        val body = statusString + """
+                <h3 style="Margin-top: 0;Margin-bottom: 0;font-style: normal;font-weight: normal;color: #2e2e2e;font-size: 16px;line-height: 26px;font-family: Cabin,Avenir,sans-serif;">
+                        ${update.description}
+                        $picturesAvailable
+                </h3>
+            """ + getTrackingFooter(order)
+        val email = getHtmlEmail(body, order.orderDate,order.id)
+        helper.setText(email, true)
         javaMailSender.send(msg)
     }
 
@@ -246,7 +269,7 @@ class MailService(
                 Wir haben Ihren Datenträger noch nicht erhalten. Bitte antworten Sie hierauf, falls Sie noch offene Fragen haben oder den Speicher bereits versendet haben.
             </h2>"""
         val body = statusString + getTrackingFooter(order)
-        val email = getHtmlEmail(body, order.orderDate)
+        val email = getHtmlEmail(body, order.orderDate, order.id)
         helper.setText(email, true)
         javaMailSender.send(msg)
     }
@@ -275,7 +298,7 @@ class MailService(
             
             Achtung: Die bisher noch gesicherten Daten Ihres geretteten Speichers werden in 7-Tagen restlos von meinen Rechnern entfernt. Bitte melden Sie sich, falls Sie Ihre Daten noch nicht erhalten haben sollten.<br><br></p>
             """
-        val email = getHtmlEmail(body, order.orderDate)
+        val email = getHtmlEmail(body, order.orderDate, order.id)
         helper.setText(email, true)
         javaMailSender.send(msg)
     }

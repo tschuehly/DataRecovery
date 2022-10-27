@@ -89,6 +89,7 @@ class OrderService(
         }
         order.addUpdateToOrder(update)
         orderRepository.save(order)
+        mailService.sendManualUpdate(order,update)
         return order
     }
 

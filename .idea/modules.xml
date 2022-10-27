@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/DataRecovery.iml" filepath="$PROJECT_DIR$/.idea/DataRecovery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/datarecovery-frontend/datarecovery-frontend.iml" filepath="$PROJECT_DIR$/datarecovery-frontend/datarecovery-frontend.iml" />
     </modules>
   </component>
 </project>
