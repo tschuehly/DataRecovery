@@ -79,10 +79,13 @@ Abgesehen davon biete ich auch das Beseitigen von Hardwareschäden seitens der a
 Leider werden im Moment bei mir nur SATA basierte SSD-Festplatten unterstützt. Defekte M.2 SSDs daher nur, wenn diese nicht auf PCIe (NVMe), sondern ebenfalls auf das SATA Protokoll basieren.
 
 Festpreisliste nach von Ihnen definierten Erfolg:
-Defekte SSD-Festplatte bis 512GB Festplattenkapazität: 249,00 €*
-Defekte SSD-Festplatte bis 1TB Festplattenkapazität: 299,00 €*
-Defekte SSD-Festplatte bis 2TB Festplattenkapazität: 349,00 €*
-Defekte SSD-Festplatte bis 4TB Festplattenkapazität: 449,00 €*
+SSD-Speicher (E = "einfach", z.B. Sektorfehler, Bitlocker, beschädigtes Dateisystem):
+(E) SSD-Speicher für alle Speichergrößen: 149,00 €
+SSD-Speicher (S = "schwierig", für Hardwareschäden):
+(S) SSD-Speicher bis 512GB Speichergröße: 249,00 €
+(S) SSD-Speicher 1TB Speichergröße: 299,00 €
+(S) SSD-Speicher 2TB Speichergröße: 349,00 €
+(S) SSD-Speicher 4TB Speichergröße: 449,00 €
 *bereits inkl. 19% Mehrwertsteuer
 
 Falls noch Fragen offen sind rufen Sie am besten unter 0841 12840705 an oder schreiben eine Email an: info@jungbauerdatenrettung.de

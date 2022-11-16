@@ -117,12 +117,14 @@ Dieser besitzt einen Abscheidegrad von 99,995%. Das bedeutet, dass der Filter be
 ❸ Beschädigte Oberflächen
 
 Festpreisliste nach von Ihnen definierten Erfolg:
-Defekte HDD-Festplatte bis 1TB Festplattenkapazität: 299,00 €*
-Defekte HDD-Festplatte bis 2TB Festplattenkapazität: 349,00 €*
-Defekte HDD-Festplatte bis 4TB Festplattenkapazität: 449,00 €*
-Defekte HDD-Festplatte bis 6TB Festplattenkapazität: 549,00 €*
-*Festpreise und bereits inkl. 19% Mehrwertsteuer. Festpreise entfallen bei selbstgeöffnete/verunreinigten HDD Festplatten. 
-Fragen Sie hier bitte gesondert nach den entsprechenden Konditionen.
+HDD-Festplatte (E = "einfach" -> ohne Reinraum, z.B. Sektorfehler, Firmwarebug, defektes PCB):
+(E) HDD-Festplatte für alle Speichergrößen: 249,00 €
+HDD-Festplatte (S = "schwierig" -> im Reinraum, z.B. beschädigte Schreib-/Leseköpfe):
+(S) HDD-Festplatte bis 1TB Speichergröße: 349,00 €
+(S) HDD-Festplatte 2TB Speichergröße: 399,00 €
+(S) HDD-Festplatte 4TB Speichergröße: 499,00 €
+(S) HDD-Festplatte 6TB Speichergröße: 599,00 €
+*Festpreise und bereits inkl. 19% Mehrwertsteuer.
 
         <h2 class="text-base md:text-xl underline font-bold my-6">Verwendete Hard- Und Software</h2><pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
 Das PC-3000 UDMA ist eine Hardware-Software-Lösung zur Diagnose und Reparatur von Festplatten auf Basis von SATA- (Serial ATA) und ATA- (IDE) Schnittstellen für zahlreiche Hersteller (Seagate, Western Digital, Fujitsu, Samsung, Maxtor, Quantum, IBM (HGST) ), HITACHI, TOSHIBA), für verschiedene Kapazitäten (von 500 MB bis 8 TB) und verschiedene Formfaktoren: 3,5 "- Desktop-Laufwerke, 2,5" - und 1,8 "- Laptop-Laufwerke.
