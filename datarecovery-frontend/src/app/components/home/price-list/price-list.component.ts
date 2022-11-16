@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
       <h2
         class="pt-10 py-4 text-2xl md:text-3xl tracking-wider text-center text-gray-50"
       >
-      <a class="underline" href="preise">Festpreise für Hardwareschäden</a>:
+      <a class="underline" href="preise">Festpreise für schwerwiegende Hardwareschäden</a>:
       </h2>
 
       <div
@@ -99,10 +99,10 @@ import { Component } from '@angular/core';
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
               <div class="pb-2">Festpreis¹ </div>
-                <div>299,00 €</div>
                 <div>349,00 €</div>
-                <div>449,00 €</div>
-                <div>549,00 €</div>
+                <div>399,00 €</div>
+                <div>499,00 €</div>
+                <div>599,00 €</div>
               </div>
             </div>
             <div class="grid grid-cols-2 py-4">
@@ -118,10 +118,10 @@ import { Component } from '@angular/core';
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
               <div class="pb-2">Festpreis¹</div>
-              <div>199,00 €</div>
               <div>249,00 €</div>
               <div>299,00 €</div>
-              <div>399,00 €</div>
+              <div>349,00 €</div>
+              <div>449,00 €</div>
               </div>
             </div>
 
