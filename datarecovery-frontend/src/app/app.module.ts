@@ -11,7 +11,6 @@ import { ClickOutsideModule } from 'ng-click-outside';
 import { PricesComponent } from './components/prices/prices.component';
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
-import { AboutComponent } from './components/insight/about/about.component';
 import {
   NgcCookieConsentConfig,
   NgcCookieConsentModule,
@@ -54,7 +53,7 @@ const cookieConfig: NgcCookieConsentConfig = {
   },
   type: 'opt-in',
   content: {
-    message: 
+    message:
       '<div class="text-sm md:text-lg">Um die Webseite optimal zu gestalten und fortlaufend verbessern zu können verwenden wir Cookies.</div>',
     dismiss: 'Got it!',
     deny: 'Cookies verbieten',

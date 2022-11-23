@@ -23,7 +23,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
         <div class="bg-white text-center">
           <h1 class="text-2xl md:text-4xl  text-black py-5 tracking-wider">Blogübersicht</h1>
         </div>
-        
+
         <div class="bg-gray-main bg-circuit-board space-y-4 p-6">
         <div class="bg-white max-w-4xl mx-auto rounded-2xl">
             <div
@@ -65,8 +65,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
             <div class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
             >
               <a
-                routerLink="/blog/datenrettung-kosten"
-                href="/blog/datenrettung-kosten"
+                routerLink="/datenrettung/preise"
+                href="/datenrettung/preise"
               >
                 <div
                   class="h-40 flex-shrink-0 w-80  my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
@@ -76,8 +76,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
               <div class="flex-1">
                 <a
-                  routerLink="/blog/datenrettung-kosten"
-                  href="/blog/datenrettung-kosten"
+                  routerLink="/datenrettung/preise"
+                  href="/datenrettung/preise"
                   class="py-2"
                 >
                   <h2 class="text-2xl font-bold">Datenrettung Kosten</h2>
@@ -90,8 +90,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                     Wie kommen die Preise zustande? Details zu Kosten aus...
                   </h3>
                   <a
-                    routerLink="/blog/datenrettung-kosten"
-                    href="/blog/datenrettung-kosten"
+                    routerLink="/datenrettung/preise"
+                    href="/datenrettung/preise"
                     class="font-semibold"
                   >
                     Mehr lesen →
@@ -112,8 +112,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
               ></div>
               <div class="flex-1">
                 <a
-                  routerLink="/blog/apple-fusion-drive-datenrettung"
-                  href="/blog/apple-fusion-drive-datenrettung"
+                  routerLink="/datenrettung/apple-fusion-drive-datenrettung"
+                  href="/datenrettung/apple-fusion-drive-datenrettung"
                   class="py-2"
                 >
                   <h2 class="text-2xl font-bold">
@@ -128,8 +128,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                     Wie werden Daten von einem Apple Fusion Drive gerettet?...
                   </h3>
                   <a
-                    routerLink="/blog/apple-fusion-drive-datenrettung"
-                    href="/blog/apple-fusion-drive-datenrettung"
+                    routerLink="/datenrettung/apple-fusion-drive-datenrettung"
+                    href="/datenrettung/apple-fusion-drive-datenrettung"
                     class="font-semibold"
                   >
                     Mehr lesen →
@@ -151,8 +151,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
               ></div>
               <div class="flex-1">
                 <a
-                  routerLink="/blog/ablauf-der-datenrettung-anhand-eines-beispiels"
-                  href="/blog/ablauf-der-datenrettung-anhand-eines-beispiels"
+                  routerLink="/datenrettung/ablauf-der-datenrettung-anhand-eines-beispiels"
+                  href="/datenrettung/ablauf-der-datenrettung-anhand-eines-beispiels"
                   class="py-2"
                 >
                   <h2 class="text-2xl font-bold">Ablauf der Datenrettung</h2>
@@ -165,8 +165,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                     Wie läuft ein Auftrag bei Tobias Jungbauer Datenrettung ab?
                   </h3>
                   <a
-                    routerLink="/blog/ablauf-der-datenrettung-anhand-eines-beispiels"
-                    href="/blog/ablauf-der-datenrettung-anhand-eines-beispiels"
+                    routerLink="/datenrettung/ablauf-der-datenrettung-anhand-eines-beispiels"
+                    href="/datenrettung/ablauf-der-datenrettung-anhand-eines-beispiels"
                     class="font-semibold"
                   >
                     Mehr lesen →
@@ -186,8 +186,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
               ></div>
               <div class="flex-1">
                 <a
-                  routerLink="/blog/apple-ssd-datenrettung"
-                  href="/blog/apple-ssd-datenrettung"
+                  routerLink="/datenrettung/apple-ssd-datenrettung"
+                  href="/datenrettung/apple-ssd-datenrettung"
                   class="py-2"
                 >
                   <h2 class="text-2xl font-bold">Apple SSD Datenrettung</h2>
@@ -200,8 +200,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                     Wie werden Daten von einem Apple SSD-Speicher gerettet?
                   </h3>
                   <a
-                    routerLink="/blog/apple-ssd-datenrettung"
-                    href="/blog/apple-ssd-datenrettung"
+                    routerLink="/datenrettung/apple-ssd-datenrettung"
+                    href="/datenrettung/apple-ssd-datenrettung"
                     class="font-semibold"
                   >
                     Mehr lesen →
@@ -221,8 +221,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
               ></div>
               <div class="flex-1">
                 <a
-                  routerLink="/blog/datenrettung-pc-3000-flash"
-                  href="/blog/datenrettung-pc-3000-flash"
+                  routerLink="/datenrettung/pc-3000-flash"
+                  href="/datenrettung/pc-3000-flash"
                   class="py-2"
                 >
                   <h2 class="text-2xl font-bold">PC-3000-Flash</h2>
@@ -233,8 +233,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                 <div class="space-y-4">
                   <h3 class="pb-2">Wie funktioniert das PC-3000 Flash?</h3>
                   <a
-                    routerLink="/blog/datenrettung-pc-3000-flash"
-                    href="/blog/datenrettung-pc-3000-flash"
+                    routerLink="/datenrettung/pc-3000-flash"
+                    href="/datenrettung/pc-3000-flash"
                     class="font-semibold"
                   >
                     Mehr lesen →
@@ -254,8 +254,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
               ></div>
               <div class="flex-1">
                 <a
-                  routerLink="/blog/datenrettung-pc-3000-udma"
-                  href="/blog/datenrettung-pc-3000-udma"
+                  routerLink="/datenrettung/pc-3000-udma"
+                  href="/datenrettung/pc-3000-udma"
                   class="py-2"
                 >
                   <h2 class="text-2xl font-bold">PC-3000 UDMA</h2>
@@ -266,8 +266,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                 <div class="space-y-4">
                   <h3 class="pb-2">Wie funktioniert das PC-3000 UDMA?</h3>
                   <a
-                    routerLink="/blog/datenrettung-pc-3000-udma"
-                    href="/blog/datenrettung-pc-3000-udma"
+                    routerLink="/datenrettung/pc-3000-udma"
+                    href="/datenrettung/pc-3000-udma"
                     class="font-semibold"
                   >
                     Mehr lesen →
@@ -287,8 +287,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
               ></div>
               <div class="flex-1">
                 <a
-                  routerLink="/blog/gebrochene-micro-sd-karte"
-                  href="/blog/gebrochene-micro-sd-karte"
+                  routerLink="/datenrettung/gebrochene-micro-sd-karte"
+                  href="/datenrettung/gebrochene-micro-sd-karte"
                   class="py-2"
                 >
                   <h2 class="text-2xl font-bold">
@@ -303,8 +303,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                     Wie werden Daten von gebrochenen micro SD-Karten gerettet?
                   </h3>
                   <a
-                    routerLink="/blog/gebrochene-micro-sd-karte"
-                    href="/blog/gebrochene-micro-sd-karte"
+                    routerLink="/datenrettung/gebrochene-micro-sd-karte"
+                    href="/datenrettung/gebrochene-micro-sd-karte"
                     class="font-semibold"
                   >
                     Mehr lesen →
@@ -324,8 +324,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
               ></div>
               <div class="flex-1">
                 <a
-                  routerLink="/blog/synology-raid-1-datenrettung"
-                  href="/blog/synology-raid-1-datenrettung"
+                  routerLink="/datenrettung/synology-raid-1-datenrettung"
+                  href="/datenrettung/synology-raid-1-datenrettung"
                   class="py-2"
                 >
                   <h2 class="text-2xl font-bold">
@@ -341,8 +341,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                     Sie überhaupt benötigt?
                   </h3>
                   <a
-                    routerLink="/blog/synology-raid-1-datenrettung"
-                    href="/blog/synology-raid-1-datenrettung"
+                    routerLink="/datenrettung/synology-raid-1-datenrettung"
+                    href="/datenrettung/synology-raid-1-datenrettung"
                     class="font-semibold"
                   >
                     Mehr lesen →
@@ -362,8 +362,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
               ></div>
               <div class="flex-1">
                 <a
-                  routerLink="/blog/qnap-raid-1-datenrettung"
-                  href="/blog/qnap-raid-1-datenrettung"
+                  routerLink="/datenrettung/qnap-raid-1-datenrettung"
+                  href="/datenrettung/qnap-raid-1-datenrettung"
                   class="py-2"
                 >
                   <h2 class="text-2xl font-bold">QNAP RAID 1 Datenrettung</h2>
@@ -377,43 +377,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                     Sie überhaupt benötigt?
                   </h3>
                   <a
-                    routerLink="/blog/qnap-raid-1-datenrettung"
-                    href="/blog/qnap-raid-1-datenrettung"
-                    class="font-semibold"
-                  >
-                    Mehr lesen →
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="bg-white max-w-4xl mx-auto rounded-2xl">
-            <div
-              class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
-            >
-              <div
-                class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                style="background-image: url('/assets/favicon/fav.PNG')"
-              ></div>
-              <div class="flex-1">
-                <a
-                  routerLink="/blog/externe-festplatte-wird-nicht-erkannt"
-                  href="/blog/externe-festplatte-wird-nicht-erkannt"
-                  class="py-2"
-                >
-                  <h2 class="text-2xl font-bold">Externe HDD wird nicht erkannt (z.B. WD Portable, Toshiba Canvio oder Seagate Expansion)</h2>
-                </a>
-                <div class="py-2 italic text-sm md:text-lg">
-                  Updated am 30.04.2022, 07:23 von Tobias Jungbauer
-                </div>
-                <div class="space-y-4">
-                  <h3 class="pb-2">
-                    Wie funktioniert die Datenrettung bei externen Festplatten, die z.B. auch nicht mehr im BIOS erkannt werden?
-                  </h3>
-                  <a
-                    routerLink="/blog/qnap-raid-1-datenrettung"
-                    href="/blog/qnap-raid-1-datenrettung"
+                    routerLink="/datenrettung/qnap-raid-1-datenrettung"
+                    href="/datenrettung/qnap-raid-1-datenrettung"
                     class="font-semibold"
                   >
                     Mehr lesen →
@@ -433,8 +398,43 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
               ></div>
               <div class="flex-1">
                 <a
-                  routerLink="/blog/sonnet-raid-5-datenrettung"
-                  href="/blog/sonnet-raid-5-datenrettung"
+                  routerLink="/datenrettung/externe-festplatte-wird-nicht-erkannt"
+                  href="/datenrettung/externe-festplatte-wird-nicht-erkannt"
+                  class="py-2"
+                >
+                  <h2 class="text-2xl font-bold">Externe HDD wird nicht erkannt (z.B. WD Portable, Toshiba Canvio oder Seagate Expansion)</h2>
+                </a>
+                <div class="py-2 italic text-sm md:text-lg">
+                  Updated am 30.04.2022, 07:23 von Tobias Jungbauer
+                </div>
+                <div class="space-y-4">
+                  <h3 class="pb-2">
+                    Wie funktioniert die Datenrettung bei externen Festplatten, die z.B. auch nicht mehr im BIOS erkannt werden?
+                  </h3>
+                  <a
+                    routerLink="/datenrettung/qnap-raid-1-datenrettung"
+                    href="/datenrettung/qnap-raid-1-datenrettung"
+                    class="font-semibold"
+                  >
+                    Mehr lesen →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white max-w-4xl mx-auto rounded-2xl">
+            <div
+              class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
+            >
+              <div
+                class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
+                style="background-image: url('/assets/favicon/fav.PNG')"
+              ></div>
+              <div class="flex-1">
+                <a
+                  routerLink="/datenrettung/sonnet-raid-5-datenrettung"
+                  href="/datenrettung/sonnet-raid-5-datenrettung"
                   class="py-2"
                 >
                   <h2 class="text-2xl font-bold">
@@ -450,8 +450,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                     Teilnehmern +?
                   </h3>
                   <a
-                    routerLink="/blog/sonnet-raid-5-datenrettung"
-                    href="/blog/sonnet-raid-5-datenrettung"
+                    routerLink="/datenrettung/sonnet-raid-5-datenrettung"
+                    href="/datenrettung/sonnet-raid-5-datenrettung"
                     class="font-semibold"
                   >
                     Mehr lesen →
@@ -471,8 +471,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
             ></div>
             <div class="flex-1">
               <a
-                routerLink="/blog/datenrettung-hdd-bei-verkratzer-oberfläche"
-                href="/blog/datenrettung-hdd-bei-verkratzer-oberfläche"
+                routerLink="/datenrettung/datenrettung-hdd-bei-verkratzer-oberfläche"
+                href="/datenrettung/datenrettung-hdd-bei-verkratzer-oberfläche"
                 class="py-2"
               >
                 <h2 class="text-2xl font-bold">Datenrettung 2.5“ WD-Festplatte bei verkratzter Oberfläche</h2>
@@ -485,8 +485,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                   Wie funktioniert die Datenrettung bei einer verkratzen HDD Festplatte? Ist es wirklich aussichtslos?
                 </h3>
                 <a
-                  routerLink="/blog/datenrettung-hdd-bei-verkratzer-oberfläche"
-                  href="/blog/datenrettung-hdd-bei-verkratzer-oberfläche"
+                  routerLink="/datenrettung/datenrettung-hdd-bei-verkratzer-oberfläche"
+                  href="/datenrettung/datenrettung-hdd-bei-verkratzer-oberfläche"
                   class="font-semibold"
                 >
                   Mehr lesen →

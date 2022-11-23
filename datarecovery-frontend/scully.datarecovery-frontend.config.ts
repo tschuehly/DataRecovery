@@ -23,12 +23,12 @@ export const config: ScullyConfig = {
         folder: '../datarecovery-backend/src/main/resources/templates/article',
       },
     },
-    '/api/article/datenrettung-kosten': {
+    '/api/article/preise': {
       type: 'default',
       contentType: 'html',
       content: async () => {
         return readFileSync(
-          '../datarecovery-backend/src/main/resources/templates/article/datenrettung-kosten.html'
+          '../datarecovery-backend/src/main/resources/templates/article/preise.html'
         ).toString('utf-8');
       },
     },*/

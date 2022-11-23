@@ -1,11 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { ImprintComponent } from './components/legal/imprint/imprint.component';
 import { PricesComponent } from './components/prices/prices.component';
-import { AgbComponent } from './components/legal/agb/agb.component';
-import { AboutComponent } from './components/insight/about/about.component';
-import { PrivacyComponent } from './components/legal/privacy/privacy.component';
 import { SiteNotFoundComponent } from './components/site-not-found/site-not-found.component';
 
 const routes: Routes = [
@@ -20,16 +16,9 @@ const routes: Routes = [
   { path: 'preise', component: PricesComponent },
   { path: '404', component: SiteNotFoundComponent },
   {
-    path: 'blog',
-    loadChildren: () =>
-      import('./components/blog/blog.module').then((m) => m.BlogModule),
-  },
-  {
     path: 'datenrettung',
     loadChildren: () =>
-      import('./components/insight/insight.module').then(
-        (m) => m.InsightModule
-      ),
+      import('./components/blog/blog.module').then((m) => m.BlogModule),
   },
   {
     path: 'rechtliches',

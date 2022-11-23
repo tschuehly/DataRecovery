@@ -137,8 +137,8 @@ declare let gtag: Function;
               >
               <a
                 (click)="mobileNavShow = false"
-                routerLink="/blog/apple-fusion-drive-datenrettung"
-                href="/blog/apple-fusion-drive-datenrettung"
+                routerLink="/datenrettung/apple-fusion-drive-datenrettung"
+                href="/datenrettung/apple-fusion-drive-datenrettung"
                 >Apple Fusion Drive</a
               >
               <a
@@ -348,7 +348,7 @@ declare let gtag: Function;
               >Datenschutz</a
             ><a routerLink="/rechtliches/agb" class="px-4 text-base md:text-xl"
               >AGB</a>
-              <a routerLink="/blog" class="px-4 text-base md:text-xl"
+              <a routerLink="/datenrettung" class="px-4 text-base md:text-xl"
               >Blog</a>
           </div>
           <div
