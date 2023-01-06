@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import {DomSanitizer, Meta, SafeHtml} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-blog',
@@ -507,6 +507,7 @@ export class BlogComponent implements OnInit {
   article: SafeHtml;
   articleUrl: string;
   constructor(
+    private metaService: Meta,
     private http: HttpClient,
     private route: ActivatedRoute,
     private sanitizer: DomSanitizer
@@ -522,6 +523,10 @@ export class BlogComponent implements OnInit {
             responseType: 'text',
           })
           .subscribe((article) => {
+            if(article.includes("<meta property=\"og:title\"")){
+              this.metaService.removeTag("property='og:title'")
+              this.metaService.updateTag({name:'og:title',content: article.substring(article.indexOf('content="')+9,article.indexOf("\">"))})
+            }
             this.article = this.sanitizer.bypassSecurityTrustHtml(article);
           });
       }

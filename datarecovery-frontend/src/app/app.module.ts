@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import {BrowserModule, Meta} from '@angular/platform-browser';
 import { NgModule, ViewChild } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -85,7 +85,7 @@ const cookieConfig: NgcCookieConsentConfig = {
     HomeModule,
     BrowserAnimationsModule,
   ],
-  providers: [GoogleAnalyticsService],
+  providers: [GoogleAnalyticsService, Meta],
   bootstrap: [AppComponent],
 })
 export class AppModule {

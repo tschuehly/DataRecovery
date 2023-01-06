@@ -82,7 +82,7 @@ import { ReviewDetailDTO } from '../../../model/model';
         >
           <img src="/assets/arrow-left.svg" />
         </button>
-        <div class="px-0 py-4 flex flex-col justify-evenly items-center md:flex-row gap-4">
+        <div class="px-0 py-4 flex flex-col justify-evenly items-center md:flex-row gap-4" *ngIf="this.reviews != undefined">
           <div class="rounded-xl bg-gray-main p-6 mx-6 md:mx-0">
             <div class="flex items-center justify-center">
               <div
@@ -90,7 +90,7 @@ import { ReviewDetailDTO } from '../../../model/model';
                 [ngStyle]="{
                   'background-image':
                     'url(' +
-                    this.reviews[this.reviewIndex].profile_photo_url +
+                        this.reviews[this.reviewIndex].profile_photo_url +
                     ')'
                 }"
               ></div>
@@ -99,7 +99,7 @@ import { ReviewDetailDTO } from '../../../model/model';
                   class="flex flex-wrap sm:space-x-4 items-center px-2 flex-col space-y-2 sm:flex-row justify-center sm:justify-start"
                 >
                   <a
-                    href="{{ this.reviews[this.reviewIndex].author_url }}"
+                    [attr.href]="this.reviews == undefined ? '' : this.reviews[this.reviewIndex].author_url"
                     target="_blank"
                     class="font-bold text-lg underline"
                     >{{ this.reviews[this.reviewIndex].author_name }}
@@ -241,6 +241,7 @@ export class ReviewComponent implements OnInit {
   ngOnInit(): void {
     this.http.get('/api/review').subscribe((reviews: ReviewDTO[]) => {
       this.reviews = reviews.sort((r1, r2) => r2.time - r1.time);
+      console.log(this.reviews)
     });
     this.http.get('/api/review/detail').subscribe((detail: ReviewDetailDTO) => {
       this.reviewDetail = detail;
