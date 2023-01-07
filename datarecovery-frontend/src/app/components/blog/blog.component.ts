@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
-import {DomSanitizer, Meta, SafeHtml} from '@angular/platform-browser';
+import {DomSanitizer, Meta, SafeHtml, Title} from '@angular/platform-browser';
+import {conditionallyCreateMapObjectLiteral} from "@angular/compiler/src/render3/view/util";
 
 @Component({
   selector: 'app-blog',
@@ -508,6 +509,7 @@ export class BlogComponent implements OnInit {
   articleUrl: string;
   constructor(
     private metaService: Meta,
+    private titleService: Title,
     private http: HttpClient,
     private route: ActivatedRoute,
     private sanitizer: DomSanitizer
@@ -522,11 +524,25 @@ export class BlogComponent implements OnInit {
             headers: new HttpHeaders({ 'Content-Type': 'text/plain' }),
             responseType: 'text',
           })
-          .subscribe((article) => {
-            if(article.includes("<meta property=\"og:title\"")){
-              this.metaService.removeTag("property='og:title'")
-              this.metaService.updateTag({name:'og:title',content: article.substring(article.indexOf('content="')+9,article.indexOf("\">"))})
+          .subscribe((article: string) => {
+            const articleHtml = new DOMParser().parseFromString(article, 'text/html')
+
+            const metaElements = articleHtml.querySelectorAll("meta")
+            const title = articleHtml.querySelectorAll("title")[0]
+            if(title != null){
+              this.titleService.setTitle(title.innerText)
             }
+            metaElements.forEach((x: HTMLMetaElement) => {
+              if(x.attributes.getNamedItem("property") != null){
+                const propertyName = x.attributes.getNamedItem("property").value
+                this.metaService.removeTag("property='"+propertyName+"'")
+                this.metaService.updateTag({property:propertyName, content: x.content})
+              }
+              if(x.name){
+                this.metaService.removeTag("name='"+x.name+"'")
+                this.metaService.updateTag({name:x.name,content: x.content})
+              }
+            })
             this.article = this.sanitizer.bypassSecurityTrustHtml(article);
           });
       }

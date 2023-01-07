@@ -241,7 +241,6 @@ export class ReviewComponent implements OnInit {
   ngOnInit(): void {
     this.http.get('/api/review').subscribe((reviews: ReviewDTO[]) => {
       this.reviews = reviews.sort((r1, r2) => r2.time - r1.time);
-      console.log(this.reviews)
     });
     this.http.get('/api/review/detail').subscribe((detail: ReviewDetailDTO) => {
       this.reviewDetail = detail;
