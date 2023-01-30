@@ -54,7 +54,7 @@ import { Component } from '@angular/core';
               <div>99,00 €</div>
               <div>149,00 €</div>
               <div>249,00 €</div>
-              <div>449,00 €</div>
+              <div>349,00 €</div>
             </div>
             </div>
             <div class="flex-1 rounded-tr-2xl">
