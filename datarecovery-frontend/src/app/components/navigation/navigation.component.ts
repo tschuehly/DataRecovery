@@ -211,7 +211,7 @@ declare let gtag: Function;
         </div>
 
         <p class="font-semibold text-base md:text-lg pb-2">
-          <img alt="phone" class="inline pr-4" src="/assets/phone.svg" />0841 12840705
+          <img alt="phone" class="inline pr-4" src="/assets/phone.svg" /><a href="0841 12840705">0-841-12840705</a>
         </p>
 
         <p class="text-base md:text-lg">Mo.-Sa. 10:00-20:00 Uhr erreichbar.</p>
@@ -316,9 +316,9 @@ declare let gtag: Function;
                   ></a
                 ><br />
 
-                Telefon: <span class="text-white">0841 12840705</span><br />
+                Telefon: <span class="text-white"><a href="0841 12840705">0-841-12840705</a></span><br />
 
-                Mobil: <span class="text-white">0151 61408355</span>
+                Mobil: <span class="text-white"><a href="0151 61408355">0-151-61408355</a></span>
               </p>
             </div>
 
