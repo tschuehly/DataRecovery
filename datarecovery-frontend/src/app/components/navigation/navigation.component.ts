@@ -266,7 +266,7 @@ declare let gtag: Function;
           />
         </div>
         <div class="bg-white flex justify-center p-2 rounded-b-xl">
-          <a href="https://wa.me/+4915161408355" target="blank">
+          <a href="https://wa.me/+4915161408355" target="_blank">
             <button
               class="flex align-middle p-2 pr-4 rounded text-white"
               style="background-color: #14C656"
