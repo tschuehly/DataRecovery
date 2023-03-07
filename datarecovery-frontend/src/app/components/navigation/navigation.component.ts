@@ -90,11 +90,14 @@ declare let gtag: Function;
             [excludeBeforeClick]="true"
             [ngClass]="{ 'bg-gray-300 md:bg-black': dropdownShow }"
           >
-            <button
-              class="cursor-pointer self-center font-medium"
-              (click)="dropdownShow = !dropdownShow"
-              >Arbeitsweise</button
-            >
+          <a
+          class="cursor-pointer font-medium"
+          (click)="mobileNavShow = false"
+          
+          routerLink="/datenrettung/arbeitsweise-übersicht"
+          href="/datenrettung/arbeitsweise-übersicht"
+          >Arbeitsweise </a
+        >
 
             <div
               class="border-solid border-2 border-black grid ga absolute justify-evenly p-4 bg-gray-300 text-2xl dropdown text-black py-4 space-y-4"
