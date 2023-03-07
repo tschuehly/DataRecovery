@@ -94,8 +94,8 @@ declare let gtag: Function;
           class="cursor-pointer font-medium"
           (click)="mobileNavShow = false"
           
-          routerLink="/datenrettung/arbeitsweise-übersicht"
-          href="/datenrettung/arbeitsweise-übersicht"
+          routerLink="/datenrettung/arbeitsweise"
+          href="/datenrettung/arbeitsweise"
           >Arbeitsweise </a
         >
 
