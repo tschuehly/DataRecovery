@@ -44,14 +44,14 @@ import { Component } from '@angular/core';
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
               <div class="pb-2">Speichergröße</div>
-                <div>≤ 32 GB</div>
+                <div>≤ 16 GB</div>
                 <div>≤ 64 GB</div>
                 <div>≤ 128 GB</div>
                 <div>≤ 256 GB</div>
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
               <div class="pb-2">Festpreis¹</div>
-              <div>99,00 €</div>
+              <div>119,00 €</div>
               <div>149,00 €</div>
               <div>249,00 €</div>
               <div>349,00 €</div>
