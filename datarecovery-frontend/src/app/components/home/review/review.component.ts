@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { ReviewDTO } from '../../../dto/dto';
-import { ReviewDetailDTO } from '../../../model/model';
+import {Component, OnInit} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {ReviewDTO} from '../../../dto/dto';
+import {ReviewDetailDTO} from '../../../model/model';
+import {Meta} from "@angular/platform-browser";
+
 @Component({
   selector: 'app-review',
   template: `
@@ -236,7 +238,12 @@ export class ReviewComponent implements OnInit {
   reviews: ReviewDTO[];
   reviewDetail: ReviewDetailDTO;
   reviewIndex = 0;
-  constructor(private http: HttpClient) {}
+
+  constructor(
+    private http: HttpClient,
+    private metaService: Meta
+  ) {
+  }
 
   ngOnInit(): void {
     this.http.get('/api/review').subscribe((reviews: ReviewDTO[]) => {
@@ -244,7 +251,12 @@ export class ReviewComponent implements OnInit {
     });
     this.http.get('/api/review/detail').subscribe((detail: ReviewDetailDTO) => {
       this.reviewDetail = detail;
+      this.metaService.removeTag("property='ratingValue'")
+      this.metaService.updateTag({property: 'ratingValue', content: this.reviewDetail.rating.toString()})
+      this.metaService.removeTag("property='ratingCount'")
+      this.metaService.updateTag({property: 'ratingCount', content: this.reviewDetail.userRatingsCount.toString()})
     });
+
   }
 
   nextReview() {

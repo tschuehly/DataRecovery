@@ -8,8 +8,10 @@ spring:
     properties.mail.smtp.auth: true
     properties.mail.smtp.starttls.enable: true
   mustache:
+    servlet:
+      cache:
     suffix: .html
-    cache: true
+    cache: false
   servlet:
     multipart:
       max-file-size: 2000MB
@@ -94,6 +96,8 @@ spring:
 
 ---
 spring:
+  mustache:
+    cache: true
   config:
     activate:
       on-profile: production

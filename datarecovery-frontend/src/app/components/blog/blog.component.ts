@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {ActivatedRoute} from '@angular/router';
 import {DomSanitizer, Meta, SafeHtml, Title} from '@angular/platform-browser';
-import {conditionallyCreateMapObjectLiteral} from "@angular/compiler/src/render3/view/util";
+import {ScrollService} from "../../services/scroll.service";
+import {ReviewDetailDTO} from "../../model/model";
 
 @Component({
   selector: 'app-blog',
@@ -500,20 +501,31 @@ import {conditionallyCreateMapObjectLiteral} from "@angular/compiler/src/render3
         </div>
       </div>
     </ng-container>
-    <div [innerHTML]="article"></div>
+    <div (click)="handleClick($event)" [innerHTML]="article"></div>
   `,
   styles: [],
 })
 export class BlogComponent implements OnInit {
   article: SafeHtml;
   articleUrl: string;
+  reviewDetail: ReviewDetailDTO;
+
   constructor(
     private metaService: Meta,
     private titleService: Title,
     private http: HttpClient,
     private route: ActivatedRoute,
-    private sanitizer: DomSanitizer
-  ) {}
+    private sanitizer: DomSanitizer,
+    public scrollService: ScrollService
+  ) {
+  }
+
+  handleClick(event: any) {
+    if (event.target.dataset.route == 'scrollToOrder') {
+      this.scrollService.scrollToOrder()
+    } else {
+    }
+  }
 
   ngOnInit(): void {
     this.route.params.subscribe((value) => {
@@ -521,7 +533,7 @@ export class BlogComponent implements OnInit {
       if (this.articleUrl) {
         this.http
           .get('api/article/' + this.articleUrl.toLowerCase(), {
-            headers: new HttpHeaders({ 'Content-Type': 'text/plain' }),
+            headers: new HttpHeaders({'Content-Type': 'text/plain'}),
             responseType: 'text',
           })
           .subscribe((article: string) => {
@@ -529,23 +541,30 @@ export class BlogComponent implements OnInit {
 
             const metaElements = articleHtml.querySelectorAll("meta")
             const title = articleHtml.querySelectorAll("title")[0]
-            if(title != null){
+            if (title != null) {
               this.titleService.setTitle(title.innerText)
             }
             metaElements.forEach((x: HTMLMetaElement) => {
-              if(x.attributes.getNamedItem("property") != null){
+              if (x.attributes.getNamedItem("property") != null) {
                 const propertyName = x.attributes.getNamedItem("property").value
-                this.metaService.removeTag("property='"+propertyName+"'")
-                this.metaService.updateTag({property:propertyName, content: x.content})
+                this.metaService.removeTag("property='" + propertyName + "'")
+                this.metaService.updateTag({property: propertyName, content: x.content})
               }
-              if(x.name){
-                this.metaService.removeTag("name='"+x.name+"'")
-                this.metaService.updateTag({name:x.name,content: x.content})
+              if (x.name) {
+                this.metaService.removeTag("name='" + x.name + "'")
+                this.metaService.updateTag({name: x.name, content: x.content})
               }
             })
             this.article = this.sanitizer.bypassSecurityTrustHtml(article);
+            this.http.get('/api/review/detail').subscribe((detail: ReviewDetailDTO) => {
+              this.reviewDetail = detail;
+              this.metaService.updateTag({property: 'ratingValue', content: this.reviewDetail.rating.toString()})
+              this.metaService.updateTag({property: 'ratingCount', content: this.reviewDetail.userRatingsCount.toString()})
+            });
           });
+
       }
     });
+
   }
 }
