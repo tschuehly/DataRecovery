@@ -185,7 +185,7 @@ import { Component } from '@angular/core';
               <button
                 class="px-4 py-2 text-lg md:text-xl text-white rounded shadow bg-gray-main"
               >
-                <a href="preise">-> für "einfache" Fälle</a>
+                <a href="preise">-> Preise für "einfache" Fälle</a>
               </button>
             </td>
 
