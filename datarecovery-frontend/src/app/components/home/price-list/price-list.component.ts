@@ -47,14 +47,12 @@ import { Component } from '@angular/core';
                 <div>≤ 16 GB</div>
                 <div>≤ 64 GB</div>
                 <div>≤ 128 GB</div>
-                <div>≤ 256 GB</div>
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
               <div class="pb-2">Festpreis¹</div>
               <div>119,00 €</div>
               <div>149,00 €</div>
               <div>249,00 €</div>
-              <div>349,00 €</div>
             </div>
             </div>
             <div class="flex-1 rounded-tr-2xl">
@@ -95,14 +93,12 @@ import { Component } from '@angular/core';
                 <div>≤ 1 TB</div>
                 <div>≤ 2 TB</div>
                 <div>≤ 4 TB</div>
-                <div>≤ 6 TB</div>
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
               <div class="pb-2">Festpreis¹ </div>
                 <div>349,00 €</div>
                 <div>399,00 €</div>
                 <div>499,00 €</div>
-                <div>599,00 €</div>
               </div>
             </div>
             <div class="grid grid-cols-2 py-4">
@@ -111,14 +107,12 @@ import { Component } from '@angular/core';
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
               <div class="pb-2">Speichergröße</div>
-              <div>≤ 512 GB</div>
               <div>≤ 1 TB</div>
               <div>≤ 2 TB</div>
               <div>≤ 4 TB</div>
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
               <div class="pb-2">Festpreis¹</div>
-              <div>249,00 €</div>
               <div>299,00 €</div>
               <div>349,00 €</div>
               <div>449,00 €</div>
