@@ -189,7 +189,7 @@ import {Meta} from "@angular/platform-browser";
                     {{
                       showReview
                         ? this.reviews[this.reviewIndex].text
-                        : (this.reviews[this.reviewIndex].text | First80Words)
+                        : (this.reviews[this.reviewIndex].text | First40Words)
                     }}
                   </p>
                 </div>
