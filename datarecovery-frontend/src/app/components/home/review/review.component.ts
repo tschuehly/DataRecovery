@@ -12,7 +12,7 @@ import {Meta} from "@angular/platform-browser";
         <div>
           <h2 class="text-2xl md:text-3xl font-semibold ">
           <a class="underline" href="https://search.google.com/local/reviews?placeid=ChIJU5PnJJcznEcRy2VAwpDd1Dc&q=Tobias+Jungbauer+Datenrettung+-+AmmerseeDatenrettung.de&hl=de&gl=DE"
-                >Bewertungen:</a>
+                >Google Bewertungen:</a>
           </h2>
 
           <div class="flex justify-center pt-2 items-center">
@@ -193,7 +193,7 @@ import {Meta} from "@angular/platform-browser";
                     }}
                   </p>
                 </div>
-                <div class="flex justify-between text-sm md:text-lg px-2 py-2 space-x-2">
+                <div class="flex justify-between text-sm md:text-base px-2 py-2 space-x-2">
                   <a
                     class="border border-gray-300 text-sm md:text-lg p-2 rounded"
                     href="https://search.google.com/local/reviews?placeid=ChIJU5PnJJcznEcRy2VAwpDd1Dc&q=Tobias+Jungbauer+Datenrettung+-+AmmerseeDatenrettung.de&hl=de&gl=DE"
