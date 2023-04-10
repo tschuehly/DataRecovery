@@ -203,7 +203,7 @@ import {Meta} from "@angular/platform-browser";
                   <button
 
                     *ngIf="
-                      this.reviews[this.reviewIndex].text.split(' ').length > 80
+                      this.reviews[this.reviewIndex].text.split(' ').length > 40
                     "
                     (click)="showReview = !showReview"
                   >
