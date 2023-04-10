@@ -196,7 +196,7 @@ import {Meta} from "@angular/platform-browser";
                 <div class="flex justify-between text-sm md:text-base px-2 py-2 space-x-2">
                   <a
                     class="border border-gray-300 p-2 rounded"
-                    href="https://search.google.com/local/reviews?placeid=ChIJU5PnJJcznEcRy2VAwpDd1Dc&q=Tobias+Jungbauer+Datenrettung+-+AmmerseeDatenrettung.de&hl=de&gl=DE"
+                    href="https://search.google.com/local/reviews?placeid=ChIJU5PnJJcznEcRy2VAwpDd1Dc&q=Tobias+Jungbauer+Datenrettung+-+AmmerseeDatenrettung.de&hl=de&gl=DE" target="_blank"
                   >
                     Alle Bewertungen einsehen
                   </a>

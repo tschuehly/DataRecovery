@@ -359,7 +359,7 @@ declare let gtag: Function;
           >
             <span class="pr-4"
               >Website entwickelt von
-              <a class="font-bold" href="https://www.schuehly-it.de/"
+              <a class="font-bold" href="https://www.schuehly-it.de/" target="_blank"
                 >Thomas Schühly</a
               ></span
             >
