@@ -345,7 +345,7 @@ declare let gtag: Function;
           <div
             class="border-b pt-10 py-4 divide-x-2 text-lg md:text-xl divide-silver text-gray-50"
           >
-            <a routerLink="/rechtliches/impressum" class="px-4 text-base md:text-xl"
+            <a href="/rechtliches/impressum" class="px-4 text-base md:text-xl"
               >Impressum</a
             ><a href="/rechtliches/datenschutz" class="px-4 text-base md:text-xl"
               >Datenschutz</a
