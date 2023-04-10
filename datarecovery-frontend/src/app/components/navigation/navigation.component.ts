@@ -347,11 +347,11 @@ declare let gtag: Function;
           >
             <a routerLink="/rechtliches/impressum" class="px-4 text-base md:text-xl"
               >Impressum</a
-            ><a routerLink="/rechtliches/datenschutz" class="px-4 text-base md:text-xl"
+            ><a href="/rechtliches/datenschutz" class="px-4 text-base md:text-xl"
               >Datenschutz</a
-            ><a routerLink="/rechtliches/agb" class="px-4 text-base md:text-xl"
+            ><a href="/rechtliches/agb" class="px-4 text-base md:text-xl"
               >AGB</a>
-              <a routerLink="/datenrettung" class="px-4 text-base md:text-xl"
+              <a href="/datenrettung" class="px-4 text-base md:text-xl"
               >Blog</a>
           </div>
           <div
