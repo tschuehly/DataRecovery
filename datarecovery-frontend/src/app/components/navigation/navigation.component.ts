@@ -358,7 +358,7 @@ declare let gtag: Function;
             class="col-span-2 pt-5 text-base md:text-lg divide-x-2 divide-silver"
           >
             <span class="pr-4"
-              >Website developed by
+              >Website entwickelt von
               <a class="font-bold" href="https://www.schuehly-it.de/"
                 >Thomas Schühly</a
               ></span
