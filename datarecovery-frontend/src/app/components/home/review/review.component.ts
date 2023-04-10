@@ -189,13 +189,13 @@ import {Meta} from "@angular/platform-browser";
                     {{
                       showReview
                         ? this.reviews[this.reviewIndex].text
-                        : (this.reviews[this.reviewIndex].text | First40Words)
+                        : (this.reviews[this.reviewIndex].text | First80Words)
                     }}
                   </p>
                 </div>
                 <div class="flex justify-between text-sm md:text-base px-2 py-2 space-x-2">
                   <a
-                    class="border border-gray-300 text-sm md:text-lg p-2 rounded"
+                    class="border border-gray-300 p-2 rounded"
                     href="https://search.google.com/local/reviews?placeid=ChIJU5PnJJcznEcRy2VAwpDd1Dc&q=Tobias+Jungbauer+Datenrettung+-+AmmerseeDatenrettung.de&hl=de&gl=DE"
                   >
                     Alle Bewertungen einsehen
