@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
       <h2
         class="pt-10 py-4 text-2xl md:text-3xl tracking-wider text-center text-gray-50"
       >
-      <a class="underline" href="preise">Kosten "schwierige" Fälle</a>:
+      <a class="underline" href="preise">Festpreise "schwierige" Fälle</a>:
       </h2>
 
       <div
@@ -185,7 +185,7 @@ import { Component } from '@angular/core';
               <button
                 class="px-4 py-2 text-lg md:text-xl text-white rounded shadow bg-gray-main"
               >
-                <a href="preise">Kosten "einfache" Fälle</a>
+                <a href="preise">weiter zu "einfache" Fälle</a>
               </button>
             </td>
 
