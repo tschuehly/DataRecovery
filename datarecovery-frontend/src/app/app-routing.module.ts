@@ -27,6 +27,7 @@ const routes: Routes = [
   },
   { path: 'tracking', loadChildren: () => import('./components/tracking/tracking.module').then(m => m.TrackingModule) },
   { path: '**', redirectTo: '/404' },
+  { path: 'datenrettung/**', redirectTo: '/404' },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
