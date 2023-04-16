@@ -72,14 +72,14 @@ import { Order, Product } from '../../../model/model';
           </ng-container>
 
           <label class="py-4 px-12"
-            >Zielsetzung (z.B. Ordner X-Y am wichtigsten) & zusätzliche
+            >Zielsetzung (z.B. "Ordner x" oder "Bilder") & zusätzliche
             Anmerkungen:
             <textarea
               class="mt-1 w-full text-black"
               formControlName="note"
             ></textarea>
           </label>
-          <h2 class="font-semibold text-base md:text-lg inline text-center py-4">Rückversand: 4,99€ (Misserfolg: inkl. Rückversand kostenfrei)</h2>
+          <h2 class="font-semibold text-base md:text-lg inline text-center py-4">Rückversand: 5,99€ (Misserfolg: inkl. Rückversand kostenfrei)</h2>
           <div
             class="flex justify-center mt-4 bg-silver text-lg md:text-xl p-4 rounded-b-2xl"
           >
