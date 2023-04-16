@@ -111,7 +111,7 @@ import {Meta} from "@angular/platform-browser";
                       [ngClass]="
                         this.reviews[this.reviewIndex].rating > 0
                           ? 'text-yellow-400'
-                          : ' text-gray-400'
+                          : ' text-white'
                       "
                       class="mx-1 w-4 h-4 fill-current"
                       xmlns="http://www.w3.org/2000/svg"
@@ -125,7 +125,7 @@ import {Meta} from "@angular/platform-browser";
                       [ngClass]="
                         this.reviews[this.reviewIndex].rating > 1
                           ? 'text-yellow-400'
-                          : ' text-gray-400'
+                          : ' text-white'
                       "
                       class="mx-1 w-4 h-4 fill-current"
                       xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +139,7 @@ import {Meta} from "@angular/platform-browser";
                       [ngClass]="
                         this.reviews[this.reviewIndex].rating > 2
                           ? 'text-yellow-400'
-                          : ' text-gray-400'
+                          : ' text-white'
                       "
                       class="mx-1 w-4 h-4 fill-current"
                       xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +153,7 @@ import {Meta} from "@angular/platform-browser";
                       [ngClass]="
                         this.reviews[this.reviewIndex].rating > 3
                           ? 'text-yellow-400'
-                          : ' text-gray-400'
+                          : ' text-white'
                       "
                       class="mx-1 w-4 h-4 fill-current "
                       xmlns="http://www.w3.org/2000/svg"
@@ -167,7 +167,7 @@ import {Meta} from "@angular/platform-browser";
                       [ngClass]="
                         this.reviews[this.reviewIndex].rating > 4
                           ? 'text-yellow-400'
-                          : ' text-gray-400'
+                          : ' text-white'
                       "
                       class="mx-1 w-4 h-4 fill-current"
                       xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +184,7 @@ import {Meta} from "@angular/platform-browser";
                 </div>
                 <div class="mt-3">
                   <p
-                    class=" mt-1 max-w-xl pb-4 px-2 text-base md:text-lg text-gray-300"
+                    class=" mt-1 max-w-xl pb-4 px-2 text-base md:text-lg text-white"
                   >
                     {{
                       showReview

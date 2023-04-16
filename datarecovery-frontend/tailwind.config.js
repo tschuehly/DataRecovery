@@ -18,6 +18,10 @@ module.exports = {
       colors: {
         "gray-main": "rgb(35 35 35)",
         silver: "rgb(197 197 197)",
+        "beige": "rgb(216,209,205)",
+        "gray1": "rgb(197,196,197)",
+        "white1": "rgb(209,205,218)",
+        
       },
       backgroundImage: {
         "circuit-board":
