@@ -23,7 +23,7 @@ import {ReviewDetailDTO} from "../../model/model";
     <ng-container *ngIf="!articleUrl">
       <div>
         <div class="bg-white text-center">
-          <h1 class="text-2xl md:text-4xl  text-black py-5 tracking-wider">Blogübersicht</h1>
+          <h1 class="text-2xl md:text-4xl  text-black py-5 tracking-wider">Artikelübersicht</h1>
         </div>
 
         <div class="bg-gray-main bg-circuit-board space-y-4 p-6">
