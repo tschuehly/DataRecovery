@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+var zufallszahl = Math.floor(Math.random() * 8) + 1;
 @Component({
   selector: 'app-slide-show',
   template: `
-  
+
+
   
   <div
       class="bg-gray-main bg-circuit-board py-10 md:p-8 flex max-h-[40rem]"
@@ -28,7 +30,7 @@ import { Component } from '@angular/core';
 })
 export class SlideShowComponent {
 
-var zufallszahl = Math.floor(Math.random() * 8) + 1;
+
 		
   currentImageIndex = zufallszahl;
   constructor() {}
