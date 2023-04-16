@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-slide-show',
   template: `
-    <div
+  
+  
+  <div
       class="bg-gray-main bg-circuit-board py-10 md:p-8 flex max-h-[40rem]"
     >
       <button class="w-7 md:w-12 shrink-0" (click)="previousPicture()">
@@ -25,7 +27,10 @@ import { Component } from '@angular/core';
   styles: [``],
 })
 export class SlideShowComponent {
-  currentImageIndex = 1;
+
+var zufallszahl = Math.floor(Math.random() * 8) + 1;
+		
+  currentImageIndex = zufallszahl;
   constructor() {}
 
   nextPicture(): void {
