@@ -24,10 +24,10 @@
 
     <div class="container py-8 px-3">
         <span class=" text-xl md:text-2xl font-bold"
-        >Datenrettung im Labor unter Reinraumbedingungen</span
+        >Datenrettung unter Reinraumbedingungen</span
         >
         <pre class="whitespace-pre-wrap py-2">
-<span class="whitespace-pre-wrap py-2 text-bold text-sm md:text-lg text-silver">Updated am 27.03.22, 07:55 von Tobias Jungbauer</span> </pre>
+<span class="whitespace-pre-wrap py-2 text-bold text-sm md:text-lg text-silver">Updated am 19.04.23, 07:52 von Tobias Jungbauer</span> </pre>
 
         <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
 <span class="font-semibold text-base md:text-xl">Datenrettung für HDD-Festplatten, die z.B.:</span>
@@ -41,7 +41,7 @@ Für Fragen können Sie gerne unter 084112840705 (Mo.-Sa. 10.00-20.00 Uhr) anruf
                 class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a
                 href="preise">Preisliste</a></button></div>
 
-<span class="font-semibold text-base md:text-xl">Ausführliche Vorgehensweise:</span>
+<span class="font-semibold text-base md:text-xl">Unsere Arbeiten:</span>
 <span class="underline">- mikroskopische Analyse und Austausch der Schreib-/Leseköpfe:</span>
 
 <div class="flex grid-cols-3 flex-wrap gap-4">
@@ -58,7 +58,7 @@ Fingerabdruck ~4µm
 Staubkorn ~10µm
 Haar ~70µm
 
-Jede Veruneinigung beschädigt daher potenziell Oberfläche und Leseköpfe.
+Jede Veruneinigung beschädigt leider potenziell Oberfläche und Leseköpfe.
 
 <span class="underline">- Arbeiten an der ServiceArea bzw. Systemfiles und Boot-ROM:</span>
 
@@ -67,9 +67,9 @@ Jede Veruneinigung beschädigt daher potenziell Oberfläche und Leseköpfe.
   <img class="h-80 object-cover object-left" src="assets/articles/sa-2.jpg">
 </div>
 Bei einem Headcrash kommt es zur Berührung zwischen Schreib-/Lesekopf und der jeweligen Oberfläche.
-Dabei wird die Oberfläche gerne auch im Bereich der Servicearea beschädigt.
-Servicemodule werden dadurch für die Festplatte nicht mehr lesbar, was der Funktion schadet.
-Unsere Aufgabe ist daher diese beschädigten Module zu reparieren und zu einer anderen Stelle zu verschieben.
+Dabei kann die Oberfläche auch im Bereich der Servicearea beschädigt werden.
+Servicemodule werden dadurch für die Festplatte nicht mehr lesbar, was den Datenzugriff hindert.
+Unsere Aufgabe ist daher beschädigten Module manuell zu reparieren und entsprechende Updates durchzuführen.
 
 <span class="underline">- Plattern Swap, z.B. um den Motor zu tauschen oder die Oberflächen nach Beschädigungen zu inspizieren:</span>
 
@@ -77,8 +77,8 @@ Unsere Aufgabe ist daher diese beschädigten Module zu reparieren und zu einer a
   <img class="h-80 object-cover object-right" src="assets/articles/platternswap_1.jpg">
   <img class="h-80 object-cover object-center" src="assets/articles/platternswap_2 (2).jpg">
 </div>
-Als Alternative zur Analyse der Schreib-/Leseköpfe kann man auch die Oberflächen direkt inspizieren.
-Das ist z.B. nötig, wenn die Festplatte bereits woanders neue Schreib-/Leseköpfe bekommen hat und die Originalen nicht mehr vorhanden sind.
+Als Alternative zur Analyse der Schreib-/Leseköpfe kann auch die Oberflächen direkt inspiziert werden.
+Das ist z.B. nötig, wenn die Festplatte bereits woanders neue Schreib-/Leseköpfe bekommen hat und die originalen Bauteile nicht mehr vorhanden sind.
 Auch nutzt man diese Technik, wenn der Motor getauscht werden muss.
 
 <span class="underline">- Austausch und Anlernen des PCB (printed circuit board):</span>
@@ -87,10 +87,12 @@ Auch nutzt man diese Technik, wenn der Motor getauscht werden muss.
   <img class="h-80 object-cover object-center" src="assets/HDD_arbeitsweise_PCB2.jpg">
   <img class="h-80 object-cover object-center" src="assets/HDD_arbeitsweise_PCB1.jpg">
 </div>
-Bei modernen Festplatten muss für ein Austausch in der Regel immer die originale Boot-ROM auf das neue PCB übertragen werden.
-Grund dafür sind viele verschiedene FW Versionen und festplattenspezifische (adaptive) Module innerhalb der Boot-ROM.
-Bei einigen Festplattenmodellen wird die ServiceArea mit einer Verschlüsselung (z.B. SED bei WD) gesichert.
-Um hier dennoch die nötigen Arbeiten durchführen zu können gibt es spezielle "unlocked PCBs".
+Bei modernen Festplatten muss für ein Austausch des PCB die originale Boot-ROM auf das neue PCB übertragen werden.
+Grund dafür sind verschiedene FW Versionen und festplattenspezifische (adaptive) Module innerhalb der Boot-ROM.
+Bei einigen Festplattenmodellen wird die ServiceArea, als auch die Userarea, mit einer Verschlüsselung (z.B. SED bei WD) gesichert.
+Um hier dennoch die nötigen Arbeiten durchführen zu können gibt es entsprechende Adapter und einen Patch zum Entsperren der ROM.
+
+<img class="h-80 object-cover object-center" src="assets/articles/sed-pcb.jpg">
 
 <span class="underline">- die Herstellung von Werkzeuge für die Datenrettung:</span>
 
@@ -108,16 +110,16 @@ Eigenes Werkzeug mit einer Genauigkeit von 35µm Herstellen zu können bringt da
 Die Kabine erzeugt ein Überdruck durch ein HEPA Filter des Typs H14.
 Dieser besitzt einen Abscheidegrad von 99,995%. Das bedeutet, dass der Filter bei einer Partikelgröße von 0,12 μm (nach MPPS) mindestens 99,995% aller Partikel herausfiltert. Der Überdruck verhindert, dass von außerhalb Partikel hineinfallen können.
 
-<span class="font-semibold text-base md:text-xl">Beispiele spektakulärer Schäden:</span>
+<span class="font-semibold text-base md:text-xl">Beispiele erfolgreicher spektakulärer Schäden:</span>
 
 <div class="flex grid-cols-3 flex-wrap gap-4">
-❶<img class="h-80 object-cover object-right" src="assets/articles/wasserschaden.jpg">
-❷<img class="h-80 object-cover object-right" src="assets/articles/1648419003590-min.jpg">
-❸<img class="h-80 object-cover object-right" src="assets/articles/1648418965066-min.jpg">
+
+❶ <img class="h-80 object-cover object-right" src="assets/articles/1648419003590-min.jpg">
+❷ <img class="h-80 object-cover object-right" src="assets/articles/1648418965066-min.jpg">
 </div>
-❶ Wasserschäden
-❷ stark Verformte/zerfetzte Schreib-/Leseköpfe
-❸ Beschädigte Oberflächen
+ 
+❶ stark Verformte/zerfetzte Schreib-/Leseköpfe
+❷ verkratzte Oberflächen
 
 <h2 class="font-semibold text-base md:text-xl">Wie hoch sind bei uns die Preise für die professionelle Datenrettung?</h2>
 Die Preise richten sich nach Speichertyp und Größe. Außerdem wird in „einfache“ und „schwierige“ Fälle unterschieden. Hier finden Sie direkt die Preise: 
