@@ -333,28 +333,22 @@ import { Component, OnInit } from '@angular/core';
         gegen Direktwerbung (Art. 21 DSGVO)
       </h3>
       <p>
-        WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F
-        DSGVO ERFOLGT, HABEN SIE JEDERZEIT DAS RECHT, AUS GRÜNDEN, DIE SICH AUS
-        IHRER BESONDEREN SITUATION ERGEBEN, GEGEN DIE VERARBEITUNG IHRER
-        PERSONENBEZOGENEN DATEN WIDERSPRUCH EINZULEGEN; DIES GILT AUCH FÜR EIN
-        AUF DIESE BESTIMMUNGEN GESTÜTZTES PROFILING. DIE JEWEILIGE
-        RECHTSGRUNDLAGE, AUF DENEN EINE VERARBEITUNG BERUHT, ENTNEHMEN SIE
-        DIESER DATENSCHUTZERKLÄRUNG. WENN SIE WIDERSPRUCH EINLEGEN, WERDEN WIR
-        IHRE BETROFFENEN PERSONENBEZOGENEN DATEN NICHT MEHR VERARBEITEN, ES SEI
-        DENN, WIR KÖNNEN ZWINGENDE SCHUTZWÜRDIGE GRÜNDE FÜR DIE VERARBEITUNG
-        NACHWEISEN, DIE IHRE INTERESSEN, RECHTE UND FREIHEITEN ÜBERWIEGEN ODER
-        DIE VERARBEITUNG DIENT DER GELTENDMACHUNG, AUSÜBUNG ODER VERTEIDIGUNG
-        VON RECHTSANSPRÜCHEN (WIDERSPRUCH NACH ART. 21 ABS. 1 DSGVO).
+      Wenn die Datenverarbeitung auf Grundlage von Art. 6 Abs. 1 lit. e oder f DSGVO erfolgt, 
+      haben Sie jederzeit das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, 
+      gegen die Verarbeitung Ihrer personenbezogenen Daten Widerspruch einzulegen; 
+      dies gilt auch für ein auf diese Bestimmungen gestütztes Profiling. Die jeweilige Rechtsgrundlage, 
+      auf denen eine Verarbeitung beruht, entnehmen Sie dieser Datenschutzerklärung. 
+      Wenn Sie Widerspruch einlegen, werden wir Ihre betroffenen personenbezogenen Daten nicht mehr 
+      verarbeiten, es sei denn, wir können zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, 
+      die Ihre Interessen, Rechte und Freiheiten überwiegen oder die Verarbeitung dient der Geltendmachung,
+      Ausübung oder Verteidigung von Rechtsansprüchen (Widerspruch nach Art. 21 Abs. 1 DSGVO).
       </p>
       <p>
-        WERDEN IHRE PERSONENBEZOGENEN DATEN VERARBEITET, UM DIREKTWERBUNG ZU
-        BETREIBEN, SO HABEN SIE DAS RECHT, JEDERZEIT WIDERSPRUCH GEGEN DIE
-        VERARBEITUNG SIE BETREFFENDER PERSONENBEZOGENER DATEN ZUM ZWECKE
-        DERARTIGER WERBUNG EINZULEGEN; DIES GILT AUCH FÜR DAS PROFILING, SOWEIT
-        ES MIT SOLCHER DIREKTWERBUNG IN VERBINDUNG STEHT. WENN SIE
-        WIDERSPRECHEN, WERDEN IHRE PERSONENBEZOGENEN DATEN ANSCHLIESSEND NICHT
-        MEHR ZUM ZWECKE DER DIREKTWERBUNG VERWENDET (WIDERSPRUCH NACH ART. 21
-        ABS. 2 DSGVO).
+      Werden Ihre personenbezogenen Daten verarbeitet, um Direktwerbung zu betreiben, so haben Sie das Recht, 
+      jederzeit Widerspruch gegen die Verarbeitung Sie betreffender personenbezogener Daten zum Zwecke derartiger Werbung einzulegen; 
+      dies gilt auch für das Profiling, soweit es mit solcher Direktwerbung in Verbindung steht. 
+      Wenn Sie widersprechen, werden Ihre personenbezogenen Daten anschließend nicht mehr zum Zwecke der Direktwerbung verwendet 
+      (Widerspruch nach Art. 21 Abs. 2 DSGVO).
       </p>
       <h3 class="font-semibold mb-2 mt-4 underline">
         Beschwerde­recht bei der zuständigen Aufsichts­behörde
@@ -506,9 +500,9 @@ import { Component, OnInit } from '@angular/core';
         werden, werden wir Sie hierüber im Rahmen dieser Datenschutzerklärung
         gesondert informieren und ggf. eine Einwilligung abfragen.
       </p>
-      <h3 class="font-semibold mb-2 mt-4 underline">Kontaktformular</h3>
+      <h3 class="font-semibold mb-2 mt-4 underline">Auftragsformular</h3>
       <p>
-        Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre
+        Wenn Sie uns per Formular Anfragen zukommen lassen, werden Ihre
         Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen
         Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von
         Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne

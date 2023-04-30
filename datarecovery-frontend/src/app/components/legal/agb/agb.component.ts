@@ -123,6 +123,8 @@ import { Component, OnInit } from '@angular/core';
         Mündliche Nebenabreden bestehen nicht.
         </p>
 
+        <p>&nbsp;</p>
+
         <p><span style="text-decoration:underline">9. Salvatorische Klausel</span></p>
 
         <p>
