@@ -29,9 +29,9 @@ import { ScrollService } from 'src/app/services/scroll.service';
         <div
           class="text-white text-base md:text-xl py-4 mx-auto justify-center"
         >
-        <p>Bezahlung nur nach Erfolg, den Sie im Voraus selbst definieren (z.B. "Ordner x" oder "Bilder").</p>
+        <p>Bezahlung erfolgt nur nach Erfolg, den Sie im Voraus selbst definieren (z.B. "Ordner x" oder "Bilder").</p>
         <p>Welche Schäden vergünstig sind finden Sie hier: <a routerLink="/datenrettung/was-zählt-als-einfacher-fall" class="underline">Unterteilung "einfache / schwierige" Fälle</a>. </p>
-        <p>Falls Sie sich unsicher bezüglich Ihres Schadens sind: wählen Sie bitte den "einfachen" (E) im Auftragsformular aus.</p>
+        <p>Falls Sie sich unsicher bezüglich des Schadens sind: wählen Sie bitte den "einfachen" (E) im Auftragsformular aus.</p>
         </div>
       </div>
     </div>
@@ -46,9 +46,9 @@ import { ScrollService } from 'src/app/services/scroll.service';
           >
           <ng-container *ngFor="let category of categories">
             <div class="mb-2">
-              <h1 class="font-semibold text-base md:text-lg mt-4 pb-2">
+              <h2 class="font-semibold text-base md:text-lg mt-4 pb-2">
                 {{ category.title }}
-              </h1>
+              </h2>
               <div class="whitespace-pre-wrap text-base md:text-lg" *ngIf="category.description">
                 {{ category.description }}
               </div>
@@ -72,7 +72,8 @@ import { ScrollService } from 'src/app/services/scroll.service';
               weiter zum Ablauf & Auftrag
             </button>
           </div>
-          <br />Alle Preise sind bereits inklusive 19% Mehrwertsteuer.<br/>
+          <br />Alle Preise sind bereits inklusive 19% Mehrwertsteuer und nur gelten nach Erfolg.<br/>
+          <br />Bei Misserfolg ist die Bearbeitung inkl. Rückversand zu 100% kostenfrei.<br/>
         </div>
       </div>
 
