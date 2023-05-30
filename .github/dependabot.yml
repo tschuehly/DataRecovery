@@ -7,6 +7,16 @@ version: 2
 updates:
   - package-ecosystem: "gradle" # See documentation for possible values
     directory: "/datarecovery-backend" # Location of package manifests
+    target-branch: "jungbauer-deploy"
     schedule:
       interval: "weekly"
+  - package-ecosystem: "npm"
+    directory: "/datarecovery-frontend"
+    target-branch: "jungbauer-deploy"
+    schedule:
+      interval: "weekly"
+      # Check for npm updates on Sundays
+    # Labels on pull requests for security and version updates
+    labels:
+      - "npm dependencies"
      
