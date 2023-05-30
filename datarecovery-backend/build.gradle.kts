@@ -25,7 +25,7 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.liquibase:liquibase-core:4.4.3")
     implementation("org.postgresql:postgresql")
-    implementation("com.auth0:java-jwt:3.13.0")
+    implementation("com.auth0:java-jwt:4.4.0")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("com.github.paulcwarren:content-jpa-spring-boot-starter:1.2.5")
