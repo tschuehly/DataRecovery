@@ -31,7 +31,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
         >
         <p>Bezahlung erfolgt nur nach Erfolg, den Sie im Voraus selbst definieren (z.B. "Ordner x" oder "Bilder").</p>
         <p>Welche Schäden vergünstig sind finden Sie hier: <a routerLink="/datenrettung/was-zählt-als-einfacher-fall" class="underline">Unterteilung "einfache / schwierige" Fälle</a>. </p>
-        <p>Falls Sie sich unsicher bezüglich des Schadens sind: wählen Sie bitte den "einfachen" (E) im Auftragsformular aus.</p>
+        <p>Wenn Sie sich unsicher bezüglich des Schadens sind wählen Sie bitte den "einfachen" (E) im Auftragsformular aus.</p>
         </div>
       </div>
     </div>
