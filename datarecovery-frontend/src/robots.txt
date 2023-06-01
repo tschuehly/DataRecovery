@@ -1,4 +1,4 @@
 # robots.txt
 User-agent: *
-Disallow: /login
+Disallow: /admin
 Sitemap: https://www.jungbauerdatenrettung.de/sitemap.xml
