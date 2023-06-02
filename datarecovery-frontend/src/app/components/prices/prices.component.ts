@@ -30,8 +30,8 @@ import { ScrollService } from 'src/app/services/scroll.service';
           class="text-white text-base md:text-xl py-4 mx-auto justify-center"
         >
         <p>Bezahlung erfolgt nur nach Erfolg, den Sie im Voraus selbst definieren (z.B. "Ordner x" oder "Bilder").</p>
-        <p>Hier finden Sie die <a routerLink="/datenrettung/was-zählt-als-einfacher-fall" class="underline">Unterteilung in "Standard / komplexe" Fälle</a>. </p>
-        <p>Wenn Sie nicht sicher über den Schaden sind, rufen Sie mich gerne unter <a href="tel:0841 12840705">0841 12840705</a> an oder wählen Sie zunächst "Standard" aus.</p>
+        <p>Hier finden Sie die <a routerLink="/datenrettung/standard-oder-komplexer-fall" class="underline">Unterteilung in "standard" und "komplexe" Fälle</a>. </p>
+        <p>Wenn Sie nicht sicher über den Schaden sind, rufen Sie mich gerne unter <a href="tel:0841 12840705">0841 12840705</a> an oder wählen Sie zunächst "standard" aus.</p>
         </div>
       </div>
     </div>
