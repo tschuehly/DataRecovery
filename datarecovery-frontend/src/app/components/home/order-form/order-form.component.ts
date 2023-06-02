@@ -38,7 +38,7 @@ import { Order, Product } from '../../../model/model';
               >
                 <option selected>
                   Sie senden einen eigenen Ersatzspeicher zur Sicherung mit:
-                  kostenfrei
+                  0€
                 </option>
                 <option *ngFor="let replacement of replacementProducts">
                   {{ replacement.category.name }} {{ replacement.name }} :
@@ -80,7 +80,7 @@ import { Order, Product } from '../../../model/model';
             ></textarea>
           </label>
           <h2 class="font-semibold text-base md:text-lg inline text-center py-4">Rückversand bei Erfolg: 5,49€</h2>
-          <h2 class="font-semibold text-base md:text-lg inline text-center py-4">Bei Misserfolg ist die Bearbeitung inkl. Rückversand des Originalspeichers kostenfrei.</h2>
+          <h2 class="font-semibold text-base md:text-lg inline text-center py-4">Bei Misserfolg: Bearbeitung inkl. Rückversand des Originalspeichers vollständig kostenfrei.</h2>
           <div
             class="flex justify-center mt-4 bg-silver text-lg md:text-xl p-4 rounded-b-2xl"
           >
