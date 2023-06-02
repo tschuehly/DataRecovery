@@ -79,6 +79,7 @@ import { Order, Product } from '../../../model/model';
               formControlName="note"
             ></textarea>
           </label>
+          <h2 class="font-semibold text-base md:text-lg inline text-center py-4">Rückversand bei Erfolg: 5,49€</h2>
           <h2 class="font-semibold text-base md:text-lg inline text-center py-4">Bei Misserfolg ist die Bearbeitung inkl. Rückversand des Originalspeichers kostenfrei.</h2>
           <div
             class="flex justify-center mt-4 bg-silver text-lg md:text-xl p-4 rounded-b-2xl"
@@ -238,7 +239,7 @@ export class OrderFormComponent implements OnInit {
       product: [''],
       note: [''],
       replacement: [
-        'Sie senden einen eigenen Ersatzspeicher zur Sicherung mit: kostenfrei',
+        'Sie senden einen eigenen Ersatzspeicher zur Sicherung mit: 0€',
       ],
       monthlyPayment: [1],
       deadline: [''],
