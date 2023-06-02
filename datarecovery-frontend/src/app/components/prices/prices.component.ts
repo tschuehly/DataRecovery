@@ -73,7 +73,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
             </button>
           </div>
           <br />Alle Preise sind bereits inklusive 19% Mehrwertsteuer und nur gelten nach Erfolg.<br/>
-          <br />Bei Misserfolg: Bearbeitung inkl. Rückversand des Originalspeichers vollständig kostenfrei.<br/>
+          <br />Bei Misserfolg: inkl. Rückversand des Originalspeichers kostenfrei.<br/>
         </div>
       </div>
 
