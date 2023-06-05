@@ -29,7 +29,6 @@ import { ScrollService } from 'src/app/services/scroll.service';
         <div
           class="text-white text-base md:text-xl py-4 mx-auto justify-center"
         >
-        <p>Hier finden Sie die <a routerLink="/datenrettung/standard-oder-komplexer-fall" class="underline">Unterteilung in "standard" und "komplexe" Fälle</a>. </p>
         <p>Es handelt sich um Festpreise, d.h. es gibt keine Erhöhung im Nachhinein.</p>
         <p>Bezahlung erfolgt nur nach Erfolg, den Sie im Voraus selbst definieren (z.B. "Ordner x" oder "Bilder").</p>
         </div>
