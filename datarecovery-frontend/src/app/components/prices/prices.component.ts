@@ -29,9 +29,9 @@ import { ScrollService } from 'src/app/services/scroll.service';
         <div
           class="text-white text-base md:text-xl py-4 mx-auto justify-center"
         >
-        <p>Bezahlung erfolgt nur nach Erfolg, den Sie im Voraus selbst definieren (z.B. "Ordner x" oder "Bilder").</p>
         <p>Hier finden Sie die <a routerLink="/datenrettung/standard-oder-komplexer-fall" class="underline">Unterteilung in "standard" und "komplexe" Fälle</a>. </p>
-        <p>Wenn Sie nicht sicher über den Schaden sind, rufen Sie mich gerne unter <a href="tel:0841 12840705">0841 12840705</a> an oder wählen Sie zunächst "standard" aus.</p>
+        <p>Es handelt sich um Festpreise, d.h. es gibt keine Erhöhung im Nachhinein.</p>
+        <p>Bezahlung erfolgt nur nach Erfolg, den Sie im Voraus selbst definieren (z.B. "Ordner x" oder "Bilder").</p>
         </div>
       </div>
     </div>
@@ -69,7 +69,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
               class="text-base md:text-xl bg-white py-3 px-4 shadow rounded text-black"
               (click)="this.scrollService.scrollToOrder()"
             >
-              weiter zum Ablauf & Auftrag
+              -> Auftragsformular
             </button>
           </div>
           <br />Alle Preise sind bereits inklusive 19% Mehrwertsteuer und nur gelten nach Erfolg.<br/>

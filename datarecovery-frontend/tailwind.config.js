@@ -21,7 +21,7 @@ module.exports = {
         "beige": "rgb(216,209,205)",
         "gray1": "rgb(197,196,197)",
         "white1": "rgb(209,205,218)",
-        
+        "ocean": "rgb(25,25,112)"
       },
       backgroundImage: {
         "circuit-board":

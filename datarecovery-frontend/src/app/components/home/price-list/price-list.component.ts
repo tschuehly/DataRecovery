@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
       <h2
         class="pt-10 py-4 text-2xl md:text-3xl tracking-wider text-center text-gray-50"
       >
-      <a class="underline" href="preise">Festpreise im "worst case"</a>:
+      <a class="underline" href="preise">Festpreis im "worst case"</a>:
       </h2>
 
       <div
@@ -69,7 +69,7 @@ import { Component } from '@angular/core';
               </picture>
             </div>
           </div>
-          <div class="h-8 bg-silver"></div>
+          <div class="h-1 bg-white"></div>
           <div class="flex flex-col text-center md:flex-row">
             <div class="flex-1 ">
               <picture>
@@ -105,7 +105,7 @@ import { Component } from '@angular/core';
             </div>
             <div class="grid grid-cols-2 py-4">
               <h2 class="col-span-2 p-4 text-xl">
-                Defekter SSD-Speicher (SATA-basiert)
+                Defekter SSD-Speicher
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
               <div class="pb-2">Speichergröße</div>
@@ -137,7 +137,7 @@ import { Component } from '@angular/core';
               </picture>
             </div>
           </div>
-          <div class="h-8 bg-silver"></div>
+          <div class="h-1 bg-white"></div>
           <div class="flex text-center">
             <div class="flex-1 ">
               <picture>
