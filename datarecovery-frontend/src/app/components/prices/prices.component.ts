@@ -11,13 +11,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
       class="bg-center bg-gray-main bg-cover bg-no-repeat "
       style="background-image: url('/assets/prices_header.jpg')"
     >
-      <div class="flex md:ml-80 justify-center md:justify-start">
-        <h2
-          class="text-2xl md:text-4xl leading-relaxed text-center text-silver text-shadow bg-gray-main p-16"
-        >
-          Tobias<br />Jungbauer<br />Datenrettung
-        </h2>
-      </div>
+    
     </div>
     <div class="bg-white text-center">
       <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">
