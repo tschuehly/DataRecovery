@@ -28,7 +28,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
       <div class="text-white text-base md:text-lg">
         <div
           class="bg-gray-main px-4 py-12"
-          style="box-shadow: 0 2px 25px 0 black"
+          style=" 0 2px 25px 0 black"
         >
           <span class="font-bold text-xl md:text-2xl text-white"
             >Festpreise nach Gesamtkapazität:</span
