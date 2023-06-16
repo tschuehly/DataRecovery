@@ -11,33 +11,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
       class="bg-center bg-gray-main bg-cover bg-no-repeat "
       style="background-image: url('/assets/prices_header.jpg')"
     >
-    <div class="flex md:ml-80 justify-center md:justify-start ">
-        <span
-          class="text-2xl md:text-4xl  leading-relaxed text-center text-silver text-shadow bg-gray-main p-16" >
-
-          <h3
-                class="font-semibold pt-4 md:mt-0 mb-2 text-2xl md:text-3xl text-center text-gray-50"
-              >
-                Kontakt
-              </h3>
-              <p
-                class=" text-center text-lg md:text-xl text-white"
-              >
-                E-Mail:
-                <a href="mailto:info@jungbauerdatenrettung.de"
-                  >
-                  <span class="text-white"
-                    >info@jungbauerdatenrettung.de</span
-                  ></a
-                ><br />
-
-                Telefon: <span class="text-white"><a href="tel:0841 12840705">0841 12840705</a></span><br />
-
-                Mobil: <span class="text-white"><a href="tel:0151 61408355">0151 61408355</a></span>
-              </p>
-       
-          </span>
-      </div>
+    
     </div>
     <div class="bg-white text-center">
       <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">

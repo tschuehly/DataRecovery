@@ -14,7 +14,7 @@ import {ReviewDetailDTO} from "../../model/model";
     >
       <div class="flex md:ml-80 justify-center md:justify-start ">
         <span
-          class="text-2xl md:text-4xl  leading-relaxed text-center text-silver text-shadow bg-gray-main p-16" >
+          class="text-2xl md:text-4xl  leading-relaxed text-center bg-gray-main p-7" >
 
           <h3
                 class="font-semibold pt-4 md:mt-0 mb-2 text-2xl md:text-3xl text-center text-gray-50"
