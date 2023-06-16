@@ -21,18 +21,8 @@ import { ScrollService } from 'src/app/services/scroll.service';
     </div>
     <div class="bg-white text-center">
       <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">
-      Datenrettung Kosten
+      Datenrettung Preise / Kosten
       </h1>
-    </div>
-    <div class="bg-gray-main  ">
-      <div class="container flex ">
-        <div
-          class="text-white text-base md:text-xl py-4 mx-auto justify-center"
-        >
-        <p>Es handelt sich um Festpreise, d.h. es gibt keine Erhöhung im Nachhinein.</p>
-        <p>Bezahlung erfolgt nur nach Erfolg, den Sie im Voraus selbst definieren (z.B. "Ordner x" oder "Bilder").</p>
-        </div>
-      </div>
     </div>
     <div class="grid grid-cols-1 xl:grid-cols-2  border-b-2 border-t-2">
       <div class="text-white text-base md:text-lg">
@@ -68,7 +58,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
               class="text-base md:text-xl bg-white py-3 px-4 shadow rounded text-black"
               (click)="this.scrollService.scrollToOrder()"
             >
-              -> Auftragsformular
+            ➔ zum Auftragsformular
             </button>
           </div>
           <br />Alle Preise sind bereits inklusive 19% Mehrwertsteuer und nur gelten nach Erfolg.<br/>

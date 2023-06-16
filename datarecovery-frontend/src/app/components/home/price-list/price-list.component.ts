@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
       <h2
         class="pt-10 py-4 text-2xl md:text-3xl tracking-wider text-center text-gray-50"
       >
-      <a class="underline" href="preise">Festpreis im "worst case"</a>:
+      <a class="underline" href="preise">Festpreis für komplexen Fall</a>:
       </h2>
 
       <div
@@ -49,7 +49,7 @@ import { Component } from '@angular/core';
                 <div>≤ 128 GB</div>
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
-              <div class="pb-2">Festpreis¹</div>
+              <div class="pb-2">Festpreis</div>
               <div>99,00 €</div>
               <div>149,00 €</div>
               <div>249,00 €</div>
@@ -96,7 +96,7 @@ import { Component } from '@angular/core';
                 <div>≤ 6 TB</div>
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
-              <div class="pb-2">Festpreis¹ </div>
+              <div class="pb-2">Festpreis</div>
                 <div>399,00 €</div>
                 <div>449,00 €</div>
                 <div>549,00 €</div>
@@ -115,7 +115,7 @@ import { Component } from '@angular/core';
               <div>≤ 4 TB</div>
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
-              <div class="pb-2">Festpreis¹</div>
+              <div class="pb-2">Festpreis</div>
               <div>399,00 €</div>
               <div>449,00 €</div>
               <div>499,00 €</div>
@@ -183,13 +183,13 @@ import { Component } from '@angular/core';
             class="flex flex-col justify-between p-4 text-black md:flex-row bg-silver rounded-b-2xl"
           >
 <div class="justify-start text-base md:text-lg">
-¹Alle angegebenen Festpreise sind bereits inklusive 19% Mehrwertsteuer
-<td>+ Kosten entstehen nur bei Erfolg.</td></div>
+Alle Festpreise sind bereits inklusive 19% Mehrwertsteuer
+<td>+ Kosten entstehen nur nach Erfolg.</td></div>
             <td class="flex justify-end pt-4">
               <button
                 class="px-4 py-2 text-lg md:text-xl text-white rounded shadow bg-gray-main"
               >
-                <a href="preise">mehr Details</a>
+                <a href="preise">➔ zum Standardfall</a>
               </button>
             </td>
 
