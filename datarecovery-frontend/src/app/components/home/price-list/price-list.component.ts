@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
       <h2
         class="pt-10 py-4 text-2xl md:text-3xl tracking-wider text-center text-gray-50"
       >
-      <a class="underline" href="preise">Festpreise nach Erfolg</a>:
+      <a class="underline" href="preise">transparente Festpreise</a>:
       </h2>
 
       <div
@@ -212,7 +212,7 @@ import { Component } from '@angular/core';
           <div
             class="flex flex-col justify-between p-4 text-black md:flex-row bg-silver rounded-b-2xl"
           >
-<br/><br/>
+
 <div class="justify-start text-base md:text-lg">
 Alle Festpreise sind bereits inklusive 19% Mehrwertsteuer
 <td>+ Kosten entstehen nur nach Erfolg.</td></div>
