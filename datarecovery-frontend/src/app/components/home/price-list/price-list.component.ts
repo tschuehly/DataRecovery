@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
       <h2
         class="pt-10 py-4 text-2xl md:text-3xl tracking-wider text-center text-gray-50"
       >
-      <a class="underline" href="preise">Festpreis für komplexen Fall</a>:
+      <a class="underline" href="preise">Festpreise nach Erfolg</a>:
       </h2>
 
       <div
@@ -43,13 +43,23 @@ import { Component } from '@angular/core';
                 Defekte(r) USB Stick / (micro-) SD Karte
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
-              <div class="pb-2">Speichergröße</div>
+              <div class="pb-2">Standardfall:</div>
+                <div>≤ alle Größen</div>
+                
+              </div>
+              <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
+              <div class="pb-2"><br/></div>
+              <div>59,00 €</div>
+              
+            </div>
+              <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
+              <div class="pb-2">komplexer Fall:</div>
                 <div>≤ 16 GB</div>
                 <div>≤ 64 GB</div>
                 <div>≤ 128 GB</div>
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
-              <div class="pb-2">Festpreis</div>
+              <div class="pb-2">(Chip-OFF Methode)<br/></div>
               <div>99,00 €</div>
               <div>149,00 €</div>
               <div>249,00 €</div>
@@ -89,18 +99,28 @@ import { Component } from '@angular/core';
                 Beschädigte HDD-Festplatte
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
-              <div class="pb-2">Speichergröße</div>
+              <div class="pb-2">Standardfall:</div>
+                <div>≤ alle Größen</div>
+                
+              </div>
+              <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
+              <div class="pb-2"><br/></div>
+              <div>249,00 €</div>
+              
+            </div>
+              <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
+              <div class="pb-2">komplexer Fall:</div>
                 <div>≤ 1 TB</div>
                 <div>≤ 2 TB</div>
                 <div>≤ 4 TB</div>
-                <div>≤ 6 TB</div>
+                
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
-              <div class="pb-2">Festpreis</div>
+              <div class="pb-2">(im Reinraum)<br/></div>
                 <div>399,00 €</div>
                 <div>449,00 €</div>
                 <div>549,00 €</div>
-                <div>649,00 €</div>
+                
               </div>
             </div>
             <div class="grid grid-cols-2 py-4">
@@ -108,18 +128,28 @@ import { Component } from '@angular/core';
                 Defekter SSD-Speicher
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
-              <div class="pb-2">Speichergröße</div>
+              <div class="pb-2">Standardfall:</div>
+                <div>≤ alle Größen</div>
+                
+              </div>
+              <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
+              <div class="pb-2"><br/></div>
+              <div>299,00 €</div>
+              
+            </div>
+              <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
+              <div class="pb-2">komplexer Fall:</div>
               <div>≤ 512 GB</div>
               <div>≤ 1 TB</div>
               <div>≤ 2 TB</div>
-              <div>≤ 4 TB</div>
+              
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
-              <div class="pb-2">Festpreis</div>
+              <div class="pb-2">(kein Statusregister)<br/></div>
               <div>399,00 €</div>
               <div>449,00 €</div>
               <div>499,00 €</div>
-              <div>599,00 €</div>
+              
               </div>
             </div>
 
@@ -158,10 +188,10 @@ import { Component } from '@angular/core';
               </h2>
               <div class="px-4 py-2 pl-8 leading-relaxed text-left text-base md:text-lg">
                 abhängig von:
+                <div>- RAID Level</div>
                 <div>- Anzahl an Festplatten</div>
                 <div>- Kapazität pro Festplatte</div>
-                <div>- RAID Level</div>
-                <div>- ggf. Reparatur einzelner Festplatten</div>
+                <div>- ggf. Schäden einzelner Speicher</div>
               </div>
             </div>
 
@@ -185,13 +215,7 @@ import { Component } from '@angular/core';
 <div class="justify-start text-base md:text-lg">
 Alle Festpreise sind bereits inklusive 19% Mehrwertsteuer
 <td>+ Kosten entstehen nur nach Erfolg.</td></div>
-            <td class="flex justify-end pt-4">
-              <button
-                class="px-4 py-2 text-lg md:text-xl text-white rounded shadow bg-gray-main"
-              >
-                <a href="preise">➔ zum Standardfall</a>
-              </button>
-            </td>
+            
 
           </div>
         </div>
