@@ -4,6 +4,9 @@ import {ActivatedRoute} from '@angular/router';
 import {DomSanitizer, Meta, SafeHtml, Title} from '@angular/platform-browser';
 import {ScrollService} from "../../services/scroll.service";
 import {ReviewDetailDTO} from "../../model/model";
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-blog',
@@ -536,8 +539,14 @@ export class BlogComponent implements OnInit {
     private http: HttpClient,
     private route: ActivatedRoute,
     private sanitizer: DomSanitizer,
+    private router: Router,
     public scrollService: ScrollService
+   
   ) {
+  }
+
+  private redirectTo404(): void {
+    this.router.navigateByUrl('/404');
   }
 
   handleClick(event: any) {
@@ -557,10 +566,16 @@ export class BlogComponent implements OnInit {
             responseType: 'text',
           })
           .subscribe((article: string) => {
-            const articleHtml = new DOMParser().parseFromString(article, 'text/html')
 
+            if (!article) {
+              this.redirectTo404();
+              return;
+            }
+
+            const articleHtml = new DOMParser().parseFromString(article, 'text/html')
             const metaElements = articleHtml.querySelectorAll("meta")
             const title = articleHtml.querySelectorAll("title")[0]
+
             if (title != null) {
               this.titleService.setTitle(title.innerText)
             }
@@ -583,6 +598,9 @@ export class BlogComponent implements OnInit {
             });
           });
 
+
+
+          
       }
     });
 
