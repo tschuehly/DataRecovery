@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-var zufallszahl = Math.floor(Math.random() * 8) + 1;
+var zufallszahl = Math.floor(Math.random() * 6) + 1;
 @Component({
   selector: 'app-slide-show',
   template: `
@@ -36,7 +36,7 @@ export class SlideShowComponent {
   constructor() {}
 
   nextPicture(): void {
-    if (this.currentImageIndex == 8) {
+    if (this.currentImageIndex == 6) {
       this.currentImageIndex = 1;
     } else {
       this.currentImageIndex = this.currentImageIndex + 1;
@@ -45,7 +45,7 @@ export class SlideShowComponent {
 
   previousPicture(): void {
     if (this.currentImageIndex == 1) {
-      this.currentImageIndex = 8;
+      this.currentImageIndex = 6;
     } else {
       this.currentImageIndex = this.currentImageIndex - 1;
     }
