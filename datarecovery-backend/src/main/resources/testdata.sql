@@ -14,12 +14,12 @@ INSERT INTO public.category (id, description, name, replacement, title, sequence
 VALUES (9, 'Gerne erstelle ich Ihnen hier ein für Fall spezifisches Angebot.
 Bitte nennen Sie mir dafür die Anzahl an Festplatten, die Kapazität pro Festplatte, das RAID-Level und ob bzw. wie viele Festplatten beschädigt sind.
 
-Preisbeispiele für RAID und Apple Fusiondrive:
-RAID: Raidlevel 1 mit 2x 1TB HDD (1x davon defekt): 150,00 EUR
-RAID: Raidlevel 0 mit 2x 1TB HDD (1x davon defekt): 500,00 EUR
-RAID: Raidlevel 6 mit 5x 6TB HDD (1x davon defekt): 500,00 EUR
-Apple Fusiondrive: iMac (defekt), 1TB HDD (fehlerfrei) + 128Gb SSD (fehlerfrei): 250,00 EUR
-Apple Fusiondrive: iMac (fehlerfrei), 1TB HDD (defekt) + 128Gb SSD (fehlerfrei): 550,00 EUR ',
+Preisbeispiele für RAID-Konfigurationen mit defekte(n) HDD-Festplatte(n):
+z.B. Raidlevel 1 mit 2x 4TB HDD (1x davon defekt): 250,00 EUR
+z.B. Raidlevel 0 mit 2x 2TB HDD (1x davon defekt): 499,00 EUR
+z.B. Raidlevel 5 mit 5x 4TB HDD (3x davon defekt): 599,00 EUR
+z.B. JBOD mit 4x 6TB HDD (1x davon defekt): 699,00 EUR
+ ',
         'RAID oder Apple Fusiondrive', false, 'RAID & Apple Fusion Drive:', 3);
 INSERT INTO public.category (id, description, name, replacement, title, sequence_id)
 VALUES (4, NULL, 'Defekte (micro) SD-Karte oder USB-Stick', false, 'Datenrettung bei defekten USB-Stick / (micro) SD-Karte
