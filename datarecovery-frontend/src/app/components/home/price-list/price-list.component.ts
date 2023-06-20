@@ -214,8 +214,7 @@ import { Component } from '@angular/core';
           >
 
 <div class="justify-start text-base md:text-lg">
-Alle Festpreise sind bereits inklusive 19% Mehrwertsteuer
-<td>+ Kosten entstehen nur nach Erfolg.</td></div>
+Alle Preise sind bereits inklusive 19% Mehrwertsteuer & die genannten Kosten entstehen nur nach Erfolg.</div>
             
 
           </div>
