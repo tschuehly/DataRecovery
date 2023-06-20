@@ -79,8 +79,8 @@ import { Order, Product } from '../../../model/model';
               formControlName="note"
             ></textarea>
           </label>
-          <h2 class="font-semibold text-base md:text-lg inline text-center py-4">Rückversand bei Erfolg: 5,49€</h2>
-          <h2 class="font-semibold text-base md:text-lg inline text-center py-4">Bei Misserfolg: inkl. Rückversand des Originalspeichers kostenfrei.</h2>
+          <h2 class="font-semibold text-base md:text-lg inline text-center py-4">Bei Erfolg: genannter Festpreis ohne Mehrkosten.</h2>
+          <h2 class="font-semibold text-base md:text-lg inline text-center py-4">Bei Misserfolg: kostenfrei inkl. Rückversand des Originalspeichers.</h2>
           <div
             class="flex justify-center mt-4 bg-silver text-lg md:text-xl p-4 rounded-b-2xl"
           >
