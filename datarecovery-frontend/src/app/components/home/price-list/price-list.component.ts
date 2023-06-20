@@ -210,11 +210,13 @@ import { Component } from '@angular/core';
             </div>
           </div>
           <div
-            class="flex flex-col justify-between p-4 text-black md:flex-row bg-silver rounded-b-2xl"
+            class="p-4 text-black md:flex-row bg-silver rounded-b-2xl"
           >
 
-<div class="justify-start text-base md:text-lg">
-Alle Preise sind bereits inklusive 19% Mehrwertsteuer & die genannten Kosten entstehen nur nach Erfolg.</div>
+<div class=" text-base md:text-lg">
+- Die genannten Kosten entstehen nur nach Erfolg.<br/>
+- Alle Preise sind bereits inklusive 19% Mehrwertsteuer.<br/>
+</div>
             
 
           </div>
