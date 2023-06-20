@@ -214,8 +214,8 @@ import { Component } from '@angular/core';
           >
 
 <div class=" text-base md:text-lg">
-- Die genannten Kosten entstehen nur nach Erfolg.<br/>
-- Alle Preise sind bereits inklusive 19% Mehrwertsteuer.<br/>
+Die genannten Kosten entstehen nur nach Erfolg.<br/>
+Alle Preise sind bereits inklusive 19% Mehrwertsteuer.<br/>
 </div>
             
 
