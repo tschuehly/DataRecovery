@@ -82,9 +82,10 @@ import { ScrollService } from 'src/app/services/scroll.service';
             </button>
             
           </div>
-          <br/><br/>
-          Alle Preise sind bereits inklusive 19% Mehrwertsteuer und nur gelten nach Erfolg.
-          <br />Bei Misserfolg: inkl. Rückversand des Originalspeichers kostenfrei.<br/>
+          <br/>Alle Preise sind bereits inklusive 19% Mehrwertsteuer.  <br/>
+          Bezahlung nur nach Erfolg (>95% oder Bestätigung nach TeamViewer-Einsicht zur Übernahme des Ergebnisses).
+          <br/>
+          <br/>
         </div>
       </div>
 

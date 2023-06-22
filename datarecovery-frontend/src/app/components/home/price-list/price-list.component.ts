@@ -212,12 +212,16 @@ import { Component } from '@angular/core';
           <div
             class="p-4 text-black md:flex-row bg-silver rounded-b-2xl"
           >
-
-<div class=" text-base md:text-lg">
-Die genannten Kosten entstehen nur nach Erfolg.<br/>
-Alle Preise sind bereits inklusive 19% Mehrwertsteuer.<br/>
+          
+          
+                  
+<div class=" text-base text-right md:text-lg">
+<button
+                    class="px-4 py-2 text-right text-white rounded shadow bg-gray-main" >
+                   <a href="/datenrettung/preise" >
+                  weitere Größen </a>
+                  </button> 
 </div>
-            
 
           </div>
         </div>
