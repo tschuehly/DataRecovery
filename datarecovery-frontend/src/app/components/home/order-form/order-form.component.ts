@@ -27,7 +27,7 @@ import { Order, Product } from '../../../model/model';
                 >
               </option>
             </select>
-            Bereits inkl. 19% Mehrwertsteuer.
+            <div class="text-sm md:text-base">Bereits inkl. 19% Mehrwertsteuer.</div>
           </label>
           <ng-container *ngIf="productSelect.value">
             <label class="py-4 px-12"
@@ -46,7 +46,7 @@ import { Order, Product } from '../../../model/model';
                   {{ replacement.price }}€
                 </option>
               </select>
-              Bereits inkl. 19% Mehrwertsteuer.
+              <div class="text-sm md:text-base">Bereits inkl. 19% Mehrwertsteuer.</div>
             </label>
           </ng-container>
           <ng-container *ngIf="productSelect.value">
