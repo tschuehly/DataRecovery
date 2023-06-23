@@ -294,10 +294,10 @@ class MailService(
             Bereits eine reine Sternebewertung ohne Text hilft mir enorm.<br><br>
             
             Hier können Sie eine Google Bewertung verfassen:<br><br>
-            <a href='https://g.page/r/CctlQMKQ3dQ3EA0/review'>Google Maps</a><br>
+            <a href='https://g.page/r/CctlQMKQ3dQ3EA0/review'>Google Bewertung erstellen</a><br>
 
             Hier können Sie eine Trustpilot Bewertung verfassen (keine Anmeldung notwendig):
-            <a href='https://de.trustpilot.com/review/jungbauerdatenrettung.de'>Google Maps</a><br>
+            <a href='https://de.trustpilot.com/review/jungbauerdatenrettung.de'>Trustpilot Bewertung erstellen</a><br>
             
             Achtung: Die bisher noch gesicherten Daten Ihres geretteten Speichers werden in 7-Tagen restlos von meinen Rechnern entfernt. Bitte melden Sie sich, falls Sie Ihre Daten noch nicht erhalten haben sollten.<br><br></p>
             """
