@@ -72,7 +72,8 @@ import { ScrollService } from 'src/app/services/scroll.service';
                 </div>
               </ng-container>
             </div>
-          </ng-container>
+          </ng-container><br/>
+          <br/>Alle Preise sind bereits inklusive 19% Mehrwertsteuer.
           <div class="flex justify-end pt-8">
             <button
               class="text-base md:text-xl bg-white py-3 px-4 shadow rounded text-black"
@@ -82,9 +83,6 @@ import { ScrollService } from 'src/app/services/scroll.service';
             </button>
             
           </div>
-          <br/>Alle Preise sind bereits inklusive 19% Mehrwertsteuer.  <br/>
-          <br/>
-          <br/>
         </div>
       </div>
 
