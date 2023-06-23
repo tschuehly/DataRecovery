@@ -51,7 +51,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
           style=" 0 2px 25px 0 black"
         >
           <span class="font-bold text-xl md:text-2xl text-white"
-            >Festpreise nach Gesamtkapazität:</span
+            >Festpreise nach Erfolg:</span
           >
           <ng-container *ngFor="let category of categories">
             <div class="mb-2">
@@ -83,7 +83,6 @@ import { ScrollService } from 'src/app/services/scroll.service';
             
           </div>
           <br/>Alle Preise sind bereits inklusive 19% Mehrwertsteuer.  <br/>
-          Bezahlung nur nach Erfolg (95%+ oder Bestätigung nach Einsicht zur Übernahme des Ergebnisses).
           <br/>
           <br/>
         </div>
