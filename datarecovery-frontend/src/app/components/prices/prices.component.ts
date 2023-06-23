@@ -51,7 +51,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
           style=" 0 2px 25px 0 black"
         >
           <span class="font-bold text-xl md:text-2xl text-white"
-            >Festpreise nach Erfolg:</span
+            >Festpreise nach erfolgreichen Abschluss:</span
           >
           <ng-container *ngFor="let category of categories">
             <div class="mb-2">
