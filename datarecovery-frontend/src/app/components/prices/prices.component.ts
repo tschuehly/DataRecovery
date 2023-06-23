@@ -83,7 +83,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
             
           </div>
           <br/>Alle Preise sind bereits inklusive 19% Mehrwertsteuer.  <br/>
-          Bezahlung nur nach Erfolg (>95% oder Bestätigung nach Einsicht zur Übernahme des Ergebnisses).
+          Bezahlung nur nach Erfolg (95%+ oder Bestätigung nach Einsicht zur Übernahme des Ergebnisses).
           <br/>
           <br/>
         </div>
