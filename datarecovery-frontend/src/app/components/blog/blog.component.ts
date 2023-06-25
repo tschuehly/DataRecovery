@@ -11,7 +11,8 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-blog',
   template: `
-    <div
+  <title>Artikelübersicht</title>
+  <div
       class="bg-center bg-gray-main bg-cover bg-no-repeat "
       style="background-image: url('/assets/prices_header.jpg')"
     >
