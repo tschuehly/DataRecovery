@@ -69,8 +69,9 @@ import { ScrollService } from 'src/app/services/scroll.service';
                   <span class="whitespace-nowrap"
                     >{{ product.price | number: '.2':'de' }} €</span
                   >
-                </div><br/><br/>
+                </div>
               </ng-container>
+              <br/><br/>
             </div>
           </ng-container><br/>
           <br/>Alle Preise sind bereits inklusive 19% Mehrwertsteuer.
