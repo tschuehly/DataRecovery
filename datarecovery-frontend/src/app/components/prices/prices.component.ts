@@ -75,6 +75,8 @@ import { ScrollService } from 'src/app/services/scroll.service';
             </div>
           </ng-container>
           <br/>Alle Preise sind bereits inklusive 19% Mehrwertsteuer.
+          <br/>Bei Misserfolg entstehen inkl. Rückversand des Originalspeichers für Sie
+          keine Kosten.
           <div class="flex justify-end pt-8">
             <button
               class="text-base md:text-xl bg-white py-3 px-4 shadow rounded text-black"
