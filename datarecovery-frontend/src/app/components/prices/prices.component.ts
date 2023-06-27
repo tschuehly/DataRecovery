@@ -55,7 +55,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
           >
           <ng-container *ngFor="let category of categories">
             <div class="mb-2">
-              <h2 class="font-semibold text-base md:text-lg mt-4 pb-2">
+              <h2 class="font-semibold text-base md:text-lg mt-4 py-2 pb-2">
                 {{ category.title }}
               </h2>
               <div class="whitespace-pre-wrap text-base md:text-lg" *ngIf="category.description">
@@ -71,7 +71,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
                   >
                 </div>
               </ng-container>
-              <br/>
+              
             </div>
           </ng-container>
           <br/>Alle Preise sind bereits inklusive 19% Mehrwertsteuer.
