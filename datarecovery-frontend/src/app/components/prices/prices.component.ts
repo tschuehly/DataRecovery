@@ -68,8 +68,8 @@ import { ScrollService } from 'src/app/services/scroll.service';
                   {{ category.name }} {{ product.name }}
                   <span class="whitespace-nowrap"
                     >{{ product.price | number: '.2':'de' }} €</span
-                  ><br/><br/>
-                </div>
+                  >
+                </div><br/><br/>
               </ng-container>
             </div>
           </ng-container><br/>
