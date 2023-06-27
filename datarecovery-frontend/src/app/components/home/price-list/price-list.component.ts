@@ -59,7 +59,7 @@ import { Component } from '@angular/core';
                 <div>≤ 128 GB</div>
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
-              <div class="pb-2">(Chip-OFF Methode)<br/></div>
+              <div class="pb-2"><br/></div>
               <div>99,00 €</div>
               <div>149,00 €</div>
               <div>249,00 €</div>
@@ -145,7 +145,7 @@ import { Component } from '@angular/core';
               
               </div>
               <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
-              <div class="pb-2">(kein Statusregister)<br/></div>
+              <div class="pb-2"></div>
               <div>399,00 €</div>
               <div>499,00 €</div>
               <div>599,00 €</div>
