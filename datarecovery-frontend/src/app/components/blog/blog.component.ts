@@ -61,9 +61,6 @@ import { Router } from '@angular/router';
 <span class="whitespace-pre-wrap py-2 text-bold text-sm md:text-lg text-silver">Updated am 28.06.23, 17:37 von Tobias Jungbauer</span> </pre>
 
 <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
-In der heutigen Zeit, in der Speicher immer größer aber gleichzeitig aufgrund des Preisdrucks qualitativ schlechter werden, ist es entscheidend, dass man seine Daten schützt und sich im voraus Gedanken über eine Datensicherung (Backup) macht.
-Bei allen Speichern, ob HDD, SSD oder auch der Smartphonespeicher, ist es keine Frage ob sie kaputt gehen werden, sondern wann.
-
 <h2 class="font-semibold underline text-base md:text-xl">Was ist Datenrettung?</h2>
 Die Datenrettung ist der Prozess der Wiederherstellung verlorener oder beschädigter Daten von verschiedenen Speichermedien wie Festplatten, SSDs, USB-Sticks und Speicherkarten.
 
