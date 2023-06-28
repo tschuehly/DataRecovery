@@ -45,486 +45,84 @@ import { Router } from '@angular/router';
       </div>
     </div>
     <ng-container *ngIf="!articleUrl">
-      <div>
-        <div class="bg-white text-center">
-          <h1 class="text-2xl md:text-4xl  text-black py-5 tracking-wider">Artikelübersicht</h1>
-        </div>
+    <div class="bg-white text-center">
+    <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">
+      Datenrettung - Wie man verlorene Daten wiederherstellt
 
-        <div class="bg-gray-main bg-circuit-board space-y-4 p-6">
-        <div class="bg-white max-w-4xl mx-auto rounded-2xl">
-            <div
-              class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
-            >
-              <div
-                class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                style="background-image: url('/assets/favicon/fav.PNG')"
-              ></div>
-              <div class="flex-1">
-                <a
-                  routerLink="/datenrettung/philosophie"
-                  href="/datenrettung/philosophie"
-                  class="py-2"
-                >
-                  <h2 class="text-2xl font-bold">
-                    Philosophie
-                  </h2>
-                </a>
-                <div class="py-2 italic text-sm md:text-lg">
-                  Updated am 29.03.2022, 04:48 von Tobias Jungbauer
-                </div>
-                <div class="space-y-4">
-                  <h3 class="pb-2">
-                    Was sind meine Ziele für die angebotene Datenrettung? ...
-                  </h3>
-                  <a
-                    routerLink="/datenrettung/philosophie"
-                    href="/datenrettung/philosophie"
-                    class="font-semibold"
-                  >
-                    Mehr lesen →
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white max-w-4xl mx-auto rounded-2xl">
-            <div class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
-            >
-              <a
-                routerLink="/datenrettung/preise"
-                href="/datenrettung/preise"
-              >
-                <div
-                  class="h-40 flex-shrink-0 w-80  my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                  style="background-image: url('/assets/favicon/fav.PNG')"
-                ></div>
-              </a>
+    </h1>
+  </div>
+  <div class="bg-gray-main text-white border-b-2 border-silver pb-8">
+    <div class="container py-8 px-3">
+      <span class=" text-xl md:text-2xl font-bold"
+        >Ihr Ansprechpartner zur Datenrettung
+        </span
+      >
+      <pre class="whitespace-pre-wrap py-2">
+<span class="whitespace-pre-wrap py-2 text-bold text-sm md:text-lg text-silver">Updated am 28.06.23, 17:37 von Tobias Jungbauer</span> </pre>
 
-              <div class="flex-1">
-                <a
-                  routerLink="/datenrettung/preise"
-                  href="/datenrettung/preise"
-                  class="py-2"
-                >
-                  <h2 class="text-2xl font-bold">Datenrettung Kosten</h2>
-                </a>
-                <div class="py-2 text-sm md:text-lg italic">
-                  Updated am 29.11.2021, 16:14 von Tobias Jungbauer
-                </div>
-                <div class="space-y-4">
-                  <h3 class="pb-2">
-                    Wie kommen die Preise zustande? Details zu Kosten aus...
-                  </h3>
-                  <a
-                    routerLink="/datenrettung/preise"
-                    href="/datenrettung/preise"
-                    class="font-semibold"
-                  >
-                    Mehr lesen →
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+<pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
+In der heutigen Zeit, in der Speicher immer größer aber gleichzeitig aufgrund des Preisdrucks qualitativ schlechter werden, ist es entscheidend, dass man seine Daten schützt und sich im voraus Gedanken über eine Datensicherung (Backup) macht.
+Bei allen Speichern, ob HDD, SSD oder auch der Smartphonespeicher, ist es keine Frage ob sie kaputt gehen werden, sondern wann.
 
-          <!-- Artikeleintrag Anfang -->
-          <div class="bg-white max-w-4xl mx-auto rounded-2xl">
-            <div
-              class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
-            >
-              <div
-                class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                style="background-image: url('/assets/favicon/fav.PNG')"
-              ></div>
-              <div class="flex-1">
-                <a
-                  routerLink="/datenrettung/apple-fusion-drive-datenrettung"
-                  href="/datenrettung/apple-fusion-drive-datenrettung"
-                  class="py-2"
-                >
-                  <h2 class="text-2xl font-bold">
-                    Apple Fusion Drive Datenrettung
-                  </h2>
-                </a>
-                <div class="py-2 italic text-sm md:text-lg">
-                  Updated am 03.12.2021, 12:31 von Tobias Jungbauer
-                </div>
-                <div class="space-y-4">
-                  <h3 class="pb-2">
-                    Wie werden Daten von einem Apple Fusion Drive gerettet?...
-                  </h3>
-                  <a
-                    routerLink="/datenrettung/apple-fusion-drive-datenrettung"
-                    href="/datenrettung/apple-fusion-drive-datenrettung"
-                    class="font-semibold"
-                  >
-                    Mehr lesen →
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+<h2 class="font-semibold underline text-base md:text-xl">Was ist Datenrettung?</h2>
+Die Datenrettung ist der Prozess der Wiederherstellung verlorener oder beschädigter Daten von verschiedenen Speichermedien wie Festplatten, SSDs, USB-Sticks und Speicherkarten.
 
-          <!-- Artikeleintrag Ende -->
+Sollte keine Sicherung bestehen ist die Datenrettung bei einem Ausfall die einzige Möglichkeit wieder an die verlorenen Dateien heranzukommen.
 
-          <div class="bg-white max-w-4xl mx-auto rounded-2xl">
-            <div
-              class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
-            >
-              <div
-                class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                style="background-image: url('/assets/favicon/fav.PNG')"
-              ></div>
-              <div class="flex-1">
-                <a
-                  routerLink="/datenrettung/ablauf-der-datenrettung-anhand-eines-beispiels"
-                  href="/datenrettung/ablauf-der-datenrettung-anhand-eines-beispiels"
-                  class="py-2"
-                >
-                  <h2 class="text-2xl font-bold">Ablauf der Datenrettung</h2>
-                </a>
-                <div class="py-2 italic text-sm md:text-lg">
-                  Updated am 03.12.2021, 14:56 von Tobias Jungbauer
-                </div>
-                <div class="space-y-4">
-                  <h3 class="pb-2">
-                    Wie läuft ein Auftrag bei Tobias Jungbauer Datenrettung ab?
-                  </h3>
-                  <a
-                    routerLink="/datenrettung/ablauf-der-datenrettung-anhand-eines-beispiels"
-                    href="/datenrettung/ablauf-der-datenrettung-anhand-eines-beispiels"
-                    class="font-semibold"
-                  >
-                    Mehr lesen →
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+Innenleben einer HDD-Festplatte:
+<img class="h-80 object-cover" src="assets/hdd_arbeitsweise_headreplacement.jpg">
+Wie die Arbeitsweise der HDD-Festplatten Datenrettung ist finden Sie hier: <div class="flex pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="https://www.jungbauerdatenrettung.de/datenrettung/hdd">Arbeitsweise HDD</a></button></div>
 
-          <div class="bg-white max-w-4xl mx-auto rounded-2xl">
-            <div
-              class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
-            >
-              <div
-                class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                style="background-image: url('/assets/favicon/fav.PNG')"
-              ></div>
-              <div class="flex-1">
-                <a
-                  routerLink="/datenrettung/apple-ssd-datenrettung"
-                  href="/datenrettung/apple-ssd-datenrettung"
-                  class="py-2"
-                >
-                  <h2 class="text-2xl font-bold">Apple SSD Datenrettung</h2>
-                </a>
-                <div class="py-2 italic text-sm md:text-lg">
-                  Updated am 11.02.2022, 05:31 von Tobias Jungbauer
-                </div>
-                <div class="space-y-4">
-                  <h3 class="pb-2">
-                    Wie werden Daten von einem Apple SSD-Speicher gerettet?
-                  </h3>
-                  <a
-                    routerLink="/datenrettung/apple-ssd-datenrettung"
-                    href="/datenrettung/apple-ssd-datenrettung"
-                    class="font-semibold"
-                  >
-                    Mehr lesen →
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+<h2 class="font-semibold underline text-base md:text-xl">Was tun bei Datenverlust?</h2>
+Bitte handeln Sie im Falle eines Datenverlustes überlegt und rational. Emotionale Kurzschlussentscheidungen können sowohl Gefahr für die Daten selber bedeuten, als auch dafür sorgen, dass Sie den Speicher an einer unseriösen Firma "zur Analyse" einsenden werden, welche versuchen wird die Situation voll und ganz monetär auszunutzen.
 
-          <div class="bg-white max-w-4xl mx-auto rounded-2xl">
-            <div
-              class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
-            >
-              <div
-                class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                style="background-image: url('/assets/favicon/fav.PNG')"
-              ></div>
-              <div class="flex-1">
-                <a
-                  routerLink="/datenrettung/pc-3000-flash"
-                  href="/datenrettung/pc-3000-flash"
-                  class="py-2"
-                >
-                  <h2 class="text-2xl font-bold">PC-3000-Flash</h2>
-                </a>
-                <div class="py-2 italic text-sm md:text-lg">
-                  Updated am 11.02.2022, 05:41 von Tobias Jungbauer
-                </div>
-                <div class="space-y-4">
-                  <h3 class="pb-2">Wie funktioniert das PC-3000 Flash?</h3>
-                  <a
-                    routerLink="/datenrettung/pc-3000-flash"
-                    href="/datenrettung/pc-3000-flash"
-                    class="font-semibold"
-                  >
-                    Mehr lesen →
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+Insbesondere in Deutschland ist die Situation der Seriosität der Anbieter schlecht. Es werden z.B. vermeitliche Analysen erstellt, ohne dass der Speicher sich überhaupt angesehen wird (HDD-Speicher ungeöffnet -> dennoch Oberflächenschäden festgestellt?).
 
-          <div class="bg-white max-w-4xl mx-auto rounded-2xl">
-            <div
-              class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
-            >
-              <div
-                class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                style="background-image: url('/assets/favicon/fav.PNG')"
-              ></div>
-              <div class="flex-1">
-                <a
-                  routerLink="/datenrettung/pc-3000-udma"
-                  href="/datenrettung/pc-3000-udma"
-                  class="py-2"
-                >
-                  <h2 class="text-2xl font-bold">PC-3000 UDMA</h2>
-                </a>
-                <div class="py-2 italic text-sm md:text-lg">
-                  Updated am 10.04.2022, 17:53 von Tobias Jungbauer
-                </div>
-                <div class="space-y-4">
-                  <h3 class="pb-2">Wie funktioniert das PC-3000 UDMA?</h3>
-                  <a
-                    routerLink="/datenrettung/pc-3000-udma"
-                    href="/datenrettung/pc-3000-udma"
-                    class="font-semibold"
-                  >
-                    Mehr lesen →
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+Einzelne Firmen, welche sich als Marktführer präsentieren, haben trotz der unverschämt hohen Forderungssummen massive Qualitätsprobleme. HDD-Festplatten werden z.B. ohne Handschuhe und funktionierenden Reinraum geöffnet und fahrlässig beschädigt.
 
-          <div class="bg-white max-w-4xl mx-auto rounded-2xl">
-            <div
-              class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
-            >
-              <div
-                class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                style="background-image: url('/assets/favicon/fav.PNG')"
-              ></div>
-              <div class="flex-1">
-                <a
-                  routerLink="/datenrettung/gebrochene-micro-sd-karte"
-                  href="/datenrettung/gebrochene-micro-sd-karte"
-                  class="py-2"
-                >
-                  <h2 class="text-2xl font-bold">
-                    Datenrettung zerbrochene micro SD-Karte
-                  </h2>
-                </a>
-                <div class="py-2 italic text-sm md:text-lg">
-                  Updated am 11.02.2022, 06:12 von Tobias Jungbauer
-                </div>
-                <div class="space-y-4">
-                  <h3 class="pb-2">
-                    Wie werden Daten von gebrochenen micro SD-Karten gerettet?
-                  </h3>
-                  <a
-                    routerLink="/datenrettung/gebrochene-micro-sd-karte"
-                    href="/datenrettung/gebrochene-micro-sd-karte"
-                    class="font-semibold"
-                  >
-                    Mehr lesen →
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+Achten Sie auf Kundenrezensionen und fragen Sie sich, wenn der Anbieter bereits im Marketing unseriös arbeitet (z.B. gibt sich als lokaler Anbieter aus), wie seriös dann die Datenrettung sein wird.
 
-          <div class="bg-white max-w-4xl mx-auto rounded-2xl">
-            <div
-              class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
-            >
-              <div
-                class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                style="background-image: url('/assets/favicon/fav.PNG')"
-              ></div>
-              <div class="flex-1">
-                <a
-                  routerLink="/datenrettung/synology-raid-1-datenrettung"
-                  href="/datenrettung/synology-raid-1-datenrettung"
-                  class="py-2"
-                >
-                  <h2 class="text-2xl font-bold">
-                    Synology RAID 1 Datenrettung
-                  </h2>
-                </a>
-                <div class="py-2 italic text-sm md:text-lg">
-                  Updated am 28.03.2022, 16:51 von Tobias Jungbauer
-                </div>
-                <div class="space-y-4">
-                  <h3 class="pb-2">
-                    Wie funktioniert die Datenrettung bei RAID 1 und warum wird
-                    Sie überhaupt benötigt?
-                  </h3>
-                  <a
-                    routerLink="/datenrettung/synology-raid-1-datenrettung"
-                    href="/datenrettung/synology-raid-1-datenrettung"
-                    class="font-semibold"
-                  >
-                    Mehr lesen →
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="bg-white max-w-4xl mx-auto rounded-2xl">
-            <div
-              class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
-            >
-              <div
-                class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                style="background-image: url('/assets/favicon/fav.PNG')"
-              ></div>
-              <div class="flex-1">
-                <a
-                  routerLink="/datenrettung/qnap-raid-1-datenrettung"
-                  href="/datenrettung/qnap-raid-1-datenrettung"
-                  class="py-2"
-                >
-                  <h2 class="text-2xl font-bold">QNAP RAID 1 Datenrettung</h2>
-                </a>
-                <div class="py-2 italic text-sm md:text-lg">
-                  Updated am 29.03.2022, 22:04 von Tobias Jungbauer
-                </div>
-                <div class="space-y-4">
-                  <h3 class="pb-2">
-                    Wie funktioniert die Datenrettung bei RAID 1 und warum wird
-                    Sie überhaupt benötigt?
-                  </h3>
-                  <a
-                    routerLink="/datenrettung/qnap-raid-1-datenrettung"
-                    href="/datenrettung/qnap-raid-1-datenrettung"
-                    class="font-semibold"
-                  >
-                    Mehr lesen →
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+<h2 class="font-semibold underline text-base md:text-xl">Wie funktioniert die Datenrettung?</h2>
+Die Datenrettung kann ich zwei Kategorien eingeteilt werden:
 
-          <div class="bg-white max-w-4xl mx-auto rounded-2xl">
-            <div
-              class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
-            >
-              <div
-                class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                style="background-image: url('/assets/favicon/fav.PNG')"
-              ></div>
-              <div class="flex-1">
-                <a
-                  routerLink="/datenrettung/externe-festplatte-wird-nicht-erkannt"
-                  href="/datenrettung/externe-festplatte-wird-nicht-erkannt"
-                  class="py-2"
-                >
-                  <h2 class="text-2xl font-bold">Externe HDD wird nicht erkannt (z.B. WD Portable, Toshiba Canvio oder Seagate Expansion)</h2>
-                </a>
-                <div class="py-2 italic text-sm md:text-lg">
-                  Updated am 30.04.2022, 07:23 von Tobias Jungbauer
-                </div>
-                <div class="space-y-4">
-                  <h3 class="pb-2">
-                    Wie funktioniert die Datenrettung bei externen Festplatten, die z.B. auch nicht mehr im BIOS erkannt werden?
-                  </h3>
-                  <a
-                    routerLink="/datenrettung/qnap-raid-1-datenrettung"
-                    href="/datenrettung/qnap-raid-1-datenrettung"
-                    class="font-semibold"
-                  >
-                    Mehr lesen →
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+1. Der nicht-professionellen Datenrettungsbereich: in dieser wird mit Datenrettungssoftware wie z.B. R-Studio, EaseUS oder mit Linux gearbeitet. Der mechanische Zustand als auch der internen Firmware (Servicearea) der Festplatte bleibt unverändert.
+Vorausgesetzt Ihr Speicher macht keine "seltsamen Geräusche" wie "klickende oder fiebsende" Töne können Sie diesen Schritt selber durchführen oder von einem Computergeschäft durchführen lassen.
 
-          <div class="bg-white max-w-4xl mx-auto rounded-2xl">
-            <div
-              class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
-            >
-              <div
-                class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                style="background-image: url('/assets/favicon/fav.PNG')"
-              ></div>
-              <div class="flex-1">
-                <a
-                  routerLink="/datenrettung/sonnet-raid-5-datenrettung"
-                  href="/datenrettung/sonnet-raid-5-datenrettung"
-                  class="py-2"
-                >
-                  <h2 class="text-2xl font-bold">
-                    Sonnet Fusion RX1600Fibre Rackmount RAID Datenrettung
-                  </h2>
-                </a>
-                <div class="py-2 italic text-sm md:text-lg">
-                  Updated am 02.04.2022, 05:04 von Tobias Jungbauer
-                </div>
-                <div class="space-y-4">
-                  <h3 class="pb-2">
-                    Wie funktioniert die Datenrettung bei RAID 5 mit 30
-                    Teilnehmern +?
-                  </h3>
-                  <a
-                    routerLink="/datenrettung/sonnet-raid-5-datenrettung"
-                    href="/datenrettung/sonnet-raid-5-datenrettung"
-                    class="font-semibold"
-                  >
-                    Mehr lesen →
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+Bitte denken Sie auch daran für den Fall einer SSD Datenrettung zuerst den TRIM-Befehl im Betriebssystem zu deaktivieren und allgemein keine Schreibvorgänge in der Userarea (auch kein CHKDSK!) durchzuführen.
 
-          <div class="bg-white max-w-4xl mx-auto rounded-2xl">
-          <div
-            class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
-          >
-            <div
-              class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-              style="background-image: url('/assets/favicon/fav.PNG')"
-            ></div>
-            <div class="flex-1">
-              <a
-                routerLink="/datenrettung/datenrettung-hdd-bei-verkratzer-oberfläche"
-                href="/datenrettung/datenrettung-hdd-bei-verkratzer-oberfläche"
-                class="py-2"
-              >
-                <h2 class="text-2xl font-bold">Datenrettung 2.5“ WD-Festplatte bei verkratzter Oberfläche</h2>
-              </a>
-              <div class="py-2 italic text-sm md:text-lg">
-                Updated am 30.04.2022, 23:31 von Tobias Jungbauer
-              </div>
-              <div class="space-y-4">
-                <h3 class="pb-2">
-                  Wie funktioniert die Datenrettung bei einer verkratzen HDD Festplatte? Ist es wirklich aussichtslos?
-                </h3>
-                <a
-                  routerLink="/datenrettung/datenrettung-hdd-bei-verkratzer-oberfläche"
-                  href="/datenrettung/datenrettung-hdd-bei-verkratzer-oberfläche"
-                  class="font-semibold"
-                >
-                  Mehr lesen →
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+2. Der professionelle Datenrettungsbereich: der entscheidende Unterschied ist, dass in der professionellen Datenrettung der Zustand des Speichers verbessert werden kann. Bei reinen Softwarelösungen sind Sie dem Ist-Zustand des Speichers ausgeliefert.
+Bei HDD Speicher werden z.B. im Reinraum defekte Schreib-/Leseköpfe ausgetauscht und analysiert.
 
-        </div>
-      </div>
-    </ng-container>
+<div class="flex grid-cols-3 flex-wrap gap-4">
+<img class="h-80 object-cover object-center" src="assets/HDDarbeitsweise_head.JPG">
+<img class="h-80 object-cover object-right" src="assets/hdd_arbeitsweise_headreplacement.jpg">
+</div> 
+Ein unterschätzter zweiter Teil ist die Reparatur der Firmware (Servicearea).
+Heutige Speicher haben immer mehr Daten auf weniger Raum - eine wachsende Datendichte. 
+Diese Daten müssen um Langlebigkeit und Tempo gewähren zu können verwaltet werden.
+
+Ohne eine funktionierende Servicearea (Firmware) erhalten wir auch keinen Zugriff auf die Userarea (Nutzerdaten).
+<div class="flex grid-cols-3 flex-wrap gap-4">
+<img class="h-80 object-cover object-left" src="assets/articles/sa-1.jpg">
+<img class="h-80 object-cover object-left" src="assets/articles/sa-2.jpg">
+</div>
+
+<h2 class="font-semibold underline text-base md:text-xl">Wie hoch sind die Kosten für die professionelle Datenrettung?</h2>
+Festpreise aufgeteilt in "<a routerLink="/datenrettung/standard-oder-komplexer-fall" class="underline">Standard-</a>" und "<a routerLink="/datenrettung/standard-oder-komplexer-fall" class="underline">komplexe</a>" Fälle.
+Bezahlung nur nach Erfolg (95%+ oder Bestätigung nach Einsicht zur Übernahme des Ergebnisses).Alle Kosten wie z.B. auch Teilespender oder Leihdatenträger sind bereits im Festpreis inklusive.
+Es handelt sich daher um Endpreise. Es kommen keine weitere Kosten zur Datenrettung hinzu!
+
+Alle Festpreise finden Sie transparent im Voraus unter <a routerLink="/preise" class="underline">Preise</a>.
+
+<h3 class="text-white text-sm md:text-xl py-8">
+Falls Fragen bestehen rufen Sie am besten unter 0841 12840705 an oder schreiben eine Email an: info@jungbauerdatenrettung.de
+</h3><div class="flex pt-4"><button
+class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a
+href="">Zurück zur Startseite</a></button></div>
+    
+  
+    
     <div (click)="handleClick($event)" [innerHTML]="article"></div>
   `,
   styles: [],

@@ -351,8 +351,6 @@ declare let gtag: Function;
               >Datenschutz</a
             ><a href="/rechtliches/agb" class="px-4 text-base md:text-xl"
               >AGB</a>
-              <a href="/datenrettung" class="px-4 text-base md:text-xl"
-              >Blog</a>
           </div>
           <div
             class="col-span-2 pt-5 text-base md:text-lg divide-x-2 divide-silver"
