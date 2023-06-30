@@ -93,9 +93,9 @@ import { Component, OnInit } from '@angular/core';
       <br />
       <br />
       <p></p>
-      <h1 class="text-3xl font-bold">
+      <h2 class="text-3xl font-bold">
         Datenschutz­erklärung zur Nutzung der Website
-      </h1>
+      </h2>
       <h2 class="text-2xl font-semibold mb-2 mt-4">
         1. Datenschutz auf einen Blick
       </h2>
