@@ -171,13 +171,13 @@ import { Order, Product } from '../../../model/model';
             <p class="font-semibold text-base md:text-lg inline text-center py-4">
             zu den <a
               class="font-semibold underline"
-              routerLink="rechtliches/agb"
+              href="rechtliches/agb"
               >allgemeinen Geschäftsbedingungen</a
             >
             und
             <a
               class="font-semibold  underline"
-              routerLink="rechtliches/datenschutz"
+              href="rechtliches/datenschutz"
               >Datenschutzrichtlinien</a
             >
           </p>
