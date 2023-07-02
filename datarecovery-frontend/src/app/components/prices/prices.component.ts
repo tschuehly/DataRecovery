@@ -51,7 +51,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
           style=" 0 2px 25px 0 black"
         >
           <span class="font-bold text-xl md:text-2xl text-white"
-            >Kosten nach erfolgreichen Abschluss:</span
+            >Preise / Kosten nach erfolgreichen Abschluss:</span
           >
           <ng-container *ngFor="let category of categories">
             <div class="mb-2">
@@ -77,6 +77,9 @@ import { ScrollService } from 'src/app/services/scroll.service';
           <br/>Alle Preise sind bereits inklusive 19% Mehrwertsteuer.
           <br/>Bei Misserfolg entstehen inkl. Rückversand des Originalspeichers für Sie
           keine Kosten.
+          <br/><br/>
+          Alle Kosten wie z.B. auch Teilespender oder Leihdatenträger sind bereits im Preis inklusive.<br/>
+          Es handelt sich daher um Endpreise. Es kommen keine weitere Kosten zur Datenrettung hinzu!
           <div class="flex justify-end pt-8">
             <button
               class="text-base md:text-xl bg-white py-3 px-4 shadow rounded text-black"
