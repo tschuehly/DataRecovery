@@ -58,18 +58,18 @@ import { ScrollService } from 'src/app/services/scroll.service';
               <h2 class="font-semibold text-base md:text-lg mt-4 py-2 pb-2">
                 {{ category.title }}
               </h2>
-              <div class="whitespace-pre-wrap text-base md:text-lg" *ngIf="category.description">
+              <h2 class="whitespace-pre-wrap text-base md:text-lg" *ngIf="category.description">
                 {{ category.description }}
-              </div>
+              </h2>
               <ng-container *ngFor="let product of products">
-                <div class="text-base md:text-lg"
+                <h3 class="text-base md:text-lg"
                   *ngIf="product.category.id === category.id && product.price"
                 >
                   {{ category.name }} {{ product.name }}
                   <span class="whitespace-nowrap"
                     >{{ product.price | number: '.2':'de' }} €</span
                   >
-                </div>
+                </h3>
               </ng-container>
               
             </div>
