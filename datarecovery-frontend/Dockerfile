@@ -15,7 +15,7 @@ COPY . ./
 RUN npm run build:prod
 RUN npm run build:scully
 
-FROM nginx:1.19.8-alpine AS prod
+FROM nginx:1.25.1-alpine AS prod
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /datarecovery-frontend/dist/static /usr/share/nginx/html
 
