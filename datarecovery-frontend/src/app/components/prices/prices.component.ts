@@ -76,9 +76,9 @@ import { ScrollService } from 'src/app/services/scroll.service';
           </ng-container>
           
 
-          
+          <br/>
           <h3 class="font-bold text-xl md:text-2xl text-white"
-          >Alleinstellungsmerkmal: keine versteckte Kosten:</h3
+          >Alleinstellungsmerkmal: keine versteckte Kosten</h3
         >
           Alle Kosten wie z.B. auch Teilespender oder Leihdatenträger sind bereits im Festpreis inklusive.<br/>
           Es handelt sich daher um Endpreise. Es kommen keine weitere Kosten zur Datenrettung hinzu!
@@ -88,7 +88,10 @@ import { ScrollService } from 'src/app/services/scroll.service';
           keine Kosten.
           <br/>
           Als Erfolg definiert ist: 95%+ oder nach Einsicht Bestätigung zur Übernahme des Ergebnisses der Datenrettung.
-          <br/>
+          <br/><br/>
+          Ich sehe ein transparentes und faires Vorgehen, vermutlich auch wie Sie, als selbstverändlich an. <br/>
+          Ansonsten Martküblich in der Datenrettung sind aber bedauerlicherweise untransparente "ab X€" Preise oder<br/>
+          die Übernahme von "Intialisierungskosten", "Analysekosten" oder "Teilespenderkosten" auch bei Misserfolg.<br/>
           <br/>Alle Preise sind bereits inklusive 19% Mehrwertsteuer.
 
           <div class="flex justify-end pt-8">
