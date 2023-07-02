@@ -77,6 +77,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
           <br/>Alle Preise sind bereits inklusive 19% Mehrwertsteuer.
           <br/>
           <br/>
+          <br/>
           <h3 class="font-bold text-xl md:text-2xl text-white"
           >Alleinstellungsmerkmal: Festpreise ohne versteckte Kosten</h3
         >
@@ -94,7 +95,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
           <br/>Sie zahlen mit unseren Preisen, unabhängig der Wichtigkeit der Daten, einen fair kalkulierten Mittelwert des Datenrettungsaufwandes. <br/>
           
           
-
+          <br/>
           <div class="flex justify-end pt-8">
          
             <button
@@ -103,7 +104,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
             >
             ➔ zum Auftragsformular
             </button>
-            
+            <br/>
           </div>
         </div>
       </div>
