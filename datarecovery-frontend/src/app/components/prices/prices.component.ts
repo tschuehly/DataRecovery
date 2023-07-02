@@ -74,25 +74,26 @@ import { ScrollService } from 'src/app/services/scroll.service';
               
             </div>
           </ng-container>
-          
-
+          <br/>Alle Preise sind bereits inklusive 19% Mehrwertsteuer.
+          <br/>
           <br/>
           <h3 class="font-bold text-xl md:text-2xl text-white"
-          >Alleinstellungsmerkmal: keine versteckte Kosten</h3
+          >Alleinstellungsmerkmal: Festpreise ohne versteckte Kosten</h3
         >
           Alle Kosten wie z.B. auch Teilespender oder Leihdatenträger sind bereits im Festpreis inklusive.<br/>
           Es handelt sich daher um Endpreise. Es kommen keine weitere Kosten zur Datenrettung hinzu!
           <br/>
 
-          <br/>Bei Misserfolg entstehen inkl. Rückversand des Originalspeichers für Sie
-          keine Kosten.
+          <br/>Bei Misserfolg entstehen inkl. Rückversand des Originalspeichers keine Kosten.
           <br/>
-          Als Erfolg definiert ist: 95%+ oder nach Einsicht Bestätigung zur Übernahme des Ergebnisses der Datenrettung.
+          Als Erfolg definiert ist: 95%+ oder nach Einsicht die Bestätigung zur Übernahme des Ergebnisses der Datenrettung.
           <br/><br/>
-          Ich sehe ein transparentes und faires Vorgehen, vermutlich auch wie Sie, als selbstverändlich an. <br/>
-          Ansonsten Martküblich in der Datenrettung sind aber bedauerlicherweise untransparente "ab X€" Preise oder<br/>
+          Ich sehe ein transparentes und faires Vorgehen, wie auch Sie, als selbstverständlich an. <br/>
+          Marktüblich in der Datenrettung sind jedoch im Kontrast untransparente "ab X€" Preise (tatsächliche Preise bis zu 5x höher) oder<br/>
           die Übernahme von "Intialisierungskosten", "Analysekosten" oder "Teilespenderkosten" auch bei Misserfolg.<br/>
-          <br/>Alle Preise sind bereits inklusive 19% Mehrwertsteuer.
+          <br/>Sie zahlen mit unseren Preisen, unabhängig der Wichtigkeit der Daten, einen fair kalkulierten Mittelwert des Datenrettungsaufwandes. <br/>
+          
+          
 
           <div class="flex justify-end pt-8">
          
