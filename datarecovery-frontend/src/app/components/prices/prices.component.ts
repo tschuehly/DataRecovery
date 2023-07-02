@@ -50,9 +50,9 @@ import { ScrollService } from 'src/app/services/scroll.service';
           class="bg-gray-main px-4 py-12"
           style=" 0 2px 25px 0 black"
         >
-        <h2 class="font-bold text-xl md:text-2xl text-white"
+        <h2 class="font-bold text-xl md:text-2xl text-white pb-2"
         >Alleinstellungsmerkmal: Festpreise ohne versteckte Kosten</h2>
-        <div class="py-2 pb-2">
+        
         Alle Kosten, z.B. auch Teilespender oder Leihdatenträger, sind im Festpreis bereits inklusive.<br/>
         Es handelt sich um Endpreise. Es kommen keine weitere Kosten zur Datenrettung hinzu.
         <br/>
