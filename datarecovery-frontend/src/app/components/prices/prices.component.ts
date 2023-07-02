@@ -53,16 +53,15 @@ import { ScrollService } from 'src/app/services/scroll.service';
         <h2 class="font-bold text-xl md:text-2xl text-white"
         >Alleinstellungsmerkmal: Festpreise ohne versteckte Kosten</h2>
         <div class="py-2 pb-2">
-        Alle Kosten wie z.B. auch Teilespender oder Leihdatenträger sind bereits im Festpreis inklusive.<br/>
+        Alle Kosten, z.B. auch Teilespender oder Leihdatenträger, sind im Festpreis bereits inklusive.<br/>
         Es handelt sich um Endpreise. Es kommen keine weitere Kosten zur Datenrettung hinzu.
         <br/>
 
         <br/>Bei Misserfolg entstehen inkl. Rückversand des Originalspeichers keine Kosten.
         <br/>
-        Als Erfolg definiert ist: 95%+ oder nach Einsicht die Bestätigung zur Übernahme des Ergebnisses der Datenrettung.
+        Als Erfolg gilt 95%+ oder nach Ferneinsicht die Bestätigung der Übernahme der Datenrettung.
         <br/><br/>
-        Ich sehe ein transparentes und faires Vorgehen, wie auch Sie, als selbstverständlich an. <br/>
-        Marktüblich in der Datenrettung sind jedoch im Kontrast untransparente "ab X€" Preise (tatsächliche Preise bis zu 5x höher) oder<br/>
+        Marktüblich in der Datenrettung sind im Kontrast untransparente "ab X€" Preise (tatsächliche Preise bis zu 5x höher) oder<br/>
         die Übernahme von "Intialisierungskosten", "Analysekosten" oder "Teilespenderkosten" auch bei Misserfolg.<br/>
         <br/>Sie zahlen mit den Preisen, unabhängig der Wichtigkeit der Daten, einen fair kalkulierten Mittelwert des Datenrettungsaufwandes. <br/>
         <br/>
