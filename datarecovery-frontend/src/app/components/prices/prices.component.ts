@@ -82,7 +82,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
           >Alleinstellungsmerkmal: Festpreise ohne versteckte Kosten</h3
         >
           Alle Kosten wie z.B. auch Teilespender oder Leihdatenträger sind bereits im Festpreis inklusive.<br/>
-          Es handelt sich daher um Endpreise. Es kommen keine weitere Kosten zur Datenrettung hinzu!
+          Es handelt sich um Endpreise. Es kommen keine weitere Kosten zur Datenrettung hinzu!
           <br/>
 
           <br/>Bei Misserfolg entstehen inkl. Rückversand des Originalspeichers keine Kosten.
