@@ -18,7 +18,7 @@ import { FormControl } from '@angular/forms';
         </button>
       </div>
       <div *ngIf="!edit" class="col-span-2 text-center pb-4">
-        <h3 class="text-2xl font-bold">Status: {{ order.trackingState }}</h3>
+        <span class="text-2xl font-bold">Status: {{ order.trackingState }}</span>
       </div>
       <div class="flex flex-col md:grid md: grid-cols-2 text-lg  text-center">
         <div *ngIf="order.customer as c" class="flex flex-col">
@@ -156,9 +156,9 @@ import { FormControl } from '@angular/forms';
                 <div
                   class="bg-gray-main col-start-2 col-span-10 p-4 rounded-xl my-4 mr-auto shadow-md"
                 >
-                  <h3 class="font-semibold text-lg my-1">
+                  <div class="font-semibold text-lg my-1">
                     {{ update.date | date: 'd.M.y' }} {{ update.title }}:
-                  </h3>
+                  </div>
                   <p class="leading-tight text-justify w-full"></p>
                   <ng-container [ngSwitch]="update.title">
                     <p *ngSwitchCase="orderStateEnum.firstAnalysis">
