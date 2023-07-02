@@ -61,7 +61,7 @@ import { Router } from '@angular/router';
               ></div>
               <div class="flex-1">
                 <a
-                  routerLink="/datenrettung/philosophie"
+                  href="/datenrettung/philosophie"
                   href="/datenrettung/philosophie"
                   class="py-2"
                 >
@@ -77,7 +77,7 @@ import { Router } from '@angular/router';
                     Was sind meine Ziele für die angebotene Datenrettung? ...
                   </h3>
                   <a
-                    routerLink="/datenrettung/philosophie"
+                    href="/datenrettung/philosophie"
                     href="/datenrettung/philosophie"
                     class="font-semibold"
                   >
@@ -91,7 +91,7 @@ import { Router } from '@angular/router';
             <div class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
             >
               <a
-                routerLink="/datenrettung/preise"
+                href="/datenrettung/preise"
                 href="/datenrettung/preise"
               >
                 <div
@@ -102,7 +102,7 @@ import { Router } from '@angular/router';
 
               <div class="flex-1">
                 <a
-                  routerLink="/datenrettung/preise"
+                  href="/datenrettung/preise"
                   href="/datenrettung/preise"
                   class="py-2"
                 >
@@ -116,7 +116,7 @@ import { Router } from '@angular/router';
                     Wie kommen die Preise zustande? Details zu Kosten aus...
                   </h3>
                   <a
-                    routerLink="/datenrettung/preise"
+                    href="/datenrettung/preise"
                     href="/datenrettung/preise"
                     class="font-semibold"
                   >
@@ -138,7 +138,7 @@ import { Router } from '@angular/router';
               ></div>
               <div class="flex-1">
                 <a
-                  routerLink="/datenrettung/apple-fusion-drive-datenrettung"
+                  href="/datenrettung/apple-fusion-drive-datenrettung"
                   href="/datenrettung/apple-fusion-drive-datenrettung"
                   class="py-2"
                 >
@@ -154,7 +154,7 @@ import { Router } from '@angular/router';
                     Wie werden Daten von einem Apple Fusion Drive gerettet?...
                   </h3>
                   <a
-                    routerLink="/datenrettung/apple-fusion-drive-datenrettung"
+                    href="/datenrettung/apple-fusion-drive-datenrettung"
                     href="/datenrettung/apple-fusion-drive-datenrettung"
                     class="font-semibold"
                   >
@@ -177,7 +177,7 @@ import { Router } from '@angular/router';
               ></div>
               <div class="flex-1">
                 <a
-                  routerLink="/datenrettung/ablauf-der-datenrettung-anhand-eines-beispiels"
+                  href="/datenrettung/ablauf-der-datenrettung-anhand-eines-beispiels"
                   href="/datenrettung/ablauf-der-datenrettung-anhand-eines-beispiels"
                   class="py-2"
                 >
@@ -191,7 +191,7 @@ import { Router } from '@angular/router';
                     Wie läuft ein Auftrag bei Tobias Jungbauer Datenrettung ab?
                   </h3>
                   <a
-                    routerLink="/datenrettung/ablauf-der-datenrettung-anhand-eines-beispiels"
+                    href="/datenrettung/ablauf-der-datenrettung-anhand-eines-beispiels"
                     href="/datenrettung/ablauf-der-datenrettung-anhand-eines-beispiels"
                     class="font-semibold"
                   >
@@ -212,7 +212,7 @@ import { Router } from '@angular/router';
               ></div>
               <div class="flex-1">
                 <a
-                  routerLink="/datenrettung/apple-ssd-datenrettung"
+                  href="/datenrettung/apple-ssd-datenrettung"
                   href="/datenrettung/apple-ssd-datenrettung"
                   class="py-2"
                 >
@@ -226,7 +226,7 @@ import { Router } from '@angular/router';
                     Wie werden Daten von einem Apple SSD-Speicher gerettet?
                   </h3>
                   <a
-                    routerLink="/datenrettung/apple-ssd-datenrettung"
+                    href="/datenrettung/apple-ssd-datenrettung"
                     href="/datenrettung/apple-ssd-datenrettung"
                     class="font-semibold"
                   >
@@ -247,7 +247,7 @@ import { Router } from '@angular/router';
               ></div>
               <div class="flex-1">
                 <a
-                  routerLink="/datenrettung/pc-3000-flash"
+                  href="/datenrettung/pc-3000-flash"
                   href="/datenrettung/pc-3000-flash"
                   class="py-2"
                 >
@@ -259,7 +259,7 @@ import { Router } from '@angular/router';
                 <div class="space-y-4">
                   <h3 class="pb-2">Wie funktioniert das PC-3000 Flash?</h3>
                   <a
-                    routerLink="/datenrettung/pc-3000-flash"
+                    href="/datenrettung/pc-3000-flash"
                     href="/datenrettung/pc-3000-flash"
                     class="font-semibold"
                   >
@@ -280,7 +280,7 @@ import { Router } from '@angular/router';
               ></div>
               <div class="flex-1">
                 <a
-                  routerLink="/datenrettung/pc-3000-udma"
+                  href="/datenrettung/pc-3000-udma"
                   href="/datenrettung/pc-3000-udma"
                   class="py-2"
                 >
@@ -292,7 +292,7 @@ import { Router } from '@angular/router';
                 <div class="space-y-4">
                   <h3 class="pb-2">Wie funktioniert das PC-3000 UDMA?</h3>
                   <a
-                    routerLink="/datenrettung/pc-3000-udma"
+                    href="/datenrettung/pc-3000-udma"
                     href="/datenrettung/pc-3000-udma"
                     class="font-semibold"
                   >
@@ -313,7 +313,7 @@ import { Router } from '@angular/router';
               ></div>
               <div class="flex-1">
                 <a
-                  routerLink="/datenrettung/gebrochene-micro-sd-karte"
+                  href="/datenrettung/gebrochene-micro-sd-karte"
                   href="/datenrettung/gebrochene-micro-sd-karte"
                   class="py-2"
                 >
@@ -329,7 +329,7 @@ import { Router } from '@angular/router';
                     Wie werden Daten von gebrochenen micro SD-Karten gerettet?
                   </h3>
                   <a
-                    routerLink="/datenrettung/gebrochene-micro-sd-karte"
+                    href="/datenrettung/gebrochene-micro-sd-karte"
                     href="/datenrettung/gebrochene-micro-sd-karte"
                     class="font-semibold"
                   >
@@ -350,7 +350,7 @@ import { Router } from '@angular/router';
               ></div>
               <div class="flex-1">
                 <a
-                  routerLink="/datenrettung/synology-raid-1-datenrettung"
+                  href="/datenrettung/synology-raid-1-datenrettung"
                   href="/datenrettung/synology-raid-1-datenrettung"
                   class="py-2"
                 >
@@ -367,7 +367,7 @@ import { Router } from '@angular/router';
                     Sie überhaupt benötigt?
                   </h3>
                   <a
-                    routerLink="/datenrettung/synology-raid-1-datenrettung"
+                    href="/datenrettung/synology-raid-1-datenrettung"
                     href="/datenrettung/synology-raid-1-datenrettung"
                     class="font-semibold"
                   >
@@ -388,7 +388,7 @@ import { Router } from '@angular/router';
               ></div>
               <div class="flex-1">
                 <a
-                  routerLink="/datenrettung/qnap-raid-1-datenrettung"
+                  href="/datenrettung/qnap-raid-1-datenrettung"
                   href="/datenrettung/qnap-raid-1-datenrettung"
                   class="py-2"
                 >
@@ -403,7 +403,7 @@ import { Router } from '@angular/router';
                     Sie überhaupt benötigt?
                   </h3>
                   <a
-                    routerLink="/datenrettung/qnap-raid-1-datenrettung"
+                    href="/datenrettung/qnap-raid-1-datenrettung"
                     href="/datenrettung/qnap-raid-1-datenrettung"
                     class="font-semibold"
                   >
@@ -424,7 +424,7 @@ import { Router } from '@angular/router';
               ></div>
               <div class="flex-1">
                 <a
-                  routerLink="/datenrettung/externe-festplatte-wird-nicht-erkannt"
+                  href="/datenrettung/externe-festplatte-wird-nicht-erkannt"
                   href="/datenrettung/externe-festplatte-wird-nicht-erkannt"
                   class="py-2"
                 >
@@ -438,7 +438,7 @@ import { Router } from '@angular/router';
                     Wie funktioniert die Datenrettung bei externen Festplatten, die z.B. auch nicht mehr im BIOS erkannt werden?
                   </h3>
                   <a
-                    routerLink="/datenrettung/qnap-raid-1-datenrettung"
+                    href="/datenrettung/qnap-raid-1-datenrettung"
                     href="/datenrettung/qnap-raid-1-datenrettung"
                     class="font-semibold"
                   >
@@ -459,7 +459,7 @@ import { Router } from '@angular/router';
               ></div>
               <div class="flex-1">
                 <a
-                  routerLink="/datenrettung/sonnet-raid-5-datenrettung"
+                  href="/datenrettung/sonnet-raid-5-datenrettung"
                   href="/datenrettung/sonnet-raid-5-datenrettung"
                   class="py-2"
                 >
@@ -476,7 +476,7 @@ import { Router } from '@angular/router';
                     Teilnehmern +?
                   </h3>
                   <a
-                    routerLink="/datenrettung/sonnet-raid-5-datenrettung"
+                    href="/datenrettung/sonnet-raid-5-datenrettung"
                     href="/datenrettung/sonnet-raid-5-datenrettung"
                     class="font-semibold"
                   >
@@ -497,7 +497,7 @@ import { Router } from '@angular/router';
             ></div>
             <div class="flex-1">
               <a
-                routerLink="/datenrettung/datenrettung-hdd-bei-verkratzer-oberfläche"
+                href="/datenrettung/datenrettung-hdd-bei-verkratzer-oberfläche"
                 href="/datenrettung/datenrettung-hdd-bei-verkratzer-oberfläche"
                 class="py-2"
               >
@@ -511,7 +511,7 @@ import { Router } from '@angular/router';
                   Wie funktioniert die Datenrettung bei einer verkratzen HDD Festplatte? Ist es wirklich aussichtslos?
                 </h3>
                 <a
-                  routerLink="/datenrettung/datenrettung-hdd-bei-verkratzer-oberfläche"
+                  href="/datenrettung/datenrettung-hdd-bei-verkratzer-oberfläche"
                   href="/datenrettung/datenrettung-hdd-bei-verkratzer-oberfläche"
                   class="font-semibold"
                 >
