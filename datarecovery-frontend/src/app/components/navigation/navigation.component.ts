@@ -31,7 +31,7 @@ declare let gtag: Function;
           <a href="/">
             <img
               class="h-20 object-contain"
-              src="/assets/brand black thick(1).svg"
+              src="/assets/brand black thick(1).svg" alt="backround"
             />
           </a>
           <button
@@ -41,6 +41,7 @@ declare let gtag: Function;
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-menu-2"
+              alt="icon"
               width="40"
               height="40"
               viewBox="0 0 24 24"
@@ -289,6 +290,7 @@ declare let gtag: Function;
             <iframe
               id="myFrame"
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10688.664885486834!2d11.1017109!3d47.9525097!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x37d4dd90c24065cb!2sTobias%20Jungbauer%20Datenrettung%20-%20AmmerseeDatenrettung.de!5e0!3m2!1sde!2sde!4v1604148030912!5m2!1sde!2sde"
+              alt="Bewertung"
               width="{{ innerWidth }}"
               height="300"
               allowfullscreen=""

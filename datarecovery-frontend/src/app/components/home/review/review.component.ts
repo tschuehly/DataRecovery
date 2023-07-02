@@ -82,7 +82,7 @@ import {Meta} from "@angular/platform-browser";
           class="hidden md:block w-7 h-7 md:w-12 md:h-12 shrink-0 bg-gray-main rounded-full ml-4"
           (click)="previousReview()"
         >
-          <img src="/assets/arrow-left.svg" />
+          <img src="/assets/arrow-left.svg" alt="left arrow"/>
         </button>
         <div class="px-0 py-4 flex flex-col justify-evenly items-center md:flex-row gap-4" *ngIf="this.reviews != undefined">
           <div class="rounded-xl bg-gray-main p-6 mx-6 md:mx-0">
