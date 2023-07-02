@@ -20,11 +20,11 @@ import { Router } from '@angular/router';
         <span
           class="text-2xl md:text-4xl  leading-relaxed text-center bg-gray-main p-7" >
 
-          <h3
+          <h2
                 class="font-semibold pt-4 md:mt-0 mb-2 text-2xl md:text-3xl text-center text-gray-50"
               >
                 Kontakt
-              </h3>
+              </h2>
               <p
                 class=" text-center text-lg md:text-xl text-white"
               >

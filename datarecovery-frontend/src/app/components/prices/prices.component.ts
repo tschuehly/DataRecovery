@@ -15,11 +15,11 @@ import { ScrollService } from 'src/app/services/scroll.service';
         <span
           class="text-2xl md:text-4xl  leading-relaxed text-center bg-gray-main p-7" >
 
-          <h3
+          <h2
                 class="font-semibold pt-4 md:mt-0 mb-2 text-2xl md:text-3xl text-center text-gray-50"
               >
                 Kontakt
-              </h3>
+              </h2>
               <p
                 class=" text-center text-lg md:text-xl text-white"
               >
@@ -50,8 +50,8 @@ import { ScrollService } from 'src/app/services/scroll.service';
           class="bg-gray-main px-4 py-12"
           style=" 0 2px 25px 0 black"
         >
-          <span class="font-bold text-xl md:text-2xl text-white"
-            >Preise / Kosten nach erfolgreichen Abschluss:</span
+          <h2 class="font-bold text-xl md:text-2xl text-white"
+            >Festpreise nach erfolgreichen Abschluss:</h2
           >
           <ng-container *ngFor="let category of categories">
             <div class="mb-2">
@@ -62,25 +62,37 @@ import { ScrollService } from 'src/app/services/scroll.service';
                 {{ category.description }}
               </h2>
               <ng-container *ngFor="let product of products">
-                <h3 class="text-base md:text-lg"
+                <h2 class="text-base md:text-lg"
                   *ngIf="product.category.id === category.id && product.price"
                 >
                   {{ category.name }} {{ product.name }}
                   <span class="whitespace-nowrap"
                     >{{ product.price | number: '.2':'de' }} €</span
                   >
-                </h3>
+                </h2>
               </ng-container>
               
             </div>
           </ng-container>
-          <br/>Alle Preise sind bereits inklusive 19% Mehrwertsteuer.
+          
+
+          
+          <h3 class="font-bold text-xl md:text-2xl text-white"
+          >Alleinstellungsmerkmal: keine versteckte Kosten:</h3
+        >
+          Alle Kosten wie z.B. auch Teilespender oder Leihdatenträger sind bereits im Festpreis inklusive.<br/>
+          Es handelt sich daher um Endpreise. Es kommen keine weitere Kosten zur Datenrettung hinzu!
+          <br/>
+
           <br/>Bei Misserfolg entstehen inkl. Rückversand des Originalspeichers für Sie
           keine Kosten.
-          <br/><br/>
-          Alle Kosten wie z.B. auch Teilespender oder Leihdatenträger sind bereits im Preis inklusive.<br/>
-          Es handelt sich daher um Endpreise. Es kommen keine weitere Kosten zur Datenrettung hinzu!
+          <br/>
+          Als Erfolg definiert ist: 95%+ oder nach Einsicht Bestätigung zur Übernahme des Ergebnisses der Datenrettung.
+          <br/>
+          <br/>Alle Preise sind bereits inklusive 19% Mehrwertsteuer.
+
           <div class="flex justify-end pt-8">
+         
             <button
               class="text-base md:text-xl bg-white py-3 px-4 shadow rounded text-black"
               (click)="this.scrollService.scrollToOrder()"
