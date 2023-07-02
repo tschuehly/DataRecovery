@@ -98,7 +98,7 @@ import { Component } from '@angular/core';
             </div>
             <div class="grid grid-cols-2 py-4">
               <h2 class="col-span-2 p-4 text-xl">
-                Beschädigte HDD-Festplatte
+                Beschädigte HDD Festplatte
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
               <div class="pb-2">Standardfälle <a href="/datenrettung/standard-oder-komplexer-fall">ⓘ</a>:</div>
@@ -127,7 +127,7 @@ import { Component } from '@angular/core';
             </div>
             <div class="grid grid-cols-2 py-4">
               <h2 class="col-span-2 p-4 text-xl">
-                Defekter SSD-Speicher
+                Defekter SSD Speicher
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
               <div class="pb-2">Standardfälle <a href="/datenrettung/standard-oder-komplexer-fall">ⓘ</a>:</div>
