@@ -50,7 +50,25 @@ import { ScrollService } from 'src/app/services/scroll.service';
           class="bg-gray-main px-4 py-12"
           style=" 0 2px 25px 0 black"
         >
-          <h2 class="font-bold text-xl md:text-2xl text-white"
+        <h2 class="font-bold text-xl md:text-2xl text-white"
+        >Alleinstellungsmerkmal: Festpreise ohne versteckte Kosten</h2
+      >
+        Alle Kosten wie z.B. auch Teilespender oder Leihdatenträger sind bereits im Festpreis inklusive.<br/>
+        Es handelt sich um Endpreise. Es kommen keine weitere Kosten zur Datenrettung hinzu.
+        <br/>
+
+        <br/>Bei Misserfolg entstehen inkl. Rückversand des Originalspeichers keine Kosten.
+        <br/>
+        Als Erfolg definiert ist: 95%+ oder nach Einsicht die Bestätigung zur Übernahme des Ergebnisses der Datenrettung.
+        <br/><br/>
+        Ich sehe ein transparentes und faires Vorgehen, wie auch Sie, als selbstverständlich an. <br/>
+        Marktüblich in der Datenrettung sind jedoch im Kontrast untransparente "ab X€" Preise (tatsächliche Preise bis zu 5x höher) oder<br/>
+        die Übernahme von "Intialisierungskosten", "Analysekosten" oder "Teilespenderkosten" auch bei Misserfolg.<br/>
+        <br/>Sie zahlen mit den Preisen, unabhängig der Wichtigkeit der Daten, einen fair kalkulierten Mittelwert des Datenrettungsaufwandes. <br/>
+        <br/>
+        <br/>
+        
+        <h2 class="font-bold text-xl md:text-2xl text-white"
             >Festpreise nach erfolgreichen Abschluss:</h2
           >
           <ng-container *ngFor="let category of categories">
@@ -78,22 +96,6 @@ import { ScrollService } from 'src/app/services/scroll.service';
           <br/>
           <br/>
           <br/>
-          <h3 class="font-bold text-xl md:text-2xl text-white"
-          >Alleinstellungsmerkmal: Festpreise ohne versteckte Kosten</h3
-        >
-          Alle Kosten wie z.B. auch Teilespender oder Leihdatenträger sind bereits im Festpreis inklusive.<br/>
-          Es handelt sich um Endpreise. Es kommen keine weitere Kosten zur Datenrettung hinzu!
-          <br/>
-
-          <br/>Bei Misserfolg entstehen inkl. Rückversand des Originalspeichers keine Kosten.
-          <br/>
-          Als Erfolg definiert ist: 95%+ oder nach Einsicht die Bestätigung zur Übernahme des Ergebnisses der Datenrettung.
-          <br/><br/>
-          Ich sehe ein transparentes und faires Vorgehen, wie auch Sie, als selbstverständlich an. <br/>
-          Marktüblich in der Datenrettung sind jedoch im Kontrast untransparente "ab X€" Preise (tatsächliche Preise bis zu 5x höher) oder<br/>
-          die Übernahme von "Intialisierungskosten", "Analysekosten" oder "Teilespenderkosten" auch bei Misserfolg.<br/>
-          <br/>Sie zahlen mit unseren Preisen, unabhängig der Wichtigkeit der Daten, einen fair kalkulierten Mittelwert des Datenrettungsaufwandes. <br/>
-          
           
           <br/>
           <div class="flex justify-end pt-8">
