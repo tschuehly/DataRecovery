@@ -69,7 +69,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
         <br/>
         
         <h2 class="font-bold text-xl md:text-2xl text-white"
-            >Festpreise nach erfolgreichen Abschluss:</h2
+            >Festpreise:</h2
           >
           <ng-container *ngFor="let category of categories">
             <div class="mb-2">
