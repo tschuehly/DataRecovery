@@ -70,6 +70,7 @@ import { Component } from '@angular/core';
                 <source
                   srcset="/assets/index/flash3.webp"
                   media="(min-width: 600px)"
+                  alt="SD-Karte Rettung"
                 />
                 <img
                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
@@ -86,6 +87,7 @@ import { Component } from '@angular/core';
                 <source
                   srcset="/assets/index/hdd_price.webp"
                   media="(min-width: 1024px)"
+                  alt="Festplatte Datenrettung"
                 />
                 <img
                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
@@ -158,6 +160,7 @@ import { Component } from '@angular/core';
                 <source
                   srcset="/assets/index/ssd_price.webp"
                   media="(min-width: 1024px)"
+                  alt="SSD Datenrettung"
                 />
                 <img
                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
@@ -200,6 +203,7 @@ import { Component } from '@angular/core';
                 <source
                   srcset="/assets/index/raid_symbol.webp"
                   media="(min-width: 862px)"
+                  alt="RAID Datenrettung"
                 />
                 <img
                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
