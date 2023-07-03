@@ -68,7 +68,7 @@ import { Order, Product } from '../../../model/model';
                 formControlName="monthlyPayment"
                 required
               >
-                <option selected value="1">Auf Rechnung,  21 Tage Zahlungsfrist nach Abschluss der Datenrettung</option>
+                <option selected value="1">Auf Rechnung,  14 Tage Zahlungsfrist nach Abschluss der Datenrettung</option>
               </select>
             </label>
           </ng-container>
