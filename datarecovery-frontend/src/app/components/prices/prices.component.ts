@@ -90,7 +90,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
 
         <br/>Bei Misserfolg entstehen inkl. Rückversand des Originalspeichers keine Kosten.
         <br/>
-        Als Erfolg gilt 95%+ oder nach Ferneinsicht die Bestätigung zur Übernahme.
+        Als Erfolg gilt: 95%+ oder nach Ferneinsicht die Bestätigung der Übernahme der Datenrettung.
         <br/><br/>
         Marktüblich in der Datenrettung sind im Kontrast untransparente "ab X€" Preise (tatsächliche Preise bis zu 5x höher) oder<br/>
         die Anteilhabe von "Intialisierungskosten", "Analysekosten" oder "Teilespenderkosten" auch bei Misserfolg.<br/>
