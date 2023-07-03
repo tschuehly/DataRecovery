@@ -337,7 +337,7 @@ declare let gtag: Function;
                 class=" text-lg md:text-xl  text-white text-center"
               >
                 Tobias Jungbauer<br />
-                Datenrettung<br />
+                Datenrettungsdienst<br />
                 Am Stein 9<br />
                 85049 Ingolstadt<br />
               </p>
