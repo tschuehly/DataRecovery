@@ -497,8 +497,8 @@ import { Router } from '@angular/router';
             ></div>
             <div class="flex-1">
               <a
-                href="/datenrettung/datenrettung-hdd-bei-verkratzer-oberfläche"
-                href="/datenrettung/datenrettung-hdd-bei-verkratzer-oberfläche"
+                href="/datenrettung/hdd-bei-verkratzer-oberfläche"
+                href="/datenrettung/hdd-bei-verkratzer-oberfläche"
                 class="py-2"
               >
                 <h2 class="text-2xl font-bold">Datenrettung 2.5“ WD-Festplatte bei verkratzter Oberfläche</h2>
@@ -511,8 +511,8 @@ import { Router } from '@angular/router';
                   Wie funktioniert die Datenrettung bei einer verkratzen HDD Festplatte? Ist es wirklich aussichtslos?
                 </h3>
                 <a
-                  href="/datenrettung/datenrettung-hdd-bei-verkratzer-oberfläche"
-                  href="/datenrettung/datenrettung-hdd-bei-verkratzer-oberfläche"
+                  href="/datenrettung/hdd-bei-verkratzer-oberfläche"
+                  href="/datenrettung/hdd-bei-verkratzer-oberfläche"
                   class="font-semibold"
                 >
                   Mehr lesen →
