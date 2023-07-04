@@ -30,50 +30,44 @@
 <span class="whitespace-pre-wrap py-2 text-bold text-sm md:text-lg text-silver">Updated am 16.04.23, 07:11 von Tobias Jungbauer</span> </pre>
 
 <pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
-RAID (Redundant Array of Independent Disks) ist eine Technologie, die mehrere Festplatten miteinander verbindet, um die Leistung und Zuverlässigkeit von Datenspeichern zu verbessern. 
-RAID-Systeme sind jedoch nicht unfehlbar und es kann vorkommen, dass Daten aufgrund von Hardwarefehlern, Stromausfällen oder anderen Problemen verloren gehen.
+RAID (Redundant Array of Independent Disks) ist eine Technologie, die mehrere Festplatten miteinander verbindet, um die Leistung und Zuverlässigkeit von Datenspeichern zu verbessern. RAID-Systeme sind jedoch nicht unfehlbar und es kann vorkommen, dass Daten aufgrund von Hardwarefehlern, Stromausfällen oder anderen Problemen verloren gehen.
 
-In diesem Artikel werden wir besprechen, wie man Datenrettung RAID durchführt und welche Schritte man ergreifen muss, um verlorene Daten wiederherzustellen.
+In diesem Artikel werden wir besprechen, wie man Datenrettung bei RAID durchführt und welche Schritte man ergreifen muss, um verlorene Daten wiederherzustellen.
 
 <img class="h-80 object-cover object-left" src="assets/index/synology.webp" >
 
 <h2 class="font-semibold text-base md:text-xl">Schritt 1: Diagnose des Problems</h2>
-Der erste Schritt bei der Datenrettung RAID besteht darin, das Problem zu diagnostizieren. 
+Der erste Schritt zur Datenrettung bei RAID besteht darin, das Problem zu diagnostizieren. 
 Sie müssen herausfinden, ob es sich um ein Hardware- oder Softwareproblem handelt, um die richtigen Schritte zur Datenrettung einleiten zu können.
 
-Ein Hardwareproblem kann beispielsweise ein defektes Laufwerk oder ein beschädigtes Motherboard sein. 
-Ein Softwareproblem kann aufgrund von Fehlern in der RAID-Konfiguration, einem Virus oder fehlerhaften Treibern auftreten.
+Ein Hardwareproblem kann beispielsweise ein defektes Laufwerk oder ein beschädigter RAID-Controller sein. 
+Ein Softwareproblem kann aufgrund von Fehlern in der RAID-Konfiguration, einem Virus oder versehentliches löschen auftreten.
 
+Überprüfen Sie jede Festplatte einzeln auf Ihre Smart-Werte z.B. mittels CrystalDisk. Sollten mehrere Festplatten gleichzeitig fehlerhaft sein, sollten Sie lieber eine professionelle Datenrettung in Betracht ziehen.
+Starten Sie außerdem niemals einen Rebuildversuch, solange Sie die "Rohaten" der HDD mittels Image Abbild noch nicht gesichert haben.
 <h2 class="font-semibold text-base md:text-xl">Schritt 2: Erstellen Sie ein Backup</h2>
 Bevor Sie mit der RAID Datenrettung beginnen, sollten Sie unbedingt ein Backup aller noch funktionierenden Festplatten Sektor für Sektor erstellen. 
-Dies ist wichtig, um weitere Datenverluste zu vermeiden, falls etwas schief geht.
+Das ist wichtig, um weitere Datenverluste zu vermeiden, falls etwas schief geht.
 Ein Rebuild kann womöglich ungewollt Daten dauerhaft überschreiben.
  
 <h2 class="font-semibold text-base md:text-xl">Schritt 3: Verwendung von Datenrettungssoftware</h2>
 Es gibt eine Vielzahl von Datenrettungssoftware auf dem Markt, die Ihnen bei der Wiederherstellung Ihrer verlorenen Daten helfen können. 
-Einige der bekanntesten Programme sind EaseUS Data Recovery, RStudio und Disk Drill.
+Einige der bekanntesten Programme sind EaseUS Data Recovery und RStudio.
 
-Sie können diese Software verwenden, um Ihre verlorenen Daten wiederherzustellen. 
-Sie sollten jedoch beachten, dass die Verwendung von Datenrettungssoftware nicht immer erfolgreich sein kann. 
-Insbesondere bei speziellen Zusammensetzungen wie QNAP Thin Volumes oder wenn zu viele Teilnehmer beschädigt sind.
+Sie können diese Software vor allen gut bei RAID 1 Fällen verwenden, wenn der zweite Teil des RAIDs keine Unregelmäßigkeiten aufweist. 
+
+Sie sollten jedoch beachten, dass die Verwendung von handelsüblicher Datenrettungssoftware vor allen bei komplexeren RAID Strukturen nicht immer erfolgreich sein kann. 
+Insbesondere bei speziellen Zusammensetzungen wie z.B. QNAP Thin Volumes, wenn zu viele Teilnehmer beschädigt sind oder schlichtweg bei einer hohen Anzahl an Teilnehmern (RAID 5).
+
+Hier kann Ihnen aber die professionelle Datenrettung weiterhelfen. 
+Wie die Arbeitsweise der professionellenm RAID-Datenrettung ist finden Sie hier: <div class="flex pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="https://www.jungbauerdatenrettung.de/datenrettung/raid">Arbeitsweise HDD</a></button></div>
 
 <h2 class="font-semibold text-base md:text-xl">Schritt 4: Beauftragung eines Datenrettungsunternehmens</h2>
-Wenn Sie nach allen oben genannten Schritten immer noch nicht in der Lage sind, Ihre verlorenen Daten wiederherzustellen, 
-sollten Sie sich an ein Datenrettungsunternehmen wenden. 
-Ein Datenrettungsunternehmen verfügt über die notwendige Erfahrung und Technologie, um die Datenrettung RAID erfolgreich durchzuführen.
+Wenn Sie nach Ihren Eigenversuchen immer noch nicht in der Lage sind, Ihre verlorenen Daten wiederherzustellen, sollten Sie sich an ein Datenrettungsunternehmen wenden. 
+Als Datenrettungsunternehmen verfügen wir über die notwendige Technologie, um die Datenrettung bei Ihrem RAID erfolgreich durchzuführen.
 
-Das Datenrettungsunternehmen wird das Problem diagnostizieren und eine Lösung vorschlagen. 
-In den meisten Fällen können sie Ihre verlorenen Daten wiederherstellen.
-
-<h2 class="font-semibold text-base md:text-xl">Fazit</h2>
-Datenrettung RAID ist ein komplexer Prozess, der Erfahrung und Fachwissen erfordert. Wenn Sie Ihre verlorenen Daten wiederherstellen möchten, 
-sollten Sie alle oben genannten Schritte befolgen und sicherstellen, dass Sie ein Backup aller noch funktionierenden Speicher erstellt haben.
-Ein Rebuild kann womöglich ungewollt Daten dauerhaft überschreiben.
-
-Wenn Sie sich nicht sicher sind, wie Sie vorgehen sollen, ist es immer am besten, ein Datenrettungsunternehmen zu beauftragen. 
-Ein professionelles Datenrettungsunternehmen kann Ihnen helfen, Ihre verlorenen Daten schnell und effizient wiederherzustellen.
-
-Wie die Arbeitsweise der professionellenm RAID-Datenrettung ist finden Sie hier: <div class="flex pt-4"><button class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a href="https://www.jungbauerdatenrettung.de/datenrettung/raid">Arbeitsweise HDD</a></button></div>
+Hier kann die RAID Struktur vollständig virtuell rekonstruiert werden (ohne Originalcontroller) und auch einzelne Teilnehmer, sofern nötig, repariert werden. 
+Damit können auch z.B. nach gescheiterten Rebuild, z.B. wenn Sie mit Ihrer Software kein Ergebnis erzielen konnten, z.B. Daten von RAID gelöscht wurden oder wenn mehrere Teilnehmer gleichzeitig kaputt gegangen sind, vom RAID gerettet werden.
 
 
 Hier kommen Sie direkt zum Auftragsformular:
