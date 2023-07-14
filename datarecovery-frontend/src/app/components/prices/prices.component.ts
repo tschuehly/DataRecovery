@@ -94,7 +94,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
         <br/><br/>
         Marktüblich in der Datenrettung sind im Kontrast untransparente "ab X€" Preise (tatsächliche Preise bis zu 5x höher) oder<br/>
         die Anteilhabe von "Intialisierungskosten", "Analysekosten" oder "Teilespenderkosten" auch bei Misserfolg.<br/>
-        <br/>Sie zahlen mit den Preisen, unabhängig der Wichtigkeit der Daten, einen fair errechneten Mittelwert des Datenrettungsaufwandes. <br/>
+        <br/>Sie zahlen mit den Preisen, unabhängig der Wichtigkeit der Daten, einen fairen Mittelwert des Datenrettungsaufwandes. <br/>
         <br/>
         <br/>
         <br/>
