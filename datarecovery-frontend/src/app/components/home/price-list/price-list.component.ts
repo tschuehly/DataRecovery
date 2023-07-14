@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
       id="priceList"
     >
       <h2
-        class="pt-10 py-4 text-2xl md:text-3xl tracking-wider text-center text-gray-50"
+        class="pt-10 py-6 text-2xl md:text-3xl tracking-wider text-center text-gray-50"
       >
       <a class="underline" href="preise">Datenrettung Festpreise</a>:
       </h2>
@@ -43,7 +43,7 @@ import { Component } from '@angular/core';
                 Defekte(r) USB Stick / (micro-) SD Karte
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
-              <div class="pb-2">"einfacher" Fall <a href="/datenrettung/einfacher-oder-komplexer-fall">ⓘ</a></div>
+              <div class="pb-2">"einfacher" Fall <a href="/datenrettung/einfacher-oder-komplexer-fall" target="_blank">ⓘ</a></div>
                 <div>≤ alle Größen</div>
                 
               </div>
@@ -53,7 +53,7 @@ import { Component } from '@angular/core';
               
             </div>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
-              <div class="pb-2">"komplexer" Fall <a href="/datenrettung/einfacher-oder-komplexer-fall">ⓘ</a></div>
+              <div class="pb-2">komplexer Fall <a href="/datenrettung/einfacher-oder-komplexer-fall" target="_blank">ⓘ</a></div>
                 <div>≤ 16 GB</div>
                 <div>≤ 64 GB</div>
                 <div>≤ 128 GB</div>
@@ -101,7 +101,7 @@ import { Component } from '@angular/core';
                 Beschädigte HDD Festplatte
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
-              <div class="pb-2">"einfacher" Fall <a href="/datenrettung/einfacher-oder-komplexer-fall">ⓘ</a></div>
+              <div class="pb-2">"einfacher" Fall <a href="/datenrettung/einfacher-oder-komplexer-fall" target="_blank">ⓘ</a></div>
                 <div>≤ alle Größen</div>
                 
               </div>
@@ -111,7 +111,7 @@ import { Component } from '@angular/core';
               
             </div>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
-              <div class="pb-2">"komplexer" Fall <a href="/datenrettung/einfacher-oder-komplexer-fall">ⓘ</a></div>
+              <div class="pb-2">komplexer Fall <a href="/datenrettung/einfacher-oder-komplexer-fall" target="_blank">ⓘ</a></div>
                 <div>≤ 1 TB</div>
                 <div>≤ 2 TB</div>
                 <div>≤ 4 TB</div>
@@ -130,7 +130,7 @@ import { Component } from '@angular/core';
                 Defekter SSD Speicher
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
-              <div class="pb-2">"einfacher" Fall <a href="/datenrettung/einfacher-oder-komplexer-fall">ⓘ</a></div>
+              <div class="pb-2">"einfacher" Fall <a href="/datenrettung/einfacher-oder-komplexer-fall" target="_blank">ⓘ</a></div>
                 <div>≤ alle Größen</div>
                 
               </div>
@@ -140,7 +140,7 @@ import { Component } from '@angular/core';
               
             </div>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
-              <div class="pb-2">"komplexer" Fall <a href="/datenrettung/einfacher-oder-komplexer-fall">ⓘ</a></div>
+              <div class="pb-2">komplexer Fall <a href="/datenrettung/einfacher-oder-komplexer-fall" target="_blank">ⓘ</a></div>
               <div>≤ 1 TB</div>
               <div>≤ 2 TB</div>
               <div>≤ 4 TB</div>
