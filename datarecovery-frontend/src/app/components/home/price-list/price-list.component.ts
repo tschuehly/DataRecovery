@@ -38,8 +38,8 @@ import { Component } from '@angular/core';
                 />
               </picture>
             </div>
-            <div class="grid grid-cols-2 pb-4">
-              <h2 class="col-span-2 p-4  text-xl">
+            <div class="grid grid-cols-2 py-4 pb-4">
+              <h2 class="col-span-2 p-4 text-xl">
                 Defekte(r) USB Stick / (micro-) SD Karte
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
