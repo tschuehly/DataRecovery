@@ -51,7 +51,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
           style=" 0 2px 25px 0 black"
         >
         <h2 class="font-bold text-xl md:text-2xl text-white"
-            >Festpreise nach erfolgreicher Datenrettung:</h2
+            >Festpreise Datenrettung (nach Erfolg):</h2
           >
           <ng-container *ngFor="let category of categories">
             <div class="mb-2">
