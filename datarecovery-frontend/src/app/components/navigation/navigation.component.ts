@@ -75,8 +75,8 @@ declare let gtag: Function;
           <a
           class="cursor-pointer font-medium"
           (click)="mobileNavShow = false"
-          routerLink="preise"
-          href="preise"
+          routerLink="/preise"
+          href="/preise"
           >Preise</a
         >
         <button
