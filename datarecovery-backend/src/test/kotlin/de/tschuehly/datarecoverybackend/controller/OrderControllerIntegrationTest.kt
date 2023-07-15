@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.context.annotation.PropertySource
 import org.springframework.data.web.JsonPath
 import org.springframework.http.MediaType
 import org.springframework.mock.web.MockMultipartFile
@@ -23,10 +24,6 @@ import org.testcontainers.junit.jupiter.Testcontainers
 import java.io.File
 import java.util.*
 
-@Testcontainers
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@AutoConfigureMockMvc
-@ActiveProfiles(profiles = ["integrationTest"])
 internal class OrderControllerIntegrationTest @Autowired constructor(val mockMvc: MockMvc) : IntegrationTestBase() {
     @Test
     @WithMockUser(username = "anonymous")
