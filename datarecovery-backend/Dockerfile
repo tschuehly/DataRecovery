@@ -1,4 +1,4 @@
-FROM gradle:6.8.3-jdk15 AS build
+FROM gradle:8.2-jdk17 AS build
 WORKDIR /datarecovery-backend
 COPY build.gradle.kts build.gradle.kts
 COPY settings.gradle.kts settings.gradle.kts
@@ -6,9 +6,9 @@ COPY settings.gradle.kts settings.gradle.kts
 RUN gradle clean build -x test --no-daemon > /dev/null 2>&1 || true
 COPY src src
 RUN gradle build --stacktrace -x test
-RUN java -Djarmode=layertools -jar build/libs/datarecovery-*.jar extract
+RUN java -Djarmode=layertools -jar build/libs/datarecovery-backend-*-SNAPSHOT.jar extract
 
-FROM adoptopenjdk/openjdk15:jre-15.0.2_7-alpine AS prod
+FROM eclipse-temurin:17-alpine AS prod
 EXPOSE 8088
 WORKDIR /datarecovery-backend
 COPY --from=build datarecovery-backend/dependencies/ ./

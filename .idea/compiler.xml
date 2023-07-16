@@ -6,7 +6,7 @@
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/2.4.3/d4bb8ef775bcf06ac9a4fdc400a8b2404259c457/spring-boot-configuration-processor-2.4.3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/2.7.13/7447e272307e17bdb0c86c7c49b66544f2bef5bf/spring-boot-configuration-processor-2.7.13.jar" />
         </processorPath>
         <module name="datarecovery-backend.main" />
       </profile>

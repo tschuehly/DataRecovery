@@ -1,11 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {DomSanitizer, Meta, SafeHtml, Title} from '@angular/platform-browser';
 import {ScrollService} from "../../services/scroll.service";
 import {ReviewDetailDTO} from "../../model/model";
-import { Router } from '@angular/router';
-
 
 
 @Component({
@@ -40,7 +38,7 @@ import { Router } from '@angular/router';
 
                 Mobil: <span class="text-white"><a href="tel:0151 61408355">0151 61408355</a></span>
               </p>
-       
+
           </span>
       </div>
     </div>
@@ -497,8 +495,8 @@ import { Router } from '@angular/router';
             ></div>
             <div class="flex-1">
               <a
-                href="/datenrettung/hdd-bei-verkratzer-oberfläche"
-                href="/datenrettung/hdd-bei-verkratzer-oberfläche"
+                href="/datenrettung/hdd-bei-verkratzer-oberflaeche"
+                href="/datenrettung/hdd-bei-verkratzer-oberflaeche"
                 class="py-2"
               >
                 <h2 class="text-2xl font-bold">Datenrettung 2.5“ WD-Festplatte bei verkratzter Oberfläche</h2>
@@ -511,8 +509,8 @@ import { Router } from '@angular/router';
                   Wie funktioniert die Datenrettung bei einer verkratzen HDD Festplatte? Ist es wirklich aussichtslos?
                 </h3>
                 <a
-                  href="/datenrettung/hdd-bei-verkratzer-oberfläche"
-                  href="/datenrettung/hdd-bei-verkratzer-oberfläche"
+                  href="/datenrettung/hdd-bei-verkratzer-oberflaeche"
+                  href="/datenrettung/hdd-bei-verkratzer-oberflaeche"
                   class="font-semibold"
                 >
                   Mehr lesen →
@@ -542,7 +540,7 @@ export class BlogComponent implements OnInit {
     private sanitizer: DomSanitizer,
     private router: Router,
     public scrollService: ScrollService
-   
+
   ) {
   }
 
@@ -553,7 +551,6 @@ export class BlogComponent implements OnInit {
   handleClick(event: any) {
     if (event.target.dataset.route == 'scrollToOrder') {
       this.scrollService.scrollToOrder()
-    } else {
     }
   }
 
@@ -601,7 +598,7 @@ export class BlogComponent implements OnInit {
 
 
 
-          
+
       }
     });
 
