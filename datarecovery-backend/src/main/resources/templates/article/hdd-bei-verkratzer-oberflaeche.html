@@ -58,12 +58,12 @@ Nachdem wir die Daten von H-0 gelesen haben (und damit bereits 50% der Daten ger
 Die Herausforderung ist, dass der neue Lesekopf schnell durch die Schleifspuren Schaden nehmen wird. Daher wollen wir es vermeiden, dass dieser über den beschädigten Bereich fährt.
 Auf Höhe der Spur, die betroffen ist, besitzt die HDD Ihre Servicearea. Doch wie verhindern wir, dass die HDD diesen Bereich anfährt?
 
-❶ Hintergrundprozesse abstellen:
+1. Hintergrundprozesse abstellen:
 
 <img class="h-80 object-cover object-right" src="assets/articles/image5.png">
 Bei Seagate durch ein Patch an Systemfile 93 (HDD ID) oder wie in diesem Fall mit dem TLER Feature bei WD-Festplatten werden Background Prozesse, die sonst im laufenden Betrieb Zugriff auf die SA bedeuten würden, abgestellt.
 
-❷ Stand-by Trick: 
+2. Stand-by Trick: 
 
 <div class="flex grid-cols-3 flex-wrap gap-4">
 <img class="h-80 object-cover object-right" src="assets/articles/image6.png">
