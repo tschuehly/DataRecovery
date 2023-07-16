@@ -1,6 +1,7 @@
 package de.tschuehly.datarecoverybackend.model
 
 import org.hibernate.annotations.NaturalId
+import org.hibernate.annotations.Type
 import javax.persistence.Entity
 import javax.persistence.Id
 import javax.persistence.Lob
@@ -15,6 +16,7 @@ class Review(
     var rating: Int,
     var relative_time_description: String,
     @Lob
+    @Type(type = "org.hibernate.type.StringType")
     var text: String,
     var time: Int
 )

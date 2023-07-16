@@ -94,7 +94,7 @@ declare let gtag: Function;
           <a
           class="cursor-pointer font-medium"
           (click)="mobileNavShow = false"
-          
+
           routerLink="/datenrettung/arbeitsweise"
           href="/datenrettung/arbeitsweise"
           >Arbeitsweise </a
@@ -359,7 +359,7 @@ declare let gtag: Function;
           >
             <span class="pr-4"
               >Website entwickelt von
-              <a class="font-bold" href="https://www.schuehly-it.de/" target="_blank"
+              <a class="font-bold" href="https://www.tschuehly.de/" target="_blank"
                 >Thomas Schühly</a
               ></span
             >
