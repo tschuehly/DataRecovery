@@ -1,0 +1,112 @@
+<title>verkratzte HDD-Festplatte retten: Verlassen Sie sich auf Tobias Jungbauer</title>
+<meta name="description" content="Nach einem Defekt können wir die Daten auf Ihrer HDD-Festplatte retten. Verlassen Sie sich auf unsere Datenrettung zum Festpreis."/>
+<meta name="keywords" content="verkratzte HDD-Festplatte retten"/>
+<meta property="og:title" content="verkratzte HDD-Festplatte retten: Verlassen Sie sich auf Tobias Jungbauer"/>
+<meta property="og:description" content="Nach einem Defekt können wir die Daten auf Ihrer HDD-Festplatte retten. Verlassen Sie sich auf unsere Datenrettung zum Festpreis."/>
+<meta property="og:keywords" content="verkratzte HDD-Festplatte retten"/>
+<meta property="image" content="https://www.jungbauerdatenrettung.de/assets/hdd_arbeitsweise_headreplacement.jpg" alt="Datarecovery"/>
+<meta property="name" content="Tobias Jungbauer Datenrettung & IT-Forensik" />
+<meta property="founder" content="Tobias Jungbauer" />
+<meta property="areaServed" content="Bayern" />
+<meta property="telephone" content="084112840705" />
+<meta property="email" content="info@jungbauerdatenrettung.de" />
+<meta property="address" content="Am Stein 9, 85049 Ingolstadt" />
+<meta property="bestRating" content="5" /> 
+
+<div>
+  <div class="bg-white text-center">
+    <h2 class="text-2xl md:text-4xl text-black py-5 tracking-wider">Datenrettung Festplatte bei verkratzter Oberfläche:</h2>
+  </div>
+  <div class="bg-gray-main text-white border-b-2 border-silver py-8">
+    <pre class="container whitespace-pre-wrap px-3">
+<h1 class="font-bold text-xl">Datenrettung 2.5“ WD-Festplatte bei verkratzter Oberfläche:</h1><span class="text-bold text-sm md:text-lg text-silver">Updated am 30.04.2022, 23:31 Uhr von Tobias Jungbauer</span>
+<pre class="whitespace-pre-wrap text-sm md:text-xl py-8">
+Hiermit möchte ich auf die Vorgehensweise zur Datenrettung bei einer verkratzten Festplattenoberfläche eingehen.
+<div class="flex grid-cols-3 flex-wrap gap-4">
+<img class="h-80 object-cover object-right" src="assets/articles/image1.jpeg">
+<img class="h-80 object-cover object-right" src="assets/articles/image0.jpeg"></div>
+Das Ziel zunächst ist es Daten von übrigen unbeschädigten Oberflächen zu retten, erst danach können wir versuchen Teile aus der verkratzten Oberfläche zu retten:
+
+Wir haben hier eine WDC WD3200BPVT. Es ist eine Western Digital HDD mit 320GB. Diese besitzt nur eine Festplattenscheibe, die doppelseitig beschrieben ist.
+Folglich zwei Oberflächen. Der Lesekopf der Unterseite nennen wir dabei H-0, die der Oberseite H-1.
+
+Zur Analyse:
+Die Oberfläche von H-1 hat eine mit bloßem Auge sichtbare Schleifspur. Die Oberfläche von H-0 scheint zumindest makroskopisch unbeschädigt.
+
+Wir versuchen als erstes nur die Daten der besseren Oberfläche auszulesen.
+Man muss dabei beachten, dass beide Leseköpfe auf dem gleichen "Arm" liegen.
+
+Das heißt wenn H-1 an der Schleifspur hängen bleibt crasht automatisch auch H-0.
+Da in diesem Fall die Schleifspur auch noch auf Höhe der Servicearea liegt würde die HDD damit beim initialisieren auch nur mit eingeschaltener Copy 0 der Servicearea einen Headcrash erleiden.
+
+Die Lösung wäre bei einigen Festplattenmodellen das Abschneiden des Lesekopfs der schlechten Oberfläche (hier H-1). Bei WD dürfen wir das jedoch nicht, da die Festplatte beim Starten den Innenwiderstand der Lesekopfeinheit misst und durch das Abschneiden mit einem internen Fehlercode auch bei Beabreitung der Servicearea nicht startet.
+
+In solchen Fällen ist die gängige Methode den Lesekopf soweit wie nötig von der Oberfläche zu biegen, sodass dieser keinen Kontakt mit der Oberfläche haben kann.
+
+<div class="flex grid-cols-3 flex-wrap gap-4">
+<img class="h-80 object-cover object-right" src="assets/articles/image2.jpeg">
+<img class="h-80 object-cover object-right" src="assets/articles/image3.jpeg"></div>
+Damit die Festplatte sich nur mit dem einen angeschlossenen Lesekopf dennoch initialisiert deaktivieren wir die Servicearea von H-1. Das machen wir indem wir die Adressen von Copy-0 und Copy-1 beide auf die gleiche Adresse von H-0 setzen. 
+
+<img class="h-80 object-cover object-right" src="assets/articles/image4.png">
+Dadurch können wir nun die die Festplatte nur über H-0 initialisieren und auch schonmal die Daten von Oberfläche H-0 komplett auslesen. In der Software können wir H-1 zudem abschalten, dass erst gar nicht versucht wird Adressen der H-1 Oberfläche zu lesen.
+
+Soweit der einfache Part! Nun kommt der spannende Teil.
+Wie können wir nun Daten trotz Schleifspur von H-1 retten?
+
+Nachdem wir die Daten von H-0 gelesen haben (und damit bereits 50% der Daten gerettet haben) versuchen wir auch die Daten von H-1 zu lesen.
+Die Herausforderung ist, dass der neue Lesekopf schnell durch die Schleifspuren Schaden nehmen wird. Daher wollen wir es vermeiden, dass dieser über den beschädigten Bereich fährt.
+Auf Höhe der Spur, die betroffen ist, besitzt die HDD Ihre Servicearea. Doch wie verhindern wir, dass die HDD diesen Bereich anfährt?
+
+❶ Hintergrundprozesse abstellen:
+
+<img class="h-80 object-cover object-right" src="assets/articles/image5.png">
+Bei Seagate durch ein Patch an Systemfile 93 (HDD ID) oder wie in diesem Fall mit dem TLER Feature bei WD-Festplatten werden Background Prozesse, die sonst im laufenden Betrieb Zugriff auf die SA bedeuten würden, abgestellt.
+
+❷ Stand-by Trick: 
+
+<div class="flex grid-cols-3 flex-wrap gap-4">
+<img class="h-80 object-cover object-right" src="assets/articles/image6.png">
+<img class="h-80 object-cover object-right" src="assets/articles/image7.jpeg"></div>
+Wir setzen die HDD während nur H-0 verbunden haben in den Stand-by-Modus. Währenddessen wir nun H-1 durch neue Leseköpfe zuschalten lassen wir das PCB am Strom im Stand-by-Modus hängen, sodass wir die Festplatte später nicht mehr initialisieren müssen.
+
+Währenddessen nun das PCB weiterhin im Stand-by ist tauschen wir die Leseköpfe von der Festplatte aus und lassen nun auch H-1 verbunden (nicht mehr verbogen).
+
+<img class="h-80 object-cover object-right" src="assets/articles/image8.jpeg">
+Wir verschrauben es wieder mit dem PCB und holen es aus dem Stand-by heraus.
+
+Voila! Wir haben Datenzugriff auf H-1:
+
+<img class="h-80 object-cover object-right" src="assets/articles/image9.png">
+Und das auch mit akzeptablem Tempo:
+
+<img class="h-80 object-cover object-right" src="assets/articles/image10.png">
+
+❸ Auslesen der Userarea von H-1:
+Die Methodik ist, dass wir uns von „beiden Seiten“ den Beschädigungen annähern.
+Dafür lesen wir erst von den hohen LBA zu den niedrigen und danach von den niedrigen zu den hohen. Sobald wir uns der Schadstelle annähern, wechseln wir.
+<div class="flex grid-cols-3 flex-wrap gap-4">
+<img class="h-80 object-cover object-right" src="assets/articles/image11.png">
+<img class="h-80 object-cover object-right" src="assets/articles/image12.png"></div>
+Wir können nun auch die MFT Map der NTFS Partition auslesen und daraus die Ordnerstruktur zurückholen:
+
+<img class="h-80 object-cover object-right" src="assets/articles/image13.png">
+Mit der Ordnerstruktur können wir die wichtigsten Dateien priorisieren.
+
+Wir lesen die Daten aus und tauschen die Leseköpfe so oft bzw. wiederholen die genannten Schritte, bis wir alle unbeschädigten Bereiche gerettet haben.
+
+<h2 class="font-semibold underline text-base md:text-xl">Wie hoch sind die Kosten für die professionelle Datenrettung?</h2>
+Festpreise aufgeteilt in "<a href="/datenrettung/einfacher-oder-komplexer-fall" class="underline">einfache</a>" und "<a href="/datenrettung/einfacher-oder-komplexer-fall" class="underline">komplexe</a>" Fälle.
+Bezahlung nur nach Erfolg (95%+ oder Bestätigung nach Einsicht zur Übernahme des Ergebnisses).Alle Kosten wie z.B. auch Teilespender oder Leihdatenträger sind bereits im Festpreis inklusive.
+Es handelt sich um Endpreise. Es kommen keine weitere Kosten zur Datenrettung hinzu.
+
+Alle Festpreise finden Sie transparent im Voraus unter <a href="/preise" class="underline">Preise</a>.
+
+Falls noch Fragen offen sind rufen Sie am besten unter 0841 12840705 an oder schreiben eine Email an: info@jungbauerdatenrettung.de
+<div class="flex pt-4"><button
+  class="text-base md:text-xl bg-white py-2 px-4 shadow rounded text-black"><a
+  href="">Zurück zur Startseite</a></button></div>
+</pre>
+</div>
+</div>
+  
