@@ -49,42 +49,7 @@ import {ReviewDetailDTO} from "../../model/model";
         </div>
 
         <div class="bg-gray-main bg-circuit-board space-y-4 p-6">
-        <div class="bg-white max-w-4xl mx-auto rounded-2xl">
-            <div
-              class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
-            >
-              <div
-                class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                style="background-image: url('/assets/favicon/fav.PNG')"
-              ></div>
-              <div class="flex-1">
-                <a
-                  href="/datenrettung/philosophie"
-                  href="/datenrettung/philosophie"
-                  class="py-2"
-                >
-                  <h2 class="text-2xl font-bold">
-                    Philosophie
-                  </h2>
-                </a>
-                <div class="py-2 italic text-sm md:text-lg">
-                  Updated am 29.03.2022, 04:48 von Tobias Jungbauer
-                </div>
-                <div class="space-y-4">
-                  <h3 class="pb-2">
-                    Was sind meine Ziele für die angebotene Datenrettung? ...
-                  </h3>
-                  <a
-                    href="/datenrettung/philosophie"
-                    href="/datenrettung/philosophie"
-                    class="font-semibold"
-                  >
-                    Mehr lesen →
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+         
           <div class="bg-white max-w-4xl mx-auto rounded-2xl">
             <div class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
             >
