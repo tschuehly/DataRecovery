@@ -40,7 +40,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
       </div>
     </div>
     <div class="bg-white text-center">
-      <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider">
+      <h1 class="text-2xl md:text-4xl text-black py-5 tracking-wider" id="prices">
       Datenrettung Preise / Kosten
       </h1>
     </div>

@@ -74,7 +74,7 @@ declare let gtag: Function;
         >
           <a
           class="cursor-pointer font-medium"
-          (click)="mobileNavShow = false"
+          (click)="mobileNavShow = false; scrollToPrices()"
           routerLink="preise"
           href="preise"
           >Preise</a
@@ -93,69 +93,15 @@ declare let gtag: Function;
           >
           <a
           class="cursor-pointer font-medium"
-          (click)="mobileNavShow = false"
-
+          (click)="mobileNavShow = false; scrollToArbeitsweise()"
           routerLink="/datenrettung/arbeitsweise"
           href="/datenrettung/arbeitsweise"
           >Arbeitsweise </a
         >
-
-            <div
-              class="border-solid border-2 border-black grid ga absolute justify-evenly p-4 bg-gray-300 text-2xl dropdown text-black py-4 space-y-4"
-              *ngIf="dropdownShow"
-              [ngStyle]="
-                mobileNavShow
-                  ? {
-                      top: '0',
-                      width: '100%',
-                      left: '0',
-                      padding: '48px 0px',
-                      gap: '1.5rem'
-                    }
-                  : {}
-              "
-            >
-              <a
-                (click)="mobileNavShow = false"
-                routerLink="/datenrettung/hdd"
-                href="/datenrettung/hdd"
-                >HDD Festplatten</a
-              >
-              <a
-                (click)="mobileNavShow = false"
-                routerLink="/datenrettung/ssd"
-                href="/datenrettung/ssd"
-                >SSD Speicher</a
-              >
-              <a
-                (click)="mobileNavShow = false"
-                routerLink="/datenrettung/usb"
-                href="/datenrettung/usb"
-                >USB-Stick</a
-              >
-              <a
-                (click)="mobileNavShow = false"
-                routerLink="/datenrettung/sd"
-                href="/datenrettung/sd"
-                >(micro) SD Karte</a
-              >
-              <a
-                (click)="mobileNavShow = false"
-                routerLink="/datenrettung/apple-fusion-drive-datenrettung"
-                href="/datenrettung/apple-fusion-drive-datenrettung"
-                >Apple Fusion Drive</a
-              >
-              <a
-                (click)="mobileNavShow = false"
-                routerLink="/datenrettung/raid"
-                href="/datenrettung/raid"
-                >RAID / NAS</a
-              >
-            </div>
           </div>
           <a
           class="cursor-pointer font-medium"
-          (click)="mobileNavShow = false"
+          (click)="mobileNavShow = false; scrollToaboutme()"
           routerLink="/datenrettung/philosophie"
           href="/datenrettung/philosophie"
           >Philosophie </a
@@ -468,6 +414,37 @@ export class NavigationComponent implements OnInit {
   scrollToContact(): void {
     setTimeout(function () {
       let contact = document.getElementById('contact');
+      contact.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
+    }, 200);
+  }
+
+  scrollToPrices(): void {
+    setTimeout(function () {
+      let contact = document.getElementById('prices');
+      contact.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
+    }, 200);
+  }
+
+  scrollToArbeitsweise(): void {
+    setTimeout(function () {
+      let contact = document.getElementById('arbeitsweise');
+      contact.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
+    }, 200);
+  }
+
+
+  scrollToaboutme(): void {
+    setTimeout(function () {
+      let contact = document.getElementById('aboutme');
       contact.scrollIntoView({
         behavior: 'smooth',
         block: 'center',
