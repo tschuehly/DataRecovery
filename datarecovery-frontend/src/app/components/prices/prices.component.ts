@@ -92,8 +92,8 @@ import { ScrollService } from 'src/app/services/scroll.service';
         Als Erfolg gilt: 95%+ oder nach Ferneinsicht die Bestätigung der Übernahme der Datenrettung.
         <br/><br/>
         Marktüblich in der Datenrettung sind im Kontrast undurchsichtige "ab X€" Preise, der verwerfliche Versuch nach Wichtigkeit der Daten zu berechnen und<br/>
-        Fake-Analysen mit Standardtexten, wobei der Speicher für die genannte Analyse nicht mal geöffnet wird.<br/>
-        <br/>Zur Abgrenzung davon habe ich mich daher für ein Angebot mit offnen Karten / Datenrettungskosten entschieden. 
+        Fake-Analysen mit Standardtexten, wobei der Speicher z.B. für die genannte Analyse nicht mal geöffnet wird.<br/>
+        <br/>Zur Abgrenzung davon habe ich mich für ein Angebot mit offnen Karten / Datenrettungskosten entschieden. 
         <br/>
         
         
