@@ -51,7 +51,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
           style=" 0 2px 25px 0 black"
         >
         <h2 class="font-bold text-xl md:text-2xl text-white"
-            >Festpreise Datenrettung:</h2
+            >Festpreise zur Datenrettung:</h2
           >
           <ng-container *ngFor="let category of categories">
             <div class="mb-2">
@@ -91,9 +91,9 @@ import { ScrollService } from 'src/app/services/scroll.service';
         <br/>
         Als Erfolg gilt: 95%+ oder nach Ferneinsicht die Bestätigung der Übernahme der Datenrettung.
         <br/><br/>
-        Marktüblich in der Datenrettung sind im Kontrast undurchsichtige "ab X€" Preise, der Versuch nach Wichtigkeit der Daten zu berechnen und<br/>
+        Marktüblich in der Datenrettung sind im Kontrast undurchsichtige "ab X€" Preise, der verwerfliche Versuch nach Wichtigkeit der Daten zu berechnen und<br/>
         Fake-Analysen mit Standardtexten, wobei der Speicher für die genannte Analyse nicht mal geöffnet wird.<br/>
-        <br/>Im Kontrast habe ich mich daher für genanntes Festpreis-Modell entschieden.
+        <br/>Zur Abgrenzung davon habe ich mich daher für ein Angebot mit offnen Karten / Datenrettungskosten entschieden. 
         <br/>
         
         
