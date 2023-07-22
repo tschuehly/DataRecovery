@@ -78,25 +78,22 @@ import { ScrollService } from 'src/app/services/scroll.service';
           <br/>
           <br/>
           
-          
+          <br/>
           <br/>
 
         <h2 class="font-bold text-xl md:text-2xl text-white pb-2"
-        >Alleinstellungsmerkmal: Festpreise ohne versteckte Kosten</h2>
+        >Öffentliche Festpreise ohne versteckte Kosten:</h2>
         
         Alle Kosten, z.B. auch Teilespender oder Leihdatenträger, sind bereits im Festpreis inklusive.<br/>
         Es handelt sich um Endpreise. Es kommen keine weitere Kosten zur Datenrettung hinzu.
         <br/>
-
         <br/>Bei Misserfolg entstehen inkl. Rückversand des Originalspeichers keine Kosten.
         <br/>
         Als Erfolg gilt: 95%+ oder nach Ferneinsicht die Bestätigung der Übernahme der Datenrettung.
         <br/><br/>
-        Marktüblich in der Datenrettung sind im Kontrast untransparente "ab X€" Preise (tatsächliche Preise bis zu 5x höher) oder<br/>
-        die Anteilhabe von "Intialisierungskosten", "Analysekosten" oder "Teilespenderkosten" auch bei Misserfolg.<br/>
-        <br/>Sie zahlen mit den Preisen, unabhängig der Wichtigkeit der Daten, einen fairen Mittelwert des Datenrettungsaufwandes. <br/>
-        <br/>
-        <br/>
+        Marktüblich in der Datenrettung sind im Kontrast undurchsichtige "ab X€" Preise, der Versuch nach Wichtigkeit der Daten zu berechnen und<br/>
+        Fake-Analysen mit Standardtexten, wobei der Speicher für die genannte Analyse nicht mal geöffnet wird.<br/>
+        <br/>Im Kontrast habe ich mich daher für genanntes Festpreis-Modell entschieden.
         <br/>
         
         
