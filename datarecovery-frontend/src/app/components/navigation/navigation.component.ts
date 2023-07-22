@@ -99,13 +99,7 @@ declare let gtag: Function;
           >Arbeitsweise </a
         >
           </div>
-          <a
-          class="cursor-pointer font-medium"
-          (click)="mobileNavShow = false; scrollToaboutme()"
-          routerLink="/datenrettung/philosophie"
-          href="/datenrettung/philosophie"
-          >Philosophie </a
-        >
+          
           <button
           (click)="mobileNavShow = false; scrollToContact()"
           class="cursor-pointer font-medium"
