@@ -99,7 +99,7 @@ declare let gtag: Function;
           >Arbeitsweise </a
         >
           </div>
-          
+
           <button
           (click)="mobileNavShow = false; scrollToContact()"
           class="cursor-pointer font-medium"
@@ -379,6 +379,7 @@ export class NavigationComponent implements OnInit {
   }
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
+    console.log("Scrolll to")
     if (document.getElementById('priceList') != null) {
       let pos = document.documentElement.scrollTop || document.body.scrollTop;
       let max =

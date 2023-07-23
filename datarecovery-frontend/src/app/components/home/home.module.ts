@@ -11,6 +11,7 @@ import { ReviewComponent } from './review/review.component';
 import { HomeComponent } from './home.component';
 import { OrderFormComponent } from './order-form/order-form.component';
 import { PriceListComponent } from './price-list/price-list.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { PriceListComponent } from './price-list/price-list.component';
     ReviewComponent,
     OrderFormComponent,
     PriceListComponent,
+    AboutMeComponent,
   ],
   imports: [
     CommonModule,

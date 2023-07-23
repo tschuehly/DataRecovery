@@ -44,6 +44,7 @@ services:
       - 80:80
       - 443:443
     volumes:
+      - /root/jungbauer_proxy.conf:/etc/nginx/conf.d/jungbauer_proxy.conf:ro
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - /root/proxy/volumes/jwilder-proxy/certs:/etc/nginx/certs:ro
       - /root/proxy/volumes/jwilder-proxy/config:/etc/nginx/conf.d

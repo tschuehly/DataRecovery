@@ -13,6 +13,7 @@ export class ScrollService {
    scrollToOrder(): void {
     this.router.navigate(['']).then((_) => {
       setTimeout(function () {
+        console.log("Scroll to oder")
         let orderForm = document.getElementById('order_form');
         orderForm.scrollIntoView({
           behavior: 'smooth',
