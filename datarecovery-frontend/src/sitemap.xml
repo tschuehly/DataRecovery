@@ -161,7 +161,7 @@
   </url>
 
   <url>
-    <loc>https://www.jungbauerdatenrettung.de/datenrettung/einfacher-oder-komplexer-fall</loc>
+    <loc>https://www.jungbauerdatenrettung.de/datenrettung/einschätzung</loc>
     <lastmod>2023-01-01T08:00:00+00:00</lastmod>
   </url>
 
@@ -184,4 +184,29 @@
     <loc>https://www.jungbauerdatenrettung.de/datenrettung/festplatte</loc>
     <lastmod>2023-01-01T08:00:00+00:00</lastmod>
   </url>
+
+
+ <url>
+    <loc>https://www.jungbauerdatenrettung.de/datenrettung/einschätzung</loc>
+    <lastmod>2023-01-01T08:00:00+00:00</lastmod>
+  </url>
+
+   <url>
+    <loc>https://www.jungbauerdatenrettung.de/datenrettung/einschätzung-hdd</loc>
+    <lastmod>2023-01-01T08:00:00+00:00</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.jungbauerdatenrettung.de/datenrettung/einschätzung-ssd</loc>
+    <lastmod>2023-01-01T08:00:00+00:00</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.jungbauerdatenrettung.de/datenrettung/einschätzung-usb-sd</loc>
+    <lastmod>2023-01-01T08:00:00+00:00</lastmod>
+  </url>
+
+
+
+
 </urlset>
