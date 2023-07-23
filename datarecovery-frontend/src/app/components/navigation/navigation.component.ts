@@ -194,7 +194,7 @@ declare let gtag: Function;
           class="flex align-middle text-white p-4 rounded-t-xl "
           style="background-color: rgb(9, 94, 84)"
         >
-          <span class="px-2">Jetzt Tobias Jungbauer kontaktieren</span>
+          <span class="px-2">über Whatsapp kontaktieren</span>
           <button (click)="wawidgetHidden = true">
             <img
               src="/assets/x-square.svg"
