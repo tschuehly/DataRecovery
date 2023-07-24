@@ -144,7 +144,7 @@ declare let gtag: Function;
         <div class="flex justify-around items-center text-base md:text-lg pb-4">
           <span>
           <div class="flex justify-center">
-  <img class="h-28 md:h-32 pb-2" src="assets/Profil.jpg">
+  <img class="h-28 md:h-32 pb-2" src="assets/Profil.webp">
   </div>
             <span class="font-semibold pb-2">Haben Sie Fragen? </span>
             <p>Gerne können Sie diese per Telefon stellen:</p>
