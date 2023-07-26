@@ -528,28 +528,462 @@ import {ReviewDetailDTO} from "../../model/model";
 
 
 
+      <div class="bg-white max-w-4xl mx-auto rounded-2xl">
+      <div
+        class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
+      >
+        <div
+          class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
+          style="background-image: url('/assets/favicon/fav.PNG')"
+        ></div>
+        <div class="flex-1">
+          <a
+            href="/datenrettung/externe-festplatte-wird-nicht-erkannt"
+            href="/datenrettung/externe-festplatte-wird-nicht-erkannt"
+            class="py-2"
+          >
+            <h2 class="text-2xl font-bold">
+              Externe Festplatte wird nicht erkannt
+            </h2>
+          </a>
+          <div class="py-2 italic text-sm md:text-lg">
+            Updated am 26.07.2023, 08:04 von Tobias Jungbauer
+          </div>
+          <div class="space-y-4">
+            <h3 class="pb-2">
+              Wie funktioniert die Datenrettung bei externen Festplatten?
+            </h3>
+            <a
+            href="/datenrettung/externe-festplatte-wird-nicht-erkannt"
+            href="/datenrettung/externe-festplatte-wird-nicht-erkannt"
+              class="font-semibold"
+            >
+              Mehr lesen →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="bg-white max-w-4xl mx-auto rounded-2xl">
+    <div
+      class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
+    >
+      <div
+        class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
+        style="background-image: url('/assets/favicon/fav.PNG')"
+      ></div>
+      <div class="flex-1">
+        <a
+          href="/datenrettung/datenretter"
+          href="/datenrettung/datenretter"
+          class="py-2"
+        >
+          <h2 class="text-2xl font-bold">
+            Einblick in die Arbeit als Datenretter
+          </h2>
+        </a>
+        <div class="py-2 italic text-sm md:text-lg">
+          Updated am 26.07.2023, 08:05 von Tobias Jungbauer
+        </div>
+        <div class="space-y-4">
+          <h3 class="pb-2">
+            Wie funktioniert die Arbeit als Datenretter?
+          </h3>
+          <a
+          href="/datenrettung/datenretter"
+          href="/datenrettung/datenretter"
+            class="font-semibold"
+          >
+            Mehr lesen →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="bg-white max-w-4xl mx-auto rounded-2xl">
+  <div
+    class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
+  >
+    <div
+      class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
+      style="background-image: url('/assets/favicon/fav.PNG')"
+    ></div>
+    <div class="flex-1">
+      <a
+        href="/datenrettung/nas-datenrettung"
+        href="/datenrettung/nas-datenrettung"
+        class="py-2"
+      >
+        <h2 class="text-2xl font-bold">
+          Einblick in die NAS Datenrettung
+        </h2>
+      </a>
+      <div class="py-2 italic text-sm md:text-lg">
+        Updated am 26.07.2023, 08:07 von Tobias Jungbauer
+      </div>
+      <div class="space-y-4">
+        <h3 class="pb-2">
+          Wie funktioniert die NAS Datenrettung?
+        </h3>
+        <a
+        href="/datenrettung/nas-datenrettung"
+        href="/datenrettung/nas-datenrettung"
+          class="font-semibold"
+        >
+          Mehr lesen →
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="bg-white max-w-4xl mx-auto rounded-2xl">
+<div
+  class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
+>
+  <div
+    class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
+    style="background-image: url('/assets/favicon/fav.PNG')"
+  ></div>
+  <div class="flex-1">
+    <a
+      href="/datenrettung/festplatte-mechanisch-defekt"
+      href="/datenrettung/festplatte-mechanisch-defekt"
+      class="py-2"
+    >
+      <h2 class="text-2xl font-bold">
+        Festplatte mechanisch defekt
+      </h2>
+    </a>
+    <div class="py-2 italic text-sm md:text-lg">
+      Updated am 26.07.2023, 08:08 von Tobias Jungbauer
+    </div>
+    <div class="space-y-4">
+      <h3 class="pb-2">
+        Wie funktioniert die Datenrettung bei mechanisch defekter HDD?
+      </h3>
+      <a
+      href="/datenrettung/festplatte-mechanisch-defekt"
+      href="/datenrettung/festplatte-mechanisch-defekt"
+        class="font-semibold"
+      >
+        Mehr lesen →
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="bg-white max-w-4xl mx-auto rounded-2xl">
+<div
+  class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
+>
+  <div
+    class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
+    style="background-image: url('/assets/favicon/fav.PNG')"
+  ></div>
+  <div class="flex-1">
+    <a
+      href="/datenrettung/pc-3000-udma"
+      href="/datenrettung/pc-3000-udma"
+      class="py-2"
+    >
+      <h2 class="text-2xl font-bold">
+        ACE Lab PC-3000 UDMA
+      </h2>
+    </a>
+    <div class="py-2 italic text-sm md:text-lg">
+      Updated am 26.07.2023, 08:08 von Tobias Jungbauer
+    </div>
+    <div class="space-y-4">
+      <h3 class="pb-2">
+        Wie funktioniert die Datenrettung mit dem PC-3000 UDMA?
+      </h3>
+      <a
+      href="/datenrettung/pc-3000-udma"
+      href="/datenrettung/pc-3000-udma"
+        class="font-semibold"
+      >
+        Mehr lesen →
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="bg-white max-w-4xl mx-auto rounded-2xl">
+<div
+  class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
+>
+  <div
+    class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
+    style="background-image: url('/assets/favicon/fav.PNG')"
+  ></div>
+  <div class="flex-1">
+    <a
+      href="/datenrettung/pc-3000-flash"
+      href="/datenrettung/pc-3000-flash"
+      class="py-2"
+    >
+      <h2 class="text-2xl font-bold">
+        ACE Lab PC-3000 Flash
+      </h2>
+    </a>
+    <div class="py-2 italic text-sm md:text-lg">
+      Updated am 26.07.2023, 08:08 von Tobias Jungbauer
+    </div>
+    <div class="space-y-4">
+      <h3 class="pb-2">
+        Wie funktioniert die Datenrettung mit dem PC-3000 Flash?
+      </h3>
+      <a
+      href="/datenrettung/pc-3000-flash"
+      href="/datenrettung/pc-3000-flash"
+        class="font-semibold"
+      >
+        Mehr lesen →
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<div class="bg-white max-w-4xl mx-auto rounded-2xl">
+<div
+  class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
+>
+  <div
+    class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
+    style="background-image: url('/assets/favicon/fav.PNG')"
+  ></div>
+  <div class="flex-1">
+    <a
+      href="/datenrettung/synology-raid-1-datenrettung"
+      href="/datenrettung/synology-raid-1-datenrettung"
+      class="py-2"
+    >
+      <h2 class="text-2xl font-bold">
+        Synology RAID 1 Datenrettung
+      </h2>
+    </a>
+    <div class="py-2 italic text-sm md:text-lg">
+      Updated am 26.07.2023, 08:08 von Tobias Jungbauer
+    </div>
+    <div class="space-y-4">
+      <h3 class="pb-2">
+        Wie funktioniert die Datenrettung von Synology RAID 1?
+      </h3>
+      <a
+      href="/datenrettung/synology-raid-1-datenrettung"
+      href="/datenrettung/synology-raid-1-datenrettung"
+        class="font-semibold"
+      >
+        Mehr lesen →
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="bg-white max-w-4xl mx-auto rounded-2xl">
+<div
+  class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
+>
+  <div
+    class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
+    style="background-image: url('/assets/favicon/fav.PNG')"
+  ></div>
+  <div class="flex-1">
+    <a
+      href="/datenrettung/datenwiederehrstellung"
+      href="/datenrettung/datenwiederehrstellung"
+      class="py-2"
+    >
+      <h2 class="text-2xl font-bold">
+        Datenwiederherstellung How-To
+      </h2>
+    </a>
+    <div class="py-2 italic text-sm md:text-lg">
+      Updated am 26.07.2023, 08:08 von Tobias Jungbauer
+    </div>
+    <div class="space-y-4">
+      <h3 class="pb-2">
+        Wie funktioniert die Datenwiederherstellung allgemein?
+      </h3>
+      <a
+      href="/datenrettung/datenwiederehrstellung"
+      href="/datenrettung/datenwiederehrstellung"
+        class="font-semibold"
+      >
+        Mehr lesen →
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="bg-white max-w-4xl mx-auto rounded-2xl">
+<div
+  class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
+>
+  <div
+    class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
+    style="background-image: url('/assets/favicon/fav.PNG')"
+  ></div>
+  <div class="flex-1">
+    <a
+      href="/datenrettung/ssd-datenrettung"
+      href="/datenrettung/ssd-datenrettung"
+      class="py-2"
+    >
+      <h2 class="text-2xl font-bold">
+        SSD Datenwiederherstellung How-To
+      </h2>
+    </a>
+    <div class="py-2 italic text-sm md:text-lg">
+      Updated am 26.07.2023, 08:08 von Tobias Jungbauer
+    </div>
+    <div class="space-y-4">
+      <h3 class="pb-2">
+        Wie funktioniert die SSD Datenwiederherstellung?
+      </h3>
+      <a
+      href="/datenrettung/ssd-datenrettung"
+      href="/datenrettung/ssd-datenrettung"
+        class="font-semibold"
+      >
+        Mehr lesen →
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="bg-white max-w-4xl mx-auto rounded-2xl">
+<div
+  class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
+>
+  <div
+    class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
+    style="background-image: url('/assets/favicon/fav.PNG')"
+  ></div>
+  <div class="flex-1">
+    <a
+      href="/datenrettung/apple-fusion-drive-daten-rettung"
+      href="/datenrettung/apple-fusion-drive-daten-rettung"
+      class="py-2"
+    >
+      <h2 class="text-2xl font-bold">
+        Apple Fusion Drive Datenrettung
+      </h2>
+    </a>
+    <div class="py-2 italic text-sm md:text-lg">
+      Updated am 26.07.2023, 08:08 von Tobias Jungbauer
+    </div>
+    <div class="space-y-4">
+      <h3 class="pb-2">
+        Wie funktioniert die Apple Fusion Drive Datenrettung?
+      </h3>
+      <a
+      href="/datenrettung/apple-fusion-drive-daten-rettung"
+      href="/datenrettung/apple-fusion-drive-daten-rettung"
+        class="font-semibold"
+      >
+        Mehr lesen →
+      </a>
+    </div>
+  </div>
+</div>
+</div>
 
 
 
 
 
 
+<div class="bg-white max-w-4xl mx-auto rounded-2xl">
+<div
+  class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
+>
+  <div
+    class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
+    style="background-image: url('/assets/favicon/fav.PNG')"
+  ></div>
+  <div class="flex-1">
+    <a
+      href="/datenrettung/sonnet-raid-5-datenrettung"
+      href="/datenrettung/sonnet-raid-5-datenrettung"
+      class="py-2"
+    >
+      <h2 class="text-2xl font-bold">
+        Sonnet RAID 5 Datenrettung
+      </h2>
+    </a>
+    <div class="py-2 italic text-sm md:text-lg">
+      Updated am 26.07.2023, 08:08 von Tobias Jungbauer
+    </div>
+    <div class="space-y-4">
+      <h3 class="pb-2">
+        Wie funktioniert die Sonnet RAID 5 Rettung?
+      </h3>
+      <a
+      href="/datenrettung/sonnet-raid-5-datenrettung"
+      href="/datenrettung/sonnet-raid-5-datenrettung"
+        class="font-semibold"
+      >
+        Mehr lesen →
+      </a>
+    </div>
+  </div>
+</div>
+</div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="bg-white max-w-4xl mx-auto rounded-2xl">
+<div
+  class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
+>
+  <div
+    class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
+    style="background-image: url('/assets/favicon/fav.PNG')"
+  ></div>
+  <div class="flex-1">
+    <a
+      href="/datenrettung/externe-festplatte"
+      href="/datenrettung/externe-festplatte"
+      class="py-2"
+    >
+      <h2 class="text-2xl font-bold">
+        Externe Festplatte Datenrettung
+      </h2>
+    </a>
+    <div class="py-2 italic text-sm md:text-lg">
+      Updated am 26.07.2023, 08:08 von Tobias Jungbauer
+    </div>
+    <div class="space-y-4">
+      <h3 class="pb-2">
+        Wie funktioniert die Rettung externer Festplatten?
+      </h3>
+      <a
+      href="/datenrettung/externe-festplatte"
+      href="/datenrettung/externe-festplatte"
+        class="font-semibold"
+      >
+        Mehr lesen →
+      </a>
+    </div>
+  </div>
+</div>
+</div>
 
 
 
