@@ -276,43 +276,6 @@ import {ReviewDetailDTO} from "../../model/model";
               ></div>
               <div class="flex-1">
                 <a
-                  href="/datenrettung/gebrochene-micro-sd-karte"
-                  href="/datenrettung/gebrochene-micro-sd-karte"
-                  class="py-2"
-                >
-                  <h2 class="text-2xl font-bold">
-                    Datenrettung zerbrochene micro SD-Karte
-                  </h2>
-                </a>
-                <div class="py-2 italic text-sm md:text-lg">
-                  Updated am 11.02.2022, 06:12 von Tobias Jungbauer
-                </div>
-                <div class="space-y-4">
-                  <h3 class="pb-2">
-                    Wie werden Daten von gebrochenen micro SD-Karten gerettet?
-                  </h3>
-                  <a
-                    href="/datenrettung/gebrochene-micro-sd-karte"
-                    href="/datenrettung/gebrochene-micro-sd-karte"
-                    class="font-semibold"
-                  >
-                    Mehr lesen →
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white max-w-4xl mx-auto rounded-2xl">
-            <div
-              class="text-gray-main py-4 flex flex-col md:flex-row justify-around text-center md:text-left items-center"
-            >
-              <div
-                class="h-40 flex-shrink-0  w-80 my-4 bg-contain bg-center bg-no-repeat md:order-first mr-4"
-                style="background-image: url('/assets/favicon/fav.PNG')"
-              ></div>
-              <div class="flex-1">
-                <a
                   href="/datenrettung/synology-raid-1-datenrettung"
                   href="/datenrettung/synology-raid-1-datenrettung"
                   class="py-2"
