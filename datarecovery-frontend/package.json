@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "cross-env NG_PERSISTENT_BUILD_CACHE=1 ng serve --hmr --proxy-config src/proxy.conf.json --disable-host-check ",
+    "start": "ng serve --hmr --proxy-config src/proxy.conf.json --disable-host-check ",
     "scully": "npx scully --watch serve --proxy-config src/proxy.conf.json",
     "build:prod": "cross-env NODE_ENV=production ng build --configuration production --aot --build-optimizer",
     "build:scully": "npx scully --scanRoutes",

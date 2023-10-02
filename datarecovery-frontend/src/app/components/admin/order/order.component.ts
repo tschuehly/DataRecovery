@@ -34,6 +34,14 @@ import { FormControl } from '@angular/forms';
             </button>
             <button
               class="border-2 p-2"
+              (click)="getOrders([oState.orderReceivedReminderSent])"
+            >
+              Warte auf Ankunft / Erinnerung {{
+              getCountByTrackingStateString(oState.orderReceivedReminderSent)
+              }}
+            </button>
+            <button
+              class="border-2 p-2"
               (click)="getOrders([oState.firstAnalysis])"
             >
               Erste Analyse {{

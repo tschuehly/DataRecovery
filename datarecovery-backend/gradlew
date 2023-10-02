@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-
+JAVA_OPTS=-Dfile.encoding=UTF-8
 #
 # Copyright 2015 the original author or authors.
 #
