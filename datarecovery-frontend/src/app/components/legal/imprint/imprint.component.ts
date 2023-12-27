@@ -19,7 +19,6 @@ import { Component, OnInit } from '@angular/core';
       <h2 class="text-lg font-semibold mb-2 mt-4 underline">Kontakt</h2>
       <p>Telefon: 0841 12840705<br /></p>
       <p>
-        Mobil: 0151 61408355<br />
         E-Mail: info@jungbauerdatenrettung.de
       </p>
 
@@ -54,7 +53,6 @@ import { Component, OnInit } from '@angular/core';
 
       <p>Telefon: 0841 12840705<br /></p>
       <p>
-        Mobil: 0151 61408355<br />
         tobias@jungbauerdatenrettung.de
       </p>
 
