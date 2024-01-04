@@ -36,7 +36,7 @@ import {ReviewDetailDTO} from "../../model/model";
 
                 Telefon: <span class="text-white"><a href="tel:0841 12840705">0841 12840705</a></span><br />
 
-                Mobil: <span class="text-white"><a href="tel:0151 61408355">0151 61408355</a></span>
+               
               </p>
 
           </span>
