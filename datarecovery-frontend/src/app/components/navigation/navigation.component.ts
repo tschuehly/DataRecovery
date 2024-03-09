@@ -158,7 +158,7 @@ declare let gtag: Function;
           <img alt="phone" class="inline pr-4" src="/assets/phone.svg" /><a href="tel:0841 12840705">0841 12840705</a>
         </p>
 
-        <p class="text-base md:text-lg">Mo.-Sa. 08:00-20:00 Uhr erreichbar.</p>
+        <p class="text-base md:text-lg">Mo.-Fr. 09:00-19:00 Uhr erreichbar.</p>
       </div>
       <div class="fixed right-4 bottom-4 z-50 flex flex-row ">
         <button
