@@ -121,7 +121,7 @@ import { Component } from '@angular/core';
               <div class="pb-2"><br/></div>
                 <div>399,00 €</div>
                 <div>475,00 €</div>
-                <div>625,00 €</div>
+                <div>549,00 €</div>
                 
               </div>
             </div>
