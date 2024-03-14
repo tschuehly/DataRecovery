@@ -65,6 +65,10 @@ declare let gtag: Function;
             mobileNavShow ? 'flex flex-col space-x-0' : 'hidden md:flex'
           "
         >
+
+        <a class="cursor-pointer font-medium"></a>
+
+
         <a
           class="cursor-pointer font-medium"
           (click)="mobileNavShow = false"
@@ -106,6 +110,9 @@ declare let gtag: Function;
           >Kontakt</button
         >
         </div>
+
+        <a class="cursor-pointer font-medium"></a>
+
       </nav>
       <div *ngIf="currentUser" class="bg-neutral-700 text-white flex justify-around py-4">
           <a
