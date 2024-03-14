@@ -81,9 +81,18 @@ import { Component } from '@angular/core';
             </div>
           </div>
           <div class="h-1 bg-white"></div>
-          <div class="flex flex-col text-center md:flex-row">
-            <div class="flex-1 ">
-              <picture>
+
+
+
+
+
+
+
+
+
+          <div class="flex text-center">
+          <div class="flex-1">
+            <picture>
                 <source
                   srcset="/assets/index/hdd_price.webp"
                   media="(min-width: 1024px)"
@@ -95,41 +104,78 @@ import { Component } from '@angular/core';
                   class=" object-cover md:w-full md:h-full"
                 />
               </picture>
-            </div>
-            <div class="grid grid-cols-2 py-4">
-              <h2 class="col-span-2 p-4 text-xl">
-                Beschädigte HDD Festplatte
-              </h2>
-              <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
+          </div>
+          <div class="grid grid-cols-2 py-4 pb-4">
+            <h2 class="col-span-2 p-4 text-xl">
+            Beschädigte HDD Festplatte
+            </h2>
+            <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
               <div class="pb-2">"einfacher" Fall <a href="/datenrettung/einschätzung-hdd" target="_blank">ⓘ</a></div>
                 <div>≤ alle Größen</div>
-                
-              </div>
-              <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
-              <div class="pb-2"><br/></div>
-              <div>249,00 €</div>
               
-            </div>
-              <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
-              <div class="pb-2">komplexer Fall <a href="/datenrettung/einschätzung-hdd" target="_blank">ⓘ</a></div>
-                <div>≤ 1 TB</div>
-                <div>≤ 2 TB</div>
-                <div>≤ 4 TB</div>
-                
-              </div>
-              <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
-              <div class="pb-2"><br/></div>
-                <div>399,00 €</div>
-                <div>475,00 €</div>
-                <div>549,00 €</div>
-                
-              </div>
-            </div>
-            <div class="grid grid-cols-2 py-4">
-              <h2 class="col-span-2 p-4 text-xl">
+                </div>
+                <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
+                <div class="pb-2"><br/></div>
+                <div>249,00 €</div>
+            
+                </div>
+                <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
+                <div class="pb-2">komplexer Fall <a href="/datenrettung/einschätzung-hdd" target="_blank">ⓘ</a></div>
+                  <div>≤ 1 TB</div>
+                  <div>≤ 2 TB</div>
+                  <div>≤ 4 TB</div>
+                  
+                </div>
+                <div class="p-4 leading-relaxed border-l border-white text-lg md:text-xl">
+                <div class="pb-2"><br/></div>
+                  <div>399,00 €</div>
+                  <div>475,00 €</div>
+                  <div>549,00 €</div>
+                  
+                </div>
+          </div>
+          <div class="flex-1">
+          <picture>
+          <source
+            srcset="/assets/index/hdd_price.webp"
+            media="(min-width: 1024px)"
+            alt="Festplatte Datenrettung"
+          />
+          <img
+            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            alt="Image"
+            class=" object-cover md:w-full md:h-full"
+          />
+        </picture>
+          </div>
+        </div>
+
+        <div class="h-1 bg-white"></div> 
+
+
+
+<div class="flex text-center">
+          <div class="flex-1">
+          <picture>
+          <source
+            srcset="/assets/index/ssd_price.webp"
+            media="(min-width: 1024px)"
+            alt="SSD Datenrettung"
+          />
+          <img
+            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            alt="Image"
+            class=" object-cover md:w-full md:h-full"
+          />
+        </picture>
+
+          </div>
+          <div class="grid grid-cols-2 py-4 pb-4">
+            <h2 class="col-span-2 p-4 text-xl">
                 Defekter SSD Speicher
               </h2>
-              <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
+
+            <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
               <div class="pb-2">"einfacher" Fall <a href="/datenrettung/einschätzung-ssd" target="_blank">ⓘ</a></div>
                 <div>≤ alle Größen</div>
                 
@@ -153,23 +199,23 @@ import { Component } from '@angular/core';
               <div>699,00 €</div>
               
               </div>
-            </div>
 
-            <div class="flex-1 ">
-              <picture>
-                <source
-                  srcset="/assets/index/ssd_price.webp"
-                  media="(min-width: 1024px)"
-                  alt="SSD Datenrettung"
-                />
-                <img
-                  src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                  alt="Image"
-                  class=" object-cover md:w-full md:h-full"
-                />
-              </picture>
-            </div>
           </div>
+          <div class="flex-1">
+          <picture>
+          <source
+            srcset="/assets/index/ssd_price.webp"
+            media="(min-width: 1024px)"
+            alt="SSD Datenrettung"
+          />
+          <img
+            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            alt="Image"
+            class=" object-cover md:w-full md:h-full"
+          />
+        </picture>
+          </div>
+        </div>
           <div class="h-1 bg-white"></div>
           <div class="flex text-center">
             <div class="flex-1 ">
@@ -187,7 +233,7 @@ import { Component } from '@angular/core';
             </div>
             <div class="grid pb-4">
               <h2 class="p-4 text-xl">
-                NAS / RAID, Apple Fusion Drive
+                NAS / RAID
               </h2>
               <div class="px-4 py-2 pl-8 leading-relaxed text-left text-base md:text-lg">
                 abhängig von:
