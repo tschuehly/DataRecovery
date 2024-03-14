@@ -40,7 +40,7 @@ import { Component } from '@angular/core';
             </div>
             <div class="grid grid-cols-2 py-4 pb-4">
               <h2 class="col-span-2 p-4 text-xl">
-                Defekte(r) USB Stick / (micro-) SD Karte
+              USB Stick / (micro-) SD Karte / CF Karte 
               </h2>
               <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
               <div class="pb-2">"einfacher" Fall <a href="/datenrettung/einschätzung-usb+sd" target="_blank">ⓘ</a></div>
@@ -107,7 +107,7 @@ import { Component } from '@angular/core';
           </div>
           <div class="grid grid-cols-2 py-4 pb-4">
             <h2 class="col-span-2 p-4 text-xl">
-            Beschädigte HDD Festplatte
+            HDD - Festplatte
             </h2>
             <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
               <div class="pb-2">"einfacher" Fall <a href="/datenrettung/einschätzung-hdd" target="_blank">ⓘ</a></div>
@@ -137,9 +137,9 @@ import { Component } from '@angular/core';
           <div class="flex-1">
           <picture>
           <source
-            srcset="/assets/index/hdd_price.webp"
+            srcset="/assets/index/hdd.webp"
             media="(min-width: 1024px)"
-            alt="Festplatte Datenrettung"
+            alt="externe HDD Datenrettung"
           />
           <img
             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
@@ -172,7 +172,7 @@ import { Component } from '@angular/core';
           </div>
           <div class="grid grid-cols-2 py-4 pb-4">
             <h2 class="col-span-2 p-4 text-xl">
-                Defekter SSD Speicher
+                SSD - Speicher
               </h2>
 
             <div class="p-4 leading-relaxed border-r border-white text-lg md:text-xl">
@@ -204,9 +204,9 @@ import { Component } from '@angular/core';
           <div class="flex-1">
           <picture>
           <source
-            srcset="/assets/index/ssd_price.webp"
+            srcset="/assets/index/ssd.webp"
             media="(min-width: 1024px)"
-            alt="SSD Datenrettung"
+            alt="M2 Datenrettung"
           />
           <img
             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
@@ -247,7 +247,7 @@ import { Component } from '@angular/core';
             <div class="flex-1 ">
               <picture>
                 <source
-                  srcset="/assets/index/raid_symbol.webp"
+                  srcset="/assets/index/RAID.webp"
                   media="(min-width: 862px)"
                   alt="RAID Datenrettung"
                 />
