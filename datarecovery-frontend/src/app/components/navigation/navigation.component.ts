@@ -235,6 +235,14 @@ declare let gtag: Function;
           </a>
         </div>
       </div>
+
+      <div class="fixed left-4 bottom-4 z-50 flex flex-row hidden md:block w-96">
+      <a href="https://de.trustpilot.com/review/jungbauerdatenrettung.de" target="_blank" rel="noopener">
+        <img class="rounded-xl shadow-xl" src="/assets/trustpilot.png">
+      </a>
+    
+      
+      </div>
       <footer class="pt-8 bg-gray-main text-silver">
         <ng-container *ngIf="mapsIframeShow">
           <div class="h-72 mb-4 bg-white">

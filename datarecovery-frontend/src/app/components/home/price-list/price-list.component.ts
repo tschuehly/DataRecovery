@@ -92,18 +92,18 @@ import { Component } from '@angular/core';
 
           <div class="flex text-center">
           <div class="flex-1">
-          <picture>
-          <source
-            srcset="/assets/index/hdd.webp"
-            media="(min-width: 1024px)"
-            alt="externe HDD Datenrettung"
-          />
-          <img
-            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-            alt="Image"
-            class=" object-cover md:w-full md:h-full"
-          />
-        </picture>
+            <picture>
+                <source
+                  srcset="/assets/index/hdd_price.webp"
+                  media="(min-width: 1024px)"
+                  alt="Festplatte Datenrettung"
+                />
+                <img
+                  src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                  alt="Image"
+                  class=" object-cover md:w-full md:h-full"
+                />
+              </picture>
           </div>
           <div class="grid grid-cols-2 py-4 pb-4">
             <h2 class="col-span-2 p-4 text-xl">
@@ -135,21 +135,18 @@ import { Component } from '@angular/core';
                 </div>
           </div>
           <div class="flex-1">
-          
-
-        <picture>
-        <source
-          srcset="/assets/index/hdd_price.webp"
-          media="(min-width: 1024px)"
-          alt="Festplatte Datenrettung"
-        />
-        <img
-          src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-          alt="Image"
-          class=" object-cover md:w-full md:h-full"
-        />
-      </picture>
-
+          <picture>
+          <source
+            srcset="/assets/index/hdd.webp"
+            media="(min-width: 1024px)"
+            alt="externe HDD Datenrettung"
+          />
+          <img
+            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            alt="Image"
+            class=" object-cover md:w-full md:h-full"
+          />
+        </picture>
           </div>
         </div>
 
@@ -216,22 +213,24 @@ import { Component } from '@angular/core';
             alt="Image"
             class=" object-cover md:w-full md:h-full"
           />
-        
-
-           <picture>
-              <source
-                srcset="/assets/index/RAID.webp"
-                media="(min-width: 862px)"
-                alt="RAID Datenrettung"
-              />
-              <img
-                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                alt="Image"
-                class=" object-cover w-full h-full"
-              />
-            </picture>
-
-
+        </picture>
+          </div>
+        </div>
+          <div class="h-1 bg-white"></div>
+          <div class="flex text-center">
+            <div class="flex-1 ">
+              <picture>
+                <source
+                  srcset="/assets/index/RAID.webp"
+                  media="(min-width: 862px)"
+                  alt="RAID Datenrettung"
+                />
+                <img
+                  src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                  alt="Image"
+                  class=" object-cover w-full h-full"
+                />
+              </picture>
             </div>
             <div class="grid pb-4">
               <h2 class="p-4 text-xl">
@@ -247,23 +246,17 @@ import { Component } from '@angular/core';
             </div>
 
             <div class="flex-1 ">
-            </picture>
-            </div>
-          </div>
-            <div class="h-1 bg-white"></div>
-            <div class="flex text-center">
-              <div class="flex-1 ">
-                <picture>
-                  <source
-                    srcset="/assets/index/synology.webp"
-                    media="(min-width: 862px)"
-                  />
-                  <img
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                    alt="Image"
-                    class=" object-cover w-full h-full"
-                  />
-                </picture>
+            <picture>
+                <source
+                  srcset="/assets/index/synology.webp"
+                  media="(min-width: 862px)"
+                />
+                <img
+                  src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                  alt="Image"
+                  class=" object-cover w-full h-full"
+                />
+              </picture>
             </div>
           </div>
           <div

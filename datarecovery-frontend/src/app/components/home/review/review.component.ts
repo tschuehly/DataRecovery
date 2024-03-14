@@ -10,7 +10,7 @@ import {Meta} from "@angular/platform-browser";
     <div class="text-white button my-8">
       <div class="flex justify-center text-center text-black">
         <div>
-          <h2 class="text-2xl md:text-4xl">
+          <h2 class="text-2xl md:text-3xl">
           <a class="underline" href="https://search.google.com/local/reviews?placeid=ChIJU5PnJJcznEcRy2VAwpDd1Dc&q=Tobias+Jungbauer+Datenrettung+-+AmmerseeDatenrettung.de&hl=de&gl=DE" target="_blank"
                 >Google Bewertungen:</a>
           </h2>
