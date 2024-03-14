@@ -233,7 +233,7 @@ import { Component } from '@angular/core';
             </div>
             <div class="grid pb-4">
               <h2 class="p-4 text-xl">
-                NAS / RAID
+                RAID & NAS
               </h2>
               <div class="px-4 py-2 pl-8 leading-relaxed text-left text-base md:text-lg">
                 abhängig von:
