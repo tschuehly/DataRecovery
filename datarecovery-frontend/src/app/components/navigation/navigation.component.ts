@@ -109,9 +109,13 @@ declare let gtag: Function;
           class="cursor-pointer font-medium"
           >Kontakt</button
         >
-        </div>
 
         <a class="cursor-pointer font-medium"></a>
+
+
+        </div>
+
+       
 
       </nav>
       <div *ngIf="currentUser" class="bg-neutral-700 text-white flex justify-around py-4">
