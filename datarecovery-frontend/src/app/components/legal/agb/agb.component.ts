@@ -65,7 +65,7 @@ import { Component, OnInit } from '@angular/core';
 
         <p>Sollte eine vollständige Datenrettung nicht möglich sein, wird dem Kunden eine Teildatenrettung angeboten. 
         Der Kunde wird die Möglichkeit haben, die geretteten Daten einzusehen, um zu entscheiden, 
-        ob er die Daten akzeptieren möchte oder nicht. Die Einsicht erfolgt mittels HTML Dateien-Listen oder Software z.B. Teamviewer.
+        ob er das Ergebnis akzeptieren möchte oder nicht. Die Einsicht erfolgt mittels HTML Dateien-Listen oder Software z.B. Teamviewer.
         Bei Ablehnung erfolgt keine Zusendung der geretteten Daten, die Bearbeitung ist dafür inkl. Rückversand kostenfrei.</p>
 
 
