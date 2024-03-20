@@ -85,7 +85,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
         >Öffentliche Festpreise ohne versteckte Kosten:</h2>
         
         Alle Kosten, z.B. auch Teilespender oder Leihdatenträger, sind bereits im Festpreis inklusive.<br/>
-        Es handelt sich um Endpreise. Es kommen keine weitere Kosten zur Datenrettung hinzu.
+        Es handelt sich um Endpreise. D.h. es sind ausdrücklich keine "ab Preise".
         <br/>
         <br/>Bei Misserfolg entstehen inkl. Rückversand des Originalspeichers keine Kosten.
         <br/>
