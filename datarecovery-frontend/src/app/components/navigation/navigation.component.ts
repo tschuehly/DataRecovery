@@ -238,7 +238,9 @@ declare let gtag: Function;
 
       <div class="fixed left-4 bottom-4 z-50 flex flex-row hidden md:block w-96">
       <a href="https://de.trustpilot.com/review/jungbauerdatenrettung.de" target="_blank" rel="noopener">
-        <img class="rounded-xl shadow-xl" src="/assets/trustpilot.png">
+        <img class="rounded-xl shadow-xl" 
+        src="/assets/trustpilot.png"
+        alt="Trustpilot Tobias Jungbauer Datenrettung">
       </a>
     
       
